@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karman — Corporate Services Singapore</title>
+  <meta name="description" content="Karman provides trusted corporate secretarial, incorporation, accounting, and compliance services in Singapore. Start and grow your business with confidence." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───────────────── NAVIGATION ───────────────── -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <span class="logo-mark">K</span>
+        <span class="logo-text">karman</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="#incorporation" class="dropdown__link">
+              <span class="dropdown__icon">🏢</span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="#secretary" class="dropdown__link">
+              <span class="dropdown__icon">📋</span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="#accounting" class="dropdown__link">
+              <span class="dropdown__icon">📊</span>
+              <div>
+                <strong>Accounting & Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="#services" class="dropdown__link">
+              <span class="dropdown__icon">💼</span>
+              <div>
+                <strong>Payroll & GST</strong>
+                <p>Full payroll management</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="#pricing" class="nav__link">Pricing</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--ghost">Contact us</a>
+        <a href="#get-started" class="btn btn--primary">Get started</a>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ───────────────── HERO ───────────────── -->
+    <section class="hero" id="get-started">
+      <div class="hero__bg-grid"></div>
+      <div class="container hero__inner">
+        <div class="hero__badge fade-in">
+          <span class="badge-dot"></span>
+          ACRA Registered Filing Agent · Singapore
+        </div>
+        <h1 class="hero__heading fade-in">
+          Your business,<br />
+          <span class="gradient-text">expertly handled.</span>
+        </h1>
+        <p class="hero__subtext fade-in">
+          Karman takes the complexity out of running a Singapore company. From incorporation to ongoing compliance, accounting, and tax — we handle the paperwork so you can focus on growth.
+        </p>
+        <div class="hero__ctas fade-in">
+          <a href="#pricing" class="btn btn--primary btn--lg">See our plans →</a>
+          <a href="#contact" class="btn btn--outline btn--lg">Talk to an expert</a>
+        </div>
+        <div class="hero__stats fade-in">
+          <div class="stat">
+            <strong>500+</strong>
+            <span>Companies served</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>ACRA compliant</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>48 hrs</strong>
+            <span>Avg. incorporation</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ───────────────── TRUST BAR ───────────────── -->
+    <section class="trust-bar">
+      <div class="container trust-bar__inner">
+        <p class="trust-bar__label">Trusted by businesses across Singapore</p>
+        <div class="trust-logos">
+          <span class="trust-logo">Startups</span>
+          <span class="trust-logo">SMEs</span>
+          <span class="trust-logo">Foreign Founders</span>
+          <span class="trust-logo">E-commerce</span>
+          <span class="trust-logo">Tech Companies</span>
+          <span class="trust-logo">F&B Brands</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── SERVICES ───────────────── -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What we do</span>
+          <h2 class="section-heading">Everything your Singapore company needs</h2>
+          <p class="section-subtext">One trusted partner for every stage of your business journey — from day one to ongoing operations.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <div class="service-card service-card--featured reveal" id="incorporation">
+            <div class="service-card__icon">🏢</div>
+            <h3>Company Incorporation</h3>
+            <p>Register your Singapore private limited company quickly and correctly. We handle all ACRA filings, preparation of company constitution, and post-incorporation documents.</p>
+            <ul class="service-list">
+              <li>Local & foreign founder incorporation</li>
+              <li>Same-day ACRA submission</li>
+              <li>Company constitution drafting</li>
+              <li>Post-incorporation documents</li>
+              <li>Nominee director services</li>
+              <li>Registered office address</li>
+            </ul>
+            <a href="#pricing" class="service-link">View packages →</a>
+          </div>
+
+          <div class="service-card reveal" id="secretary">
+            <div class="service-card__icon">📋</div>
+            <h3>Corporate Secretarial</h3>
+            <p>Stay fully compliant with ACRA regulations. Our experienced secretaries manage your annual filings, AGMs, and all corporate changes throughout the year.</p>
+            <ul class="service-list">
+              <li>Annual Return filing</li>
+              <li>AGM facilitation</li>
+              <li>Director & shareholder changes</li>
+              <li>Share transfers & allotments</li>
+              <li>Resolution drafting</li>
+              <li>Statutory registers maintenance</li>
+            </ul>
+            <a href="#pricing" class="service-link">View packages →</a>
+          </div>
+
+          <div class="service-card reveal" id="accounting">
+            <div class="service-card__icon">📊</div>
+            <h3>Accounting & Bookkeeping</h3>
+            <p>Accurate, real-time financial records managed by qualified accountants. We reconcile your accounts, prepare management reports, and keep your books audit-ready.</p>
+            <ul class="service-list">
+              <li>Monthly bookkeeping</li>
+              <li>Bank reconciliation</li>
+              <li>Management accounts</li>
+              <li>Unaudited financial statements</li>
+              <li>XBRL filing</li>
+              <li>CFO advisory services</li>
+            </ul>
+            <a href="#pricing" class="service-link">View packages →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">🧾</div>
+            <h3>Corporate Tax Filing</h3>
+            <p>Minimise your tax liability and stay on the right side of IRAS. We file your ECI, Form C-S, and annual corporate tax returns accurately and on time.</p>
+            <ul class="service-list">
+              <li>ECI filing</li>
+              <li>Form C-S / Form C filing</li>
+              <li>Tax planning & advisory</li>
+              <li>Capital allowances optimisation</li>
+              <li>Startup tax exemption claims</li>
+            </ul>
+            <a href="#pricing" class="service-link">Learn more →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">📑</div>
+            <h3>GST Registration & Filing</h3>
+            <p>Navigate GST obligations with confidence. We assess your GST liability, handle your registration with IRAS, and manage quarterly GST returns.</p>
+            <ul class="service-list">
+              <li>GST registration</li>
+              <li>Quarterly GST returns</li>
+              <li>Input tax claim optimisation</li>
+              <li>GST audit support</li>
+            </ul>
+            <a href="#pricing" class="service-link">Learn more →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">👥</div>
+            <h3>Payroll Services</h3>
+            <p>Accurate, timely payroll processing for your Singapore workforce. We handle CPF contributions, payslips, IR8A filing, and leave administration.</p>
+            <ul class="service-list">
+              <li>Monthly payroll processing</li>
+              <li>CPF contribution management</li>
+              <li>Payslip generation</li>
+              <li>IR8A / IR21 filing</li>
+              <li>Leave and claims management</li>
+            </ul>
+            <a href="#pricing" class="service-link">Learn more →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">🌏</div>
+            <h3>Work Visa & Employment Pass</h3>
+            <p>Helping foreign founders and employees relocate to Singapore. We manage the full Employment Pass application and renewal process with MOM.</p>
+            <ul class="service-list">
+              <li>Employment Pass applications</li>
+              <li>EntrePass for entrepreneurs</li>
+              <li>Dependant Pass applications</li>
+              <li>Pass renewals & cancellations</li>
+            </ul>
+            <a href="#contact" class="service-link">Get in touch →</a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">🏠</div>
+            <h3>Registered Office Address</h3>
+            <p>A prestigious Singapore CBD registered address for your company, with mail handling and forwarding included. Required by ACRA for all Singapore companies.</p>
+            <ul class="service-list">
+              <li>Singapore CBD address</li>
+              <li>Mail scanning & forwarding</li>
+              <li>ACRA-compliant</li>
+              <li>Meeting room access</li>
+            </ul>
+            <a href="#pricing" class="service-link">Learn more →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── WHY KARMAN ───────────────── -->
+    <section class="why section" id="about">
+      <div class="container">
+        <div class="why__inner">
+          <div class="why__content reveal">
+            <span class="section-tag">Why Karman</span>
+            <h2 class="section-heading">Built for businesses that move fast</h2>
+            <p class="section-subtext">We combine deep Singapore regulatory expertise with a responsive, personal service model — so you always know your company is in good hands.</p>
+
+            <div class="why__points">
+              <div class="why-point">
+                <div class="why-point__icon">⚡</div>
+                <div>
+                  <h4>Fast turnaround</h4>
+                  <p>Most incorporations completed within 48 hours. Corporate changes processed same day.</p>
+                </div>
+              </div>
+              <div class="why-point">
+                <div class="why-point__icon">🔒</div>
+                <div>
+                  <h4>Always compliant</h4>
+                  <p>ACRA Registered Filing Agent. We proactively track your deadlines so you never miss a filing.</p>
+                </div>
+              </div>
+              <div class="why-point">
+                <div class="why-point__icon">💬</div>
+                <div>
+                  <h4>Dedicated support</h4>
+                  <p>A named relationship manager for every client. No bots, no ticket queues — real people who know your business.</p>
+                </div>
+              </div>
+              <div class="why-point">
+                <div class="why-point__icon">💰</div>
+                <div>
+                  <h4>Transparent pricing</h4>
+                  <p>Fixed annual fees with no hidden charges. You always know exactly what you're paying for.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why__visual reveal">
+            <div class="why__card-stack">
+              <div class="compliance-card">
+                <div class="compliance-card__header">
+                  <span class="compliance-dot green"></span>
+                  Annual Return
+                  <span class="compliance-status">Filed</span>
+                </div>
+                <div class="compliance-card__date">Filed 12 Mar 2025</div>
+              </div>
+              <div class="compliance-card compliance-card--upcoming">
+                <div class="compliance-card__header">
+                  <span class="compliance-dot amber"></span>
+                  ECI Filing
+                  <span class="compliance-status upcoming">Due in 14 days</span>
+                </div>
+                <div class="compliance-card__date">Due 30 Apr 2025</div>
+              </div>
+              <div class="compliance-card">
+                <div class="compliance-card__header">
+                  <span class="compliance-dot green"></span>
+                  GST Return (Q1)
+                  <span class="compliance-status">Filed</span>
+                </div>
+                <div class="compliance-card__date">Filed 28 Feb 2025</div>
+              </div>
+              <div class="compliance-card">
+                <div class="compliance-card__header">
+                  <span class="compliance-dot blue"></span>
+                  Payroll — March
+                  <span class="compliance-status processing">Processing</span>
+                </div>
+                <div class="compliance-card__date">Processing now</div>
+              </div>
+            </div>
+            <p class="why__card-caption">Your compliance dashboard, always up to date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── PROCESS ───────────────── -->
+    <section class="process section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How it works</span>
+          <h2 class="section-heading">Up and running in 3 simple steps</h2>
+        </div>
+        <div class="process__steps">
+          <div class="process-step reveal">
+            <div class="process-step__number">01</div>
+            <h3>Tell us about your business</h3>
+            <p>Fill out a short form with your company details, directors, and shareholders. Takes under 10 minutes.</p>
+          </div>
+          <div class="process-step__arrow reveal">→</div>
+          <div class="process-step reveal">
+            <div class="process-step__number">02</div>
+            <h3>We handle the filings</h3>
+            <p>Our team submits all required documents to ACRA and prepares your incorporation package.</p>
+          </div>
+          <div class="process-step__arrow reveal">→</div>
+          <div class="process-step reveal">
+            <div class="process-step__number">03</div>
+            <h3>Start doing business</h3>
+            <p>Receive your UEN, company constitution, and share certificates. Your company is live and ready to trade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── PRICING ───────────────── -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pricing</span>
+          <h2 class="section-heading">Simple, transparent plans</h2>
+          <p class="section-subtext">No hidden fees. No surprise invoices. Choose the plan that fits your stage.</p>
+        </div>
+
+        <div class="pricing__tabs">
+          <button class="pricing-tab active" data-tab="incorporation">Incorporation</button>
+          <button class="pricing-tab" data-tab="secretary">Corporate Secretary</button>
+          <button class="pricing-tab" data-tab="accounting">Accounting</button>
+        </div>
+
+        <!-- Incorporation Plans -->
+        <div class="pricing__plans" id="tab-incorporation">
+          <div class="plan-card reveal">
+            <div class="plan-card__header">
+              <h3>Starter</h3>
+              <p>For local founders ready to start</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">699</span>
+              <span class="price-period">one-time</span>
+            </div>
+            <ul class="plan-features">
+              <li>ACRA incorporation filing</li>
+              <li>Company constitution</li>
+              <li>UEN registration</li>
+              <li>Share certificates</li>
+              <li>Post-incorporation docs</li>
+              <li>1-year registered address</li>
+              <li class="text-muted">Corporate secretary</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Get started</a>
+          </div>
+
+          <div class="plan-card plan-card--popular reveal">
+            <div class="plan-card__badge">Most Popular</div>
+            <div class="plan-card__header">
+              <h3>Complete</h3>
+              <p>Incorporation + first year compliance</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">1,199</span>
+              <span class="price-period">first year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Starter</li>
+              <li>1-year corporate secretary</li>
+              <li>Annual Return filing</li>
+              <li>AGM facilitation</li>
+              <li>Director/shareholder changes</li>
+              <li>CorpPass registration</li>
+              <li>Dedicated relationship manager</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Get started</a>
+          </div>
+
+          <div class="plan-card reveal">
+            <div class="plan-card__header">
+              <h3>Foreign Founder</h3>
+              <p>For overseas-based entrepreneurs</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">2,800</span>
+              <span class="price-period">first year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Complete</li>
+              <li>Nominee director (1 year)</li>
+              <li>KYC & identity verification</li>
+              <li>Registered address (1 year)</li>
+              <li>Employment Pass consultation</li>
+              <li>CorpPass setup</li>
+              <li>Priority onboarding</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Get started</a>
+          </div>
+        </div>
+
+        <!-- Corporate Secretary Plans -->
+        <div class="pricing__plans hidden" id="tab-secretary">
+          <div class="plan-card reveal">
+            <div class="plan-card__header">
+              <h3>Essential</h3>
+              <p>Annual compliance basics</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">350</span>
+              <span class="price-period">per year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Annual Return preparation & filing</li>
+              <li>AGM facilitation & minutes</li>
+              <li>Statutory register maintenance</li>
+              <li>ACRA profile monitoring</li>
+              <li>Deadline reminders</li>
+              <li class="text-muted">Corporate changes</li>
+              <li class="text-muted">Share management</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Get started</a>
+          </div>
+
+          <div class="plan-card plan-card--popular reveal">
+            <div class="plan-card__badge">Recommended</div>
+            <div class="plan-card__header">
+              <h3>Professional</h3>
+              <p>Full ongoing compliance support</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">550</span>
+              <span class="price-period">per year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Essential</li>
+              <li>Unlimited company updates</li>
+              <li>Director & officer changes</li>
+              <li>Share transfers & allotments</li>
+              <li>Resolution drafting</li>
+              <li>Registered address (optional)</li>
+              <li>Priority email support</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Get started</a>
+          </div>
+
+          <div class="plan-card reveal">
+            <div class="plan-card__header">
+              <h3>Enterprise</h3>
+              <p>For complex corporate structures</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">1,500</span>
+              <span class="price-period">per year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Professional</li>
+              <li>Group structure support</li>
+              <li>Multiple share classes</li>
+              <li>Complex restructuring</li>
+              <li>Board meeting support</li>
+              <li>Fundraising document support</li>
+              <li>Dedicated company secretary</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Contact us</a>
+          </div>
+        </div>
+
+        <!-- Accounting Plans -->
+        <div class="pricing__plans hidden" id="tab-accounting">
+          <div class="plan-card reveal">
+            <div class="plan-card__header">
+              <h3>Essentials</h3>
+              <p>Up to S$150k annual revenue</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">900</span>
+              <span class="price-period">per year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Monthly bookkeeping</li>
+              <li>Bank reconciliation</li>
+              <li>ECI filing</li>
+              <li>Unaudited financial statements</li>
+              <li>Corporate tax return (Form C-S)</li>
+              <li class="text-muted">Management reports</li>
+              <li class="text-muted">GST filing</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Get started</a>
+          </div>
+
+          <div class="plan-card plan-card--popular reveal">
+            <div class="plan-card__badge">Best Value</div>
+            <div class="plan-card__header">
+              <h3>Growth</h3>
+              <p>Up to S$500k annual revenue</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">1,800</span>
+              <span class="price-period">per year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Essentials</li>
+              <li>Quarterly management reports</li>
+              <li>GST registration & filing</li>
+              <li>Dedicated accountant</li>
+              <li>Quarterly review call</li>
+              <li>XBRL filing</li>
+              <li>Payroll (up to 5 employees)</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Get started</a>
+          </div>
+
+          <div class="plan-card reveal">
+            <div class="plan-card__header">
+              <h3>Scale</h3>
+              <p>S$500k+ annual revenue</p>
+            </div>
+            <div class="plan-card__price">
+              <span class="price-currency">S$</span>
+              <span class="price-amount">3,600</span>
+              <span class="price-period">per year</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Growth</li>
+              <li>Monthly management reports</li>
+              <li>Monthly review calls</li>
+              <li>CFO advisory services</li>
+              <li>Payroll (unlimited employees)</li>
+              <li>Multi-entity support</li>
+              <li>Audit preparation support</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Contact us</a>
+          </div>
+        </div>
+
+        <p class="pricing__note">All prices exclude GST. Government filing fees included unless stated. <a href="#contact">Need a custom quote?</a></p>
+      </div>
+    </section>
+
+    <!-- ───────────────── TESTIMONIALS ───────────────── -->
+    <section class="testimonials section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Client stories</span>
+          <h2 class="section-heading">Trusted by Singapore businesses</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Karman made our incorporation incredibly smooth. We went from idea to a registered Singapore company in under two days. Their team walked us through every step."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">TL</div>
+              <div>
+                <strong>Thomas Lim</strong>
+                <span>Co-founder, FinMark Pte Ltd</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card testimonial-card--accent reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"As a foreign founder, I was nervous about setting up in Singapore. Karman handled everything — nominee director, CorpPass, the lot. I didn't have to stress about a single deadline."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">SR</div>
+              <div>
+                <strong>Sophie Reinholt</strong>
+                <span>CEO, Aelith Technologies</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"We switched from another provider to Karman for our corporate secretarial work. The difference is night and day — responsive, proactive, and they actually know our business."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">JC</div>
+              <div>
+                <strong>James Chen</strong>
+                <span>Director, Goldfield Logistics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Our accounts are always up to date and our tax filings are never late. Having Karman handle our compliance gives me genuine peace of mind as I scale the business."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">PW</div>
+              <div>
+                <strong>Priya Wijesekara</strong>
+                <span>Founder, Bloom Collective</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── FAQ ───────────────── -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-heading">Common questions</h2>
+        </div>
+
+        <div class="faq__grid">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How long does it take to incorporate a company in Singapore?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>For most standard incorporations, ACRA approves the application within 1–3 working days. We typically submit within 24 hours of receiving all required documents and KYC information. Expedited processing is available for an additional fee.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Do I need to be physically present in Singapore to incorporate?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. The entire incorporation process can be completed remotely. You will need to provide certified copies of identity documents, but you do not need to be in Singapore. Our Foreign Founder package also includes a nominee director service for companies that require a locally-resident director.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What is a corporate secretary and why does every Singapore company need one?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Under the Singapore Companies Act, every company must appoint a qualified company secretary within 6 months of incorporation. The corporate secretary ensures the company complies with the Companies Act — filing the Annual Return, maintaining statutory registers, facilitating AGMs, and lodging any changes to directors or shareholders with ACRA.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              When does my company need to register for GST?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>GST registration becomes compulsory when your taxable turnover exceeds S$1 million in the past 12 months, or when you can reasonably expect to exceed that threshold in the next 12 months. Voluntary registration is also available and can sometimes be advantageous for claiming input tax credits.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can Karman help if my company was incorporated elsewhere?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We frequently onboard existing Singapore companies switching from another provider or previously self-managing their compliance. We'll review your current company records, identify any gaps, and get you fully up to date. There's no disruption to your business during the transition.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What documents do I need to provide to get started?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>For incorporation, you'll need valid photo identification (passport for foreigners, NRIC for Singapore residents/PRs) and proof of address for all directors and shareholders. We'll guide you through the full checklist when you get started and our team handles the rest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── CTA BANNER ───────────────── -->
+    <section class="cta-banner section">
+      <div class="container">
+        <div class="cta-banner__inner reveal">
+          <div class="cta-banner__content">
+            <h2>Ready to set up your Singapore company?</h2>
+            <p>Talk to one of our experts today — no obligation, no jargon.</p>
+          </div>
+          <div class="cta-banner__actions">
+            <a href="#contact" class="btn btn--white btn--lg">Book a free consultation</a>
+            <a href="tel:+6561234567" class="btn btn--ghost-white btn--lg">+65 6123 4567</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── CONTACT ───────────────── -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__info reveal">
+            <span class="section-tag">Get in touch</span>
+            <h2 class="section-heading">Let's talk about your business</h2>
+            <p>Our corporate services experts are available to answer your questions and help you find the right plan for your situation.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="contact-detail__icon">📍</span>
+                <div>
+                  <strong>Office</strong>
+                  <p>1 Raffles Place, #20-61<br/>Singapore 048616</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail__icon">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:+6561234567">+65 6123 4567</a></p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail__icon">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:hello@karman.sg">hello@karman.sg</a></p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail__icon">🕐</span>
+                <div>
+                  <strong>Hours</strong>
+                  <p>Mon–Fri, 9am–6pm SGT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__form reveal">
+            <form class="form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Service of interest</label>
+                <select id="service" name="service">
+                  <option value="">Select a service…</option>
+                  <option>Company Incorporation</option>
+                  <option>Corporate Secretarial</option>
+                  <option>Accounting & Bookkeeping</option>
+                  <option>Corporate Tax</option>
+                  <option>GST Registration & Filing</option>
+                  <option>Payroll Services</option>
+                  <option>Work Visa / Employment Pass</option>
+                  <option>Multiple / Not sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell us about your needs</label>
+                <textarea id="message" name="message" rows="4" placeholder="Briefly describe your situation and what you need help with…"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full btn--lg">Send message →</button>
+              <p class="form-disclaimer">We typically respond within 1 business day. Your information is never shared with third parties.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-mark">K</span>
+            <span class="logo-text">karman</span>
+          </a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges">
+            <span class="badge">ACRA Registered</span>
+            <span class="badge">MAS Regulated</span>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#incorporation">Company Incorporation</a></li>
+              <li><a href="#secretary">Corporate Secretarial</a></li>
+              <li><a href="#accounting">Accounting & Bookkeeping</a></li>
+              <li><a href="#services">Corporate Tax</a></li>
+              <li><a href="#services">GST Filing</a></li>
+              <li><a href="#services">Payroll</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Karman</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">PDPA Notice</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 Karman Corporate Services Pte Ltd. UEN: 202500000X. Registered Filing Agent No. FAXXXXXXXX. 1 Raffles Place, #20-61, Singapore 048616.</p>
+        <p>Karman is an ACRA Registered Filing Agent and a member of the Singapore Corporate Counsel Association.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
