@@ -50,6 +50,7 @@
 
   <!-- ── Stylesheet ── -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="tools.css" />
 </head>
 <body>
 
@@ -97,6 +98,7 @@
         </li>
         <li class="nav__item"><a href="#pricing" class="nav__link">Pricing</a></li>
         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
         <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
       </ul>
 
@@ -403,6 +405,60 @@
             <h3>Start doing business</h3>
             <p>Receive your UEN, company constitution, and share certificates. Your company is live and ready to trade.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── FREE TOOLS ───────────────── -->
+    <section class="tools section" id="tools">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Free tools</span>
+          <h2 class="section-heading">Not sure where to start?</h2>
+          <p class="section-subtext">Use our free interactive tools to get a personalised recommendation in under 3 minutes — no sign-up required.</p>
+        </div>
+        <div class="tools__grid">
+
+          <div class="tool-card reveal">
+            <div class="tool-card__icon">🏗️</div>
+            <span class="tool-card__meta">3 min · 6 questions</span>
+            <h3>Business Structure Recommender</h3>
+            <p>Sole Proprietorship, Partnership, or Pte Ltd? Answer 6 quick questions and get a personalised recommendation emailed to you.</p>
+            <button class="btn btn--primary tool-launch-btn" data-tool="businessStructure">Launch tool →</button>
+          </div>
+
+          <div class="tool-card tool-card--accent reveal">
+            <div class="tool-card__icon">🧮</div>
+            <span class="tool-card__meta">2 min · pick your services</span>
+            <h3>Cost Calculator</h3>
+            <p>Select the services you need, enter your revenue range, and get an instant fee estimate with a breakdown by service.</p>
+            <button class="btn btn--primary tool-launch-btn" data-tool="costCalculator">Launch tool →</button>
+          </div>
+
+          <div class="tool-card reveal">
+            <div class="tool-card__icon">✅</div>
+            <span class="tool-card__meta">2 min · 7 yes/no questions</span>
+            <h3>Eligibility Checker</h3>
+            <p>Not sure if you can register a Singapore company? Answer 7 simple questions to check your eligibility and next steps.</p>
+            <button class="btn btn--primary tool-launch-btn" data-tool="eligibilityChecker">Launch tool →</button>
+          </div>
+
+          <div class="tool-card reveal">
+            <div class="tool-card__icon">📅</div>
+            <span class="tool-card__meta">1 min · see your journey</span>
+            <h3>Incorporation Timeline</h3>
+            <p>See exactly what happens — and when — from the moment you engage us to the day your company is open for business.</p>
+            <button class="btn btn--primary tool-launch-btn" data-tool="timelineVisualizer">Launch tool →</button>
+          </div>
+
+          <div class="tool-card reveal">
+            <div class="tool-card__icon">📋</div>
+            <span class="tool-card__meta">Save &amp; track progress</span>
+            <h3>Document Checklist</h3>
+            <p>Know exactly which documents you need before you start. Track your readiness and download the full checklist.</p>
+            <button class="btn btn--primary tool-launch-btn" data-tool="documentChecklist">Launch tool →</button>
+          </div>
+
         </div>
       </div>
     </section>
@@ -922,7 +978,31 @@
     </div>
   </footer>
 
+  <!-- ───────────────── TOOL MODAL ───────────────── -->
+  <div id="toolModal" class="tool-modal" role="dialog" aria-modal="true" aria-labelledby="toolModalTitle">
+    <div class="tool-modal__backdrop"></div>
+    <div class="tool-modal__panel">
+      <div class="tool-modal__header">
+        <span class="tool-modal__tag" id="toolModalTag"></span>
+        <button class="tool-modal__close" aria-label="Close tool">&times;</button>
+      </div>
+      <h2 class="tool-modal__title" id="toolModalTitle"></h2>
+      <div class="tool-modal__progress-wrap">
+        <div class="tool-modal__progress-track">
+          <div class="tool-modal__progress-bar" id="toolProgressBar"></div>
+        </div>
+        <span class="tool-modal__step-label" id="toolStepLabel"></span>
+      </div>
+      <div class="tool-modal__body" id="toolModalBody"></div>
+      <div class="tool-modal__footer">
+        <button class="btn btn--ghost tool-modal__back" id="toolBackBtn">← Back</button>
+        <button class="btn btn--primary tool-modal__next" id="toolNextBtn">Continue →</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="tools.js"></script>
 
   <!-- ── Structured Data / JSON-LD ── -->
   <script type="application/ld+json">
