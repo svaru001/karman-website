@@ -332,14 +332,18 @@ const TOOLS = {
    MODAL ENGINE
 ══════════════════════════════════════════ */
 
-const modal   = document.getElementById('toolModal');
-const body    = document.getElementById('toolModalBody');
-const title   = document.getElementById('toolModalTitle');
-const tag     = document.getElementById('toolModalTag');
-const bar     = document.getElementById('toolProgressBar');
-const label   = document.getElementById('toolStepLabel');
-const nextBtn = document.getElementById('toolNextBtn');
-const backBtn = document.getElementById('toolBackBtn');
+// ── Mode detection: 'inline' on tool pages, 'modal' on homepage ──
+const INLINE_ROOT = document.getElementById('toolInlineRoot');
+const MODE = INLINE_ROOT ? 'inline' : 'modal';
+
+const modal   = MODE === 'modal' ? document.getElementById('toolModal')        : null;
+const body    = MODE === 'modal' ? document.getElementById('toolModalBody')    : document.getElementById('toolInlineBody');
+const title   = MODE === 'modal' ? document.getElementById('toolModalTitle')   : document.getElementById('toolInlineTitle');
+const tag     = MODE === 'modal' ? document.getElementById('toolModalTag')     : document.getElementById('toolInlineTag');
+const bar     = MODE === 'modal' ? document.getElementById('toolProgressBar')  : document.getElementById('toolInlineBar');
+const label   = MODE === 'modal' ? document.getElementById('toolStepLabel')    : document.getElementById('toolInlineLabel');
+const nextBtn = MODE === 'modal' ? document.getElementById('toolNextBtn')      : document.getElementById('toolInlineNextBtn');
+const backBtn = MODE === 'modal' ? document.getElementById('toolBackBtn')      : document.getElementById('toolInlineBackBtn');
 
 let state = {
   toolId: null,
@@ -814,15 +818,16 @@ function simulateSubmit() {
       const result = tool.getResult(state.answers);
       renderFinalResult(result);
     } else if (state.toolId === 'timelineVisualizer') {
-      closeTool();
-      document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+      if (MODE === 'modal') closeTool();
+      const contactEl = document.querySelector('#contact') || document.querySelector('footer');
+      if (contactEl) contactEl.scrollIntoView({ behavior: 'smooth' });
       return;
     } else {
       renderGenericSuccess();
     }
     updateProgress(100, 'Complete');
-    nextBtn.textContent = 'Close →';
-    nextBtn.onclick = closeTool;
+    nextBtn.textContent = MODE === 'modal' ? 'Close →' : 'Done ✓';
+    nextBtn.onclick = MODE === 'modal' ? closeTool : null;
     backBtn.classList.remove('visible');
   }, 1200);
 }
@@ -907,13 +912,13 @@ function unlockScroll() {
   window.scrollTo(0, _scrollY);
 }
 
-// ── Focus trap ──
+// ── Focus trap (modal mode only) ──
 function trapFocus() {
+  if (MODE !== 'modal' || !modal) return;
   const panel = modal.querySelector('.tool-modal__panel');
   const focusable = [...panel.querySelectorAll('button:not([disabled]), input, select, textarea, a[href], [tabindex]:not([tabindex="-1"])')];
   if (!focusable.length) return;
   focusable[0].focus();
-
   panel._trapHandler && panel.removeEventListener('keydown', panel._trapHandler);
   panel._trapHandler = (e) => {
     if (e.key !== 'Tab') return;
@@ -928,24 +933,30 @@ function trapFocus() {
    EVENT LISTENERS
 ══════════════════════════════════════════ */
 
-// Launch buttons
-document.querySelectorAll('.tool-launch-btn').forEach(btn => {
-  btn.addEventListener('click', () => openTool(btn.dataset.tool, btn));
-});
+if (MODE === 'modal') {
+  // Launch buttons → open modal
+  document.querySelectorAll('.tool-launch-btn').forEach(btn => {
+    btn.addEventListener('click', () => openTool(btn.dataset.tool, btn));
+  });
+  modal.querySelector('.tool-modal__close').addEventListener('click', closeTool);
+  modal.querySelector('.tool-modal__backdrop').addEventListener('click', closeTool);
+  nextBtn.addEventListener('click', advance);
+  backBtn.addEventListener('click', goBack);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('tool-modal--open')) closeTool();
+  });
+}
 
-// Close button
-modal.querySelector('.tool-modal__close').addEventListener('click', closeTool);
-
-// Backdrop click
-modal.querySelector('.tool-modal__backdrop').addEventListener('click', closeTool);
-
-// Next button
-nextBtn.addEventListener('click', advance);
-
-// Back button
-backBtn.addEventListener('click', goBack);
-
-// Escape key
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && modal.classList.contains('tool-modal--open')) closeTool();
-});
+if (MODE === 'inline') {
+  // Auto-initialize inline tool
+  const toolId = INLINE_ROOT.dataset.tool;
+  if (TOOLS[toolId]) {
+    state = { toolId, step: 0, history: [], answers: {}, triggerEl: null };
+    const tool = TOOLS[toolId];
+    if (title) title.textContent = tool.title;
+    if (tag)   tag.textContent   = tool.tag;
+    nextBtn.addEventListener('click', advance);
+    backBtn.addEventListener('click', goBack);
+    renderStep();
+  }
+}

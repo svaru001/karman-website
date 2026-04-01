@@ -2,54 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ── Homepage ── -->
   <url>
     <loc>https://www.karman.com.sg/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-sg" href="https://www.karman.com.sg/" />
   </url>
 
+  <!-- ── Tools Hub ── -->
   <url>
-    <loc>https://www.karman.com.sg/#incorporation</loc>
+    <loc>https://www.karman.com.sg/tools/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- ── Individual Tool Pages ── -->
   <url>
-    <loc>https://www.karman.com.sg/#secretary</loc>
+    <loc>https://www.karman.com.sg/tools/business-structure-recommender</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.karman.com.sg/#accounting</loc>
+    <loc>https://www.karman.com.sg/tools/cost-calculator</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://www.karman.com.sg/tools/eligibility-checker</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/tools/incorporation-timeline</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/tools/document-checklist</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ── Homepage Anchor Sections ── -->
   <url>
     <loc>https://www.karman.com.sg/#pricing</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/#faq</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/#contact</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.60</priority>
   </url>
 
 </urlset>
