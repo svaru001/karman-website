@@ -5,7 +5,7 @@
    Requires env vars: RESEND_API_KEY, ADMIN_EMAIL
 ───────────────────────────────────────────── */
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
   const { toolId, userName, userEmail, subject, pdfBase64, adminSummary } = req.body;
