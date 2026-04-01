@@ -170,23 +170,35 @@ if (contactForm) {
       return;
     }
 
-    // Simulate submission
+    const service = (contactForm.querySelector('#service') || {}).value || '';
+    const message = (contactForm.querySelector('#message') || {}).value || '';
+
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.textContent = '✓ Message sent!';
-      btn.style.background = 'var(--teal)';
-      showFormMessage(contactForm, "Thanks! We'll be in touch within 1 business day.", 'success');
-
-      setTimeout(() => {
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, service, message })
+    })
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(() => {
+        btn.textContent = '✓ Message sent!';
+        btn.style.background = 'var(--teal)';
+        showFormMessage(contactForm, "Thanks! We'll be in touch within 1 business day. Check your inbox for a confirmation.", 'success');
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          btn.style.background = '';
+          contactForm.reset();
+          removeFormMessage(contactForm);
+        }, 5000);
+      })
+      .catch(() => {
         btn.textContent = originalText;
         btn.disabled = false;
-        btn.style.background = '';
-        contactForm.reset();
-        removeFormMessage(contactForm);
-      }, 4000);
-    }, 1200);
+        showFormMessage(contactForm, 'Something went wrong. Please email us directly at hello@karman.com.sg', 'error');
+      });
   });
 }
 

@@ -803,25 +803,296 @@ function renderCapture(step) {
   body.querySelector('#tool-email').addEventListener('keydown', e => { if (e.key === 'Enter') advance(); });
 }
 
-// ── Simulate submit → show result ──
-function simulateSubmit() {
+// ── Load jsPDF on demand ──
+function loadJsPDF() {
+  return new Promise((resolve, reject) => {
+    if (window.jspdf && window.jspdf.jsPDF) { resolve(window.jspdf.jsPDF); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    s.onload = () => resolve(window.jspdf.jsPDF);
+    s.onerror = () => reject(new Error('PDF library failed to load'));
+    document.head.appendChild(s);
+  });
+}
+
+// ── Generate PDF and return base64 + metadata ──
+function buildPDF(jsPDF) {
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  const W = 210, M = 18;
+  let y = 0;
+
+  // Header bar
+  doc.setFillColor(10, 37, 64);
+  doc.rect(0, 0, W, 28, 'F');
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(18);
+  doc.setTextColor(255, 255, 255);
+  doc.text('KARMAN', M, 13);
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(8);
+  doc.setTextColor(160, 190, 215);
+  doc.text('CORPORATE SERVICES SINGAPORE', M, 21);
+  // Gold accent
+  doc.setFillColor(201, 146, 42);
+  doc.rect(0, 28, W, 1.5, 'F');
+  y = 40;
+
+  let subject = '', adminSummary = '';
+
+  switch (state.toolId) {
+
+    case 'businessStructure': {
+      const result = TOOLS.businessStructure.getResult(state.answers);
+      subject = 'Your Business Structure Recommendation — Karman';
+      adminSummary = `Recommended: ${result.structure}\nOwnership: ${state.answers[0]}, Residency: ${state.answers[1]}, Liability: ${state.answers[2]}, Funding: ${state.answers[3]}, Growth: ${state.answers[4]}`;
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(10, 37, 64);
+      doc.text('Business Structure Recommendation', M, y); y += 7;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(107, 114, 128);
+      doc.text(`Prepared for: ${state.answers.name}`, M, y); y += 12;
+
+      // Result card
+      doc.setFillColor(235, 243, 253);
+      doc.roundedRect(M, y, W - M * 2, 36, 3, 3, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(13); doc.setTextColor(10, 37, 64);
+      doc.text(result.structure, M + 8, y + 10);
+      doc.setFillColor(0, 178, 137);
+      doc.roundedRect(M + 8, y + 13, 30, 6, 2, 2, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(255, 255, 255);
+      doc.text(result.badge, M + 23, y + 17.5, { align: 'center' });
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(55, 65, 81);
+      const descLines = doc.splitTextToSize(result.desc, W - M * 2 - 16);
+      doc.text(descLines, M + 8, y + 24);
+      y += 42;
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(10, 37, 64);
+      doc.text('Key Advantages', M, y); y += 7;
+      result.features.forEach(f => {
+        doc.setFillColor(201, 146, 42);
+        doc.circle(M + 2.5, y - 1.5, 1.3, 'F');
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(55, 65, 81);
+        doc.text(f, M + 7, y); y += 7;
+      });
+      break;
+    }
+
+    case 'costCalculator': {
+      const services = state.answers[0] || [];
+      const revenue = state.answers.revenue || 150000;
+      const employees = state.answers.employees || 5;
+      const pricing = {
+        incorporation: { label: 'Company Incorporation', min: 699,  max: 2800 },
+        secretary:     { label: 'Corporate Secretary',   min: 350,  max: 1500 },
+        tax:           { label: 'Corporate Tax Filing',  min: 300,  max: 600  },
+        gst:           { label: 'GST Registration & Filing', min: 400, max: 700 }
+      };
+      const breakdown = [];
+      let tMin = 0, tMax = 0;
+      services.forEach(s => {
+        if (pricing[s]) { breakdown.push(pricing[s]); tMin += pricing[s].min; tMax += pricing[s].max; }
+        if (s === 'accounting') {
+          const [mn, mx] = revenue <= 150000 ? [900, 1200] : revenue <= 500000 ? [1800, 2400] : [3600, 4800];
+          breakdown.push({ label: 'Accounting & Bookkeeping', min: mn, max: mx });
+          tMin += mn; tMax += mx;
+        }
+        if (s === 'payroll') {
+          const mn = employees * 300, mx = employees * 500;
+          breakdown.push({ label: `Payroll (${employees} employee${employees > 1 ? 's' : ''})`, min: mn, max: mx });
+          tMin += mn; tMax += mx;
+        }
+      });
+      subject = 'Your Fee Estimate — Karman Corporate Services';
+      adminSummary = `Services: ${services.join(', ')}\nRevenue: S$${revenue.toLocaleString()}\nEmployees: ${employees}\nEstimate: S$${tMin.toLocaleString()}–S$${tMax.toLocaleString()}`;
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(10, 37, 64);
+      doc.text('Annual Fee Estimate', M, y); y += 7;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(107, 114, 128);
+      doc.text(`Prepared for: ${state.answers.name}`, M, y); y += 12;
+
+      // Total box
+      doc.setFillColor(10, 37, 64);
+      doc.roundedRect(M, y, W - M * 2, 22, 3, 3, 'F');
+      doc.setTextColor(160, 190, 215); doc.setFont('helvetica', 'normal'); doc.setFontSize(9);
+      doc.text('ESTIMATED ANNUAL FEES (SGD)', M + 8, y + 7);
+      doc.setTextColor(255, 255, 255); doc.setFont('helvetica', 'bold'); doc.setFontSize(17);
+      doc.text(`S$${tMin.toLocaleString()} – S$${tMax.toLocaleString()}`, M + 8, y + 17);
+      y += 30;
+
+      // Table header
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(10, 37, 64);
+      doc.text('Fee Breakdown', M, y); y += 7;
+      doc.setFillColor(235, 243, 253);
+      doc.rect(M, y - 4, W - M * 2, 7, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(55, 65, 81);
+      doc.text('Service', M + 3, y);
+      doc.text('Range (S$)', W - M - 3, y, { align: 'right' });
+      y += 6;
+
+      breakdown.forEach((b, i) => {
+        if (i % 2 === 0) { doc.setFillColor(249, 250, 251); doc.rect(M, y - 3.5, W - M * 2, 7, 'F'); }
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(55, 65, 81);
+        doc.text(b.label, M + 3, y);
+        doc.text(`${b.min.toLocaleString()} – ${b.max.toLocaleString()}`, W - M - 3, y, { align: 'right' });
+        y += 7;
+      });
+
+      // Total row
+      doc.setFillColor(201, 146, 42);
+      doc.rect(M, y - 3.5, W - M * 2, 8, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(255, 255, 255);
+      doc.text('TOTAL (estimated)', M + 3, y + 1);
+      doc.text(`${tMin.toLocaleString()} – ${tMax.toLocaleString()}`, W - M - 3, y + 1, { align: 'right' });
+      y += 14;
+
+      doc.setFont('helvetica', 'italic'); doc.setFontSize(8); doc.setTextColor(107, 114, 128);
+      doc.text('All prices in SGD, excluding GST. Government filing fees included. Exact pricing confirmed after consultation.', M, y);
+      break;
+    }
+
+    case 'eligibilityChecker': {
+      const a = state.answers;
+      const notes = [];
+      if (a[2] === 'no')  notes.push('You\'ll need a nominee director — Karman can provide this service.');
+      if (a[4] === 'yes') notes.push('Your activity may require additional licences (MAS, MOH, or another authority).');
+      if (a[5] === 'no')  notes.push('We can check name availability on ACRA before submitting your application.');
+      if (a[6] === 'no')  notes.push('Use our Document Checklist to track which documents you still need.');
+      const eligible = notes.length === 0;
+      subject = 'Your Singapore Eligibility Assessment — Karman';
+      adminSummary = `Status: ${eligible ? 'Eligible' : 'Conditional'}\nNotes: ${notes.join(' | ') || 'None'}`;
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(10, 37, 64);
+      doc.text('Eligibility Assessment Report', M, y); y += 7;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(107, 114, 128);
+      doc.text(`Prepared for: ${state.answers.name}`, M, y); y += 12;
+
+      const [r, g, b2] = eligible ? [0, 178, 137] : [245, 158, 11];
+      doc.setFillColor(r, g, b2);
+      doc.roundedRect(M, y, W - M * 2, 18, 3, 3, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(13); doc.setTextColor(255, 255, 255);
+      doc.text(eligible ? '✓  You\'re eligible to incorporate!' : '⚠  Eligible — with a few things to sort', M + 8, y + 11.5);
+      y += 26;
+
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(55, 65, 81);
+      const intro = eligible
+        ? 'Based on your answers, you meet all basic requirements to register a Singapore Pte Ltd. Karman can get you incorporated in as little as 48 hours.'
+        : 'You can still incorporate — there are just a few action items to sort first. Karman\'s team can guide you through each one.';
+      const introLines = doc.splitTextToSize(intro, W - M * 2);
+      doc.text(introLines, M, y); y += introLines.length * 6 + 8;
+
+      if (notes.length) {
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(10, 37, 64);
+        doc.text('Action Items', M, y); y += 7;
+        notes.forEach(n => {
+          doc.setFillColor(245, 158, 11);
+          doc.circle(M + 2.5, y - 1.5, 1.3, 'F');
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(55, 65, 81);
+          const lines = doc.splitTextToSize(n, W - M * 2 - 10);
+          doc.text(lines, M + 7, y); y += lines.length * 6 + 3;
+        });
+      }
+      break;
+    }
+
+    case 'timelineVisualizer': {
+      subject = 'Your Singapore Incorporation Timeline — Karman';
+      adminSummary = `Tool: Timeline Visualizer\nName: ${state.answers.name}`;
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(10, 37, 64);
+      doc.text('Incorporation Timeline', M, y); y += 7;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(107, 114, 128);
+      doc.text('From idea to registered Singapore company — step by step', M, y); y += 14;
+
+      TOOLS.timelineVisualizer.steps[0].items.forEach((item, i, arr) => {
+        doc.setFillColor(10, 37, 64);
+        doc.circle(M + 3, y - 1, 2.5, 'F');
+        if (i < arr.length - 1) {
+          doc.setDrawColor(200, 210, 220); doc.setLineWidth(0.5);
+          doc.line(M + 3, y + 2, M + 3, y + 13);
+        }
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(201, 146, 42);
+        doc.text(item.timing, M + 10, y);
+        doc.setTextColor(10, 37, 64);
+        doc.text(item.title, M + 32, y);
+        y += 5.5;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(107, 114, 128);
+        const lines = doc.splitTextToSize(item.desc, W - M * 2 - 12);
+        doc.text(lines, M + 10, y); y += lines.length * 5 + 5;
+      });
+      break;
+    }
+
+    case 'documentChecklist': {
+      subject = 'Your Incorporation Document Checklist — Karman';
+      adminSummary = `Tool: Document Checklist\nName: ${state.answers.name}`;
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(10, 37, 64);
+      doc.text('Incorporation Document Checklist', M, y); y += 7;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(107, 114, 128);
+      doc.text(`Prepared for: ${state.answers.name}`, M, y); y += 12;
+
+      TOOLS.documentChecklist.steps[0].categories.forEach(cat => {
+        if (y > 248) { doc.addPage(); y = 20; }
+        doc.setFillColor(235, 243, 253);
+        doc.rect(M, y - 4, W - M * 2, 8, 'F');
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(10, 37, 64);
+        doc.text(cat.title, M + 3, y); y += 9;
+
+        cat.items.forEach(item => {
+          if (y > 272) { doc.addPage(); y = 20; }
+          doc.setDrawColor(150, 160, 170); doc.setLineWidth(0.4);
+          doc.rect(M + 2, y - 3.5, 4, 4);
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(55, 65, 81);
+          const lines = doc.splitTextToSize(item.text, W - M * 2 - 12);
+          doc.text(lines, M + 9, y); y += lines.length * 5.5 + 2;
+        });
+        y += 4;
+      });
+      break;
+    }
+  }
+
+  // Footer on every page
+  const pages = doc.internal.getNumberOfPages();
+  for (let i = 1; i <= pages; i++) {
+    doc.setPage(i);
+    doc.setFillColor(10, 37, 64);
+    doc.rect(0, 285, W, 12, 'F');
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(160, 190, 215);
+    doc.text('Karman Corporate Services Pte Ltd  ·  1 Raffles Place #20-61, Singapore 048616  ·  hello@karman.com.sg  ·  +65 6123 4567', W / 2, 292, { align: 'center' });
+  }
+
+  const pdfBase64 = doc.output('datauristring').split(',')[1];
+  return { pdfBase64, subject, adminSummary };
+}
+
+// ── Submit: generate PDF, send email, show result ──
+async function simulateSubmit() {
   const btn = nextBtn;
-  const originalText = btn.textContent;
-  btn.textContent = 'Sending…';
+  btn.textContent = 'Generating…';
   btn.disabled = true;
 
-  setTimeout(() => {
-    btn.disabled = false;
-    const tool = TOOLS[state.toolId];
+  try {
+    const jsPDF = await loadJsPDF();
+    const { pdfBase64, subject, adminSummary } = buildPDF(jsPDF);
 
+    const res = await fetch('/api/send-result', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        toolId: state.toolId,
+        userName: state.answers.name,
+        userEmail: state.answers.email,
+        subject,
+        pdfBase64,
+        adminSummary
+      })
+    });
+
+    if (!res.ok) throw new Error('Send failed');
+
+    btn.disabled = false;
     if (state.toolId === 'businessStructure') {
-      const result = tool.getResult(state.answers);
-      renderFinalResult(result);
-    } else if (state.toolId === 'timelineVisualizer') {
-      if (MODE === 'modal') closeTool();
-      const contactEl = document.querySelector('#contact') || document.querySelector('footer');
-      if (contactEl) contactEl.scrollIntoView({ behavior: 'smooth' });
-      return;
+      renderFinalResult(TOOLS.businessStructure.getResult(state.answers));
     } else {
       renderGenericSuccess();
     }
@@ -829,7 +1100,12 @@ function simulateSubmit() {
     nextBtn.textContent = MODE === 'modal' ? 'Close →' : 'Done ✓';
     nextBtn.onclick = MODE === 'modal' ? closeTool : null;
     backBtn.classList.remove('visible');
-  }, 1200);
+
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = nextBtn.dataset.originalText || 'Submit →';
+    showToolError('Something went wrong. Please try again or email us at hello@karman.com.sg');
+  }
 }
 
 // ── Final Result: Business Structure ──
@@ -850,11 +1126,12 @@ function renderFinalResult(result) {
 // ── Generic success (quote / checklist / consultation) ──
 function renderGenericSuccess() {
   const messages = {
-    costCalculator: { icon: '🎉', title: 'Quote request received!', desc: `We'll prepare your personalised quote and send it to <strong>${state.answers.email}</strong> within 1 business day.` },
-    eligibilityChecker: { icon: '📅', title: 'Consultation booked!', desc: `We'll be in touch at <strong>${state.answers.email}</strong> to arrange your free consultation.` },
-    documentChecklist: { icon: '📧', title: 'Checklist sent!', desc: `Your document checklist PDF has been sent to <strong>${state.answers.email}</strong>. We\'ll be in touch shortly.` }
+    costCalculator:     { icon: '📄', title: 'Fee estimate sent!',        desc: `Your itemised fee estimate PDF has been sent to <strong>${state.answers.email}</strong>. An advisor will follow up within 1 business day.` },
+    eligibilityChecker: { icon: '📄', title: 'Eligibility report sent!',  desc: `Your eligibility assessment PDF has been sent to <strong>${state.answers.email}</strong>. We'll be in touch to help with next steps.` },
+    documentChecklist:  { icon: '📄', title: 'Checklist sent!',           desc: `Your document checklist PDF has been sent to <strong>${state.answers.email}</strong>. We'll be in touch shortly.` },
+    timelineVisualizer: { icon: '📄', title: 'Timeline sent!',            desc: `Your incorporation timeline PDF has been sent to <strong>${state.answers.email}</strong>. Ready to start? Our team will reach out within 1 business day.` }
   };
-  const msg = messages[state.toolId] || { icon: '✅', title: 'Done!', desc: `We\'ll be in touch at <strong>${state.answers.email}</strong> shortly.` };
+  const msg = messages[state.toolId] || { icon: '📄', title: 'Sent!', desc: `Your report has been sent to <strong>${state.answers.email}</strong>.` };
 
   body.innerHTML = `
     <div class="wizard-result">
