@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karman — Logo Options v2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #F0F2F5; color: #1a1a2e; padding: 48px 32px; }
+
+    h1  { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; color: #0A2540; margin-bottom: 6px; }
+    .sub { font-size: 14px; color: #6B7280; margin-bottom: 48px; }
+
+    .cards { display: flex; flex-direction: column; gap: 40px; max-width: 860px; }
+
+    .card { background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid #E1E4EA; box-shadow: 0 2px 12px rgba(10,37,64,.07); }
+    .card-header { padding: 28px 32px 0; }
+    .card-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9AA5B4; }
+    .card-name  { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; color: #0A2540; margin: 4px 0 6px; }
+    .card-desc  { font-size: 13px; color: #6B7280; line-height: 1.65; max-width: 540px; margin-bottom: 24px; }
+
+    .swatches { display: flex; gap: 0; border-top: 1px solid #F0F2F5; }
+    .swatch   { flex: 1; padding: 28px 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; border-right: 1px solid #F0F2F5; }
+    .swatch:last-child { border-right: none; }
+    .swatch.dark  { background: #0A2540; }
+    .swatch.light { background: #EBF3FD; }
+    .swatch.grey  { background: #F8F9FB; }
+    .swatch-label { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9AA5B4; }
+    .swatch.dark .swatch-label { color: rgba(255,255,255,.4); }
+
+    .sizes-row { display: flex; align-items: center; gap: 24px; padding: 20px 32px 28px; border-top: 1px solid #F0F2F5; background: #FAFAFA; flex-wrap: wrap; }
+    .sizes-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9AA5B4; min-width: 70px; }
+
+    .filepath { display: inline-block; font-family: monospace; font-size: 12px; background: #0A2540; color: #00C9A7; padding: 5px 12px; border-radius: 6px; margin: 0 32px 24px; }
+  </style>
+</head>
+<body>
+
+<h1>Karman — Logo Options</h1>
+<p class="sub">3 concepts with clear K letterform + professional / advisory styling. Open <code>brand/preview.html</code> to compare.</p>
+
+<div class="cards">
+
+  <!-- OPTION 1 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-label">Option 1</div>
+      <div class="card-name">The Counselor — Badge + Briefcase Detail</div>
+      <div class="card-desc">Navy rounded-square badge with a bold white K. A gold briefcase icon sits in the bottom-right corner, clearly signalling corporate advisory services. Gold top-edge accent adds a premium, establishment feel.</div>
+    </div>
+    <div class="swatches">
+      <div class="swatch grey">
+        <img src="logo-1-counselor.svg" width="260" alt="Logo 1 on grey"/>
+        <span class="swatch-label">Light</span>
+      </div>
+      <div class="swatch light">
+        <img src="logo-1-counselor.svg" width="260" alt="Logo 1 on light blue"/>
+        <span class="swatch-label">Brand bg</span>
+      </div>
+      <div class="swatch dark">
+        <img src="logo-1-counselor.svg" width="260" alt="Logo 1 on dark"/>
+        <span class="swatch-label">Dark</span>
+      </div>
+    </div>
+    <div class="sizes-row">
+      <span class="sizes-label">Sizes</span>
+      <img src="logo-1-counselor.svg" width="220" alt="large"/>
+      <img src="logo-1-counselor.svg" width="140" alt="medium"/>
+      <img src="logo-1-counselor.svg" width="80" alt="small"/>
+    </div>
+    <span class="filepath">brand/logo-1-counselor.svg</span>
+  </div>
+
+  <!-- OPTION 2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-label">Option 2</div>
+      <div class="card-name">The Briefcase — K Inside a Case</div>
+      <div class="card-desc">The entire mark is a briefcase silhouette — immediately communicating corporate advisory services. A bold white K sits inside the case body. Gold centre clasp adds a premium detail. Unmistakable industry positioning at a glance.</div>
+    </div>
+    <div class="swatches">
+      <div class="swatch grey">
+        <img src="logo-2-briefcase.svg" width="260" alt="Logo 2 on grey"/>
+        <span class="swatch-label">Light</span>
+      </div>
+      <div class="swatch light">
+        <img src="logo-2-briefcase.svg" width="260" alt="Logo 2 on light blue"/>
+        <span class="swatch-label">Brand bg</span>
+      </div>
+      <div class="swatch dark">
+        <img src="logo-2-briefcase.svg" width="260" alt="Logo 2 on dark"/>
+        <span class="swatch-label">Dark</span>
+      </div>
+    </div>
+    <div class="sizes-row">
+      <span class="sizes-label">Sizes</span>
+      <img src="logo-2-briefcase.svg" width="220" alt="large"/>
+      <img src="logo-2-briefcase.svg" width="140" alt="medium"/>
+      <img src="logo-2-briefcase.svg" width="80" alt="small"/>
+    </div>
+    <span class="filepath">brand/logo-2-briefcase.svg</span>
+  </div>
+
+  <!-- OPTION 3 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-label">Option 3</div>
+      <div class="card-name">The Shield — Trust, Authority, Advisory</div>
+      <div class="card-desc">A classic shield crest shape — universally associated with legal, financial, and advisory professions. The K sits centred with a white upper arm and a gold lower arm, suggesting both authority and prosperity. The gold dot tagline separator adds elegance.</div>
+    </div>
+    <div class="swatches">
+      <div class="swatch grey">
+        <img src="logo-3-shield.svg" width="260" alt="Logo 3 on grey"/>
+        <span class="swatch-label">Light</span>
+      </div>
+      <div class="swatch light">
+        <img src="logo-3-shield.svg" width="260" alt="Logo 3 on light blue"/>
+        <span class="swatch-label">Brand bg</span>
+      </div>
+      <div class="swatch dark">
+        <img src="logo-3-shield.svg" width="260" alt="Logo 3 on dark"/>
+        <span class="swatch-label">Dark</span>
+      </div>
+    </div>
+    <div class="sizes-row">
+      <span class="sizes-label">Sizes</span>
+      <img src="logo-3-shield.svg" width="220" alt="large"/>
+      <img src="logo-3-shield.svg" width="140" alt="medium"/>
+      <img src="logo-3-shield.svg" width="80" alt="small"/>
+    </div>
+    <span class="filepath">brand/logo-3-shield.svg</span>
+  </div>
+
+</div>
+</body>
+</html>

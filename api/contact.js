@@ -10,7 +10,7 @@ module.exports = async function handler(req, res) {
 
   const { name, email, service, message } = req.body;
   const key   = process.env.RESEND_API_KEY;
-  const admin = process.env.ADMIN_EMAIL || 'hello@karman.com.sg';
+  const admin = process.env.ADMIN_EMAIL || 'team@karman.com.sg';
 
   if (!key) return res.status(500).json({ error: 'Email service not configured' });
   if (!name || !email) return res.status(400).json({ error: 'Name and email required' });
@@ -24,7 +24,7 @@ module.exports = async function handler(req, res) {
 
   // ── Notify admin ──
   const adminRes = await send({
-    from: 'Karman Website <hello@karman.com.sg>',
+    from: 'Karman Website <team@karman.com.sg>',
     to: [admin],
     subject: `[Enquiry] ${name}${service ? ' — ' + service : ''}`,
     html: `<!DOCTYPE html>
@@ -53,7 +53,7 @@ module.exports = async function handler(req, res) {
 
   // ── Confirmation to user ──
   await send({
-    from: 'Karman Corporate Services <hello@karman.com.sg>',
+    from: 'Karman Corporate Services <team@karman.com.sg>',
     to: [email],
     subject: 'We received your enquiry — Karman Corporate Services',
     html: `<!DOCTYPE html>
@@ -79,7 +79,7 @@ module.exports = async function handler(req, res) {
     <hr style="border:none;border-top:1px solid #e1e4ea;margin:32px 0 20px;" />
     <p style="color:#9AA5B4;font-size:11px;line-height:1.7;margin:0;">
       Karman Corporate Services Pte Ltd · 1 Raffles Place #20-61, Singapore 048616<br/>
-      <a href="mailto:hello@karman.com.sg" style="color:#0066CC;text-decoration:none;">hello@karman.com.sg</a> · <a href="tel:+6561234567" style="color:#0066CC;text-decoration:none;">+65 6123 4567</a>
+      <a href="mailto:team@karman.com.sg" style="color:#0066CC;text-decoration:none;">team@karman.com.sg</a> · <a href="tel:+6561234567" style="color:#0066CC;text-decoration:none;">+65 6123 4567</a>
     </p>
   </div>
 </body>

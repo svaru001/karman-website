@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" width="280" height="72">
+  <defs>
+    <linearGradient id="kGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2540"/>
+      <stop offset="60%" style="stop-color:#1A6BCC"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    Logo 3: Pure geometric wordmark.
+    The K is given a distinctive split treatment —
+    the two arms of the K are separated by a teal gap line,
+    referencing precision, clarity, and clean boundaries.
+  -->
+
+  <!-- K — vertical stroke (navy) -->
+  <rect x="0" y="8" width="11" height="56" rx="3" fill="#0A2540"/>
+
+  <!-- K — upper arm (blue gradient) -->
+  <polygon points="11,36 42,8 56,8 25,36" fill="url(#kGrad)" rx="2"/>
+
+  <!-- K — lower arm (navy) -->
+  <polygon points="11,38 56,64 42,64 11,40" fill="#0A2540"/>
+
+  <!-- Teal separator line between the two arms (the "precision cut") -->
+  <line x1="11" y1="37" x2="52" y2="37" stroke="#00C9A7" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Small teal square accent (bottom-right of mark, acts as a "period") -->
+  <rect x="59" y="55" width="8" height="8" rx="2" fill="#00C9A7"/>
+
+  <!-- Wordmark: "arman" (K already drawn as mark) -->
+  <text x="74" y="51" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="34" font-weight="700" letter-spacing="-1.2" fill="#0A2540">arman</text>
+</svg>

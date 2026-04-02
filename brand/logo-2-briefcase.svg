@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 68" width="300" height="68">
+  <defs>
+    <linearGradient id="caseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#1A5080"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── BRIEFCASE ICON (68×68) ── -->
+
+  <!-- Briefcase handle -->
+  <path d="M 22 20 L 22 13 Q 22 10 25 10 L 43 10 Q 46 10 46 13 L 46 20"
+        fill="none" stroke="#0A2540" stroke-width="4.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Briefcase body (main rectangle) -->
+  <rect x="6" y="20" width="56" height="40" rx="6" fill="url(#caseGrad)"/>
+
+  <!-- Horizontal centre divider line on briefcase -->
+  <line x1="6" y1="39" x2="62" y2="39" stroke="white" stroke-width="1.2" stroke-opacity="0.25"/>
+
+  <!-- Centre clasp (gold) -->
+  <rect x="28" y="34" width="12" height="10" rx="3" fill="#C9922A"/>
+  <rect x="31" y="37" width="6" height="4" rx="1.5" fill="#0A2540"/>
+
+  <!-- Bold serif K — white, formal/official letterform centred in briefcase -->
+  <text x="34" y="50"
+        font-family="'Georgia','Times New Roman','Palatino Linotype',serif"
+        font-size="30" font-weight="700"
+        text-anchor="middle"
+        fill="white">K</text>
+
+  <!-- ── WORDMARK ── -->
+  <text x="82" y="37"
+        font-family="'Sora','Inter',system-ui,sans-serif"
+        font-size="28" font-weight="700" letter-spacing="-0.8"
+        fill="#0A2540">karman</text>
+
+  <text x="83" y="55"
+        font-family="'Inter',system-ui,sans-serif"
+        font-size="10.5" font-weight="600" letter-spacing="2.8"
+        fill="#9AA5B4">CORPORATE SERVICES</text>
+</svg>

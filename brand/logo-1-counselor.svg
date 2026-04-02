@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 68" width="300" height="68">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#163758"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── ICON BADGE (68×68) ── -->
+  <rect x="0" y="0" width="68" height="68" rx="14" fill="url(#bg1)"/>
+
+  <!-- Gold top-edge accent bar -->
+  <rect x="0" y="0" width="68" height="4" rx="2" fill="#C9922A"/>
+
+  <!-- Clear bold K using lines -->
+  <line x1="19" y1="14" x2="19" y2="54" stroke="white" stroke-width="8.5" stroke-linecap="round"/>
+  <line x1="19" y1="34" x2="49" y2="14" stroke="white" stroke-width="8.5" stroke-linecap="round"/>
+  <line x1="19" y1="34" x2="49" y2="54" stroke="white" stroke-width="8.5" stroke-linecap="round"/>
+
+  <!-- Small briefcase icon (bottom-right of badge) -->
+  <!-- Handle -->
+  <path d="M 41 52 L 41 48 Q 41 47 42 47 L 48 47 Q 49 47 49 48 L 49 52"
+        fill="none" stroke="#C9922A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Body -->
+  <rect x="38" y="52" width="14" height="10" rx="2" fill="#C9922A"/>
+  <!-- Centre clasp line -->
+  <line x1="38" y1="57" x2="52" y2="57" stroke="#0A2540" stroke-width="1.2"/>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "karman" -->
+  <text x="84" y="38"
+        font-family="'Sora','Inter',system-ui,sans-serif"
+        font-size="28" font-weight="700" letter-spacing="-0.8"
+        fill="#0A2540">karman</text>
+
+  <!-- "CORPORATE SERVICES" tagline -->
+  <text x="85" y="56"
+        font-family="'Inter',system-ui,sans-serif"
+        font-size="10.5" font-weight="600" letter-spacing="2.8"
+        fill="#9AA5B4">CORPORATE SERVICES</text>
+</svg>

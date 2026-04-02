@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:sleek.com)",
+      "WebFetch(domain:www.sbsgroup.com.sg)",
+      "WebFetch(domain:osome.com)",
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:www.whois.com)",
+      "WebFetch(domain:www.dreamscapenetworks.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(python3:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080)",
+      "Bash(vercel logs:*)",
+      "Bash(npx vercel:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}

@@ -10,7 +10,7 @@ module.exports = async function handler(req, res) {
 
   const { toolId, userName, userEmail, subject, pdfBase64, adminSummary } = req.body;
   const key   = process.env.RESEND_API_KEY;
-  const admin = process.env.ADMIN_EMAIL || 'hello@karman.com.sg';
+  const admin = process.env.ADMIN_EMAIL || 'team@karman.com.sg';
 
   if (!key) return res.status(500).json({ error: 'Email service not configured' });
 
@@ -23,7 +23,7 @@ module.exports = async function handler(req, res) {
 
   // ── Email to user with PDF attachment ──
   const userRes = await send({
-    from: 'Karman Corporate Services <hello@karman.com.sg>',
+    from: 'Karman Corporate Services <team@karman.com.sg>',
     to: [userEmail],
     subject,
     html: buildUserHtml(userName, toolId),
@@ -40,7 +40,7 @@ module.exports = async function handler(req, res) {
 
   // ── Lead notification to admin ──
   await send({
-    from: 'Karman Website <hello@karman.com.sg>',
+    from: 'Karman Website <team@karman.com.sg>',
     to: [admin],
     subject: `[Lead] ${userName} — ${TOOL_NAMES[toolId] || toolId}`,
     html: buildAdminHtml(userName, userEmail, toolId, adminSummary)
@@ -84,7 +84,7 @@ function buildUserHtml(name, toolId) {
     <hr style="border:none;border-top:1px solid #e1e4ea;margin:32px 0 20px;" />
     <p style="color:#9AA5B4;font-size:11px;line-height:1.7;margin:0;">
       Karman Corporate Services Pte Ltd · 1 Raffles Place #20-61, Singapore 048616<br/>
-      <a href="mailto:hello@karman.com.sg" style="color:#0066CC;text-decoration:none;">hello@karman.com.sg</a> ·
+      <a href="mailto:team@karman.com.sg" style="color:#0066CC;text-decoration:none;">team@karman.com.sg</a> ·
       <a href="tel:+6561234567" style="color:#0066CC;text-decoration:none;">+65 6123 4567</a>
     </p>
   </div>

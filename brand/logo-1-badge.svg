@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2540"/>
+      <stop offset="100%" style="stop-color:#1A6BCC"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C9A7"/>
+      <stop offset="100%" style="stop-color:#1A6BCC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon badge: rounded square -->
+  <rect x="0" y="0" width="80" height="80" rx="18" fill="url(#badgeGrad)"/>
+
+  <!-- Teal accent bar (left edge inside badge) -->
+  <rect x="0" y="0" width="5" height="80" rx="2" fill="url(#accentGrad)"/>
+
+  <!-- Letter K — drawn as paths -->
+  <!-- Vertical stroke -->
+  <rect x="22" y="18" width="9" height="44" rx="2" fill="white"/>
+  <!-- Upper arm -->
+  <polygon points="31,40 53,18 62,18 40,40" fill="white"/>
+  <!-- Lower arm (with small notch to separate from upper) -->
+  <polygon points="31,42 62,62 53,62 31,44" fill="white"/>
+
+  <!-- Wordmark: "karman" -->
+  <text x="98" y="52" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="32" font-weight="700" letter-spacing="-1" fill="#0A2540">karman</text>
+
+  <!-- Tagline dot accent -->
+  <circle cx="92" cy="46" r="3" fill="#00C9A7"/>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" width="340" height="80">
+  <defs>
+    <linearGradient id="orbitAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C9A7"/>
+      <stop offset="100%" style="stop-color:#1A6BCC"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="40" cy="40" r="36"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="40" cy="40" r="36" fill="none" stroke="#E1E4EA" stroke-width="2"/>
+
+  <!-- Teal arc — top-right quadrant (the Kármán line reference: a boundary, a threshold) -->
+  <path d="M 40 4 A 36 36 0 0 1 76 40" fill="none" stroke="url(#orbitAccent)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Small dot at arc end -->
+  <circle cx="76" cy="40" r="4" fill="#00C9A7"/>
+
+  <!-- Inner fill -->
+  <circle cx="40" cy="40" r="29" fill="#0A2540"/>
+
+  <!-- Letter K inside circle — clean geometric -->
+  <!-- Vertical stroke -->
+  <rect x="27" y="19" width="7" height="42" rx="1.5" fill="white"/>
+  <!-- Upper arm -->
+  <polygon points="34,39 52,19 59,19 41,39" fill="white"/>
+  <!-- Lower arm -->
+  <polygon points="34,41 59,61 52,61 34,43" fill="white"/>
+
+  <!-- Wordmark -->
+  <text x="92" y="36" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#0A2540">karman</text>
+
+  <!-- Subtext -->
+  <text x="93" y="56" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="#9AA5B4">CORPORATE SERVICES</text>
+</svg>
