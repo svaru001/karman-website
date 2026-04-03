@@ -53,14 +53,22 @@ document.addEventListener('click', (e) => {
 // === DROPDOWN 500ms LINGER ===
 const hasDropdown = document.querySelector('.has-dropdown');
 if (hasDropdown) {
+  const dropdown = hasDropdown.querySelector('.dropdown');
   let hideTimer;
-  hasDropdown.addEventListener('mouseenter', () => {
+
+  function showDropdown() {
     clearTimeout(hideTimer);
     hasDropdown.classList.add('is-open');
-  });
-  hasDropdown.addEventListener('mouseleave', () => {
+  }
+
+  function hideDropdown() {
     hideTimer = setTimeout(() => hasDropdown.classList.remove('is-open'), 500);
-  });
+  }
+
+  hasDropdown.addEventListener('mouseenter', showDropdown);
+  hasDropdown.addEventListener('mouseleave', hideDropdown);
+  dropdown.addEventListener('mouseenter', showDropdown);
+  dropdown.addEventListener('mouseleave', hideDropdown);
 }
 
 
