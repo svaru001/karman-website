@@ -227,6 +227,7 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 4px;
   flex: 1;
+  align-self: stretch;
 }
 
 .nav__item {
@@ -261,27 +262,15 @@ h1, h2, h3, h4, h5 {
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   padding: 8px;
-  padding-top: 16px;
   min-width: 280px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(4px);
-  transition: all .2s ease;
+  transition: opacity .2s ease, visibility .2s ease;
   pointer-events: none;
-}
-/* Bridge the gap between nav item and dropdown so cursor movement doesn't break hover */
-.has-dropdown::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 16px;
 }
 .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
   pointer-events: auto;
 }
 .dropdown__link {

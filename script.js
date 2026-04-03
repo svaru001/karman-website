@@ -50,39 +50,6 @@ document.addEventListener('click', (e) => {
 });
 
 
-// === DROPDOWN HOVER WITH DELAY ===
-document.querySelectorAll('.has-dropdown').forEach(item => {
-  let closeTimer;
-  const dropdown = item.querySelector('.dropdown');
-
-  item.addEventListener('mouseenter', () => {
-    clearTimeout(closeTimer);
-    dropdown.style.opacity = '1';
-    dropdown.style.visibility = 'visible';
-    dropdown.style.transform = 'translateY(0)';
-    dropdown.style.pointerEvents = 'auto';
-  });
-
-  item.addEventListener('mouseleave', () => {
-    closeTimer = setTimeout(() => {
-      dropdown.style.opacity = '';
-      dropdown.style.visibility = '';
-      dropdown.style.transform = '';
-      dropdown.style.pointerEvents = '';
-    }, 120);
-  });
-
-  dropdown.addEventListener('mouseenter', () => clearTimeout(closeTimer));
-  dropdown.addEventListener('mouseleave', () => {
-    closeTimer = setTimeout(() => {
-      dropdown.style.opacity = '';
-      dropdown.style.visibility = '';
-      dropdown.style.transform = '';
-      dropdown.style.pointerEvents = '';
-    }, 120);
-  });
-});
-
 // === SCROLL REVEAL ANIMATIONS ===
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
