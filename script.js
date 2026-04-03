@@ -50,6 +50,31 @@ document.addEventListener('click', (e) => {
 });
 
 
+// === DROPDOWN (position:fixed, no gap) ===
+const hasDropdown = document.querySelector('.has-dropdown');
+if (hasDropdown) {
+  const dropdown = hasDropdown.querySelector('.dropdown');
+  let hideTimer;
+
+  function openDropdown() {
+    clearTimeout(hideTimer);
+    const headerBottom = header.getBoundingClientRect().bottom;
+    const triggerLeft = hasDropdown.getBoundingClientRect().left;
+    dropdown.style.top  = headerBottom + 'px';
+    dropdown.style.left = triggerLeft + 'px';
+    dropdown.classList.add('is-open');
+  }
+
+  function closeDropdown() {
+    hideTimer = setTimeout(() => dropdown.classList.remove('is-open'), 150);
+  }
+
+  hasDropdown.addEventListener('mouseenter', openDropdown);
+  hasDropdown.addEventListener('mouseleave', closeDropdown);
+  dropdown.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+  dropdown.addEventListener('mouseleave', closeDropdown);
+}
+
 // === SCROLL REVEAL ANIMATIONS ===
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {

@@ -254,9 +254,8 @@ h1, h2, h3, h4, h5 {
 
 /* Dropdown */
 .dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: fixed;
+  z-index: 1100;
   background: #fff;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
@@ -265,10 +264,10 @@ h1, h2, h3, h4, h5 {
   min-width: 280px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .2s ease, visibility .2s ease;
+  transition: opacity .15s ease, visibility .15s ease;
   pointer-events: none;
 }
-.has-dropdown:hover .dropdown {
+.dropdown.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
