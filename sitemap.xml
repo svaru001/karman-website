@@ -10,6 +10,42 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- ── Service Pages ── -->
+  <url>
+    <loc>https://www.karman.com.sg/services/company-incorporation/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/services/corporate-secretary/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/services/accounting/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/services/gst-registration/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/services/nominee-director/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
   <!-- ── Tools Hub ── -->
   <url>
     <loc>https://www.karman.com.sg/tools/</loc>
@@ -131,6 +167,13 @@
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/blog/variable-capital-company-singapore-vcc</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- ── Homepage Anchor Sections ── -->

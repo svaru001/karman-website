@@ -197,7 +197,7 @@ if (contactForm) {
       .catch(() => {
         btn.textContent = originalText;
         btn.disabled = false;
-        showFormMessage(contactForm, 'Something went wrong. Please email us directly at hello@karman.com.sg', 'error');
+        showFormMessage(contactForm, 'Something went wrong. Please email us directly at team@karman.com.sg', 'error');
       });
   });
 }

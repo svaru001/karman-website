@@ -83,9 +83,9 @@ function buildUserHtml(name, toolId) {
     </a>
     <hr style="border:none;border-top:1px solid #e1e4ea;margin:32px 0 20px;" />
     <p style="color:#9AA5B4;font-size:11px;line-height:1.7;margin:0;">
-      Karman Corporate Services Pte Ltd · 1 Raffles Place #20-61, Singapore 048616<br/>
+      Karman Corporate Services Pte Ltd · 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051<br/>
       <a href="mailto:team@karman.com.sg" style="color:#0066CC;text-decoration:none;">team@karman.com.sg</a> ·
-      <a href="tel:+6561234567" style="color:#0066CC;text-decoration:none;">+65 6123 4567</a>
+      <a href="tel:+6591382994" style="color:#0066CC;text-decoration:none;">+65 9138 2994</a>
     </p>
   </div>
 </body>

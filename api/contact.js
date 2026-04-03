@@ -69,7 +69,7 @@ module.exports = async function handler(req, res) {
       Thank you for reaching out${service ? ' about <strong>' + service + '</strong>' : ''}. We've received your enquiry and one of our advisors will be in touch within <strong>1 business day</strong>.
     </p>
     <p style="color:#374151;line-height:1.7;margin:0 0 28px;">
-      If your matter is urgent, call us directly at <a href="tel:+6561234567" style="color:#0A2540;font-weight:600;">+65 6123 4567</a> (Mon–Fri, 9am–6pm SGT).
+      If your matter is urgent, call us directly at <a href="tel:+6591382994" style="color:#0A2540;font-weight:600;">+65 9138 2994</a> (Mon–Fri, 9am–6pm SGT).
     </p>
     <div style="background:#EBF3FD;border-left:4px solid #0A2540;padding:16px 20px;margin:0 0 28px;border-radius:0 6px 6px 0;">
       <p style="color:#0A2540;font-weight:700;margin:0 0 6px;font-size:14px;">While you wait, try our free tools</p>
@@ -78,8 +78,8 @@ module.exports = async function handler(req, res) {
     <a href="https://www.karman.com.sg/tools/" style="display:inline-block;background:#0A2540;color:white;padding:13px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;">Explore free tools →</a>
     <hr style="border:none;border-top:1px solid #e1e4ea;margin:32px 0 20px;" />
     <p style="color:#9AA5B4;font-size:11px;line-height:1.7;margin:0;">
-      Karman Corporate Services Pte Ltd · 1 Raffles Place #20-61, Singapore 048616<br/>
-      <a href="mailto:team@karman.com.sg" style="color:#0066CC;text-decoration:none;">team@karman.com.sg</a> · <a href="tel:+6561234567" style="color:#0066CC;text-decoration:none;">+65 6123 4567</a>
+      Karman Corporate Services Pte Ltd · 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051<br/>
+      <a href="mailto:team@karman.com.sg" style="color:#0066CC;text-decoration:none;">team@karman.com.sg</a> · <a href="tel:+6591382994" style="color:#0066CC;text-decoration:none;">+65 9138 2994</a>
     </p>
   </div>
 </body>

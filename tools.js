@@ -1058,7 +1058,7 @@ function buildPDF(jsPDF) {
     doc.setFillColor(10, 37, 64);
     doc.rect(0, 285, W, 12, 'F');
     doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(160, 190, 215);
-    doc.text('Karman Corporate Services Pte Ltd  ·  1 Raffles Place #20-61, Singapore 048616  ·  team@karman.com.sg  ·  +65 6123 4567', W / 2, 292, { align: 'center' });
+    doc.text('Karman Corporate Services Pte Ltd  ·  60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051  ·  team@karman.com.sg  ·  +65 9138 2994', W / 2, 292, { align: 'center' });
   }
 
   const pdfBase64 = doc.output('datauristring').split(',')[1];
@@ -1104,7 +1104,7 @@ async function simulateSubmit() {
   } catch (err) {
     btn.disabled = false;
     btn.textContent = nextBtn.dataset.originalText || 'Submit →';
-    showToolError('Something went wrong. Please try again or email us at hello@karman.com.sg');
+    showToolError('Something went wrong. Please try again or email us at team@karman.com.sg');
   }
 }
 
