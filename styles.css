@@ -229,7 +229,12 @@ h1, h2, h3, h4, h5 {
   flex: 1;
 }
 
-.nav__item { position: relative; }
+.nav__item {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
 
 .nav__link {
   display: flex;
