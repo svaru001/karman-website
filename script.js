@@ -50,8 +50,6 @@ document.addEventListener('click', (e) => {
 });
 
 
-// Dropdown is handled entirely by CSS :hover — no JS needed.
-
 // === SCROLL REVEAL ANIMATIONS ===
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {

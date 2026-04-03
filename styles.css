@@ -227,15 +227,9 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 4px;
   flex: 1;
-  align-self: stretch;
 }
 
-.nav__item {
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-}
+.nav__item { position: relative; }
 
 .nav__link {
   display: flex;
@@ -255,9 +249,8 @@ h1, h2, h3, h4, h5 {
 /* Dropdown */
 .dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   left: 0;
-  z-index: 1100;
   background: #fff;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
@@ -266,20 +259,14 @@ h1, h2, h3, h4, h5 {
   min-width: 280px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .15s ease, visibility .15s ease;
+  transform: translateY(8px);
+  transition: all .2s ease;
   pointer-events: none;
-}
-.dropdown::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: 0;
-  right: 0;
-  height: 8px;
 }
 .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
   pointer-events: auto;
 }
 .dropdown__link {
