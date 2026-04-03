@@ -50,28 +50,6 @@ document.addEventListener('click', (e) => {
 });
 
 
-// === DROPDOWN 500ms LINGER ===
-const hasDropdown = document.querySelector('.has-dropdown');
-if (hasDropdown) {
-  const dropdown = hasDropdown.querySelector('.dropdown');
-  let hideTimer;
-
-  function showDropdown() {
-    clearTimeout(hideTimer);
-    hasDropdown.classList.add('is-open');
-  }
-
-  function hideDropdown() {
-    hideTimer = setTimeout(() => hasDropdown.classList.remove('is-open'), 500);
-  }
-
-  hasDropdown.addEventListener('mouseenter', showDropdown);
-  hasDropdown.addEventListener('mouseleave', hideDropdown);
-  dropdown.addEventListener('mouseenter', showDropdown);
-  dropdown.addEventListener('mouseleave', hideDropdown);
-}
-
-
 // === SCROLL REVEAL ANIMATIONS ===
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {

@@ -263,8 +263,7 @@ h1, h2, h3, h4, h5 {
   transition: all .2s ease;
   pointer-events: none;
 }
-.has-dropdown:hover .dropdown,
-.has-dropdown.is-open .dropdown {
+.has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
