@@ -267,6 +267,14 @@ h1, h2, h3, h4, h5 {
   transition: opacity .15s ease, visibility .15s ease;
   pointer-events: none;
 }
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
 .dropdown.is-open {
   opacity: 1;
   visibility: visible;

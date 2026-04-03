@@ -66,7 +66,7 @@ if (hasDropdown) {
   }
 
   function closeDropdown() {
-    hideTimer = setTimeout(() => dropdown.classList.remove('is-open'), 150);
+    hideTimer = setTimeout(() => dropdown.classList.remove('is-open'), 400);
   }
 
   hasDropdown.addEventListener('mouseenter', openDropdown);
