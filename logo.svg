@@ -1,18 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 64">
-  <!-- Outer shield (dark navy) -->
-  <path d="M 2,2 L 54,2 L 54,40 Q 54,58 28,63 Q 2,58 2,40 Z" fill="#1B2F80"/>
-  <!-- Inner shield (bright blue) -->
-  <path d="M 9,8 L 47,8 L 47,39 Q 47,53 28,58 Q 9,53 9,39 Z" fill="#2F54CC"/>
-  <!-- Cross of Lorraine — vertical bar -->
-  <rect x="25.5" y="16" width="5" height="37" fill="white" rx="0.5"/>
-  <!-- Upper (shorter) horizontal bar -->
-  <rect x="18" y="22" width="20" height="5" fill="white" rx="0.5"/>
-  <!-- Lower (longer) horizontal bar -->
-  <rect x="13" y="33" width="30" height="5" fill="white" rx="0.5"/>
-  <!-- KARMAN + ADVISORY on same baseline -->
-  <text x="68" y="29" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="23">
-    <tspan font-weight="800" fill="#1B2F80" letter-spacing="1">KARMAN</tspan><tspan font-weight="600" fill="#6B8CC4" letter-spacing="1" dx="5"> ADVISORY</tspan>
-  </text>
-  <!-- Tagline -->
-  <text x="68" y="47" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" fill="#9AA5B4" letter-spacing="0.4">Corporate Compliance  ·  Legal  ·  Accounting</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 115">
+  <defs>
+    <!-- Mark gradient: bottom-left cyan → top-right indigo -->
+    <linearGradient id="mg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7DD8FA"/>
+      <stop offset="50%" stop-color="#85A0F0"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <!-- White diagonal stripe pattern (/ direction) -->
+    <pattern id="sp" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse">
+      <line x1="0"   y1="11" x2="11"  y2="0"  stroke="white" stroke-width="6"/>
+      <line x1="-11" y1="11" x2="0"   y2="0"  stroke="white" stroke-width="6"/>
+      <line x1="11"  y1="11" x2="22"  y2="0"  stroke="white" stroke-width="6"/>
+    </pattern>
+    <!-- Clip to hexagon -->
+    <clipPath id="hc">
+      <polygon points="57,2 107,30 107,85 57,113 7,85 7,30"/>
+    </clipPath>
+    <!-- Text gradient -->
+    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7DD8FA"/>
+      <stop offset="60%" stop-color="#8B8FF4"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Hexagon: gradient fill then stripe overlay -->
+  <g clip-path="url(#hc)">
+    <rect x="0" y="0" width="114" height="115" fill="url(#mg)"/>
+    <rect x="0" y="0" width="114" height="115" fill="url(#sp)"/>
+  </g>
+
+  <!-- 3D cube face dividers -->
+  <g clip-path="url(#hc)" stroke="white" stroke-width="1.5" opacity="0.6">
+    <line x1="57" y1="2"  x2="57" y2="57"/>
+    <line x1="107" y1="85" x2="57" y2="57"/>
+    <line x1="7"  y1="85" x2="57" y2="57"/>
+  </g>
+
+  <!-- "Karman." -->
+  <text x="130" y="84"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="72"
+        font-weight="800"
+        fill="url(#tg)">Karman.</text>
 </svg>
