@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5 {
 }
 .nav__link:hover { color: var(--blue); background: var(--blue-light); }
 .chevron { font-size: 16px; transition: transform .2s; }
-.has-dropdown:hover .chevron { transform: rotate(90deg); }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
 
 /* Dropdown */
 .dropdown {
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5 {
   transition: all .2s ease;
   pointer-events: none;
 }
-.has-dropdown:hover .dropdown {
+.has-dropdown.is-open .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

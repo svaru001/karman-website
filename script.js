@@ -50,6 +50,25 @@ document.addEventListener('click', (e) => {
 });
 
 
+// === DROPDOWN CLICK TOGGLE ===
+const hasDropdown = document.querySelector('.has-dropdown');
+if (hasDropdown) {
+  const trigger = hasDropdown.querySelector('.nav__link');
+
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    hasDropdown.classList.toggle('is-open');
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hasDropdown.contains(e.target)) {
+      hasDropdown.classList.remove('is-open');
+    }
+  });
+}
+
+
 // === SCROLL REVEAL ANIMATIONS ===
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
