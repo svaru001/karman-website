@@ -49,8 +49,9 @@
   padding: 24px 56px 0;
 }
 .ob-rhs-logo img {
-  height: 34px;
-  width: auto;
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
 }
 
 .ob-left__hero {
