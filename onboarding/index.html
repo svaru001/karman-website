@@ -25,7 +25,7 @@
     <div class="ob-left__inner">
 
       <div class="ob-left__hero">
-        <div class="ob-left__pill">4-step setup · Takes 8 minutes</div>
+        <div class="ob-left__pill">3-step setup · Takes 5 minutes</div>
         <h1 class="ob-left__heading">Launch your Singapore business with confidence</h1>
         <p class="ob-left__sub">Tell us about your plans and we'll put together the right structure for your business.</p>
       </div>
@@ -52,14 +52,6 @@
           <div class="ob-vs-step__body">
             <strong>Services needed</strong>
             <span>Pick what your business needs</span>
-          </div>
-        </div>
-        <div class="ob-vs-connector"></div>
-        <div class="ob-vs-step" id="vs-4">
-          <div class="ob-vs-step__dot"><span>4</span></div>
-          <div class="ob-vs-step__body">
-            <strong>Verify &amp; confirm</strong>
-            <span>Email verification</span>
           </div>
         </div>
       </div>
@@ -454,7 +446,7 @@
     ══════════════════════════════════════ -->
     <section class="ob-panel ob-panel--hidden" id="panel-3">
       <div class="ob-panel__header">
-        <div class="ob-panel__tag">Step 3 of 4</div>
+        <div class="ob-panel__tag">Step 3 of 3</div>
         <h2 class="ob-panel__title">What do you need help with?</h2>
         <p class="ob-panel__sub">Select all that apply. You can always add or remove services later.</p>
       </div>
@@ -472,83 +464,16 @@
           Back
         </button>
         <button class="ob-btn ob-btn--primary ob-btn--next" id="next-3" disabled>
-          Verify email
+          Submit enquiry
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         STEP 4 — EMAIL VERIFICATION
+         STEP 4 — SUCCESS
     ══════════════════════════════════════ -->
     <section class="ob-panel ob-panel--hidden" id="panel-4">
-      <div class="ob-panel__header">
-        <div class="ob-panel__tag">Step 4 of 4</div>
-        <h2 class="ob-panel__title">Verify your email</h2>
-        <p class="ob-panel__sub">We've sent a 6-digit code to <strong id="otp-email-display"></strong></p>
-      </div>
-
-      <!-- Send OTP state -->
-      <div id="otp-send-state">
-        <div class="ob-phone-confirm">
-          <div class="ob-phone-confirm__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="ob-phone-confirm__text">
-            <span id="otp-email-full"></span>
-            <a href="#" id="change-email-link">Change email</a>
-          </div>
-        </div>
-        <button class="ob-btn ob-btn--primary ob-btn--full" id="sendOtpBtn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-          Send verification code
-        </button>
-      </div>
-
-      <!-- Enter OTP state -->
-      <div id="otp-enter-state" class="ob-hidden">
-        <div class="ob-otp-sent-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Code sent! Check your inbox (and spam folder).
-        </div>
-
-        <div class="ob-otp-inputs" id="otpInputs">
-          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
-          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
-          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
-          <span class="ob-otp-sep">—</span>
-          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
-          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
-          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
-        </div>
-
-        <div class="ob-otp-actions">
-          <button class="ob-btn ob-btn--primary ob-btn--full" id="verifyOtpBtn" disabled>
-            Complete setup →
-          </button>
-          <div class="ob-resend-row">
-            <span class="ob-resend-label">Didn't receive it?</span>
-            <button class="ob-resend-btn" id="resendBtn" disabled>
-              Resend in <span id="resendTimer">30</span>s
-            </button>
-          </div>
-        </div>
-
-        <p class="ob-otp-error ob-hidden" id="otpError">Incorrect code — please try again.</p>
-      </div>
-
-      <div class="ob-form__footer ob-form__footer--between" style="margin-top:32px">
-        <button class="ob-btn ob-btn--ghost ob-btn--back" id="back-4">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          Back
-        </button>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         STEP 5 — SUCCESS
-    ══════════════════════════════════════ -->
-    <section class="ob-panel ob-panel--hidden" id="panel-5">
       <div class="ob-success">
         <div class="ob-success__ring" id="successRing">
           <div class="ob-success__check">

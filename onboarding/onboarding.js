@@ -106,10 +106,8 @@ const state = {
   shareCapital: '', fyEnd: '', localDir: '', employees: '', timeline: '', registeredAddress: '',
   // Step 3
   services: new Set(),
-  // Step 4
-  otpToken: null,
 };
-const TOTAL_STEPS = 4;
+const TOTAL_STEPS = 3;
 
 
 /* ══════════════════════════════════════════
@@ -169,7 +167,7 @@ function updateProgress() {
 }
 
 function updateSidebar() {
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 3; i++) {
     const el = document.getElementById(`vs-${i}`);
     if (!el) continue;
     el.classList.remove('active', 'done');
@@ -320,163 +318,17 @@ function toggleService(id, card) {
   document.getElementById('servicesNote').classList.toggle('hidden', hasAny);
 }
 
-document.getElementById('next-3').addEventListener('click', () => {
+document.getElementById('next-3').addEventListener('click', async () => {
   if (!state.services.size) return;
-  setupStep4();
+  const btn = document.getElementById('next-3');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+  await submitOnboarding();
   goToStep(4, 'forward');
+  populateSuccess();
+  setTimeout(launchConfetti, 500);
 });
 document.getElementById('back-3').addEventListener('click', () => goToStep(2, 'backward'));
-
-
-/* ══════════════════════════════════════════
-   9. STEP 4 — EMAIL OTP
-══════════════════════════════════════════ */
-function setupStep4() {
-  document.getElementById('otp-email-display').textContent = state.email;
-  document.getElementById('otp-email-full').textContent    = state.email;
-}
-
-document.getElementById('sendOtpBtn').addEventListener('click', async () => {
-  const btn = document.getElementById('sendOtpBtn');
-  btn.disabled = true;
-  btn.innerHTML = '⏳ Sending…';
-
-  try {
-    const res  = await fetch('/api/send-otp', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: state.email }),
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || 'Failed to send');
-
-    state.otpToken = data.token;
-
-    document.getElementById('otp-send-state').classList.add('ob-hidden');
-    const enterState = document.getElementById('otp-enter-state');
-    enterState.classList.remove('ob-hidden');
-    if (window.gsap) gsap.from(enterState, { opacity: 0, y: 12, duration: .32, ease: 'power2.out' });
-
-    document.querySelectorAll('.ob-otp-box')[0].focus();
-    startResendTimer();
-
-  } catch (err) {
-    btn.disabled = false;
-    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> Send verification code`;
-    showOtpError(err.message || 'Could not send code. Please try again.');
-  }
-});
-
-document.getElementById('change-email-link').addEventListener('click', e => {
-  e.preventDefault();
-  goToStep(1, 'backward');
-  setTimeout(() => document.getElementById('ob-email').focus(), 400);
-});
-
-let resendInterval = null;
-function startResendTimer(s = 30) {
-  const btn = document.getElementById('resendBtn');
-  let count = s;
-  btn.disabled = true;
-  btn.innerHTML = `Resend in <span id="resendTimer">${s}</span>s`;
-  clearInterval(resendInterval);
-  resendInterval = setInterval(() => {
-    count--;
-    const el = document.getElementById('resendTimer');
-    if (el) el.textContent = count;
-    if (count <= 0) { clearInterval(resendInterval); btn.disabled = false; btn.textContent = 'Resend code'; }
-  }, 1000);
-}
-
-document.getElementById('resendBtn').addEventListener('click', async () => {
-  document.getElementById('resendBtn').disabled = true;
-  try {
-    const res  = await fetch('/api/send-otp', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: state.email }),
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error);
-    state.otpToken = data.token;
-    document.querySelectorAll('.ob-otp-box').forEach(b => { b.value = ''; b.classList.remove('filled'); });
-    document.getElementById('verifyOtpBtn').disabled = true;
-    document.getElementById('otpError').classList.add('ob-hidden');
-    startResendTimer();
-  } catch (err) {
-    showOtpError('Failed to resend. Please try again.');
-    startResendTimer(10);
-  }
-});
-
-// OTP box behaviour
-(function setupOtpBoxes() {
-  const boxes  = Array.from(document.querySelectorAll('.ob-otp-box'));
-  const verify = document.getElementById('verifyOtpBtn');
-
-  boxes.forEach((box, i) => {
-    box.addEventListener('input', e => {
-      box.value = e.target.value.replace(/\D/g, '').slice(-1);
-      box.classList.toggle('filled', !!box.value);
-      if (box.value && i < boxes.length - 1) boxes[i + 1].focus();
-      const full = boxes.map(b => b.value).join('');
-      verify.disabled = full.length < 6;
-      if (full.length === 6 && window.gsap) gsap.from(verify, { scale: .96, duration: .18, ease: 'back.out(2)' });
-    });
-
-    box.addEventListener('keydown', e => {
-      if (e.key === 'Backspace' && !box.value && i > 0) {
-        boxes[i - 1].value = ''; boxes[i - 1].classList.remove('filled'); boxes[i - 1].focus();
-      }
-    });
-
-    box.addEventListener('paste', e => {
-      e.preventDefault();
-      const p = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '');
-      boxes.forEach((b, j) => { b.value = p[j] || ''; b.classList.toggle('filled', !!b.value); });
-      verify.disabled = p.length < 6;
-      boxes[Math.min(p.length, 5)].focus();
-    });
-  });
-})();
-
-document.getElementById('verifyOtpBtn').addEventListener('click', async () => {
-  const boxes = Array.from(document.querySelectorAll('.ob-otp-box'));
-  const otp   = boxes.map(b => b.value).join('');
-  const btn   = document.getElementById('verifyOtpBtn');
-  btn.disabled = true;
-  btn.textContent = 'Verifying…';
-
-  try {
-    const res  = await fetch('/api/verify-otp', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ token: state.otpToken, otp, email: state.email }),
-    });
-    const data = await res.json();
-    if (!res.ok || !data.ok) throw new Error(data.error || 'Invalid code');
-
-    submitOnboarding();
-    goToStep(5, 'forward');
-    populateSuccess();
-    setTimeout(launchConfetti, 500);
-
-  } catch (err) {
-    boxes.forEach(b => b.classList.add('ob-shake'));
-    setTimeout(() => boxes.forEach(b => b.classList.remove('ob-shake')), 500);
-    showOtpError(err.message || 'Incorrect code — please try again.');
-    btn.disabled = false;
-    btn.textContent = 'Complete setup →';
-  }
-});
-
-document.getElementById('back-4').addEventListener('click', () => goToStep(3, 'backward'));
-
-function showOtpError(msg) {
-  const el = document.getElementById('otpError');
-  el.textContent = msg;
-  el.classList.remove('ob-hidden');
-}
 
 
 /* ══════════════════════════════════════════
@@ -549,11 +401,11 @@ function populateSuccess() {
   `;
 
   if (window.gsap) {
-    gsap.from('#panel-5 .ob-success__ring',    { scale: 0, duration: .55, ease: 'back.out(2)', delay: .1 });
-    gsap.from('#panel-5 .ob-success__title',   { opacity: 0, y: 16, duration: .4, delay: .35 });
-    gsap.from('#panel-5 .ob-success__sub',     { opacity: 0, y: 16, duration: .4, delay: .45 });
-    gsap.from('#panel-5 .ob-success__summary', { opacity: 0, y: 16, duration: .4, delay: .55 });
-    gsap.from('#panel-5 .ob-success__actions', { opacity: 0, y: 16, duration: .4, delay: .65 });
+    gsap.from('#panel-4 .ob-success__ring',    { scale: 0, duration: .55, ease: 'back.out(2)', delay: .1 });
+    gsap.from('#panel-4 .ob-success__title',   { opacity: 0, y: 16, duration: .4, delay: .35 });
+    gsap.from('#panel-4 .ob-success__sub',     { opacity: 0, y: 16, duration: .4, delay: .45 });
+    gsap.from('#panel-4 .ob-success__summary', { opacity: 0, y: 16, duration: .4, delay: .55 });
+    gsap.from('#panel-4 .ob-success__actions', { opacity: 0, y: 16, duration: .4, delay: .65 });
   }
   setTimeout(() => document.getElementById('successRing')?.classList.add('pulse'), 700);
 }
