@@ -8,11 +8,11 @@
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { name, email, service, message } = req.body;
+  const { name, email, phone, service, message } = req.body;
   const key = process.env.RESEND_API_KEY;
 
   if (!key) return res.status(500).json({ error: 'Email service not configured' });
-  if (!name || !email) return res.status(400).json({ error: 'Name and email required' });
+  if (!name) return res.status(400).json({ error: 'Name required' });
 
   const notifyRes = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -30,11 +30,12 @@ module.exports = async function handler(req, res) {
   <div style="background:white;padding:28px;border:1px solid #ddd;border-top:none;border-radius:0 0 6px 6px;">
     <table style="border-collapse:collapse;width:100%;font-size:14px;margin-bottom:20px;">
       <tr><td style="padding:10px 14px;border:1px solid #e1e4ea;font-weight:600;background:#f9fafb;width:120px;">Name</td><td style="padding:10px 14px;border:1px solid #e1e4ea;">${name}</td></tr>
-      <tr><td style="padding:10px 14px;border:1px solid #e1e4ea;font-weight:600;background:#f9fafb;">Email</td><td style="padding:10px 14px;border:1px solid #e1e4ea;"><a href="mailto:${email}" style="color:#0066CC;">${email}</a></td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #e1e4ea;font-weight:600;background:#f9fafb;">Email</td><td style="padding:10px 14px;border:1px solid #e1e4ea;">${email ? `<a href="mailto:${email}" style="color:#0066CC;">${email}</a>` : '—'}</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #e1e4ea;font-weight:600;background:#f9fafb;">Phone</td><td style="padding:10px 14px;border:1px solid #e1e4ea;">${phone || '—'}</td></tr>
       <tr><td style="padding:10px 14px;border:1px solid #e1e4ea;font-weight:600;background:#f9fafb;">Service</td><td style="padding:10px 14px;border:1px solid #e1e4ea;">${service || '—'}</td></tr>
       <tr><td style="padding:10px 14px;border:1px solid #e1e4ea;font-weight:600;background:#f9fafb;">Message</td><td style="padding:10px 14px;border:1px solid #e1e4ea;white-space:pre-wrap;">${message || '—'}</td></tr>
     </table>
-    <a href="mailto:${email}?subject=Re: Your Karman enquiry" style="background:#0A2540;color:white;padding:11px 24px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;">Reply to ${name} →</a>
+    ${email ? `<a href="mailto:${email}?subject=Re: Your Karman enquiry" style="background:#0A2540;color:white;padding:11px 24px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;">Reply to ${name} →</a>` : ''}
   </div>
 </body>
 </html>`

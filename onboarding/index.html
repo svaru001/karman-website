@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started — Karman Corporate Services Singapore</title>
+  <meta name="description" content="Start your Singapore company setup with Karman. Incorporation, secretarial, accounting and more." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="onboarding.css" />
+</head>
+<body class="ob-body">
+
+<div class="ob-wrap">
+
+  <!-- ── LEFT PANEL ── -->
+  <aside class="ob-left">
+    <canvas id="hexCanvas" class="ob-canvas"></canvas>
+    <div class="ob-left__inner">
+
+      <a href="/" class="ob-logo">
+        <img src="/logo.png" alt="Karman" />
+      </a>
+
+      <div class="ob-left__hero">
+        <div class="ob-left__pill">4-step setup · Takes 8 minutes</div>
+        <h1 class="ob-left__heading">Launch your Singapore business with confidence</h1>
+        <p class="ob-left__sub">Tell us about your plans and we'll put together the right structure for your business.</p>
+      </div>
+
+      <div class="ob-left__steps-visual">
+        <div class="ob-vs-step active" id="vs-1">
+          <div class="ob-vs-step__dot"><span>1</span></div>
+          <div class="ob-vs-step__body">
+            <strong>About you</strong>
+            <span>Name, email &amp; contact details</span>
+          </div>
+        </div>
+        <div class="ob-vs-connector"></div>
+        <div class="ob-vs-step" id="vs-2">
+          <div class="ob-vs-step__dot"><span>2</span></div>
+          <div class="ob-vs-step__body">
+            <strong>Your company</strong>
+            <span>Structure, directors &amp; timeline</span>
+          </div>
+        </div>
+        <div class="ob-vs-connector"></div>
+        <div class="ob-vs-step" id="vs-3">
+          <div class="ob-vs-step__dot"><span>3</span></div>
+          <div class="ob-vs-step__body">
+            <strong>Services needed</strong>
+            <span>Pick what your business needs</span>
+          </div>
+        </div>
+        <div class="ob-vs-connector"></div>
+        <div class="ob-vs-step" id="vs-4">
+          <div class="ob-vs-step__dot"><span>4</span></div>
+          <div class="ob-vs-step__body">
+            <strong>Verify &amp; confirm</strong>
+            <span>Email verification</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ob-left__trust">
+        <div class="ob-trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          ACRA Registered Filing Agent
+        </div>
+        <div class="ob-trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Incorporated in 1–3 business days
+        </div>
+        <div class="ob-trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Dedicated account manager
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ── RIGHT PANEL ── -->
+  <main class="ob-right">
+
+    <div class="ob-topbar">
+      <a href="/" class="ob-topbar__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to site
+      </a>
+      <div class="ob-progress-track">
+        <div class="ob-progress-fill" id="progressFill"></div>
+      </div>
+      <div class="ob-step-counter" id="stepCounter">Step 1 of 4</div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         STEP 1 — ABOUT YOU
+    ══════════════════════════════════════ -->
+    <section class="ob-panel" id="panel-1">
+      <div class="ob-panel__header">
+        <div class="ob-panel__tag">Step 1 of 4</div>
+        <h2 class="ob-panel__title">Tell us about yourself</h2>
+        <p class="ob-panel__sub">We'll use these details to personalise your setup and stay in touch.</p>
+      </div>
+
+      <form class="ob-form" id="form-1" novalidate>
+        <div class="ob-field-row">
+          <div class="ob-field">
+            <label for="ob-fname">First name <span class="ob-req">*</span></label>
+            <input type="text" id="ob-fname" name="firstName" placeholder="Jane" autocomplete="given-name" required />
+          </div>
+          <div class="ob-field">
+            <label for="ob-lname">Last name <span class="ob-req">*</span></label>
+            <input type="text" id="ob-lname" name="lastName" placeholder="Smith" autocomplete="family-name" required />
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label for="ob-email">Email address <span class="ob-req">*</span></label>
+          <div class="ob-input-hint-wrap">
+            <input type="email" id="ob-email" name="email" placeholder="jane@company.com" autocomplete="email" required />
+            <span class="ob-input-hint">Used to send your verification code</span>
+          </div>
+        </div>
+
+        <div class="ob-field-row">
+          <div class="ob-field">
+            <label for="ob-phone">Phone number <span class="ob-optional">(optional)</span></label>
+            <div class="ob-phone-wrap">
+              <select class="ob-phone-code" id="ob-dialcode" name="dialCode">
+                <option value="+65" selected>🇸🇬 +65</option>
+                <option value="+60">🇲🇾 +60</option>
+                <option value="+91">🇮🇳 +91</option>
+                <option value="+86">🇨🇳 +86</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+61">🇦🇺 +61</option>
+                <option value="+49">🇩🇪 +49</option>
+                <option value="+33">🇫🇷 +33</option>
+                <option value="+81">🇯🇵 +81</option>
+                <option value="+82">🇰🇷 +82</option>
+                <option value="+971">🇦🇪 +971</option>
+                <option value="+852">🇭🇰 +852</option>
+              </select>
+              <input type="tel" id="ob-phone" name="phone" placeholder="9123 4567" autocomplete="tel-national" />
+            </div>
+          </div>
+          <div class="ob-field">
+            <label for="ob-country">Country of residence <span class="ob-req">*</span></label>
+            <select id="ob-country" name="country" required>
+              <option value="">Select country…</option>
+              <option value="SG" selected>Singapore</option>
+              <option value="MY">Malaysia</option>
+              <option value="IN">India</option>
+              <option value="CN">China</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="AU">Australia</option>
+              <option value="DE">Germany</option>
+              <option value="FR">France</option>
+              <option value="JP">Japan</option>
+              <option value="KR">South Korea</option>
+              <option value="AE">UAE</option>
+              <option value="HK">Hong Kong</option>
+              <option value="ID">Indonesia</option>
+              <option value="TH">Thailand</option>
+              <option value="VN">Vietnam</option>
+              <option value="PH">Philippines</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label>Business stage <span class="ob-req">*</span></label>
+          <div class="ob-radio-group" id="ob-stage">
+            <label class="ob-radio">
+              <input type="radio" name="stage" value="new" required />
+              <div class="ob-radio__card">
+                <div class="ob-radio__icon">🌱</div>
+                <div>
+                  <strong>Starting fresh</strong>
+                  <span>New company, not yet incorporated</span>
+                </div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="stage" value="existing" />
+              <div class="ob-radio__card">
+                <div class="ob-radio__icon">🏢</div>
+                <div>
+                  <strong>Already incorporated</strong>
+                  <span>Need ongoing compliance services</span>
+                </div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="stage" value="foreign" />
+              <div class="ob-radio__card">
+                <div class="ob-radio__icon">🌏</div>
+                <div>
+                  <strong>Foreign company expanding</strong>
+                  <span>Setting up a Singapore presence</span>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="ob-form__footer">
+          <button type="submit" class="ob-btn ob-btn--primary ob-btn--next">
+            Company details
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STEP 2 — COMPANY DETAILS
+    ══════════════════════════════════════ -->
+    <section class="ob-panel ob-panel--hidden" id="panel-2">
+      <div class="ob-panel__header">
+        <div class="ob-panel__tag">Step 2 of 4</div>
+        <h2 class="ob-panel__title">About your company</h2>
+        <p class="ob-panel__sub">Help us understand your structure so we can advise you correctly.</p>
+      </div>
+
+      <form class="ob-form" id="form-2" novalidate>
+
+        <div class="ob-field-row">
+          <div class="ob-field">
+            <label for="ob-compname">Proposed company name <span class="ob-optional">(optional)</span></label>
+            <input type="text" id="ob-compname" name="companyName" placeholder="Acme Pte. Ltd." autocomplete="organization" />
+            <span class="ob-field-hint">ACRA checks availability — we'll confirm once submitted</span>
+          </div>
+          <div class="ob-field">
+            <label for="ob-industry">Business activity / industry <span class="ob-req">*</span></label>
+            <select id="ob-industry" name="industry" required>
+              <option value="">Select industry…</option>
+              <option>Technology &amp; Software</option>
+              <option>E-commerce &amp; Retail</option>
+              <option>Consulting &amp; Professional Services</option>
+              <option>Finance &amp; Fintech</option>
+              <option>Healthcare &amp; Biotech</option>
+              <option>Media &amp; Marketing</option>
+              <option>Logistics &amp; Supply Chain</option>
+              <option>Food &amp; Beverage</option>
+              <option>Real Estate &amp; Property</option>
+              <option>Education &amp; Training</option>
+              <option>Manufacturing</option>
+              <option>Trading &amp; Import/Export</option>
+              <option>Creative &amp; Design</option>
+              <option>Non-profit / Charity</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label for="ob-bizdesc">Briefly describe your business <span class="ob-optional">(optional)</span></label>
+          <textarea id="ob-bizdesc" name="bizDesc" rows="2" placeholder="e.g. SaaS platform for HR teams in Southeast Asia…"></textarea>
+        </div>
+
+        <div class="ob-field-row">
+          <div class="ob-field">
+            <label for="ob-directors">Number of directors <span class="ob-req">*</span></label>
+            <select id="ob-directors" name="directors" required>
+              <option value="">Select…</option>
+              <option value="1">1 director</option>
+              <option value="2">2 directors</option>
+              <option value="3">3 directors</option>
+              <option value="4+">4 or more</option>
+            </select>
+            <span class="ob-field-hint">Must include at least 1 Singapore-ordinarily-resident director</span>
+          </div>
+          <div class="ob-field">
+            <label for="ob-shareholders">Number of shareholders <span class="ob-req">*</span></label>
+            <select id="ob-shareholders" name="shareholders" required>
+              <option value="">Select…</option>
+              <option value="1">1 (sole owner)</option>
+              <option value="2">2 shareholders</option>
+              <option value="3-5">3–5 shareholders</option>
+              <option value="6+">6 or more</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ob-field-row">
+          <div class="ob-field">
+            <label for="ob-capital">Paid-up share capital <span class="ob-req">*</span></label>
+            <select id="ob-capital" name="shareCapital" required>
+              <option value="">Select…</option>
+              <option value="S$1">S$1 (minimum)</option>
+              <option value="S$100-S$1,000">S$100 – S$1,000</option>
+              <option value="S$1,001-S$10,000">S$1,001 – S$10,000</option>
+              <option value="S$10,001-S$100,000">S$10,001 – S$100,000</option>
+              <option value="S$100,000+">S$100,000+</option>
+              <option value="not sure">Not sure yet</option>
+            </select>
+            <span class="ob-field-hint">Minimum S$1 for a Singapore Pte. Ltd.</span>
+          </div>
+          <div class="ob-field">
+            <label for="ob-fy">Financial year end <span class="ob-req">*</span></label>
+            <select id="ob-fy" name="fyEnd" required>
+              <option value="">Select month…</option>
+              <option value="Jan">January</option>
+              <option value="Feb">February</option>
+              <option value="Mar">March</option>
+              <option value="Apr">April</option>
+              <option value="May">May</option>
+              <option value="Jun">June</option>
+              <option value="Jul">July</option>
+              <option value="Aug">August</option>
+              <option value="Sep">September</option>
+              <option value="Oct">October</option>
+              <option value="Nov">November</option>
+              <option value="Dec">December</option>
+            </select>
+            <span class="ob-field-hint">Most companies choose Dec or Mar</span>
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label>Do you have a Singapore-resident director? <span class="ob-req">*</span></label>
+          <div class="ob-radio-group ob-radio-group--horiz" id="ob-local-dir">
+            <label class="ob-radio">
+              <input type="radio" name="localDir" value="yes" required />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">✅</div>
+                <div><strong>Yes</strong><span>I have one</span></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="localDir" value="no" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">❌</div>
+                <div><strong>No</strong><span>Need nominee</span></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="localDir" value="unsure" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">🤔</div>
+                <div><strong>Not sure</strong><span>Need advice</span></div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label>Will you have employees in Singapore? <span class="ob-req">*</span></label>
+          <div class="ob-radio-group ob-radio-group--horiz" id="ob-employees">
+            <label class="ob-radio">
+              <input type="radio" name="employees" value="yes-immediate" required />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">👥</div>
+                <div><strong>Yes, immediately</strong></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="employees" value="yes-later" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">📅</div>
+                <div><strong>Yes, in future</strong></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="employees" value="no" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">🙅</div>
+                <div><strong>No employees</strong></div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label for="ob-timeline">When do you want to incorporate? <span class="ob-req">*</span></label>
+          <div class="ob-radio-group ob-radio-group--horiz" id="ob-timeline-group">
+            <label class="ob-radio">
+              <input type="radio" name="timeline" value="asap" required />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">🚀</div>
+                <div><strong>ASAP</strong><span>Ready to go</span></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="timeline" value="1 month" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">📆</div>
+                <div><strong>~1 month</strong><span>Planning ahead</span></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="timeline" value="3+ months" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">🗓️</div>
+                <div><strong>3+ months</strong><span>Early research</span></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="timeline" value="exploring" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">🔍</div>
+                <div><strong>Just exploring</strong></div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="ob-field">
+          <label for="ob-registered-address">Registered office address <span class="ob-req">*</span></label>
+          <div class="ob-radio-group ob-radio-group--horiz" id="ob-address-group">
+            <label class="ob-radio">
+              <input type="radio" name="registeredAddress" value="karman" required />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">🏠</div>
+                <div><strong>Use Karman's address</strong><span>We provide this</span></div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="registeredAddress" value="own" />
+              <div class="ob-radio__card ob-radio__card--sm">
+                <div class="ob-radio__icon">📍</div>
+                <div><strong>My own address</strong><span>I have a local address</span></div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="ob-form__footer ob-form__footer--between">
+          <button type="button" class="ob-btn ob-btn--ghost ob-btn--back" id="back-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back
+          </button>
+          <button type="submit" class="ob-btn ob-btn--primary ob-btn--next">
+            Choose services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STEP 3 — SERVICES
+    ══════════════════════════════════════ -->
+    <section class="ob-panel ob-panel--hidden" id="panel-3">
+      <div class="ob-panel__header">
+        <div class="ob-panel__tag">Step 3 of 4</div>
+        <h2 class="ob-panel__title">What do you need help with?</h2>
+        <p class="ob-panel__sub">Select all that apply. You can always add or remove services later.</p>
+      </div>
+
+      <div class="ob-services-grid" id="servicesGrid"></div>
+
+      <div class="ob-services-note" id="servicesNote">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Select at least one service to continue
+      </div>
+
+      <div class="ob-form__footer ob-form__footer--between">
+        <button class="ob-btn ob-btn--ghost ob-btn--back" id="back-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back
+        </button>
+        <button class="ob-btn ob-btn--primary ob-btn--next" id="next-3" disabled>
+          Verify email
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STEP 4 — EMAIL VERIFICATION
+    ══════════════════════════════════════ -->
+    <section class="ob-panel ob-panel--hidden" id="panel-4">
+      <div class="ob-panel__header">
+        <div class="ob-panel__tag">Step 4 of 4</div>
+        <h2 class="ob-panel__title">Verify your email</h2>
+        <p class="ob-panel__sub">We've sent a 6-digit code to <strong id="otp-email-display"></strong></p>
+      </div>
+
+      <!-- Send OTP state -->
+      <div id="otp-send-state">
+        <div class="ob-phone-confirm">
+          <div class="ob-phone-confirm__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="ob-phone-confirm__text">
+            <span id="otp-email-full"></span>
+            <a href="#" id="change-email-link">Change email</a>
+          </div>
+        </div>
+        <button class="ob-btn ob-btn--primary ob-btn--full" id="sendOtpBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Send verification code
+        </button>
+      </div>
+
+      <!-- Enter OTP state -->
+      <div id="otp-enter-state" class="ob-hidden">
+        <div class="ob-otp-sent-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Code sent! Check your inbox (and spam folder).
+        </div>
+
+        <div class="ob-otp-inputs" id="otpInputs">
+          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
+          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
+          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
+          <span class="ob-otp-sep">—</span>
+          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
+          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
+          <input class="ob-otp-box" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" />
+        </div>
+
+        <div class="ob-otp-actions">
+          <button class="ob-btn ob-btn--primary ob-btn--full" id="verifyOtpBtn" disabled>
+            Complete setup →
+          </button>
+          <div class="ob-resend-row">
+            <span class="ob-resend-label">Didn't receive it?</span>
+            <button class="ob-resend-btn" id="resendBtn" disabled>
+              Resend in <span id="resendTimer">30</span>s
+            </button>
+          </div>
+        </div>
+
+        <p class="ob-otp-error ob-hidden" id="otpError">Incorrect code — please try again.</p>
+      </div>
+
+      <div class="ob-form__footer ob-form__footer--between" style="margin-top:32px">
+        <button class="ob-btn ob-btn--ghost ob-btn--back" id="back-4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back
+        </button>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STEP 5 — SUCCESS
+    ══════════════════════════════════════ -->
+    <section class="ob-panel ob-panel--hidden" id="panel-5">
+      <div class="ob-success">
+        <div class="ob-success__ring" id="successRing">
+          <div class="ob-success__check">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+
+        <h2 class="ob-success__title">You're all set, <span id="successName"></span>!</h2>
+        <p class="ob-success__sub">Your enquiry is confirmed. One of our corporate advisors will reach out within <strong>1 business day</strong> to discuss your setup in detail.</p>
+
+        <div class="ob-success__summary" id="successSummary"></div>
+
+        <div class="ob-success__actions">
+          <a href="/" class="ob-btn ob-btn--primary">Back to homepage</a>
+          <a href="/tools/" class="ob-btn ob-btn--ghost">Explore free tools</a>
+        </div>
+
+        <canvas id="confettiCanvas" class="ob-confetti-canvas"></canvas>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="onboarding.js"></script>
+</body>
+</html>

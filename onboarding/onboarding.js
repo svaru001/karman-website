@@ -1,0 +1,611 @@
+/* ─────────────────────────────────────────────
+   KARMAN — Onboarding Flow JS
+   Steps: 1=About You · 2=Company · 3=Services · 4=Email OTP · 5=Success
+───────────────────────────────────────────── */
+
+/* ══════════════════════════════════════════
+   1. HEX CANVAS BACKGROUND
+══════════════════════════════════════════ */
+(function initCanvas() {
+  const canvas = document.getElementById('hexCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes, animId;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+    if (!nodes) buildNodes();
+  }
+
+  function buildNodes() {
+    const count = Math.max(14, Math.floor((W * H) / 18000));
+    nodes = Array.from({ length: count }, () => {
+      const type    = Math.random() < .25 ? 'filled' : Math.random() < .5 ? 'outline' : 'dot';
+      const isTeal  = Math.random() < .25;
+      return {
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - .5) * .28, vy: (Math.random() - .5) * .28,
+        r:     type === 'dot' ? Math.random() * 2 + 1 : Math.random() * 18 + 8,
+        alpha: Math.random() * .35 + .05,
+        phase: Math.random() * Math.PI * 2,
+        speed: Math.random() * .012 + .006,
+        color: isTeal ? '#00C9A7' : '#1A6BCC',
+        type,
+      };
+    });
+  }
+
+  function hexPath(cx, cy, r) {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+      const a = (Math.PI / 3) * i - Math.PI / 6;
+      i === 0 ? ctx.moveTo(cx + r * Math.cos(a), cy + r * Math.sin(a))
+              : ctx.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a));
+    }
+    ctx.closePath();
+  }
+
+  function hex2(n) { return Math.floor(n * 255).toString(16).padStart(2, '0'); }
+
+  function draw(ts) {
+    ctx.clearRect(0, 0, W, H);
+    const g = ctx.createLinearGradient(0, 0, W, H);
+    g.addColorStop(0, '#0A2540'); g.addColorStop(1, '#0d2f4d');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+
+    // Connection lines
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+        const d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < 140) {
+          ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(26,107,204,${(1 - d / 140) * .12})`; ctx.lineWidth = .8; ctx.stroke();
+        }
+      }
+    }
+
+    nodes.forEach(n => {
+      const a = n.alpha + Math.sin(ts * n.speed + n.phase) * (n.alpha * .4);
+      if (n.type === 'dot') {
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = n.color + hex2(a); ctx.fill();
+      } else if (n.type === 'outline') {
+        hexPath(n.x, n.y, n.r);
+        ctx.strokeStyle = n.color + hex2(a); ctx.lineWidth = 1.2; ctx.stroke();
+      } else {
+        hexPath(n.x, n.y, n.r);
+        ctx.fillStyle = n.color + hex2(a * .31); ctx.fill();
+        hexPath(n.x, n.y, n.r);
+        ctx.strokeStyle = n.color + hex2(a * .7); ctx.lineWidth = 1; ctx.stroke();
+      }
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < -n.r * 2) n.x = W + n.r; if (n.x > W + n.r * 2) n.x = -n.r;
+      if (n.y < -n.r * 2) n.y = H + n.r; if (n.y > H + n.r * 2) n.y = -n.r;
+    });
+
+    animId = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { cancelAnimationFrame(animId); resize(); requestAnimationFrame(draw); });
+  resize();
+  requestAnimationFrame(draw);
+})();
+
+
+/* ══════════════════════════════════════════
+   2. STATE
+══════════════════════════════════════════ */
+const state = {
+  step: 1,
+  // Step 1
+  firstName: '', lastName: '', email: '', phone: '', dialCode: '+65', country: 'SG', stage: '',
+  // Step 2
+  companyName: '', industry: '', bizDesc: '', directors: '', shareholders: '',
+  shareCapital: '', fyEnd: '', localDir: '', employees: '', timeline: '', registeredAddress: '',
+  // Step 3
+  services: new Set(),
+  // Step 4
+  otpToken: null,
+};
+const TOTAL_STEPS = 4;
+
+
+/* ══════════════════════════════════════════
+   3. SERVICES DATA
+══════════════════════════════════════════ */
+const SERVICES = [
+  { id: 'incorporation', icon: '🏢', title: 'Company Incorporation',  desc: 'Register your Pte. Ltd. with ACRA', price: 'From S$699' },
+  { id: 'secretary',    icon: '📋', title: 'Corporate Secretary',    desc: 'Annual compliance & statutory filings', price: 'From S$350/yr' },
+  { id: 'accounting',  icon: '📊', title: 'Accounting & Bookkeeping', desc: 'Monthly financials & reports', price: 'From S$299/mo' },
+  { id: 'tax',         icon: '🧾', title: 'Corporate Tax Filing',    desc: 'ECI, Form C-S & tax planning', price: 'From S$499/yr' },
+  { id: 'gst',         icon: '📑', title: 'GST Registration & Filing', desc: 'GST reg & quarterly F5 returns', price: 'From S$299' },
+  { id: 'payroll',     icon: '💰', title: 'Payroll Services',        desc: 'CPF, payslips & IR8A filing', price: 'From S$99/mo' },
+  { id: 'visa',        icon: '✈️',  title: 'Employment Pass',         desc: 'Work visa for foreign directors', price: 'From S$899' },
+  { id: 'nominee',     icon: '👤', title: 'Nominee Director',        desc: 'Fulfil local director requirement', price: 'From S$1,200/yr' },
+];
+
+
+/* ══════════════════════════════════════════
+   4. STEP TRANSITIONS
+══════════════════════════════════════════ */
+function goToStep(next, dir = 'forward') {
+  const cur     = document.getElementById(`panel-${state.step}`);
+  const nxt     = document.getElementById(`panel-${next}`);
+  if (!nxt) return;
+  const xOut = dir === 'forward' ? -32 : 32;
+  const xIn  = dir === 'forward' ?  32 : -32;
+
+  if (window.gsap) {
+    gsap.timeline()
+      .to(cur, { opacity: 0, x: xOut, duration: .26, ease: 'power2.in', onComplete: () => {
+        cur.classList.add('ob-panel--hidden'); cur.style.cssText = '';
+      }})
+      .set(nxt, { x: xIn, opacity: 0 })
+      .call(() => nxt.classList.remove('ob-panel--hidden'))
+      .to(nxt, { opacity: 1, x: 0, duration: .3, ease: 'power2.out' });
+  } else {
+    cur.classList.add('ob-panel--hidden');
+    nxt.classList.remove('ob-panel--hidden');
+  }
+
+  state.step = next;
+  updateProgress();
+  updateSidebar();
+  setTimeout(() => { document.querySelector('.ob-right').scrollTop = 0; }, 120);
+}
+
+function updateProgress() {
+  const fill    = document.getElementById('progressFill');
+  const counter = document.getElementById('stepCounter');
+  if (state.step > TOTAL_STEPS) {
+    fill.style.width = '100%';
+    counter.textContent = 'Complete ✓';
+  } else {
+    fill.style.width = `${((state.step - 1) / TOTAL_STEPS) * 100}%`;
+    counter.textContent = `Step ${state.step} of ${TOTAL_STEPS}`;
+  }
+}
+
+function updateSidebar() {
+  for (let i = 1; i <= 4; i++) {
+    const el = document.getElementById(`vs-${i}`);
+    if (!el) continue;
+    el.classList.remove('active', 'done');
+    if (i < state.step)  el.classList.add('done');
+    if (i === state.step) el.classList.add('active');
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   5. VALIDATION HELPERS
+══════════════════════════════════════════ */
+function markInvalid(el) {
+  el.classList.add('ob-invalid');
+  if (window.gsap) gsap.from(el, { x: -5, duration: .18, clearProps: 'x' });
+}
+function markValid(el) { el.classList.remove('ob-invalid'); }
+
+function validateRadioGroup(name, containerId) {
+  const checked = document.querySelector(`input[name="${name}"]:checked`);
+  const wrap    = document.getElementById(containerId);
+  if (!checked) {
+    wrap.style.outline = '2px solid #ef4444';
+    wrap.style.outlineOffset = '6px';
+    wrap.style.borderRadius = '8px';
+    return null;
+  }
+  wrap.style.outline = '';
+  return checked.value;
+}
+
+
+/* ══════════════════════════════════════════
+   6. STEP 1 — ABOUT YOU
+══════════════════════════════════════════ */
+document.getElementById('form-1').addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true;
+
+  const reqFields = [
+    { id: 'ob-fname',   check: v => v.trim().length >= 1 },
+    { id: 'ob-lname',   check: v => v.trim().length >= 1 },
+    { id: 'ob-email',   check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+    { id: 'ob-country', check: v => v !== '' },
+  ];
+  reqFields.forEach(f => {
+    const el = document.getElementById(f.id);
+    f.check(el.value) ? markValid(el) : (markInvalid(el), ok = false);
+  });
+
+  const stage = validateRadioGroup('stage', 'ob-stage');
+  if (!stage) ok = false;
+
+  if (!ok) return;
+
+  state.firstName = document.getElementById('ob-fname').value.trim();
+  state.lastName  = document.getElementById('ob-lname').value.trim();
+  state.email     = document.getElementById('ob-email').value.trim();
+  state.dialCode  = document.getElementById('ob-dialcode').value;
+  state.phone     = document.getElementById('ob-phone').value.trim();
+  state.country   = document.getElementById('ob-country').value;
+  state.stage     = stage;
+
+  goToStep(2, 'forward');
+  animatePanel2Fields();
+});
+
+
+/* ══════════════════════════════════════════
+   7. STEP 2 — COMPANY DETAILS
+══════════════════════════════════════════ */
+function animatePanel2Fields() {
+  if (!window.gsap) return;
+  const els = document.querySelectorAll('#panel-2 .ob-field, #panel-2 .ob-panel__header, #panel-2 .ob-form__footer');
+  gsap.from(els, { opacity: 0, y: 16, duration: .4, stagger: .055, ease: 'power2.out', delay: .1 });
+}
+
+document.getElementById('form-2').addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true;
+
+  const reqSelects = ['ob-industry', 'ob-directors', 'ob-shareholders', 'ob-capital', 'ob-fy'];
+  reqSelects.forEach(id => {
+    const el = document.getElementById(id);
+    el.value ? markValid(el) : (markInvalid(el), ok = false);
+  });
+
+  const localDir = validateRadioGroup('localDir', 'ob-local-dir');
+  const employees = validateRadioGroup('employees', 'ob-employees');
+  const timeline  = validateRadioGroup('timeline', 'ob-timeline-group');
+  const regAddr   = validateRadioGroup('registeredAddress', 'ob-address-group');
+  if (!localDir || !employees || !timeline || !regAddr) ok = false;
+
+  if (!ok) return;
+
+  state.companyName       = document.getElementById('ob-compname').value.trim();
+  state.industry          = document.getElementById('ob-industry').value;
+  state.bizDesc           = document.getElementById('ob-bizdesc').value.trim();
+  state.directors         = document.getElementById('ob-directors').value;
+  state.shareholders      = document.getElementById('ob-shareholders').value;
+  state.shareCapital      = document.getElementById('ob-capital').value;
+  state.fyEnd             = document.getElementById('ob-fy').value;
+  state.localDir          = localDir;
+  state.employees         = employees;
+  state.timeline          = timeline;
+  state.registeredAddress = regAddr;
+
+  buildServicesGrid();
+  goToStep(3, 'forward');
+});
+
+document.getElementById('back-2').addEventListener('click', () => goToStep(1, 'backward'));
+
+
+/* ══════════════════════════════════════════
+   8. STEP 3 — SERVICES
+══════════════════════════════════════════ */
+function buildServicesGrid() {
+  const grid = document.getElementById('servicesGrid');
+  grid.innerHTML = '';
+  SERVICES.forEach((svc, i) => {
+    const card = document.createElement('div');
+    card.className = 'ob-svc-card';
+    card.dataset.id = svc.id;
+    if (state.services.has(svc.id)) card.classList.add('selected');
+    card.innerHTML = `
+      <div class="ob-svc-card__check">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="ob-svc-card__icon">${svc.icon}</div>
+      <div class="ob-svc-card__title">${svc.title}</div>
+      <div class="ob-svc-card__desc">${svc.desc}</div>
+      <div class="ob-svc-card__price">${svc.price}</div>`;
+    card.addEventListener('click', () => toggleService(svc.id, card));
+    grid.appendChild(card);
+    if (window.gsap) gsap.from(card, { opacity: 0, y: 18, duration: .38, delay: i * .055, ease: 'power2.out' });
+  });
+}
+
+function toggleService(id, card) {
+  if (state.services.has(id)) { state.services.delete(id); card.classList.remove('selected'); }
+  else {
+    state.services.add(id); card.classList.add('selected');
+    if (window.gsap) gsap.from(card, { scale: .96, duration: .18, ease: 'back.out(2)' });
+  }
+  const hasAny = state.services.size > 0;
+  document.getElementById('next-3').disabled = !hasAny;
+  document.getElementById('servicesNote').classList.toggle('hidden', hasAny);
+}
+
+document.getElementById('next-3').addEventListener('click', () => {
+  if (!state.services.size) return;
+  setupStep4();
+  goToStep(4, 'forward');
+});
+document.getElementById('back-3').addEventListener('click', () => goToStep(2, 'backward'));
+
+
+/* ══════════════════════════════════════════
+   9. STEP 4 — EMAIL OTP
+══════════════════════════════════════════ */
+function setupStep4() {
+  document.getElementById('otp-email-display').textContent = state.email;
+  document.getElementById('otp-email-full').textContent    = state.email;
+}
+
+document.getElementById('sendOtpBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('sendOtpBtn');
+  btn.disabled = true;
+  btn.innerHTML = '⏳ Sending…';
+
+  try {
+    const res  = await fetch('/api/send-otp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: state.email }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Failed to send');
+
+    state.otpToken = data.token;
+
+    document.getElementById('otp-send-state').classList.add('ob-hidden');
+    const enterState = document.getElementById('otp-enter-state');
+    enterState.classList.remove('ob-hidden');
+    if (window.gsap) gsap.from(enterState, { opacity: 0, y: 12, duration: .32, ease: 'power2.out' });
+
+    document.querySelectorAll('.ob-otp-box')[0].focus();
+    startResendTimer();
+
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> Send verification code`;
+    showOtpError(err.message || 'Could not send code. Please try again.');
+  }
+});
+
+document.getElementById('change-email-link').addEventListener('click', e => {
+  e.preventDefault();
+  goToStep(1, 'backward');
+  setTimeout(() => document.getElementById('ob-email').focus(), 400);
+});
+
+let resendInterval = null;
+function startResendTimer(s = 30) {
+  const btn = document.getElementById('resendBtn');
+  let count = s;
+  btn.disabled = true;
+  btn.innerHTML = `Resend in <span id="resendTimer">${s}</span>s`;
+  clearInterval(resendInterval);
+  resendInterval = setInterval(() => {
+    count--;
+    const el = document.getElementById('resendTimer');
+    if (el) el.textContent = count;
+    if (count <= 0) { clearInterval(resendInterval); btn.disabled = false; btn.textContent = 'Resend code'; }
+  }, 1000);
+}
+
+document.getElementById('resendBtn').addEventListener('click', async () => {
+  document.getElementById('resendBtn').disabled = true;
+  try {
+    const res  = await fetch('/api/send-otp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: state.email }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error);
+    state.otpToken = data.token;
+    document.querySelectorAll('.ob-otp-box').forEach(b => { b.value = ''; b.classList.remove('filled'); });
+    document.getElementById('verifyOtpBtn').disabled = true;
+    document.getElementById('otpError').classList.add('ob-hidden');
+    startResendTimer();
+  } catch (err) {
+    showOtpError('Failed to resend. Please try again.');
+    startResendTimer(10);
+  }
+});
+
+// OTP box behaviour
+(function setupOtpBoxes() {
+  const boxes  = Array.from(document.querySelectorAll('.ob-otp-box'));
+  const verify = document.getElementById('verifyOtpBtn');
+
+  boxes.forEach((box, i) => {
+    box.addEventListener('input', e => {
+      box.value = e.target.value.replace(/\D/g, '').slice(-1);
+      box.classList.toggle('filled', !!box.value);
+      if (box.value && i < boxes.length - 1) boxes[i + 1].focus();
+      const full = boxes.map(b => b.value).join('');
+      verify.disabled = full.length < 6;
+      if (full.length === 6 && window.gsap) gsap.from(verify, { scale: .96, duration: .18, ease: 'back.out(2)' });
+    });
+
+    box.addEventListener('keydown', e => {
+      if (e.key === 'Backspace' && !box.value && i > 0) {
+        boxes[i - 1].value = ''; boxes[i - 1].classList.remove('filled'); boxes[i - 1].focus();
+      }
+    });
+
+    box.addEventListener('paste', e => {
+      e.preventDefault();
+      const p = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '');
+      boxes.forEach((b, j) => { b.value = p[j] || ''; b.classList.toggle('filled', !!b.value); });
+      verify.disabled = p.length < 6;
+      boxes[Math.min(p.length, 5)].focus();
+    });
+  });
+})();
+
+document.getElementById('verifyOtpBtn').addEventListener('click', async () => {
+  const boxes = Array.from(document.querySelectorAll('.ob-otp-box'));
+  const otp   = boxes.map(b => b.value).join('');
+  const btn   = document.getElementById('verifyOtpBtn');
+  btn.disabled = true;
+  btn.textContent = 'Verifying…';
+
+  try {
+    const res  = await fetch('/api/verify-otp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: state.otpToken, otp, email: state.email }),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Invalid code');
+
+    submitOnboarding();
+    goToStep(5, 'forward');
+    populateSuccess();
+    setTimeout(launchConfetti, 500);
+
+  } catch (err) {
+    boxes.forEach(b => b.classList.add('ob-shake'));
+    setTimeout(() => boxes.forEach(b => b.classList.remove('ob-shake')), 500);
+    showOtpError(err.message || 'Incorrect code — please try again.');
+    btn.disabled = false;
+    btn.textContent = 'Complete setup →';
+  }
+});
+
+document.getElementById('back-4').addEventListener('click', () => goToStep(3, 'backward'));
+
+function showOtpError(msg) {
+  const el = document.getElementById('otpError');
+  el.textContent = msg;
+  el.classList.remove('ob-hidden');
+}
+
+
+/* ══════════════════════════════════════════
+   10. SUBMIT TO CONTACT API
+══════════════════════════════════════════ */
+async function submitOnboarding() {
+  const svcList = Array.from(state.services).map(id => SERVICES.find(s => s.id === id)?.title).filter(Boolean).join(', ');
+  const details = [
+    `Stage: ${state.stage}`,
+    `Industry: ${state.industry}`,
+    state.bizDesc ? `Business: ${state.bizDesc}` : '',
+    `Directors: ${state.directors}`,
+    `Shareholders: ${state.shareholders}`,
+    `Share capital: ${state.shareCapital}`,
+    `FY end: ${state.fyEnd}`,
+    `Local director: ${state.localDir}`,
+    `Employees: ${state.employees}`,
+    `Timeline: ${state.timeline}`,
+    `Registered address: ${state.registeredAddress}`,
+    state.companyName ? `Company name: ${state.companyName}` : '',
+  ].filter(Boolean).join(' | ');
+
+  try {
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    `${state.firstName} ${state.lastName}`,
+        email:   state.email,
+        phone:   state.phone ? `${state.dialCode} ${state.phone}` : '',
+        service: svcList,
+        message: details,
+      }),
+    });
+  } catch (_) { /* silent — OTP already confirmed */ }
+}
+
+
+/* ══════════════════════════════════════════
+   11. SUCCESS SCREEN
+══════════════════════════════════════════ */
+function populateSuccess() {
+  document.getElementById('successName').textContent = state.firstName;
+
+  const svcList = Array.from(state.services)
+    .map(id => SERVICES.find(s => s.id === id)?.title)
+    .filter(Boolean).join(' · ');
+
+  const STAGE_LABELS = { new: 'Starting fresh', existing: 'Already incorporated', foreign: 'Foreign expansion' };
+  const DIR_LABELS   = { yes: 'Yes, I have one', no: 'No — needs nominee', unsure: 'Not sure yet' };
+  const EMP_LABELS   = { 'yes-immediate': 'Yes, immediately', 'yes-later': 'Yes, later', no: 'No' };
+  const TL_LABELS    = { asap: 'ASAP', '1 month': '~1 month', '3+ months': '3+ months', exploring: 'Just exploring' };
+
+  document.getElementById('successSummary').innerHTML = `
+    <h4>Your enquiry summary</h4>
+    <div class="ob-success__row"><strong>Name</strong><span>${state.firstName} ${state.lastName}</span></div>
+    <div class="ob-success__row"><strong>Email</strong><span>${state.email}</span></div>
+    ${state.phone ? `<div class="ob-success__row"><strong>Phone</strong><span>${state.dialCode} ${state.phone}</span></div>` : ''}
+    ${state.companyName ? `<div class="ob-success__row"><strong>Company</strong><span>${state.companyName}</span></div>` : ''}
+    <div class="ob-success__row"><strong>Industry</strong><span>${state.industry}</span></div>
+    <div class="ob-success__row"><strong>Stage</strong><span>${STAGE_LABELS[state.stage] || state.stage}</span></div>
+    <div class="ob-success__row"><strong>Directors</strong><span>${state.directors}</span></div>
+    <div class="ob-success__row"><strong>Shareholders</strong><span>${state.shareholders}</span></div>
+    <div class="ob-success__row"><strong>Share capital</strong><span>${state.shareCapital}</span></div>
+    <div class="ob-success__row"><strong>FY end</strong><span>${state.fyEnd}</span></div>
+    <div class="ob-success__row"><strong>Local director</strong><span>${DIR_LABELS[state.localDir] || state.localDir}</span></div>
+    <div class="ob-success__row"><strong>Employees</strong><span>${EMP_LABELS[state.employees] || state.employees}</span></div>
+    <div class="ob-success__row"><strong>Timeline</strong><span>${TL_LABELS[state.timeline] || state.timeline}</span></div>
+    <div class="ob-success__row"><strong>Services</strong><span>${svcList || '—'}</span></div>
+  `;
+
+  if (window.gsap) {
+    gsap.from('#panel-5 .ob-success__ring',    { scale: 0, duration: .55, ease: 'back.out(2)', delay: .1 });
+    gsap.from('#panel-5 .ob-success__title',   { opacity: 0, y: 16, duration: .4, delay: .35 });
+    gsap.from('#panel-5 .ob-success__sub',     { opacity: 0, y: 16, duration: .4, delay: .45 });
+    gsap.from('#panel-5 .ob-success__summary', { opacity: 0, y: 16, duration: .4, delay: .55 });
+    gsap.from('#panel-5 .ob-success__actions', { opacity: 0, y: 16, duration: .4, delay: .65 });
+  }
+  setTimeout(() => document.getElementById('successRing')?.classList.add('pulse'), 700);
+}
+
+
+/* ══════════════════════════════════════════
+   12. CONFETTI
+══════════════════════════════════════════ */
+function launchConfetti() {
+  const canvas = document.getElementById('confettiCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const COLORS = ['#1A6BCC','#00C9A7','#FF5C35','#F5A623','#fff','#163758'];
+  const pieces = Array.from({ length: 130 }, () => ({
+    x: Math.random() * canvas.width, y: -10 - Math.random() * canvas.height * .35,
+    w: Math.random() * 10 + 4, h: Math.random() * 6 + 3,
+    r: Math.random() * Math.PI * 2, vx: (Math.random() - .5) * 3,
+    vy: Math.random() * 4 + 2, vr: (Math.random() - .5) * .2,
+    c: COLORS[Math.floor(Math.random() * COLORS.length)], alpha: 1,
+  }));
+  let frame = 0;
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); frame++;
+    let alive = false;
+    pieces.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.r += p.vr; p.vy += .08;
+      if (frame > 120) p.alpha -= .015;
+      if (p.alpha <= 0) return;
+      alive = true;
+      ctx.save(); ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.translate(p.x, p.y); ctx.rotate(p.r);
+      ctx.fillStyle = p.c; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    });
+    if (alive) requestAnimationFrame(tick);
+    else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  requestAnimationFrame(tick);
+}
+
+
+/* ══════════════════════════════════════════
+   13. INIT
+══════════════════════════════════════════ */
+(function init() {
+  updateProgress();
+  updateSidebar();
+  if (window.gsap) {
+    const els = '#panel-1 .ob-field, #panel-1 .ob-radio-group, #panel-1 .ob-panel__header, #panel-1 .ob-form__footer';
+    gsap.from(document.querySelectorAll(els), { opacity: 0, y: 20, duration: .5, stagger: .07, ease: 'power2.out', delay: .15 });
+    gsap.from('.ob-topbar', { opacity: 0, y: -10, duration: .4, ease: 'power2.out' });
+    gsap.from('.ob-left__inner > *', { opacity: 0, y: 24, duration: .5, stagger: .1, ease: 'power2.out', delay: .1 });
+  }
+})();

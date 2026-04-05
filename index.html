@@ -110,7 +110,7 @@
 
       <div class="nav__actions">
         <a href="#contact" class="btn btn--ghost">Contact us</a>
-        <a href="#get-started" class="btn btn--primary">Get started</a>
+        <a href="/onboarding/" class="btn btn--primary">Get started</a>
       </div>
 
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
@@ -137,7 +137,7 @@
           Karman takes the complexity out of running a Singapore company. From incorporation to ongoing compliance, accounting, and tax — we handle the paperwork so you can focus on growth.
         </p>
         <div class="hero__ctas fade-in">
-          <a href="#pricing" class="btn btn--primary btn--lg">See our plans →</a>
+          <a href="/onboarding/" class="btn btn--primary btn--lg">Get started free →</a>
           <a href="#contact" class="btn btn--outline btn--lg">Talk to an expert</a>
         </div>
         <div class="hero__stats fade-in">
@@ -895,9 +895,16 @@
                   <input type="text" id="name" name="name" placeholder="Jane Smith" required />
                 </div>
                 <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+                  <label for="email">Email address <span class="form-optional">(optional)</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@company.com" />
                 </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone number <span class="form-optional">(optional)</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="+65 9123 4567" />
+                </div>
+                <div class="form-group"><!-- spacer --></div>
               </div>
               <div class="form-group">
                 <label for="service">Service of interest</label>

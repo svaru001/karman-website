@@ -178,13 +178,14 @@ if (contactForm) {
     // Validate fields
     const name = contactForm.querySelector('#name').value.trim();
     const email = contactForm.querySelector('#email').value.trim();
+    const phone = (contactForm.querySelector('#phone') || {}).value?.trim() || '';
 
-    if (!name || !email) {
-      showFormMessage(contactForm, 'Please fill in your name and email address.', 'error');
+    if (!name) {
+      showFormMessage(contactForm, 'Please fill in your name.', 'error');
       return;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showFormMessage(contactForm, 'Please enter a valid email address.', 'error');
       return;
     }
@@ -198,7 +199,7 @@ if (contactForm) {
     fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, service, message })
+      body: JSON.stringify({ name, email, phone, service, message })
     })
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(() => {
