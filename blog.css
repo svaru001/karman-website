@@ -139,6 +139,7 @@
 .blog-card__tag--gst    { background: #E0F2F1; color: #00695C; }
 .blog-card__tag--guide  { background: var(--blue-light); color: var(--blue); }
 .blog-card__tag--compliance { background: #FFF8E1; color: #F57F17; }
+.blog-card__tag--funds  { background: #E8EAF6; color: #283593; }
 
 .blog-card__title {
   font-family: 'Sora', 'Inter', sans-serif;
