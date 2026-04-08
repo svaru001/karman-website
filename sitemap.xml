@@ -9,6 +9,28 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- ── Standalone Pages ── -->
+  <url>
+    <loc>https://www.karman.com.sg/pricing</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/about</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/faq</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- ── Service Pages ── -->
   <url>
     <loc>https://www.karman.com.sg/services/company-incorporation</loc>

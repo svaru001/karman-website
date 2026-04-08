@@ -1214,6 +1214,31 @@ h1, h2, h3, h4, h5 {
   transition: color .2s;
 }
 .footer-col a:hover { color: #fff; }
+/* Alias for new standalone pages that use footer__grid / footer__col */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
 .footer__bottom {
   text-align: center;
   display: flex;
