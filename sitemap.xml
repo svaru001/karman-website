@@ -230,4 +230,25 @@
     <priority>0.75</priority>
   </url>
 
+  <url>
+    <loc>https://www.karman.com.sg/blog/can-foreigner-start-business-singapore</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/blog/penalties-late-filing-singapore</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/blog/best-company-incorporation-services-singapore</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
