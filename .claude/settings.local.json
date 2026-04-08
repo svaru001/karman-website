@@ -15,7 +15,18 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080)",
       "Bash(vercel logs:*)",
       "Bash(npx vercel:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebFetch(domain:www.figma.com)",
+      "WebFetch(domain:gaming-chew-59395803.figma.site)",
+      "Bash(xargs sed:*)",
+      "Bash(cp \"/Users/sanketvaru/Desktop/Screenshot 2026-04-03 at 5.19.30\"*\".png\" /Users/sanketvaru/Documents/karman/logo.png)",
+      "Bash(rsync \"/Users/sanketvaru/Desktop/Screenshot 2026-04-03 at 5.19.30 PM.png\" /Users/sanketvaru/Documents/karman/logo.png)",
+      "Bash(perl:*)",
+      "Bash(rsync \"/Users/sanketvaru/Desktop/Screenshot 2026-04-04 at 12.05.33 AM.png\" /Users/sanketvaru/Documents/karman/logo.png)",
+      "Bash(sips -s format png \"/Users/sanketvaru/Downloads/karman logo.jpg\" --out /Users/sanketvaru/Documents/karman/favicon.png)",
+      "Bash(vercel --version)",
+      "Bash(npx serve:*)",
+      "Read(//tmp/**)"
     ]
   }
 }
