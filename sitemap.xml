@@ -294,4 +294,25 @@
     <priority>0.75</priority>
   </url>
 
+  <url>
+    <loc>https://www.karman.com.sg/blog/singapore-company-incorporation-indian-founders</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/blog/singapore-company-incorporation-us-founders</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.karman.com.sg/blog/singapore-company-incorporation-uk-founders</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
