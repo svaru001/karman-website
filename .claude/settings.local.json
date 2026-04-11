@@ -30,7 +30,13 @@
       "Bash(sed -i '' 's|<title>Company Incorporation Singapore — Register a Pte Ltd from S\\\\$699 | Karman</title>|<title>Company Incorporation Singapore for Foreigners \\\\&amp; Locals — From S$699 | Karman</title>|' /Users/sanketvaru/Documents/karman/services/company-incorporation/index.html)",
       "Bash(sed -i '' 's|content=\"Register a Singapore private limited company from S\\\\$699. ACRA-registered filing agent. Local and foreign founders. Same-day submission, 48-hour approval. Includes constitution, UEN, share certificates.\"|content=\"Register a Singapore Pte Ltd from S\\\\$699. ACRA-registered filing agent for local and foreign founders. Same-day ACRA submission, 48-hour approval. Includes constitution, UEN, share certificates, and nominee director option.\"|' /Users/sanketvaru/Documents/karman/services/company-incorporation/index.html)",
       "Bash(sed -i '' 's|content=\"company incorporation Singapore, register Singapore company, Singapore Pte Ltd registration, ACRA filing agent, Singapore company registration, incorporate Singapore\"|content=\"company incorporation Singapore, register company Singapore, how to start a company in Singapore, open company Singapore foreigners, company incorporation services Singapore, best company incorporation service Singapore, incorporate Singapore step by step\"|' /Users/sanketvaru/Documents/karman/services/company-incorporation/index.html)",
-      "Bash(sed -i '' 's|<h1>Register your Singapore company — fast, correct, stress-free</h1>|<h1>Company Incorporation Singapore for Foreigners \\\\&amp; Locals — Register a Pte Ltd Fast</h1>|' /Users/sanketvaru/Documents/karman/services/company-incorporation/index.html)"
+      "Bash(sed -i '' 's|<h1>Register your Singapore company — fast, correct, stress-free</h1>|<h1>Company Incorporation Singapore for Foreigners \\\\&amp; Locals — Register a Pte Ltd Fast</h1>|' /Users/sanketvaru/Documents/karman/services/company-incorporation/index.html)",
+      "Bash(grep -r 'meta name=\"keywords\"' /Users/sanketvaru/Documents/karman/index.html /Users/sanketvaru/Documents/karman/services/*/index.html /Users/sanketvaru/Documents/karman/pricing/index.html /Users/sanketvaru/Documents/karman/about/index.html /Users/sanketvaru/Documents/karman/faq/index.html)",
+      "Bash(grep:*)",
+      "WebFetch(domain:karman.com.sg)",
+      "WebFetch(domain:squeezegrowth.com)",
+      "WebFetch(domain:statrys.com)",
+      "WebFetch(domain:www.wlp.com.sg)"
     ]
   }
 }
