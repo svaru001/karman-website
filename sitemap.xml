@@ -4,293 +4,293 @@
   <!-- ── Homepage ── -->
   <url>
     <loc>https://www.karman.com.sg/</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- ── Standalone Pages ── -->
   <url>
     <loc>https://www.karman.com.sg/pricing</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/about</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/faq</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- ── Service Pages ── -->
   <url>
     <loc>https://www.karman.com.sg/services/company-incorporation</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/services/corporate-secretary</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/services/accounting</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/services/gst-registration</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/services/nominee-director</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- ── Tools ── -->
   <url>
     <loc>https://www.karman.com.sg/tools</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/tools/business-structure-recommender</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/tools/cost-calculator</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/tools/eligibility-checker</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/tools/incorporation-timeline</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/tools/document-checklist</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <!-- ── Blog Hub ── -->
   <url>
     <loc>https://www.karman.com.sg/blog</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- ── Blog Articles ── -->
   <url>
     <loc>https://www.karman.com.sg/blog/how-to-incorporate-company-singapore-foreigner</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/singapore-pte-ltd-vs-sole-proprietor-llp</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/how-long-does-singapore-company-incorporation-take</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/singapore-corporate-tax-guide-small-business</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/nominee-director-singapore-complete-guide</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/cost-of-incorporating-company-singapore</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/when-to-register-gst-singapore</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/corporate-secretary-singapore-what-they-do</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/singapore-company-annual-compliance-checklist</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/singapore-employment-pass-company-director</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/variable-capital-company-singapore-vcc</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/vcc-singapore-vs-cayman-islands</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/vcc-13o-13u-tax-incentives-singapore</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/vcc-annual-compliance-singapore</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/vcc-fund-administration-singapore</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/umbrella-vcc-vs-standalone-singapore</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/redomicile-cayman-fund-to-singapore-vcc</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/mas-vcc-thematic-review-2025</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/vcc-family-office-singapore-2025</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/can-foreigner-start-business-singapore</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/penalties-late-filing-singapore</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/best-company-incorporation-services-singapore</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/how-to-incorporate-vcc-singapore</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/why-vcc-good-vehicle-for-funds-singapore</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://www.karman.com.sg/blog/vcc-compliance-requirements-singapore</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.75</priority>
   </url>
 
