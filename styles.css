@@ -465,6 +465,12 @@ h1, h2, h3, h4, h5 {
   gap: 20px;
 }
 
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
 .service-card {
   grid-column: span 2;
   background: #fff;
