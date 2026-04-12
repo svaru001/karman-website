@@ -461,11 +461,12 @@ h1, h2, h3, h4, h5 {
 /* === SERVICES === */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
 }
 
 .service-card {
+  grid-column: span 2;
   background: #fff;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
@@ -490,7 +491,7 @@ h1, h2, h3, h4, h5 {
 .service-card:hover::before { opacity: 1; }
 
 .service-card--featured {
-  grid-column: span 2;
+  grid-column: span 3;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
   color: #fff;
   border-color: transparent;
@@ -1278,6 +1279,8 @@ h1, h2, h3, h4, h5 {
 
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
   .service-card--featured { grid-column: span 1; }
   .why__inner { grid-template-columns: 1fr; gap: 48px; }
   .why__content .section-heading,
@@ -1327,6 +1330,8 @@ h1, h2, h3, h4, h5 {
   .hero__ctas { flex-direction: column; align-items: center; }
 
   .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
   .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
   .testimonials__grid { grid-template-columns: 1fr; }
   .process__steps { flex-direction: column; align-items: center; }
