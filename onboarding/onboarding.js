@@ -100,7 +100,7 @@
 const state = {
   step: 1,
   // Step 1
-  firstName: '', lastName: '', email: '', phone: '', dialCode: '+65', country: 'SG', stage: '',
+  firstName: '', lastName: '', email: '', phone: '', country: 'SG', stage: '',
   // Step 2
   companyName: '', industry: '', bizDesc: '', directors: '', shareholders: '',
   shareCapital: '', fyEnd: '', localDir: '', employees: '', timeline: '', registeredAddress: '',
@@ -226,8 +226,7 @@ document.getElementById('form-1').addEventListener('submit', e => {
   state.firstName = document.getElementById('ob-fname').value.trim();
   state.lastName  = document.getElementById('ob-lname').value.trim();
   state.email     = document.getElementById('ob-email').value.trim();
-  state.dialCode  = document.getElementById('ob-dialcode').value;
-  state.phone     = document.getElementById('ob-phone').value.trim();
+  state.phone     = window.itiInstance ? window.itiInstance.getNumber() : document.getElementById('ob-phone').value.trim();
   state.country   = document.getElementById('ob-country').value;
   state.stage     = stage;
 
@@ -358,7 +357,7 @@ async function submitOnboarding() {
       body: JSON.stringify({
         name:    `${state.firstName} ${state.lastName}`,
         email:   state.email,
-        phone:   state.phone ? `${state.dialCode} ${state.phone}` : '',
+        phone:   state.phone || '',
         service: svcList,
         message: details,
       }),
@@ -386,7 +385,7 @@ function populateSuccess() {
     <h4>Your enquiry summary</h4>
     <div class="ob-success__row"><strong>Name</strong><span>${state.firstName} ${state.lastName}</span></div>
     <div class="ob-success__row"><strong>Email</strong><span>${state.email}</span></div>
-    ${state.phone ? `<div class="ob-success__row"><strong>Phone</strong><span>${state.dialCode} ${state.phone}</span></div>` : ''}
+    ${state.phone ? `<div class="ob-success__row"><strong>Phone</strong><span>${state.phone}</span></div>` : ''}
     ${state.companyName ? `<div class="ob-success__row"><strong>Company</strong><span>${state.companyName}</span></div>` : ''}
     <div class="ob-success__row"><strong>Industry</strong><span>${state.industry}</span></div>
     <div class="ob-success__row"><strong>Stage</strong><span>${STAGE_LABELS[state.stage] || state.stage}</span></div>
@@ -452,6 +451,18 @@ function launchConfetti() {
    13. INIT
 ══════════════════════════════════════════ */
 (function init() {
+  /* intl-tel-input */
+  const phoneInput = document.getElementById('ob-phone');
+  if (phoneInput && window.intlTelInput) {
+    window.itiInstance = intlTelInput(phoneInput, {
+      initialCountry: 'sg',
+      preferredCountries: ['sg', 'my', 'in', 'cn', 'gb', 'us', 'au', 'hk'],
+      separateDialCode: true,
+      dropdownContainer: document.body,
+      utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js',
+    });
+  }
+
   updateProgress();
   updateSidebar();
   if (window.gsap) {

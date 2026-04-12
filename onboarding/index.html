@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/onboarding/onboarding.css" />
 </head>
@@ -23,6 +24,10 @@
   <aside class="ob-left">
     <canvas id="hexCanvas" class="ob-canvas"></canvas>
     <div class="ob-left__inner">
+
+      <div class="ob-lhs-logo">
+        <a href="/"><img src="/logo.svg" alt="Karman" /></a>
+      </div>
 
       <div class="ob-left__hero">
         <div class="ob-left__pill">3-step setup · Takes 5 minutes</div>
@@ -77,10 +82,6 @@
   <!-- ── RIGHT PANEL ── -->
   <main class="ob-right">
 
-    <div class="ob-rhs-logo">
-      <a href="/"><img src="/logo.png" alt="Karman" /></a>
-    </div>
-
     <div class="ob-topbar">
       <a href="/" class="ob-topbar__back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -125,24 +126,7 @@
         <div class="ob-field-row">
           <div class="ob-field">
             <label for="ob-phone">Phone number <span class="ob-optional">(optional)</span></label>
-            <div class="ob-phone-wrap">
-              <select class="ob-phone-code" id="ob-dialcode" name="dialCode">
-                <option value="+65" selected>🇸🇬 +65</option>
-                <option value="+60">🇲🇾 +60</option>
-                <option value="+91">🇮🇳 +91</option>
-                <option value="+86">🇨🇳 +86</option>
-                <option value="+44">🇬🇧 +44</option>
-                <option value="+1">🇺🇸 +1</option>
-                <option value="+61">🇦🇺 +61</option>
-                <option value="+49">🇩🇪 +49</option>
-                <option value="+33">🇫🇷 +33</option>
-                <option value="+81">🇯🇵 +81</option>
-                <option value="+82">🇰🇷 +82</option>
-                <option value="+971">🇦🇪 +971</option>
-                <option value="+852">🇭🇰 +852</option>
-              </select>
-              <input type="tel" id="ob-phone" name="phone" placeholder="9123 4567" autocomplete="tel-national" />
-            </div>
+            <input type="tel" id="ob-phone" name="phone" placeholder="9123 4567" autocomplete="tel" />
           </div>
           <div class="ob-field">
             <label for="ob-country">Country of residence <span class="ob-req">*</span></label>
@@ -499,6 +483,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
 <script src="/onboarding/onboarding.js"></script>
 </body>
 </html>

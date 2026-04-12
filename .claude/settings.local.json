@@ -36,7 +36,9 @@
       "WebFetch(domain:karman.com.sg)",
       "WebFetch(domain:squeezegrowth.com)",
       "WebFetch(domain:statrys.com)",
-      "WebFetch(domain:www.wlp.com.sg)"
+      "WebFetch(domain:www.wlp.com.sg)",
+      "Bash(find /Users/sanketvaru/Documents/karman -name '*.html' -exec sed -i '' 's|logo\\\\.png|logo.svg|g' {} +)",
+      "Bash(find /Users/sanketvaru/Documents/karman -name '*.html' -exec sed -i '' 's|<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\" />|<link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />|g' {} +)"
     ]
   }
 }
