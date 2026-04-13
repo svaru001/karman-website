@@ -227,6 +227,12 @@ h1, h2, h3, h4, h5 {
   transition: color .2s, background .2s;
 }
 .nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.nav__link--ai {
+  color: var(--blue);
+  background: var(--blue-light);
+  font-weight: 600;
+}
+.nav__link--ai:hover { color: #fff; background: var(--blue); }
 .chevron { font-size: 16px; transition: transform .2s; }
 .has-dropdown.is-open .chevron { transform: rotate(90deg); }
 

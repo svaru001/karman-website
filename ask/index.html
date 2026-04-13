@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Ask AI — Singapore Compliance Assistant | Karman</title>
+  <meta name="description" content="Ask questions about Singapore company compliance, ACRA requirements, tax obligations, and VCC regulations. Powered by AI with official source citations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ask.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="ask-header">
+    <a href="/" class="ask-header__logo">
+      <img src="/logo.svg" alt="Karman" />
+    </a>
+    <div class="ask-header__title">Compliance Assistant</div>
+    <button class="ask-header__new" id="newChatBtn" title="New conversation">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+      New chat
+    </button>
+  </header>
+
+  <!-- Chat area -->
+  <main class="ask-main" id="askMain">
+
+    <!-- Empty state (shown initially) -->
+    <div class="ask-empty" id="askEmpty">
+      <div class="ask-empty__icon">K</div>
+      <h1>Karman Compliance Assistant</h1>
+      <p>Ask anything about Singapore company compliance, ACRA requirements, corporate tax, GST, or VCC regulations.</p>
+      <div class="ask-empty__suggestions" id="suggestions">
+        <button class="ask-suggestion" data-q="When must a Singapore company file its Annual Return?">When must I file Annual Return?</button>
+        <button class="ask-suggestion" data-q="What are the penalties for late ACRA filing?">Penalties for late ACRA filing</button>
+        <button class="ask-suggestion" data-q="How do I register for GST in Singapore?">How to register for GST</button>
+        <button class="ask-suggestion" data-q="What is a Variable Capital Company (VCC)?">What is a VCC?</button>
+        <button class="ask-suggestion" data-q="What are the corporate tax rates in Singapore?">Singapore corporate tax rates</button>
+        <button class="ask-suggestion" data-q="How do I close a Singapore company?">How to close a company</button>
+      </div>
+    </div>
+
+    <!-- Messages container (hidden initially) -->
+    <div class="ask-messages" id="askMessages"></div>
+
+  </main>
+
+  <!-- Input bar -->
+  <footer class="ask-footer">
+    <form class="ask-input-wrap" id="askForm">
+      <textarea class="ask-input" id="askInput" placeholder="Ask about Singapore compliance..." rows="1"></textarea>
+      <button type="submit" class="ask-send" id="askSend" disabled>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+      </button>
+    </form>
+    <p class="ask-disclaimer">Answers are AI-generated from official ACRA, IRAS and MAS sources. This is general information, not legal advice.</p>
+  </footer>
+
+  <script src="ask.js"></script>
+</body>
+</html>
