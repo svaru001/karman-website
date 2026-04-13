@@ -69,7 +69,11 @@
 .tool-card__icon {
   font-size: 36px;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
 }
+.tool-card__icon svg { width: 36px; height: 36px; stroke-width: 1.5; }
 .tool-card__meta {
   font-size: 12px;
   font-weight: 600;
@@ -171,7 +175,14 @@
   border-radius: var(--radius);
   padding: 24px;
 }
-.tool-info-card__icon { font-size: 28px; margin-bottom: 10px; }
+.tool-info-card__icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.tool-info-card__icon svg { width: 28px; height: 28px; stroke-width: 1.75; }
 .tool-info-card h3 { font-size: 16px; margin-bottom: 6px; }
 .tool-info-card p { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
 
@@ -194,7 +205,13 @@
   text-decoration: none;
 }
 .tool-related-card:hover { border-color: var(--blue); transform: translateY(-2px); }
-.tool-related-card__icon { font-size: 24px; }
+.tool-related-card__icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.tool-related-card__icon svg { width: 24px; height: 24px; stroke-width: 1.75; }
 .tool-related-card h4 { font-size: 14px; color: var(--navy); font-weight: 600; }
 .tool-related-card p { font-size: 12px; color: var(--gray-600); line-height: 1.5; }
 

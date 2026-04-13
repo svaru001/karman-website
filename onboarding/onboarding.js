@@ -114,14 +114,14 @@ const TOTAL_STEPS = 3;
    3. SERVICES DATA
 ══════════════════════════════════════════ */
 const SERVICES = [
-  { id: 'incorporation', icon: '🏢', title: 'Company Incorporation',  desc: 'Register your Pte. Ltd. with ACRA', price: 'From S$699' },
-  { id: 'secretary',    icon: '📋', title: 'Corporate Secretary',    desc: 'Annual compliance & statutory filings', price: 'From S$350/yr' },
-  { id: 'accounting',  icon: '📊', title: 'Accounting & Bookkeeping', desc: 'Monthly financials & reports', price: 'From S$299/mo' },
-  { id: 'tax',         icon: '🧾', title: 'Corporate Tax Filing',    desc: 'ECI, Form C-S & tax planning', price: 'From S$499/yr' },
-  { id: 'gst',         icon: '📑', title: 'GST Registration & Filing', desc: 'GST reg & quarterly F5 returns', price: 'From S$299' },
-  { id: 'payroll',     icon: '💰', title: 'Payroll Services',        desc: 'CPF, payslips & IR8A filing', price: 'From S$99/mo' },
-  { id: 'visa',        icon: '✈️',  title: 'Employment Pass',         desc: 'Work visa for foreign directors', price: 'From S$899' },
-  { id: 'nominee',     icon: '👤', title: 'Nominee Director',        desc: 'Fulfil local director requirement', price: 'From S$1,200/yr' },
+  { id: 'incorporation', icon: 'building-2', title: 'Company Incorporation',  desc: 'Register your Pte. Ltd. with ACRA', price: 'From S$699' },
+  { id: 'secretary',    icon: 'clipboard-list', title: 'Corporate Secretary',    desc: 'Annual compliance & statutory filings', price: 'From S$350/yr' },
+  { id: 'accounting',  icon: 'bar-chart-3', title: 'Accounting & Bookkeeping', desc: 'Monthly financials & reports', price: 'From S$299/mo' },
+  { id: 'tax',         icon: 'file-text', title: 'Corporate Tax Filing',    desc: 'ECI, Form C-S & tax planning', price: 'From S$499/yr' },
+  { id: 'gst',         icon: 'receipt', title: 'GST Registration & Filing', desc: 'GST reg & quarterly F5 returns', price: 'From S$299' },
+  { id: 'payroll',     icon: 'wallet', title: 'Payroll Services',        desc: 'CPF, payslips & IR8A filing', price: 'From S$99/mo' },
+  { id: 'visa',        icon: 'plane',  title: 'Employment Pass',         desc: 'Work visa for foreign directors', price: 'From S$899' },
+  { id: 'nominee',     icon: 'user', title: 'Nominee Director',        desc: 'Fulfil local director requirement', price: 'From S$1,200/yr' },
 ];
 
 
@@ -296,7 +296,7 @@ function buildServicesGrid() {
       <div class="ob-svc-card__check">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
-      <div class="ob-svc-card__icon">${svc.icon}</div>
+      <div class="ob-svc-card__icon"><i data-lucide="${svc.icon}"></i></div>
       <div class="ob-svc-card__title">${svc.title}</div>
       <div class="ob-svc-card__desc">${svc.desc}</div>
       <div class="ob-svc-card__price">${svc.price}</div>`;
@@ -304,6 +304,7 @@ function buildServicesGrid() {
     grid.appendChild(card);
     if (window.gsap) gsap.from(card, { opacity: 0, y: 18, duration: .38, delay: i * .055, ease: 'power2.out' });
   });
+  if (window.lucide) lucide.createIcons();
 }
 
 function toggleService(id, card) {
@@ -465,6 +466,7 @@ function launchConfetti() {
 
   updateProgress();
   updateSidebar();
+  if (window.lucide) lucide.createIcons();
   if (window.gsap) {
     const els = '#panel-1 .ob-field, #panel-1 .ob-radio-group, #panel-1 .ob-panel__header, #panel-1 .ob-form__footer';
     gsap.from(document.querySelectorAll(els), { opacity: 0, y: 20, duration: .5, stagger: .07, ease: 'power2.out', delay: .15 });

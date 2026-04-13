@@ -440,12 +440,21 @@
   font-size: 24px;
   flex-shrink: 0;
   transition: transform .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.ob-radio__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.75;
 }
 .ob-radio__card--sm {
   padding: 10px 14px;
   gap: 10px;
 }
-.ob-radio__card--sm .ob-radio__icon { font-size: 18px; }
+.ob-radio__card--sm .ob-radio__icon svg { width: 18px; height: 18px; }
 .ob-radio__card strong {
   display: block;
   font-size: 14px;
@@ -519,7 +528,20 @@
 .ob-svc-card__check svg { opacity: 0; transition: opacity .2s; }
 .ob-svc-card.selected .ob-svc-card__check svg { opacity: 1; }
 
-.ob-svc-card__icon { font-size: 28px; line-height: 1; }
+.ob-svc-card__icon {
+  font-size: 28px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.ob-svc-card__icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.5;
+}
+.ob-svc-card.selected .ob-svc-card__icon { color: var(--navy); }
 .ob-svc-card__title { font-size: 14px; font-weight: 700; color: var(--navy); margin-top: 4px; }
 .ob-svc-card__desc  { font-size: 12px; color: var(--gray-600); line-height: 1.45; }
 .ob-svc-card__price { font-size: 12px; font-weight: 600; color: var(--blue); margin-top: 4px; }

@@ -262,7 +262,15 @@ h1, h2, h3, h4, h5 {
   transition: background .15s;
 }
 .dropdown__link:hover { background: var(--gray-50); }
-.dropdown__icon { font-size: 20px; margin-top: 1px; }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
 .dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
 .dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
 
@@ -511,8 +519,12 @@ a.service-card {
 .service-card__icon {
   font-size: 32px;
   margin-bottom: 16px;
-  display: block;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
 }
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
 .service-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -1099,7 +1111,13 @@ a.service-card {
   gap: 16px;
   align-items: flex-start;
 }
-.contact-detail__icon { font-size: 22px; }
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
 .contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
 .contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
 .contact-detail a { color: var(--blue); }

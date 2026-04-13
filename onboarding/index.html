@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/onboarding/onboarding.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="ob-body">
 
@@ -160,7 +161,7 @@
             <label class="ob-radio">
               <input type="radio" name="stage" value="new" required />
               <div class="ob-radio__card">
-                <div class="ob-radio__icon">🌱</div>
+                <div class="ob-radio__icon"><i data-lucide="sprout"></i></div>
                 <div>
                   <strong>Starting fresh</strong>
                   <span>New company, not yet incorporated</span>
@@ -170,7 +171,7 @@
             <label class="ob-radio">
               <input type="radio" name="stage" value="existing" />
               <div class="ob-radio__card">
-                <div class="ob-radio__icon">🏢</div>
+                <div class="ob-radio__icon"><i data-lucide="building-2"></i></div>
                 <div>
                   <strong>Already incorporated</strong>
                   <span>Need ongoing compliance services</span>
@@ -180,7 +181,7 @@
             <label class="ob-radio">
               <input type="radio" name="stage" value="foreign" />
               <div class="ob-radio__card">
-                <div class="ob-radio__icon">🌏</div>
+                <div class="ob-radio__icon"><i data-lucide="globe"></i></div>
                 <div>
                   <strong>Foreign company expanding</strong>
                   <span>Setting up a Singapore presence</span>
@@ -310,21 +311,21 @@
             <label class="ob-radio">
               <input type="radio" name="localDir" value="yes" required />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">✅</div>
+                <div class="ob-radio__icon"><i data-lucide="check-circle"></i></div>
                 <div><strong>Yes</strong><span>I have one</span></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="localDir" value="no" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">❌</div>
+                <div class="ob-radio__icon"><i data-lucide="x-circle"></i></div>
                 <div><strong>No</strong><span>Need nominee</span></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="localDir" value="unsure" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">🤔</div>
+                <div class="ob-radio__icon"><i data-lucide="help-circle"></i></div>
                 <div><strong>Not sure</strong><span>Need advice</span></div>
               </div>
             </label>
@@ -337,21 +338,21 @@
             <label class="ob-radio">
               <input type="radio" name="employees" value="yes-immediate" required />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">👥</div>
+                <div class="ob-radio__icon"><i data-lucide="users"></i></div>
                 <div><strong>Yes, immediately</strong></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="employees" value="yes-later" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">📅</div>
+                <div class="ob-radio__icon"><i data-lucide="calendar"></i></div>
                 <div><strong>Yes, in future</strong></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="employees" value="no" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">🙅</div>
+                <div class="ob-radio__icon"><i data-lucide="user-x"></i></div>
                 <div><strong>No employees</strong></div>
               </div>
             </label>
@@ -364,28 +365,28 @@
             <label class="ob-radio">
               <input type="radio" name="timeline" value="asap" required />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">🚀</div>
+                <div class="ob-radio__icon"><i data-lucide="zap"></i></div>
                 <div><strong>ASAP</strong><span>Ready to go</span></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="timeline" value="1 month" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">📆</div>
+                <div class="ob-radio__icon"><i data-lucide="calendar-clock"></i></div>
                 <div><strong>~1 month</strong><span>Planning ahead</span></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="timeline" value="3+ months" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">🗓️</div>
+                <div class="ob-radio__icon"><i data-lucide="calendar-range"></i></div>
                 <div><strong>3+ months</strong><span>Early research</span></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="timeline" value="exploring" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">🔍</div>
+                <div class="ob-radio__icon"><i data-lucide="search"></i></div>
                 <div><strong>Just exploring</strong></div>
               </div>
             </label>
@@ -398,14 +399,14 @@
             <label class="ob-radio">
               <input type="radio" name="registeredAddress" value="karman" required />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">🏠</div>
+                <div class="ob-radio__icon"><i data-lucide="home"></i></div>
                 <div><strong>Use Karman's address</strong><span>We provide this</span></div>
               </div>
             </label>
             <label class="ob-radio">
               <input type="radio" name="registeredAddress" value="own" />
               <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon">📍</div>
+                <div class="ob-radio__icon"><i data-lucide="map-pin"></i></div>
                 <div><strong>My own address</strong><span>I have a local address</span></div>
               </div>
             </label>
