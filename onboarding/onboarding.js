@@ -101,9 +101,14 @@ const state = {
   step: 1,
   // Step 1
   firstName: '', lastName: '', email: '', phone: '', country: 'SG', stage: '',
-  // Step 2
+  // Step 2 — entity type
+  entityType: '',       // 'private' or 'vcc'
+  // Step 2 — private company
   companyName: '', industry: '', bizDesc: '', directors: '', shareholders: '',
   shareCapital: '', fyEnd: '', localDir: '', employees: '', timeline: '', registeredAddress: '',
+  // Step 2 — VCC / Fund
+  vccName: '', fundType: '', fundStrategy: '', fundAum: '', fundDesc: '',
+  vccDirectors: '', fundManager: '', vccFyEnd: '', vccTimeline: '', vccRegisteredAddress: '',
   // Step 3
   services: new Set(),
 };
@@ -113,7 +118,7 @@ const TOTAL_STEPS = 3;
 /* ══════════════════════════════════════════
    3. SERVICES DATA
 ══════════════════════════════════════════ */
-const SERVICES = [
+const SERVICES_PRIVATE = [
   { id: 'incorporation', icon: 'building-2', title: 'Company Incorporation',  desc: 'Register your Pte. Ltd. with ACRA', price: 'From S$699' },
   { id: 'secretary',    icon: 'clipboard-list', title: 'Corporate Secretary',    desc: 'Annual compliance & statutory filings', price: 'From S$350/yr' },
   { id: 'accounting',  icon: 'bar-chart-3', title: 'Accounting & Bookkeeping', desc: 'Monthly financials & reports', price: 'From S$299/mo' },
@@ -123,6 +128,20 @@ const SERVICES = [
   { id: 'visa',        icon: 'plane',  title: 'Employment Pass',         desc: 'Work visa for foreign directors', price: 'From S$899' },
   { id: 'nominee',     icon: 'user', title: 'Nominee Director',        desc: 'Fulfil local director requirement', price: 'From S$1,200/yr' },
 ];
+
+const SERVICES_VCC = [
+  { id: 'vcc-setup',      icon: 'landmark', title: 'VCC Incorporation',      desc: 'Register your VCC with ACRA & MAS', price: 'From S$5,000' },
+  { id: 'fund-admin',     icon: 'clipboard-list', title: 'Fund Administration',  desc: 'NAV calculation, investor reporting', price: 'Custom' },
+  { id: 'secretary',      icon: 'clipboard-list', title: 'Corporate Secretary',  desc: 'Annual compliance & statutory filings', price: 'From S$500/yr' },
+  { id: 'accounting',     icon: 'bar-chart-3', title: 'Fund Accounting',       desc: 'Financial statements & audit-ready books', price: 'Custom' },
+  { id: 'tax',            icon: 'file-text', title: 'Tax Filing & Advisory',  desc: 'VCC tax incentives, S13R/S13X claims', price: 'From S$1,500/yr' },
+  { id: 'nominee',        icon: 'user', title: 'Nominee Director',          desc: 'Fulfil local director requirement', price: 'From S$1,500/yr' },
+  { id: 'aml-compliance', icon: 'shield', title: 'AML / KYC Compliance',    desc: 'Investor due diligence & ongoing monitoring', price: 'Custom' },
+  { id: 'visa',           icon: 'plane', title: 'Employment Pass',           desc: 'Work visa for foreign fund managers', price: 'From S$899' },
+];
+
+// Keep a unified SERVICES reference for the success summary
+let SERVICES = SERVICES_PRIVATE;
 
 
 /* ══════════════════════════════════════════
@@ -238,6 +257,27 @@ document.getElementById('form-1').addEventListener('submit', e => {
 /* ══════════════════════════════════════════
    7. STEP 2 — COMPANY DETAILS
 ══════════════════════════════════════════ */
+
+/* Entity type toggle — show/hide Private vs VCC fields */
+document.querySelectorAll('input[name="entityType"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    const val = radio.value;
+    state.entityType = val;
+    const privateFields = document.getElementById('fields-private');
+    const vccFields     = document.getElementById('fields-vcc');
+    privateFields.style.display = val === 'private' ? '' : 'none';
+    vccFields.style.display     = val === 'vcc'     ? '' : 'none';
+    if (window.lucide) lucide.createIcons();
+    // Animate in the newly-shown fields
+    if (window.gsap) {
+      const target = val === 'vcc' ? vccFields : privateFields;
+      gsap.from(target.querySelectorAll('.ob-field, .ob-field-row'), {
+        opacity: 0, y: 16, duration: .35, stagger: .05, ease: 'power2.out'
+      });
+    }
+  });
+});
+
 function animatePanel2Fields() {
   if (!window.gsap) return;
   const els = document.querySelectorAll('#panel-2 .ob-field, #panel-2 .ob-panel__header, #panel-2 .ob-form__footer');
@@ -248,32 +288,69 @@ document.getElementById('form-2').addEventListener('submit', e => {
   e.preventDefault();
   let ok = true;
 
-  const reqSelects = ['ob-industry', 'ob-directors', 'ob-shareholders', 'ob-capital', 'ob-fy'];
-  reqSelects.forEach(id => {
-    const el = document.getElementById(id);
-    el.value ? markValid(el) : (markInvalid(el), ok = false);
-  });
+  // Validate entity type selection
+  const entityType = validateRadioGroup('entityType', 'ob-entity-type');
+  if (!entityType) { ok = false; }
 
-  const localDir = validateRadioGroup('localDir', 'ob-local-dir');
-  const employees = validateRadioGroup('employees', 'ob-employees');
-  const timeline  = validateRadioGroup('timeline', 'ob-timeline-group');
-  const regAddr   = validateRadioGroup('registeredAddress', 'ob-address-group');
-  if (!localDir || !employees || !timeline || !regAddr) ok = false;
+  if (entityType === 'private') {
+    // ── Private company validation ──
+    const reqSelects = ['ob-industry', 'ob-directors', 'ob-shareholders', 'ob-capital', 'ob-fy'];
+    reqSelects.forEach(id => {
+      const el = document.getElementById(id);
+      el.value ? markValid(el) : (markInvalid(el), ok = false);
+    });
 
-  if (!ok) return;
+    const localDir = validateRadioGroup('localDir', 'ob-local-dir');
+    const employees = validateRadioGroup('employees', 'ob-employees');
+    const timeline  = validateRadioGroup('timeline', 'ob-timeline-group');
+    const regAddr   = validateRadioGroup('registeredAddress', 'ob-address-group');
+    if (!localDir || !employees || !timeline || !regAddr) ok = false;
 
-  state.companyName       = document.getElementById('ob-compname').value.trim();
-  state.industry          = document.getElementById('ob-industry').value;
-  state.bizDesc           = document.getElementById('ob-bizdesc').value.trim();
-  state.directors         = document.getElementById('ob-directors').value;
-  state.shareholders      = document.getElementById('ob-shareholders').value;
-  state.shareCapital      = document.getElementById('ob-capital').value;
-  state.fyEnd             = document.getElementById('ob-fy').value;
-  state.localDir          = localDir;
-  state.employees         = employees;
-  state.timeline          = timeline;
-  state.registeredAddress = regAddr;
+    if (!ok) return;
 
+    state.companyName       = document.getElementById('ob-compname').value.trim();
+    state.industry          = document.getElementById('ob-industry').value;
+    state.bizDesc           = document.getElementById('ob-bizdesc').value.trim();
+    state.directors         = document.getElementById('ob-directors').value;
+    state.shareholders      = document.getElementById('ob-shareholders').value;
+    state.shareCapital      = document.getElementById('ob-capital').value;
+    state.fyEnd             = document.getElementById('ob-fy').value;
+    state.localDir          = localDir;
+    state.employees         = employees;
+    state.timeline          = timeline;
+    state.registeredAddress = regAddr;
+
+  } else if (entityType === 'vcc') {
+    // ── VCC / Fund validation ──
+    const reqSelects = ['ob-fund-type', 'ob-fund-strategy', 'ob-fund-aum', 'ob-vcc-directors', 'ob-fund-manager', 'ob-vcc-fy', 'ob-vcc-timeline'];
+    reqSelects.forEach(id => {
+      const el = document.getElementById(id);
+      el.value ? markValid(el) : (markInvalid(el), ok = false);
+    });
+
+    const vccAddr = validateRadioGroup('vccRegisteredAddress', 'ob-vcc-address-group');
+    if (!vccAddr) ok = false;
+
+    if (!ok) return;
+
+    state.vccName              = document.getElementById('ob-vcc-name').value.trim();
+    state.fundType             = document.getElementById('ob-fund-type').value;
+    state.fundStrategy         = document.getElementById('ob-fund-strategy').value;
+    state.fundAum              = document.getElementById('ob-fund-aum').value;
+    state.fundDesc             = document.getElementById('ob-fund-desc').value.trim();
+    state.vccDirectors         = document.getElementById('ob-vcc-directors').value;
+    state.fundManager          = document.getElementById('ob-fund-manager').value;
+    state.vccFyEnd             = document.getElementById('ob-vcc-fy').value;
+    state.vccTimeline          = document.getElementById('ob-vcc-timeline').value;
+    state.vccRegisteredAddress = vccAddr;
+
+  } else {
+    return;
+  }
+
+  state.entityType = entityType;
+  SERVICES = entityType === 'vcc' ? SERVICES_VCC : SERVICES_PRIVATE;
+  state.services.clear();
   buildServicesGrid();
   goToStep(3, 'forward');
 });
@@ -336,34 +413,54 @@ document.getElementById('back-3').addEventListener('click', () => goToStep(2, 'b
 ══════════════════════════════════════════ */
 async function submitOnboarding() {
   const svcList = Array.from(state.services).map(id => SERVICES.find(s => s.id === id)?.title).filter(Boolean).join(', ');
-  const details = [
-    `Stage: ${state.stage}`,
-    `Industry: ${state.industry}`,
-    state.bizDesc ? `Business: ${state.bizDesc}` : '',
-    `Directors: ${state.directors}`,
-    `Shareholders: ${state.shareholders}`,
-    `Share capital: ${state.shareCapital}`,
-    `FY end: ${state.fyEnd}`,
-    `Local director: ${state.localDir}`,
-    `Employees: ${state.employees}`,
-    `Timeline: ${state.timeline}`,
-    `Registered address: ${state.registeredAddress}`,
-    state.companyName ? `Company name: ${state.companyName}` : '',
-  ].filter(Boolean).join(' | ');
+
+  const payload = {
+    name:       `${state.firstName} ${state.lastName}`,
+    email:      state.email,
+    phone:      state.phone || '',
+    service:    svcList,
+    source:     'onboarding',
+    entityType: state.entityType,
+    stage:      state.stage,
+    country:    state.country,
+  };
+
+  if (state.entityType === 'vcc') {
+    payload.vcc = {
+      name:              state.vccName || '',
+      fundType:          state.fundType,
+      strategy:          state.fundStrategy,
+      aum:               state.fundAum,
+      description:       state.fundDesc || '',
+      directors:         state.vccDirectors,
+      fundManager:       state.fundManager,
+      fyEnd:             state.vccFyEnd,
+      timeline:          state.vccTimeline,
+      registeredAddress: state.vccRegisteredAddress,
+    };
+  } else {
+    payload.company = {
+      name:              state.companyName || '',
+      industry:          state.industry,
+      description:       state.bizDesc || '',
+      directors:         state.directors,
+      shareholders:      state.shareholders,
+      shareCapital:      state.shareCapital,
+      fyEnd:             state.fyEnd,
+      localDirector:     state.localDir,
+      employees:         state.employees,
+      timeline:          state.timeline,
+      registeredAddress: state.registeredAddress,
+    };
+  }
 
   try {
     await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name:    `${state.firstName} ${state.lastName}`,
-        email:   state.email,
-        phone:   state.phone || '',
-        service: svcList,
-        message: details,
-      }),
+      body: JSON.stringify(payload),
     });
-  } catch (_) { /* silent — OTP already confirmed */ }
+  } catch (_) { /* silent */ }
 }
 
 
@@ -380,25 +477,44 @@ function populateSuccess() {
   const STAGE_LABELS = { new: 'Starting fresh', existing: 'Already incorporated', foreign: 'Foreign expansion' };
   const DIR_LABELS   = { yes: 'Yes, I have one', no: 'No — needs nominee', unsure: 'Not sure yet' };
   const EMP_LABELS   = { 'yes-immediate': 'Yes, immediately', 'yes-later': 'Yes, later', no: 'No' };
-  const TL_LABELS    = { asap: 'ASAP', '1 month': '~1 month', '3+ months': '3+ months', exploring: 'Just exploring' };
+  const TL_LABELS    = { asap: 'ASAP', '1 month': '~1 month', '1-3 months': '1–3 months', '3+ months': '3+ months', exploring: 'Just exploring' };
+  const FUND_MGR_LABELS = { 'yes-licensed': 'Yes, MAS-licensed', 'yes-exempt': 'Yes, exempt (RFMC/A-CIS)', no: 'No — need one appointed', 'not sure': 'Not sure' };
 
-  document.getElementById('successSummary').innerHTML = `
+  let summaryRows = `
     <h4>Your enquiry summary</h4>
     <div class="ob-success__row"><strong>Name</strong><span>${state.firstName} ${state.lastName}</span></div>
     <div class="ob-success__row"><strong>Email</strong><span>${state.email}</span></div>
     ${state.phone ? `<div class="ob-success__row"><strong>Phone</strong><span>${state.phone}</span></div>` : ''}
+    <div class="ob-success__row"><strong>Entity type</strong><span>${state.entityType === 'vcc' ? 'VCC / Fund' : 'Private Company (Pte. Ltd.)'}</span></div>
+    <div class="ob-success__row"><strong>Stage</strong><span>${STAGE_LABELS[state.stage] || state.stage}</span></div>`;
+
+  if (state.entityType === 'vcc') {
+    summaryRows += `
+    ${state.vccName ? `<div class="ob-success__row"><strong>VCC name</strong><span>${state.vccName}</span></div>` : ''}
+    <div class="ob-success__row"><strong>Fund type</strong><span>${state.fundType}</span></div>
+    <div class="ob-success__row"><strong>Strategy</strong><span>${state.fundStrategy}</span></div>
+    <div class="ob-success__row"><strong>Expected AUM</strong><span>${state.fundAum}</span></div>
+    <div class="ob-success__row"><strong>Directors</strong><span>${state.vccDirectors}</span></div>
+    <div class="ob-success__row"><strong>Fund manager</strong><span>${FUND_MGR_LABELS[state.fundManager] || state.fundManager}</span></div>
+    <div class="ob-success__row"><strong>FY end</strong><span>${state.vccFyEnd}</span></div>
+    <div class="ob-success__row"><strong>Timeline</strong><span>${TL_LABELS[state.vccTimeline] || state.vccTimeline}</span></div>`;
+  } else {
+    summaryRows += `
     ${state.companyName ? `<div class="ob-success__row"><strong>Company</strong><span>${state.companyName}</span></div>` : ''}
     <div class="ob-success__row"><strong>Industry</strong><span>${state.industry}</span></div>
-    <div class="ob-success__row"><strong>Stage</strong><span>${STAGE_LABELS[state.stage] || state.stage}</span></div>
     <div class="ob-success__row"><strong>Directors</strong><span>${state.directors}</span></div>
     <div class="ob-success__row"><strong>Shareholders</strong><span>${state.shareholders}</span></div>
     <div class="ob-success__row"><strong>Share capital</strong><span>${state.shareCapital}</span></div>
     <div class="ob-success__row"><strong>FY end</strong><span>${state.fyEnd}</span></div>
     <div class="ob-success__row"><strong>Local director</strong><span>${DIR_LABELS[state.localDir] || state.localDir}</span></div>
     <div class="ob-success__row"><strong>Employees</strong><span>${EMP_LABELS[state.employees] || state.employees}</span></div>
-    <div class="ob-success__row"><strong>Timeline</strong><span>${TL_LABELS[state.timeline] || state.timeline}</span></div>
-    <div class="ob-success__row"><strong>Services</strong><span>${svcList || '—'}</span></div>
-  `;
+    <div class="ob-success__row"><strong>Timeline</strong><span>${TL_LABELS[state.timeline] || state.timeline}</span></div>`;
+  }
+
+  summaryRows += `
+    <div class="ob-success__row"><strong>Services</strong><span>${svcList || '—'}</span></div>`;
+
+  document.getElementById('successSummary').innerHTML = summaryRows;
 
   if (window.gsap) {
     gsap.from('#panel-4 .ob-success__ring',    { scale: 0, duration: .55, ease: 'back.out(2)', delay: .1 });

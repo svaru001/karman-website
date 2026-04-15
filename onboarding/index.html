@@ -48,8 +48,8 @@
         <div class="ob-vs-step" id="vs-2">
           <div class="ob-vs-step__dot"><span>2</span></div>
           <div class="ob-vs-step__body">
-            <strong>Your company</strong>
-            <span>Structure, directors &amp; timeline</span>
+            <strong>Your entity</strong>
+            <span>Private company or VCC/Fund setup</span>
           </div>
         </div>
         <div class="ob-vs-connector"></div>
@@ -91,7 +91,7 @@
       <div class="ob-progress-track">
         <div class="ob-progress-fill" id="progressFill"></div>
       </div>
-      <div class="ob-step-counter" id="stepCounter">Step 1 of 4</div>
+      <div class="ob-step-counter" id="stepCounter">Step 1 of 3</div>
     </div>
 
     <!-- ══════════════════════════════════════
@@ -99,7 +99,7 @@
     ══════════════════════════════════════ -->
     <section class="ob-panel" id="panel-1">
       <div class="ob-panel__header">
-        <div class="ob-panel__tag">Step 1 of 4</div>
+        <div class="ob-panel__tag">Step 1 of 3</div>
         <h2 class="ob-panel__title">Tell us about yourself</h2>
         <p class="ob-panel__sub">We'll use these details to personalise your setup and stay in touch.</p>
       </div>
@@ -205,211 +205,370 @@
     ══════════════════════════════════════ -->
     <section class="ob-panel ob-panel--hidden" id="panel-2">
       <div class="ob-panel__header">
-        <div class="ob-panel__tag">Step 2 of 4</div>
-        <h2 class="ob-panel__title">About your company</h2>
-        <p class="ob-panel__sub">Help us understand your structure so we can advise you correctly.</p>
+        <div class="ob-panel__tag">Step 2 of 3</div>
+        <h2 class="ob-panel__title">About your entity</h2>
+        <p class="ob-panel__sub">Choose your entity type and tell us about the structure so we can advise you correctly.</p>
       </div>
 
       <form class="ob-form" id="form-2" novalidate>
 
-        <div class="ob-field-row">
-          <div class="ob-field">
-            <label for="ob-compname">Proposed company name <span class="ob-optional">(optional)</span></label>
-            <input type="text" id="ob-compname" name="companyName" placeholder="Acme Pte. Ltd." autocomplete="organization" />
-            <span class="ob-field-hint">ACRA checks availability - we'll confirm once submitted</span>
-          </div>
-          <div class="ob-field">
-            <label for="ob-industry">Business activity / industry <span class="ob-req">*</span></label>
-            <select id="ob-industry" name="industry" required>
-              <option value="">Select industry…</option>
-              <option>Technology &amp; Software</option>
-              <option>E-commerce &amp; Retail</option>
-              <option>Consulting &amp; Professional Services</option>
-              <option>Finance &amp; Fintech</option>
-              <option>Healthcare &amp; Biotech</option>
-              <option>Media &amp; Marketing</option>
-              <option>Logistics &amp; Supply Chain</option>
-              <option>Food &amp; Beverage</option>
-              <option>Real Estate &amp; Property</option>
-              <option>Education &amp; Training</option>
-              <option>Manufacturing</option>
-              <option>Trading &amp; Import/Export</option>
-              <option>Creative &amp; Design</option>
-              <option>Non-profit / Charity</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-
         <div class="ob-field">
-          <label for="ob-bizdesc">Briefly describe your business <span class="ob-optional">(optional)</span></label>
-          <textarea id="ob-bizdesc" name="bizDesc" rows="2" placeholder="e.g. SaaS platform for HR teams in Southeast Asia…"></textarea>
+          <label>What type of entity are you setting up? <span class="ob-req">*</span></label>
+          <div class="ob-radio-group ob-radio-group--horiz" id="ob-entity-type">
+            <label class="ob-radio">
+              <input type="radio" name="entityType" value="private" required />
+              <div class="ob-radio__card">
+                <div class="ob-radio__icon"><i data-lucide="building-2"></i></div>
+                <div>
+                  <strong>Private Company</strong>
+                  <span>Pte. Ltd. — the standard Singapore entity</span>
+                </div>
+              </div>
+            </label>
+            <label class="ob-radio">
+              <input type="radio" name="entityType" value="vcc" />
+              <div class="ob-radio__card">
+                <div class="ob-radio__icon"><i data-lucide="landmark"></i></div>
+                <div>
+                  <strong>VCC / Fund</strong>
+                  <span>Variable Capital Company for investment funds</span>
+                </div>
+              </div>
+            </label>
+          </div>
         </div>
 
-        <div class="ob-field-row">
+        <!-- ── PRIVATE COMPANY FIELDS ── -->
+        <div id="fields-private" class="ob-entity-fields" style="display:none">
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-compname">Proposed company name <span class="ob-optional">(optional)</span></label>
+              <input type="text" id="ob-compname" name="companyName" placeholder="Acme Pte. Ltd." autocomplete="organization" />
+              <span class="ob-field-hint">ACRA checks availability - we'll confirm once submitted</span>
+            </div>
+            <div class="ob-field">
+              <label for="ob-industry">Business activity / industry <span class="ob-req">*</span></label>
+              <select id="ob-industry" name="industry">
+                <option value="">Select industry…</option>
+                <option>Technology &amp; Software</option>
+                <option>E-commerce &amp; Retail</option>
+                <option>Consulting &amp; Professional Services</option>
+                <option>Finance &amp; Fintech</option>
+                <option>Healthcare &amp; Biotech</option>
+                <option>Media &amp; Marketing</option>
+                <option>Logistics &amp; Supply Chain</option>
+                <option>Food &amp; Beverage</option>
+                <option>Real Estate &amp; Property</option>
+                <option>Education &amp; Training</option>
+                <option>Manufacturing</option>
+                <option>Trading &amp; Import/Export</option>
+                <option>Creative &amp; Design</option>
+                <option>Non-profit / Charity</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
           <div class="ob-field">
-            <label for="ob-directors">Number of directors <span class="ob-req">*</span></label>
-            <select id="ob-directors" name="directors" required>
-              <option value="">Select…</option>
-              <option value="1">1 director</option>
-              <option value="2">2 directors</option>
-              <option value="3">3 directors</option>
-              <option value="4+">4 or more</option>
-            </select>
-            <span class="ob-field-hint">Must include at least 1 Singapore-ordinarily-resident director</span>
+            <label for="ob-bizdesc">Briefly describe your business <span class="ob-optional">(optional)</span></label>
+            <textarea id="ob-bizdesc" name="bizDesc" rows="2" placeholder="e.g. SaaS platform for HR teams in Southeast Asia…"></textarea>
           </div>
+
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-directors">Number of directors <span class="ob-req">*</span></label>
+              <select id="ob-directors" name="directors">
+                <option value="">Select…</option>
+                <option value="1">1 director</option>
+                <option value="2">2 directors</option>
+                <option value="3">3 directors</option>
+                <option value="4+">4 or more</option>
+              </select>
+              <span class="ob-field-hint">Must include at least 1 Singapore-ordinarily-resident director</span>
+            </div>
+            <div class="ob-field">
+              <label for="ob-shareholders">Number of shareholders <span class="ob-req">*</span></label>
+              <select id="ob-shareholders" name="shareholders">
+                <option value="">Select…</option>
+                <option value="1">1 (sole owner)</option>
+                <option value="2">2 shareholders</option>
+                <option value="3-5">3–5 shareholders</option>
+                <option value="6+">6 or more</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-capital">Paid-up share capital <span class="ob-req">*</span></label>
+              <select id="ob-capital" name="shareCapital">
+                <option value="">Select…</option>
+                <option value="S$1">S$1 (minimum)</option>
+                <option value="S$100-S$1,000">S$100 – S$1,000</option>
+                <option value="S$1,001-S$10,000">S$1,001 – S$10,000</option>
+                <option value="S$10,001-S$100,000">S$10,001 – S$100,000</option>
+                <option value="S$100,000+">S$100,000+</option>
+                <option value="not sure">Not sure yet</option>
+              </select>
+              <span class="ob-field-hint">Minimum S$1 for a Singapore Pte. Ltd.</span>
+            </div>
+            <div class="ob-field">
+              <label for="ob-fy">Financial year end <span class="ob-req">*</span></label>
+              <select id="ob-fy" name="fyEnd">
+                <option value="">Select month…</option>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+              </select>
+              <span class="ob-field-hint">Most companies choose Dec or Mar</span>
+            </div>
+          </div>
+
           <div class="ob-field">
-            <label for="ob-shareholders">Number of shareholders <span class="ob-req">*</span></label>
-            <select id="ob-shareholders" name="shareholders" required>
-              <option value="">Select…</option>
-              <option value="1">1 (sole owner)</option>
-              <option value="2">2 shareholders</option>
-              <option value="3-5">3–5 shareholders</option>
-              <option value="6+">6 or more</option>
-            </select>
+            <label>Do you have a Singapore-resident director? <span class="ob-req">*</span></label>
+            <div class="ob-radio-group ob-radio-group--horiz" id="ob-local-dir">
+              <label class="ob-radio">
+                <input type="radio" name="localDir" value="yes" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="check-circle"></i></div>
+                  <div><strong>Yes</strong><span>I have one</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="localDir" value="no" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="x-circle"></i></div>
+                  <div><strong>No</strong><span>Need nominee</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="localDir" value="unsure" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="help-circle"></i></div>
+                  <div><strong>Not sure</strong><span>Need advice</span></div>
+                </div>
+              </label>
+            </div>
           </div>
-        </div>
 
-        <div class="ob-field-row">
           <div class="ob-field">
-            <label for="ob-capital">Paid-up share capital <span class="ob-req">*</span></label>
-            <select id="ob-capital" name="shareCapital" required>
-              <option value="">Select…</option>
-              <option value="S$1">S$1 (minimum)</option>
-              <option value="S$100-S$1,000">S$100 – S$1,000</option>
-              <option value="S$1,001-S$10,000">S$1,001 – S$10,000</option>
-              <option value="S$10,001-S$100,000">S$10,001 – S$100,000</option>
-              <option value="S$100,000+">S$100,000+</option>
-              <option value="not sure">Not sure yet</option>
-            </select>
-            <span class="ob-field-hint">Minimum S$1 for a Singapore Pte. Ltd.</span>
+            <label>Will you have employees in Singapore? <span class="ob-req">*</span></label>
+            <div class="ob-radio-group ob-radio-group--horiz" id="ob-employees">
+              <label class="ob-radio">
+                <input type="radio" name="employees" value="yes-immediate" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="users"></i></div>
+                  <div><strong>Yes, immediately</strong></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="employees" value="yes-later" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="calendar"></i></div>
+                  <div><strong>Yes, in future</strong></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="employees" value="no" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="user-x"></i></div>
+                  <div><strong>No employees</strong></div>
+                </div>
+              </label>
+            </div>
           </div>
+
           <div class="ob-field">
-            <label for="ob-fy">Financial year end <span class="ob-req">*</span></label>
-            <select id="ob-fy" name="fyEnd" required>
-              <option value="">Select month…</option>
-              <option value="Jan">January</option>
-              <option value="Feb">February</option>
-              <option value="Mar">March</option>
-              <option value="Apr">April</option>
-              <option value="May">May</option>
-              <option value="Jun">June</option>
-              <option value="Jul">July</option>
-              <option value="Aug">August</option>
-              <option value="Sep">September</option>
-              <option value="Oct">October</option>
-              <option value="Nov">November</option>
-              <option value="Dec">December</option>
-            </select>
-            <span class="ob-field-hint">Most companies choose Dec or Mar</span>
+            <label for="ob-timeline">When do you want to incorporate? <span class="ob-req">*</span></label>
+            <div class="ob-radio-group ob-radio-group--horiz" id="ob-timeline-group">
+              <label class="ob-radio">
+                <input type="radio" name="timeline" value="asap" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="zap"></i></div>
+                  <div><strong>ASAP</strong><span>Ready to go</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="timeline" value="1 month" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="calendar-clock"></i></div>
+                  <div><strong>~1 month</strong><span>Planning ahead</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="timeline" value="3+ months" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="calendar-range"></i></div>
+                  <div><strong>3+ months</strong><span>Early research</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="timeline" value="exploring" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="search"></i></div>
+                  <div><strong>Just exploring</strong></div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="ob-field">
+            <label for="ob-registered-address">Registered office address <span class="ob-req">*</span></label>
+            <div class="ob-radio-group ob-radio-group--horiz" id="ob-address-group">
+              <label class="ob-radio">
+                <input type="radio" name="registeredAddress" value="karman" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="home"></i></div>
+                  <div><strong>Use Karman's address</strong><span>We provide this</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="registeredAddress" value="own" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="map-pin"></i></div>
+                  <div><strong>My own address</strong><span>I have a local address</span></div>
+                </div>
+              </label>
+            </div>
           </div>
         </div>
 
-        <div class="ob-field">
-          <label>Do you have a Singapore-resident director? <span class="ob-req">*</span></label>
-          <div class="ob-radio-group ob-radio-group--horiz" id="ob-local-dir">
-            <label class="ob-radio">
-              <input type="radio" name="localDir" value="yes" required />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="check-circle"></i></div>
-                <div><strong>Yes</strong><span>I have one</span></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="localDir" value="no" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="x-circle"></i></div>
-                <div><strong>No</strong><span>Need nominee</span></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="localDir" value="unsure" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="help-circle"></i></div>
-                <div><strong>Not sure</strong><span>Need advice</span></div>
-              </div>
-            </label>
+        <!-- ── VCC / FUND FIELDS ── -->
+        <div id="fields-vcc" class="ob-entity-fields" style="display:none">
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-vcc-name">Proposed VCC name <span class="ob-optional">(optional)</span></label>
+              <input type="text" id="ob-vcc-name" name="vccName" placeholder="e.g. Alpha Capital VCC" autocomplete="organization" />
+              <span class="ob-field-hint">ACRA checks availability - we'll confirm once submitted</span>
+            </div>
+            <div class="ob-field">
+              <label for="ob-fund-type">Fund type <span class="ob-req">*</span></label>
+              <select id="ob-fund-type" name="fundType">
+                <option value="">Select fund type…</option>
+                <option value="standalone">Standalone VCC</option>
+                <option value="umbrella">Umbrella VCC (multiple sub-funds)</option>
+                <option value="not sure">Not sure yet</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div class="ob-field">
-          <label>Will you have employees in Singapore? <span class="ob-req">*</span></label>
-          <div class="ob-radio-group ob-radio-group--horiz" id="ob-employees">
-            <label class="ob-radio">
-              <input type="radio" name="employees" value="yes-immediate" required />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="users"></i></div>
-                <div><strong>Yes, immediately</strong></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="employees" value="yes-later" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="calendar"></i></div>
-                <div><strong>Yes, in future</strong></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="employees" value="no" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="user-x"></i></div>
-                <div><strong>No employees</strong></div>
-              </div>
-            </label>
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-fund-strategy">Investment strategy <span class="ob-req">*</span></label>
+              <select id="ob-fund-strategy" name="fundStrategy">
+                <option value="">Select strategy…</option>
+                <option value="venture-capital">Venture Capital</option>
+                <option value="private-equity">Private Equity</option>
+                <option value="hedge-fund">Hedge Fund</option>
+                <option value="real-estate">Real Estate Fund</option>
+                <option value="family-office">Family Office</option>
+                <option value="multi-strategy">Multi-Strategy</option>
+                <option value="fixed-income">Fixed Income / Credit</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label for="ob-fund-aum">Expected AUM <span class="ob-req">*</span></label>
+              <select id="ob-fund-aum" name="fundAum">
+                <option value="">Select range…</option>
+                <option value="<S$5M">Under S$5M</option>
+                <option value="S$5M-S$25M">S$5M – S$25M</option>
+                <option value="S$25M-S$100M">S$25M – S$100M</option>
+                <option value="S$100M+">S$100M+</option>
+                <option value="not sure">Not sure yet</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div class="ob-field">
-          <label for="ob-timeline">When do you want to incorporate? <span class="ob-req">*</span></label>
-          <div class="ob-radio-group ob-radio-group--horiz" id="ob-timeline-group">
-            <label class="ob-radio">
-              <input type="radio" name="timeline" value="asap" required />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="zap"></i></div>
-                <div><strong>ASAP</strong><span>Ready to go</span></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="timeline" value="1 month" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="calendar-clock"></i></div>
-                <div><strong>~1 month</strong><span>Planning ahead</span></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="timeline" value="3+ months" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="calendar-range"></i></div>
-                <div><strong>3+ months</strong><span>Early research</span></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="timeline" value="exploring" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="search"></i></div>
-                <div><strong>Just exploring</strong></div>
-              </div>
-            </label>
+          <div class="ob-field">
+            <label for="ob-fund-desc">Describe the fund's investment focus <span class="ob-optional">(optional)</span></label>
+            <textarea id="ob-fund-desc" name="fundDesc" rows="2" placeholder="e.g. Early-stage tech startups in Southeast Asia…"></textarea>
           </div>
-        </div>
 
-        <div class="ob-field">
-          <label for="ob-registered-address">Registered office address <span class="ob-req">*</span></label>
-          <div class="ob-radio-group ob-radio-group--horiz" id="ob-address-group">
-            <label class="ob-radio">
-              <input type="radio" name="registeredAddress" value="karman" required />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="home"></i></div>
-                <div><strong>Use Karman's address</strong><span>We provide this</span></div>
-              </div>
-            </label>
-            <label class="ob-radio">
-              <input type="radio" name="registeredAddress" value="own" />
-              <div class="ob-radio__card ob-radio__card--sm">
-                <div class="ob-radio__icon"><i data-lucide="map-pin"></i></div>
-                <div><strong>My own address</strong><span>I have a local address</span></div>
-              </div>
-            </label>
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-vcc-directors">Number of directors <span class="ob-req">*</span></label>
+              <select id="ob-vcc-directors" name="vccDirectors">
+                <option value="">Select…</option>
+                <option value="1">1 director</option>
+                <option value="2">2 directors</option>
+                <option value="3">3 directors</option>
+                <option value="4+">4 or more</option>
+              </select>
+              <span class="ob-field-hint">VCC requires at least 1 Singapore-resident director</span>
+            </div>
+            <div class="ob-field">
+              <label for="ob-fund-manager">Do you have a licensed fund manager? <span class="ob-req">*</span></label>
+              <select id="ob-fund-manager" name="fundManager">
+                <option value="">Select…</option>
+                <option value="yes-licensed">Yes, MAS-licensed</option>
+                <option value="yes-exempt">Yes, exempt (RFMC/A-CIS)</option>
+                <option value="no">No, need one appointed</option>
+                <option value="not sure">Not sure</option>
+              </select>
+              <span class="ob-field-hint">MAS requires a fund manager for every VCC</span>
+            </div>
+          </div>
+
+          <div class="ob-field-row">
+            <div class="ob-field">
+              <label for="ob-vcc-fy">Financial year end <span class="ob-req">*</span></label>
+              <select id="ob-vcc-fy" name="vccFyEnd">
+                <option value="">Select month…</option>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+              </select>
+              <span class="ob-field-hint">Most funds choose Dec or Mar</span>
+            </div>
+            <div class="ob-field">
+              <label for="ob-vcc-timeline">When do you want to set up? <span class="ob-req">*</span></label>
+              <select id="ob-vcc-timeline" name="vccTimeline">
+                <option value="">Select…</option>
+                <option value="asap">ASAP</option>
+                <option value="1-3 months">1–3 months</option>
+                <option value="3+ months">3+ months</option>
+                <option value="exploring">Just exploring</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ob-field">
+            <label for="ob-vcc-address">Registered office address <span class="ob-req">*</span></label>
+            <div class="ob-radio-group ob-radio-group--horiz" id="ob-vcc-address-group">
+              <label class="ob-radio">
+                <input type="radio" name="vccRegisteredAddress" value="karman" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="home"></i></div>
+                  <div><strong>Use Karman's address</strong><span>We provide this</span></div>
+                </div>
+              </label>
+              <label class="ob-radio">
+                <input type="radio" name="vccRegisteredAddress" value="own" />
+                <div class="ob-radio__card ob-radio__card--sm">
+                  <div class="ob-radio__icon"><i data-lucide="map-pin"></i></div>
+                  <div><strong>My own address</strong><span>I have a local address</span></div>
+                </div>
+              </label>
+            </div>
           </div>
         </div>
 
