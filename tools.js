@@ -602,47 +602,32 @@ function renderCalcEstimate(step) {
   const breakdown = [];
   let totalMin = 0, totalMax = 0;
 
-  const pricing = {
-    incorporation: { label: 'Company Incorporation', min: 699,  max: 2800 },
-    secretary:     { label: 'Corporate Secretary',   min: 350,  max: 1500 },
-    tax:           { label: 'Corporate Tax Filing',  min: 300,  max: 600  },
-    gst:           { label: 'GST Registration & Filing', min: 400, max: 700 }
+  const serviceLabels = {
+    incorporation: 'Company Incorporation',
+    secretary:     'Corporate Secretary',
+    tax:           'Corporate Tax Filing',
+    gst:           'GST Registration & Filing',
+    accounting:    'Accounting & Bookkeeping',
+    payroll:       'Payroll Services',
   };
 
   services.forEach(s => {
-    if (pricing[s]) {
-      breakdown.push({ label: pricing[s].label, min: pricing[s].min, max: pricing[s].max });
-      totalMin += pricing[s].min; totalMax += pricing[s].max;
-    }
-    if (s === 'accounting') {
-      let mn, mx;
-      if (revenue <= 150000)      { mn = 900;  mx = 1200; }
-      else if (revenue <= 500000) { mn = 1800; mx = 2400; }
-      else                        { mn = 3600; mx = 4800; }
-      breakdown.push({ label: 'Accounting & Bookkeeping', min: mn, max: mx });
-      totalMin += mn; totalMax += mx;
-    }
-    if (s === 'payroll') {
-      const mn = employees * 300, mx = employees * 500;
-      breakdown.push({ label: `Payroll (${employees} employee${employees > 1 ? 's' : ''})`, min: mn, max: mx });
-      totalMin += mn; totalMax += mx;
-    }
+    const label = serviceLabels[s];
+    if (label) breakdown.push({ label });
   });
 
   body.innerHTML = `
     <div class="estimate-card">
-      <div class="estimate-card__label">Estimated Annual Fee</div>
-      <div class="estimate-card__amount">S$${formatNum(totalMin)} – S$${formatNum(totalMax)}</div>
-      <div class="estimate-card__note">Based on your selections. Exact pricing confirmed after consultation.</div>
+      <div class="estimate-card__label">Your selected services</div>
       <div class="estimate-breakdown">
         ${breakdown.map(b => `
           <div class="estimate-breakdown__item">
             <span>${b.label}</span>
-            <strong>S$${formatNum(b.min)}–S$${formatNum(b.max)}</strong>
+            <strong>Included</strong>
           </div>`).join('')}
       </div>
+      <div class="estimate-card__note">Submit your details and we'll send you a personalised quote.</div>
     </div>
-    <p style="font-size:13px;color:var(--gray-600);text-align:center;">All prices exclude GST. Government fees included.</p>
   `;
 
   nextBtn.textContent = 'Get detailed quote →';
@@ -880,72 +865,45 @@ function buildPDF(jsPDF) {
       const services = state.answers[0] || [];
       const revenue = state.answers.revenue || 150000;
       const employees = state.answers.employees || 5;
-      const pricing = {
-        incorporation: { label: 'Company Incorporation', min: 699,  max: 2800 },
-        secretary:     { label: 'Corporate Secretary',   min: 350,  max: 1500 },
-        tax:           { label: 'Corporate Tax Filing',  min: 300,  max: 600  },
-        gst:           { label: 'GST Registration & Filing', min: 400, max: 700 }
+      const svcLabels = {
+        incorporation: 'Company Incorporation',
+        secretary:     'Corporate Secretary',
+        tax:           'Corporate Tax Filing',
+        gst:           'GST Registration & Filing',
+        accounting:    'Accounting & Bookkeeping',
+        payroll:       'Payroll Services',
       };
       const breakdown = [];
-      let tMin = 0, tMax = 0;
       services.forEach(s => {
-        if (pricing[s]) { breakdown.push(pricing[s]); tMin += pricing[s].min; tMax += pricing[s].max; }
-        if (s === 'accounting') {
-          const [mn, mx] = revenue <= 150000 ? [900, 1200] : revenue <= 500000 ? [1800, 2400] : [3600, 4800];
-          breakdown.push({ label: 'Accounting & Bookkeeping', min: mn, max: mx });
-          tMin += mn; tMax += mx;
-        }
-        if (s === 'payroll') {
-          const mn = employees * 300, mx = employees * 500;
-          breakdown.push({ label: `Payroll (${employees} employee${employees > 1 ? 's' : ''})`, min: mn, max: mx });
-          tMin += mn; tMax += mx;
-        }
+        if (svcLabels[s]) breakdown.push({ label: svcLabels[s] });
       });
-      subject = 'Your Fee Estimate — Karman Corporate Services';
-      adminSummary = `Services: ${services.join(', ')}\nRevenue: S$${revenue.toLocaleString()}\nEmployees: ${employees}\nEstimate: S$${tMin.toLocaleString()}–S$${tMax.toLocaleString()}`;
+      subject = 'Your Service Summary — Karman Corporate Services';
+      adminSummary = `Services: ${services.join(', ')}\nRevenue: S$${revenue.toLocaleString()}\nEmployees: ${employees}`;
 
       doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.setTextColor(10, 37, 64);
-      doc.text('Annual Fee Estimate', M, y); y += 7;
+      doc.text('Service Summary', M, y); y += 7;
       doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(107, 114, 128);
       doc.text(`Prepared for: ${state.answers.name}`, M, y); y += 12;
 
-      // Total box
-      doc.setFillColor(10, 37, 64);
-      doc.roundedRect(M, y, W - M * 2, 22, 3, 3, 'F');
-      doc.setTextColor(160, 190, 215); doc.setFont('helvetica', 'normal'); doc.setFontSize(9);
-      doc.text('ESTIMATED ANNUAL FEES (SGD)', M + 8, y + 7);
-      doc.setTextColor(255, 255, 255); doc.setFont('helvetica', 'bold'); doc.setFontSize(17);
-      doc.text(`S$${tMin.toLocaleString()} – S$${tMax.toLocaleString()}`, M + 8, y + 17);
-      y += 30;
-
-      // Table header
+      // Services list header
       doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(10, 37, 64);
-      doc.text('Fee Breakdown', M, y); y += 7;
+      doc.text('Selected Services', M, y); y += 7;
       doc.setFillColor(235, 243, 253);
       doc.rect(M, y - 4, W - M * 2, 7, 'F');
       doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(55, 65, 81);
       doc.text('Service', M + 3, y);
-      doc.text('Range (S$)', W - M - 3, y, { align: 'right' });
       y += 6;
 
       breakdown.forEach((b, i) => {
         if (i % 2 === 0) { doc.setFillColor(249, 250, 251); doc.rect(M, y - 3.5, W - M * 2, 7, 'F'); }
         doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(55, 65, 81);
         doc.text(b.label, M + 3, y);
-        doc.text(`${b.min.toLocaleString()} – ${b.max.toLocaleString()}`, W - M - 3, y, { align: 'right' });
         y += 7;
       });
+      y += 8;
 
-      // Total row
-      doc.setFillColor(201, 146, 42);
-      doc.rect(M, y - 3.5, W - M * 2, 8, 'F');
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(255, 255, 255);
-      doc.text('TOTAL (estimated)', M + 3, y + 1);
-      doc.text(`${tMin.toLocaleString()} – ${tMax.toLocaleString()}`, W - M - 3, y + 1, { align: 'right' });
-      y += 14;
-
-      doc.setFont('helvetica', 'italic'); doc.setFontSize(8); doc.setTextColor(107, 114, 128);
-      doc.text('All prices in SGD, excluding GST. Government filing fees included. Exact pricing confirmed after consultation.', M, y);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(107, 114, 128);
+      doc.text('Contact us for a personalised quote based on your requirements.', M, y);
       break;
     }
 

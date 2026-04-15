@@ -119,25 +119,25 @@ const TOTAL_STEPS = 3;
    3. SERVICES DATA
 ══════════════════════════════════════════ */
 const SERVICES_PRIVATE = [
-  { id: 'incorporation', icon: 'building-2', title: 'Company Incorporation',  desc: 'Register your Pte. Ltd. with ACRA', price: 'From S$699' },
-  { id: 'secretary',    icon: 'clipboard-list', title: 'Corporate Secretary',    desc: 'Annual compliance & statutory filings', price: 'From S$350/yr' },
-  { id: 'accounting',  icon: 'bar-chart-3', title: 'Accounting & Bookkeeping', desc: 'Monthly financials & reports', price: 'From S$299/mo' },
-  { id: 'tax',         icon: 'file-text', title: 'Corporate Tax Filing',    desc: 'ECI, Form C-S & tax planning', price: 'From S$499/yr' },
-  { id: 'gst',         icon: 'receipt', title: 'GST Registration & Filing', desc: 'GST reg & quarterly F5 returns', price: 'From S$299' },
-  { id: 'payroll',     icon: 'wallet', title: 'Payroll Services',        desc: 'CPF, payslips & IR8A filing', price: 'From S$99/mo' },
-  { id: 'visa',        icon: 'plane',  title: 'Employment Pass',         desc: 'Work visa for foreign directors', price: 'From S$899' },
-  { id: 'nominee',     icon: 'user', title: 'Nominee Director',        desc: 'Fulfil local director requirement', price: 'From S$1,200/yr' },
+  { id: 'incorporation', icon: 'building-2', title: 'Company Incorporation',  desc: 'Register your Pte. Ltd. with ACRA' },
+  { id: 'secretary',    icon: 'clipboard-list', title: 'Corporate Secretary',    desc: 'Annual compliance & statutory filings' },
+  { id: 'accounting',  icon: 'bar-chart-3', title: 'Accounting & Bookkeeping', desc: 'Monthly financials & reports' },
+  { id: 'tax',         icon: 'file-text', title: 'Corporate Tax Filing',    desc: 'ECI, Form C-S & tax planning' },
+  { id: 'gst',         icon: 'receipt', title: 'GST Registration & Filing', desc: 'GST reg & quarterly F5 returns' },
+  { id: 'payroll',     icon: 'wallet', title: 'Payroll Services',        desc: 'CPF, payslips & IR8A filing' },
+  { id: 'visa',        icon: 'plane',  title: 'Employment Pass',         desc: 'Work visa for foreign directors' },
+  { id: 'nominee',     icon: 'user', title: 'Nominee Director',        desc: 'Fulfil local director requirement' },
 ];
 
 const SERVICES_VCC = [
-  { id: 'vcc-setup',      icon: 'landmark', title: 'VCC Incorporation',      desc: 'Register your VCC with ACRA & MAS', price: 'From S$5,000' },
-  { id: 'fund-admin',     icon: 'clipboard-list', title: 'Fund Administration',  desc: 'NAV calculation, investor reporting', price: 'Custom' },
-  { id: 'secretary',      icon: 'clipboard-list', title: 'Corporate Secretary',  desc: 'Annual compliance & statutory filings', price: 'From S$500/yr' },
-  { id: 'accounting',     icon: 'bar-chart-3', title: 'Fund Accounting',       desc: 'Financial statements & audit-ready books', price: 'Custom' },
-  { id: 'tax',            icon: 'file-text', title: 'Tax Filing & Advisory',  desc: 'VCC tax incentives, S13R/S13X claims', price: 'From S$1,500/yr' },
-  { id: 'nominee',        icon: 'user', title: 'Nominee Director',          desc: 'Fulfil local director requirement', price: 'From S$1,500/yr' },
-  { id: 'aml-compliance', icon: 'shield', title: 'AML / KYC Compliance',    desc: 'Investor due diligence & ongoing monitoring', price: 'Custom' },
-  { id: 'visa',           icon: 'plane', title: 'Employment Pass',           desc: 'Work visa for foreign fund managers', price: 'From S$899' },
+  { id: 'vcc-setup',      icon: 'landmark', title: 'VCC Incorporation',      desc: 'Register your VCC with ACRA & MAS' },
+  { id: 'fund-admin',     icon: 'clipboard-list', title: 'Fund Administration',  desc: 'NAV calculation, investor reporting' },
+  { id: 'secretary',      icon: 'clipboard-list', title: 'Corporate Secretary',  desc: 'Annual compliance & statutory filings' },
+  { id: 'accounting',     icon: 'bar-chart-3', title: 'Fund Accounting',       desc: 'Financial statements & audit-ready books' },
+  { id: 'tax',            icon: 'file-text', title: 'Tax Filing & Advisory',  desc: 'VCC tax incentives, S13R/S13X claims' },
+  { id: 'nominee',        icon: 'user', title: 'Nominee Director',          desc: 'Fulfil local director requirement' },
+  { id: 'aml-compliance', icon: 'shield', title: 'AML / KYC Compliance',    desc: 'Investor due diligence & ongoing monitoring' },
+  { id: 'visa',           icon: 'plane', title: 'Employment Pass',           desc: 'Work visa for foreign fund managers' },
 ];
 
 // Keep a unified SERVICES reference for the success summary
@@ -375,8 +375,7 @@ function buildServicesGrid() {
       </div>
       <div class="ob-svc-card__icon"><i data-lucide="${svc.icon}"></i></div>
       <div class="ob-svc-card__title">${svc.title}</div>
-      <div class="ob-svc-card__desc">${svc.desc}</div>
-      <div class="ob-svc-card__price">${svc.price}</div>`;
+      <div class="ob-svc-card__desc">${svc.desc}</div>`;
     card.addEventListener('click', () => toggleService(svc.id, card));
     grid.appendChild(card);
     if (window.gsap) gsap.from(card, { opacity: 0, y: 18, duration: .38, delay: i * .055, ease: 'power2.out' });

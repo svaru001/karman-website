@@ -546,7 +546,6 @@
 .ob-svc-card.selected .ob-svc-card__icon { color: var(--navy); }
 .ob-svc-card__title { font-size: 14px; font-weight: 700; color: var(--navy); margin-top: 4px; }
 .ob-svc-card__desc  { font-size: 13px; color: var(--gray-700, #374151); line-height: 1.5; }
-.ob-svc-card__price { font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 6px; }
 
 .ob-services-note {
   display: flex;
