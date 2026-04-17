@@ -378,7 +378,7 @@ function buildServicesGrid() {
       <div class="ob-svc-card__desc">${svc.desc}</div>`;
     card.addEventListener('click', () => toggleService(svc.id, card));
     grid.appendChild(card);
-    if (window.gsap) gsap.from(card, { opacity: 0, y: 18, duration: .38, delay: i * .055, ease: 'power2.out' });
+    if (window.gsap) gsap.from(card, { y: 18, duration: .38, delay: i * .055, ease: 'power2.out' });
   });
   if (window.lucide) lucide.createIcons();
 }
