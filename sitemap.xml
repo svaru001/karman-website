@@ -31,6 +31,13 @@
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://karman.com.sg/onboarding</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
   <!-- ── Service Pages ── -->
   <url>
     <loc>https://karman.com.sg/services/vcc-fund-administration</loc>
