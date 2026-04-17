@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "description": "Karman RAG Knowledge Base — Singapore Government Source URLs",
+    "created": "2026-04-13",
+    "total_sources": 190,
+    "categories": ["ACRA", "Singapore Statutes", "IRAS", "MAS", "MOM", "CPF"]
+  },
+  "sources": [
+
+    { "category": "ACRA", "topic": "Company Incorporation", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-local-company", "description": "Step-by-step guide to registering a local company in Singapore" },
+    { "category": "ACRA", "topic": "Company Incorporation", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-local-company/pre-registration", "description": "Pre-registration requirements: business structure, company name rules, key officers" },
+    { "category": "ACRA", "topic": "Company Incorporation", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-local-company/registration-of-company", "description": "Registration steps, required documents, filing fees, and processing timelines" },
+    { "category": "ACRA", "topic": "Company Incorporation", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-local-company/post-registration", "description": "Post-registration obligations: bank account, GST, auditors, immediate steps" },
+    { "category": "ACRA", "topic": "Company Incorporation", "url": "https://www.acra.gov.sg/how-to-guides/reserving-a-company-name", "description": "Rules and process for reserving/approving a company name" },
+    { "category": "ACRA", "topic": "Company Incorporation", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-foreign-company", "description": "Requirements for registering a foreign company (branch office) in Singapore" },
+
+    { "category": "ACRA", "topic": "Annual Filing", "url": "https://www.acra.gov.sg/how-to-guides/filing-annual-returns", "description": "Guide to filing Annual Returns: who must file, deadlines, penalties" },
+    { "category": "ACRA", "topic": "Annual Filing", "url": "https://www.acra.gov.sg/how-to-guides/filing-annual-returns/filing-annual-returns-for-a-local-company", "description": "AR filing requirements for local companies: due dates, financial statements, solvency declarations" },
+    { "category": "ACRA", "topic": "Annual Filing", "url": "https://www.acra.gov.sg/how-to-guides/filing-financial-statements-in-xbrl", "description": "Overview of XBRL filing requirements for financial statements" },
+
+    { "category": "ACRA", "topic": "AGM Requirements", "url": "https://www.acra.gov.sg/how-to-guides/holding-annual-general-meetings", "description": "AGM obligations: timelines, exemptions for private companies, dispensation rules" },
+
+    { "category": "ACRA", "topic": "Directors and Officers", "url": "https://www.acra.gov.sg/how-to-guides/appointing-directors", "description": "Requirements for appointing directors: local resident director, age/residency, disqualification" },
+    { "category": "ACRA", "topic": "Directors and Officers", "url": "https://www.acra.gov.sg/how-to-guides/removing-or-replacing-directors", "description": "Process for removing or replacing directors" },
+    { "category": "ACRA", "topic": "Directors and Officers", "url": "https://www.acra.gov.sg/how-to-guides/duties-of-a-director", "description": "Statutory and fiduciary duties of directors under the Companies Act" },
+    { "category": "ACRA", "topic": "Directors and Officers", "url": "https://www.acra.gov.sg/how-to-guides/disqualification-of-directors", "description": "Grounds for disqualification of directors" },
+
+    { "category": "ACRA", "topic": "Company Secretary", "url": "https://www.acra.gov.sg/how-to-guides/appointing-a-company-secretary", "description": "Obligation to appoint a company secretary within 6 months of incorporation" },
+
+    { "category": "ACRA", "topic": "Registered Office", "url": "https://www.acra.gov.sg/how-to-guides/maintaining-a-registered-office", "description": "Requirement for registered office in Singapore, operating hours, accessibility" },
+
+    { "category": "ACRA", "topic": "Share Capital and Shareholders", "url": "https://www.acra.gov.sg/how-to-guides/share-capital", "description": "Rules on share capital: minimum paid-up capital ($1), types of shares, allotment, transfer" },
+    { "category": "ACRA", "topic": "Share Capital and Shareholders", "url": "https://www.acra.gov.sg/how-to-guides/maintaining-registers", "description": "Requirements for maintaining statutory registers (members, directors, charges)" },
+
+    { "category": "ACRA", "topic": "Penalties and Enforcement", "url": "https://www.acra.gov.sg/how-to-guides/composition-and-penalties", "description": "Composition offers, penalties, and summons for late filing and statutory breaches" },
+    { "category": "ACRA", "topic": "Penalties and Enforcement", "url": "https://www.acra.gov.sg/how-to-guides/filing-annual-returns/late-filing-penalties", "description": "Late filing penalty amounts and escalation schedule for Annual Returns" },
+    { "category": "ACRA", "topic": "Penalties and Enforcement", "url": "https://www.acra.gov.sg/enforcement", "description": "ACRA enforcement framework, compliance actions, court prosecutions" },
+
+    { "category": "ACRA", "topic": "Striking Off / Winding Up", "url": "https://www.acra.gov.sg/how-to-guides/closing-a-company/striking-off-a-company", "description": "Eligibility and process for striking off a local company (Section 344A)" },
+    { "category": "ACRA", "topic": "Striking Off / Winding Up", "url": "https://www.acra.gov.sg/how-to-guides/closing-a-company/winding-up-a-company", "description": "Voluntary and compulsory winding up processes, appointment of liquidators" },
+    { "category": "ACRA", "topic": "Striking Off / Winding Up", "url": "https://www.acra.gov.sg/how-to-guides/closing-a-company", "description": "Landing page for all cessation methods: striking off, winding up, amalgamation" },
+
+    { "category": "ACRA", "topic": "Company Changes", "url": "https://www.acra.gov.sg/how-to-guides/changing-company-name", "description": "Process for changing a company name: special resolution, name approval, filing" },
+    { "category": "ACRA", "topic": "Company Changes", "url": "https://www.acra.gov.sg/how-to-guides/updating-company-information", "description": "How to update registered office, principal activities, officer particulars via BizFile+" },
+    { "category": "ACRA", "topic": "Company Changes", "url": "https://www.acra.gov.sg/how-to-guides/lodging-changes-to-company-constitution", "description": "Filing requirements when amending or adopting a new company constitution" },
+
+    { "category": "ACRA", "topic": "Business Names / Sole Proprietorships", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-business", "description": "Guide to registering a sole proprietorship or partnership" },
+    { "category": "ACRA", "topic": "Business Names / Sole Proprietorships", "url": "https://www.acra.gov.sg/how-to-guides/renewing-a-business-registration", "description": "Annual renewal process for sole proprietorships and partnerships" },
+    { "category": "ACRA", "topic": "Business Names / Sole Proprietorships", "url": "https://www.acra.gov.sg/how-to-guides/closing-a-business", "description": "How to cease or close a sole proprietorship or partnership registration" },
+
+    { "category": "ACRA", "topic": "LLPs", "url": "https://www.acra.gov.sg/how-to-guides/registering-an-llp", "description": "Registration requirements for LLPs: partners, local manager, filing process" },
+    { "category": "ACRA", "topic": "LLPs", "url": "https://www.acra.gov.sg/how-to-guides/filing-annual-declarations-for-llps", "description": "Annual declaration obligations for LLPs: solvency declaration, deadline" },
+    { "category": "ACRA", "topic": "LLPs", "url": "https://www.acra.gov.sg/how-to-guides/closing-an-llp", "description": "Process for dissolving or striking off an LLP" },
+
+    { "category": "ACRA", "topic": "XBRL Filing", "url": "https://www.acra.gov.sg/how-to-guides/filing-financial-statements-in-xbrl/overview-of-xbrl-filing", "description": "XBRL overview: purpose, taxonomy, regulatory rationale" },
+    { "category": "ACRA", "topic": "XBRL Filing", "url": "https://www.acra.gov.sg/how-to-guides/filing-financial-statements-in-xbrl/who-needs-to-file", "description": "Rules on which companies must file in XBRL and exemptions" },
+
+    { "category": "ACRA", "topic": "BizFile+ Portal", "url": "https://www.acra.gov.sg/about-bizfile", "description": "Overview of BizFile+ portal: services available, how to access it" },
+    { "category": "ACRA", "topic": "BizFile+ Portal", "url": "https://www.bizfile.gov.sg", "description": "BizFile+ portal — ACRA's online filing and information retrieval system" },
+    { "category": "ACRA", "topic": "BizFile+ Portal", "url": "https://www.acra.gov.sg/how-to-guides/buying-information", "description": "How to purchase company profiles and public information via BizFile+" },
+
+    { "category": "ACRA", "topic": "VCC Registration", "url": "https://www.acra.gov.sg/how-to-guides/registering-a-variable-capital-company", "description": "VCC registration process: fund manager, custodian, sub-fund structure" },
+    { "category": "ACRA", "topic": "VCC Registration", "url": "https://www.acra.gov.sg/how-to-guides/filing-annual-returns-for-a-vcc", "description": "Annual return obligations specific to VCCs" },
+
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/Act/CoA1967", "description": "Companies Act 1967 — principal statute governing companies in Singapore" },
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/Act/BNA2014", "description": "Business Names Registration Act 2014" },
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/Act/LLPA2005", "description": "Limited Liability Partnerships Act 2005" },
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/Act/VCCA2018", "description": "Variable Capital Companies Act 2018" },
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/Act/AA2004", "description": "Accounting and Corporate Regulatory Authority Act 2004" },
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/SL/CoA1967-S831-2015", "description": "Companies (Filing of Documents) Regulations" },
+    { "category": "Singapore Statutes", "topic": "Legislation", "url": "https://sso.agc.gov.sg/Act/IA1967", "description": "Insolvency, Restructuring and Dissolution Act 2018" },
+
+    { "category": "IRAS", "topic": "Corporate Income Tax", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax", "description": "Main corporate income tax landing page" },
+    { "category": "IRAS", "topic": "Corporate Income Tax", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/corporate-income-tax-rate-rebates-and-tax-exemption-schemes", "description": "CIT rate (17%), rebates, Start-Up Tax Exemption, and Partial Tax Exemption schemes" },
+    { "category": "IRAS", "topic": "Corporate Income Tax", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/basic-guide-to-corporate-income-tax-for-companies", "description": "End-to-end basic guide: what is taxable, filing obligations, key deadlines" },
+    { "category": "IRAS", "topic": "Corporate Income Tax", "url": "https://www.iras.gov.sg/quick-links/tax-rates/corporate-income-tax-rates", "description": "Quick-reference table of historical and current CIT rates" },
+    { "category": "IRAS", "topic": "Corporate Income Tax", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/corporate-income-tax-filing-season-2025", "description": "Filing season overview for YA 2025 — deadlines, preparation, reminders" },
+    { "category": "IRAS", "topic": "Corporate Income Tax", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/tax-residency-of-a-company-certificate-of-residence", "description": "Company tax residency determination and Certificate of Residence" },
+
+    { "category": "IRAS", "topic": "ECI Filing", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/estimated-chargeable-income-(eci)-filing", "description": "ECI: what it is, who must file, 3-month deadline, waiver conditions" },
+
+    { "category": "IRAS", "topic": "Form C-S / Form C", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-(lite)-form-c-filing/overview-of-form-c-s-form-c-s-(lite)-form-c", "description": "Overview of all three form types, eligibility criteria for Form C-S" },
+    { "category": "IRAS", "topic": "Form C-S / Form C", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-(lite)-form-c-filing/guidance-on-filing-form-c-s-form-c-s-(lite)-form-c", "description": "Step-by-step filing guidance, common errors, tips" },
+    { "category": "IRAS", "topic": "Form C-S / Form C", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-(lite)-form-c-filing/preparing-a-tax-computation", "description": "How to prepare the tax computation that accompanies Form C" },
+    { "category": "IRAS", "topic": "Form C-S / Form C", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-(lite)-form-c-filing/after-filing-form-c-s-form-c-s-(lite)-form-c", "description": "Post-filing: Notices of Assessment, objections, record retention" },
+
+    { "category": "IRAS", "topic": "Tax Exemptions", "url": "https://www.iras.gov.sg/media/docs/default-source/uploadedfiles/pdf/examples-on-computing-the-amount-of-tax-exemption-for-companies.pdf", "description": "PDF with worked examples computing SUTE and PTE for various income scenarios" },
+
+    { "category": "IRAS", "topic": "GST Registration", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/gst-registration-deregistration/do-i-need-to-register-for-gst", "description": "Mandatory registration thresholds ($1M), timeline, effective date" },
+    { "category": "IRAS", "topic": "GST Registration", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/gst-registration-deregistration/factors-to-consider-before-registering-voluntarily-for-gst", "description": "Voluntary registration: pros/cons, 2-year lock-in, conditions" },
+    { "category": "IRAS", "topic": "GST Registration", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/gst-registration-deregistration/applying-for-gst-registration", "description": "Practical guide to completing GST registration application" },
+    { "category": "IRAS", "topic": "GST Registration", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/gst-registration-deregistration/cancelling-gst-registration", "description": "Conditions for mandatory and voluntary cancellation of GST registration" },
+
+    { "category": "IRAS", "topic": "GST Filing", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/overview-of-gst-e-filing-process", "description": "Step-by-step GST e-filing process via myTax Portal" },
+    { "category": "IRAS", "topic": "GST Filing", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/completing-gst-returns", "description": "How to complete each box of the GST F5 return" },
+    { "category": "IRAS", "topic": "GST Filing", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/due-dates-and-requests-for-extension", "description": "Due dates (1 month after period end), how to request extensions" },
+    { "category": "IRAS", "topic": "GST Filing", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/late-filing-or-non-filing-of-GST-returns-f5-f8", "description": "Penalties for late GST filing: $200 immediate + $200/month up to $10,000" },
+    { "category": "IRAS", "topic": "GST Filing", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/correcting-errors-made-in-gst-return-(filing-gst-f7)", "description": "How to voluntarily disclose GST errors via Form F7" },
+
+    { "category": "IRAS", "topic": "GST Rates", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/basics-of-gst/goods-and-services-tax-(gst)-what-it-is-and-how-it-works", "description": "GST overview: current 9% rate, taxable vs exempt vs zero-rated supplies" },
+    { "category": "IRAS", "topic": "GST Rates", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/gst-rate-change/gst-rate-change-for-business/overview-of-gst-rate-change", "description": "Two-step GST rate increase (7% to 8% to 9%) with transitional rules" },
+    { "category": "IRAS", "topic": "GST Rates", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/gst-rate-change/gst-rate-change-for-business/preparing-for-gst-rate-change", "description": "Practical steps for businesses to prepare for GST rate changes" },
+
+    { "category": "IRAS", "topic": "GST Input Tax", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/claiming-gst-(input-tax)/conditions-for-claiming-input-tax", "description": "Conditions for claiming input tax, documentation requirements" },
+    { "category": "IRAS", "topic": "GST Input Tax", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/claiming-gst-(input-tax)/claiming-input-tax-in-the-right-accounting-period", "description": "Rules on which accounting period to claim input tax in" },
+    { "category": "IRAS", "topic": "GST Input Tax", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/claiming-gst-(input-tax)/claiming-gst-incurred-before-gst-registration-incorporation", "description": "Claiming GST incurred before registration or incorporation" },
+
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/basics-of-withholding-tax/overview-of-withholding-tax-(WHT)", "description": "WHT overview: what it is, when it applies, payer obligations" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/basics-of-withholding-tax/types-of-payment-and-withholding-tax-rates", "description": "WHT rates by payment type (royalties 10%, fees 17%, interest 15%)" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/payments-to-non-resident-company/payments-that-are-subject-to-withholding-tax", "description": "Payments to non-resident companies subject to WHT" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/payments-to-non-resident-company/payments-that-are-not-subject-to-withholding-tax", "description": "Payments exempt from WHT (dividends, reimbursements)" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/withholding-tax-filing/withholding-tax-filing-and-payment-due-date", "description": "WHT filing and payment deadline: 15th of second month from payment date" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/withholding-tax-filing/how-to-file", "description": "How to file WHT via myTax Portal" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/payments-to-non-resident-director/board-director", "description": "WHT on payments to non-resident directors (24%)" },
+    { "category": "IRAS", "topic": "Withholding Tax", "url": "https://www.iras.gov.sg/taxes/withholding-tax/withholding-tax-filing/claim-of-relief-under-the-avoidance-of-double-taxation-agreement-(dta)", "description": "How to claim reduced WHT rates under DTAs" },
+
+    { "category": "IRAS", "topic": "Transfer Pricing", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/specific-topics/transfer-pricing", "description": "Transfer pricing: arm's length principle, documentation thresholds, penalties, APAs" },
+    { "category": "IRAS", "topic": "Transfer Pricing", "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/etaxguide_cit_transfer-pricing-guidelines.pdf", "description": "Full IRAS Transfer Pricing Guidelines PDF (Eighth Edition)" },
+
+    { "category": "IRAS", "topic": "Tax Treaties / DTAs", "url": "https://www.iras.gov.sg/taxes/international-tax/international-tax-agreements-concluded-by-singapore/list-of-dtas-limited-dtas-and-eoi-arrangements", "description": "Complete list of ~100 DTAs signed by Singapore with links to treaty texts" },
+    { "category": "IRAS", "topic": "Tax Treaties / DTAs", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/claiming-exemptions-under-Avoidance-of-Double-Taxation-Agreements-(DTAs)", "description": "How individuals can claim exemptions under DTAs" },
+    { "category": "IRAS", "topic": "Tax Treaties / DTAs", "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/etaxguide_income-tax_avoidance-of-double-taxation-agreements-(dtas)_3rd-edition.pdf", "description": "Full e-Tax Guide on DTAs (Third Edition)" },
+
+    { "category": "IRAS", "topic": "Tax Incentives", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/income-deductions-for-companies/applying-for-tax-incentives", "description": "Overview of tax incentives: Pioneer Certificate, DEI, and how to apply" },
+    { "category": "IRAS", "topic": "Tax Incentives", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/income-deductions-for-companies/business-expenses/research-development-(r-d)-tax-measures", "description": "R&D tax measures: 100%/150%/250% deductions on qualifying expenditure" },
+    { "category": "IRAS", "topic": "Tax Incentives", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/income-deductions-for-companies/companies-receiving-foreign-income", "description": "Foreign-sourced income exemption: Section 13(8)" },
+    { "category": "IRAS", "topic": "Tax Incentives", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/income-deductions-for-companies/taxable-non-taxable-income", "description": "What is taxable vs non-taxable income, capital vs revenue receipts" },
+
+    { "category": "IRAS", "topic": "Record Keeping", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/record-keeping-requirements", "description": "CIT record keeping: 5-year retention, what records to keep" },
+    { "category": "IRAS", "topic": "Record Keeping", "url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/basics-of-gst/invoicing-price-display-and-record-keeping/keeping-records", "description": "GST record keeping: what to retain, invoicing requirements" },
+    { "category": "IRAS", "topic": "Record Keeping", "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/record-keeping-guide-for-gst-registered-businesses.pdf", "description": "Detailed PDF guide on record keeping for GST-registered businesses" },
+    { "category": "IRAS", "topic": "Record Keeping", "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/record-keeping-guide-for-non-gst-registered-businesses.pdf", "description": "PDF guide on record keeping for non-GST-registered businesses" },
+
+    { "category": "IRAS", "topic": "Penalties", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-(lite)-form-c-filing/late-filing-or-non-filing-of-Corporate-Income-Tax-Returns-form-c-s-form-c-s-(Lite)-form-c", "description": "CIT penalties: fines up to $5,000, court penalties of up to 200% of tax" },
+    { "category": "IRAS", "topic": "Penalties", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/corporate-income-tax-payment/late-payment-or-non-payment-of-corporate-income-tax", "description": "Late CIT payment: 5% penalty, enforcement actions" },
+    { "category": "IRAS", "topic": "Penalties", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/form-c-s-form-c-s-(lite)-form-c-filing/penalties-for-errors-in-tax-returns", "description": "Penalties for errors/omissions: up to 200% of tax undercharged" },
+
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/working-out-my-tax-residency", "description": "Individual tax residency: 183-day rule, continuous employment" },
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates", "description": "Progressive tax rate table: 0% to 24% for residents, flat rates for non-residents" },
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/sample-income-tax-calculations", "description": "Worked examples of individual tax calculations" },
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/employers/auto-inclusion-scheme-(ais)-for-employment-income", "description": "Auto-Inclusion Scheme: employer obligations to submit IR8A by 1 March" },
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/employers/auto-inclusion-scheme-(ais)-for-employment-income/reporting-employee-earnings-(ir8a-appendix-8a-appendix-8b-ir8s)", "description": "Guide on completing IR8A and appendices for employee earnings" },
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/employers", "description": "Main employers page: tax clearance (IR21), reporting obligations" },
+    { "category": "IRAS", "topic": "Individual Income Tax", "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-reliefs-rebates-and-deductions", "description": "Individual tax reliefs, rebates and deductions" },
+
+    { "category": "IRAS", "topic": "Stamp Duty", "url": "https://www.iras.gov.sg/taxes/stamp-duty/for-shares/basics-of-stamp-duty-for-shares/learning-the-basics-for-shares", "description": "Basics of stamp duty on shares: 0.2% rate on higher of price or NAV" },
+    { "category": "IRAS", "topic": "Stamp Duty", "url": "https://www.iras.gov.sg/taxes/stamp-duty/for-shares/buying-or-acquiring-shares", "description": "Stamp duty computation when buying/acquiring shares" },
+    { "category": "IRAS", "topic": "Stamp Duty", "url": "https://www.iras.gov.sg/taxes/stamp-duty/for-shares/basics-of-stamp-duty-for-shares/who-should-pay-stamp-duty", "description": "Who is liable to pay stamp duty on share transfers" },
+    { "category": "IRAS", "topic": "Stamp Duty", "url": "https://www.iras.gov.sg/taxes/stamp-duty/for-shares/claiming-refunds-reliefs-and-remissions/common-stamp-duty-remissions-and-reliefs-for-shares/transfer-of-assets-between-associated-entities", "description": "Stamp duty relief for intra-group transfers" },
+    { "category": "IRAS", "topic": "Stamp Duty", "url": "https://www.iras.gov.sg/taxes/stamp-duty/for-shares/claiming-refunds-reliefs-and-remissions/common-stamp-duty-remissions-and-reliefs-for-shares/reconstruction-or-amalgamation-of-companies", "description": "Stamp duty relief for company reconstructions/amalgamations" },
+
+    { "category": "IRAS", "topic": "myTax Portal", "url": "https://www.iras.gov.sg/digital-services", "description": "Main digital services hub: all myTax Portal services" },
+    { "category": "IRAS", "topic": "myTax Portal", "url": "https://www.iras.gov.sg/digital-services/companies-tax-agents", "description": "Digital services for companies and tax agents" },
+    { "category": "IRAS", "topic": "myTax Portal", "url": "https://www.iras.gov.sg/digital-services/others/mytax-portal-technical-faq", "description": "Technical FAQ: browser requirements, Singpass 2FA, login issues" },
+    { "category": "IRAS", "topic": "myTax Portal", "url": "https://www.iras.gov.sg/digital-services/others/corppass", "description": "Corppass authorization guide for company representatives" },
+    { "category": "IRAS", "topic": "myTax Portal", "url": "https://www.iras.gov.sg/digital-services/gst", "description": "GST digital services: file returns, apply for registration" },
+    { "category": "IRAS", "topic": "myTax Portal", "url": "https://www.iras.gov.sg/digital-services/employers", "description": "Employer digital services: submit AIS, file tax clearance" },
+
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://www.mas.gov.sg/sectors/variable-capital-companies", "description": "Overview of VCC framework, key features, role in Singapore's fund ecosystem" },
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://www.mas.gov.sg/regulation/variable-capital-companies", "description": "VCC regulatory framework and subsidiary legislation" },
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://sso.agc.gov.sg/Act/VCCA2018", "description": "Variable Capital Companies Act 2018 (full text)" },
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://www.mas.gov.sg/regulation/acts/variable-capital-companies-act-2018", "description": "MAS page describing the VCC Act, scope, and key provisions" },
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://www.mas.gov.sg/news/media-releases/2020/mas-launches-variable-capital-companies-framework", "description": "Media release on VCC framework launch (January 2020)" },
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-variable-capital-companies", "description": "MAS guidelines on VCC operational and compliance aspects" },
+    { "category": "MAS", "topic": "VCC Framework", "url": "https://www.mas.gov.sg/schemes-and-initiatives/variable-capital-companies-grant-scheme", "description": "VCC Grant Scheme: co-funding for incorporating or re-domiciling VCCs" },
+
+    { "category": "MAS", "topic": "VCC Sub-Funds", "url": "https://www.mas.gov.sg/regulation/regulations/variable-capital-companies-regulations-2020", "description": "VCC Regulations 2020: sub-fund structures, umbrella VCC, asset segregation" },
+    { "category": "MAS", "topic": "VCC Sub-Funds", "url": "https://www.acra.gov.sg/how-to-guides/setting-up-a-variable-capital-company", "description": "ACRA guide on setting up a VCC (standalone or umbrella with sub-funds)" },
+
+    { "category": "MAS", "topic": "Fund Management Licensing", "url": "https://www.mas.gov.sg/regulation/capital-markets-services-licence", "description": "Capital Markets Services (CMS) licence overview" },
+    { "category": "MAS", "topic": "Fund Management Licensing", "url": "https://www.mas.gov.sg/regulation/licensing-and-registration/apply-for-a-capital-markets-services-licence", "description": "CMS licence application process, requirements, criteria" },
+    { "category": "MAS", "topic": "Fund Management Licensing", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-licensing-registration-and-conduct-of-business-for-fund-management-companies", "description": "Guidelines SFA 04-G05: licensing, registration, conduct of business for fund managers" },
+    { "category": "MAS", "topic": "Fund Management Licensing", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-fit-and-proper-criteria", "description": "Fit and proper criteria for directors and representatives of CMS licence holders" },
+
+    { "category": "MAS", "topic": "RFMC", "url": "https://www.mas.gov.sg/regulation/licensing-and-registration/register-as-a-registered-fund-management-company", "description": "RFMC registration: eligibility (max 30 investors, max S$250M AUM), conditions" },
+    { "category": "MAS", "topic": "RFMC", "url": "https://www.mas.gov.sg/regulation/faqs/faqs-on-registered-fund-management-companies", "description": "FAQs on RFMC regime: qualifying conditions, obligations, reporting" },
+
+    { "category": "MAS", "topic": "AML/CFT", "url": "https://www.mas.gov.sg/regulation/anti-money-laundering", "description": "MAS AML/CFT framework: policies, supervisory approach, key requirements" },
+    { "category": "MAS", "topic": "AML/CFT", "url": "https://www.mas.gov.sg/regulation/notices/notice-to-capital-markets-intermediaries-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism", "description": "MAS Notice SFA04-N02 on AML/CFT for capital markets intermediaries" },
+    { "category": "MAS", "topic": "AML/CFT", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-to-notice-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism---capital-markets-intermediaries", "description": "AML/CFT guidelines for capital markets intermediaries: CDD, transaction monitoring" },
+    { "category": "MAS", "topic": "AML/CFT", "url": "https://www.mas.gov.sg/regulation/notices/notice-psn02-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism", "description": "AML/CFT notice for various financial institutions" },
+    { "category": "MAS", "topic": "AML/CFT", "url": "https://www.mas.gov.sg/regulation/guidance/guidance-for-effective-aml-cft-transaction-monitoring-controls", "description": "Guidance on effective AML/CFT transaction monitoring controls" },
+
+    { "category": "MAS", "topic": "VCC AML/CFT", "url": "https://www.mas.gov.sg/regulation/notices/notice-vcc-n01", "description": "MAS Notice VCC-N01: AML/CFT requirements specific to VCCs" },
+    { "category": "MAS", "topic": "VCC AML/CFT", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-to-notice-vcc-n01-on-prevention-of-money-laundering-and-countering-the-financing-of-terrorism", "description": "AML/CFT guidelines specific to VCC structures" },
+    { "category": "MAS", "topic": "VCC AML/CFT", "url": "https://www.mas.gov.sg/regulation/notices/notice-sfa04-n13", "description": "Reporting requirements for CMS licence holders (fund management)" },
+
+    { "category": "MAS", "topic": "Family Offices", "url": "https://www.mas.gov.sg/development/family-offices", "description": "Singapore family office ecosystem: structures, regulatory considerations" },
+    { "category": "MAS", "topic": "Family Offices", "url": "https://www.mas.gov.sg/schemes-and-initiatives/family-office-development", "description": "MAS initiatives to develop Singapore as family office hub" },
+
+    { "category": "IRAS", "topic": "Fund Tax Incentives", "url": "https://www.iras.gov.sg/taxes/corporate-income-tax/income-tax-of-companies/tax-exemption-schemes-for-funds", "description": "Tax exemption schemes for funds: 13D, 13O, 13U overview" },
+    { "category": "IRAS", "topic": "Fund Tax Incentives", "url": "https://www.iras.gov.sg/schemes/disbursement-schemes/section-13o-tax-exemption-scheme", "description": "Section 13O (formerly 13R) onshore fund tax exemption: conditions, application" },
+    { "category": "IRAS", "topic": "Fund Tax Incentives", "url": "https://www.iras.gov.sg/schemes/disbursement-schemes/section-13u-tax-exemption-scheme", "description": "Section 13U (formerly 13X) enhanced-tier fund tax exemption: conditions, minimum fund size" },
+    { "category": "MAS", "topic": "Fund Tax Incentives", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-application-for-section-13o-and-13u-tax-incentive-schemes", "description": "MAS guidelines on applying for 13O and 13U incentives" },
+    { "category": "IRAS", "topic": "Fund Tax Incentives", "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/etax-guide_cit_income-tax-exemption-for-fund-management.pdf", "description": "e-Tax guide on income tax exemption for fund management (13D, 13O, 13U)" },
+
+    { "category": "MAS", "topic": "Fund Manager Licensing", "url": "https://www.mas.gov.sg/regulation/licensing-and-registration", "description": "MAS licensing and registration gateway: all licence types" },
+    { "category": "MAS", "topic": "Fund Manager Licensing", "url": "https://www.mas.gov.sg/regulation/faqs/faqs-on-the-regulatory-regime-for-fund-management-companies", "description": "FAQs on fund management regulatory regime: tiers, exemptions, obligations" },
+    { "category": "MAS", "topic": "Fund Manager Licensing", "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-competency-standards-for-representatives-of-fund-management-companies", "description": "Competency standards for fund management company representatives" },
+
+    { "category": "MOM", "topic": "Employment Pass", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass", "description": "Main EP page: eligibility, salary criteria, application overview" },
+    { "category": "MOM", "topic": "Employment Pass", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility", "description": "EP eligibility: minimum qualifying salary, qualifications, experience" },
+    { "category": "MOM", "topic": "Employment Pass", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/apply-for-a-pass", "description": "How to apply for EP: documents, processing timelines, fees" },
+    { "category": "MOM", "topic": "Employment Pass", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/renew-a-pass", "description": "EP renewal process, timelines, considerations" },
+
+    { "category": "MOM", "topic": "COMPASS", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/compass", "description": "COMPASS framework overview: points-based system for EP applications" },
+    { "category": "MOM", "topic": "COMPASS", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/compass/compass-criteria", "description": "COMPASS criteria: salary, qualifications, diversity, local employment, bonus" },
+    { "category": "MOM", "topic": "COMPASS", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/compass/compass-exemptions", "description": "COMPASS exemptions: salary thresholds, specific roles/situations" },
+    { "category": "MOM", "topic": "COMPASS", "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/self-assessment-tool", "description": "EP Self-Assessment Tool (SAT) for employers" },
+
+    { "category": "MOM", "topic": "EntrePass", "url": "https://www.mom.gov.sg/passes-and-permits/entrepass", "description": "EntrePass for foreign entrepreneurs starting a business in Singapore" },
+    { "category": "MOM", "topic": "EntrePass", "url": "https://www.mom.gov.sg/passes-and-permits/entrepass/eligibility", "description": "EntrePass eligibility: qualifying activities, funding, excluded businesses" },
+    { "category": "MOM", "topic": "EntrePass", "url": "https://www.mom.gov.sg/passes-and-permits/entrepass/apply-for-a-pass", "description": "EntrePass application process, required documents" },
+    { "category": "MOM", "topic": "EntrePass", "url": "https://www.mom.gov.sg/passes-and-permits/entrepass/renew-a-pass", "description": "EntrePass renewal: progressive criteria tied to business performance" },
+
+    { "category": "MOM", "topic": "S Pass", "url": "https://www.mom.gov.sg/passes-and-permits/s-pass", "description": "S Pass for mid-level skilled workers" },
+    { "category": "MOM", "topic": "S Pass", "url": "https://www.mom.gov.sg/passes-and-permits/s-pass/eligibility", "description": "S Pass eligibility: minimum salary, qualifications, experience" },
+    { "category": "MOM", "topic": "S Pass", "url": "https://www.mom.gov.sg/passes-and-permits/s-pass/apply-for-a-pass", "description": "S Pass application process" },
+    { "category": "MOM", "topic": "S Pass", "url": "https://www.mom.gov.sg/passes-and-permits/s-pass/s-pass-quota-and-levy", "description": "S Pass quota (dependency ratio ceiling) and levy rates by sector" },
+
+    { "category": "MOM", "topic": "Work Permit", "url": "https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-worker", "description": "Work Permit for semi-skilled foreign workers" },
+    { "category": "MOM", "topic": "Work Permit", "url": "https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-worker/sector-specific-rules", "description": "Sector-specific WP rules: construction, manufacturing, marine, process, services" },
+    { "category": "MOM", "topic": "Work Permit", "url": "https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-worker/eligibility-and-requirements", "description": "WP eligibility: source countries, age limits, employer requirements" },
+    { "category": "MOM", "topic": "Work Permit", "url": "https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-worker/foreign-worker-levy", "description": "Foreign worker levy rates, tiers, calculation" },
+    { "category": "MOM", "topic": "Work Permit", "url": "https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker", "description": "Work Permit for Foreign Domestic Workers: rules, levy, requirements" },
+
+    { "category": "MOM", "topic": "Dependant's Pass", "url": "https://www.mom.gov.sg/passes-and-permits/dependants-pass", "description": "Dependant's Pass: eligibility for spouse/children of EP/S Pass holders" },
+    { "category": "MOM", "topic": "Dependant's Pass", "url": "https://www.mom.gov.sg/passes-and-permits/dependants-pass/eligibility", "description": "Detailed DP eligibility including minimum salary of pass holder" },
+    { "category": "MOM", "topic": "Dependant's Pass", "url": "https://www.mom.gov.sg/passes-and-permits/long-term-visit-pass", "description": "Long-Term Visit Pass (LTVP) for common-law spouses, parents, etc." },
+
+    { "category": "MOM", "topic": "Fair Consideration Framework", "url": "https://www.mom.gov.sg/employment-practices/fair-consideration-framework", "description": "FCF overview: fair and merit-based employment practices" },
+    { "category": "MOM", "topic": "Fair Consideration Framework", "url": "https://www.mom.gov.sg/employment-practices/fair-consideration-framework/job-advertising-requirement", "description": "Job advertising on MyCareersFuture for 14 days before EP application" },
+    { "category": "MOM", "topic": "Fair Consideration Framework", "url": "https://www.mom.gov.sg/employment-practices/fair-consideration-framework/fcf-criteria", "description": "FCF watchlist criteria: how MOM identifies discriminatory hiring" },
+
+    { "category": "MOM", "topic": "Foreign Worker Levy", "url": "https://www.mom.gov.sg/employment-practices/foreign-worker-levy", "description": "General overview of foreign worker levy covering all pass types" },
+
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/employment-act/key-employment-terms-and-pay-slips", "description": "Key Employment Terms (KETs) in writing and itemised pay slips" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/employment-act/key-employment-terms-and-pay-slips/what-to-include", "description": "What must be included in KETs: job title, salary, hours, leave" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/employment-act", "description": "Employment Act: scope of coverage, key protections" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/employment-act/who-is-covered", "description": "Who is covered by Employment Act, exclusions" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/hours-of-work-overtime-and-rest-days", "description": "Hours of work, overtime pay, rest day provisions" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/leave", "description": "Leave entitlements: annual, sick, maternity, paternity, childcare" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/salary", "description": "Salary provisions: salary period, deductions, payment timelines" },
+    { "category": "MOM", "topic": "Employment Act", "url": "https://www.mom.gov.sg/employment-practices/termination-of-employment", "description": "Termination: notice periods, wrongful dismissal" },
+
+    { "category": "CPF", "topic": "Employer Obligations", "url": "https://www.mom.gov.sg/employment-practices/central-provident-fund", "description": "MOM overview of CPF obligations for employers" },
+    { "category": "CPF", "topic": "Employer Obligations", "url": "https://www.cpf.gov.sg/employer/employer-obligations/how-much-cpf-contributions-to-pay", "description": "CPF contribution rates by age group, employee type, wage ceiling" },
+    { "category": "CPF", "topic": "Employer Obligations", "url": "https://www.cpf.gov.sg/employer/employer-obligations", "description": "CPF employer obligations: who needs CPF, when and how to pay" },
+    { "category": "CPF", "topic": "Employer Obligations", "url": "https://www.cpf.gov.sg/employer/employer-obligations/cpf-contribution-and-allocation-rates", "description": "CPF allocation rates across OA, SA/RA, Medisave by age group" },
+
+    { "category": "MOM", "topic": "Workplace Safety", "url": "https://www.mom.gov.sg/workplace-safety-and-health", "description": "WSH framework: employer duties, key requirements" },
+    { "category": "MOM", "topic": "Workplace Safety", "url": "https://www.mom.gov.sg/workplace-safety-and-health/workplace-safety-and-health-act", "description": "WSH Act: duties of employers, occupiers, employees" },
+    { "category": "MOM", "topic": "Workplace Safety", "url": "https://www.mom.gov.sg/workplace-safety-and-health/safety-and-health-management-systems", "description": "Safety and health management systems requirements" },
+    { "category": "MOM", "topic": "Workplace Safety", "url": "https://www.mom.gov.sg/workplace-safety-and-health/risk-management", "description": "Risk management and risk assessment obligations" },
+    { "category": "MOM", "topic": "Workplace Safety", "url": "https://www.mom.gov.sg/workplace-safety-and-health/incident-reporting", "description": "Workplace incident reporting: what, when, and how to report" }
+  ]
+}
