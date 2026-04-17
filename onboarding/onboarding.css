@@ -177,6 +177,7 @@
   flex-direction: column;
   min-height: 100vh;
   overflow-y: auto;
+  position: relative;
 }
 
 /* Top bar */
@@ -231,12 +232,11 @@
 /* ─── PANELS ─── */
 .ob-panel {
   flex: 1;
-  padding: 52px 56px 48px;
-  max-width: 620px;
+  padding: 52px max(56px, calc(50% - 310px)) 48px;
   width: 100%;
   position: absolute;
   top: 68px; /* topbar height */
-  left: 42%; /* left panel width */
+  left: 0;
   right: 0;
   bottom: 0;
   overflow-y: auto;
