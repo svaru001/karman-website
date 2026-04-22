@@ -399,4 +399,25 @@
     <priority>0.80</priority>
   </url>
 
+  <url>
+    <loc>https://karman.com.sg/blog/oecd-pillar-two-singapore-holding-company</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/blog/ai-startups-incorporating-singapore-2026</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/blog/saudi-family-offices-singapore-vcc</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+
 </urlset>
