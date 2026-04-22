@@ -683,3 +683,32 @@
     font-size: 13px;
   }
 }
+
+/* ── Blog category filter tabs ── */
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.blog-filter {
+  padding: 7px 16px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 999px;
+  background: #fff;
+  color: #4A5568;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+.blog-filter:hover {
+  border-color: #1a4b7c;
+  color: #1a4b7c;
+}
+.blog-filter.active {
+  background: #1a4b7c;
+  border-color: #1a4b7c;
+  color: #fff;
+}
