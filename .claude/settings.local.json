@@ -72,7 +72,11 @@
       "Bash(chmod +x /tmp/h1_check.sh)",
       "Bash(/tmp/h1_check.sh)",
       "Bash(chmod +x /tmp/summary.sh)",
-      "Bash(/tmp/summary.sh)"
+      "Bash(/tmp/summary.sh)",
+      "WebFetch(domain:heysara.sg)",
+      "WebFetch(domain:www.incorp.asia)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(find /Users/sanketvaru/Documents/karman/blog -name \"index.html\" ! -path \"*/blog/index.html\" -exec sed -i '' 's|https://karman\\\\.com\\\\.sg/logo\\\\.png|https://karman.com.sg/og-image.png|g' {} \\\\;)"
     ]
   }
 }
