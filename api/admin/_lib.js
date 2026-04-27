@@ -1,8 +1,8 @@
 const crypto = require('crypto');
 
 const SECRET = process.env.OTP_SECRET || 'karman-dev-secret';
-const KV_URL = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-const KV_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+const KV_URL = process.env.KV_REST_API_URL;
+const KV_TOKEN = process.env.KV_REST_API_TOKEN;
 const LEADS_KEY = 'karman:leads';
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
