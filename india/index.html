@@ -297,11 +297,12 @@
     .faq-question svg { flex-shrink: 0; transition: transform .2s; }
     .faq-question[aria-expanded="true"] svg { transform: rotate(45deg); }
     .faq-answer {
+      display: block !important;
       max-height: 0;
       overflow: hidden;
       transition: max-height .4s ease;
     }
-    .faq-answer--open { max-height: 2000px; }
+    .faq-answer.open { max-height: 2000px; }
     .faq-answer__inner {
       padding: 0 24px 20px;
       font-size: 14px;
@@ -809,22 +810,6 @@
   </footer>
 
   <script src="../script.js"></script>
-  <script>
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var expanded = this.getAttribute('aria-expanded') === 'true';
-        document.querySelectorAll('.faq-question').forEach(function(b) {
-          b.setAttribute('aria-expanded', 'false');
-          b.nextElementSibling.classList.remove('faq-answer--open');
-        });
-        if (!expanded) {
-          this.setAttribute('aria-expanded', 'true');
-          this.nextElementSibling.classList.add('faq-answer--open');
-        }
-      });
-    });
-  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
 </body>
