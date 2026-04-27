@@ -3,32 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRM Dashboard | Karman</title>
+  <title>CRM | Karman</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --navy: #0A2540;
-      --blue: #1a6bcc;
-      --teal: #00C9A7;
-      --gray-50: #F8FAFC;
-      --gray-100: #F1F5F9;
-      --gray-200: #E2E8F0;
-      --gray-400: #94A3B8;
-      --gray-500: #64748B;
-      --gray-700: #374151;
-      --gray-900: #0F172A;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--gray-50);
-      color: var(--gray-900);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #070E1F;
+      background-image:
+        radial-gradient(ellipse at 10% 50%, rgba(26,107,204,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 88% 10%, rgba(0,201,167,0.09) 0%, transparent 50%),
+        radial-gradient(ellipse at 68% 92%, rgba(124,58,237,0.10) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: rgba(255,255,255,0.82);
       min-height: 100vh;
     }
 
@@ -37,37 +29,48 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       height: 60px;
-      background: #fff;
-      border-bottom: 1px solid var(--gray-200);
+      background: rgba(7,14,31,0.82);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 28px;
       z-index: 100;
-      box-shadow: 0 1px 3px rgba(0,0,0,.06);
     }
-    .nav__left { display: flex; align-items: center; gap: 16px; }
-    .nav__logo { height: 24px; }
-    .nav__divider { width: 1px; height: 20px; background: var(--gray-200); }
-    .nav__title { font-size: 13px; font-weight: 700; color: var(--gray-500); letter-spacing: .05em; text-transform: uppercase; }
-    .nav__right { display: flex; align-items: center; gap: 12px; }
-    .nav__user { font-size: 13px; color: var(--gray-500); }
+    .nav__left { display: flex; align-items: center; gap: 14px; }
+    .nav__logo { height: 22px; filter: brightness(0) invert(1); opacity: .88; }
+    .nav__divider { width: 1px; height: 18px; background: rgba(255,255,255,0.12); }
+    .nav__title {
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.32);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.09);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .nav__right { display: flex; align-items: center; gap: 14px; }
+    .nav__date { font-size: 13px; color: rgba(255,255,255,0.28); }
     .btn-logout {
-      padding: 7px 14px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 7px;
-      background: none;
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
       font-size: 13px;
       font-weight: 600;
-      color: var(--gray-700);
+      color: rgba(255,255,255,0.45);
       cursor: pointer;
       font-family: inherit;
       transition: all .15s;
     }
-    .btn-logout:hover { border-color: #EF4444; color: #EF4444; }
+    .btn-logout:hover { border-color: rgba(248,113,113,0.45); color: #FCA5A5; background: rgba(239,68,68,0.08); }
 
     /* ── Layout ── */
-    .main { padding: 80px 28px 40px; max-width: 1400px; margin: 0 auto; }
+    .main { padding: 84px 28px 52px; max-width: 1400px; margin: 0 auto; }
 
     /* ── Page header ── */
     .page-header {
@@ -79,55 +82,78 @@
       gap: 16px;
     }
     .page-header h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 800;
-      color: var(--navy);
+      color: #fff;
+      letter-spacing: -.025em;
     }
-    .page-header p { font-size: 14px; color: var(--gray-500); margin-top: 4px; }
+    .page-header p { font-size: 14px; color: rgba(255,255,255,0.32); margin-top: 4px; }
     .btn-add {
       display: flex;
       align-items: center;
-      gap: 7px;
-      padding: 10px 18px;
-      background: var(--navy);
+      gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #1a6bcc, #2563EB);
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       font-family: inherit;
       cursor: pointer;
-      transition: background .15s;
+      box-shadow: 0 6px 20px rgba(26,107,204,0.4);
+      transition: opacity .15s, box-shadow .15s;
+      letter-spacing: .01em;
     }
-    .btn-add:hover { background: #1a3a5c; }
+    .btn-add:hover { opacity: .88; box-shadow: 0 8px 26px rgba(26,107,204,0.5); }
 
     /* ── Stats ── */
     .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
       margin-bottom: 24px;
     }
     .stat-card {
-      background: #fff;
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      padding: 20px 22px;
-      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 22px 22px 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .2s, background .2s;
     }
-    .stat-card__label { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
-    .stat-card__value { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 800; color: var(--navy); line-height: 1; }
-    .stat-card__sub { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
-    .stat-card--active .stat-card__value { color: #16A34A; }
-    .stat-card--inactive .stat-card__value { color: var(--gray-400); }
-    .stat-card--partnership .stat-card__value { color: #7C3AED; }
+    .stat-card:hover { border-color: rgba(255,255,255,0.16); background: rgba(255,255,255,0.07); }
+    .stat-card__bar { position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .stat-card__icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .stat-card__value {
+      font-size: 38px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin-bottom: 6px;
+    }
+    .stat-card__label {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.32);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
 
     /* ── Toolbar ── */
     .toolbar {
       display: flex;
       gap: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       flex-wrap: wrap;
       align-items: center;
     }
@@ -135,81 +161,100 @@
       position: relative;
       flex: 1;
       min-width: 200px;
-      max-width: 320px;
+      max-width: 300px;
     }
     .search-wrap svg {
       position: absolute;
-      left: 11px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--gray-400);
+      color: rgba(255,255,255,0.22);
       pointer-events: none;
     }
     .search-input {
       width: 100%;
-      padding: 9px 12px 9px 34px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 8px;
+      padding: 9px 12px 9px 36px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
       font-size: 13px;
       font-family: inherit;
-      color: var(--gray-900);
+      color: rgba(255,255,255,0.85);
       outline: none;
-      background: #fff;
-      transition: border-color .15s;
+      transition: border-color .15s, background .15s, box-shadow .15s;
     }
-    .search-input:focus { border-color: var(--blue); }
+    .search-input::placeholder { color: rgba(255,255,255,0.22); }
+    .search-input:focus {
+      border-color: rgba(26,107,204,0.55);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 0 3px rgba(26,107,204,0.1);
+    }
     .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
     .filter-btn {
       padding: 7px 14px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 7px;
-      background: #fff;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
       font-size: 13px;
       font-weight: 500;
-      color: var(--gray-700);
+      color: rgba(255,255,255,0.42);
       cursor: pointer;
       font-family: inherit;
       transition: all .15s;
     }
-    .filter-btn:hover { border-color: var(--blue); color: var(--blue); }
-    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
-    .result-count { font-size: 13px; color: var(--gray-400); margin-left: auto; white-space: nowrap; }
+    .filter-btn:hover { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.82); background: rgba(255,255,255,0.08); }
+    .filter-btn.active { background: rgba(26,107,204,0.2); border-color: rgba(26,107,204,0.48); color: #93C5FD; font-weight: 700; }
+    .result-count { font-size: 13px; color: rgba(255,255,255,0.22); margin-left: auto; white-space: nowrap; }
 
     /* ── Table ── */
     .table-wrap {
-      background: #fff;
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 1px 3px rgba(0,0,0,.04);
     }
     .crm-table { width: 100%; border-collapse: collapse; }
-    .crm-table thead { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); }
+    .crm-table thead { background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.07); }
     .crm-table th {
       padding: 12px 16px;
       text-align: left;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: .07em;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--gray-500);
+      color: rgba(255,255,255,0.25);
       white-space: nowrap;
     }
     .crm-table td {
       padding: 14px 16px;
       font-size: 13px;
-      color: var(--gray-700);
-      border-bottom: 1px solid var(--gray-100);
+      color: rgba(255,255,255,0.62);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
       vertical-align: middle;
     }
     .crm-table tbody tr:last-child td { border-bottom: none; }
     .crm-table tbody tr { transition: background .1s; }
-    .crm-table tbody tr:hover > td { background: #F8FAFC; }
-    .crm-table tbody tr.expanded > td { background: #EFF6FF; border-bottom: none; }
-    .crm-table tbody tr.edit-row > td { background: #EFF6FF; padding: 0; }
+    .crm-table tbody tr:hover > td { background: rgba(255,255,255,0.038); }
+    .crm-table tbody tr.expanded > td { background: rgba(26,107,204,0.08); border-bottom: none; }
+    .crm-table tbody tr.edit-row > td { background: rgba(26,107,204,0.05); padding: 0; }
 
-    /* Name + source */
-    .lead-name { font-weight: 600; color: var(--navy); }
+    /* Avatar + name cell */
+    .lead-cell { display: flex; align-items: center; gap: 11px; }
+    .avatar {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+      letter-spacing: .03em;
+    }
+    .lead-name { font-weight: 600; color: rgba(255,255,255,0.9); font-size: 13px; }
     .lead-source {
       display: inline-block;
       font-size: 10px;
@@ -218,251 +263,259 @@
       text-transform: uppercase;
       padding: 2px 7px;
       border-radius: 4px;
-      margin-left: 6px;
+      margin-left: 5px;
       vertical-align: middle;
-      background: var(--gray-100);
-      color: var(--gray-500);
     }
-    .lead-source--contact { background: #DBEAFE; color: #1D4ED8; }
-    .lead-source--onboarding { background: #D1FAE5; color: #065F46; }
+    .lead-source--contact { background: rgba(59,130,246,0.18); color: #93C5FD; }
+    .lead-source--onboarding { background: rgba(16,185,129,0.18); color: #6EE7B7; }
 
     /* Badges */
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 11px;
+      font-weight: 700;
       padding: 4px 10px;
       border-radius: 100px;
       white-space: nowrap;
+      letter-spacing: .02em;
     }
-    .badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .7; flex-shrink: 0; }
-    .badge--active    { background: #DCFCE7; color: #16A34A; }
-    .badge--inactive  { background: #F1F5F9; color: #64748B; }
-    .badge--won       { background: #D1FAE5; color: #059669; }
-    .badge--lost      { background: #FEE2E2; color: #DC2626; }
-    .badge--prospect  { background: #DBEAFE; color: #2563EB; }
-    .badge--partnership { background: #EDE9FE; color: #7C3AED; }
-    .badge--referral  { background: #FEF3C7; color: #D97706; }
+    .badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .75; flex-shrink: 0; }
+    .badge--active    { background: rgba(22,163,74,.18);    color: #4ADE80; }
+    .badge--inactive  { background: rgba(148,163,184,.1);   color: rgba(255,255,255,0.3); }
+    .badge--won       { background: rgba(5,150,105,.18);    color: #34D399; }
+    .badge--lost      { background: rgba(239,68,68,.14);    color: #F87171; }
+    .badge--prospect  { background: rgba(59,130,246,.16);   color: #60A5FA; }
+    .badge--partnership { background: rgba(124,58,237,.18); color: #A78BFA; }
+    .badge--referral  { background: rgba(217,119,6,.16);    color: #FCD34D; }
 
-    /* Comments cell */
     .comments-cell {
-      max-width: 280px;
+      max-width: 260px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: var(--gray-500);
+      color: rgba(255,255,255,0.3);
       font-style: italic;
+      font-size: 12px;
     }
-    .comments-cell:empty::before { content: '—'; }
+    .comments-cell:empty::before { content: '—'; opacity: .4; }
 
     /* Action buttons */
     .actions { display: flex; gap: 6px; }
     .btn-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 7px;
-      background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      width: 30px; height: 30px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.04);
       cursor: pointer;
-      color: var(--gray-500);
+      color: rgba(255,255,255,0.35);
       transition: all .15s;
     }
-    .btn-icon:hover { border-color: var(--blue); color: var(--blue); }
-    .btn-icon--delete:hover { border-color: #EF4444; color: #EF4444; }
-    .btn-icon svg { width: 14px; height: 14px; }
+    .btn-icon:hover { border-color: rgba(26,107,204,0.5); color: #60A5FA; background: rgba(26,107,204,0.12); }
+    .btn-icon--delete:hover { border-color: rgba(239,68,68,0.45); color: #F87171; background: rgba(239,68,68,0.1); }
+    .btn-icon svg { width: 13px; height: 13px; }
 
-    /* Inline edit row */
+    /* Inline edit panel */
     .edit-panel {
-      padding: 20px 20px 20px 20px;
+      padding: 20px 20px;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 12px;
       align-items: end;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
     .edit-field { display: flex; flex-direction: column; gap: 5px; }
-    .edit-field label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-500); }
+    .edit-field label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: rgba(255,255,255,0.28); }
     .edit-field input,
     .edit-field select,
     .edit-field textarea {
-      padding: 8px 10px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 7px;
+      padding: 8px 11px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
       font-size: 13px;
       font-family: inherit;
-      color: var(--gray-900);
+      color: rgba(255,255,255,0.88);
       outline: none;
-      transition: border-color .15s;
-      background: #fff;
+      transition: border-color .15s, background .15s;
+      color-scheme: dark;
     }
     .edit-field input:focus,
     .edit-field select:focus,
-    .edit-field textarea:focus { border-color: var(--blue); }
+    .edit-field textarea:focus { border-color: rgba(26,107,204,0.6); background: rgba(255,255,255,0.09); }
+    .edit-field select option { background: #0D1F3C; color: #fff; }
     .edit-field textarea { resize: vertical; min-height: 60px; }
     .edit-field--wide { grid-column: span 2; }
     .edit-actions { display: flex; gap: 8px; align-items: flex-end; padding-bottom: 1px; }
     .btn-save {
       padding: 8px 18px;
-      background: var(--navy);
+      background: linear-gradient(135deg, #1a6bcc, #2563EB);
       color: #fff;
       border: none;
-      border-radius: 7px;
+      border-radius: 8px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       font-family: inherit;
       cursor: pointer;
-      transition: background .15s;
+      box-shadow: 0 4px 12px rgba(26,107,204,0.35);
+      transition: opacity .15s;
       white-space: nowrap;
     }
-    .btn-save:hover { background: #1a3a5c; }
+    .btn-save:hover { opacity: .85; }
     .btn-cancel {
       padding: 8px 14px;
-      background: none;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 7px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
       font-size: 13px;
       font-weight: 500;
-      color: var(--gray-500);
+      color: rgba(255,255,255,0.38);
       font-family: inherit;
       cursor: pointer;
       transition: all .15s;
       white-space: nowrap;
     }
-    .btn-cancel:hover { border-color: var(--gray-400); color: var(--gray-700); }
+    .btn-cancel:hover { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); }
 
     /* Empty state */
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--gray-400);
-    }
-    .empty-state svg { margin: 0 auto 16px; display: block; opacity: .4; }
+    .empty-state { text-align: center; padding: 64px 20px; color: rgba(255,255,255,0.18); }
+    .empty-state svg { margin: 0 auto 16px; display: block; }
     .empty-state p { font-size: 14px; }
 
     /* ── Modal ── */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(10,37,64,.45);
-      display: flex;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
       align-items: center;
       justify-content: center;
       z-index: 200;
       padding: 20px;
-      display: none;
     }
     .modal-overlay.open { display: flex; }
     .modal {
-      background: #fff;
-      border-radius: 16px;
+      background: rgba(9,17,38,0.97);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
       padding: 32px;
       width: 100%;
       max-width: 560px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06);
       max-height: 90vh;
       overflow-y: auto;
     }
     .modal__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
-    .modal__header h2 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 800; color: var(--navy); }
+    .modal__header h2 { font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -.015em; }
     .modal__close {
       width: 32px; height: 32px;
-      border: none; background: var(--gray-100);
-      border-radius: 8px; cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      border-radius: 9px;
+      cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      color: var(--gray-500);
-      font-size: 18px;
-      transition: background .15s;
+      color: rgba(255,255,255,0.38);
+      font-size: 16px;
+      transition: all .15s;
     }
-    .modal__close:hover { background: var(--gray-200); }
+    .modal__close:hover { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
     .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .modal-grid .field { display: flex; flex-direction: column; gap: 5px; }
+    .modal-grid .field { display: flex; flex-direction: column; gap: 6px; }
     .modal-grid .field.full { grid-column: span 2; }
-    .modal-grid label { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: .05em; }
+    .modal-grid label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.32); text-transform: uppercase; letter-spacing: .09em; }
     .modal-grid input,
     .modal-grid select,
     .modal-grid textarea {
-      padding: 9px 12px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 8px;
+      padding: 10px 13px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
       font-size: 14px;
       font-family: inherit;
-      color: var(--gray-900);
+      color: rgba(255,255,255,0.88);
       outline: none;
-      transition: border-color .15s;
+      transition: border-color .15s, background .15s, box-shadow .15s;
+      color-scheme: dark;
     }
+    .modal-grid input::placeholder,
+    .modal-grid textarea::placeholder { color: rgba(255,255,255,0.2); }
     .modal-grid input:focus,
     .modal-grid select:focus,
-    .modal-grid textarea:focus { border-color: var(--blue); }
+    .modal-grid textarea:focus {
+      border-color: rgba(26,107,204,0.6);
+      background: rgba(255,255,255,0.09);
+      box-shadow: 0 0 0 3px rgba(26,107,204,0.1);
+    }
+    .modal-grid select option { background: #0D1F3C; color: #fff; }
     .modal-grid textarea { resize: vertical; min-height: 80px; }
     .modal__footer { display: flex; gap: 10px; justify-content: flex-end; margin-top: 24px; }
     .btn-primary {
       padding: 10px 22px;
-      background: var(--navy);
+      background: linear-gradient(135deg, #1a6bcc, #2563EB);
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       font-family: inherit;
       cursor: pointer;
-      transition: background .15s;
+      box-shadow: 0 4px 14px rgba(26,107,204,0.4);
+      transition: opacity .15s;
     }
-    .btn-primary:hover { background: #1a3a5c; }
-    .btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+    .btn-primary:hover { opacity: .86; }
+    .btn-primary:disabled { opacity: .45; cursor: not-allowed; }
     .btn-secondary {
       padding: 10px 18px;
-      background: none;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
       font-size: 14px;
       font-weight: 500;
-      color: var(--gray-500);
+      color: rgba(255,255,255,0.38);
       font-family: inherit;
       cursor: pointer;
       transition: all .15s;
     }
-    .btn-secondary:hover { border-color: var(--gray-400); color: var(--gray-700); }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); }
 
     /* Toast */
     .toast {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--gray-900);
-      color: #fff;
+      bottom: 24px; right: 24px;
+      background: rgba(9,17,38,0.96);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      color: rgba(255,255,255,0.82);
       padding: 12px 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 13px;
-      font-weight: 500;
-      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
       z-index: 300;
       transform: translateY(80px);
       opacity: 0;
       transition: all .25s;
     }
     .toast.show { transform: translateY(0); opacity: 1; }
-    .toast--success { background: #16A34A; }
-    .toast--error { background: #DC2626; }
+    .toast--success { border-color: rgba(74,222,128,0.32); color: #4ADE80; }
+    .toast--error   { border-color: rgba(248,113,113,0.32); color: #F87171; }
 
     /* Loading */
     .loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px;
-      color: var(--gray-400);
-      font-size: 14px;
-      gap: 10px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 64px; color: rgba(255,255,255,0.22); font-size: 14px; gap: 10px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .spinner {
       width: 18px; height: 18px;
-      border: 2px solid var(--gray-200);
-      border-top-color: var(--blue);
+      border: 2px solid rgba(255,255,255,0.08);
+      border-top-color: #1a6bcc;
       border-radius: 50%;
       animation: spin .6s linear infinite;
     }
@@ -470,6 +523,7 @@
     @media (max-width: 768px) {
       .main { padding: 72px 16px 32px; }
       .nav { padding: 0 16px; }
+      .nav__date { display: none; }
       .modal-grid { grid-template-columns: 1fr; }
       .modal-grid .field.full { grid-column: span 1; }
       .edit-panel { grid-template-columns: 1fr; }
@@ -479,7 +533,6 @@
 </head>
 <body>
 
-  <!-- Nav -->
   <nav class="nav">
     <div class="nav__left">
       <img src="/logo.svg" alt="Karman" class="nav__logo" />
@@ -487,12 +540,11 @@
       <span class="nav__title">CRM</span>
     </div>
     <div class="nav__right">
-      <span class="nav__user" id="navDate"></span>
+      <span class="nav__date" id="navDate"></span>
       <button class="btn-logout" onclick="logout()">Sign out</button>
     </div>
   </nav>
 
-  <!-- Main -->
   <main class="main">
     <div class="page-header">
       <div>
@@ -506,11 +558,39 @@
     </div>
 
     <!-- Stats -->
-    <div class="stats" id="stats">
-      <div class="stat-card"><div class="stat-card__label">Total Leads</div><div class="stat-card__value" id="st-total">—</div></div>
-      <div class="stat-card stat-card--active"><div class="stat-card__label">Active</div><div class="stat-card__value" id="st-active">—</div></div>
-      <div class="stat-card stat-card--inactive"><div class="stat-card__label">Inactive</div><div class="stat-card__value" id="st-inactive">—</div></div>
-      <div class="stat-card stat-card--partnership"><div class="stat-card__label">Partnerships</div><div class="stat-card__value" id="st-partner">—</div></div>
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-card__bar" style="background:linear-gradient(90deg,#1a6bcc,#60A5FA)"></div>
+        <div class="stat-card__icon" style="background:rgba(26,107,204,0.14)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="stat-card__value" id="st-total">—</div>
+        <div class="stat-card__label">Total Leads</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__bar" style="background:linear-gradient(90deg,#16A34A,#4ADE80)"></div>
+        <div class="stat-card__icon" style="background:rgba(22,163,74,0.14)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <div class="stat-card__value" id="st-active" style="color:#4ADE80">—</div>
+        <div class="stat-card__label">Active</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__bar" style="background:linear-gradient(90deg,#475569,#94A3B8)"></div>
+        <div class="stat-card__icon" style="background:rgba(71,85,105,0.18)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="stat-card__value" id="st-inactive" style="color:rgba(255,255,255,0.32)">—</div>
+        <div class="stat-card__label">Inactive</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__bar" style="background:linear-gradient(90deg,#7C3AED,#A78BFA)"></div>
+        <div class="stat-card__icon" style="background:rgba(124,58,237,0.14)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="stat-card__value" id="st-partner" style="color:#A78BFA">—</div>
+        <div class="stat-card__label">Partnerships</div>
+      </div>
     </div>
 
     <!-- Toolbar -->
@@ -561,47 +641,18 @@
         <button class="modal__close" onclick="closeModal()">✕</button>
       </div>
       <div class="modal-grid">
-        <div class="field">
-          <label>Name *</label>
-          <input type="text" id="m-name" placeholder="Full name" />
+        <div class="field"><label>Name *</label><input type="text" id="m-name" placeholder="Full name" /></div>
+        <div class="field"><label>Company</label><input type="text" id="m-company" placeholder="Company name" /></div>
+        <div class="field"><label>Email</label><input type="email" id="m-email" placeholder="email@example.com" /></div>
+        <div class="field"><label>Phone</label><input type="text" id="m-phone" placeholder="+65 9xxx xxxx" /></div>
+        <div class="field"><label>Date</label><input type="date" id="m-date" /></div>
+        <div class="field"><label>Type</label>
+          <select id="m-type"><option>Prospect</option><option>Partnership</option><option>Referral</option></select>
         </div>
-        <div class="field">
-          <label>Company</label>
-          <input type="text" id="m-company" placeholder="Company name" />
+        <div class="field"><label>Status</label>
+          <select id="m-status"><option>Active</option><option>Inactive</option><option>Won</option><option>Lost</option></select>
         </div>
-        <div class="field">
-          <label>Email</label>
-          <input type="email" id="m-email" placeholder="email@example.com" />
-        </div>
-        <div class="field">
-          <label>Phone</label>
-          <input type="text" id="m-phone" placeholder="+65 9xxx xxxx" />
-        </div>
-        <div class="field">
-          <label>Date</label>
-          <input type="date" id="m-date" />
-        </div>
-        <div class="field">
-          <label>Type</label>
-          <select id="m-type">
-            <option>Prospect</option>
-            <option>Partnership</option>
-            <option>Referral</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Status</label>
-          <select id="m-status">
-            <option>Active</option>
-            <option>Inactive</option>
-            <option>Won</option>
-            <option>Lost</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label>Comments</label>
-          <textarea id="m-comments" placeholder="Notes, next steps…"></textarea>
-        </div>
+        <div class="field full"><label>Comments</label><textarea id="m-comments" placeholder="Notes, next steps…"></textarea></div>
       </div>
       <div class="modal__footer">
         <button class="btn-secondary" onclick="closeModal()">Cancel</button>
@@ -610,17 +661,14 @@
     </div>
   </div>
 
-  <!-- Toast -->
   <div class="toast" id="toast"></div>
 
   <script>
-    // ── State ─────────────────────────────────────────────────────────────────
     let leads = [];
     let activeFilter = 'all';
     let expandedId = null;
     const token = localStorage.getItem('karman_admin_token');
 
-    // ── Auth guard ────────────────────────────────────────────────────────────
     if (!token) window.location.href = '/admin/login';
 
     function logout() {
@@ -628,13 +676,9 @@
       window.location.href = '/admin/login';
     }
 
-    // ── Nav date ──────────────────────────────────────────────────────────────
     document.getElementById('navDate').textContent = new Date().toLocaleDateString('en-SG', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
-
-    // ── Set today's date in modal ─────────────────────────────────────────────
     document.getElementById('m-date').value = new Date().toISOString().slice(0, 10);
 
-    // ── API helper ────────────────────────────────────────────────────────────
     async function api(path, opts = {}) {
       const res = await fetch(path, {
         ...opts,
@@ -645,7 +689,6 @@
       return res.json();
     }
 
-    // ── Load leads ────────────────────────────────────────────────────────────
     async function loadLeads() {
       const data = await api('/api/admin/leads');
       if (!data) return;
@@ -656,7 +699,6 @@
       renderTable();
     }
 
-    // ── Stats ─────────────────────────────────────────────────────────────────
     function updateStats() {
       document.getElementById('st-total').textContent = leads.length;
       document.getElementById('st-active').textContent = leads.filter(l => l.status === 'Active').length;
@@ -664,7 +706,6 @@
       document.getElementById('st-partner').textContent = leads.filter(l => l.type === 'Partnership').length;
     }
 
-    // ── Filter ────────────────────────────────────────────────────────────────
     function setFilter(btn) {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -682,113 +723,87 @@
       });
     }
 
-    // ── Badges ────────────────────────────────────────────────────────────────
+    const AV_COLORS = [
+      ['#1a6bcc','#7C3AED'],['#059669','#0891B2'],['#D97706','#DC2626'],
+      ['#7C3AED','#EC4899'],['#0891B2','#059669'],['#B45309','#7C3AED'],
+    ];
+    function avatar(name) {
+      const parts = name.trim().split(/\s+/);
+      const initials = (parts.length >= 2 ? parts[0][0] + parts[parts.length-1][0] : name.slice(0,2)).toUpperCase();
+      const [fr, to] = AV_COLORS[name.charCodeAt(0) % AV_COLORS.length];
+      return `<span class="avatar" style="background:linear-gradient(135deg,${fr},${to})">${initials}</span>`;
+    }
+
     function statusBadge(s) {
-      const map = { Active: 'active', Inactive: 'inactive', Won: 'won', Lost: 'lost' };
-      return `<span class="badge badge--${map[s] || 'inactive'}">${s}</span>`;
+      const m = { Active:'active', Inactive:'inactive', Won:'won', Lost:'lost' };
+      return `<span class="badge badge--${m[s]||'inactive'}">${s}</span>`;
     }
     function typeBadge(t) {
-      const map = { Prospect: 'prospect', Partnership: 'partnership', Referral: 'referral' };
-      return `<span class="badge badge--${map[t] || 'prospect'}">${t}</span>`;
+      const m = { Prospect:'prospect', Partnership:'partnership', Referral:'referral' };
+      return `<span class="badge badge--${m[t]||'prospect'}">${t}</span>`;
     }
     function sourcePill(s) {
-      if (!s || s === 'backfill') return '';
+      if (!s || s === 'backfill' || s === 'manual') return '';
       return `<span class="lead-source lead-source--${s}">${s}</span>`;
     }
-
-    // ── Format date ───────────────────────────────────────────────────────────
     function fmtDate(d) {
       if (!d) return '—';
-      const dt = new Date(d + 'T00:00:00');
-      return dt.toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' });
+      return new Date(d + 'T00:00:00').toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' });
     }
 
-    // ── Render table ──────────────────────────────────────────────────────────
     function renderTable() {
       const fl = filteredLeads();
       const tbody = document.getElementById('tbody');
-      const empty = document.getElementById('emptyState');
       document.getElementById('resultCount').textContent = `${fl.length} lead${fl.length !== 1 ? 's' : ''}`;
-
       if (!fl.length) {
         tbody.innerHTML = '';
-        empty.style.display = 'block';
+        document.getElementById('emptyState').style.display = 'block';
         return;
       }
-      empty.style.display = 'none';
-
+      document.getElementById('emptyState').style.display = 'none';
       tbody.innerHTML = fl.map(l => {
-        const isExpanded = l.id === expandedId;
-        const editRow = isExpanded ? buildEditRow(l) : '';
+        const isX = l.id === expandedId;
         return `
-          <tr class="${isExpanded ? 'expanded' : ''}" data-id="${l.id}">
-            <td><span class="lead-name">${esc(l.name)}</span>${sourcePill(l.source)}</td>
-            <td>${esc(l.company) || '<span style="color:var(--gray-400)">—</span>'}</td>
-            <td style="white-space:nowrap;">${fmtDate(l.date)}</td>
+          <tr class="${isX ? 'expanded' : ''}" data-id="${l.id}">
+            <td><div class="lead-cell">${avatar(l.name)}<div><span class="lead-name">${esc(l.name)}</span>${sourcePill(l.source)}</div></div></td>
+            <td>${esc(l.company) || '<span style="opacity:.25">—</span>'}</td>
+            <td style="white-space:nowrap">${fmtDate(l.date)}</td>
             <td>${typeBadge(l.type)}</td>
             <td>${statusBadge(l.status)}</td>
             <td class="comments-cell" title="${esc(l.comments)}">${esc(l.comments)}</td>
-            <td>
-              <div class="actions">
-                <button class="btn-icon" title="Edit" onclick="toggleEdit('${l.id}')">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                </button>
-                <button class="btn-icon btn-icon--delete" title="Delete" onclick="deleteLead('${l.id}', '${esc(l.name)}')">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
-                </button>
-              </div>
-            </td>
+            <td><div class="actions">
+              <button class="btn-icon" title="Edit" onclick="toggleEdit('${l.id}')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </button>
+              <button class="btn-icon btn-icon--delete" title="Delete" onclick="deleteLead('${l.id}','${esc(l.name)}')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+              </button>
+            </div></td>
           </tr>
-          ${isExpanded ? `<tr class="edit-row"><td colspan="7">${editRow}</td></tr>` : ''}
+          ${isX ? `<tr class="edit-row"><td colspan="7">${buildEditRow(l)}</td></tr>` : ''}
         `;
       }).join('');
     }
 
     function buildEditRow(l) {
-      return `
-        <div class="edit-panel">
-          <div class="edit-field">
-            <label>Name</label>
-            <input id="e-name" value="${esc(l.name)}" />
-          </div>
-          <div class="edit-field">
-            <label>Company</label>
-            <input id="e-company" value="${esc(l.company)}" />
-          </div>
-          <div class="edit-field">
-            <label>Email</label>
-            <input id="e-email" type="email" value="${esc(l.email)}" />
-          </div>
-          <div class="edit-field">
-            <label>Phone</label>
-            <input id="e-phone" value="${esc(l.phone)}" />
-          </div>
-          <div class="edit-field">
-            <label>Date</label>
-            <input id="e-date" type="date" value="${l.date}" />
-          </div>
-          <div class="edit-field">
-            <label>Type</label>
-            <select id="e-type">
-              ${['Prospect','Partnership','Referral'].map(t => `<option${t===l.type?' selected':''}>${t}</option>`).join('')}
-            </select>
-          </div>
-          <div class="edit-field">
-            <label>Status</label>
-            <select id="e-status">
-              ${['Active','Inactive','Won','Lost'].map(s => `<option${s===l.status?' selected':''}>${s}</option>`).join('')}
-            </select>
-          </div>
-          <div class="edit-field edit-field--wide">
-            <label>Comments</label>
-            <textarea id="e-comments">${esc(l.comments)}</textarea>
-          </div>
-          <div class="edit-actions">
-            <button class="btn-save" onclick="saveEdit('${l.id}')">Save</button>
-            <button class="btn-cancel" onclick="cancelEdit()">Cancel</button>
-          </div>
+      return `<div class="edit-panel">
+        <div class="edit-field"><label>Name</label><input id="e-name" value="${esc(l.name)}" /></div>
+        <div class="edit-field"><label>Company</label><input id="e-company" value="${esc(l.company)}" /></div>
+        <div class="edit-field"><label>Email</label><input id="e-email" type="email" value="${esc(l.email)}" /></div>
+        <div class="edit-field"><label>Phone</label><input id="e-phone" value="${esc(l.phone)}" /></div>
+        <div class="edit-field"><label>Date</label><input id="e-date" type="date" value="${l.date}" /></div>
+        <div class="edit-field"><label>Type</label>
+          <select id="e-type">${['Prospect','Partnership','Referral'].map(t=>`<option${t===l.type?' selected':''}>${t}</option>`).join('')}</select>
         </div>
-      `;
+        <div class="edit-field"><label>Status</label>
+          <select id="e-status">${['Active','Inactive','Won','Lost'].map(s=>`<option${s===l.status?' selected':''}>${s}</option>`).join('')}</select>
+        </div>
+        <div class="edit-field edit-field--wide"><label>Comments</label><textarea id="e-comments">${esc(l.comments)}</textarea></div>
+        <div class="edit-actions">
+          <button class="btn-save" onclick="saveEdit('${l.id}')">Save</button>
+          <button class="btn-cancel" onclick="cancelEdit()">Cancel</button>
+        </div>
+      </div>`;
     }
 
     function esc(s) {
@@ -796,29 +811,25 @@
       return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
-    // ── Toggle edit row ───────────────────────────────────────────────────────
     function toggleEdit(id) {
       expandedId = expandedId === id ? null : id;
       renderTable();
-      if (expandedId) {
-        setTimeout(() => {
-          const row = document.querySelector(`tr[data-id="${id}"]`);
-          if (row) row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 50);
-      }
+      if (expandedId) setTimeout(() => {
+        const row = document.querySelector(`tr[data-id="${id}"]`);
+        if (row) row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
     }
     function cancelEdit() { expandedId = null; renderTable(); }
 
-    // ── Save edit ─────────────────────────────────────────────────────────────
     async function saveEdit(id) {
       const body = {
-        name:     document.getElementById('e-name').value,
-        company:  document.getElementById('e-company').value,
-        email:    document.getElementById('e-email').value,
-        phone:    document.getElementById('e-phone').value,
-        date:     document.getElementById('e-date').value,
-        type:     document.getElementById('e-type').value,
-        status:   document.getElementById('e-status').value,
+        name: document.getElementById('e-name').value,
+        company: document.getElementById('e-company').value,
+        email: document.getElementById('e-email').value,
+        phone: document.getElementById('e-phone').value,
+        date: document.getElementById('e-date').value,
+        type: document.getElementById('e-type').value,
+        status: document.getElementById('e-status').value,
         comments: document.getElementById('e-comments').value,
       };
       const data = await api(`/api/admin/lead?id=${id}`, { method: 'PATCH', body });
@@ -831,7 +842,6 @@
       showToast('Saved ✓');
     }
 
-    // ── Delete ────────────────────────────────────────────────────────────────
     async function deleteLead(id, name) {
       if (!confirm(`Delete "${name}"? This cannot be undone.`)) return;
       const data = await api(`/api/admin/lead?id=${id}`, { method: 'DELETE' });
@@ -843,37 +853,30 @@
       showToast('Lead deleted');
     }
 
-    // ── Add Lead Modal ────────────────────────────────────────────────────────
-    function openModal() {
-      document.getElementById('modal').classList.add('open');
-      document.getElementById('m-name').focus();
-    }
+    function openModal() { document.getElementById('modal').classList.add('open'); document.getElementById('m-name').focus(); }
     function closeModal() { document.getElementById('modal').classList.remove('open'); }
 
     async function saveLead() {
       const name = document.getElementById('m-name').value.trim();
       if (!name) { document.getElementById('m-name').focus(); return; }
       const btn = document.getElementById('modal-save-btn');
-      btn.disabled = true;
-      btn.textContent = 'Adding…';
+      btn.disabled = true; btn.textContent = 'Adding…';
       const body = {
         name,
-        company:  document.getElementById('m-company').value,
-        email:    document.getElementById('m-email').value,
-        phone:    document.getElementById('m-phone').value,
-        date:     document.getElementById('m-date').value,
-        type:     document.getElementById('m-type').value,
-        status:   document.getElementById('m-status').value,
+        company: document.getElementById('m-company').value,
+        email: document.getElementById('m-email').value,
+        phone: document.getElementById('m-phone').value,
+        date: document.getElementById('m-date').value,
+        type: document.getElementById('m-type').value,
+        status: document.getElementById('m-status').value,
         comments: document.getElementById('m-comments').value,
-        source:   'manual',
+        source: 'manual',
       };
       const data = await api('/api/admin/leads', { method: 'POST', body });
-      btn.disabled = false;
-      btn.textContent = 'Add Lead';
+      btn.disabled = false; btn.textContent = 'Add Lead';
       if (!data || !data.lead) return showToast('Failed to add', 'error');
       leads.unshift(data.lead);
       closeModal();
-      // Reset form
       ['m-name','m-company','m-email','m-phone','m-comments'].forEach(id => document.getElementById(id).value = '');
       document.getElementById('m-type').value = 'Prospect';
       document.getElementById('m-status').value = 'Active';
@@ -883,20 +886,15 @@
       showToast('Lead added ✓', 'success');
     }
 
-    // Close modal on overlay click
-    document.getElementById('modal').addEventListener('click', function(e) {
-      if (e.target === this) closeModal();
-    });
+    document.getElementById('modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
 
-    // ── Toast ─────────────────────────────────────────────────────────────────
     function showToast(msg, type = 'success') {
       const t = document.getElementById('toast');
       t.textContent = msg;
       t.className = `toast toast--${type} show`;
-      setTimeout(() => { t.classList.remove('show'); }, 2500);
+      setTimeout(() => t.classList.remove('show'), 2500);
     }
 
-    // ── Boot ──────────────────────────────────────────────────────────────────
     loadLeads();
   </script>
 </body>
