@@ -5,6 +5,37 @@
    No custom domain DNS required.
 ───────────────────────────────────────────── */
 
+const crypto = require('crypto');
+
+function genId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+async function saveLead(lead) {
+  const KV_URL = process.env.KV_REST_API_URL;
+  const KV_TOKEN = process.env.KV_REST_API_TOKEN;
+  if (!KV_URL || !KV_TOKEN) return;
+  try {
+    const LEADS_KEY = 'karman:leads';
+    const getRes = await fetch(KV_URL, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${KV_TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(['GET', LEADS_KEY]),
+    });
+    const getData = await getRes.json();
+    let leads = [];
+    if (getData.result) {
+      try { leads = JSON.parse(getData.result); } catch {}
+    }
+    leads.unshift(lead);
+    await fetch(KV_URL, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${KV_TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(['SET', LEADS_KEY, JSON.stringify(leads)]),
+    });
+  } catch {}
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
@@ -14,7 +45,7 @@ module.exports = async function handler(req, res) {
   if (!key) return res.status(500).json({ error: 'Email service not configured' });
   if (!name) return res.status(400).json({ error: 'Name required' });
 
-  const isOnboarding = source === 'onboarding';
+  const isOnboarding = (source === 'onboarding');
   const subject = isOnboarding
     ? `[Onboarding] ${name} — ${entityType === 'vcc' ? 'VCC / Fund' : 'Private Company'}`
     : `[Enquiry] ${name}${service ? ' — ' + service : ''}`;
@@ -38,6 +69,22 @@ module.exports = async function handler(req, res) {
     const err = await notifyRes.json();
     return res.status(502).json({ error: err.message || 'Failed to send' });
   }
+
+  await saveLead({
+    id: genId(),
+    name: name.trim(),
+    company: (isOnboarding ? (company?.name || vcc?.name) : '') || '',
+    email: (email || '').trim(),
+    phone: (phone || '').trim(),
+    date: new Date().toISOString().slice(0, 10),
+    type: isOnboarding ? 'Prospect' : 'Prospect',
+    status: 'Active',
+    comments: isOnboarding
+      ? `${entityType === 'vcc' ? 'VCC' : 'Pte Ltd'} enquiry${service ? ' — ' + service : ''}`
+      : (message || service || '').slice(0, 200),
+    source: isOnboarding ? 'onboarding' : 'contact',
+    createdAt: Date.now(),
+  });
 
   return res.status(200).json({ ok: true });
 }
