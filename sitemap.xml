@@ -39,13 +39,6 @@
     <priority>0.80</priority>
   </url>
 
-  <url>
-    <loc>https://karman.com.sg/ask</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
   <!-- ── Service Pages ── -->
   <url>
     <loc>https://karman.com.sg/services/vcc-fund-administration</loc>
