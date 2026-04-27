@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Dashboard | Karman</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0A2540;
+      --blue: #1a6bcc;
+      --teal: #00C9A7;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-700: #374151;
+      --gray-900: #0F172A;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gray-50);
+      color: var(--gray-900);
+      min-height: 100vh;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background: #fff;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    .nav__left { display: flex; align-items: center; gap: 16px; }
+    .nav__logo { height: 24px; }
+    .nav__divider { width: 1px; height: 20px; background: var(--gray-200); }
+    .nav__title { font-size: 13px; font-weight: 700; color: var(--gray-500); letter-spacing: .05em; text-transform: uppercase; }
+    .nav__right { display: flex; align-items: center; gap: 12px; }
+    .nav__user { font-size: 13px; color: var(--gray-500); }
+    .btn-logout {
+      padding: 7px 14px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 7px;
+      background: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .15s;
+    }
+    .btn-logout:hover { border-color: #EF4444; color: #EF4444; }
+
+    /* ── Layout ── */
+    .main { padding: 80px 28px 40px; max-width: 1400px; margin: 0 auto; }
+
+    /* ── Page header ── */
+    .page-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .page-header h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .page-header p { font-size: 14px; color: var(--gray-500); margin-top: 4px; }
+    .btn-add {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 18px;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn-add:hover { background: #1a3a5c; }
+
+    /* ── Stats ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    .stat-card__label { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+    .stat-card__value { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 800; color: var(--navy); line-height: 1; }
+    .stat-card__sub { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+    .stat-card--active .stat-card__value { color: #16A34A; }
+    .stat-card--inactive .stat-card__value { color: var(--gray-400); }
+    .stat-card--partnership .stat-card__value { color: #7C3AED; }
+
+    /* ── Toolbar ── */
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+      max-width: 320px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray-400);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      padding: 9px 12px 9px 34px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--gray-900);
+      outline: none;
+      background: #fff;
+      transition: border-color .15s;
+    }
+    .search-input:focus { border-color: var(--blue); }
+    .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 7px 14px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 7px;
+      background: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-700);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .15s;
+    }
+    .filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .result-count { font-size: 13px; color: var(--gray-400); margin-left: auto; white-space: nowrap; }
+
+    /* ── Table ── */
+    .table-wrap {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    .crm-table { width: 100%; border-collapse: collapse; }
+    .crm-table thead { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); }
+    .crm-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      white-space: nowrap;
+    }
+    .crm-table td {
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-100);
+      vertical-align: middle;
+    }
+    .crm-table tbody tr:last-child td { border-bottom: none; }
+    .crm-table tbody tr { transition: background .1s; }
+    .crm-table tbody tr:hover > td { background: #F8FAFC; }
+    .crm-table tbody tr.expanded > td { background: #EFF6FF; border-bottom: none; }
+    .crm-table tbody tr.edit-row > td { background: #EFF6FF; padding: 0; }
+
+    /* Name + source */
+    .lead-name { font-weight: 600; color: var(--navy); }
+    .lead-source {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+      background: var(--gray-100);
+      color: var(--gray-500);
+    }
+    .lead-source--contact { background: #DBEAFE; color: #1D4ED8; }
+    .lead-source--onboarding { background: #D1FAE5; color: #065F46; }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .7; flex-shrink: 0; }
+    .badge--active    { background: #DCFCE7; color: #16A34A; }
+    .badge--inactive  { background: #F1F5F9; color: #64748B; }
+    .badge--won       { background: #D1FAE5; color: #059669; }
+    .badge--lost      { background: #FEE2E2; color: #DC2626; }
+    .badge--prospect  { background: #DBEAFE; color: #2563EB; }
+    .badge--partnership { background: #EDE9FE; color: #7C3AED; }
+    .badge--referral  { background: #FEF3C7; color: #D97706; }
+
+    /* Comments cell */
+    .comments-cell {
+      max-width: 280px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--gray-500);
+      font-style: italic;
+    }
+    .comments-cell:empty::before { content: '—'; }
+
+    /* Action buttons */
+    .actions { display: flex; gap: 6px; }
+    .btn-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 7px;
+      background: #fff;
+      cursor: pointer;
+      color: var(--gray-500);
+      transition: all .15s;
+    }
+    .btn-icon:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-icon--delete:hover { border-color: #EF4444; color: #EF4444; }
+    .btn-icon svg { width: 14px; height: 14px; }
+
+    /* Inline edit row */
+    .edit-panel {
+      padding: 20px 20px 20px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      align-items: end;
+    }
+    .edit-field { display: flex; flex-direction: column; gap: 5px; }
+    .edit-field label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-500); }
+    .edit-field input,
+    .edit-field select,
+    .edit-field textarea {
+      padding: 8px 10px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 7px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--gray-900);
+      outline: none;
+      transition: border-color .15s;
+      background: #fff;
+    }
+    .edit-field input:focus,
+    .edit-field select:focus,
+    .edit-field textarea:focus { border-color: var(--blue); }
+    .edit-field textarea { resize: vertical; min-height: 60px; }
+    .edit-field--wide { grid-column: span 2; }
+    .edit-actions { display: flex; gap: 8px; align-items: flex-end; padding-bottom: 1px; }
+    .btn-save {
+      padding: 8px 18px;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .btn-save:hover { background: #1a3a5c; }
+    .btn-cancel {
+      padding: 8px 14px;
+      background: none;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-500);
+      font-family: inherit;
+      cursor: pointer;
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .btn-cancel:hover { border-color: var(--gray-400); color: var(--gray-700); }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--gray-400);
+    }
+    .empty-state svg { margin: 0 auto 16px; display: block; opacity: .4; }
+    .empty-state p { font-size: 14px; }
+
+    /* ── Modal ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10,37,64,.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+      display: none;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      width: 100%;
+      max-width: 560px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+    .modal__header h2 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 800; color: var(--navy); }
+    .modal__close {
+      width: 32px; height: 32px;
+      border: none; background: var(--gray-100);
+      border-radius: 8px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-500);
+      font-size: 18px;
+      transition: background .15s;
+    }
+    .modal__close:hover { background: var(--gray-200); }
+    .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .modal-grid .field { display: flex; flex-direction: column; gap: 5px; }
+    .modal-grid .field.full { grid-column: span 2; }
+    .modal-grid label { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: .05em; }
+    .modal-grid input,
+    .modal-grid select,
+    .modal-grid textarea {
+      padding: 9px 12px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--gray-900);
+      outline: none;
+      transition: border-color .15s;
+    }
+    .modal-grid input:focus,
+    .modal-grid select:focus,
+    .modal-grid textarea:focus { border-color: var(--blue); }
+    .modal-grid textarea { resize: vertical; min-height: 80px; }
+    .modal__footer { display: flex; gap: 10px; justify-content: flex-end; margin-top: 24px; }
+    .btn-primary {
+      padding: 10px 22px;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn-primary:hover { background: #1a3a5c; }
+    .btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+    .btn-secondary {
+      padding: 10px 18px;
+      background: none;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-500);
+      font-family: inherit;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .btn-secondary:hover { border-color: var(--gray-400); color: var(--gray-700); }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gray-900);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      z-index: 300;
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all .25s;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast--success { background: #16A34A; }
+    .toast--error { background: #DC2626; }
+
+    /* Loading */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      color: var(--gray-400);
+      font-size: 14px;
+      gap: 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      width: 18px; height: 18px;
+      border: 2px solid var(--gray-200);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+    }
+
+    @media (max-width: 768px) {
+      .main { padding: 72px 16px 32px; }
+      .nav { padding: 0 16px; }
+      .modal-grid { grid-template-columns: 1fr; }
+      .modal-grid .field.full { grid-column: span 1; }
+      .edit-panel { grid-template-columns: 1fr; }
+      .edit-field--wide { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav__left">
+      <img src="/logo.svg" alt="Karman" class="nav__logo" />
+      <div class="nav__divider"></div>
+      <span class="nav__title">CRM</span>
+    </div>
+    <div class="nav__right">
+      <span class="nav__user" id="navDate"></span>
+      <button class="btn-logout" onclick="logout()">Sign out</button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="page-header">
+      <div>
+        <h1>Leads</h1>
+        <p>All contact form, onboarding, and manually added leads.</p>
+      </div>
+      <button class="btn-add" onclick="openModal()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Add Lead
+      </button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats" id="stats">
+      <div class="stat-card"><div class="stat-card__label">Total Leads</div><div class="stat-card__value" id="st-total">—</div></div>
+      <div class="stat-card stat-card--active"><div class="stat-card__label">Active</div><div class="stat-card__value" id="st-active">—</div></div>
+      <div class="stat-card stat-card--inactive"><div class="stat-card__label">Inactive</div><div class="stat-card__value" id="st-inactive">—</div></div>
+      <div class="stat-card stat-card--partnership"><div class="stat-card__label">Partnerships</div><div class="stat-card__value" id="st-partner">—</div></div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" type="text" id="search" placeholder="Search name or company…" oninput="renderTable()" />
+      </div>
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" onclick="setFilter(this)">All</button>
+        <button class="filter-btn" data-filter="Active" onclick="setFilter(this)">Active</button>
+        <button class="filter-btn" data-filter="Inactive" onclick="setFilter(this)">Inactive</button>
+        <button class="filter-btn" data-filter="Prospect" onclick="setFilter(this)">Prospect</button>
+        <button class="filter-btn" data-filter="Partnership" onclick="setFilter(this)">Partnership</button>
+      </div>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <div class="loading" id="loading"><div class="spinner"></div> Loading leads…</div>
+      <table class="crm-table" id="table" style="display:none;">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Comments</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <p>No leads match your search.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add Lead Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal__header">
+        <h2>Add Lead</h2>
+        <button class="modal__close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-grid">
+        <div class="field">
+          <label>Name *</label>
+          <input type="text" id="m-name" placeholder="Full name" />
+        </div>
+        <div class="field">
+          <label>Company</label>
+          <input type="text" id="m-company" placeholder="Company name" />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="m-email" placeholder="email@example.com" />
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input type="text" id="m-phone" placeholder="+65 9xxx xxxx" />
+        </div>
+        <div class="field">
+          <label>Date</label>
+          <input type="date" id="m-date" />
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select id="m-type">
+            <option>Prospect</option>
+            <option>Partnership</option>
+            <option>Referral</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Status</label>
+          <select id="m-status">
+            <option>Active</option>
+            <option>Inactive</option>
+            <option>Won</option>
+            <option>Lost</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label>Comments</label>
+          <textarea id="m-comments" placeholder="Notes, next steps…"></textarea>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn-primary" id="modal-save-btn" onclick="saveLead()">Add Lead</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ── State ─────────────────────────────────────────────────────────────────
+    let leads = [];
+    let activeFilter = 'all';
+    let expandedId = null;
+    const token = localStorage.getItem('karman_admin_token');
+
+    // ── Auth guard ────────────────────────────────────────────────────────────
+    if (!token) window.location.href = '/admin/login';
+
+    function logout() {
+      localStorage.removeItem('karman_admin_token');
+      window.location.href = '/admin/login';
+    }
+
+    // ── Nav date ──────────────────────────────────────────────────────────────
+    document.getElementById('navDate').textContent = new Date().toLocaleDateString('en-SG', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+
+    // ── Set today's date in modal ─────────────────────────────────────────────
+    document.getElementById('m-date').value = new Date().toISOString().slice(0, 10);
+
+    // ── API helper ────────────────────────────────────────────────────────────
+    async function api(path, opts = {}) {
+      const res = await fetch(path, {
+        ...opts,
+        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json', ...(opts.headers || {}) },
+        body: opts.body ? JSON.stringify(opts.body) : undefined,
+      });
+      if (res.status === 401) { logout(); return null; }
+      return res.json();
+    }
+
+    // ── Load leads ────────────────────────────────────────────────────────────
+    async function loadLeads() {
+      const data = await api('/api/admin/leads');
+      if (!data) return;
+      leads = data.leads || [];
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('table').style.display = 'table';
+      updateStats();
+      renderTable();
+    }
+
+    // ── Stats ─────────────────────────────────────────────────────────────────
+    function updateStats() {
+      document.getElementById('st-total').textContent = leads.length;
+      document.getElementById('st-active').textContent = leads.filter(l => l.status === 'Active').length;
+      document.getElementById('st-inactive').textContent = leads.filter(l => l.status === 'Inactive').length;
+      document.getElementById('st-partner').textContent = leads.filter(l => l.type === 'Partnership').length;
+    }
+
+    // ── Filter ────────────────────────────────────────────────────────────────
+    function setFilter(btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      expandedId = null;
+      renderTable();
+    }
+
+    function filteredLeads() {
+      const q = document.getElementById('search').value.toLowerCase().trim();
+      return leads.filter(l => {
+        const matchFilter = activeFilter === 'all' || l.status === activeFilter || l.type === activeFilter;
+        const matchSearch = !q || l.name.toLowerCase().includes(q) || (l.company || '').toLowerCase().includes(q);
+        return matchFilter && matchSearch;
+      });
+    }
+
+    // ── Badges ────────────────────────────────────────────────────────────────
+    function statusBadge(s) {
+      const map = { Active: 'active', Inactive: 'inactive', Won: 'won', Lost: 'lost' };
+      return `<span class="badge badge--${map[s] || 'inactive'}">${s}</span>`;
+    }
+    function typeBadge(t) {
+      const map = { Prospect: 'prospect', Partnership: 'partnership', Referral: 'referral' };
+      return `<span class="badge badge--${map[t] || 'prospect'}">${t}</span>`;
+    }
+    function sourcePill(s) {
+      if (!s || s === 'backfill') return '';
+      return `<span class="lead-source lead-source--${s}">${s}</span>`;
+    }
+
+    // ── Format date ───────────────────────────────────────────────────────────
+    function fmtDate(d) {
+      if (!d) return '—';
+      const dt = new Date(d + 'T00:00:00');
+      return dt.toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    // ── Render table ──────────────────────────────────────────────────────────
+    function renderTable() {
+      const fl = filteredLeads();
+      const tbody = document.getElementById('tbody');
+      const empty = document.getElementById('emptyState');
+      document.getElementById('resultCount').textContent = `${fl.length} lead${fl.length !== 1 ? 's' : ''}`;
+
+      if (!fl.length) {
+        tbody.innerHTML = '';
+        empty.style.display = 'block';
+        return;
+      }
+      empty.style.display = 'none';
+
+      tbody.innerHTML = fl.map(l => {
+        const isExpanded = l.id === expandedId;
+        const editRow = isExpanded ? buildEditRow(l) : '';
+        return `
+          <tr class="${isExpanded ? 'expanded' : ''}" data-id="${l.id}">
+            <td><span class="lead-name">${esc(l.name)}</span>${sourcePill(l.source)}</td>
+            <td>${esc(l.company) || '<span style="color:var(--gray-400)">—</span>'}</td>
+            <td style="white-space:nowrap;">${fmtDate(l.date)}</td>
+            <td>${typeBadge(l.type)}</td>
+            <td>${statusBadge(l.status)}</td>
+            <td class="comments-cell" title="${esc(l.comments)}">${esc(l.comments)}</td>
+            <td>
+              <div class="actions">
+                <button class="btn-icon" title="Edit" onclick="toggleEdit('${l.id}')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </button>
+                <button class="btn-icon btn-icon--delete" title="Delete" onclick="deleteLead('${l.id}', '${esc(l.name)}')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+          ${isExpanded ? `<tr class="edit-row"><td colspan="7">${editRow}</td></tr>` : ''}
+        `;
+      }).join('');
+    }
+
+    function buildEditRow(l) {
+      return `
+        <div class="edit-panel">
+          <div class="edit-field">
+            <label>Name</label>
+            <input id="e-name" value="${esc(l.name)}" />
+          </div>
+          <div class="edit-field">
+            <label>Company</label>
+            <input id="e-company" value="${esc(l.company)}" />
+          </div>
+          <div class="edit-field">
+            <label>Email</label>
+            <input id="e-email" type="email" value="${esc(l.email)}" />
+          </div>
+          <div class="edit-field">
+            <label>Phone</label>
+            <input id="e-phone" value="${esc(l.phone)}" />
+          </div>
+          <div class="edit-field">
+            <label>Date</label>
+            <input id="e-date" type="date" value="${l.date}" />
+          </div>
+          <div class="edit-field">
+            <label>Type</label>
+            <select id="e-type">
+              ${['Prospect','Partnership','Referral'].map(t => `<option${t===l.type?' selected':''}>${t}</option>`).join('')}
+            </select>
+          </div>
+          <div class="edit-field">
+            <label>Status</label>
+            <select id="e-status">
+              ${['Active','Inactive','Won','Lost'].map(s => `<option${s===l.status?' selected':''}>${s}</option>`).join('')}
+            </select>
+          </div>
+          <div class="edit-field edit-field--wide">
+            <label>Comments</label>
+            <textarea id="e-comments">${esc(l.comments)}</textarea>
+          </div>
+          <div class="edit-actions">
+            <button class="btn-save" onclick="saveEdit('${l.id}')">Save</button>
+            <button class="btn-cancel" onclick="cancelEdit()">Cancel</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function esc(s) {
+      if (!s) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ── Toggle edit row ───────────────────────────────────────────────────────
+    function toggleEdit(id) {
+      expandedId = expandedId === id ? null : id;
+      renderTable();
+      if (expandedId) {
+        setTimeout(() => {
+          const row = document.querySelector(`tr[data-id="${id}"]`);
+          if (row) row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 50);
+      }
+    }
+    function cancelEdit() { expandedId = null; renderTable(); }
+
+    // ── Save edit ─────────────────────────────────────────────────────────────
+    async function saveEdit(id) {
+      const body = {
+        name:     document.getElementById('e-name').value,
+        company:  document.getElementById('e-company').value,
+        email:    document.getElementById('e-email').value,
+        phone:    document.getElementById('e-phone').value,
+        date:     document.getElementById('e-date').value,
+        type:     document.getElementById('e-type').value,
+        status:   document.getElementById('e-status').value,
+        comments: document.getElementById('e-comments').value,
+      };
+      const data = await api(`/api/admin/lead?id=${id}`, { method: 'PATCH', body });
+      if (!data || !data.lead) return showToast('Save failed', 'error');
+      const idx = leads.findIndex(l => l.id === id);
+      if (idx !== -1) leads[idx] = data.lead;
+      expandedId = null;
+      updateStats();
+      renderTable();
+      showToast('Saved ✓');
+    }
+
+    // ── Delete ────────────────────────────────────────────────────────────────
+    async function deleteLead(id, name) {
+      if (!confirm(`Delete "${name}"? This cannot be undone.`)) return;
+      const data = await api(`/api/admin/lead?id=${id}`, { method: 'DELETE' });
+      if (!data || !data.ok) return showToast('Delete failed', 'error');
+      leads = leads.filter(l => l.id !== id);
+      if (expandedId === id) expandedId = null;
+      updateStats();
+      renderTable();
+      showToast('Lead deleted');
+    }
+
+    // ── Add Lead Modal ────────────────────────────────────────────────────────
+    function openModal() {
+      document.getElementById('modal').classList.add('open');
+      document.getElementById('m-name').focus();
+    }
+    function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+    async function saveLead() {
+      const name = document.getElementById('m-name').value.trim();
+      if (!name) { document.getElementById('m-name').focus(); return; }
+      const btn = document.getElementById('modal-save-btn');
+      btn.disabled = true;
+      btn.textContent = 'Adding…';
+      const body = {
+        name,
+        company:  document.getElementById('m-company').value,
+        email:    document.getElementById('m-email').value,
+        phone:    document.getElementById('m-phone').value,
+        date:     document.getElementById('m-date').value,
+        type:     document.getElementById('m-type').value,
+        status:   document.getElementById('m-status').value,
+        comments: document.getElementById('m-comments').value,
+        source:   'manual',
+      };
+      const data = await api('/api/admin/leads', { method: 'POST', body });
+      btn.disabled = false;
+      btn.textContent = 'Add Lead';
+      if (!data || !data.lead) return showToast('Failed to add', 'error');
+      leads.unshift(data.lead);
+      closeModal();
+      // Reset form
+      ['m-name','m-company','m-email','m-phone','m-comments'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('m-type').value = 'Prospect';
+      document.getElementById('m-status').value = 'Active';
+      document.getElementById('m-date').value = new Date().toISOString().slice(0, 10);
+      updateStats();
+      renderTable();
+      showToast('Lead added ✓', 'success');
+    }
+
+    // Close modal on overlay click
+    document.getElementById('modal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // ── Toast ─────────────────────────────────────────────────────────────────
+    function showToast(msg, type = 'success') {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.className = `toast toast--${type} show`;
+      setTimeout(() => { t.classList.remove('show'); }, 2500);
+    }
+
+    // ── Boot ──────────────────────────────────────────────────────────────────
+    loadLeads();
+  </script>
+</body>
+</html>
