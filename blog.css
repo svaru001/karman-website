@@ -602,6 +602,99 @@
 .sidebar-tools a:hover { border-color: var(--blue); color: var(--blue); }
 .sidebar-tools a span:first-child { font-size: 18px; }
 
+/* === SIDEBAR CARDS === */
+.sidebar-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+
+.sidebar-card h3 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+/* TOC and Related Articles lists */
+.sidebar-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-card ul li a {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-700);
+  padding: 7px 10px 7px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  text-decoration: none;
+  line-height: 1.45;
+  transition: color .15s, border-color .15s, background .15s;
+}
+
+.sidebar-card ul li a:hover {
+  color: var(--blue);
+  border-left-color: var(--blue);
+  background: rgba(26,107,204,.05);
+}
+
+/* CTA card */
+.sidebar-card--cta {
+  background: linear-gradient(150deg, var(--navy) 0%, #1a3a5c 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(10,37,64,.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-card--cta::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(0,201,167,.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sidebar-card--cta h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,.12);
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+}
+
+.sidebar-card--cta p {
+  font-size: 13px;
+  color: rgba(255,255,255,.72);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.sidebar-card--cta .btn--full {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
 /* === ARTICLE RELATED === */
 .article-related {
   background: var(--gray-50);
