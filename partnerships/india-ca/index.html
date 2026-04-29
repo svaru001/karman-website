@@ -499,46 +499,95 @@
     hr.divider { border: none; border-top: 1px solid var(--gray-200); margin: 28px 0; }
     hr.divider--dark { border-top-color: rgba(255,255,255,.08); }
 
-    /* ── PDF TOOLBAR ── */
-    .pdf-bar {
+    /* ── TOP BAR ── */
+    .top-bar {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 999;
+      z-index: 100;
       background: var(--navy);
       border-bottom: 1px solid rgba(255,255,255,.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 12px 28px;
-      gap: 16px;
     }
-    .pdf-bar__left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .pdf-bar__logo { height: 24px; filter: brightness(0) invert(1); }
-    .pdf-bar__title {
-      font-size: 14px;
-      font-weight: 600;
-      color: rgba(255,255,255,.7);
-    }
-    .pdf-bar__right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .pdf-bar__hint {
-      font-size: 12px;
-      color: rgba(255,255,255,.4);
-    }
-    .pdf-btn {
+    .top-bar__left { display: flex; align-items: center; gap: 12px; }
+    .top-bar__logo { height: 24px; filter: brightness(0) invert(1); }
+    .top-bar__title { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.6); }
+    .play-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: var(--blue);
       color: #fff;
       border: none;
+      border-radius: 8px;
+      padding: 9px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background .15s, transform .1s;
+    }
+    .play-btn:hover { background: var(--blue-light); transform: scale(1.02); }
+
+    body { padding-top: 56px; }
+
+    /* ── PRESENTATION OVERLAY ── */
+    .presenter {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #000;
+    }
+    .presenter.active { display: flex; flex-direction: column; }
+
+    /* Slide viewport */
+    .presenter__stage {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Each cloned slide inside the presenter */
+    .presenter__slide {
+      display: none;
+      position: absolute;
+      inset: 0;
+      overflow-y: auto;
+    }
+    .presenter__slide.visible { display: block; }
+
+    /* Scale the inner slide card to fit viewport */
+    .presenter__slide .slide {
+      border-radius: 0;
+      box-shadow: none;
+      min-height: 100%;
+      width: 100%;
+    }
+
+    /* Controls bar at bottom */
+    .presenter__controls {
+      flex-shrink: 0;
+      background: rgba(0,0,0,.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 32px;
+      gap: 20px;
+    }
+    .ctrl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      color: #fff;
       border-radius: 8px;
       padding: 9px 20px;
       font-size: 14px;
@@ -547,58 +596,39 @@
       cursor: pointer;
       transition: background .15s;
     }
-    .pdf-btn:hover { background: var(--blue-light); }
-    .pdf-btn svg { flex-shrink: 0; }
+    .ctrl-btn:hover { background: rgba(255,255,255,.2); }
+    .ctrl-btn:disabled { opacity: .3; cursor: default; }
+    .ctrl-btn--exit { background: rgba(255,60,60,.15); border-color: rgba(255,60,60,.3); }
+    .ctrl-btn--exit:hover { background: rgba(255,60,60,.3); }
+    .ctrl-btn--next { background: var(--blue); border-color: var(--blue); }
+    .ctrl-btn--next:hover { background: var(--blue-light); border-color: var(--blue-light); }
+    .ctrl-btn--next:disabled { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.15); }
 
-    /* Push deck down so toolbar doesn't overlap */
-    body { padding-top: 56px; }
-
-    /* ── PRINT / @page ── */
-    @page {
-      size: A4 landscape;
-      margin: 0;
+    .presenter__counter {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(255,255,255,.7);
+      min-width: 80px;
+      text-align: center;
     }
 
-    @media print {
-      .pdf-bar { display: none !important; }
-      body { background: #fff; padding-top: 0; }
-      .deck { padding: 0; gap: 0; max-width: 100%; width: 100%; }
-      .slide {
-        border-radius: 0;
-        box-shadow: none;
-        width: 100%;
-        min-height: 100vh;
-        page-break-after: always;
-        break-after: page;
-        page-break-inside: avoid;
-        break-inside: avoid;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .slide--cover {
-        min-height: 100vh;
-        justify-content: space-between;
-      }
-      .slide--cta {
-        min-height: 100vh;
-      }
-      /* ensure dark slides keep background colour in print */
-      .slide--dark, .slide--cta {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        color-adjust: exact;
-      }
-      .slide--cover {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        color-adjust: exact;
-      }
-      * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
+    /* Dot indicators */
+    .presenter__dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
     }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.25);
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+      border: none;
+      padding: 0;
+    }
+    .dot.active { background: var(--blue); transform: scale(1.4); }
+    .dot:hover:not(.active) { background: rgba(255,255,255,.5); }
 
     @media (max-width: 680px) {
       .slide__header, .slide__body { padding-left: 24px; padding-right: 24px; }
@@ -606,24 +636,48 @@
       .stat-strip, .card-grid--2, .card-grid--3, .fee-grid, .split, .persona-grid {
         grid-template-columns: 1fr;
       }
-      .pdf-bar__hint { display: none; }
+      .presenter__controls { padding: 12px 16px; gap: 10px; }
+      .ctrl-btn { padding: 8px 14px; font-size: 13px; }
+      .presenter__dots { display: none; }
     }
   </style>
 </head>
 <body>
 
-<!-- PDF DOWNLOAD TOOLBAR -->
-<div class="pdf-bar">
-  <div class="pdf-bar__left">
-    <img src="/logo.svg" alt="Karman" class="pdf-bar__logo" />
-    <span class="pdf-bar__title">India CA Partnership Deck · April 2026</span>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar__left">
+    <img src="/logo.svg" alt="Karman" class="top-bar__logo" />
+    <span class="top-bar__title">India CA Partnership Deck · April 2026</span>
   </div>
-  <div class="pdf-bar__right">
-    <span class="pdf-bar__hint">In the print dialog, set destination to "Save as PDF" and layout to Landscape</span>
-    <button class="pdf-btn" onclick="window.print()">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Save as PDF
+  <button class="play-btn" id="playBtn">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    Present
+  </button>
+</div>
+
+<!-- PRESENTER OVERLAY -->
+<div class="presenter" id="presenter">
+  <div class="presenter__stage" id="presenterStage">
+    <!-- slides injected by JS -->
+  </div>
+  <div class="presenter__controls">
+    <button class="ctrl-btn ctrl-btn--exit" id="exitBtn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Exit
     </button>
+    <div class="presenter__dots" id="presenterDots"></div>
+    <div class="presenter__counter" id="presenterCounter">1 / 10</div>
+    <div style="display:flex;gap:10px;">
+      <button class="ctrl-btn" id="prevBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Prev
+      </button>
+      <button class="ctrl-btn ctrl-btn--next" id="nextBtn">
+        Next
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -1120,6 +1174,95 @@
   </div>
 
 </div><!-- /deck -->
+
+<script>
+  (function () {
+    const presenter   = document.getElementById('presenter');
+    const stage       = document.getElementById('presenterStage');
+    const dotsEl      = document.getElementById('presenterDots');
+    const counterEl   = document.getElementById('presenterCounter');
+    const playBtn     = document.getElementById('playBtn');
+    const exitBtn     = document.getElementById('exitBtn');
+    const prevBtn     = document.getElementById('prevBtn');
+    const nextBtn     = document.getElementById('nextBtn');
+
+    // Grab all slides from the deck and clone into presenter
+    const sourceSlides = Array.from(document.querySelectorAll('.deck .slide'));
+    const total = sourceSlides.length;
+    let current = 0;
+
+    // Build presenter slides and dot indicators
+    sourceSlides.forEach(function (slide, i) {
+      // Slide wrapper
+      const wrapper = document.createElement('div');
+      wrapper.className = 'presenter__slide';
+      wrapper.setAttribute('data-index', i);
+      wrapper.appendChild(slide.cloneNode(true));
+      stage.appendChild(wrapper);
+
+      // Dot
+      const dot = document.createElement('button');
+      dot.className = 'dot';
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsEl.appendChild(dot);
+    });
+
+    const pSlides = Array.from(stage.querySelectorAll('.presenter__slide'));
+    const dots    = Array.from(dotsEl.querySelectorAll('.dot'));
+
+    function goTo(n) {
+      pSlides[current].classList.remove('visible');
+      dots[current].classList.remove('active');
+      current = Math.max(0, Math.min(n, total - 1));
+      pSlides[current].classList.add('visible');
+      dots[current].classList.add('active');
+      // Scroll slide to top on transition
+      pSlides[current].scrollTop = 0;
+      counterEl.textContent = (current + 1) + ' / ' + total;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    function open() {
+      goTo(0);
+      presenter.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      // Try fullscreen
+      if (presenter.requestFullscreen) presenter.requestFullscreen().catch(function(){});
+    }
+
+    function close() {
+      presenter.classList.remove('active');
+      document.body.style.overflow = '';
+      if (document.fullscreenElement) document.exitFullscreen().catch(function(){});
+    }
+
+    playBtn.addEventListener('click', open);
+    exitBtn.addEventListener('click', close);
+    nextBtn.addEventListener('click', function () { goTo(current + 1); });
+    prevBtn.addEventListener('click', function () { goTo(current - 1); });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+      if (!presenter.classList.contains('active')) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+        e.preventDefault(); goTo(current + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault(); goTo(current - 1);
+      } else if (e.key === 'Escape') {
+        close();
+      }
+    });
+
+    // Exit fullscreen via browser button also closes presenter
+    document.addEventListener('fullscreenchange', function () {
+      if (!document.fullscreenElement && presenter.classList.contains('active')) {
+        close();
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
