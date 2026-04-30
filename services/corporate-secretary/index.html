@@ -105,7 +105,7 @@
             "priceCurrency": "SGD"
           }
         ],
-        "dateModified": "2026-04-02"
+        "dateModified": "2026-05-01"
       },
       {
         "@type": "FAQPage",
@@ -149,6 +149,54 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The deadline depends on whether your company holds an AGM. Companies that are not exempt from holding an AGM must file their Annual Return within 7 months after their financial year end. Companies that are exempt from holding an AGM (typically private companies with annual revenue below S$5 million and fewer than 20 shareholders) must file within 5 months of their financial year end. Karman monitors your deadline and sends reminders well in advance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Register of Registrable Controllers (RORC)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The RORC is a beneficial-ownership register every Singapore company must maintain. A registrable controller is generally any individual who ultimately owns 25% or more of the company's shares or voting rights, or otherwise exercises significant control. The internal RORC must be kept current, and any changes must be lodged in the central RORC at ACRA within 7 days. Failing to maintain the RORC is a statutory offence with penalties up to S$5,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When does my company need an EGM instead of written resolutions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An EGM is needed when a particular shareholder decision requires a meeting under the Companies Act or your constitution — for example, certain class-rights changes. For most private companies, written resolutions signed by the required majority of shareholders work in place of an EGM and are far quicker."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I change my company name?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Changing the company name requires a special resolution of shareholders (75% majority), an availability check on the new name with ACRA, an application to ACRA for the change, and updates to the company constitution and statutory registers. Once ACRA approves, you receive a new Notice of Change of Name and update bank accounts, MAS / IRAS / GST registrations, contracts, and stationery accordingly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I still need a corporate secretary if my company is dormant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A dormant company is still subject to the Companies Act — you must file an Annual Return (in a simplified form), maintain your statutory registers, hold or dispense with the AGM, and keep the RORC current. Striking off the company is the only way to escape these obligations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between a director and a company secretary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Directors run the business and make strategic, operational, and financial decisions. The company secretary is a separate statutory officer responsible for compliance with the Companies Act, ACRA filings, AGMs, statutory registers, and corporate governance. A sole director cannot also serve as the company secretary."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a foreigner be the company secretary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The company secretary must be a natural person who is ordinarily resident in Singapore — meaning a Singapore Citizen, Singapore PR, or someone holding a valid Employment Pass or EntrePass with a residential address in Singapore. A foreign resident without local immigration status cannot serve as company secretary."
             }
           }
         ]
@@ -364,6 +412,81 @@
     .compliance-highlight__icon { font-size: 48px; flex-shrink: 0; }
     .compliance-highlight h3 { font-size: 22px; color: #fff; margin-bottom: 8px; }
     .compliance-highlight p { font-size: 15px; color: rgba(255,255,255,.8); line-height: 1.6; margin: 0; }
+
+    /* Comparison table */
+    .entity-table-wrap { overflow-x: auto; }
+    .entity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .entity-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .entity-table th:first-child { border-radius: 8px 0 0 0; }
+    .entity-table th:last-child { border-radius: 0 8px 0 0; }
+    .entity-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+      vertical-align: top;
+      background: #fff;
+    }
+    .entity-table tr:last-child td { border-bottom: none; }
+    .entity-table tr:nth-child(even) td { background: var(--gray-50); }
+    .entity-table .recommended {
+      background: rgba(26,107,204,.06) !important;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .entity-table .rec-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: .04em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* Compliance calendar */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .calendar-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .calendar-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .calendar-card__when {
+      display: inline-block;
+      background: rgba(26,107,204,.08);
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .calendar-card h3 { font-size: 16px; margin-bottom: 8px; color: var(--navy); }
+    .calendar-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin: 0; }
   </style>
 </head>
 <body>
@@ -494,8 +617,206 @@
     </section>
 
 
-    <!-- FAQ -->
+    <!-- COMPLIANCE CALENDAR -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Annual compliance calendar</span>
+          <h2 class="section-heading">Your year of statutory compliance, in one view</h2>
+          <p class="section-subtext">Every Singapore Pte Ltd faces a recurring set of deadlines. Karman tracks these for you, files on time, and flags any one-off events triggered by board, shareholder, or business changes.</p>
+        </div>
+
+        <div class="calendar-grid">
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 30 days of FYE</span>
+            <h3>Lock the financial year-end</h3>
+            <p>Confirm the financial year end (FYE) with directors. Most Singapore companies adopt 31 March or 31 December — but any FYE is permissible if consistent.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 6 months of FYE</span>
+            <h3>Approve financial statements</h3>
+            <p>Directors approve the audited or unaudited financial statements for circulation to shareholders. Small companies under the Companies Act audit-exemption rules may skip the audit.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 6 months of FYE</span>
+            <h3>Hold the AGM (or pass written resolutions)</h3>
+            <p>Listed and most public companies must hold a physical AGM. Private companies can dispense with the AGM if all members agree, replacing it with written resolutions.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 7 months of FYE</span>
+            <h3>File the Annual Return with ACRA</h3>
+            <p>Annual Return must be filed within 7 months of FYE for companies that hold an AGM, and within 5 months for AGM-exempt private companies. Late filing triggers automatic ACRA penalties (S$300–S$600).</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Annually</span>
+            <h3>Update the Register of Registrable Controllers</h3>
+            <p>Every company must maintain an electronic Register of Registrable Controllers (RORC) with ACRA, and a corresponding internal register. Beneficial ownership above 25% triggers a controller filing.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Annually</span>
+            <h3>IRAS Form C tax filing</h3>
+            <p>Form C / C-S must be filed by 30 November each year. The corporate secretary works with your accountant to ensure tax computations align with the financial statements.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">As triggered</span>
+            <h3>Director / officer changes</h3>
+            <p>Any appointment, resignation, or change in particulars (residential address, ID, name) must be lodged with ACRA within 14 days. Late lodgements attract penalties.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">As triggered</span>
+            <h3>Share allotments &amp; transfers</h3>
+            <p>New share issues, share transfers, share buybacks, and changes to share capital require board resolutions, register updates, and ACRA filings — typically within 14 days.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">As triggered</span>
+            <h3>Changes to constitution / company name</h3>
+            <p>Amendments to the company constitution, change of company name, or change of registered office require special resolutions, ACRA filings, and updated company records.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">As triggered</span>
+            <h3>Charges &amp; security interests</h3>
+            <p>If your company creates a charge over its assets (e.g., for a bank loan), the charge must be lodged with ACRA within 30 days. Late lodgement risks the charge being void against a liquidator.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- IN-HOUSE VS OUTSOURCED -->
     <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">In-house vs outsourced</span>
+          <h2 class="section-heading">Should you hire a company secretary or outsource?</h2>
+          <p class="section-subtext">For most SMEs and growth-stage companies, outsourcing the corporate secretarial function is more cost-effective and lower-risk than hiring in-house.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Consideration</th>
+                <th>Outsourced (e.g., Karman) <span class="rec-badge">Recommended for SMEs</span></th>
+                <th>In-house company secretary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Annual cost</strong></td>
+                <td class="recommended">S$600–2,500 per year</td>
+                <td>S$60K–120K per year (salary + benefits)</td>
+              </tr>
+              <tr>
+                <td><strong>Qualifications</strong></td>
+                <td class="recommended">CGI / ICSA-qualified secretary, on-tap</td>
+                <td>Need to recruit and verify qualifications</td>
+              </tr>
+              <tr>
+                <td><strong>Continuity</strong></td>
+                <td class="recommended">No disruption from staff turnover or sick leave</td>
+                <td>Risk of vacancy, knowledge loss when staff leaves</td>
+              </tr>
+              <tr>
+                <td><strong>Scalability</strong></td>
+                <td class="recommended">Scales with you — no headcount conversation</td>
+                <td>Need to grow team for additional entities or M&amp;A</td>
+              </tr>
+              <tr>
+                <td><strong>Multi-jurisdiction expertise</strong></td>
+                <td class="recommended">Experience across many SG industries and structures</td>
+                <td>Limited to your in-house knowledge</td>
+              </tr>
+              <tr>
+                <td><strong>Best for</strong></td>
+                <td class="recommended">SMEs, startups, holding cos, family offices, foreign-owned subsidiaries</td>
+                <td>Listed companies, large corporates with complex secretariat needs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How it works</span>
+          <h2 class="section-heading">Onboard with Karman in 3 steps</h2>
+          <p class="section-subtext">Whether you're appointing your first corporate secretary or switching from another provider, the transition is fast and disruption-free.</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="process-step__number">01</div>
+            <h3>Share your company details</h3>
+            <p>Send us your UEN and current statutory documents. We assess your compliance status, identify any overdue filings, and flag immediate priorities (e.g., upcoming Annual Return).</p>
+          </div>
+          <div class="process-arrow reveal">→</div>
+          <div class="process-step reveal">
+            <div class="process-step__number">02</div>
+            <h3>We file the appointment</h3>
+            <p>We draft a board resolution appointing Karman as your corporate secretary, lodge the change with ACRA, and request the statutory books from your previous secretary if you're switching providers.</p>
+          </div>
+          <div class="process-arrow reveal">→</div>
+          <div class="process-step reveal">
+            <div class="process-step__number">03</div>
+            <h3>Ongoing compliance, on autopilot</h3>
+            <p>You get a dedicated secretary, a shared compliance calendar with deadline reminders, and same-day handling of director, shareholder, and share-capital changes. Filings happen well before deadlines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COMMON COMPLIANCE FAILURES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Watch outs</span>
+          <h2 class="section-heading">Common corporate-secretarial failures &mdash; and how to avoid them</h2>
+          <p class="section-subtext">These are the most frequent issues we see when onboarding companies that previously self-managed or used a low-touch provider.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Late Annual Return filings</h3>
+            <p>The most common ACRA penalty. Triggered by no calendar tracking, secretary turnover, or assuming the accountant handles it. Penalties (S$300–S$600 per offence) compound across financial years.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Stale statutory registers</h3>
+            <p>Register of Members or Directors not updated after a share transfer, allotment, or director change. ACRA's records and your internal registers diverge — a problem during due diligence, audit, or M&amp;A.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Missed Register of Registrable Controllers (RORC) updates</h3>
+            <p>Beneficial ownership tracking is mandatory under the Companies Act. Failing to update the RORC within 7 days of a change is a statutory offence with penalties up to S$5,000.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Improper share allotments</h3>
+            <p>Issuing new shares without the right resolutions, register entries, or ACRA filings can render the allotment void or distort the cap table — costly to unwind during fundraising or exit due diligence.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>No AGM held and no exemption documented</h3>
+            <p>Private companies can dispense with the AGM only if all members agree in writing. Skipping the AGM without proper documentation is a breach of the Companies Act and can void shareholder decisions.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Undocumented bank-account &amp; signing changes</h3>
+            <p>Banks ask for board resolutions when opening accounts, changing signatories, or restructuring corporate authority. Companies often realise too late that they have no resolutions on file — and have to back-paper years of decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section" style="background:var(--gray-50);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">FAQ</span>
@@ -552,12 +873,72 @@
               <p>The Annual Return deadline depends on your company's AGM status. Companies required to hold an AGM must file within 7 months after their financial year end. Companies exempt from holding an AGM (generally private companies with annual revenue below S$5 million and fewer than 20 shareholders) must file within 5 months after financial year end. Karman monitors your specific deadline and ensures your return is filed on time, every year.</p>
             </div>
           </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What is the Register of Registrable Controllers (RORC)?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The RORC is a beneficial-ownership register that every Singapore company must maintain. A "registrable controller" is generally any individual who ultimately owns 25% or more of the company's shares or voting rights, or otherwise exercises significant control. The internal RORC must be kept current, and any changes must be lodged in the central RORC at ACRA within 7 days. Failing to maintain the RORC is a statutory offence with penalties up to S$5,000. Karman maintains both your internal and ACRA-lodged RORC.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              When does my company need an EGM instead of written resolutions?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>An EGM (Extraordinary General Meeting) is needed when a particular shareholder decision requires a meeting under the Companies Act or your constitution — for example, certain class-rights changes or where the constitution mandates it. For most private companies, written resolutions signed by the required majority of shareholders work in place of an EGM and are far quicker. Karman drafts written resolutions or convenes EGMs depending on what's required.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can I change my company name?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Changing the company name requires a special resolution of shareholders (75% majority), an availability check on the new name with ACRA, an application to ACRA for the change, and updates to the company constitution and statutory registers. Once ACRA approves, you'll receive a new Notice of Change of Name. We also help update bank accounts, MAS / IRAS / GST registrations, contracts, and stationery to reflect the new name.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Do I still need a corporate secretary if my company is dormant?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. A dormant company is still subject to the Companies Act — you must file an Annual Return (in a simplified form), maintain your statutory registers, hold or dispense with the AGM, and keep the RORC current. Striking off the company is the only way to escape these obligations. Karman offers a low-fee dormant-company package that handles the full annual compliance for inactive entities.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What's the difference between a director and a company secretary?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Directors run the business and make strategic, operational, and financial decisions. The company secretary is a separate statutory officer responsible for compliance with the Companies Act, ACRA filings, AGMs, statutory registers, and corporate governance. A sole director cannot also serve as the company secretary. The company secretary is often called the "compliance backbone" of a Singapore company — a role that is independent from the board's commercial responsibilities.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can a foreigner be the company secretary?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The company secretary must be a natural person who is ordinarily resident in Singapore — meaning a Singapore Citizen, Singapore PR, or someone holding a valid Employment Pass or EntrePass with a residential address in Singapore. A foreign resident without local immigration status cannot serve as company secretary. This is one reason most foreign-owned Singapore companies outsource the role to a Singapore-based provider like Karman.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- RELATED SERVICES -->
-    <section class="section" style="background:var(--gray-50);">
+    <section class="section" style="background:#fff;">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Related Services</span>

@@ -106,7 +106,7 @@
             }
           }
         ],
-        "dateModified": "2026-04-10"
+        "dateModified": "2026-05-01"
       },
       {
         "@type": "FAQPage",
@@ -150,6 +150,62 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Singapore's VCC Act provides a re-domiciliation mechanism for offshore funds (including Cayman Islands, BVI, and other recognised jurisdictions) to transfer their legal domicile to Singapore as a VCC. The process requires: investor consent (usually via a shareholder resolution), CIMA or BVI FSC de-registration, ACRA re-domiciliation application, and satisfaction of the VCC eligibility requirements. The fund's existing legal identity, track record, and investor relationships are preserved. Karman manages the full process in coordination with your offshore legal counsel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the minimum capital for a Singapore VCC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no statutory minimum paid-up capital — a VCC can be incorporated with a single share. However, MAS expects a credible AUM plan tied to your tax incentive application: S$10M for 13O and S$50M for 13U. For funds not applying for incentives, the practical floor is whatever level of AUM justifies the operating cost (~S$30K–80K per year), which is typically S$10M+ for most fund managers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can I add a new sub-fund to an umbrella VCC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2–10 working days in most cases. We file the new sub-fund constitution with ACRA, register it under the umbrella VCC, notify MAS, and update the AML/CFT programme. The sub-fund inherits the umbrella's directors, auditor, administrator, and corporate secretary — which is much faster and cheaper than incorporating a fresh standalone fund. This is the main reason umbrella VCCs are preferred by multi-strategy managers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does a Singapore VCC cost to set up and run annually?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Year-1 setup is typically S$25K–60K all-in: VCC incorporation, MAS notification, company secretary, AML/CFT programme, 13O/13U application support, and resident director (if needed). Annual ongoing costs are typically S$30K–80K, scaling with the number of sub-funds, audit complexity, and whether you need fund administration support. Re-domiciliation from offshore typically adds S$15K–30K to year-1 costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the ongoing compliance calendar for a VCC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Annual deadlines include: ACRA annual return (within 7 months of year-end), audited financial statements per sub-fund, IRAS Form C tax filing, GST returns (if registered), MAS regulatory submissions, AML/CFT periodic reviews, and 13O/13U conditions monitoring. Corporate secretary maintenance (registers, board resolutions, AGM where applicable) is continuous. Karman manages all deadlines for retainer clients via a shared compliance calendar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a Singapore VCC subject to GST?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most fund management activity is exempt or zero-rated from GST. However, fees paid to administrators, auditors, legal advisers, and other Singapore-based service providers may carry GST. Whether your VCC needs to register for GST depends on its taxable supplies — registration is mandatory above S$1M of taxable revenue and voluntary below. For most pure investment VCCs, GST registration isn't required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a single-family office use a VCC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — VCCs are widely used by single-family offices in Singapore, often paired with 13O or 13U incentives. Family offices typically combine the VCC (the investment vehicle) with a Singapore-based fund management entity (often a Registered Fund Management Company) to satisfy MAS substance requirements. This pairing has become the standard structure for Asian and Middle Eastern family offices establishing in Singapore."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do investors subscribe to or redeem from a VCC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Subscriptions and redemptions are handled via the fund's offering document (PPM) and subscription agreement. Because VCCs have variable capital, the directors can issue and redeem shares at NAV without shareholder approval — mirroring offshore fund mechanics. The fund administrator processes investor activity, calculates the NAV, and updates the register of members. Open-ended VCCs typically allow monthly or quarterly activity; closed-end VCCs use commitment-and-call mechanics like a traditional PE fund."
             }
           }
         ]
@@ -415,6 +471,57 @@
     .bottom-cta__inner { position: relative; z-index: 1; }
     .bottom-cta h2 { font-size: clamp(26px, 4vw, 40px); color: #fff; margin-bottom: 16px; }
     .bottom-cta p { font-size: 17px; color: rgba(255,255,255,.75); margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+    /* Comparison table */
+    .entity-table-wrap { overflow-x: auto; }
+    .entity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .entity-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .entity-table th:first-child { border-radius: 8px 0 0 0; }
+    .entity-table th:last-child { border-radius: 0 8px 0 0; }
+    .entity-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+      vertical-align: top;
+      background: #fff;
+    }
+    .entity-table tr:last-child td { border-bottom: none; }
+    .entity-table tr:nth-child(even) td { background: var(--gray-50); }
+    .entity-table .recommended {
+      background: rgba(26,107,204,.06) !important;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .entity-table .rec-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: .04em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* Inline list inside content sections */
+    .vcc-content { max-width: 860px; margin: 40px auto 0; }
+    .vcc-content h3 { font-size: 20px; color: var(--navy); margin-bottom: 16px; }
+    .vcc-content p { font-size: 15px; color: var(--gray-700); line-height: 1.8; margin-bottom: 14px; }
+    .vcc-content ul { font-size: 15px; color: var(--gray-700); line-height: 1.9; padding-left: 22px; margin-bottom: 12px; }
+    .vcc-content ul li { margin-bottom: 6px; }
   </style>
 </head>
 <body>
@@ -533,8 +640,284 @@
     </section>
 
 
-    <!-- PROCESS -->
+    <!-- WHY SINGAPORE VCC -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Singapore VCC</span>
+          <h2 class="section-heading">Singapore VCC vs Cayman, BVI &amp; Luxembourg</h2>
+          <p class="section-subtext">Why fund managers are migrating from offshore jurisdictions to Singapore VCCs.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Singapore VCC <span class="rec-badge">Recommended</span></th>
+                <th>Cayman SPC / Exempted Company</th>
+                <th>BVI Business Company</th>
+                <th>Luxembourg SICAV</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tax treaty network</strong></td>
+                <td class="recommended">90+ DTAs (incl. India, China, Indonesia)</td>
+                <td>Limited — no US treaty</td>
+                <td>Very limited</td>
+                <td>80+ DTAs</td>
+              </tr>
+              <tr>
+                <td><strong>Tax on fund income</strong></td>
+                <td class="recommended">0% under 13O / 13U exemption</td>
+                <td>0% (no corporate tax)</td>
+                <td>0% (no corporate tax)</td>
+                <td>~0% for SICAV (subscription tax 0.01–0.05%)</td>
+              </tr>
+              <tr>
+                <td><strong>Substance requirements</strong></td>
+                <td class="recommended">Min. 2 investment professionals + local fund manager</td>
+                <td>Economic substance rules — increasingly tight</td>
+                <td>Economic substance rules — increasingly tight</td>
+                <td>Substance + AIFM passport</td>
+              </tr>
+              <tr>
+                <td><strong>Investor familiarity</strong></td>
+                <td class="recommended">Strong in Asia-Pacific, growing globally</td>
+                <td>Universal (legacy preference)</td>
+                <td>Universal (legacy)</td>
+                <td>Strong in Europe</td>
+              </tr>
+              <tr>
+                <td><strong>Set-up cost (year 1)</strong></td>
+                <td class="recommended">~S$25K–60K all-in</td>
+                <td>~US$30K–80K</td>
+                <td>~US$15K–40K</td>
+                <td>~€80K–200K</td>
+              </tr>
+              <tr>
+                <td><strong>Re-domiciliation in</strong></td>
+                <td class="recommended">Yes — direct re-domiciliation under VCC Act</td>
+                <td>Limited</td>
+                <td>Limited</td>
+                <td>Restructuring required</td>
+              </tr>
+              <tr>
+                <td><strong>OECD reputation</strong></td>
+                <td class="recommended">White-listed; OECD compliant</td>
+                <td>EU grey list history</td>
+                <td>EU grey list (2023)</td>
+                <td>White-listed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="text-align:center; margin-top:20px; font-size:14px; color:var(--gray-500);">Considering re-domiciling an offshore fund? <a href="/#contact" style="color:var(--blue); font-weight:600;">Talk to our team →</a></p>
+      </div>
+    </section>
+
+
+    <!-- VCC STRUCTURES -->
     <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Structures</span>
+          <h2 class="section-heading">Standalone vs Umbrella VCC: which fits your fund?</h2>
+          <p class="section-subtext">A VCC can be set up as a single fund or as an umbrella holding multiple sub-funds. The right choice depends on your strategy, investor base, and how you plan to scale.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 960px; margin: 0 auto;">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="square"></i></div>
+            <h3>Standalone VCC</h3>
+            <p style="margin-bottom: 12px;">A single fund operating under one VCC. Simpler governance, single set of accounts, lower running costs. Best for first-time fund managers, single-strategy funds, or single-investor mandates.</p>
+            <p style="font-size:13px; color: var(--gray-500); margin: 0;"><strong>Typical use:</strong> Solo GP launch fund, single-family-office investment vehicle, single-strategy hedge fund under S$100M AUM.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="layers"></i></div>
+            <h3>Umbrella VCC with sub-funds</h3>
+            <p style="margin-bottom: 12px;">One legal entity housing multiple sub-funds, each with segregated assets and liabilities. Sub-funds share board, auditor, and administrator — driving down per-fund costs once you have 2+ strategies. New sub-funds can be added in days, not months.</p>
+            <p style="font-size:13px; color: var(--gray-500); margin: 0;"><strong>Typical use:</strong> Multi-strategy asset manager, PE/VC firm with multiple vintages, fund-of-funds platform, multi-family office.</p>
+          </div>
+        </div>
+
+        <div style="max-width: 1100px; margin: 56px auto 0;">
+          <h3 style="font-size: 22px; color: var(--navy); margin-bottom: 24px; text-align: center;">Common VCC use cases we set up</h3>
+          <div class="features-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
+            <div class="feature-card reveal">
+              <div class="feature-card__icon"><i data-lucide="trending-up"></i></div>
+              <h3>Private equity &amp; VC funds</h3>
+              <p>Closed-end PE and VC funds use umbrella VCCs to launch sequential vintages while keeping back-office costs flat. Re-domiciliation from Cayman is common.</p>
+            </div>
+            <div class="feature-card reveal">
+              <div class="feature-card__icon"><i data-lucide="line-chart"></i></div>
+              <h3>Hedge funds</h3>
+              <p>Open-ended hedge funds benefit from VCC's variable capital — investors can subscribe and redeem without shareholder approval, mirroring offshore mechanics.</p>
+            </div>
+            <div class="feature-card reveal">
+              <div class="feature-card__icon"><i data-lucide="home"></i></div>
+              <h3>Single &amp; multi-family offices</h3>
+              <p>Family offices use VCCs (often paired with 13O / 13U) to consolidate global investments into a Singapore-based, tax-efficient, regulated structure.</p>
+            </div>
+            <div class="feature-card reveal">
+              <div class="feature-card__icon"><i data-lucide="combine"></i></div>
+              <h3>Fund-of-funds &amp; feeder structures</h3>
+              <p>Master-feeder and fund-of-funds platforms use umbrella VCCs to create dedicated sub-funds for each underlying strategy or investor class, with full asset segregation.</p>
+            </div>
+            <div class="feature-card reveal">
+              <div class="feature-card__icon"><i data-lucide="globe-2"></i></div>
+              <h3>Re-domiciled offshore funds</h3>
+              <p>Existing Cayman, BVI, or Bermuda funds re-domiciling to Singapore VCC retain their track record and investor relationships while improving treaty access and substance.</p>
+            </div>
+            <div class="feature-card reveal">
+              <div class="feature-card__icon"><i data-lucide="shield-check"></i></div>
+              <h3>Crypto &amp; digital asset funds</h3>
+              <p>Digital asset funds use VCCs for regulatory clarity. The structure pairs well with MAS's Payment Services Act and Digital Token Service Provider regimes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 13O VS 13U -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tax incentives</span>
+          <h2 class="section-heading">13O vs 13U: choosing the right tax exemption</h2>
+          <p class="section-subtext">Both incentives exempt qualifying investment income from Singapore tax. Eligibility, AUM thresholds, and substance requirements differ — and the wrong choice can disqualify your fund.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th>Section 13O — Onshore Fund</th>
+                <th>Section 13U — Enhanced Tier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Minimum AUM</strong></td>
+                <td>S$10 million at point of application</td>
+                <td>S$50 million at point of application</td>
+              </tr>
+              <tr>
+                <td><strong>Local business spend</strong></td>
+                <td>S$200,000 per year (post-2022 tightening)</td>
+                <td>S$500,000 per year (S$1M from 2024 for some new applicants)</td>
+              </tr>
+              <tr>
+                <td><strong>Local investment requirement</strong></td>
+                <td>10% of AUM or S$10M (lower of the two) in qualifying local investments</td>
+                <td>Tiered local-investment commitment based on AUM</td>
+              </tr>
+              <tr>
+                <td><strong>Investment professionals</strong></td>
+                <td>Minimum 2 IPs (3 from 2025 for some funds)</td>
+                <td>Minimum 3 IPs (with at least one senior)</td>
+              </tr>
+              <tr>
+                <td><strong>Fund administrator</strong></td>
+                <td>Singapore-based fund administrator required</td>
+                <td>Singapore-based fund administrator required</td>
+              </tr>
+              <tr>
+                <td><strong>Investor restrictions</strong></td>
+                <td>Mostly non-Singapore investors; local investor caps apply</td>
+                <td>No investor restrictions (open to all)</td>
+              </tr>
+              <tr>
+                <td><strong>Application route</strong></td>
+                <td>Direct to MAS / IRAS</td>
+                <td>Direct to MAS / IRAS — generally faster review</td>
+              </tr>
+              <tr>
+                <td><strong>Best for</strong></td>
+                <td>Mid-size funds, single-family offices, emerging managers</td>
+                <td>Institutional funds, multi-family offices, established asset managers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="vcc-content">
+          <h3>Application process &amp; timeline</h3>
+          <p>Tax incentive applications run in parallel with VCC incorporation. We prepare a fund management plan covering investment strategy, AUM trajectory, headcount plan, and local spend forecast, file with MAS, and respond to clarifications. From application to in-principle approval typically takes <strong>4–6 months for 13O</strong> and <strong>3–4 months for 13U</strong>. The exemption applies retroactively from the fund's incorporation date if approved.</p>
+
+          <h3 style="margin-top: 32px;">Common rejection reasons</h3>
+          <ul>
+            <li><strong>Underqualified fund manager</strong> — manager lacks a CMS licence or doesn't qualify for an exemption (e.g., Registered Fund Management Company).</li>
+            <li><strong>Substance gap</strong> — investment professionals are not Singapore-based, or are shared with affiliates without proper time-allocation.</li>
+            <li><strong>Local spend shortfall</strong> — projected spend below MAS thresholds, or spend incurred outside Singapore.</li>
+            <li><strong>Inconsistent fund strategy</strong> — strategy in the application doesn't match actual portfolio holdings post-launch.</li>
+            <li><strong>Late filing</strong> — application submitted after the fund has begun deploying capital, so the incentive may apply only prospectively.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SERVICE PROVIDERS -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Mandatory service providers</span>
+          <h2 class="section-heading">Service providers your VCC needs by law</h2>
+          <p class="section-subtext">The VCC Act and MAS rules require specific service providers. We coordinate appointments and ongoing oversight so nothing falls through the cracks.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="briefcase"></i></div>
+            <h3>MAS-licensed fund manager</h3>
+            <p>Every VCC must be managed by a CMS-licensed manager, an MAS-exempt manager (RFMC, accredited-investor exemption, or licensed bank), or a Registered Fund Management Company.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="check-circle-2"></i></div>
+            <h3>Approved auditor</h3>
+            <p>Annual audit is mandatory for every sub-fund. Funds applying for 13O / 13U incentives must use one of the eight MAS-approved audit firms (Big Four plus a small approved list).</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="lock"></i></div>
+            <h3>Custodian</h3>
+            <p>A licensed custodian must hold fund assets unless an exemption applies (e.g., closed-end PE funds with limited investor counts and qualifying conditions).</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="calculator"></i></div>
+            <h3>Fund administrator</h3>
+            <p>Fund accounting, NAV calculation, investor reporting, and capital activity tracking. For 13O / 13U funds, the administrator must be Singapore-based.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="user-check"></i></div>
+            <h3>Company secretary</h3>
+            <p>The VCC must appoint a qualified company secretary within 6 months of incorporation. Karman provides this in-house with CGI / ICSA-qualified secretaries.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="shield"></i></div>
+            <h3>Compliance officer &amp; MLRO</h3>
+            <p>Every VCC requires an AML/CFT Compliance Officer and Money Laundering Reporting Officer. The roles can be outsourced or held internally subject to MAS guidelines.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="user-cog"></i></div>
+            <h3>Resident director</h3>
+            <p>Minimum one Singapore-resident director on the VCC board. We provide a qualified nominee director where the management team is fully overseas.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="scroll"></i></div>
+            <h3>Tax agent</h3>
+            <p>Annual tax filings (Form C, sub-fund tax computations, GIRO arrangements) are submitted by an authorised tax agent. Karman provides this alongside fund administration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="section" style="background:var(--gray-50);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">How it works</span>
@@ -563,6 +946,51 @@
         </div>
       </div>
     </section>
+
+    <!-- COMMON MISTAKES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Watch outs</span>
+          <h2 class="section-heading">Common VCC setup mistakes &mdash; and how we avoid them</h2>
+          <p class="section-subtext">After working through dozens of VCC launches, the same handful of issues keep appearing. These are the ones that cost the most time and money to unwind later.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Choosing standalone when umbrella was better</h3>
+            <p>Founders often launch a standalone VCC to save costs, then need a second strategy six months later. Adding a sub-fund to an existing umbrella takes days; spinning up a second standalone means duplicating directors, auditors, and admin. We assess your 2–3 year roadmap before structuring.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Filing 13O / 13U too late</h3>
+            <p>If your fund starts deploying capital before MAS approval, qualifying income earned pre-approval may be taxed. We file the tax incentive application in parallel with incorporation so the exemption applies from day one.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Underestimating the fund manager licensing path</h3>
+            <p>Some founders assume they can incorporate the VCC first and sort out CMS licensing later. MAS requires a manager arrangement at incorporation. We confirm your manager structure (CMS, RFMC, AI-exempt, or third-party manager) before filing.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Substance gaps with 13O / 13U</h3>
+            <p>Two investment professionals on paper isn't enough — they need to be Singapore-based, working full-time on the fund, with verifiable contracts and payroll. MAS audits substance during in-principle review and post-approval.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Skipping the AML/CFT framework</h3>
+            <p>VCCs need a documented AML/CFT programme from day one — risk assessments, KYC procedures, transaction monitoring, suspicious-transaction reporting. Building this retroactively after onboarding investors is painful and creates regulatory risk.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Ignoring re-domiciliation timing</h3>
+            <p>Re-domiciling a Cayman fund into a Singapore VCC requires investor consent, CIMA de-registration, and ACRA approval — typically 3–6 months. Founders often start too late and miss the next reporting cycle. We sequence the steps to align with audit and capital activity windows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- FAQ -->
     <section class="section" style="background:var(--gray-50);">
@@ -620,6 +1048,76 @@
             </button>
             <div class="faq-answer">
               <p>Yes. Singapore's VCC Act provides a re-domiciliation mechanism for offshore funds (including Cayman Islands, BVI, and other recognised jurisdictions) to transfer their legal domicile to Singapore as a VCC. The process requires: investor consent (usually via a shareholder resolution), CIMA or BVI FSC de-registration, ACRA re-domiciliation application, and satisfaction of the VCC eligibility requirements. The fund's existing legal identity, track record, and investor relationships are preserved. Karman manages the full process in coordination with your offshore legal counsel.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What is the minimum capital for a Singapore VCC?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>There is no statutory minimum paid-up capital — a VCC can be incorporated with a single share. However, MAS expects a credible AUM plan tied to your tax incentive application: S$10M for 13O and S$50M for 13U. For funds not applying for incentives, the practical floor is whatever level of AUM justifies the operating cost (~S$30K–80K per year), which is typically S$10M+ for most fund managers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How quickly can I add a new sub-fund to an umbrella VCC?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>2–10 working days in most cases. We file the new sub-fund constitution with ACRA, register it under the umbrella VCC, notify MAS, and update the AML/CFT programme. The sub-fund inherits the umbrella's directors, auditor, administrator, and corporate secretary — which is much faster and cheaper than incorporating a fresh standalone fund. This is the main reason umbrella VCCs are preferred by multi-strategy managers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What does a Singapore VCC cost to set up and run annually?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Year-1 setup is typically S$25K–60K all-in: VCC incorporation, MAS notification, company secretary, AML/CFT programme, 13O/13U application support, and resident director (if needed). Annual ongoing costs are typically S$30K–80K, scaling with the number of sub-funds, audit complexity, and whether you need fund administration support. Re-domiciliation from offshore typically adds S$15K–30K to year-1 costs. We provide fixed-fee proposals after a scoping call.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What is the ongoing compliance calendar for a VCC?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Annual deadlines include: ACRA annual return (within 7 months of year-end), audited financial statements per sub-fund, IRAS Form C tax filing, GST returns (if registered), MAS regulatory submissions, AML/CFT periodic reviews, and 13O/13U conditions monitoring. Corporate secretary maintenance (registers, board resolutions, AGM where applicable) is continuous. For retainer clients, Karman manages all deadlines through a shared compliance calendar with proactive reminders.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Is a Singapore VCC subject to GST?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Most fund management activity is exempt or zero-rated from GST. However, fees paid to administrators, auditors, legal advisers, and other Singapore-based service providers may carry GST. Whether your VCC needs to register for GST depends on its taxable supplies and remitted services — registration is mandatory above S$1M of taxable revenue and voluntary below. For most pure investment VCCs, GST registration isn't required, but we assess this case-by-case during setup.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can a single-family office use a VCC?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes — VCCs are widely used by single-family offices in Singapore, often paired with 13O or 13U incentives. Family offices typically combine the VCC (the investment vehicle) with a Singapore-based fund management entity (often a Registered Fund Management Company, RFMC) to satisfy MAS substance requirements. This pairing has become the standard structure for Asian and Middle Eastern family offices establishing in Singapore.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How do investors subscribe to or redeem from a VCC?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Subscriptions and redemptions are handled via the fund's offering document (PPM) and subscription agreement. Because VCCs have variable capital, the directors can issue and redeem shares at NAV without shareholder approval — mirroring offshore fund mechanics. The fund administrator processes investor activity, calculates the NAV, and updates the register of members. Open-ended VCCs typically allow monthly or quarterly subscriptions and redemptions; closed-end VCCs work on commitment-and-call mechanics like a traditional PE fund.</p>
             </div>
           </div>
         </div>

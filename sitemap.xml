@@ -42,7 +42,7 @@
   <!-- ── Service Pages ── -->
   <url>
     <loc>https://karman.com.sg/services/vcc-fund-administration</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -56,21 +56,21 @@
 
   <url>
     <loc>https://karman.com.sg/services/corporate-secretary</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://karman.com.sg/services/accounting</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://karman.com.sg/services/gst-registration</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>

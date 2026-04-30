@@ -122,7 +122,7 @@
             }
           }
         ],
-        "dateModified": "2026-04-03"
+        "dateModified": "2026-05-01"
       },
       {
         "@type": "FAQPage",
@@ -166,6 +166,54 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Form C-S is a simplified corporate income tax return for smaller Singapore companies. Your company can file Form C-S if it has an annual revenue of S$5 million or below, derives income only from Singapore, and is not claiming specific deductions such as carry-back of losses or investment allowances. Form C-S is due by 30 November each year. Companies that do not qualify for Form C-S must file the full Form C instead."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What corporate tax rate does Singapore charge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Singapore's headline corporate income tax rate is 17%, but the effective rate is much lower for most companies. New start-ups qualify for the Start-Up Tax Exemption (75% off the first S$100,000 plus 50% off the next S$100,000) for the first three years. Established companies receive a Partial Tax Exemption — 75% off the first S$10,000 and 50% off the next S$190,000. Combined, the effective tax rate for most SMEs is closer to 5–10% on the first S$200,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When must my company register for GST?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GST registration is compulsory once your taxable revenue exceeds S$1 million in any 12-month rolling period, or you reasonably expect it to exceed S$1 million in the next 12 months. Once registered, you charge 9% GST on standard-rated supplies, file F5 returns quarterly, and can claim back input GST on business expenses. Voluntary registration is also possible below the threshold, often beneficial for B2B businesses with mostly GST-registered customers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which accounting software do you use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We work with all major cloud accounting platforms — Xero, QuickBooks Online, and MYOB. For most clients we recommend Xero, which integrates seamlessly with Singapore banks (DBS, OCBC, UOB), payroll providers, and IRAS for GST submission. The software cost is bundled into our service. If you already use a different platform, we can migrate or continue with your existing tool."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to file an annual return if my company is dormant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A dormant company must still file an Annual Return with ACRA, file a tax return (or claim the dormant company filing exemption from IRAS), and maintain its statutory registers. The ACRA filing fee is the same as an active company. Dormant companies often qualify for ECI filing waiver and Form C-S relief, but ACRA filings remain mandatory."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Start-Up Tax Exemption (SUTE) work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SUTE applies to qualifying new start-ups for their first three Years of Assessment. It exempts 75% of the first S$100,000 of normal chargeable income plus 50% of the next S$100,000. To qualify, the company must be incorporated and tax-resident in Singapore with no more than 20 shareholders (with at least one individual shareholder holding 10%+). Investment-holding and property-development companies don't qualify."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I switch accountants mid-financial year?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Switching mid-year is straightforward — we onboard you, request your trial balance and supporting records from the previous accountant, reconcile the opening balances, and pick up where they left off. Most transitions complete within 2–3 weeks with no disruption to your monthly close cadence."
             }
           }
         ]
@@ -405,6 +453,81 @@
     .bottom-cta__inner { position: relative; z-index: 1; }
     .bottom-cta h2 { font-size: clamp(26px, 4vw, 40px); color: #fff; margin-bottom: 16px; }
     .bottom-cta p { font-size: 17px; color: rgba(255,255,255,.75); margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+    /* Comparison table */
+    .entity-table-wrap { overflow-x: auto; }
+    .entity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .entity-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .entity-table th:first-child { border-radius: 8px 0 0 0; }
+    .entity-table th:last-child { border-radius: 0 8px 0 0; }
+    .entity-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+      vertical-align: top;
+      background: #fff;
+    }
+    .entity-table tr:last-child td { border-bottom: none; }
+    .entity-table tr:nth-child(even) td { background: var(--gray-50); }
+    .entity-table .recommended {
+      background: rgba(26,107,204,.06) !important;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .entity-table .rec-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: .04em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* Compliance calendar */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .calendar-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .calendar-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .calendar-card__when {
+      display: inline-block;
+      background: rgba(26,107,204,.08);
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .calendar-card h3 { font-size: 16px; margin-bottom: 8px; color: var(--navy); }
+    .calendar-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin: 0; }
   </style>
 </head>
 <body>
@@ -528,8 +651,231 @@
     </section>
 
 
-    <!-- PROCESS -->
+    <!-- SFRS & AUDIT THRESHOLDS -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Reporting standards &amp; audit</span>
+          <h2 class="section-heading">SFRS, audit exemption &amp; what your company must produce</h2>
+          <p class="section-subtext">Singapore companies report under the Singapore Financial Reporting Standards (SFRS). Whether you need a statutory audit depends on your size — most SMEs qualify for the small company exemption.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Criterion</th>
+                <th>Audit-exempt small company <span class="rec-badge">Most SMEs</span></th>
+                <th>Audit-required company</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Annual revenue</strong></td>
+                <td class="recommended">Not exceeding S$10 million</td>
+                <td>Above S$10 million</td>
+              </tr>
+              <tr>
+                <td><strong>Total assets (year-end)</strong></td>
+                <td class="recommended">Not exceeding S$10 million</td>
+                <td>Above S$10 million</td>
+              </tr>
+              <tr>
+                <td><strong>Number of employees</strong></td>
+                <td class="recommended">Not more than 50</td>
+                <td>More than 50</td>
+              </tr>
+              <tr>
+                <td><strong>Qualifying threshold</strong></td>
+                <td class="recommended">Meet at least 2 of 3 criteria above (and be a private company)</td>
+                <td>Fails 2 or more criteria for 2 consecutive years</td>
+              </tr>
+              <tr>
+                <td><strong>What you must prepare</strong></td>
+                <td class="recommended">Unaudited (compiled) financial statements per SFRS for SE</td>
+                <td>Audited financial statements per full SFRS</td>
+              </tr>
+              <tr>
+                <td><strong>Reporting standard</strong></td>
+                <td class="recommended">SFRS for Small Entities (simpler)</td>
+                <td>Full SFRS or SFRS(I) (IFRS-aligned)</td>
+              </tr>
+              <tr>
+                <td><strong>Filing with ACRA</strong></td>
+                <td class="recommended">Lodge unaudited FS with Annual Return</td>
+                <td>Lodge audited FS with Annual Return</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="text-align:center; margin-top:20px; font-size:14px; color:var(--gray-500);">Karman prepares both unaudited compiled accounts (SFRS for SE) and works with external auditors when audit is required.</p>
+      </div>
+    </section>
+
+
+    <!-- TAX COMPLIANCE CALENDAR -->
     <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Annual tax calendar</span>
+          <h2 class="section-heading">Your year of accounting &amp; tax deadlines, in one view</h2>
+          <p class="section-subtext">Singapore companies juggle ACRA, IRAS, and CPF deadlines throughout the year. We track every milestone — and file ahead of time so you never see a penalty.</p>
+        </div>
+
+        <div class="calendar-grid">
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Monthly</span>
+            <h3>Bookkeeping &amp; bank reconciliation</h3>
+            <p>Transactions categorised, bank statements reconciled, suspense items resolved before they compound. You get a monthly close summary.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Monthly (by 14th)</span>
+            <h3>CPF contributions</h3>
+            <p>For companies with employees, CPF contributions for the previous month are due by the 14th. Late payment attracts a 1.5% per month interest charge.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Quarterly</span>
+            <h3>GST F5 returns (if registered)</h3>
+            <p>Filed within 1 month of each quarter end. Output GST collected, input GST claimed, and net payable / refundable lodged with IRAS.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 3 months of FYE</span>
+            <h3>ECI filing with IRAS</h3>
+            <p>Estimated Chargeable Income filed within 3 months of FYE. Filing accurately prevents IRAS from raising an inflated estimated assessment.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 6 months of FYE</span>
+            <h3>Financial statements approved</h3>
+            <p>Directors approve compiled or audited FS for circulation to shareholders, ahead of the AGM (or written resolutions).</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">Within 7 months of FYE</span>
+            <h3>Annual Return + FS to ACRA</h3>
+            <p>Annual Return lodged with financial statements attached (XBRL where required). The corporate secretary handles the ACRA filing.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">By 1 March (annually)</span>
+            <h3>IR8A &amp; AIS submissions</h3>
+            <p>Employer must submit IR8A income returns for all employees by 1 March. Companies on Auto-Inclusion Scheme (AIS) submit electronically — mandatory above 5 employees.</p>
+          </div>
+          <div class="calendar-card reveal">
+            <span class="calendar-card__when">By 30 November</span>
+            <h3>Form C-S / Form C corporate tax</h3>
+            <p>Annual corporate income tax return filed with IRAS by 30 November. Form C-S for companies under S$5M revenue; Form C for everyone else.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DIY VS OUTSOURCED -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">DIY vs outsourced</span>
+          <h2 class="section-heading">Should you keep accounting in-house or outsource?</h2>
+          <p class="section-subtext">Most Singapore SMEs save money and reduce risk by outsourcing. Here's how the trade-offs compare.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Consideration</th>
+                <th>Outsourced (e.g., Karman) <span class="rec-badge">Recommended for SMEs</span></th>
+                <th>In-house accountant / DIY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Annual cost</strong></td>
+                <td class="recommended">From S$2K–12K depending on transaction volume</td>
+                <td>S$60K–110K (qualified accountant salary + benefits)</td>
+              </tr>
+              <tr>
+                <td><strong>Software &amp; tooling</strong></td>
+                <td class="recommended">Bundled — Xero / QuickBooks / Hubdoc included</td>
+                <td>Separate licences (~S$600–1,500 / yr)</td>
+              </tr>
+              <tr>
+                <td><strong>Tax expertise</strong></td>
+                <td class="recommended">In-house tax advisors handle ECI, Form C-S/C, GST</td>
+                <td>Junior accountants may need external tax help</td>
+              </tr>
+              <tr>
+                <td><strong>Continuity</strong></td>
+                <td class="recommended">No disruption from staff turnover or leave</td>
+                <td>Knowledge loss when accountant leaves</td>
+              </tr>
+              <tr>
+                <td><strong>Risk of error / penalty</strong></td>
+                <td class="recommended">Multi-reviewer process, deadline tracking</td>
+                <td>Single point of failure; deadline misses common</td>
+              </tr>
+              <tr>
+                <td><strong>CFO advisory</strong></td>
+                <td class="recommended">Available on Scale plan — fractional CFO included</td>
+                <td>Need separate hire (S$120K+ for fractional CFO)</td>
+              </tr>
+              <tr>
+                <td><strong>Best for</strong></td>
+                <td class="recommended">Startups, SMEs, foreign-owned subsidiaries, holding cos</td>
+                <td>S$50M+ revenue businesses with complex group structures</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COMMON ACCOUNTING MISTAKES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Watch outs</span>
+          <h2 class="section-heading">Common accounting mistakes &mdash; and how we avoid them</h2>
+          <p class="section-subtext">After onboarding hundreds of Singapore companies onto our books, the same patterns keep appearing. These are the issues that cost the most to fix later.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Missing ECI filing</h3>
+            <p>Skipping ECI because you think it doesn't apply. If IRAS doesn't receive an ECI, they raise an estimated assessment — usually inflated, requiring an appeal that takes months to unwind. We file ECI by default for every client.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Mixing personal &amp; business expenses</h3>
+            <p>Founders pay business expenses from personal cards (or vice versa) and never reconcile. By year-end the books are tangled, deductible expenses are missed, and shareholder/director loans become messy. We separate these from day one.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Late or missing GST registration</h3>
+            <p>GST registration is compulsory once trailing 12-month taxable revenue exceeds S$1M. Missing the trigger means back-paying GST (you owe it whether or not you charged customers). We monitor your revenue and flag the threshold early.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Wrong financial year-end choice</h3>
+            <p>Picking a financial year-end that doesn't align with cash flow (e.g., December for a business with peak sales in Q4) creates audit and cash-tax timing pain. We advise on FYE selection during incorporation or before year 2.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Misclassified expenses costing tax relief</h3>
+            <p>Capital expenditure booked as expense (or vice versa), foreign-sourced income misclassified as taxable, R&amp;D claims missed entirely. A trained accountant typically saves 5–15% off the corporate tax bill on review.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>No documentation for IRAS audit</h3>
+            <p>Receipts get lost, contracts aren't filed, and bank statements aren't kept. When IRAS audits (or your investors do due diligence), missing documentation can disqualify expense claims and trigger penalties.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="section" style="background:var(--gray-50);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">How it works</span>
@@ -560,7 +906,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section" style="background:var(--gray-50);">
+    <section class="section" style="background:#fff;">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">FAQ</span>
@@ -617,12 +963,72 @@
               <p>Form C-S is a simplified corporate income tax return designed for smaller Singapore companies. Your company can file Form C-S if it has annual revenue of S$5 million or below, derives income only from Singapore sources, and is not claiming specific reliefs such as carry-back of losses, group relief, or investment allowances. Companies that do not meet these criteria must file the full Form C instead. Both forms are due by 30 November each year. Karman determines which form applies to your company and prepares the submission on your behalf.</p>
             </div>
           </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What corporate tax rate does Singapore charge?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Singapore's headline corporate income tax rate is 17%, but the effective rate is much lower for most companies. New start-ups qualify for the Start-Up Tax Exemption (75% off the first S$100,000 of chargeable income, plus 50% off the next S$100,000) for the first three years. Established companies receive a Partial Tax Exemption — 75% off the first S$10,000 and 50% off the next S$190,000. Combined with these exemptions, the effective tax rate for most SMEs is closer to 5–10% on the first S$200,000.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              When must my company register for GST?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>GST registration is compulsory once your taxable revenue exceeds S$1 million in any 12-month rolling period (the "retrospective" basis), or you reasonably expect it to exceed S$1 million in the next 12 months (the "prospective" basis). Once registered, you charge 9% GST on standard-rated supplies, file F5 returns quarterly, and can claim back input GST on business expenses. Voluntary registration is also possible below the threshold, often beneficial for B2B businesses with mostly GST-registered customers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Which accounting software do you use?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We work with all major cloud accounting platforms — Xero, QuickBooks Online, and MYOB. For most clients we recommend Xero, which integrates seamlessly with Singapore banks (DBS, OCBC, UOB), payroll providers, and IRAS for GST submission. The software cost is bundled into our service. If you already use a different platform, we can migrate or continue with your existing tool.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Do I have to file an annual return if my company is dormant?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. A dormant company (no transactions during the year) must still file an Annual Return with ACRA, file a tax return (or claim the dormant company filing exemption from IRAS), and maintain its statutory registers. The ACRA filing fee is the same as an active company. Dormant companies often qualify for ECI filing waiver and Form C-S relief, but ACRA filings remain mandatory. Karman offers a low-fee dormant package.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How does the Start-Up Tax Exemption (SUTE) work?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>SUTE applies to qualifying new start-ups for their first three Years of Assessment. It exempts 75% of the first S$100,000 of normal chargeable income (a S$75,000 deduction) plus 50% of the next S$100,000 (a S$50,000 deduction). To qualify, the company must be incorporated in Singapore, tax-resident in Singapore, and have no more than 20 shareholders (with at least one individual shareholder holding 10%+). Investment-holding companies and property-development companies don't qualify. We claim the exemption automatically in your first three Form C / C-S filings.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can I switch accountants mid-financial year?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Switching mid-year is straightforward — we onboard you, request your trial balance and supporting records from the previous accountant, reconcile the opening balances, and pick up where they left off. Most transitions complete within 2–3 weeks with no disruption to your monthly close cadence. If your previous accountant is uncooperative, we can rebuild the books from your bank statements and source documents.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- RELATED SERVICES -->
-    <section class="section" style="background:#fff;">
+    <section class="section" style="background:var(--gray-50);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Related Services</span>

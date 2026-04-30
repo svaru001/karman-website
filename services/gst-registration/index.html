@@ -87,7 +87,7 @@
           "priceCurrency": "SGD",
           "availability": "https://schema.org/InStock"
         },
-        "dateModified": "2026-04-03"
+        "dateModified": "2026-05-01"
       },
       {
         "@type": "FAQPage",
@@ -131,6 +131,54 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "If you fail to register for GST on time, IRAS can impose financial penalties and will back-charge GST from the date you were first required to register. This means you are liable for GST on all sales made since that date - even if you did not collect it from your customers. You cannot recover this cost from your past customers. It is critical to monitor your taxable turnover carefully and register promptly when you cross or are about to cross the S$1 million threshold."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I deregister my company from GST?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deregistration is allowed if your taxable revenue falls and is expected to remain below S$1M for the next 12 months, or if you cease trading. You apply via myTax Portal, settle final GST liabilities, and account for GST on remaining business assets above S$10K (deemed supply on cessation). Voluntary registrants must complete the 2-year minimum before deregistering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does GST registration take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "IRAS typically processes GST registration applications within 10 working days for straightforward cases. Voluntary registrations and applications from new companies may take 2–4 weeks as IRAS may request supporting documents (revenue projections, bank statements, contracts) and require GIRO setup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What records must I keep as a GST-registered business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You must keep tax invoices issued and received, credit notes, debit notes, customer accounting records (for partial exemption), bank statements, and all source documents supporting F5 entries — for at least 5 years from the end of the relevant accounting period. Tax invoices over S$1,000 must include the customer's name and address."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GIRO and is it required for GST?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GIRO (General Interbank Recurring Order) is an automatic bank-deduction arrangement with IRAS for paying tax. For voluntary GST registrants, GIRO is mandatory. Compulsory registrants are strongly encouraged to set up GIRO to avoid late-payment penalties — it auto-debits any net GST payable on filing day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I claim GST on business expenses incurred before registration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, partially. You can claim pre-registration input tax on goods still held at the date of registration (acquired up to 6 months before) and on services received up to 6 months before registration, provided the goods or services are used for taxable supplies post-registration. Original tax invoices and inventory records support the claim."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the GST partial exemption rule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If your business makes both taxable and exempt supplies, you can only claim input tax that relates to taxable supplies. The 'de minimis' rule allows full input recovery if exempt supplies are below S$40K per quarter and 5% of total supplies. Above the de minimis, you apportion input tax using IRAS's standard formula."
             }
           }
         ]
@@ -392,6 +440,57 @@
       .gst-quote-box { padding: 36px 24px; }
       .gst-quote-box .btn { display: block; margin: 8px 0; }
     }
+
+    /* Comparison table */
+    .entity-table-wrap { overflow-x: auto; }
+    .entity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .entity-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .entity-table th:first-child { border-radius: 8px 0 0 0; }
+    .entity-table th:last-child { border-radius: 0 8px 0 0; }
+    .entity-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+      vertical-align: top;
+      background: #fff;
+    }
+    .entity-table tr:last-child td { border-bottom: none; }
+    .entity-table tr:nth-child(even) td { background: var(--gray-50); }
+    .entity-table .recommended {
+      background: rgba(26,107,204,.06) !important;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .entity-table .rec-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: .04em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* Inline content */
+    .gst-content { max-width: 860px; margin: 40px auto 0; }
+    .gst-content h3 { font-size: 20px; color: var(--navy); margin-bottom: 16px; }
+    .gst-content p { font-size: 15px; color: var(--gray-700); line-height: 1.8; margin-bottom: 14px; }
+    .gst-content ul { font-size: 15px; color: var(--gray-700); line-height: 1.9; padding-left: 22px; margin-bottom: 12px; }
+    .gst-content ul li { margin-bottom: 6px; }
   </style>
 </head>
 <body>
@@ -509,6 +608,166 @@
       </div>
     </section>
 
+    <!-- COMPULSORY VS VOLUNTARY -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">When to register</span>
+          <h2 class="section-heading">Compulsory vs voluntary GST registration</h2>
+          <p class="section-subtext">Most businesses register only when required by law. But for B2B businesses with GST-registered customers, voluntary registration can be a meaningful tax saving.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Aspect</th>
+                <th>Compulsory registration</th>
+                <th>Voluntary registration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Trigger</strong></td>
+                <td>Taxable revenue exceeds S$1M in past 12 months (retrospective) or expected to (prospective)</td>
+                <td>Below S$1M revenue but business chooses to register</td>
+              </tr>
+              <tr>
+                <td><strong>Application deadline</strong></td>
+                <td>Within 30 days of becoming liable</td>
+                <td>Any time</td>
+              </tr>
+              <tr>
+                <td><strong>Minimum registration period</strong></td>
+                <td>None (until you fall below threshold)</td>
+                <td>2 years minimum once registered</td>
+              </tr>
+              <tr>
+                <td><strong>GIRO requirement</strong></td>
+                <td>Optional (but recommended)</td>
+                <td>Mandatory — must set up GIRO with IRAS</td>
+              </tr>
+              <tr>
+                <td><strong>Filing obligation</strong></td>
+                <td>Quarterly Form F5 returns</td>
+                <td>Quarterly Form F5 returns</td>
+              </tr>
+              <tr>
+                <td><strong>Best for</strong></td>
+                <td>Businesses naturally over the S$1M threshold</td>
+                <td>B2B businesses with mostly GST-registered customers, importers reclaiming input tax</td>
+              </tr>
+              <tr>
+                <td><strong>Risk if late / wrong</strong></td>
+                <td>Back-tax + penalty (you owe GST you didn't charge)</td>
+                <td>None — you control the timing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="text-align:center; margin-top:20px; font-size:14px; color:var(--gray-500);">Not sure which applies? Try our <a href="/tools/gst-eligibility" style="color:var(--blue); font-weight:600;">GST Eligibility Checker →</a></p>
+      </div>
+    </section>
+
+
+    <!-- SUPPLY TYPES & RATES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Supply types &amp; rates</span>
+          <h2 class="section-heading">Standard-rated, zero-rated, exempt &amp; out-of-scope supplies</h2>
+          <p class="section-subtext">Not every sale you make is taxable at 9%. The supply category determines how it's recorded on your F5 return — and whether you can claim related input tax.</p>
+        </div>
+
+        <div class="entity-table-wrap reveal">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Supply category</th>
+                <th>GST rate</th>
+                <th>Examples</th>
+                <th>Input tax claimable?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standard-rated</strong></td>
+                <td>9%</td>
+                <td>Most goods &amp; services sold in Singapore: retail, software-as-a-service, professional services</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Zero-rated</strong></td>
+                <td>0%</td>
+                <td>Exports of goods, international services, certain bunker fuel and ship/aircraft supplies</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Exempt</strong></td>
+                <td>Not applicable</td>
+                <td>Financial services (interest, FX), residential property sale &amp; rental, sale of investment-grade gold</td>
+                <td>No (or partially, with apportionment)</td>
+              </tr>
+              <tr>
+                <td><strong>Out-of-scope</strong></td>
+                <td>Not applicable</td>
+                <td>Sales made overseas without entering Singapore, third-country sales, transfers of ongoing concerns</td>
+                <td>Generally no</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="gst-content">
+          <h3>Why the categories matter</h3>
+          <p>Mis-classifying a supply is the most common GST audit issue we see. Treating a zero-rated export as standard-rated overstates your GST liability and frustrates your customer. Treating an exempt supply (e.g., interest income) as standard-rated may force you into a partial-exemption calculation that limits how much input tax you can recover. Karman maps each revenue stream and recurring expense to the right category at registration, then maintains the classification in your accounting system.</p>
+
+          <h3 style="margin-top: 32px;">Blocked input tax — what you can't claim</h3>
+          <p>IRAS specifically blocks input tax on certain expenses regardless of business purpose: club subscriptions, motor cars (other than commercial vehicles), employee benefits where there's no nexus to your taxable supplies, and medical / family-related insurance. Misclaiming these creates a GST audit trail. We mark blocked input tax automatically in your books to avoid accidental claims.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- REVERSE CHARGE & OVR -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Cross-border GST</span>
+          <h2 class="section-heading">Reverse charge, OVR &amp; low-value goods regimes</h2>
+          <p class="section-subtext">Singapore has progressively brought imported services and digital goods into the GST net. Whether you're an importer or an overseas supplier selling into Singapore, these rules can apply.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1100px; margin: 0 auto;">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="repeat"></i></div>
+            <h3>Reverse Charge (B2B imported services)</h3>
+            <p style="margin-bottom: 12px;">Singapore GST-registered businesses must self-account for GST on imported B2B services (e.g., overseas SaaS, cloud hosting, professional advice) where they cannot claim full input tax. The same business records both output and input GST in the same F5 return.</p>
+            <p style="font-size:13px; color: var(--gray-500); margin: 0;"><strong>Applies if:</strong> You make exempt supplies or are not entitled to full input tax recovery, and your imports of services exceed S$1M per year.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="globe"></i></div>
+            <h3>Overseas Vendor Registration (OVR)</h3>
+            <p style="margin-bottom: 12px;">Overseas suppliers selling digital services or low-value goods directly to Singapore consumers must register for GST under the OVR regime once their global turnover exceeds S$1M and Singapore B2C sales exceed S$100K. Common OVR-registered companies include Netflix, Spotify, Shopify, and many SaaS providers.</p>
+            <p style="font-size:13px; color: var(--gray-500); margin: 0;"><strong>Applies if:</strong> You are a foreign company selling B2C digital services or low-value goods (≤ S$400) to Singapore consumers above the thresholds.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="package"></i></div>
+            <h3>Low-Value Goods (LVG) regime</h3>
+            <p style="margin-bottom: 12px;">From 1 Jan 2023, GST applies to low-value goods (≤ S$400) imported into Singapore by air or post and sold to consumers. Overseas e-commerce sellers and operators of electronic marketplaces (Amazon, Shopee, Lazada) collect and remit GST under LVG rules.</p>
+            <p style="font-size:13px; color: var(--gray-500); margin: 0;"><strong>Applies if:</strong> You sell low-value goods cross-border to Singapore consumers above the S$1M global / S$100K SG B2C thresholds.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="award"></i></div>
+            <h3>Major Exporter Scheme (MES) &amp; IGDS</h3>
+            <p style="margin-bottom: 12px;">Companies with significant exports can apply for the Major Exporter Scheme (MES) to import goods without paying upfront GST. The Import GST Deferment Scheme (IGDS) lets approved importers defer import GST to the F5 return. Both schemes dramatically improve cash flow for trading and manufacturing businesses.</p>
+            <p style="font-size:13px; color: var(--gray-500); margin: 0;"><strong>Applies if:</strong> Zero-rated supplies are 50%+ of total supplies (MES) or you import substantial goods regularly (IGDS).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- PROCESS -->
     <section class="section" style="background:var(--gray-50);">
       <div class="container">
@@ -535,6 +794,51 @@
             <div class="process-step__number">03</div>
             <h3>We manage quarterly F5 returns and input tax claims</h3>
             <p>Every quarter we reconcile your output tax and input tax, prepare Form F5, and submit on time. We flag opportunities to maximise your input claims and alert you to any issues before they become problems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COMMON GST MISTAKES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Watch outs</span>
+          <h2 class="section-heading">Common GST mistakes &mdash; and how we avoid them</h2>
+          <p class="section-subtext">After running thousands of F5 returns, the same handful of errors keep producing IRAS queries, audit risk, and avoidable cash-tax pain.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Missing the S$1M threshold</h3>
+            <p>Trailing 12-month revenue creeps over S$1M and the trigger is missed. Once spotted by IRAS, you owe back-GST on past sales — payable from your own pocket since you can't retroactively bill customers. We monitor your rolling revenue and flag the threshold early.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Mis-classifying zero-rated exports</h3>
+            <p>Treating an export of goods or international service as standard-rated overstates your output GST and frustrates the customer. Conversely, claiming zero-rating without supporting documentation (export bill of lading, customer's overseas address) draws audit scrutiny.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Claiming blocked input tax</h3>
+            <p>Claiming GST on motor cars (non-commercial), club subscriptions, or non-business medical insurance is blocked under IRAS rules. These claims look small but appear on every audit. We tag blocked categories at the chart-of-accounts level so they're never claimed.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Ignoring reverse charge on imported services</h3>
+            <p>Buying overseas SaaS, cloud, or consulting and not self-accounting for reverse-charge GST is a common omission for partially-exempt businesses. The exposure compounds quietly over years until an audit discovers it.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>No partial-exemption calculation when needed</h3>
+            <p>Mixed-supply businesses (some standard-rated, some exempt) must apportion input tax under IRAS's de minimis or standard formula. Failing to do this — or doing it wrong — can lead to back-tax assessments going back several years.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon"><i data-lucide="alert-triangle"></i></div>
+            <h3>Late F5 returns</h3>
+            <p>Each F5 return is due within 1 month of the quarter end. Late filing automatically triggers a 5% penalty on tax payable, plus daily interest. Persistent late filing escalates to IRAS legal action. We file every return ahead of the deadline.</p>
           </div>
         </div>
       </div>
@@ -597,6 +901,66 @@
             </button>
             <div class="faq-answer">
               <p>Late GST registration carries serious financial consequences. IRAS can impose financial penalties and - critically - will back-charge GST on all taxable sales made from the date you should have registered, regardless of whether you collected it from your customers. You cannot retroactively add GST to past invoices and recover it from customers. This means the full back-tax liability comes out of your own pocket. The earlier you identify and address a potential registration obligation, the better your position. Karman can review your exposure and advise on the best course of action, including voluntary disclosure to IRAS.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How do I deregister my company from GST?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Deregistration is allowed if your taxable revenue falls and is expected to remain below S$1M for the next 12 months, or if you cease trading. You apply via myTax Portal, settle final GST liabilities, and account for GST on remaining business assets above S$10K (deemed supply on cessation). Voluntary registrants must complete the 2-year minimum before deregistering. Karman manages the closing F5 return, deemed-supply calculations, and the formal application.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How long does GST registration take?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>IRAS typically processes GST registration applications within 10 working days for straightforward cases. Voluntary registrations and applications from new companies may take longer (2–4 weeks) as IRAS may request supporting documents (revenue projections, bank statements, contracts) and require GIRO setup. We prepare a complete first-time application to minimise back-and-forth and shorten the approval timeline.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What records must I keep as a GST-registered business?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>You must keep tax invoices issued and received, credit notes, debit notes, customer accounting records (for partial exemption), bank statements, and all source documents supporting F5 entries — for at least 5 years from the end of the relevant accounting period. Tax invoices over S$1,000 must include the customer's name and address. IRAS can request these during an audit, and missing documentation can disqualify input tax claims and trigger penalties.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What is GIRO and is it required for GST?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>GIRO (General Interbank Recurring Order) is an automatic bank-deduction arrangement with IRAS for paying tax. For voluntary GST registrants, GIRO is mandatory. Compulsory registrants are strongly encouraged to set up GIRO to avoid late-payment penalties — it auto-debits any net GST payable on filing day. GIRO setup takes about 3 weeks once the form is signed and lodged with your bank. Karman handles the GIRO setup as part of the registration process.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can I claim GST on business expenses incurred before registration?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, partially. You can claim pre-registration input tax on goods still held at the date of registration (acquired up to 6 months before) and on services received up to 6 months before registration, provided the goods or services are used for taxable supplies post-registration. You'll need to support claims with original tax invoices and inventory records. We compile and review pre-registration claims as part of your first F5 return.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What is the GST partial exemption rule?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If your business makes both taxable and exempt supplies (e.g., a financial services firm that also sells consulting), you can only claim input tax that relates to taxable supplies. The "de minimis" rule allows full input recovery if exempt supplies are below S$40K per quarter and 5% of total supplies. Above the de minimis, you apportion input tax using IRAS's standard formula. Karman performs the partial-exemption calculation each quarter for mixed-supply clients.</p>
             </div>
           </div>
         </div>
