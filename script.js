@@ -3,6 +3,31 @@
    script.js
 ───────────────────────────────────────────── */
 
+// === GA4 CTA CLICK TRACKING ===
+// Tracks every click on key conversion CTAs across the entire site.
+document.addEventListener('click', (e) => {
+  if (typeof gtag !== 'function') return;
+  const a = e.target.closest('a, button');
+  if (!a) return;
+
+  const href = (a.getAttribute('href') || '').trim();
+  const label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+
+  // High-intent CTAs
+  if (href === '/onboarding' || href.startsWith('/onboarding?') || href.startsWith('/onboarding#')) {
+    gtag('event', 'cta_click', { cta: 'get_started', destination: href, label, page_path: location.pathname });
+  } else if (href === '#contact' || href.startsWith('#contact')) {
+    gtag('event', 'cta_click', { cta: 'contact_us', destination: href, label, page_path: location.pathname });
+  } else if (href.includes('mailto:') || href.includes('tel:')) {
+    gtag('event', 'cta_click', { cta: href.startsWith('mailto:') ? 'email_click' : 'phone_click', destination: href, label, page_path: location.pathname });
+  } else if (href.startsWith('/tools/')) {
+    gtag('event', 'cta_click', { cta: 'tool_open', destination: href, label, page_path: location.pathname });
+  } else if (href === '/ask' || href.startsWith('/ask?') || href.startsWith('/ask#')) {
+    gtag('event', 'cta_click', { cta: 'ask_ai', destination: href, label, page_path: location.pathname });
+  }
+}, { capture: true, passive: true });
+
+
 // === HEADER SCROLL EFFECT ===
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
@@ -203,6 +228,13 @@ if (contactForm) {
     })
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(() => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            form_name: 'contact',
+            service: service || 'unspecified',
+            page_path: location.pathname
+          });
+        }
         btn.textContent = '✓ Message sent!';
         btn.style.background = 'var(--teal)';
         showFormMessage(contactForm, "Thanks! We'll be in touch within 1 business day. Check your inbox for a confirmation.", 'success');

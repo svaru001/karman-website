@@ -1048,6 +1048,13 @@ async function simulateSubmit() {
 
     if (!res.ok) throw new Error('Send failed');
 
+    if (typeof gtag === 'function') {
+      gtag('event', 'tool_completed', {
+        tool_id: state.toolId,
+        page_path: location.pathname
+      });
+    }
+
     btn.disabled = false;
     if (state.toolId === 'businessStructure') {
       renderFinalResult(TOOLS.businessStructure.getResult(state.answers));

@@ -468,6 +468,15 @@ async function submitOnboarding() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        form_name: 'onboarding',
+        entity_type: state.entityType,
+        services: Array.from(state.services).join(','),
+        stage: state.stage,
+        page_path: location.pathname
+      });
+    }
   } catch (_) { /* silent */ }
 }
 
