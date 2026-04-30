@@ -857,8 +857,8 @@
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
-  .ob-body { overflow: auto; }
-  .ob-wrap { flex-direction: column; }
+  .ob-body { overflow: auto; min-height: auto; }
+  .ob-wrap { flex-direction: column; min-height: auto; }
 
   .ob-left {
     width: 100%;
@@ -866,20 +866,42 @@
     padding-bottom: 0;
   }
   .ob-left__inner {
-    padding: 28px 28px 32px;
-    gap: 24px;
+    padding: 24px 20px 28px;
+    gap: 16px;
   }
-  .ob-left__hero { margin-top: 24px; }
+  .ob-left__hero { margin-top: 16px; }
   .ob-left__steps-visual { display: none; }
-  .ob-left__trust { margin-top: 24px; padding-top: 0; flex-direction: row; flex-wrap: wrap; }
+  .ob-left__trust { margin-top: 16px; padding-top: 0; flex-direction: row; flex-wrap: wrap; }
   .ob-left__sub { display: none; }
 
-  .ob-right { min-height: auto; }
+  /* Right panel: normal block flow, no absolute positioning */
+  .ob-right {
+    min-height: auto;
+    overflow-y: visible;
+    display: block;
+  }
+
+  .ob-topbar {
+    padding: 14px 20px;
+    position: static;
+  }
+
   .ob-panel {
     position: static;
-    padding: 32px 24px 48px;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    overflow-y: visible;
+    padding: 28px 20px 48px;
+    transform: none !important;
+    opacity: 1 !important;
   }
-  .ob-topbar { padding: 16px 24px; }
+
+  /* On mobile show all panels stacked; JS controls visibility via display */
+  .ob-panel--hidden {
+    display: none;
+  }
 
   .ob-field-row { grid-template-columns: 1fr; }
   .ob-services-grid { grid-template-columns: 1fr; }

@@ -154,7 +154,8 @@ function goToStep(next, dir = 'forward') {
   const xOut = dir === 'forward' ? -32 : 32;
   const xIn  = dir === 'forward' ?  32 : -32;
 
-  if (window.gsap) {
+  const isMobile = window.innerWidth <= 900;
+  if (window.gsap && !isMobile) {
     gsap.timeline()
       .to(cur, { opacity: 0, x: xOut, duration: .26, ease: 'power2.in', onComplete: () => {
         cur.classList.add('ob-panel--hidden'); cur.style.cssText = '';
@@ -170,7 +171,15 @@ function goToStep(next, dir = 'forward') {
   state.step = next;
   updateProgress();
   updateSidebar();
-  setTimeout(() => { document.querySelector('.ob-right').scrollTop = 0; }, 120);
+  setTimeout(() => {
+    const isMobile = window.innerWidth <= 900;
+    if (isMobile) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const right = document.querySelector('.ob-right');
+      if (right) right.scrollTop = 0;
+    }
+  }, 120);
 }
 
 function updateProgress() {
