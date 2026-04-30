@@ -23,7 +23,7 @@ module.exports = async function handler(req, res) {
 
   // ── Email to user with PDF attachment ──
   const userRes = await send({
-    from: 'Karman Corporate Services <team@karman.com.sg>',
+    from: 'Karman Corporate Services <onboarding@resend.dev>',
     to: [userEmail],
     subject,
     html: buildUserHtml(userName, toolId),
@@ -40,7 +40,7 @@ module.exports = async function handler(req, res) {
 
   // ── Lead notification to admin ──
   await send({
-    from: 'Karman Website <team@karman.com.sg>',
+    from: 'Karman Website <onboarding@resend.dev>',
     to: [admin],
     subject: `[Lead] ${userName} — ${TOOL_NAMES[toolId] || toolId}`,
     html: buildAdminHtml(userName, userEmail, toolId, adminSummary)
