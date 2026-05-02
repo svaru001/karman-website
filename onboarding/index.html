@@ -281,7 +281,11 @@
             <div class="ob-field">
               <label for="ob-compname">Proposed company name <span class="ob-optional">(optional)</span></label>
               <input type="text" id="ob-compname" name="companyName" placeholder="Acme Pte. Ltd." autocomplete="organization" />
-              <span class="ob-field-hint">ACRA checks availability - we'll confirm once submitted</span>
+              <label class="ob-inline-check" for="ob-compname-na">
+                <input type="checkbox" id="ob-compname-na" />
+                <span>I don't have a name yet (N/A)</span>
+              </label>
+              <span class="ob-field-hint">Sharing a working name (or N/A) helps us tailor our advice during your call - we'll still check ACRA availability when you're ready.</span>
             </div>
             <div class="ob-field">
               <label for="ob-industry">Business activity / industry <span class="ob-req">*</span></label>

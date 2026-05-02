@@ -287,6 +287,24 @@ document.querySelectorAll('input[name="entityType"]').forEach(radio => {
   });
 });
 
+/* Company name "I don't have a name yet" toggle */
+(function () {
+  const cb = document.getElementById('ob-compname-na');
+  const input = document.getElementById('ob-compname');
+  if (!cb || !input) return;
+  cb.addEventListener('change', () => {
+    if (cb.checked) {
+      input.dataset.prevValue = input.value;
+      input.value = 'N/A';
+      input.disabled = true;
+    } else {
+      input.disabled = false;
+      input.value = input.dataset.prevValue || '';
+      input.focus();
+    }
+  });
+})();
+
 function animatePanel2Fields() {
   if (!window.gsap) return;
   const els = document.querySelectorAll('#panel-2 .ob-field, #panel-2 .ob-panel__header, #panel-2 .ob-form__footer');
