@@ -605,7 +605,7 @@ a.service-card {
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
 }
-.why-point h4 {
+.why-point h3 {
   font-size: 16px;
   margin-bottom: 4px;
 }
