@@ -137,6 +137,17 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 6px 20px rgba(255,92,53,.3);
 }
 
+.btn--secondary {
+  background: var(--teal);
+  color: var(--navy);
+}
+.btn--secondary:hover {
+  background: #00b194;
+  color: var(--navy);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,201,167,.35);
+}
+
 .btn--outline {
   border: 2px solid var(--navy);
   color: var(--navy);
