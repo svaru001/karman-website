@@ -308,7 +308,7 @@
       font-style: italic;
       font-size: 12px;
     }
-    .comments-cell:empty::before { content: '—'; opacity: .4; }
+    .comments-cell:empty::before { content: '-'; opacity: .4; }
 
     /* Action buttons */
     .actions { display: flex; gap: 6px; }
@@ -573,7 +573,7 @@
         <div class="stat-card__icon" style="background:rgba(26,107,204,0.14)">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <div class="stat-card__value" id="st-total">—</div>
+        <div class="stat-card__value" id="st-total">-</div>
         <div class="stat-card__label">Total Leads</div>
       </div>
       <div class="stat-card">
@@ -581,7 +581,7 @@
         <div class="stat-card__icon" style="background:rgba(22,163,74,0.14)">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
         </div>
-        <div class="stat-card__value" id="st-active" style="color:#4ADE80">—</div>
+        <div class="stat-card__value" id="st-active" style="color:#4ADE80">-</div>
         <div class="stat-card__label">Active</div>
       </div>
       <div class="stat-card">
@@ -589,7 +589,7 @@
         <div class="stat-card__icon" style="background:rgba(71,85,105,0.18)">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <div class="stat-card__value" id="st-inactive" style="color:rgba(255,255,255,0.32)">—</div>
+        <div class="stat-card__value" id="st-inactive" style="color:rgba(255,255,255,0.32)">-</div>
         <div class="stat-card__label">Inactive</div>
       </div>
       <div class="stat-card">
@@ -597,7 +597,7 @@
         <div class="stat-card__icon" style="background:rgba(124,58,237,0.14)">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <div class="stat-card__value" id="st-partner" style="color:#A78BFA">—</div>
+        <div class="stat-card__value" id="st-partner" style="color:#A78BFA">-</div>
         <div class="stat-card__label">Partnerships</div>
       </div>
     </div>
@@ -756,7 +756,7 @@
       return `<span class="lead-source lead-source--${s}">${s}</span>`;
     }
     function fmtDate(d) {
-      if (!d) return '—';
+      if (!d) return '-';
       return new Date(d + 'T00:00:00').toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' });
     }
 
@@ -775,7 +775,7 @@
         return `
           <tr class="${isX ? 'expanded' : ''}" data-id="${l.id}">
             <td><div class="lead-cell">${avatar(l.name)}<div><span class="lead-name">${esc(l.name)}</span>${sourcePill(l.source)}</div></div></td>
-            <td>${esc(l.company) || '<span style="opacity:.25">—</span>'}</td>
+            <td>${esc(l.company) || '<span style="opacity:.25">-</span>'}</td>
             <td style="white-space:nowrap">${fmtDate(l.date)}</td>
             <td>${typeBadge(l.type)}</td>
             <td>${statusBadge(l.status)}</td>
