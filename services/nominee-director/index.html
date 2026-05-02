@@ -109,7 +109,7 @@
             }
           }
         ],
-        "dateModified": "2026-04-03"
+        "dateModified": "2026-05-02"
       },
       {
         "@type": "FAQPage",
@@ -153,6 +153,54 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Three key documents protect you when using a nominee director. First, the Nominee Director Agreement defines the nominee's strictly limited role, prohibits them from taking any action without your approval, and sets out your rights as beneficial owner. Second, the Deed of Indemnity protects the nominee from personal liability for actions taken in good faith on your instructions - and reciprocally, protects you from any unauthorised actions the nominee might attempt. Third, a signed, undated resignation letter held in escrow gives you the ability to remove the nominee at any time, immediately and without their co-operation. Together, these documents make the arrangement secure for all parties."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the nominee have to attend AGMs or sign tax returns?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The nominee may attend the AGM in a formal capacity but does not vote on substantive resolutions on your behalf - those are passed by the shareholders (you). The nominee's signature is not required on tax returns or financial statements; those are signed by the company's directors and authorised representatives, with the nominee available to co-sign administrative ACRA filings only. In practice, AGMs are typically held by written resolution under Section 175A of the Companies Act for private companies, and the nominee's role is limited to confirming the resolution is passed. Karman handles the entire AGM and Annual Return process administratively as part of corporate secretarial."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between a nominee director and a nominee shareholder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A nominee director satisfies ACRA's residency requirement under the Companies Act - they appear on the public register as a director but operate under a contractual arrangement that limits their authority. A nominee shareholder, by contrast, holds shares in their name on behalf of an undisclosed beneficial owner. Singapore strongly disfavours nominee shareholders and requires beneficial owner disclosure on the Register of Registrable Controllers. Karman provides nominee director services but does not provide nominee shareholder services - the latter creates significant tax, banking, and AML risk and is unnecessary for legitimate business structures."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will Singapore banks open accounts for companies with a nominee director?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes - all major Singapore banks (DBS, UOB, OCBC, Maybank, Standard Chartered, HSBC) routinely open corporate accounts for companies with a professional nominee director, provided the beneficial ownership is properly disclosed and the foreign founder passes the bank's KYC. Banks typically ask for the Nominee Director Agreement and Deed of Indemnity as part of their due diligence to confirm the arrangement is legitimate. What banks reject are arrangements where the beneficial owner is hidden, the documentation is missing, or the source of funds is unclear. Karman supports the bank introduction process and prepares the documentation pack required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use a friend or family member as my nominee director?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Legally, yes - any Singapore citizen, PR, or EP holder can be appointed as a director. Practically, we strongly advise against it. Personal nominees come without formal documentation: no Deed of Indemnity, no escrow resignation, no professional indemnity insurance. If your friend later wants to step down, refuses to cooperate, becomes uncontactable, or has a personal dispute with you, removing them from the company can become a legal headache. Worse, if anything goes wrong with the company (tax issues, contractual disputes, regulatory matters), they personally bear the director's statutory liability with no contractual protection. A professional nominee, with proper documentation and indemnity insurance, is almost always the right choice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if I don't pay the annual nominee renewal fee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If the renewal fee is not paid, your filing agent's standard practice is to issue formal notice of resignation. The nominee will resign as director and lodge the cessation with ACRA. Once that happens, your company is in breach of Section 145 of the Companies Act (no resident director) - which can attract ACRA penalties, blocking of further filings, and in extreme cases striking off the register. The fix is to immediately appoint a new resident director (which means a new nominee onboarding cycle, including KYC and documentation). Karman sends renewal reminders 60 and 30 days before expiry, and offers auto-renewal for clients who prefer not to manage the date manually."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do VCCs and branch offices also need a nominee director?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VCCs need at least three directors, of whom at least one must be a Singapore resident, and at least one must be a director of the appointed Fund Manager. If you cannot personally satisfy the residency requirement and your fund manager's directors don't fit the bill, a nominee director is the standard solution. Branch offices of foreign companies need at least one authorised representative who is ordinarily resident in Singapore - this is functionally similar to a nominee director and Karman provides the same kind of service. Representative offices have different rules (they are not separate legal entities) and do not require a nominee."
             }
           }
         ]
@@ -410,6 +458,104 @@
     .blog-cta-box__content p { font-size: 14px; color: var(--gray-600); margin: 0 0 8px; }
     .blog-cta-box__content a { font-size: 15px; font-weight: 600; color: var(--blue); }
     .blog-cta-box__content a:hover { text-decoration: underline; }
+
+    /* Comparison table */
+    .entity-table-wrap { overflow-x: auto; }
+    .entity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .entity-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .entity-table th:first-child { border-radius: 8px 0 0 0; }
+    .entity-table th:last-child { border-radius: 0 8px 0 0; }
+    .entity-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+      vertical-align: top;
+      background: #fff;
+    }
+    .entity-table tr:last-child td { border-bottom: none; }
+    .entity-table tr:nth-child(even) td { background: var(--gray-50); }
+    .entity-table .recommended {
+      background: rgba(26,107,204,.06) !important;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .entity-table .rec-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: .04em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* Mistake cards */
+    .mistake-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .mistake-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid #d92d20;
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .mistake-card h3 { font-size: 15px; color: var(--navy); margin-bottom: 8px; }
+    .mistake-card p { font-size: 14px; color: var(--gray-600); line-height: 1.65; margin: 0; }
+    .mistake-card .fix {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    /* Risk callouts */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .risk-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .risk-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .risk-card__tag {
+      display: inline-block;
+      background: rgba(0,201,167,.1);
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .risk-card h3 { font-size: 16px; margin-bottom: 8px; color: var(--navy); }
+    .risk-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin: 0; }
   </style>
 </head>
 <body>
@@ -555,8 +701,325 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- COMPARISON TABLE -->
     <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Compare options</span>
+          <h2 class="section-heading">Nominee director vs other ways to satisfy Section 145</h2>
+          <p class="section-subtext">Foreign founders have several options to meet ACRA's resident director requirement. Each carries different cost, timeline, and risk profiles. Here's an honest comparison.</p>
+        </div>
+
+        <div class="entity-table-wrap">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Cost (Year 1)</th>
+                <th>Time to set up</th>
+                <th>Risk profile</th>
+                <th>When it makes sense</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="recommended">
+                <td><strong>Professional nominee director<span class="rec-badge">RECOMMENDED</span></strong></td>
+                <td>S$2,000 - S$3,000/year</td>
+                <td>1-3 working days</td>
+                <td>Low - fully documented, indemnified, removable</td>
+                <td>Foreign founders incorporating remotely while applying for EP, raising funds, or testing market.</td>
+              </tr>
+              <tr>
+                <td>Apply for Employment Pass first</td>
+                <td>S$1,500 - S$5,000 (filing + agent fees)</td>
+                <td>3-6 months (no guarantee of approval)</td>
+                <td>Medium - approval depends on company having activity, salary, and viable business plan</td>
+                <td>Founders willing to delay incorporation until they have an EP, and confident in qualifying.</td>
+              </tr>
+              <tr>
+                <td>Use a friend or family member as director</td>
+                <td>Free (or informal payment)</td>
+                <td>Immediate (if they consent)</td>
+                <td>High - personal liability for them, no documentation, no removal mechanism</td>
+                <td>Almost never recommended. Personal relationships and company directorship rarely mix well.</td>
+              </tr>
+              <tr>
+                <td>Hire a Singapore-resident employee as director</td>
+                <td>S$60,000+ salary plus CPF</td>
+                <td>Recruitment cycle (weeks-months)</td>
+                <td>Medium - real employee with real authority; needs careful contracts</td>
+                <td>Established companies with budget and a real role to fill.</td>
+              </tr>
+              <tr>
+                <td>Apply for EntrePass</td>
+                <td>S$1,000+ filing fees</td>
+                <td>3-4 months</td>
+                <td>High - very strict eligibility (innovative business, funding, IP)</td>
+                <td>Tech founders with VC funding, IP, or accelerator backing meeting MOM's strict criteria.</td>
+              </tr>
+              <tr>
+                <td>Don't incorporate in Singapore</td>
+                <td>S$0</td>
+                <td>N/A</td>
+                <td>Loses Singapore tax, banking, and credibility benefits</td>
+                <td>Founders for whom Singapore was never the right jurisdiction.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:32px;color:var(--gray-600);font-size:14px;line-height:1.7;max-width:760px;">
+          <strong>Why most foreign founders choose the nominee route:</strong> it's the only option that lets you incorporate immediately, control the company fully, and exit cleanly the moment your EP is approved or you no longer need a Singapore presence. The annual cost is roughly equivalent to one month of an entry-level Singapore employee, with none of the employment, recruitment, or termination risk. For 90% of foreign founders, it's the right tool for the job.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ACRA 2026 CHANGES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Regulatory update</span>
+          <h2 class="section-heading">ACRA's 2026 changes affecting nominee directors</h2>
+          <p class="section-subtext">In 2025-2026, ACRA introduced changes to nominee director registration, beneficial ownership disclosure, and corporate service provider supervision. Here's what foreign founders need to know.</p>
+        </div>
+
+        <div class="risk-grid">
+          <div class="risk-card reveal">
+            <span class="risk-card__tag">Effective 2025</span>
+            <h3>Mandatory nominee disclosure on the public register</h3>
+            <p>Since June 2025, the BizFile public register flags nominee directors as "Nominee" when the underlying corporate service provider files the appointment. This was previously a private record. The change increases transparency for banks, regulators, and counterparties - but does not change the legality or utility of the arrangement.</p>
+          </div>
+          <div class="risk-card reveal">
+            <span class="risk-card__tag">Effective 2025</span>
+            <h3>Stricter Corporate Service Provider Act compliance</h3>
+            <p>Under the new Corporate Service Providers Act, only registered filing agents (RFAs) can provide nominee director services. Karman is an ACRA-Registered Filing Agent (UEN 202012889R). Avoid any provider who is not on ACRA's CSP register - their nominee arrangements may be unenforceable and expose you to regulatory risk.</p>
+          </div>
+          <div class="risk-card reveal">
+            <span class="risk-card__tag">Effective 2026</span>
+            <h3>Register of Registrable Controllers (RBO) - mandatory upkeep</h3>
+            <p>Every Singapore company must maintain a Register of Registrable Controllers identifying its beneficial owners (typically 25%+ shareholders or persons with significant control). Using a nominee director does not exempt you from RBO disclosure - you, the foreign founder, remain the registrable controller. Karman maintains this register on your behalf as part of corporate secretarial.</p>
+          </div>
+          <div class="risk-card reveal">
+            <span class="risk-card__tag">Effective 2026</span>
+            <h3>Enhanced AML/KYC on appointment</h3>
+            <p>ACRA-licensed filing agents now perform enhanced due diligence on every nominee appointment. You'll be asked for proof of identity, proof of residential address, source of wealth declaration, and a description of your intended business activity. This is mandatory - no compliant filing agent can shortcut it.</p>
+          </div>
+          <div class="risk-card reveal">
+            <span class="risk-card__tag">2026 update</span>
+            <h3>Director ID requirements</h3>
+            <p>From 2026, all directors (including nominee directors) require a verified ACRA Director Identification Number (DIN) before appointment. Karman handles the DIN application as part of the nominee onboarding process.</p>
+          </div>
+          <div class="risk-card reveal">
+            <span class="risk-card__tag">Best practice</span>
+            <h3>Annual nominee director review</h3>
+            <p>Best practice (and increasingly an audit expectation) is an annual review of the nominee arrangement: confirm the agreement is still in force, the resignation letter is still in escrow, the indemnity insurance is current, and the underlying beneficial ownership has not changed. Karman includes this review as part of annual renewal.</p>
+          </div>
+        </div>
+
+        <div class="blog-cta-box reveal">
+          <div class="blog-cta-box__icon"><i data-lucide="info"></i></div>
+          <div class="blog-cta-box__content">
+            <p>Read more on the regulatory changes</p>
+            <a href="/blog/acra-nominee-director-changes-2026">ACRA Nominee Director Changes 2026 - Complete Guide →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BENEFICIAL OWNERSHIP & RISK -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Beneficial ownership</span>
+          <h2 class="section-heading">You stay in control - and on the record</h2>
+          <p class="section-subtext">A common misconception is that a nominee director hides ownership. They don't, and they shouldn't. Here's how the documentation, banking, and regulatory layers fit together.</p>
+        </div>
+
+        <div class="entity-table-wrap" style="max-width:980px;margin:0 auto;">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>What it does</th>
+                <th>Who sees it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>ACRA Public Register</strong></td>
+                <td>Lists the nominee as a director (flagged "Nominee" since 2025). You appear as the shareholder.</td>
+                <td>Anyone with a BizFile account - banks, counterparties, journalists.</td>
+              </tr>
+              <tr>
+                <td><strong>Register of Registrable Controllers (RBO)</strong></td>
+                <td>Records you as the beneficial owner / person with significant control. Held privately by the company.</td>
+                <td>ACRA, IRAS, MAS, law enforcement. Not public.</td>
+              </tr>
+              <tr>
+                <td><strong>Bank KYC file</strong></td>
+                <td>Banks identify you as the ultimate beneficial owner during account opening. The nominee is disclosed but not treated as the principal.</td>
+                <td>Your bank, regulators on request.</td>
+              </tr>
+              <tr>
+                <td><strong>Nominee Director Agreement</strong></td>
+                <td>Private contract between you, the company, and the nominee. Records the nominee's limited authority and your beneficial ownership.</td>
+                <td>You, the nominee, your filing agent. Not filed with ACRA.</td>
+              </tr>
+              <tr>
+                <td><strong>Deed of Indemnity</strong></td>
+                <td>Allocates liability between you and the nominee. Used in the event of any dispute or claim.</td>
+                <td>You, the nominee, lawyers if invoked.</td>
+              </tr>
+              <tr>
+                <td><strong>Escrow resignation letter</strong></td>
+                <td>Signed undated resignation letter. Lets you remove the nominee instantly without their cooperation.</td>
+                <td>Held by Karman. Used only if you trigger removal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:32px;color:var(--gray-600);font-size:14px;line-height:1.7;max-width:760px;">
+          <strong>The takeaway:</strong> Singapore is a transparent, well-regulated jurisdiction. A nominee director satisfies a residency formality - it does not, and is not designed to, conceal beneficial ownership. Banks know. ACRA knows. IRAS knows. What the structure does is let you, as the foreign founder, hold a Singapore company without being physically resident, while a qualified Singapore citizen carries the statutory residency burden under tightly defined contractual limits. That's it. Anyone offering a nominee structure to "hide" ownership is offering you a problem, not a solution.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- COMMON MISTAKES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What to avoid</span>
+          <h2 class="section-heading">6 mistakes foreign founders make with nominee directors</h2>
+          <p class="section-subtext">After working with hundreds of foreign founders, these are the recurring errors that cause problems with banks, ACRA, or the eventual EP transition.</p>
+        </div>
+
+        <div class="mistake-grid">
+          <div class="mistake-card reveal">
+            <h3>1. Picking the cheapest nominee provider</h3>
+            <p>Nominee director services priced below S$1,500/year are usually using an "informal" arrangement - no Deed of Indemnity, no escrow resignation, no professional indemnity insurance. When something goes wrong (banking issue, ACRA enquiry, dispute), you discover you have no contractual protection.</p>
+            <span class="fix">Fix: Always confirm the three-document package (Agreement, Indemnity, Escrow) is included.</span>
+          </div>
+          <div class="mistake-card reveal">
+            <h3>2. Using a friend or family member</h3>
+            <p>Personal nominees almost always come without proper documentation. If the relationship sours, you have no escrow resignation letter and no contractual control - removing them requires their voluntary cooperation. We have seen this end in legal disputes more times than we'd like.</p>
+            <span class="fix">Fix: Use a professional nominee with a written agreement and escrow resignation.</span>
+          </div>
+          <div class="mistake-card reveal">
+            <h3>3. Forgetting the nominee triggers bank scrutiny</h3>
+            <p>Most Singapore banks now flag companies with nominee directors during KYC and ask additional questions about beneficial ownership and source of funds. Founders who arrive at the bank without supporting documents (passport, residential proof, business plan, source of wealth) get rejected or stuck in extended review.</p>
+            <span class="fix">Fix: Prepare a full beneficial owner pack before your bank appointment. Karman provides a checklist.</span>
+          </div>
+          <div class="mistake-card reveal">
+            <h3>4. Treating the nominee as a passive name on a register</h3>
+            <p>The nominee is technically a director with statutory duties. They cannot be involved in fraud, money laundering, or tax evasion - even if they are not making business decisions. Founders who assume the nominee will "just sign anything" are misunderstanding the relationship and will eventually receive uncomfortable questions or a resignation.</p>
+            <span class="fix">Fix: Run your business cleanly. The nominee is there for residency, not for cover.</span>
+          </div>
+          <div class="mistake-card reveal">
+            <h3>5. Letting the nominee renewal lapse</h3>
+            <p>If the nominee's annual fee is not paid on time, the provider may resign - leaving your company without a resident director, in breach of Section 145, and exposed to ACRA penalties. Reinstatement is messy and sometimes requires a new nominee with a fresh round of KYC.</p>
+            <span class="fix">Fix: Set up auto-renewal or a 60-day reminder. Karman manages this for clients on retainer.</span>
+          </div>
+          <div class="mistake-card reveal">
+            <h3>6. Not removing the nominee promptly after EP approval</h3>
+            <p>Once your Employment Pass is approved, you can serve as a director yourself. Some founders forget to action the nominee removal and continue paying the annual fee for years. Conversely, some try a DIY removal without the proper board resolution and ACRA filing, leaving the nominee technically still on record.</p>
+            <span class="fix">Fix: Trigger the removal within 30 days of EP approval. Karman files this at no charge.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PRICING REALITY CHECK -->
+    <section class="section" style="background:var(--gray-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Honest pricing</span>
+          <h2 class="section-heading">What S$1,500, S$2,500, and S$5,000 nominee services actually include</h2>
+          <p class="section-subtext">"Nominee director" pricing varies wildly across Singapore. Here's what to look for in each tier so you understand exactly what you're buying.</p>
+        </div>
+
+        <div class="entity-table-wrap">
+          <table class="entity-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Budget tier (S$800-1,500)</th>
+                <th>Standard tier (S$2,000-2,800)</th>
+                <th>Big-4 / law firm (S$5,000+)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Singapore-Citizen director</strong></td>
+                <td>Sometimes (often a PR or recent EP holder)</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Nominee Director Agreement</strong></td>
+                <td>Boilerplate template, sometimes missing</td>
+                <td>Professionally drafted, customised</td>
+                <td>Customised by lawyers</td>
+              </tr>
+              <tr>
+                <td><strong>Deed of Indemnity</strong></td>
+                <td>Often not included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td><strong>Escrow resignation letter</strong></td>
+                <td>Rarely included</td>
+                <td>Included</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <td><strong>Professional indemnity insurance</strong></td>
+                <td>Usually no</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Filing agent registered with ACRA</strong></td>
+                <td>Sometimes - check the CSP register</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Bank introduction support</strong></td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Free removal at EP approval</strong></td>
+                <td>Often surcharged S$300-500</td>
+                <td>Free</td>
+                <td>Free</td>
+              </tr>
+              <tr class="recommended">
+                <td><strong>Karman tier</strong></td>
+                <td>—</td>
+                <td>S$2,500/year (standalone)<br>S$2,800 first year (with incorporation)</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:32px;color:var(--gray-600);font-size:14px;line-height:1.7;max-width:760px;">
+          <strong>What we don't compete on:</strong> price-only providers in the S$800-1,500 range. Once you account for the missing protections - no indemnity deed, no escrow resignation, no insurance, no removal-at-no-charge - the cost difference disappears the first time something goes wrong. We've onboarded enough clients from cheaper providers (after a bank rejection or a contested resignation) to know what gets cut to hit those prices. The standard tier exists for a reason.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section" style="background:#fff;">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">FAQ</span>
@@ -613,6 +1076,66 @@
               <p>Three core documents protect your interests. The Nominee Director Agreement defines the nominee's strictly limited role, prohibits any action without your written consent, and records your status as the beneficial owner. The Deed of Indemnity allocates liability clearly - the nominee is indemnified for actions taken on your authorised instructions, and you are protected from any unauthorised actions they might attempt. Finally, the signed, undated resignation letter held in escrow gives you a unilateral right of removal at any moment. Together, these three documents create a legally secure structure that gives you full operational control while satisfying ACRA's residency requirement.</p>
             </div>
           </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Does the nominee have to attend AGMs or sign tax returns?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The nominee may attend the AGM in a formal capacity but does not vote on substantive resolutions on your behalf - those are passed by the shareholders (you). The nominee's signature is not required on tax returns or financial statements; those are signed by the company's directors and authorised representatives, with the nominee available to co-sign administrative ACRA filings only. In practice, AGMs are typically held by written resolution under Section 175A of the Companies Act for private companies, and the nominee's role is limited to confirming the resolution is passed. Karman handles the entire AGM and Annual Return process administratively as part of corporate secretarial.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What's the difference between a nominee director and a nominee shareholder?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A nominee director satisfies ACRA's residency requirement under the Companies Act - they appear on the public register as a director but operate under a contractual arrangement that limits their authority. A nominee shareholder, by contrast, holds shares in their name on behalf of an undisclosed beneficial owner. Singapore strongly disfavours nominee shareholders and requires beneficial owner disclosure on the Register of Registrable Controllers. Karman provides nominee director services but does not provide nominee shareholder services - the latter creates significant tax, banking, and AML risk and is unnecessary for legitimate business structures.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Will Singapore banks open accounts for companies with a nominee director?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes - all major Singapore banks (DBS, UOB, OCBC, Maybank, Standard Chartered, HSBC) routinely open corporate accounts for companies with a professional nominee director, provided the beneficial ownership is properly disclosed and the foreign founder passes the bank's KYC. Banks typically ask for the Nominee Director Agreement and Deed of Indemnity as part of their due diligence to confirm the arrangement is legitimate. What banks reject are arrangements where the beneficial owner is hidden, the documentation is missing, or the source of funds is unclear. Karman supports the bank introduction process and prepares the documentation pack required.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Can I use a friend or family member as my nominee director?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Legally, yes - any Singapore citizen, PR, or EP holder can be appointed as a director. Practically, we strongly advise against it. Personal nominees come without formal documentation: no Deed of Indemnity, no escrow resignation, no professional indemnity insurance. If your friend later wants to step down, refuses to cooperate, becomes uncontactable, or has a personal dispute with you, removing them from the company can become a legal headache. Worse, if anything goes wrong with the company (tax issues, contractual disputes, regulatory matters), they personally bear the director's statutory liability with no contractual protection. A professional nominee, with proper documentation and indemnity insurance, is almost always the right choice.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              What happens if I don't pay the annual nominee renewal fee?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If the renewal fee is not paid, your filing agent's standard practice is to issue formal notice of resignation. The nominee will resign as director and lodge the cessation with ACRA. Once that happens, your company is in breach of Section 145 of the Companies Act (no resident director) - which can attract ACRA penalties, blocking of further filings, and in extreme cases striking off the register. The fix is to immediately appoint a new resident director (which means a new nominee onboarding cycle, including KYC and documentation). Karman sends renewal reminders 60 and 30 days before expiry, and offers auto-renewal for clients who prefer not to manage the date manually.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Do VCCs and branch offices also need a nominee director?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>VCCs need at least three directors, of whom at least one must be a Singapore resident, and at least one must be a director of the appointed Fund Manager. If you cannot personally satisfy the residency requirement and your fund manager's directors don't fit the bill, a nominee director is the standard solution. Branch offices of foreign companies need at least one authorised representative who is ordinarily resident in Singapore - this is functionally similar to a nominee director and Karman provides the same kind of service. Representative offices have different rules (they are not separate legal entities) and do not require a nominee. If you are unsure which structure you need, our business structure recommender tool can help.</p>
+            </div>
+          </div>
         </div>
 
         <div class="blog-cta-box reveal">
@@ -626,7 +1149,7 @@
     </section>
 
     <!-- RELATED SERVICES -->
-    <section class="section" style="background:#fff;">
+    <section class="section" style="background:var(--gray-50);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Related Services</span>
@@ -679,8 +1202,8 @@
         <div class="footer__brand">
           <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
-          <div class="footer__badges"><span class="badge">ACRA Registered</span><span class="badge">MAS Regulated</span></div>
-          <div class="footer__social"><span class="footer__social-label">Follow</span><div class="footer__social-icons"><a href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></div></div>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span><span class="badge">MAS Regulated</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
         </div>
         <div class="footer__links">
           <div class="footer-col"><h4>Services</h4><ul>
