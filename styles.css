@@ -138,14 +138,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn--secondary {
-  background: var(--teal);
-  color: var(--navy);
+  background: #0d4567;
+  color: #fff;
 }
 .btn--secondary:hover {
-  background: #00b194;
-  color: var(--navy);
+  background: #0a3a59;
+  color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0,201,167,.35);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
 }
 
 .btn--outline {
