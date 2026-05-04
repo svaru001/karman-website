@@ -1,0 +1,57 @@
+DIRECTORS' RESOLUTION IN WRITING
+Pursuant to Section 157B of the Companies Act 1967
+
+[COMPANY NAME] PTE. LTD.
+UEN: [202XXXXXXX]
+(the "Company")
+
+Date: [DD Month YYYY]
+
+
+WHEREAS:
+
+A. The Company is a private company limited by shares incorporated in Singapore.
+
+B. The directors of the Company wish to record the following decision by way of a written resolution in lieu of a meeting of the board of directors.
+
+
+IT IS HEREBY RESOLVED:
+
+1. THAT [insert specific resolved clause — e.g., the Company opens a corporate bank account with [BANK NAME] for the purposes of operating the business of the Company].
+
+2. THAT [Director Name], NRIC/Passport No. [XXXXX], be and is hereby authorised to:
+   (a) sign all documents and instruments necessary or expedient to give effect to the foregoing;
+   (b) operate the said bank account, including authority to sign cheques, transfer funds, and execute banking instructions on behalf of the Company; and
+   (c) take such further action as may be required to give full effect to this resolution.
+
+3. THAT this resolution shall take effect from the date last signed by the directors below.
+
+
+SIGNED in counterparts by all the directors of the Company:
+
+
+_______________________________            _______________________________
+Name: [Director 1 Full Name]                Name: [Director 2 Full Name]
+NRIC/Passport: [XXXXX]                      NRIC/Passport: [XXXXX]
+Date: [DD Month YYYY]                       Date: [DD Month YYYY]
+
+
+_______________________________            _______________________________
+Name: [Director 3 Full Name]                Name: [Director 4 Full Name]
+NRIC/Passport: [XXXXX]                      NRIC/Passport: [XXXXX]
+Date: [DD Month YYYY]                       Date: [DD Month YYYY]
+
+
+[END OF RESOLUTION]
+
+
+---
+USAGE NOTES:
+- All directors entitled to vote must sign for the resolution to be effective in writing.
+- Keep the original signed resolution in the company's statutory register.
+- A scanned copy should be provided to your corporate secretary for record-keeping.
+- Provide a certified true copy to banks, counterparties, or auditors when requested.
+- This template provides a general framework. For complex matters (M&A, share issuance with side terms, related-party transactions), consult your corporate secretary or legal counsel.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

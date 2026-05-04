@@ -1,0 +1,54 @@
+DIRECTORS' RESOLUTION — ALLOTMENT OF SHARES
+Pursuant to Section 161 of the Companies Act 1967
+
+[COMPANY NAME] PTE. LTD.
+UEN: [202XXXXXXX]
+(the "Company")
+
+Date: [DD Month YYYY]
+
+
+WHEREAS:
+
+A. The Company has received an application from [ALLOTTEE FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS] (the "Allottee"), for the allotment of [NUMBER] new ordinary shares of S$[PAR VALUE OR "NO PAR VALUE"] each.
+
+B. The Allottee has agreed to pay S$[AMOUNT] per share, totalling S$[TOTAL AMOUNT], as consideration for the said shares.
+
+C. [If applicable: All pre-emption rights under the Constitution and the Shareholders' Agreement have been duly waived in writing by the existing shareholders.]
+
+
+IT IS HEREBY RESOLVED:
+
+1. THAT [NUMBER] ordinary shares of [S$[PAR VALUE] / no par value] each be and are hereby allotted and issued to the Allottee at the issue price of S$[AMOUNT] per share, fully paid up in cash/[other consideration].
+
+2. THAT, upon receipt of the consideration:
+   (a) the Allottee be entered in the Register of Members as the holder of the said shares;
+   (b) a share certificate, numbered [CERTIFICATE NUMBER], be issued to the Allottee under the common seal of the Company (or signed by two directors);
+   (c) Return of Allotment be lodged with ACRA via BizFile+ within fourteen (14) days.
+
+3. THAT [Director Name] be and is hereby authorised to sign all documents and instruments necessary to give effect to the foregoing, including but not limited to the share certificate and the BizFile+ filing.
+
+
+SIGNED by the directors of the Company:
+
+
+_______________________________            _______________________________
+Name: [Director 1]                          Name: [Director 2]
+Date: [DD Month YYYY]                       Date: [DD Month YYYY]
+
+
+_______________________________
+Name: [Director 3]
+Date: [DD Month YYYY]
+
+
+---
+USAGE NOTES:
+- Return of Allotment must be filed with ACRA via BizFile+ within 14 days. Late filing penalty starts at S$300.
+- Update the Register of Members in your statutory records.
+- For non-cash consideration (sweat equity, IP, services), document the rationale and fair value in the resolution.
+- Investor allotments typically require a Subscription Agreement separately from this resolution.
+- Check the Constitution and any Shareholders' Agreement for pre-emption rights and waiver requirements.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

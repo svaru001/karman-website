@@ -1,0 +1,175 @@
+{
+  "categories": [
+    { "id": "governance", "name": "Governance" },
+    { "id": "equity", "name": "Equity & Shareholding" },
+    { "id": "hr", "name": "HR & Employment" },
+    { "id": "immigration", "name": "Immigration & Visas" }
+  ],
+  "templates": [
+    {
+      "slug": "board-resolution",
+      "title": "Board Resolution Template",
+      "category": "governance",
+      "shortDef": "Generic directors' resolution in writing for any board decision — bank account opening, contract approval, share issuance, or operational matters.",
+      "useCase": "Use whenever directors need to formally approve a decision without holding a meeting. Most common use cases: opening a corporate bank account, signing a major contract, approving a share allotment, or appointing officers.",
+      "instructions": [
+        "Replace [COMPANY NAME] and [UEN] throughout with your registered details from BizFile+.",
+        "List every appointed director — every director must sign for the resolution to be unanimous in writing.",
+        "Be specific in the resolved clause. Banks and counterparties scrutinise vague resolutions.",
+        "Keep the signed original in your statutory register. Send a scanned copy to your corporate secretary.",
+        "Date it accurately. Resolutions cannot be backdated."
+      ],
+      "faqs": [
+        { "q": "Do all directors need to sign?", "a": "Yes — for a directors' resolution in writing under Section 157B of the Companies Act, all directors entitled to vote must sign. If even one is absent or dissents, you must hold a physical or electronic meeting instead." },
+        { "q": "Does ACRA need a copy?", "a": "No, board resolutions are internal. They are kept in the company's statutory register. ACRA only sees them if specifically requested during an audit or if an event triggers a BizFile+ filing (e.g., share allotment or director appointment)." },
+        { "q": "Can I email the signed resolution?", "a": "Yes. Singapore courts and banks generally accept electronically signed resolutions. Use a recognised e-signature platform or have each director print, sign, and scan their signature page." }
+      ],
+      "relatedTerms": ["acra", "uen", "agm"]
+    },
+    {
+      "slug": "agm-minutes",
+      "title": "AGM Minutes Template",
+      "category": "governance",
+      "shortDef": "Annual General Meeting minutes for private limited companies — covers accounts adoption, director re-election, and auditor appointment.",
+      "useCase": "Required for every Pte Ltd that holds an AGM. Private companies that have dispensed with AGMs (most do) instead pass written resolutions — see the Board Resolution template. Hold an AGM within 6 months of FYE.",
+      "instructions": [
+        "Insert your company's name, UEN, and registered address.",
+        "Update the date, time, and venue (or note 'held electronically' if virtual).",
+        "List directors and shareholders present, by name. Note proxies if any.",
+        "Reference the financial year covered and the audited accounts (or unaudited compilation report for small companies).",
+        "Each resolution should clearly state the motion, mover, seconder (if applicable), and outcome.",
+        "Chairman signs the minutes within a reasonable time after the meeting."
+      ],
+      "faqs": [
+        { "q": "Do private companies still need AGMs?", "a": "Not necessarily. Since the 2017 Companies Act amendments, private companies can dispense with AGMs if they file financial statements within 5 months of FYE and members do not request one. Most Pte Ltds skip the formal meeting and use written resolutions instead." },
+        { "q": "When must minutes be signed?", "a": "Section 188 of the Companies Act requires minutes to be entered into a minute book within one month of the meeting. The chairman of the next meeting confirms them as a true record." },
+        { "q": "Are AGM minutes filed with ACRA?", "a": "No. They are kept in the company's statutory records. ACRA receives the Annual Return separately via BizFile+, which is filed within 7 months of FYE." }
+      ],
+      "relatedTerms": ["agm", "fye", "annual-return"]
+    },
+    {
+      "slug": "share-transfer",
+      "title": "Share Transfer Form & Resolution",
+      "category": "equity",
+      "shortDef": "Combined Form 6 share transfer instrument and board resolution approving the transfer — what you need to legally move shares between shareholders.",
+      "useCase": "Use when an existing shareholder sells, gifts, or transfers shares to another party. Required for founder share buybacks, secondary sales, employee share grants where shares are transferred from a holding entity, or estate transfers.",
+      "instructions": [
+        "Both transferor (seller) and transferee (buyer) must sign the instrument of transfer.",
+        "Stamp duty (0.2% of consideration or net asset value, whichever higher) must be paid to IRAS within 14 days. Use the IRAS e-Stamping portal.",
+        "Board resolution approves the transfer — directors check it does not breach the Constitution or any shareholders' agreement.",
+        "Update the Register of Members and Register of Transfers in your statutory records.",
+        "File a Notice of Transfer with ACRA via BizFile+ (no fee, but must be done within 14 days)."
+      ],
+      "faqs": [
+        { "q": "Is stamp duty payable on a $1 transfer between founders?", "a": "Yes — IRAS will assess stamp duty on the higher of the consideration or the net asset value (NAV) of the shares. Don't try to avoid duty with a nominal $1 price; IRAS will issue a Notice of Assessment based on actual NAV." },
+        { "q": "What if the Constitution requires pre-emption?", "a": "Most company Constitutions and shareholder agreements give existing shareholders a right of first refusal. Check both before transferring. Failure to follow pre-emption procedures can void the transfer." },
+        { "q": "Do I need a corporate secretary to file the transfer?", "a": "Not legally — but BizFile+ filings, IRAS e-Stamping, and the statutory register updates are easy to get wrong. Most companies have their corporate secretary handle the full process for $200–400." }
+      ],
+      "relatedTerms": ["share-capital", "acra", "iras"]
+    },
+    {
+      "slug": "share-allotment",
+      "title": "Share Allotment Resolution",
+      "category": "equity",
+      "shortDef": "Directors' resolution allotting new shares to investors, founders, or employees — the document banks and BizFile+ require for any new share issue.",
+      "useCase": "Use when issuing new shares (not transferring existing ones). Common scenarios: founder top-ups, seed/Series A investor rounds, ESOP grants where the ESOP plan issues new shares, or share buyback offsets.",
+      "instructions": [
+        "Confirm the company has authorised share capital available — most modern Pte Ltds do not have a cap, but check the Constitution.",
+        "Specify the allottee's full name, NRIC/passport, address, and the share class, number, and price per share.",
+        "Capture the consideration paid (cash, shares, services, etc.) and confirmation that the allottee has paid up.",
+        "If issuing to non-founders, ensure pre-emption rights have been waived or offered first.",
+        "Within 14 days, file Return of Allotment with ACRA via BizFile+ and update the Register of Members."
+      ],
+      "faqs": [
+        { "q": "What's the difference between allotment and transfer?", "a": "Allotment creates new shares (increases total issued capital). Transfer moves existing shares between parties. Allotments don't attract stamp duty; transfers do." },
+        { "q": "Can I issue shares for services rendered?", "a": "Yes — Singapore allows non-cash consideration (sweat equity, IP transfer, asset contribution). The board must agree the value is fair. Document the rationale in the resolution to avoid disputes later." },
+        { "q": "Does ACRA need to approve the allotment?", "a": "No approval needed, but the Return of Allotment must be filed within 14 days. Late filing attracts ACRA penalties starting at $300." }
+      ],
+      "relatedTerms": ["share-capital", "acra"]
+    },
+    {
+      "slug": "founders-agreement",
+      "title": "Founders' Agreement Template",
+      "category": "equity",
+      "shortDef": "Sets out vesting, equity splits, decision-making, IP assignment, and what happens if a co-founder leaves — before the lawyers' bill becomes catastrophic.",
+      "useCase": "Sign this before incorporation or in the first weeks. The most expensive mistake startups make is launching without one. When a co-founder walks at month 14 with 33% of the cap table, the entire company is held hostage.",
+      "instructions": [
+        "All founders sign — the agreement binds all of them. Add new founders via amendment, not a side letter.",
+        "Vesting schedule: standard is 4 years with a 1-year cliff. Day-zero shares should be subject to vesting unless founders have already invested significant capital.",
+        "IP assignment: any code, designs, trademarks, or know-how created before incorporation should be formally assigned to the company on incorporation day.",
+        "Decision-making: define what needs unanimous consent (raising capital, selling the company, hiring/firing co-founders) versus simple majority.",
+        "Exit triggers: define 'good leaver' vs 'bad leaver' — a bad leaver typically forfeits unvested shares and the company has the right to repurchase vested shares at par or fair value."
+      ],
+      "faqs": [
+        { "q": "Is a founders' agreement legally binding without lawyers?", "a": "Yes — Singapore contract law respects mutual agreement, consideration, and signatures. But for a Series A or later round, investors will want a properly drafted shareholders' agreement to supersede this. Treat this template as a starting point." },
+        { "q": "What if we already incorporated without one?", "a": "Sign one now. It's better to have it after incorporation than never. Implement vesting retroactively if you have not already issued certificates — though this requires careful tax structuring with IRAS." },
+        { "q": "How do we handle a co-founder who wants to leave?", "a": "If you have a vesting schedule, only the vested portion stays with them; the rest reverts to the company. Without vesting, the departing founder keeps their full equity and the remaining team carries the load — the worst possible outcome." }
+      ],
+      "relatedTerms": ["share-capital", "pte-ltd"]
+    },
+    {
+      "slug": "employment-contract",
+      "title": "Singapore Employment Contract Template",
+      "category": "hr",
+      "shortDef": "MOM-compliant employment contract covering Key Employment Terms, salary, leave, IP assignment, and notice — for full-time and contract roles.",
+      "useCase": "Required for every employee, regardless of seniority or pay. Singapore's Employment Act mandates Key Employment Terms (KETs) be issued in writing within 14 days of joining. This template covers KETs and goes further with IP, confidentiality, and non-solicitation clauses.",
+      "instructions": [
+        "Customise: job title, start date, salary, working hours, probation period, notice period (minimum per Employment Act).",
+        "Annual leave: minimum 7 days for first year of service, increasing with tenure. Most companies offer 14–18 days.",
+        "Sick leave: 14 days outpatient + 60 days hospitalisation if employed >6 months. Cannot offer less.",
+        "Probation: typically 3 or 6 months with shorter notice (1 week to 1 month).",
+        "IP assignment: include clauses assigning all work-product IP to the company. Critical for tech and creative roles.",
+        "CPF: mandatory for SC/PR employees. Foreign employees on EP/S Pass do not contribute. Ensure your payroll provider is set up before the first salary run."
+      ],
+      "faqs": [
+        { "q": "Does this work for all employees?", "a": "Yes — for full-time staff earning under $4,500/month, the Employment Act applies in full. For higher earners, most Act provisions still apply but some (overtime, retrenchment benefits) do not. Adjust the contract terms accordingly." },
+        { "q": "Do I need to register the contract anywhere?", "a": "No, but you must keep a signed copy and provide the employee with a copy. MOM may ask for it during audits or disputes." },
+        { "q": "What about EP holders?", "a": "Same contract applies. The EP application separately requires you to declare the salary, role, and qualifications, but the employment contract is the binding legal document between employer and employee." }
+      ],
+      "relatedTerms": ["ep", "s-pass"]
+    },
+    {
+      "slug": "mutual-nda",
+      "title": "Mutual Non-Disclosure Agreement (NDA)",
+      "category": "hr",
+      "shortDef": "Two-way NDA for confidential discussions with partners, investors, vendors, or potential acquirers — Singapore-law governed and PDPA-aware.",
+      "useCase": "Use whenever you share or receive confidential information: investor pitches (most VCs decline NDAs at first meeting but later rounds expect one), M&A discussions, supplier negotiations, technical due diligence, joint ventures, or hiring discussions.",
+      "instructions": [
+        "Both parties sign. Date it accurately. Include full legal entity names and registered numbers (UEN for Singapore entities).",
+        "Term: 2–5 years is standard. Trade secrets can be perpetual.",
+        "Define 'Confidential Information' broadly but with carve-outs (already public, independently developed, required by law).",
+        "Specify return/destruction of materials on termination of discussions.",
+        "Governing law: Singapore. Disputes: Singapore courts or SIAC arbitration.",
+        "PDPA: ensure any personal data shared is handled per Singapore's Personal Data Protection Act."
+      ],
+      "faqs": [
+        { "q": "Are NDAs enforceable in Singapore?", "a": "Yes — Singapore courts strictly enforce well-drafted NDAs. Damages can include both compensatory damages and injunctive relief preventing further disclosure. The threshold is showing the information was genuinely confidential and the recipient knew it." },
+        { "q": "Should I sign an NDA before pitching VCs?", "a": "Generally no — top-tier VCs decline NDAs at first meeting because they hear similar pitches and don't want exposure. Save NDAs for late-stage diligence or sensitive technical disclosures." },
+        { "q": "Mutual vs one-way?", "a": "Mutual when both sides will share information (most common). One-way when only one party is disclosing (e.g., a vendor receiving your data). This template is mutual; convert to one-way by deleting the corresponding obligations on the receiving party only." }
+      ],
+      "relatedTerms": ["pte-ltd"]
+    },
+    {
+      "slug": "ep-cover-letter",
+      "title": "Employment Pass Cover Letter",
+      "category": "immigration",
+      "shortDef": "Strong cover letter for EP applications via MOM EP Online — explains the role, candidate fit, and why the hire benefits Singapore's economy.",
+      "useCase": "Submitted alongside the EP application on EP Online. While not strictly required, MOM officers read cover letters when evaluating borderline applications. A weak or missing cover letter can result in rejection on first pass.",
+      "instructions": [
+        "Address: 'Controller of Immigration, Ministry of Manpower'.",
+        "Opening paragraph: company name, UEN, industry, Singapore presence, and headcount (mention local-to-foreign ratio if favourable).",
+        "Role: title, key responsibilities, why the role exists, why Singapore is the right base for this role.",
+        "Candidate: name, qualifications, years of experience, why this person specifically (achievements, unique skills, specialised knowledge).",
+        "Local hiring: explain efforts to hire locally first (job postings on MyCareersFuture, recruiters engaged, candidates interviewed). MOM expects evidence of fair consideration under COMPASS.",
+        "Salary: confirm salary is at or above sector benchmark for the role, qualifications, and experience.",
+        "Sign off with director's name and title."
+      ],
+      "faqs": [
+        { "q": "Is a cover letter mandatory?", "a": "No, but it materially improves approval rates for borderline cases. For straightforward applications (high salary, in-demand role, clear fit), MOM may approve without one. For tech, finance, and senior roles, always include." },
+        { "q": "What is COMPASS and how does it affect EP?", "a": "COMPASS (Complementarity Assessment Framework) is the points-based EP assessment introduced in 2023. EPs must score 40+ points across salary, qualifications, diversity, local hiring support, and job sector shortage. Cover letters help on the local hiring component." },
+        { "q": "What if my candidate doesn't have a degree?", "a": "Self-taught technologists and entrepreneurs can still qualify if salary and skills compensate. Document achievements in the cover letter — open-source contributions, products shipped, awards, patents, prior senior roles. MOM increasingly weighs proven track record." }
+      ],
+      "relatedTerms": ["ep", "s-pass", "tech-pass"]
+    }
+  ]
+}

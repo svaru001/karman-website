@@ -1,0 +1,110 @@
+[ON COMPANY LETTERHEAD]
+
+Date: [DD Month YYYY]
+
+Controller of Immigration
+Ministry of Manpower
+1500 Bendemeer Road
+Singapore 339946
+
+Re: Employment Pass Application — [CANDIDATE FULL NAME], [Passport No. XXXXXXXX]
+
+
+Dear Sir/Madam,
+
+We submit this application in support of an Employment Pass for [CANDIDATE NAME] to join [COMPANY NAME] PTE. LTD. as [Job Title].
+
+
+1. ABOUT THE COMPANY
+
+[COMPANY NAME] PTE. LTD. (UEN: [202XXXXXXX]) was incorporated in Singapore on [Date] and is engaged in [brief description of business — e.g., "developing AI infrastructure software for enterprise customers across Southeast Asia"]. Our registered office is at [Address].
+
+The Company currently employs [X] staff in Singapore, of which [Y] are Singapore Citizens / Permanent Residents, [Z] are EP / S Pass holders. We are committed to growing our local workforce and have hired [N] Singaporeans in the past 12 months across [functions].
+
+We are funded by [investors / self-funded / revenue-generating], with current annual revenue of S$[AMOUNT] / current paid-up capital of S$[AMOUNT].
+
+
+2. THE ROLE
+
+[CANDIDATE NAME] will join us as [Job Title], reporting to [Manager Title and Name].
+
+The role's principal responsibilities include:
+    - [Responsibility 1, ideally with measurable outcome]
+    - [Responsibility 2]
+    - [Responsibility 3]
+    - [Responsibility 4]
+
+This is a critical role for the Company because [explain why — e.g., "it leads our Southeast Asia go-to-market strategy", "it heads our newly established machine learning team", "it brings deep domain expertise we cannot source locally"].
+
+The role is permanently based in Singapore, with regional travel to [markets] as required.
+
+
+3. THE CANDIDATE
+
+[CANDIDATE NAME] holds a [Degree, e.g., "Bachelor's degree in Computer Science"] from [University Name, Year], a globally recognised institution. [If higher qualifications: "He/She also holds an MSc/PhD in [field] from [institution]."]
+
+[CANDIDATE NAME] has [X] years of relevant experience, most recently as [Previous Role] at [Previous Company], where he/she [key achievement 1, key achievement 2].
+
+Specific expertise that the candidate brings:
+    - [Specific skill 1 — e.g., "deep learning model deployment at scale"]
+    - [Specific skill 2 — e.g., "leadership of a 12-person engineering team"]
+    - [Specific skill 3 — e.g., "regional GTM in Indonesia and Vietnam"]
+
+[Optional: notable awards, patents, open-source contributions, or speaking engagements that establish authority in the field.]
+
+
+4. SALARY AND COMPASS
+
+We are offering a fixed monthly salary of S$[AMOUNT] (gross), which is at or above the prevailing benchmark for the role, qualifications, and experience level. [If well above sector median: highlight this — it improves COMPASS salary points.]
+
+The role is classified under SSOC code [XXXX — e.g., "2152: Software Developer"]. We have reviewed the COMPASS framework and assess this application as scoring on the following points:
+    - C1 Salary: [Estimated points]
+    - C2 Qualifications: [Estimated points]
+    - C3 Diversity: [Estimated points]
+    - C4 Local Hiring: [Estimated points]
+    - Bonus: [Shortage Occupation List / Strategic Economic Priorities, if applicable]
+
+
+5. LOCAL HIRING EFFORTS
+
+In line with the Fair Consideration Framework, we conducted a thorough local search before considering this candidate:
+    - The role was posted on MyCareersFuture from [Date] to [Date], a period of [N] days.
+    - We received [N] applications, of which [N] were Singapore Citizens or PRs.
+    - [N] candidates were shortlisted and [N] were interviewed.
+    - [Outcome — e.g., "None had the specific combination of [skill A] and [skill B] required for the role" / "We have offered roles to two Singaporean candidates from this search who will join in adjacent functions."]
+
+
+6. CONTRIBUTION TO SINGAPORE
+
+[CANDIDATE NAME]'s appointment will:
+    - [Build local capacity in a strategic capability — e.g., "transfer knowledge of [specific skill] to junior Singaporean staff through structured mentorship"]
+    - [Anchor a regional function in Singapore — e.g., "establish our APAC research hub in Singapore"]
+    - [Generate further local hiring — e.g., "enable us to hire 4–5 additional Singaporeans into the team within the next 12 months"]
+
+
+7. CLOSING
+
+We respectfully request your favourable consideration of this application. Should you require any further information or documentation, please contact the undersigned.
+
+Yours faithfully,
+
+
+_______________________________
+[Director / HR Lead Name]
+[Title]
+[COMPANY NAME] PTE. LTD.
+Email: [email]
+Phone: [phone]
+
+
+---
+USAGE NOTES:
+- Print on company letterhead. Reference UEN, registered address, and incorporation date.
+- Be concrete on local hiring efforts: dates, headcount, MyCareersFuture posting evidence.
+- Be specific on the candidate's unique value — vague claims hurt the application.
+- For senior or specialised roles, include the candidate's CV, qualifications, and any letters of recommendation.
+- COMPASS minimum is 40 points; aim for 60+ to give the application headroom.
+- Tech.Pass and ONE Pass are separate schemes with different criteria — adapt accordingly.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

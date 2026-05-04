@@ -1,0 +1,109 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+THIS AGREEMENT is made on [DD Month YYYY]
+
+BETWEEN
+
+(1) [PARTY A FULL LEGAL NAME], UEN/Registration No. [XXXXX], of [ADDRESS] ("Party A"); and
+
+(2) [PARTY B FULL LEGAL NAME], UEN/Registration No. [XXXXX], of [ADDRESS] ("Party B"),
+
+each a "Party" and together the "Parties".
+
+
+WHEREAS the Parties wish to explore a potential business relationship in connection with [PURPOSE — e.g., "evaluating a potential commercial partnership", "discussing investment", "due diligence on a proposed acquisition"] (the "Purpose"), and in furtherance of the Purpose may disclose to each other certain confidential information.
+
+
+IT IS AGREED:
+
+
+1. CONFIDENTIAL INFORMATION
+
+"Confidential Information" means any non-public information, in any form, disclosed by one Party (the "Disclosing Party") to the other Party (the "Receiving Party") in connection with the Purpose, including but not limited to:
+
+    (a) business plans, strategies, financial information, customer and supplier lists;
+    (b) technology, source code, designs, processes, trade secrets;
+    (c) personal data;
+    (d) the existence and contents of these discussions.
+
+Confidential Information does NOT include information that:
+    (i) is or becomes generally available to the public other than through a breach of this Agreement;
+    (ii) was lawfully known to the Receiving Party before disclosure, free of any obligation of confidence;
+    (iii) is independently developed by the Receiving Party without use of the Confidential Information;
+    (iv) is rightfully obtained from a third party without restriction.
+
+
+2. OBLIGATIONS
+
+2.1 The Receiving Party shall:
+    (a) keep all Confidential Information strictly confidential;
+    (b) use the Confidential Information solely for the Purpose;
+    (c) not disclose the Confidential Information to any third party without the Disclosing Party's prior written consent;
+    (d) limit access to the Confidential Information to its employees, directors, professional advisers, and contractors who have a need-to-know for the Purpose, and who are bound by equivalent confidentiality obligations;
+    (e) protect the Confidential Information using at least the same standard of care it uses for its own confidential information, and in no event less than reasonable care.
+
+
+3. PERMITTED DISCLOSURES
+
+The Receiving Party may disclose Confidential Information to the extent required by law, regulation, or court order, provided that, where lawful, it gives the Disclosing Party prompt written notice and reasonable opportunity to seek a protective order.
+
+
+4. RETURN OR DESTRUCTION
+
+On the earlier of completion of the Purpose, written request by the Disclosing Party, or termination of this Agreement, the Receiving Party shall promptly return or destroy all Confidential Information in its possession (including copies, extracts, and derivatives) and certify such destruction on request, save for one archived copy retained for legal compliance purposes.
+
+
+5. PERSONAL DATA
+
+Each Party shall comply with the Personal Data Protection Act 2012 of Singapore in handling any personal data shared under this Agreement.
+
+
+6. NO LICENCE
+
+Nothing in this Agreement transfers or licenses any intellectual property rights or other proprietary interest from one Party to the other.
+
+
+7. TERM
+
+This Agreement takes effect on the date first written above and continues for [3 / 5] years, unless terminated earlier by mutual written agreement. The confidentiality obligations in clauses 2 and 4 survive termination for a further [2 / 3 / 5] years (or, for trade secrets, indefinitely).
+
+
+8. REMEDIES
+
+The Parties agree that breach of this Agreement may cause irreparable harm for which damages alone may be inadequate. The Disclosing Party is entitled to seek injunctive relief in addition to any other remedies available.
+
+
+9. GENERAL
+
+9.1 No Partnership: This Agreement does not create a partnership, joint venture, agency, or employment relationship between the Parties.
+
+9.2 No Obligation to Proceed: Neither Party is obliged to enter into any further agreement or relationship.
+
+9.3 Governing Law: This Agreement is governed by the laws of Singapore. Any dispute shall be resolved in the courts of Singapore [or by SIAC arbitration in Singapore — pick one].
+
+9.4 Entire Agreement: This Agreement is the entire understanding between the Parties on the subject matter, superseding all prior discussions.
+
+9.5 Amendments: Any amendment must be in writing and signed by both Parties.
+
+
+SIGNED:
+
+
+For and on behalf of [PARTY A]:               For and on behalf of [PARTY B]:
+
+_______________________________               _______________________________
+Name: [Authorised Signatory]                   Name: [Authorised Signatory]
+Title: [Title]                                 Title: [Title]
+Date: [DD Month YYYY]                          Date: [DD Month YYYY]
+
+
+---
+USAGE NOTES:
+- Both parties sign and keep a counterpart.
+- For one-way NDAs (only one party discloses), delete reciprocal obligations on the receiving party.
+- Term: 3-5 years is standard; trade secrets can be perpetual.
+- Most top-tier VCs decline NDAs at first meeting — save NDAs for sensitive technical disclosures or late-stage diligence.
+- Singapore courts strictly enforce well-drafted NDAs; remedies include damages and injunctive relief.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

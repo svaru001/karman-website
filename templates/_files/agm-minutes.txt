@@ -1,0 +1,79 @@
+MINUTES OF THE ANNUAL GENERAL MEETING
+
+[COMPANY NAME] PTE. LTD.
+UEN: [202XXXXXXX]
+Registered Office: [ADDRESS]
+
+
+Date of Meeting:    [DD Month YYYY]
+Time:               [HH:MM] hrs
+Venue:              [Address / Held electronically via [Platform]]
+Financial Year:     Year ended [DD Month YYYY]
+
+
+PRESENT (Directors)
+1. [Director Name 1] — Chairman
+2. [Director Name 2]
+3. [Director Name 3]
+
+PRESENT (Shareholders)
+1. [Shareholder Name 1] — holding [X] ordinary shares
+2. [Shareholder Name 2] — holding [X] ordinary shares
+[List all attending shareholders or proxies]
+
+IN ATTENDANCE
+Corporate Secretary: [Name / Karman Corporate Services Pte Ltd]
+Auditor (if applicable): [Audit Firm Name]
+
+
+1. NOTICE AND QUORUM
+
+The Chairman noted that proper notice had been given in accordance with the Constitution and the Companies Act, and that a quorum was present. The Chairman declared the meeting open at [HH:MM] hrs.
+
+
+2. AUDITED FINANCIAL STATEMENTS
+
+The audited financial statements for the financial year ended [DD Month YYYY], together with the Directors' Statement and Independent Auditor's Report, were tabled.
+
+[For small companies exempt from audit, replace with: "The unaudited financial statements for the financial year ended [DD Month YYYY], together with the Directors' Statement, were tabled. The company qualified for audit exemption under Section 205B of the Companies Act."]
+
+After discussion, on the motion of [Mover] seconded by [Seconder], it was
+
+RESOLVED that the financial statements for the financial year ended [DD Month YYYY] be and are hereby received and adopted.
+
+
+3. RE-ELECTION OF DIRECTORS
+
+[Insert as applicable based on Constitution rotation requirements]
+
+It was RESOLVED that [Director Name], who retires by rotation in accordance with the Constitution and being eligible, offers himself/herself for re-election, be and is hereby re-elected as a director of the Company.
+
+
+4. AUDITOR APPOINTMENT (if not exempt)
+
+It was RESOLVED that [Audit Firm Name] be and are hereby re-appointed as auditors of the Company until the conclusion of the next Annual General Meeting, at a remuneration to be agreed between the auditors and the directors.
+
+
+5. ANY OTHER BUSINESS
+
+[Note any items raised, or insert: "There being no other business, the meeting was declared closed at [HH:MM] hrs."]
+
+
+SIGNED:
+
+
+_______________________________
+Name: [Chairman Name]
+Chairman of the Meeting
+Date: [DD Month YYYY]
+
+
+---
+USAGE NOTES:
+- AGM must be held within 6 months of the financial year end (FYE).
+- File the Annual Return with ACRA via BizFile+ within 7 months of FYE.
+- Most private companies have dispensed with AGMs and instead pass written resolutions for these matters — see Board Resolution template.
+- Minutes must be entered into the minute book within 1 month and confirmed at the next meeting.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

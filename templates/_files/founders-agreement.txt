@@ -1,0 +1,130 @@
+FOUNDERS' AGREEMENT
+
+THIS AGREEMENT is made on [DD Month YYYY]
+
+BETWEEN
+
+(1) [FOUNDER 1 FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS]
+(2) [FOUNDER 2 FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS]
+(3) [FOUNDER 3 FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS]
+
+(each a "Founder" and together the "Founders")
+
+
+WHEREAS:
+
+A. The Founders intend to incorporate / have incorporated [COMPANY NAME] PTE. LTD. (UEN: [202XXXXXXX]) (the "Company") in Singapore.
+
+B. The Founders wish to record their agreement on the founding terms of the Company, including equity allocation, vesting, intellectual property assignment, decision-making, and exit provisions.
+
+
+IT IS AGREED:
+
+
+1. EQUITY ALLOCATION
+
+1.1 The initial share capital of the Company shall be allocated as follows:
+
+    Founder 1: [X]% — [NUMBER] ordinary shares
+    Founder 2: [X]% — [NUMBER] ordinary shares
+    Founder 3: [X]% — [NUMBER] ordinary shares
+                                                ----
+    Total:     100%   [TOTAL] ordinary shares
+
+1.2 Any additional shares to be issued (employee option pool, investors) shall dilute all Founders pro rata, unless otherwise agreed unanimously.
+
+
+2. VESTING
+
+2.1 Each Founder's shares shall vest over a period of four (4) years from the Vesting Commencement Date set out below, with a one-year cliff.
+
+2.2 "Vesting Commencement Date" means: [Date — typically incorporation date or earlier date when full-time work began].
+
+2.3 The first 25% of each Founder's shares shall vest on the first anniversary of the Vesting Commencement Date. Thereafter, the remaining 75% shall vest in equal monthly instalments over the following 36 months.
+
+2.4 If a Founder ceases to provide services to the Company before full vesting:
+    (a) "Good Leaver" (death, permanent disability, termination without cause, mutual agreement): the unvested shares shall be returned to the Company at par value.
+    (b) "Bad Leaver" (voluntary resignation without justification, termination for cause, breach of this Agreement): the unvested shares AND, at the Company's option, the vested shares (less consideration paid) shall be returned to the Company at par value.
+
+
+3. INTELLECTUAL PROPERTY
+
+3.1 Each Founder hereby irrevocably assigns to the Company all right, title and interest in any intellectual property (including code, designs, trademarks, know-how, business plans) created by the Founder before, on, or after the date of this Agreement and relating to the business of the Company.
+
+3.2 Each Founder warrants that no third party has any claim to such intellectual property and shall execute any further documents reasonably required to perfect the assignment.
+
+
+4. ROLES AND COMMITMENT
+
+4.1 The Founders' initial roles, responsibilities and commitment levels are:
+
+    Founder 1: [Role / Title] — [Full-time / Part-time]
+    Founder 2: [Role / Title] — [Full-time / Part-time]
+    Founder 3: [Role / Title] — [Full-time / Part-time]
+
+4.2 Each Founder shall devote his/her full business time and attention to the Company unless otherwise agreed in writing.
+
+
+5. DECISION-MAKING
+
+5.1 Day-to-day decisions are taken by the executive Founder in charge of the relevant function.
+
+5.2 The following matters require UNANIMOUS Founder consent (in addition to any board approval required by law):
+    (a) issuing new equity or convertible securities;
+    (b) selling, merging, or winding up the Company;
+    (c) hiring or removing a Founder;
+    (d) changing a Founder's role, salary, or commitment level;
+    (e) entering into a transaction worth more than S$[THRESHOLD];
+    (f) raising debt above S$[THRESHOLD];
+    (g) amending this Agreement.
+
+5.3 All other matters are decided by simple majority of the Founders.
+
+
+6. CONFIDENTIALITY AND NON-COMPETE
+
+6.1 Each Founder shall keep all Company information confidential during and after his/her tenure.
+
+6.2 During tenure and for twelve (12) months thereafter, each Founder shall not:
+    (a) carry on or be engaged in any business that competes with the Company in Singapore;
+    (b) solicit any employee, customer, or supplier of the Company.
+
+
+7. DISPUTE RESOLUTION
+
+7.1 Any dispute arising under this Agreement shall first be resolved by good-faith discussion among the Founders.
+
+7.2 If unresolved within 30 days, the dispute shall be referred to mediation under the Singapore Mediation Centre, and failing settlement, to arbitration under the rules of the Singapore International Arbitration Centre (SIAC).
+
+7.3 This Agreement is governed by Singapore law.
+
+
+8. ENTIRE AGREEMENT AND AMENDMENTS
+
+8.1 This Agreement is the entire agreement between the Founders concerning the subject matter and supersedes any prior understandings.
+
+8.2 Amendments must be in writing and signed by all Founders.
+
+
+SIGNED on the date first written above:
+
+
+_______________________________            _______________________________
+[Founder 1 Name]                            [Founder 2 Name]
+Date: [DD Month YYYY]                       Date: [DD Month YYYY]
+
+
+_______________________________
+[Founder 3 Name]
+Date: [DD Month YYYY]
+
+
+---
+USAGE NOTES:
+- Sign before incorporation or in the first weeks of operating. Retroactive vesting after substantial growth raises tax complications.
+- For a Series A or later round, this agreement is typically superseded by a Shareholders' Agreement and ESOP plan negotiated with investors.
+- Consult a Singapore lawyer for nuanced cases: foreign founders, IP from a previous employer, multi-jurisdiction operations.
+- Each Founder should keep a signed counterpart.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

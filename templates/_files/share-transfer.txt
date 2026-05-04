@@ -1,0 +1,87 @@
+PART A — INSTRUMENT OF TRANSFER OF SHARES (FORM 6)
+Section 126 Companies Act 1967
+
+[COMPANY NAME] PTE. LTD.
+UEN: [202XXXXXXX]
+(the "Company")
+
+
+I/We, [TRANSFEROR FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS]
+(the "Transferor")
+
+in consideration of the sum of S$[AMOUNT] paid to me/us by:
+
+[TRANSFEREE FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS]
+(the "Transferee")
+
+DO HEREBY transfer to the Transferee the [NUMBER] ordinary shares of S$[PAR VALUE] each, numbered [SHARE CERTIFICATE NUMBERS], in the capital of the Company, to hold the same unto the Transferee, his/her executors, administrators and assigns, subject to the same conditions on which the Transferor held the said shares.
+
+AND I/We, the Transferee, do hereby agree to accept and take the said shares subject to the same conditions.
+
+
+SIGNED by the Transferor:                   SIGNED by the Transferee:
+
+_______________________________            _______________________________
+Name: [Transferor Name]                     Name: [Transferee Name]
+Date: [DD Month YYYY]                       Date: [DD Month YYYY]
+
+In the presence of:                         In the presence of:
+
+_______________________________            _______________________________
+Witness Name:                               Witness Name:
+NRIC/Passport:                              NRIC/Passport:
+
+
+
+==========================================================================
+
+
+PART B — DIRECTORS' RESOLUTION APPROVING TRANSFER
+
+[COMPANY NAME] PTE. LTD.
+UEN: [202XXXXXXX]
+
+Date: [DD Month YYYY]
+
+
+WHEREAS:
+
+A. [TRANSFEROR NAME] (the "Transferor") wishes to transfer [NUMBER] ordinary shares in the capital of the Company to [TRANSFEREE NAME] (the "Transferee") for a consideration of S$[AMOUNT].
+
+B. The directors have considered the proposed transfer and confirmed that:
+   (i) it does not contravene the Constitution of the Company;
+   (ii) all pre-emption rights (if any) have been waived or duly observed;
+   (iii) the Transferee is a fit and proper person to be admitted as a member.
+
+
+IT IS HEREBY RESOLVED:
+
+1. THAT the transfer of [NUMBER] ordinary shares from the Transferor to the Transferee, for the consideration of S$[AMOUNT], be and is hereby approved.
+
+2. THAT, subject to payment of the requisite stamp duty to IRAS and lodgement of the duly stamped instrument of transfer:
+   (a) the Register of Members and the Register of Transfers be updated accordingly;
+   (b) a new share certificate be issued to the Transferee;
+   (c) the existing share certificate held by the Transferor be cancelled;
+   (d) Notice of Transfer be lodged with ACRA via BizFile+ within fourteen (14) days.
+
+3. THAT [Director Name] be and is hereby authorised to sign all documents and instruments necessary to give effect to the foregoing.
+
+
+SIGNED by the directors:
+
+
+_______________________________            _______________________________
+Name: [Director 1]                          Name: [Director 2]
+Date: [DD Month YYYY]                       Date: [DD Month YYYY]
+
+
+---
+USAGE NOTES:
+- Stamp duty: 0.2% of consideration or net asset value (whichever higher), payable to IRAS within 14 days via the e-Stamping portal.
+- Notice of Transfer must be filed with ACRA via BizFile+ within 14 days.
+- Update the Register of Members and the Register of Transfers in your statutory records.
+- Cancel the old share certificate and issue a new one to the transferee.
+- Check the Constitution and any shareholders' agreement for pre-emption rights before signing.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.

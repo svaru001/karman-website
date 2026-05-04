@@ -1,0 +1,158 @@
+EMPLOYMENT AGREEMENT
+
+THIS AGREEMENT is made on [DD Month YYYY]
+
+BETWEEN
+
+[COMPANY NAME] PTE. LTD., UEN [202XXXXXXX], a private company limited by shares incorporated in Singapore, with registered office at [ADDRESS] (the "Company")
+
+AND
+
+[EMPLOYEE FULL NAME], NRIC/Passport No. [XXXXX], of [ADDRESS] (the "Employee")
+
+
+1. APPOINTMENT AND ROLE
+
+1.1 The Company employs the Employee as [Job Title] reporting to [Manager Title], with effect from [Start Date] (the "Commencement Date").
+
+1.2 The Employee's principal duties are set out in Schedule 1. The Company may assign additional duties consistent with the role.
+
+1.3 Place of work: [Address — typically the registered office or "remote with occasional in-office attendance"].
+
+
+2. PROBATION
+
+2.1 The first [3 / 6] months from the Commencement Date are a probation period. During probation, either party may terminate by giving [1 week / 2 weeks] notice in writing.
+
+
+3. SALARY AND BENEFITS
+
+3.1 Gross monthly salary: S$[AMOUNT], payable monthly in arrears by direct credit to the Employee's nominated bank account by the last working day of each month.
+
+3.2 [Bonus, if any]: Discretionary annual bonus, payable subject to Company and individual performance.
+
+3.3 CPF: For Singapore Citizens and Permanent Residents, Company and Employee contributions are made in accordance with the Central Provident Fund Act. For Employment Pass / S Pass holders, no CPF contributions are payable.
+
+3.4 Insurance: Group medical and group term life cover as per the Company's prevailing scheme.
+
+
+4. WORKING HOURS
+
+4.1 Standard working hours: [Days] from [HH:MM] to [HH:MM], with a one-hour lunch break.
+
+4.2 The Employee may be required to work additional hours when reasonably necessary to perform the role.
+
+
+5. ANNUAL LEAVE
+
+5.1 The Employee is entitled to [14] days of paid annual leave per calendar year, pro-rated for partial years.
+
+5.2 Leave must be taken with prior approval of the Employee's manager.
+
+5.3 Up to [5] days of unused leave may be carried forward to the following year. Excess leave lapses on 31 December.
+
+
+6. SICK LEAVE
+
+6.1 In line with the Employment Act:
+    (a) 14 days outpatient sick leave per year, certified by a medical practitioner.
+    (b) 60 days hospitalisation leave per year (inclusive of outpatient days).
+
+6.2 Entitlement begins after 6 months of continuous service in line with the Employment Act.
+
+
+7. PUBLIC HOLIDAYS
+
+The Employee is entitled to all gazetted Singapore public holidays.
+
+
+8. CONFIDENTIALITY
+
+8.1 The Employee shall keep confidential all non-public information relating to the Company's business, customers, employees, finances, and operations, both during and after employment.
+
+8.2 The Employee shall return all Company property, documents and information on termination.
+
+
+9. INTELLECTUAL PROPERTY
+
+9.1 All intellectual property created by the Employee in the course of employment, or using Company resources, vests in and is owned by the Company absolutely.
+
+9.2 The Employee assigns to the Company all such intellectual property and shall execute any further documents required to perfect such assignment.
+
+
+10. NON-SOLICITATION
+
+For 12 months after termination, the Employee shall not, in Singapore:
+    (a) solicit or accept business from any customer of the Company with whom the Employee had material contact in the 12 months before termination;
+    (b) solicit or attempt to entice away any employee or contractor of the Company.
+
+
+11. NOTICE OF TERMINATION
+
+11.1 After probation, either party may terminate this employment by giving [1 / 2 / 3] months written notice, or payment in lieu of notice.
+
+11.2 The Company may terminate without notice for serious misconduct, including but not limited to fraud, theft, gross negligence, or breach of confidentiality.
+
+
+12. PERSONAL DATA
+
+The Company collects and processes the Employee's personal data for employment purposes in accordance with the Personal Data Protection Act 2012 (Singapore). Details are set out in the Company's Employee Privacy Notice.
+
+
+13. GOVERNING LAW
+
+This Agreement is governed by the laws of Singapore. Disputes shall be resolved in the courts of Singapore.
+
+
+14. ENTIRE AGREEMENT
+
+This Agreement supersedes any prior offers or understandings between the parties relating to the Employee's employment.
+
+
+SIGNED:
+
+
+For and on behalf of [COMPANY NAME] PTE. LTD.:
+
+_______________________________
+Name: [Director / HR Lead Name]
+Title: [Title]
+Date: [DD Month YYYY]
+
+
+Employee:
+
+_______________________________
+Name: [Employee Name]
+Date: [DD Month YYYY]
+
+
+---
+SCHEDULE 1 — JOB DESCRIPTION
+
+Position: [Job Title]
+Reports to: [Manager Title]
+
+Key responsibilities:
+- [Responsibility 1]
+- [Responsibility 2]
+- [Responsibility 3]
+- [Responsibility 4]
+- [Responsibility 5]
+
+Performance KPIs:
+- [KPI 1]
+- [KPI 2]
+- [KPI 3]
+
+
+---
+USAGE NOTES:
+- Singapore's Employment Act requires Key Employment Terms (KETs) be issued in writing within 14 days of joining for employees on contracts of 14+ days.
+- For employees earning >S$4,500/month, certain Employment Act provisions (overtime pay, retrenchment) do not automatically apply.
+- For EP / S Pass holders: this contract is the binding employment document. The work pass application separately captures salary and role with MOM.
+- CPF: only for SC/PR. For foreign employees, ensure your payroll system flags them as exempt.
+- Probation: 3 months is standard; 6 months for senior roles.
+
+Template provided by Karman Corporate Services (https://karman.com.sg)
+This template is provided as-is for general guidance and does not constitute legal advice.
