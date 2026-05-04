@@ -77,7 +77,7 @@ function buildUserHtml(name, toolId) {
         Our corporate services advisors are available for a free 30-minute consultation. No obligation — just expert guidance tailored to your situation.
       </p>
     </div>
-    <a href="https://www.karman.com.sg/#contact"
+    <a href="https://karman.com.sg/#contact"
        style="display:inline-block;background:#0A2540;color:white;padding:13px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:0.2px;">
       Book a free consultation →
     </a>
