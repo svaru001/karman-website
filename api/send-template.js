@@ -27,8 +27,8 @@ function loadTemplateBody(slug) {
   const safe = String(slug || '').replace(/[^a-z0-9-]/gi, '');
   if (!safe) return null;
   try {
-    const p = path.join(process.cwd(), 'templates', '_files', `${safe}.txt`);
-    return fs.readFileSync(p, 'utf8');
+    const p = path.join(process.cwd(), 'templates', '_files', `${safe}.docx`);
+    return fs.readFileSync(p);  // Buffer (binary)
   } catch (e) {
     return null;
   }
@@ -54,10 +54,10 @@ module.exports = async function handler(req, res) {
   const body = loadTemplateBody(slug);
   if (!body) return res.status(404).json({ error: 'Template file not found' });
 
-  const filename = `${slug}.txt`;
+  const filename = `${slug}.docx`;
   const downloadUrl = `https://karman.com.sg/templates/_files/${filename}`;
   const pageUrl = `https://karman.com.sg/templates/${slug}`;
-  const attachmentB64 = Buffer.from(body, 'utf8').toString('base64');
+  const attachmentB64 = body.toString('base64');
 
   // 1. Send template to user
   const userRes = await fetch('https://api.resend.com/emails', {
@@ -109,10 +109,10 @@ function buildUserEmail({ name, template, downloadUrl, pageUrl }) {
     <p style="font-size:15px;color:#374151;line-height:1.6;margin:0 0 18px;">Here's the <strong>${escapeHtml(template.title)}</strong> you requested. The file is attached to this email and you can also download it directly:</p>
 
     <div style="text-align:center;margin:24px 0;">
-      <a href="${downloadUrl}" style="display:inline-block;background:#0d4567;color:#fff;padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Download template (.txt)</a>
+      <a href="${downloadUrl}" style="display:inline-block;background:#0d4567;color:#fff;padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Download template (.docx)</a>
     </div>
 
-    <p style="font-size:14px;color:#6B7280;line-height:1.6;margin:0 0 18px;"><strong>How to use it:</strong> Open in Word, Google Docs, or any text editor. Replace the bracketed placeholders ([COMPANY NAME], [DD Month YYYY], etc.) with your details. Save as .docx if you want clean formatting.</p>
+    <p style="font-size:14px;color:#6B7280;line-height:1.6;margin:0 0 18px;"><strong>How to use it:</strong> Open in Word, Google Docs, or Pages. Replace the bracketed placeholders ([COMPANY NAME], [DD Month YYYY], etc.) with your details, then save and sign.</p>
 
     <p style="font-size:14px;color:#6B7280;line-height:1.6;margin:0 0 18px;">Full guidance and FAQs on the template page: <a href="${pageUrl}" style="color:#0d4567;">${pageUrl}</a></p>
 
