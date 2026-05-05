@@ -1,10 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "framework": null,
-  "buildCommand": null,
-  "installCommand": null,
-  "outputDirectory": ".",
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/pricing", "destination": "/", "permanent": true }
