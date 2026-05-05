@@ -36,7 +36,7 @@ FOOTER_HTML = """  <footer class="footer">
         <div class="footer__brand">
           <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
-          <div class="footer__badges"><span class="badge">ACRA Registered</span><span class="badge">MAS Regulated</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
           </div>
         </div>
         <div class="footer__links">
@@ -89,6 +89,14 @@ GLOSSARY_CSS = """    .glossary-hero { background:linear-gradient(180deg,#fff 0%
     .term-page__cta p { margin:0 0 16px; opacity:.92; font-size:15px; line-height:1.5; }
     .term-page__cta a { display:inline-block; padding:11px 22px; background:#fff; color:#0d4567; border-radius:8px; text-decoration:none; font-weight:700; font-size:14.5px; }
     .term-page__cta a:hover { background:#f0f7ff; }
+    .term-page__resources { margin-top:40px; padding-top:32px; border-top:1px solid var(--gray-200); }
+    .term-page__resources h2 { font-family:'Sora',sans-serif; font-size:20px; color:#0A2540; margin:0 0 16px; }
+    .term-page__resources-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+    .term-page__resource-card { display:block; padding:14px 16px; background:#fff; border:1px solid var(--gray-200); border-radius:10px; text-decoration:none; color:#0A2540; transition:all .15s; }
+    .term-page__resource-card:hover { border-color:#0d4567; transform:translateY(-1px); box-shadow:0 4px 12px rgba(13,69,103,.08); }
+    .term-page__resource-label { display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#0d4567; margin-bottom:4px; }
+    .term-page__resource-title { font-weight:700; font-size:14.5px; margin:0 0 4px; color:#0A2540; }
+    .term-page__resource-desc { font-size:13px; line-height:1.5; color:var(--gray-700); margin:0; }
 """
 
 
@@ -102,6 +110,41 @@ def first_letter(t):
 
 def get_term(slug, terms_by_slug):
     return terms_by_slug.get(slug)
+
+
+# Cross-link mapping: glossary category → relevant tools and templates
+CATEGORY_RESOURCES = {
+    "governance": [
+        ("/tools/ssic-code-search", "SSIC Code Search", "Find the right industry code for ACRA filing."),
+        ("/templates/board-resolution", "Board Resolution Template", "Generic directors' resolution in writing."),
+        ("/tools/document-checklist", "Document Checklist", "Everything you need for ACRA registration."),
+    ],
+    "structure": [
+        ("/tools/business-structure-recommender", "Structure Recommender", "Pte Ltd vs LLP vs sole prop — find your fit."),
+        ("/templates/founders-agreement", "Founders' Agreement Template", "Vesting, equity splits, IP assignment."),
+        ("/tools/cost-calculator", "Cost Calculator", "Estimate annual corporate services fees."),
+    ],
+    "tax": [
+        ("/tools/cost-calculator", "Cost Calculator", "Annual corp tax, GST, and accounting fees."),
+        ("/tools/document-checklist", "Document Checklist", "Documents for ACRA + IRAS filings."),
+        ("/blog", "Tax Blog Posts", "Singapore corporate tax guides and updates."),
+    ],
+    "immigration": [
+        ("/tools/eligibility-checker", "Eligibility Checker", "Check if you qualify for EP, S Pass, Tech.Pass."),
+        ("/templates/ep-cover-letter", "EP Cover Letter Template", "Strong cover letter for MOM applications."),
+        ("/templates/employment-contract", "Employment Contract", "MOM-compliant Singapore employment agreement."),
+    ],
+    "fund": [
+        ("/tools/business-structure-recommender", "Structure Recommender", "VCC vs Pte Ltd for fund structures."),
+        ("/tools/cost-calculator", "Cost Calculator", "Fund admin and corp sec fees."),
+        ("/blog/variable-capital-company-singapore-vcc", "VCC Guide", "Full guide to Singapore's VCC framework."),
+    ],
+    "compliance": [
+        ("/templates/board-resolution", "Board Resolution Template", "For routine corporate decisions."),
+        ("/tools/document-checklist", "Document Checklist", "KYC documents and statutory filings."),
+        ("/tools/cost-calculator", "Cost Calculator", "Corporate secretarial service costs."),
+    ],
+}
 
 
 def render_hub(data):
@@ -134,6 +177,10 @@ def render_hub(data):
                 "description": "Plain-English definitions of Singapore corporate, tax, immigration, and fund-management terms used by founders, fund managers, and family offices.",
                 "publisher": {"@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg"},
                 "hasDefinedTerm": has_part,
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", ".glossary-hero p", ".glossary-card__def"]
+                },
             },
             {
                 "@type": "BreadcrumbList",
@@ -332,6 +379,26 @@ def render_term_page(term, data):
                 },
             },
             {
+                "@type": "WebPage",
+                "url": f"https://karman.com.sg/glossary/{term['slug']}",
+                "name": f"{term['title']} ({term['fullName']})",
+                "description": term["shortDef"],
+                "inLanguage": "en-SG",
+                "isPartOf": {"@type": "WebSite", "name": "Karman Corporate Services", "url": "https://karman.com.sg"},
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", ".term-page__short", ".term-page__body p"]
+                },
+                "mainEntity": {
+                    "@type": "Question",
+                    "name": f"What is {term['title']} in Singapore?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": term["shortDef"],
+                    },
+                },
+            },
+            {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/"},
@@ -341,6 +408,25 @@ def render_term_page(term, data):
             },
         ],
     }
+
+    # Tool/template cross-links by category
+    resource_cards = []
+    for url, name, desc in CATEGORY_RESOURCES.get(term.get("category", ""), []):
+        resource_cards.append(
+            f'        <a class="term-page__resource-card" href="{esc(url)}">'
+            f'<span class="term-page__resource-label">{"Free Tool" if "/tools/" in url else ("Template" if "/templates/" in url else "Read more")}</span>'
+            f'<p class="term-page__resource-title">{esc(name)}</p>'
+            f'<p class="term-page__resource-desc">{esc(desc)}</p>'
+            f'</a>'
+        )
+    resources_html = ""
+    if resource_cards:
+        resources_html = f"""      <div class="term-page__resources">
+        <h2>Related Karman tools and templates</h2>
+        <div class="term-page__resources-grid">
+{chr(10).join(resource_cards)}
+        </div>
+      </div>"""
 
     page_title = f"{term['title']} ({term['fullName']}) - Singapore Glossary | Karman"
     meta_desc = f"{term['shortDef']} Plain-English definition of {term['title']} for Singapore founders and fund managers."
@@ -405,6 +491,7 @@ def render_term_page(term, data):
 {example_html}
       </div>
 {related_html}
+{resources_html}
 {extra_links_html}
     </div>
   </section>

@@ -96,6 +96,14 @@
             "name": "Employment Pass Cover Letter"
           }
         ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".templates-hero p",
+          ".template-card__def"
+        ]
       }
     },
     {
@@ -178,6 +186,17 @@
     .template-page__cta-bottom p { font-size:15px; color:var(--gray-700); margin:0 0 14px; line-height:1.55; }
     .template-page__cta-bottom a { display:inline-block; padding:11px 22px; background:#0d4567; color:#fff; border-radius:8px; text-decoration:none; font-weight:700; font-size:14.5px; }
     .template-page__cta-bottom a:hover { background:#0a3a59; }
+    .template-related { margin-top:40px; }
+    .template-related h2 { font-family:'Sora',sans-serif; font-size:20px; color:#0A2540; margin:0 0 16px; }
+    .template-related__grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .template-related__card { display:block; padding:14px 16px; background:#fff; border:1px solid var(--gray-200); border-radius:10px; text-decoration:none; color:#0A2540; transition:all .15s; }
+    .template-related__card:hover { border-color:#0d4567; transform:translateY(-1px); box-shadow:0 4px 12px rgba(13,69,103,.08); }
+    .template-related__label { display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#0d4567; margin-bottom:4px; }
+    .template-related__title { font-weight:700; font-size:15px; margin:0 0 4px; color:#0A2540; }
+    .template-related__desc { font-size:13.5px; line-height:1.5; color:var(--gray-700); margin:0; }
+    .answer-box { background:#f0f7ff; border-left:4px solid #0d4567; border-radius:0 10px 10px 0; padding:16px 20px; margin:0 0 24px; }
+    .answer-box p { margin:0; font-size:16px; line-height:1.65; color:#0A2540; }
+    .answer-box strong { color:#0d4567; }
   </style>
 </head>
 <body>
@@ -252,7 +271,7 @@
         <div class="footer__brand">
           <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
-          <div class="footer__badges"><span class="badge">ACRA Registered</span><span class="badge">MAS Regulated</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
           </div>
         </div>
         <div class="footer__links">

@@ -36,7 +36,7 @@ FOOTER_HTML = """  <footer class="footer">
         <div class="footer__brand">
           <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
-          <div class="footer__badges"><span class="badge">ACRA Registered</span><span class="badge">MAS Regulated</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
           </div>
         </div>
         <div class="footer__links">
@@ -49,6 +49,41 @@ FOOTER_HTML = """  <footer class="footer">
     </div>
   </footer>
 """
+
+# Glossary term titles for cross-link labels
+TERM_LABELS = {
+    "uen": "UEN", "acra": "ACRA", "iras": "IRAS", "bizfile": "BizFile+",
+    "ssic-code": "SSIC Code", "agm": "AGM", "egm": "EGM", "fye": "Financial Year End",
+    "annual-return": "Annual Return", "eci": "ECI", "form-c-s": "Form C-S",
+    "corporate-tax": "Corporate Tax", "gst": "GST", "pte-ltd": "Pte Ltd",
+    "sole-proprietorship": "Sole Proprietorship", "llp": "LLP", "vcc": "VCC",
+    "section-13o": "Section 13O", "section-13u": "Section 13U", "family-office": "Family Office",
+    "ep": "Employment Pass", "s-pass": "S Pass", "tech-pass": "Tech.Pass",
+    "one-pass": "ONE Pass", "pep": "Permanent Establishment", "nominee-director": "Nominee Director",
+    "corporate-secretary": "Corporate Secretary", "registered-address": "Registered Address",
+    "share-capital": "Share Capital", "kyc": "KYC", "beneficial-owner": "Beneficial Owner",
+}
+
+# Tool cross-links per template — uses relatedTools list
+TEMPLATE_RELATED_TOOLS = {
+    "board-resolution": ["business-structure-recommender", "document-checklist"],
+    "agm-minutes": ["document-checklist", "incorporation-timeline"],
+    "share-transfer": ["cost-calculator", "ssic-code-search"],
+    "share-allotment": ["business-structure-recommender", "cost-calculator"],
+    "founders-agreement": ["business-structure-recommender", "eligibility-checker"],
+    "employment-contract": ["eligibility-checker", "ssic-code-search"],
+    "mutual-nda": ["business-structure-recommender", "document-checklist"],
+    "ep-cover-letter": ["eligibility-checker", "ssic-code-search"],
+}
+
+TOOL_META = {
+    "business-structure-recommender": ("Structure Recommender", "Pick the right entity type for your situation."),
+    "cost-calculator": ("Cost Calculator", "Estimate your annual corporate services fees."),
+    "eligibility-checker": ("Eligibility Checker", "Check if you qualify to incorporate in Singapore."),
+    "document-checklist": ("Document Checklist", "All the documents you need for ACRA registration."),
+    "incorporation-timeline": ("Incorporation Timeline", "Plan each step from name reservation to bank account."),
+    "ssic-code-search": ("SSIC Code Search", "Find the right SSIC 2020 code for your business activity."),
+}
 
 CSS = """    .templates-hero { background:linear-gradient(180deg,#fff 0%,#f7f9fc 100%); padding:60px 0 40px; border-bottom:1px solid var(--gray-200); }
     .templates-hero h1 { font-family:'Sora',sans-serif; font-size:clamp(28px,4vw,40px); margin:8px 0 12px; color:#0A2540; }
@@ -108,6 +143,17 @@ CSS = """    .templates-hero { background:linear-gradient(180deg,#fff 0%,#f7f9fc
     .template-page__cta-bottom p { font-size:15px; color:var(--gray-700); margin:0 0 14px; line-height:1.55; }
     .template-page__cta-bottom a { display:inline-block; padding:11px 22px; background:#0d4567; color:#fff; border-radius:8px; text-decoration:none; font-weight:700; font-size:14.5px; }
     .template-page__cta-bottom a:hover { background:#0a3a59; }
+    .template-related { margin-top:40px; }
+    .template-related h2 { font-family:'Sora',sans-serif; font-size:20px; color:#0A2540; margin:0 0 16px; }
+    .template-related__grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .template-related__card { display:block; padding:14px 16px; background:#fff; border:1px solid var(--gray-200); border-radius:10px; text-decoration:none; color:#0A2540; transition:all .15s; }
+    .template-related__card:hover { border-color:#0d4567; transform:translateY(-1px); box-shadow:0 4px 12px rgba(13,69,103,.08); }
+    .template-related__label { display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#0d4567; margin-bottom:4px; }
+    .template-related__title { font-weight:700; font-size:15px; margin:0 0 4px; color:#0A2540; }
+    .template-related__desc { font-size:13.5px; line-height:1.5; color:var(--gray-700); margin:0; }
+    .answer-box { background:#f0f7ff; border-left:4px solid #0d4567; border-radius:0 10px 10px 0; padding:16px 20px; margin:0 0 24px; }
+    .answer-box p { margin:0; font-size:16px; line-height:1.65; color:#0A2540; }
+    .answer-box strong { color:#0d4567; }
 """
 
 
@@ -190,6 +236,10 @@ def render_hub(data):
                 "description": f"{len(templates)} free Singapore-compliant corporate templates: board resolutions, AGM minutes, share transfer, founders' agreement, employment contract, NDA, EP cover letter.",
                 "publisher": {"@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg"},
                 "mainEntity": {"@type": "ItemList", "itemListElement": item_list},
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", ".templates-hero p", ".template-card__def"]
+                },
             },
             {
                 "@type": "BreadcrumbList",
@@ -281,6 +331,18 @@ def render_template_page(t, data):
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "WebPage",
+                "url": f"https://karman.com.sg/templates/{t['slug']}",
+                "name": t["title"],
+                "description": t["shortDef"],
+                "inLanguage": "en-SG",
+                "isPartOf": {"@type": "WebSite", "name": "Karman Corporate Services", "url": "https://karman.com.sg"},
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", ".answer-box", ".template-page__lede", ".template-page__body p"]
+                }
+            },
+            {
                 "@type": "HowTo",
                 "name": f"How to use the {t['title']}",
                 "description": t["useCase"],
@@ -311,6 +373,42 @@ def render_template_page(t, data):
         ],
     }
 
+    # Build "Related resources" cross-link block
+    related_cards = []
+    for tool_slug in TEMPLATE_RELATED_TOOLS.get(t['slug'], []):
+        if tool_slug in TOOL_META:
+            tname, tdesc = TOOL_META[tool_slug]
+            related_cards.append(
+                f'<a class="template-related__card" href="/tools/{tool_slug}">'
+                f'<span class="template-related__label">Free Tool</span>'
+                f'<p class="template-related__title">{esc(tname)}</p>'
+                f'<p class="template-related__desc">{esc(tdesc)}</p>'
+                f'</a>'
+            )
+    for term_slug in t.get("relatedTerms", [])[:4]:
+        label = TERM_LABELS.get(term_slug, term_slug.replace("-", " ").title())
+        related_cards.append(
+            f'<a class="template-related__card" href="/glossary/{term_slug}">'
+            f'<span class="template-related__label">Glossary</span>'
+            f'<p class="template-related__title">{esc(label)}</p>'
+            f'<p class="template-related__desc">Plain-English definition for Singapore founders.</p>'
+            f'</a>'
+        )
+
+    related_html = ""
+    if related_cards:
+        related_html = f"""
+      <div class="template-related">
+        <h2>Related Karman tools and definitions</h2>
+        <div class="template-related__grid">
+          {''.join(related_cards)}
+        </div>
+      </div>
+"""
+
+    # Direct-answer intro for AEO — first sentence answers "what is this template for"
+    direct_answer = f"<strong>What this template is.</strong> {esc(t['shortDef'])}"
+
     head = page_head(title, description, f"/templates/{t['slug']}", ldjson)
 
     body = f"""
@@ -327,6 +425,7 @@ def render_template_page(t, data):
 
       <div class="template-page__layout">
         <div class="template-page__body">
+          <div class="answer-box"><p>{direct_answer}</p></div>
           <h2>When to use this template</h2>
           <p>{esc(t['useCase'])}</p>
 
@@ -361,6 +460,7 @@ def render_template_page(t, data):
         </aside>
       </div>
 
+{related_html}
       <div class="template-page__cta-bottom">
         <h3>Need a corporate secretary to handle this for you?</h3>
         <p>Karman handles ACRA filings, IRAS stamp duty, statutory register updates, and resolution preparation as part of our corporate secretarial service from S$50/month.</p>
