@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-SG">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD"></script>
+  <!-- Google tag (gtag.js) - lazy loaded after page becomes interactive -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-DVKN5K8KSD');
+    function loadGTM(){
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+      document.head.appendChild(s);
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGTM, {timeout: 3000});
+    } else {
+      window.addEventListener('load', function(){ setTimeout(loadGTM, 1500); });
+    }
   </script>
 
   <meta charset="UTF-8" />
@@ -52,21 +64,25 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#0A2540" />
 
-  <!-- ── Fonts (display=swap for performance) ── -->
+  <!-- ── Fonts (non-blocking with display=swap) ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
 
-  <!-- ── Stylesheet ── -->
+  <!-- ── Critical stylesheet (above-the-fold) ── -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="tools.css" />
+  <!-- ── Tools stylesheet (below-the-fold) - non-blocking ── -->
+  <link rel="stylesheet" href="tools.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="tools.css" /></noscript>
 </head>
 <body>
 
   <!-- ───────────────── NAVIGATION ───────────────── -->
   <header class="header" id="header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img"></a>
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
 
       <ul class="nav__menu" id="navMenu">
         <li class="nav__item has-dropdown">
@@ -792,7 +808,7 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img"></a>
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
           <div class="footer__badges">
             <span class="badge">ACRA Registered</span>
