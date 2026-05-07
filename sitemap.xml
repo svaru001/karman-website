@@ -779,4 +779,42 @@
     <priority>0.75</priority>
   </url>
 
+  <!-- ── Industry Landing Pages ── -->
+  <url>
+    <loc>https://karman.com.sg/for</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/for/ai-startups</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/for/ecommerce</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/for/saas</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/for/fintech</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/for/crypto</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>

@@ -41,7 +41,7 @@ FOOTER_HTML = """  <footer class="footer">
         </div>
         <div class="footer__links">
           <div class="footer-col"><h4>Services</h4><ul><li><a href="/#incorporation">Company Incorporation</a></li><li><a href="/#secretary">Corporate Secretarial</a></li><li><a href="/#accounting">Accounting</a></li></ul></div>
-          <div class="footer-col"><h4>Free Resources</h4><ul><li><a href="/tools/">Free Tools</a></li><li><a href="/templates/">Templates</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/blog">Blog</a></li></ul></div>
+          <div class="footer-col"><h4>Free Resources</h4><ul><li><a href="/tools/">Free Tools</a></li><li><a href="/templates/">Templates</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/for">Industry Guides</a></li><li><a href="/blog">Blog</a></li></ul></div>
           <div class="footer-col"><h4>Company</h4><ul><li><a href="/#about">About</a></li><li><a href="/#contact">Contact</a></li></ul></div>
         </div>
       </div>
