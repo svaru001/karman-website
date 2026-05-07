@@ -4,6 +4,7 @@
 import json
 import html as htmlmod
 from pathlib import Path
+STYLES_CSS_INLINE = (Path(__file__).resolve().parent.parent / "styles.css").read_text(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 BLOG_DIR = ROOT / "blog"
@@ -636,19 +637,21 @@ def render_blog(blog):
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
     gtag('config', 'G-DVKN5K8KSD');
-    function loadGTM(){{
-      if (window.__gtmLoaded) return;
-      window.__gtmLoaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
-      document.head.appendChild(s);
-    }}
-    if ('requestIdleCallback' in window) {{
-      requestIdleCallback(loadGTM, {{timeout: 3000}});
-    }} else {{
-      window.addEventListener('load', function(){{ setTimeout(loadGTM, 1500); }});
-    }}
+    (function(){{
+      var loaded = false;
+      function loadGTM(){{
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }}
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){{ events.forEach(function(e){{ window.removeEventListener(e, trigger, {{passive:true}}); }}); loadGTM(); }}
+      events.forEach(function(e){{ window.addEventListener(e, trigger, {{passive:true, once:true}}); }});
+      setTimeout(loadGTM, 5000);
+    }})();
   </script>
 
   <meta charset="UTF-8" />
@@ -671,7 +674,7 @@ def render_blog(blog):
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
-  <link rel="stylesheet" href="../../styles.css" />
+  <style>{STYLES_CSS_INLINE}</style>
   <link rel="stylesheet" href="../../tools.css" />
   <link rel="stylesheet" href="../../blog.css" />
 

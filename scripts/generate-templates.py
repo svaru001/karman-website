@@ -12,6 +12,9 @@ DATA_FILE = os.path.join(ROOT, "templates", "_templates.json")
 OUT_DIR = os.path.join(ROOT, "templates")
 FILES_DIR = os.path.join(ROOT, "templates", "_files")
 
+with open(os.path.join(ROOT, "styles.css"), "r", encoding="utf-8") as _f:
+    STYLES_CSS_INLINE = _f.read()
+
 NAV_HTML = """  <header class="header" id="header">
     <nav class="nav container" aria-label="Main navigation">
       <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
@@ -171,19 +174,21 @@ def page_head(title, description, canonical_path, ldjson):
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
     gtag('config', 'G-DVKN5K8KSD');
-    function loadGTM(){{
-      if (window.__gtmLoaded) return;
-      window.__gtmLoaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
-      document.head.appendChild(s);
-    }}
-    if ('requestIdleCallback' in window) {{
-      requestIdleCallback(loadGTM, {{timeout: 3000}});
-    }} else {{
-      window.addEventListener('load', function(){{ setTimeout(loadGTM, 1500); }});
-    }}
+    (function(){{
+      var loaded = false;
+      function loadGTM(){{
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }}
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){{ events.forEach(function(e){{ window.removeEventListener(e, trigger, {{passive:true}}); }}); loadGTM(); }}
+      events.forEach(function(e){{ window.addEventListener(e, trigger, {{passive:true, once:true}}); }});
+      setTimeout(loadGTM, 5000);
+    }})();
   </script>
 
   <meta charset="UTF-8" />
@@ -206,7 +211,7 @@ def page_head(title, description, canonical_path, ldjson):
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
-  <link rel="stylesheet" href="/styles.css" />
+  <style>{STYLES_CSS_INLINE}</style>
 
   <script type="application/ld+json">
 {json.dumps(ldjson, ensure_ascii=False, indent=2)}
