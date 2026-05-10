@@ -361,6 +361,7 @@ function openTool(toolId, triggerEl) {
 
   tag.textContent = tool.tag;
   title.textContent = tool.title;
+  modal.hidden = false;
   modal.classList.add('tool-modal--open');
   lockScroll();
   renderStep();
@@ -370,6 +371,7 @@ function openTool(toolId, triggerEl) {
 // ── Close ──
 function closeTool() {
   modal.classList.remove('tool-modal--open');
+  modal.hidden = true;
   unlockScroll();
   if (state.triggerEl) state.triggerEl.focus();
   state = { toolId: null, step: 0, history: [], answers: {}, triggerEl: null };
