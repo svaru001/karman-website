@@ -179,6 +179,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const href = anchor.getAttribute('href');
     if (href === '#') return;
+    // Skip dropdown triggers — they open the menu, not scroll
+    if (anchor.closest('.has-dropdown') && anchor.classList.contains('nav__link')) return;
 
     const target = document.querySelector(href);
     if (target) {
