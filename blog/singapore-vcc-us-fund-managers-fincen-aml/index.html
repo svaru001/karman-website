@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Singapore VCC for US Fund Managers: Check-the-Box, FinCEN AML Rule, and Marketing to US LPs in 2026 | Karman</title>
+  <meta name="description" content="Tactical guide for US fund managers using a Singapore VCC. Check-the-box election, the new FinCEN AML rule for RIAs/ERAs effective Jan 2026, and what US LPs need to see." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karman.com.sg/blog/singapore-vcc-us-fund-managers-fincen-aml" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://karman.com.sg/blog/singapore-vcc-us-fund-managers-fincen-aml" />
+  <meta property="og:title" content="Singapore VCC for US Fund Managers: Check-the-Box, FinCEN AML Rule, and Marketing to US LPs" />
+  <meta property="og:description" content="Tactical guide for US fund managers using a Singapore VCC. Check-the-box election, the new FinCEN AML rule for RIAs/ERAs effective Jan 2026, and what US LPs need to see." />
+  <meta property="og:image" content="https://karman.com.sg/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__scroll-indicator span {
+  display: block;
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__content .section-heading {
+  text-align: left;
+}
+.why__content .section-subtext {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Compliance Card Stack */
+.why__visual {
+  position: relative;
+}
+.why__card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.compliance-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s;
+}
+.compliance-card:hover { transform: translateX(4px); }
+.compliance-card--upcoming {
+  border-color: var(--amber);
+  background: #FFFBF0;
+}
+.compliance-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.compliance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.compliance-dot.green { background: var(--teal); }
+.compliance-dot.amber { background: var(--amber); }
+.compliance-dot.blue { background: var(--blue); }
+.compliance-status {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(0,201,167,.1);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.compliance-status.upcoming {
+  color: #92740A;
+  background: rgba(245,166,35,.15);
+}
+.compliance-status.processing {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.compliance-card__date {
+  font-size: 12px;
+  color: var(--gray-600);
+  padding-left: 16px;
+}
+.why__card-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 16px;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-tab:hover:not(.active) { color: var(--blue); }
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.plan-features li.text-muted { color: var(--gray-400); }
+.plan-features li.text-muted::before { color: var(--gray-200); }
+
+.pricing__note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-top: 32px;
+}
+.pricing__note a { color: var(--blue); font-weight: 500; }
+.pricing__note a:hover { text-decoration: underline; }
+
+/* === TESTIMONIALS === */
+.testimonials { background: #fff; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.testimonial-card--accent p { color: rgba(255,255,255,.9); }
+
+.testimonial-card__stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-card__author strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+}
+.testimonial-card--accent .testimonial-card__author strong { color: #fff; }
+.testimonial-card__author span {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+.testimonial-card--accent .testimonial-card__author span { color: rgba(255,255,255,.6); }
+
+/* === BLOG PREVIEW === */
+.blog-preview { background: #fff; }
+
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.blog-preview__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.blog-preview__card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 20px rgba(37,99,235,.1);
+  transform: translateY(-2px);
+}
+
+.blog-preview__tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(37,99,235,.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.blog-preview__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+  margin: 0;
+}
+
+.blog-preview__card p {
+  font-size: .88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.blog-preview__cta {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 4px;
+}
+
+.blog-preview__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .blog-preview__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-preview__grid { grid-template-columns: 1fr; }
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
+.contact-detail a { color: var(--blue); }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Form */
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray-400); }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-optional { font-size: 11px; color: var(--gray-400); font-weight: 400; }
+.form-disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+/* Alias for new standalone pages that use footer__grid / footer__col */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--featured { grid-column: span 1; }
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .why__content .section-heading,
+  .why__content .section-subtext { text-align: center; }
+  .why__points { max-width: 500px; margin: 0 auto; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__stats {
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .stat strong { font-size: 22px; }
+  .stat-divider { margin: 0 16px; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .testimonials__grid { grid-template-columns: 1fr; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero__heading { font-size: 38px; }
+  .hero__stats { flex-direction: column; gap: 20px; }
+  .stat-divider { width: 100%; height: 1px; margin: 0; }
+  .pricing__tabs { flex-direction: column; max-width: 100%; }
+  .footer__links { grid-template-columns: 1fr; }
+}
+</style>
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../blog.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Singapore VCC for US Fund Managers: Check-the-Box, FinCEN AML Rule, and Marketing to US LPs",
+      "url": "https://karman.com.sg/blog/singapore-vcc-us-fund-managers-fincen-aml",
+      "image": "https://karman.com.sg/og-image.png",
+      "datePublished": "2026-05-10T00:00:00+08:00",
+      "dateModified": "2026-05-10T00:00:00+08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Karman Editorial Team",
+        "url": "https://karman.com.sg"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Karman Corporate Services",
+        "url": "https://karman.com.sg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://karman.com.sg/og-image.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://karman.com.sg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://karman.com.sg/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Singapore VCC for US Fund Managers",
+          "item": "https://karman.com.sg/blog/singapore-vcc-us-fund-managers-fincen-aml"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can a US-based RIA manage a Singapore VCC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. There are two common patterns. Pattern 1: the US-based SEC-registered RIA acts as the investment manager of the VCC under a sub-advisory or delegated management arrangement, with a Singapore-licensed entity (CMS license holder or RFMC) acting as the local manager of record for MAS purposes. Pattern 2: the US firm sets up a Singapore subsidiary that obtains a CMS licence or RFMC status and serves as the VCC manager directly. Pattern 1 is faster and cheaper for emerging managers; Pattern 2 is required if the manager wants substantive Singapore presence for tax incentive eligibility (Section 13O/13U)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What FinCEN AML obligations does my Singapore VCC create for me as the US manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FinCEN's final AML rule for investment advisers, effective January 1, 2026, treats SEC-registered investment advisers (RIAs) and exempt reporting advisers (ERAs) as financial institutions under the Bank Secrecy Act. If you advise a Singapore VCC and you are an RIA or ERA, you must implement a written AML program, file Suspicious Activity Reports (SARs) with FinCEN, file Currency Transaction Reports (CTRs), maintain records for five years, and apply Customer Identification Program (CIP) procedures. A Singapore-licensed VCC manager is separately subject to MAS AML/CFT rules - you cannot rely on the Singapore-side program to satisfy FinCEN. Most US managers fold the FinCEN program into existing compliance infrastructure and delegate KYC operations to the VCC's fund administrator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a CMS license to manage a Singapore VCC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. The VCC must be managed by a permissible fund manager - either a CMS licence holder (Capital Markets Services), an RFMC (Registered Fund Management Company, capped at S$250M AUM and 30 qualified investors), or a Licensed Fund Management Company (LFMC). If you are a US-based SEC RIA with no Singapore entity, you can use a Singapore RFMC or LFMC as the VCC manager and act as sub-adviser. If you incorporate a Singapore subsidiary to manage directly, RFMC is the lightest-touch starting point and can be upgraded to LFMC as AUM grows. CMS licence applications take 4-9 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does FATCA reporting work for a VCC with US LPs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Singapore is a Model 1 FATCA IGA jurisdiction. The VCC (or its fund administrator) registers with the IRS for a Global Intermediary Identification Number (GIIN), collects W-9 forms from US LPs and W-8s from non-US LPs, and reports US-LP account information annually to IRAS, which transmits to the IRS. CRS reporting runs in parallel for non-US LPs in CRS-participating jurisdictions. The fund administrator typically operates the FATCA/CRS pipeline. Failure to comply triggers 30% withholding on US-source income flowing to the VCC."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Singapore VCC qualify for Section 13O / 13U incentives?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and most institutional VCC setups apply for one or the other. Section 13O (formerly the Onshore Fund Tax Incentive) requires S$10M in fund assets at application and at least one Singapore-based investment professional. Section 13U (formerly the Enhanced Tier Fund) requires S$50M in fund assets, at least three investment professionals (one Singaporean or PR), and S$200K of annual local business spending. Both exempt designated income (dividends, interest, gains on prescribed investments) from Singapore tax. US LPs do not benefit directly - their share of fund income remains subject to US tax under the manager's classification - but the VCC itself pays no Singapore tax on qualifying income, which improves net returns. See our VCC 13O/13U guide for the full eligibility breakdown."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".article-body > p:first-child", ".article-faq-section .faq-answer p"]
+    }
+  }
+  </script>
+</head>
+<body class="article-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC & Fund Administration</strong>
+                <p>Singapore fund structures & compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting & Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration & quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link nav__link--active">Blog</a></li>
+        <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/#contact" class="btn btn--secondary">Contact us</a>
+        <a href="/onboarding" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span>Singapore VCC for US Fund Managers</span>
+      </nav>
+      <span class="article-hero__tag">Fund Structuring</span>
+      <h1>Singapore VCC for US Fund Managers: Check-the-Box, FinCEN AML Rule, and Marketing to US LPs</h1>
+      <div class="article-hero__meta">
+        <span class="article-hero__meta-item">📅 May 2026</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">⏱ 13 min read</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">✍️ Karman Editorial Team</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-layout">
+
+    <article class="article-body">
+
+      <p><strong>Singapore's Variable Capital Company (VCC) is increasingly the default structure for US-based emerging fund managers running Asia-focused strategies.</strong> The reason is partly Cayman fatigue - banking access has tightened, US LP optics have shifted post-FTX - and partly that the VCC's combination of MAS regulation, Section 13O/13U tax incentives, and ASEAN proximity simply fits better. But Singapore is not a drop-in Cayman replacement for US managers. The January 1, 2026 FinCEN AML rule for RIAs and ERAs is the new compliance burden. US tax classification mechanics still matter (PFIC and CFC are real risks if you skip the check-the-box election). And US LP marketing still runs through 506(c) and 3(c)(7) regardless of where the fund sits.</p>
+
+      <p>This piece is a tactical guide for US managers building or considering a Singapore VCC. It assumes you understand Reg D, the qualified purchaser definition, and the basic mechanics of fund formation. We focus on the parts that are specifically Singapore-flavoured: how to make the VCC US-LP-friendly, how to handle the FinCEN program, and what the two operating patterns look like in practice.</p>
+
+      <h2>Why VCC instead of Cayman for US managers</h2>
+      <p>The default offshore vehicle for US-managed funds has been the Cayman exempted company or LP for thirty years. The VCC, introduced by MAS in 2020, is taking share for specific reasons:</p>
+      <ul>
+        <li><strong>Section 13O / 13U tax incentives.</strong> A qualifying VCC pays no Singapore tax on designated investment income (dividends, interest, capital gains on prescribed investments). Section 13O requires S$10M of fund assets at application and one local investment professional. Section 13U requires S$50M, three investment professionals (one Singaporean or PR), and S$200K of annual local business spend. Cayman has no such incentive because Cayman has no tax to start with - but the VCC matches Cayman's effective tax outcome while bolting on real regulatory substance, which institutional LPs increasingly demand. See our <a href="/blog/vcc-13o-13u-tax-incentives-singapore">VCC 13O / 13U deep dive</a>.</li>
+        <li><strong>FATCA / CRS infrastructure.</strong> Singapore is a Model 1 IGA jurisdiction with mature reporting plumbing through IRAS. The fund administrator handles W-9/W-8 collection, GIIN registration, and annual reporting. This is no different from Cayman in mechanics but lower in friction because the local administrator ecosystem is more competitive.</li>
+        <li><strong>Banking access.</strong> DBS, OCBC, UOB, and Standard Chartered all bank Singapore VCCs as a routine matter. Cayman fund banking has tightened materially since 2022 (Butterfield and CIBC have raised minimum AUM bars, increased KYC friction, and dropped some sub-scale managers).</li>
+        <li><strong>MAS as regulator.</strong> US LPs - especially institutional allocators and family offices - increasingly want to see a credible regulator on the GP side. CIMA in Cayman is competent but light-touch by design. MAS is closer in seriousness to the SEC.</li>
+        <li><strong>Strategy fit.</strong> If you are deploying into ASEAN, India, China secondaries, or Asia credit, having the fund vehicle in the same time zone as the deals matters operationally and reputationally.</li>
+      </ul>
+
+      <h2>The check-the-box election: non-negotiable for US LPs</h2>
+      <p>By default, a Singapore VCC is a corporation for US tax purposes - and that is a disaster for US LPs. A foreign corporation owned by US persons triggers either Controlled Foreign Corporation (CFC) treatment, Passive Foreign Investment Company (PFIC) treatment, or both. CFC status creates Subpart F and NCTI inclusions at the LP level. PFIC creates the punitive QEF or excess distribution regime, plus annual Form 8621 filings.</p>
+      <p>The fix is the check-the-box (CTB) election on IRS Form 8832. The VCC files Form 8832 electing to be treated as a partnership (if it has two or more shareholders) or as a disregarded entity (if it has one). Once treated as a partnership, the VCC issues Schedule K-1s to its US LPs and US tax flows through cleanly: no CFC, no PFIC at the VCC level (PFIC analysis still happens at the underlying portfolio company level for passive investments).</p>
+      <p><strong>Mechanics and timing:</strong></p>
+      <ul>
+        <li>File Form 8832 within 75 days of the desired effective date (typically the day the VCC first holds assets)</li>
+        <li>Late elections are available under Rev. Proc. 2009-41 if you miss the window and meet the relief requirements</li>
+        <li>The election is sub-fund specific in an umbrella VCC - each sub-fund is treated as a separate entity for US tax and gets its own Form 8832</li>
+        <li>Once made, the election is sticky for 60 months absent an IRS-approved change</li>
+      </ul>
+      <p>This is the single most consequential US tax decision in setting up a Singapore VCC for US LPs. Skip it and you have effectively built a structure that taxes your LPs more than they would be taxed in a Cayman LP - and most US institutional LPs will simply decline to invest.</p>
+
+      <h2>VCC structure: umbrella with sub-funds</h2>
+      <p>The VCC permits an umbrella structure with segregated sub-funds. Each sub-fund has ring-fenced assets and liabilities (the VCC Act provides statutory segregation, comparable to Cayman SPC cells). For most US-LP-facing funds the structure looks like:</p>
+      <ul>
+        <li><strong>Master VCC</strong> - the legal entity registered with ACRA / regulated by MAS. CTB elected as a partnership at the master level if multi-strategy, or held as the umbrella shell.</li>
+        <li><strong>Sub-funds</strong> - one per strategy or vintage. Each sub-fund makes its own CTB election (partnership for multi-LP, disregarded for single-investor feeder).</li>
+        <li><strong>Master-feeder option</strong> - a US-LP feeder (Delaware LP) and an offshore feeder (the VCC sub-fund) both invest into a master Cayman LP, with US-tax-exempt LPs going through the offshore feeder to block UBTI / ECI. This is the standard pattern when you have a mix of US taxable and US tax-exempt LPs (foundations, endowments).</li>
+      </ul>
+      <p>For VCC-based US-tax-exempt LPs, the offshore-feeder-into-VCC-master pattern works because the VCC, being foreign for US tax purposes, blocks effectively connected income at the entity level. But once you check the box to partnership treatment for US-taxable LP friendliness, you give up that blocker. Hence the parallel-feeder structure for mixed LP bases.</p>
+
+      <h2>The FinCEN AML rule (effective Jan 1, 2026)</h2>
+      <p>FinCEN's final rule, published August 2024 with a January 1, 2026 effective date, treats SEC-registered investment advisers (RIAs) and exempt reporting advisers (ERAs) as financial institutions under the Bank Secrecy Act. If you are a US-based RIA or ERA - and you almost certainly are if you are managing or sub-advising a Singapore VCC - you must, as of January 1, 2026:</p>
+      <ul>
+        <li><strong>Maintain a written AML program.</strong> Board-approved or partner-approved, with designated AML compliance officer, training, and independent testing.</li>
+        <li><strong>File Suspicious Activity Reports (SARs).</strong> Within 30 days of detecting suspicious activity, on FinCEN Form 111.</li>
+        <li><strong>File Currency Transaction Reports (CTRs).</strong> For cash transactions over $10K - rare for funds but applicable in some patterns.</li>
+        <li><strong>Implement Customer Identification Program (CIP) procedures.</strong> Identify and verify each LP, including beneficial ownership of entity LPs.</li>
+        <li><strong>Recordkeeping.</strong> Five-year retention for AML records.</li>
+        <li><strong>Information sharing under Section 314(a) and (b).</strong> Respond to FinCEN information requests, optionally share with other financial institutions.</li>
+      </ul>
+      <p><strong>Important interaction with the Singapore-side regime:</strong> Singapore-licensed VCC managers are separately subject to MAS Notice SFA04-N02 (AML/CFT for capital markets intermediaries) and the AML/CFT requirements in the VCC Act. The two regimes overlap but are not interchangeable. You cannot rely on the MAS-compliant Singapore manager's AML program to satisfy FinCEN obligations on the US adviser side. In practice, US managers fold the FinCEN program into existing SEC compliance infrastructure (most outsource to compliance consultants who already operate AML programs for broker-dealers) and delegate KYC / CIP operations on the LP side to the VCC's fund administrator.</p>
+      <p>FinCEN has signalled phased examination - early enforcement will focus on programs that simply don't exist rather than nuanced documentation gaps. But the rule is live and there is no further extension expected.</p>
+
+      <h2>Singapore-side regulation</h2>
+      <p>The VCC must be managed by a permissible fund manager. The options:</p>
+      <div class="table-wrap"><table><thead><tr><th>Manager type</th><th>AUM cap</th><th>Investor cap</th><th>Capital requirement</th><th>Setup time</th></tr></thead><tbody><tr><td>RFMC (Registered)</td><td>S$250M</td><td>30 qualified investors</td><td>S$250K paid-up</td><td>3-4 months</td></tr><tr><td>LFMC A/I (Accredited / Institutional only)</td><td>No cap</td><td>Accredited / institutional only</td><td>S$250K base capital</td><td>4-6 months</td></tr><tr><td>LFMC Retail</td><td>No cap</td><td>Includes retail</td><td>S$1M base capital</td><td>6-9 months</td></tr><tr><td>CMS Licence (broader)</td><td>No cap</td><td>Per licence scope</td><td>S$250K-S$1M</td><td>6-12 months</td></tr></tbody></table></div>
+      <p>For a US emerging manager opening a Singapore VCC under S$250M, RFMC is almost always the right starting point. It is the lightest touch, fastest to obtain, and can be upgraded to LFMC A/I as AUM crosses the threshold.</p>
+
+      <h2>The two operating patterns</h2>
+      <p><strong>Pattern 1: US-based RIA manages remotely, Singapore manager of record.</strong> The US firm stays headquartered in the US and signs a sub-advisory or delegated investment management agreement with a Singapore-based RFMC or LFMC. The Singapore manager is the named fund manager of the VCC for MAS purposes. The US RIA continues to be the primary investment decision-maker and is paid via the sub-advisory fee. Costs: VCC formation S$10K-15K, RFMC engagement S$50K-100K annual, sub-advisory legal documentation S$15K-25K. This pattern is fast (4-8 weeks for VCC + sub-advisory setup if the RFMC is in place) but typically does not qualify the VCC for Section 13O/13U because there is insufficient Singapore-based investment professional substance.</p>
+      <p><strong>Pattern 2: US manager incorporates a Singapore subsidiary as the VCC manager.</strong> The US firm sets up a Pte Ltd in Singapore, applies for RFMC or LFMC status, and hires (or relocates) at least one investment professional to Singapore. The Singapore subsidiary directly manages the VCC. Costs: Pte Ltd formation S$3K-5K, RFMC application S$50K-100K (legal + setup), MAS-required local staff S$200K-400K annual all-in, ongoing compliance S$50K-80K. Setup runs 4-6 months. This pattern unlocks Section 13O/13U eligibility (the local investment professional requirement is satisfied), gives credible Singapore substance for institutional LPs, and aligns with MAS's preference for genuine local presence.</p>
+
+      <h2>US LP requirements</h2>
+      <p>Operating a Singapore VCC does not change the US securities law analysis for marketing the fund into the US. Standard rules apply:</p>
+      <ul>
+        <li><strong>ERA marketing scope.</strong> If your US adviser entity relies on the ERA exemption, you may only market to qualified clients (3(c)(1) funds) or qualified purchasers (3(c)(7) funds) without registration. Most institutional VCC structures rely on Section 3(c)(7) to take qualified-purchaser-only money - this is the cleanest path because it removes the 100-investor cap of 3(c)(1) and keeps the LP universe institutional.</li>
+        <li><strong>506(c) general solicitation.</strong> If you publicly market the fund (website, press, conference talks naming the fund), you must use Rule 506(c), which permits general solicitation only to verified accredited investors. Verification means CPA letter, broker letter, or third-party verification service - LP self-certification is not enough.</li>
+        <li><strong>506(b) traditional private placement.</strong> No general solicitation, but no verification requirement (LP self-certification is acceptable). 35 non-accredited investors permitted, but in practice nearly all VCC LPs are accredited / qualified.</li>
+        <li><strong>US tax forms for LPs.</strong> Once the VCC sub-fund is CTB-elected to partnership, US LPs receive Schedule K-1 annually. The fund administrator typically prepares these or coordinates with a US tax preparation firm. This is an ongoing cost of $5K-15K per sub-fund.</li>
+        <li><strong>State Blue Sky filings.</strong> Form D federal filing within 15 days of first sale; state notice filings ($300-$500 each) for each state where an LP resides.</li>
+      </ul>
+
+      <h2>Worked example: $50M emerging fund with global LP base</h2>
+      <p>Setup: Singapore VCC umbrella with one sub-fund. US-based ERA manages the sub-fund. Sub-fund is CTB-elected as a partnership. LPs are 60% US (qualified purchasers), 40% non-US (Singapore family offices, EU institutional). Strategy: Asia growth equity.</p>
+      <ul>
+        <li><strong>Year 1 setup costs:</strong> VCC formation S$12K. Sub-fund creation S$5K. RFMC engagement (if Pattern 1) S$60K. Section 8832 election + US tax setup US$8K. Fund admin onboarding US$15K. Legal (US securities + Singapore) US$120K-180K. FinCEN AML program documentation US$20K-30K. Total all-in: roughly US$280K-360K.</li>
+        <li><strong>Annual run-rate (Pattern 1):</strong> Singapore manager fee US$80K-120K. Fund admin US$60K-90K. Audit US$25K-40K. Tax preparation (K-1s) US$15K-25K. MAS / regulatory filings S$8K-15K. US compliance + AML US$30K-50K. Total: roughly US$220K-340K annual.</li>
+        <li><strong>Annual run-rate (Pattern 2):</strong> Singapore subsidiary (RFMC + 1 IP + ops) US$300K-450K. Other line items as above. Total: roughly US$450K-700K annual. But unlocks 13O eligibility (saves Singapore tax on fund income).</li>
+      </ul>
+
+      <h2>Setup timeline</h2>
+      <ol style="padding-left: 20px;">
+        <li><strong>Weeks 1-2:</strong> Engage Singapore counsel + corporate services firm. Decide Pattern 1 vs Pattern 2. Draft VCC constitution and PPM. Begin RFMC application (or sub-advisory engagement with existing RFMC).</li>
+        <li><strong>Weeks 3-6:</strong> File VCC incorporation with ACRA. Open VCC bank accounts (DBS or OCBC, expect KYC packet of LPs). Engage fund administrator.</li>
+        <li><strong>Weeks 4-8:</strong> File Form 8832 check-the-box election. Complete FATCA/CRS registration (GIIN). Finalize PPM, subscription docs, side letters.</li>
+        <li><strong>Weeks 6-12:</strong> Notify MAS of VCC commencement. Confirm AML program operational. Begin LP onboarding. First close.</li>
+        <li><strong>Pattern 2 only - Months 4-6:</strong> Singapore investment professional onboarding, MAS RFMC approval, transition manager-of-record from interim arrangement.</li>
+      </ol>
+
+      <h2>How Karman handles this</h2>
+      <p>Karman incorporates VCCs and runs the Singapore-side ongoing services - VCC formation, sub-fund administration, ACRA / MAS filings, statutory accounts, audit coordination, FATCA / CRS reporting, and bank account setup with DBS / OCBC / UOB. We work with several RFMCs and LFMCs in our network when US managers want a Pattern 1 setup, and we partner with Singapore-licensed fund managers when clients want to evaluate Pattern 2 substance buildouts. See our <a href="/services/vcc-fund-administration">VCC fund administration service</a> page and the <a href="/blog/variable-capital-company-singapore-vcc">VCC primer</a> for more.</p>
+      <p>For US-side work (SEC ERA filings, Form 8832, Form D, US tax K-1 preparation, FinCEN AML program), we coordinate with US securities counsel and US tax preparers in our partner network. If you are also navigating <a href="/blog/gilti-ncti-us-owners-singapore-companies-2026">the new NCTI rules</a> on the GP side, we can introduce US international tax specialists who handle CFC / NCTI compliance for fund managers.</p>
+
+      <section class="article-sources-section" style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-200);">
+        <h3 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-500);margin-bottom:12px;">Official Sources</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+      <li><a href="https://www.irs.gov/individuals/international-taxpayers/global-intangible-low-taxed-income-gilti" target="_blank" rel="noopener noreferrer">IRS - GILTI/NCTI overview ↗</a></li>
+      <li><a href="https://www.irs.gov/forms-pubs/about-form-5471" target="_blank" rel="noopener noreferrer">IRS - Form 5471 instructions ↗</a></li>
+      <li><a href="https://www.irs.gov/forms-pubs/about-form-8992" target="_blank" rel="noopener noreferrer">IRS - Form 8992 (NCTI calculation) ↗</a></li>
+      <li><a href="https://www.irs.gov/forms-pubs/about-form-8993" target="_blank" rel="noopener noreferrer">IRS - Form 8993 (Section 250 deduction) ↗</a></li>
+      <li><a href="https://www.irs.gov/forms-pubs/about-form-8832" target="_blank" rel="noopener noreferrer">IRS - Form 8832 (entity classification election) ↗</a></li>
+        </ul>
+      </section>
+
+      <section class="article-faq-section" style="margin-top:56px;padding-top:0;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__grid" style="max-width:100%;margin-top:24px;">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is NCTI and how is it different from GILTI?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>NCTI (Net CFC Tested Income) is the renamed and restructured successor to GILTI under the One Big Beautiful Bill Act (OBBBA), effective Jan 1, 2026. The key changes: the QBAI deduction (10% return on tangible assets) is eliminated, the Section 250 deduction shrinks from 50% to 40%, and the foreign tax credit haircut drops from 20% to 10%. For US shareholders of asset-light Singapore companies (SaaS, IP-heavy), the math gets meaningfully worse - in some cases turning a $0 GILTI bill into a real NCTI inclusion.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Do I owe NCTI on my Singapore Pte Ltd&#x27;s profits?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>If you&#x27;re a US person (citizen, green card holder, or US tax resident) owning 10% or more of a Singapore Pte Ltd that is a Controlled Foreign Corporation (a CFC - meaning US shareholders collectively own more than 50%), then yes, you have an annual NCTI inclusion regardless of whether you take dividends. The inclusion is roughly: (Singapore profits - 10% return on tangible assets, removed for 2026) x 60% (after Section 250 deduction). With Singapore corporate tax at 17%, you can typically credit foreign tax to offset most of the NCTI bill - but only 90% of it after the haircut.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What&#x27;s a worked example for a US founder owning a Singapore Pte Ltd?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Singapore Pte Ltd earns S$300K profit (about US$220K). Singapore tax after rebates: ~S$18K (US$13K). NCTI inclusion: US$220K - $13K = $207K tested income. Section 250 deduction (40%): -$83K. Taxable NCTI: $124K. US tax at 21% corporate or 37% individual through the CFC: $26K-$46K. FTC available: $13K x 90% = $12K. Net US tax: $14K-$34K. The total tax bill for the founder roughly doubles compared to running the same business through a Delaware C-Corp.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Does the Section 962 election help?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Often yes. A Section 962 election lets an individual US shareholder be taxed on NCTI inclusions at corporate rates (21%) instead of individual rates (up to 37%) and claim the foreign tax credit. The catch: dividends actually distributed later are taxed again at individual rates, with a basis recovery. For founders who plan to leave profits in the Singapore Pte Ltd indefinitely, Section 962 is usually a winning move. For founders who need to extract cash regularly, it&#x27;s more complex.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Should I restructure my US ownership of the Singapore Pte Ltd?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Possibly. Three patterns are common: (1) hold the Singapore Pte Ltd through a US C-Corp (eliminates pass-through complexity but adds US corporate tax layer); (2) keep individual ownership and elect Section 962 (cleaner for retained earnings); (3) check-the-box to treat the Singapore Pte Ltd as disregarded (eliminates CFC issues but exposes Singapore profits to direct US taxation). The right answer depends on whether you&#x27;ll repatriate profits, whether you want US fundraising optionality, and your state of residence. Get specialist US international tax advice before changing the structure.</p></div>
+      </div>
+        </div>
+      </section>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__eyebrow">Ready to incorporate?</div>
+        <h3>Get started from S$699</h3>
+        <p>Karman handles name check, ACRA filing, nominee director, and company secretary. Most applications approved within 1 business day.</p>
+        <a href="/onboarding" class="btn btn--primary">Start your application →</a>
+        <a href="/tools" class="sidebar-cta__secondary">Try our free tools first</a>
+      </div>
+      <div class="sidebar-tools">
+        <h4>Useful free tools</h4>
+        <a href="/tools/cost-calculator">
+          <span>🧮</span><span>Cost Calculator</span>
+        </a>
+        <a href="/tools/business-structure-recommender">
+          <span>🏗️</span><span>Structure Recommender</span>
+        </a>
+        <a href="/tools/eligibility-checker">
+          <span>✅</span><span>Eligibility Checker</span>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="article-related">
+    <div class="container">
+      <h2 class="article-related__heading">Related articles</h2>
+      <div class="article-related__grid">
+        <a href="/blog/singapore-vs-hong-kong-2026" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Comparison</span>
+          <h3 class="blog-card__title">Singapore vs Hong Kong 2026</h3>
+          <p class="blog-card__excerpt">Tax, banking, talent, political risk, and the post-NSL reality.</p>
+          <div class="blog-card__meta"><span>12 min read</span></div>
+        </a>
+        <a href="/blog/singapore-flip-structure-indian-startups" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Indian Founders</span>
+          <h3 class="blog-card__title">Singapore Flip Structure for Indian Startups</h3>
+          <p class="blog-card__excerpt">How to flip your Indian startup to a Singapore holding company. FEMA, ODI, LRS, POEM.</p>
+          <div class="blog-card__meta"><span>11 min read</span></div>
+        </a>
+        <a href="/blog/ai-startups-incorporating-singapore-2026" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Industry</span>
+          <h3 class="blog-card__title">AI Startups Incorporating in Singapore (2026)</h3>
+          <p class="blog-card__excerpt">Why AI founders pick Singapore Pte Ltd, with structure and tax angles.</p>
+          <div class="blog-card__meta"><span>10 min read</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="/#incorporation">Company Incorporation</a></li>
+            <li><a href="/services/vcc-fund-administration">VCC &amp; Fund Administration</a></li>
+            <li><a href="/#secretary">Corporate Secretarial</a></li>
+            <li><a href="/#accounting">Accounting &amp; Bookkeeping</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Resources</h4><ul>
+            <li><a href="/tools">Free Tools</a></li>
+            <li><a href="/templates/">Templates</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/for">Industry Guides</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="/#about">About Karman</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script></body>
+</html>
