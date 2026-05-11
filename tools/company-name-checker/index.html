@@ -1512,6 +1512,8 @@ a.service-card {
   </script>
 
   <style>
+    .tool-page-hero__meta span { display:inline-flex; align-items:center; gap:6px; }
+    .tool-page-hero__meta svg { width:16px; height:16px; stroke-width:2; flex-shrink:0; }
     .name-checker { background:#fff; border:1px solid var(--gray-200); border-radius:14px; padding:28px; box-shadow:0 1px 2px rgba(15,23,42,.04); }
     .name-checker__bar { position:relative; margin-bottom:20px; }
     .name-checker__input { width:100%; padding:18px 52px 18px 20px; border:1.5px solid var(--gray-300); border-radius:12px; font-size:18px; font-family:inherit; transition:border-color .15s, box-shadow .15s; box-sizing:border-box; }
@@ -1525,12 +1527,17 @@ a.service-card {
     .nc-verdict--pass { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; }
     .nc-verdict--warn { background:#fffbeb; border:1px solid #fde68a; color:#92400e; }
     .nc-verdict--fail { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; }
-    .nc-verdict__icon { font-size:24px; flex-shrink:0; }
+    .nc-verdict__icon { flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+    .nc-verdict__icon svg { width:28px; height:28px; stroke-width:2; }
+    .nc-verdict--pass .nc-verdict__icon svg { color:#10b981; }
+    .nc-verdict--warn .nc-verdict__icon svg { color:#f59e0b; }
+    .nc-verdict--fail .nc-verdict__icon svg { color:#ef4444; }
     .nc-verdict__title { font-size:16px; font-weight:700; margin-bottom:2px; }
     .nc-verdict__subtitle { font-size:13.5px; font-weight:500; opacity:.9; }
     .nc-checks { display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
     .nc-check { display:flex; gap:14px; padding:13px 16px; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:10px; }
-    .nc-check__icon { flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#fff; }
+    .nc-check__icon { flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; }
+    .nc-check__icon svg { width:14px; height:14px; stroke-width:3; }
     .nc-check__icon--pass { background:#10b981; }
     .nc-check__icon--warn { background:#f59e0b; }
     .nc-check__icon--fail { background:#ef4444; }
@@ -1544,6 +1551,7 @@ a.service-card {
     .nc-action--secondary { background:#fff; color:#0d4567; border:1.5px solid #0d4567; }
     .nc-action--secondary:hover { background:#0d4567; color:#fff; }
     .nc-action--copied { background:#10b981 !important; color:#fff !important; border-color:#10b981 !important; }
+    .nc-action svg { width:18px; height:18px; stroke-width:2; }
     .name-checker__hint { background:#f0f7ff; border:1px solid #d3e1ee; border-radius:10px; padding:14px 16px; margin-top:16px; font-size:13.5px; color:#0a3a59; line-height:1.55; }
     .name-checker__hint strong { color:#0d4567; }
     @media (max-width: 640px) {
@@ -1628,10 +1636,10 @@ a.service-card {
       <h1>Singapore company name checker</h1>
       <p>Validate your proposed company name against ACRA's naming rules before paying for reservation. Catches missing suffixes, prohibited words, restricted terms, and other issues that delay or block approval. One-click handoff to Bizfile for the official availability check.</p>
       <div class="tool-page-hero__meta">
-        <span>✅ Instant ACRA rule validation</span>
-        <span>🚫 Flags 50+ restricted words</span>
-        <span>🔗 One-click Bizfile handoff</span>
-        <span>🆓 100% free, no signup</span>
+        <span><i data-lucide="check-circle"></i> Instant ACRA rule validation</span>
+        <span><i data-lucide="shield-alert"></i> Flags 50+ restricted words</span>
+        <span><i data-lucide="external-link"></i> One-click Bizfile handoff</span>
+        <span><i data-lucide="gift"></i> 100% free, no signup</span>
       </div>
     </div>
   </section>
@@ -1850,9 +1858,9 @@ a.service-card {
       function getVerdict(checks) {
         const hasFail = checks.some(c => c.status === 'fail');
         const hasWarn = checks.some(c => c.status === 'warn');
-        if (hasFail) return { status: 'fail', icon: '⛔', title: 'This name will likely be rejected.', subtitle: 'Fix the issues below before paying for ACRA reservation.' };
-        if (hasWarn) return { status: 'warn', icon: '⚠️', title: 'This name may need extra review.', subtitle: 'Restricted or sensitive terms slow ACRA approval. Proceed if you’re prepared for follow-up questions.' };
-        return { status: 'pass', icon: '✅', title: 'This name passes our naming-rule checks.', subtitle: 'Next: copy the name, open Bizfile, and use the entity search to confirm no identical company exists.' };
+        if (hasFail) return { status: 'fail', icon: 'x-circle', title: 'This name will likely be rejected.', subtitle: 'Fix the issues below before paying for ACRA reservation.' };
+        if (hasWarn) return { status: 'warn', icon: 'alert-triangle', title: 'This name may need extra review.', subtitle: 'Restricted or sensitive terms slow ACRA approval. Proceed if you’re prepared for follow-up questions.' };
+        return { status: 'pass', icon: 'check-circle-2', title: 'This name passes our naming-rule checks.', subtitle: 'Next: copy the name, open Bizfile, and use the entity search to confirm no identical company exists.' };
       }
 
       function render(name) {
@@ -1867,32 +1875,37 @@ a.service-card {
         const verdict = getVerdict(checks);
 
         const verdictHtml = '<div class="nc-verdict nc-verdict--' + verdict.status + '">' +
-          '<span class="nc-verdict__icon">' + verdict.icon + '</span>' +
+          '<span class="nc-verdict__icon"><i data-lucide="' + verdict.icon + '"></i></span>' +
           '<div><div class="nc-verdict__title">' + escapeHtml(verdict.title) + '</div>' +
           '<div class="nc-verdict__subtitle">' + escapeHtml(verdict.subtitle) + '</div></div>' +
         '</div>';
 
-        const checksHtml = '<div class="nc-checks">' + checks.map(c =>
-          '<div class="nc-check">' +
+        const checksHtml = '<div class="nc-checks">' + checks.map(c => {
+          const iconName = c.status === 'pass' ? 'check' : c.status === 'warn' ? 'alert-circle' : 'x';
+          return '<div class="nc-check">' +
             '<span class="nc-check__icon nc-check__icon--' + c.status + '">' +
-              (c.status === 'pass' ? '✓' : c.status === 'warn' ? '!' : '×') +
+              '<i data-lucide="' + iconName + '"></i>' +
             '</span>' +
             '<div class="nc-check__body">' +
               '<p class="nc-check__label">' + escapeHtml(c.label) + '</p>' +
               '<p class="nc-check__message">' + c.message + '</p>' +
             '</div>' +
-          '</div>'
-        ).join('') + '</div>';
+          '</div>';
+        }).join('') + '</div>';
 
         const bizfileUrl = 'https://www.bizfile.gov.sg/#:~:text=for%20business%20information-,Entity,-Industry';
         const actionsHtml = '<div class="nc-actions">' +
-          '<button type="button" class="nc-action nc-action--secondary" data-copy="' + escapeHtml(trimmed) + '">📋 Copy name</button>' +
-          '<a href="' + bizfileUrl + '" target="_blank" rel="noopener" class="nc-action nc-action--primary" data-bizfile>🔎 Open Bizfile (paste &amp; search) →</a>' +
+          '<button type="button" class="nc-action nc-action--secondary" data-copy="' + escapeHtml(trimmed) + '"><i data-lucide="copy"></i> Copy name</button>' +
+          '<a href="' + bizfileUrl + '" target="_blank" rel="noopener" class="nc-action nc-action--primary" data-bizfile><i data-lucide="search"></i> Open Bizfile (paste &amp; search)</a>' +
           '<a href="/onboarding" class="nc-action nc-action--primary">Reserve via Karman</a>' +
         '</div>';
 
         $results.innerHTML = verdictHtml + checksHtml + actionsHtml;
         $results.classList.add('is-visible');
+
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
 
         if (window.gtag) gtag('event', 'name_check_run', { verdict: verdict.status, name_length: trimmed.length });
       }

@@ -139,6 +139,27 @@
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://karman.com.sg/tools/singapore-tax-calculator</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/tools/ep-compass-calculator</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/tools/compliance-health-check</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
   <!-- ── Blog Hub ── -->
   <url>
     <loc>https://karman.com.sg/blog</loc>
