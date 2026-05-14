@@ -329,3 +329,85 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 const heroStats = document.querySelector('.hero__stats');
 if (heroStats) counterObserver.observe(heroStats);
+
+
+
+// === AUTO-TOC FOR BLOG POSTS ===
+// Builds a Table of Contents from <article class="article-body"> H2 headings.
+// Only runs if (a) we're on a blog page, (b) there are 3+ H2s, (c) no existing TOC.
+(function() {
+  const article = document.querySelector('.article-body');
+  if (!article) return;
+
+  const sidebar = document.querySelector('.article-sidebar');
+  if (!sidebar) return;
+
+  // Skip if a manual TOC already exists ("In this article" or class="toc")
+  const sidebarText = sidebar.textContent || '';
+  if (/in\s+this\s+article/i.test(sidebarText)) return;
+  if (sidebar.querySelector('.toc')) return;
+
+  const h2s = article.querySelectorAll('h2');
+  if (h2s.length < 3) return;
+
+  function slugify(text) {
+    return text.trim().toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '')
+      .slice(0, 60);
+  }
+
+  // Assign IDs and collect TOC items
+  const items = [];
+  const usedIds = new Set();
+  h2s.forEach(h2 => {
+    let id = h2.id || slugify(h2.textContent);
+    if (!id) return;
+    let unique = id;
+    let suffix = 2;
+    while (usedIds.has(unique)) unique = id + '-' + suffix++;
+    h2.id = unique;
+    usedIds.add(unique);
+    items.push({ id: unique, text: h2.textContent.trim() });
+  });
+
+  if (!items.length) return;
+
+  // Build TOC card and insert as the FIRST sidebar item
+  const card = document.createElement('div');
+  card.className = 'sidebar-card sidebar-card--toc';
+  card.innerHTML = '<h3>In this article</h3><ul>' +
+    items.map(i => '<li><a href="#' + i.id + '" data-toc-link>' + i.text.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'})[c]) + '</a></li>').join('') +
+    '</ul>';
+  sidebar.insertBefore(card, sidebar.firstChild);
+
+  // Smooth-scroll on click with header offset
+  card.querySelectorAll('a[data-toc-link]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      const offset = 88; // sticky header
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', href);
+    });
+  });
+
+  // Active section highlighting via IntersectionObserver
+  const tocLinks = card.querySelectorAll('a[data-toc-link]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('is-active'));
+        const active = card.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('is-active');
+      }
+    });
+  }, { rootMargin: '-100px 0px -70% 0px', threshold: 0 });
+
+  h2s.forEach(h2 => observer.observe(h2));
+})();

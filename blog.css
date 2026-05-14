@@ -651,6 +651,13 @@
   background: rgba(26,107,204,.05);
 }
 
+.sidebar-card ul li a.is-active {
+  color: var(--blue);
+  border-left-color: var(--blue);
+  background: rgba(26,107,204,.07);
+  font-weight: 600;
+}
+
 /* CTA card */
 .sidebar-card--cta {
   background: linear-gradient(150deg, var(--navy) 0%, #1a3a5c 100%);
