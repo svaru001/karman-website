@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Singapore Startup Tax Exemption (SUTE): How It Works in 2026 | Karman</title>
+  <meta name="description" content="How Singapore's StartUp Tax Exemption works in 2026: eligibility, 75% and 50% exemption tiers, worked examples, qualifying conditions, and how to claim." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karman.com.sg/blog/singapore-startup-tax-exemption" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://karman.com.sg/blog/singapore-startup-tax-exemption" />
+  <meta property="og:title" content="Singapore Startup Tax Exemption (SUTE): How It Works in 2026" />
+  <meta property="og:description" content="Singapore's SUTE gives new companies 75% exemption on first S$100k and 50% on next S$100k of profit. Full guide to eligibility, calculation, and claiming." />
+  <meta property="og:image" content="https://karman.com.sg/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; background: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+:root {
+  --navy: #0A2540; --navy-mid: #163758; --blue: #1A6BCC; --blue-light: #EBF3FD;
+  --accent: #FF5C35; --accent-hover: #e04a25; --teal: #00C9A7; --amber: #F5A623;
+  --gray-50: #F8F9FB; --gray-100: #F0F2F5; --gray-200: #E1E4EA; --gray-400: #9AA5B4;
+  --gray-600: #6B7280; --gray-800: #374151; --white: #FFFFFF;
+  --shadow-sm: 0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md: 0 4px 16px rgba(10,37,64,.10); --shadow-lg: 0 12px 40px rgba(10,37,64,.14);
+  --radius-sm: 6px; --radius: 12px; --radius-lg: 20px; --radius-xl: 28px; --container: 1180px;
+}
+h1, h2, h3, h4, h5 { font-family: 'Sora', 'Inter', sans-serif; line-height: 1.2; font-weight: 700; color: var(--navy); }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 24px; border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; transition: all .2s ease; white-space: nowrap; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,92,53,.3); }
+.btn--secondary { background: #0d4567; color: #fff; }
+.btn--secondary:hover { background: #0a3a59; color: #fff; transform: translateY(-1px); }
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
+.header.scrolled { border-color: var(--gray-200); box-shadow: var(--shadow-sm); }
+.nav { display: flex; align-items: center; gap: 8px; height: 68px; }
+.nav__logo { display: flex; align-items: center; margin-right: 16px; flex-shrink: 0; }
+.nav__logo-img { height: 40px; width: auto; display: block; }
+.nav__menu { display: flex; align-items: center; gap: 4px; flex: 1; }
+.nav__item { position: relative; }
+.nav__link { display: flex; align-items: center; gap: 4px; padding: 8px 14px; font-size: 14px; font-weight: 500; color: var(--gray-800); border-radius: var(--radius-sm); transition: color .2s, background .2s; }
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+.dropdown { position: absolute; top: calc(100% + 8px); left: 0; background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 8px; min-width: 280px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s ease; pointer-events: none; }
+.has-dropdown.is-open .dropdown { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+.dropdown__link { display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 8px; transition: background .15s; }
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon { font-size: 20px; margin-top: 1px; display: flex; align-items: center; color: var(--blue); }
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+.nav__actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.nav__hamburger { display: none; flex-direction: column; gap: 5px; margin-left: auto; padding: 4px; }
+.nav__hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all .3s; }
+.faq__grid { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s; }
+.faq-item:has(.faq-question[aria-expanded="true"]) { box-shadow: var(--shadow-md); border-color: var(--blue); }
+.faq-question { width: 100%; text-align: left; padding: 20px 24px; font-size: 16px; font-weight: 600; color: var(--navy); display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: background .15s; }
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon { font-size: 24px; font-weight: 300; color: var(--blue); transition: transform .3s; flex-shrink: 0; }
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer { display: none; padding: 0 24px 20px; }
+.faq-answer.open { display: block; }
+.faq-answer p { font-size: 15px; color: var(--gray-600); line-height: 1.75; }
+.footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 64px 0 32px; }
+.footer__top { display: grid; grid-template-columns: 280px 1fr; gap: 60px; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer__brand p { font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+.footer__badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.footer__social-link { display: inline-flex; align-items: center; justify-content: center; height: 24px; width: 24px; border-radius: 4px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.8); transition: all .2s ease; }
+.footer__social-link:hover { background: rgba(255,255,255,.18); color: #fff; border-color: rgba(255,255,255,.3); }
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 4px; background: rgba(255,255,255,.1); color: rgba(255,255,255,.8); border: 1px solid rgba(255,255,255,.15); }
+.footer__links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer-col a:hover { color: #fff; }
+.footer__bottom { text-align: center; display: flex; flex-direction: column; gap: 6px; }
+.footer__bottom p { font-size: 12px; color: rgba(255,255,255,.4); line-height: 1.6; }
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) {
+  .nav__menu { position: fixed; top: 68px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; padding: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); transform: translateY(-100%); opacity: 0; pointer-events: none; transition: transform .3s, opacity .3s; gap: 4px; z-index: 999; }
+  .nav__menu.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) { .footer__links { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../blog.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Singapore Startup Tax Exemption (SUTE): How It Works in 2026",
+        "url": "https://karman.com.sg/blog/singapore-startup-tax-exemption",
+        "image": "https://karman.com.sg/og-image.png",
+        "datePublished": "2026-05-15T00:00:00+08:00",
+        "dateModified": "2026-05-15T00:00:00+08:00",
+        "author": { "@type": "Organization", "name": "Karman Editorial Team", "url": "https://karman.com.sg" },
+        "publisher": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg", "logo": { "@type": "ImageObject", "url": "https://karman.com.sg/og-image.png" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://karman.com.sg/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Singapore Startup Tax Exemption", "item": "https://karman.com.sg/blog/singapore-startup-tax-exemption" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Singapore's StartUp Tax Exemption (SUTE)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The StartUp Tax Exemption (SUTE) is a tax incentive for newly incorporated Singapore-resident companies. For the first three Years of Assessment, qualifying companies get 75% exemption on the first S$100,000 of chargeable income and 50% exemption on the next S$100,000. This brings the effective tax rate to about 6.375% on the first S$200,000 of profit — compared to the headline 17% corporate tax rate." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can investment holding companies claim SUTE?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Investment holding companies and property development companies are excluded from the StartUp Tax Exemption. A company whose principal activity is holding investments (shares, bonds, property) does not qualify, even if it is newly incorporated. Operating companies with mixed activities should ensure their main activity is trading or service-based." }
+          },
+          {
+            "@type": "Question",
+            "name": "How many Years of Assessment does SUTE cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "SUTE covers the first three consecutive Years of Assessment (YA) from the year of incorporation. For a company incorporated in 2024 with a December financial year end, the first YA would be YA 2025, and SUTE would apply to YA 2025, YA 2026, and YA 2027." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="article-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div><strong>Incorporation</strong><p>Register your Singapore company</p></div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div><strong>VCC &amp; Fund Administration</strong><p>Singapore fund structures &amp; compliance</p></div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div><strong>Corporate Secretary</strong><p>Stay compliant year-round</p></div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div><strong>Accounting &amp; Tax</strong><p>Books, filings, and more</p></div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div><strong>GST Registration</strong><p>Registration &amp; quarterly filing</p></div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div><strong>Nominee Director</strong><p>Incorporate from anywhere</p></div>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link nav__link--active">Blog</a></li>
+        <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/#contact" class="btn btn--secondary">Contact us</a>
+        <a href="/onboarding" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span>Startup Tax Exemption</span>
+      </nav>
+      <span class="article-hero__tag">Tax</span>
+      <h1>Singapore Startup Tax Exemption (SUTE): How It Works in 2026</h1>
+      <div class="article-hero__meta">
+        <span class="article-hero__meta-item">📅 May 2026</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">⏱ 7 min read</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">✍️ Karman Editorial Team</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-layout">
+
+    <article class="article-body">
+
+      <p>One of the most compelling reasons to incorporate a company in Singapore is the StartUp Tax Exemption (SUTE). For the first three Years of Assessment, newly incorporated Singapore-resident companies pay an effective tax rate of around 6% on the first S$200,000 of profit — compared to the headline rate of 17%. For a startup generating S$200,000 in profit in Year 1, this means paying S$12,750 in tax instead of S$34,000.</p>
+
+      <p>This guide explains exactly how SUTE works, who qualifies, what gets excluded, and how it compares to the Partial Tax Exemption that applies from Year 4 onwards.</p>
+
+      <h2>What Is the StartUp Tax Exemption (SUTE)?</h2>
+
+      <p>SUTE is a tax incentive introduced by IRAS (Inland Revenue Authority of Singapore) to encourage entrepreneurship. It automatically applies to newly incorporated qualifying companies for their <strong>first three consecutive Years of Assessment (YA)</strong>. There is no application required — if you qualify, the exemption is claimed when you file your corporate tax return.</p>
+
+      <h2>How the SUTE Calculation Works</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Chargeable Income</th><th>Exemption Rate</th><th>Taxable Amount</th><th>Tax at 17%</th><th>Effective Rate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>First S$100,000</td><td>75% exempt</td><td>S$25,000</td><td>S$4,250</td><td>4.25%</td></tr>
+            <tr><td>Next S$100,000</td><td>50% exempt</td><td>S$50,000</td><td>S$8,500</td><td>8.5%</td></tr>
+            <tr><td>Above S$200,000</td><td>0% exempt</td><td>Full amount</td><td>17%</td><td>17%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The combined tax on the first S$200,000 is <strong>S$12,750</strong>, giving an effective rate of <strong>6.375%</strong> — less than half the headline rate.</p>
+
+      <h2>Worked Examples</h2>
+
+      <div class="callout callout--teal">
+        <div class="callout__title">Example 1: Company earns S$150,000 profit in Year 1</div>
+        <p><strong>First S$100,000:</strong> 75% exempt → taxable S$25,000 → tax S$4,250</p>
+        <p><strong>Next S$50,000:</strong> 50% exempt → taxable S$25,000 → tax S$4,250</p>
+        <p><strong>Total tax: S$8,500</strong> (effective rate: 5.67%)</p>
+      </div>
+
+      <div class="callout callout--teal">
+        <div class="callout__title">Example 2: Company earns S$300,000 profit in Year 2</div>
+        <p><strong>First S$100,000:</strong> 75% exempt → taxable S$25,000 → tax S$4,250</p>
+        <p><strong>Next S$100,000:</strong> 50% exempt → taxable S$50,000 → tax S$8,500</p>
+        <p><strong>Remaining S$100,000:</strong> No exemption → tax S$17,000</p>
+        <p><strong>Total tax: S$29,750</strong> (effective rate: 9.92%)</p>
+      </div>
+
+      <p>Even on S$300,000 profit, the effective rate is under 10% — still well below most comparable jurisdictions.</p>
+
+      <h2>SUTE Qualifying Conditions</h2>
+
+      <p>Not every newly incorporated company qualifies. SUTE requires all of the following:</p>
+
+      <ul>
+        <li><strong>Incorporated in Singapore:</strong> The company must be a Singapore-registered entity (Pte Ltd, Ltd, etc.)</li>
+        <li><strong>Tax resident in Singapore:</strong> Control and management must be exercised in Singapore. This means the board of directors holds meetings in Singapore and key strategic decisions are made here.</li>
+        <li><strong>No more than 20 shareholders:</strong> At any time during the basis period, the company must have 20 or fewer shareholders throughout the entire year</li>
+        <li><strong>At least one individual shareholder holding ≥ 10%:</strong> At least one individual (not a company) must hold at least 10% of the issued ordinary shares</li>
+      </ul>
+
+      <h3>Who Is Excluded from SUTE?</h3>
+
+      <ul>
+        <li><strong>Investment holding companies:</strong> Companies whose primary activity is holding investments (equities, bonds, real estate) do not qualify</li>
+        <li><strong>Property development companies:</strong> Companies engaged primarily in property development and sales are excluded</li>
+        <li><strong>Companies with more than 20 shareholders or no individual shareholders holding ≥ 10%:</strong> Typically corporate-owned vehicles or companies with broad shareholder registers</li>
+      </ul>
+
+      <div class="callout callout--amber">
+        <div class="callout__title">Practical Note on Shareholder Structure</div>
+        <p>Most early-stage startups with 1–5 founders naturally qualify under the shareholder conditions. However, if you receive pre-incorporation investment from a fund or corporate entity that takes a large stake, verify that at least one individual still holds ≥ 10% of ordinary shares. SUTE is lost if this condition fails in any year during the first three YAs.</p>
+      </div>
+
+      <h2>Understanding "Years of Assessment" (YA)</h2>
+
+      <p>In Singapore, tax is assessed on income earned in the <em>preceding</em> year. Your company's first three YAs are counted from the first YA in which the company has income or falls within the scope of tax.</p>
+
+      <p>Example: A company incorporated in July 2024 with a 31 December financial year end:</p>
+      <ul>
+        <li><strong>Financial Year ending 31 Dec 2024:</strong> Assessed in YA 2025 → SUTE applies (Year 1)</li>
+        <li><strong>Financial Year ending 31 Dec 2025:</strong> Assessed in YA 2026 → SUTE applies (Year 2)</li>
+        <li><strong>Financial Year ending 31 Dec 2026:</strong> Assessed in YA 2027 → SUTE applies (Year 3)</li>
+        <li><strong>Financial Year ending 31 Dec 2027:</strong> Assessed in YA 2028 → Partial Tax Exemption applies</li>
+      </ul>
+
+      <p>If the company makes a loss in Year 1, that YA still counts as one of the three SUTE years (there is nothing to exempt, but the year is consumed).</p>
+
+      <h2>Partial Tax Exemption: What Happens After Year 3</h2>
+
+      <p>After the three SUTE years expire, companies transition to the <strong>Partial Tax Exemption (PTE)</strong>, which is permanently available to all Singapore-resident companies regardless of age or shareholder structure:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Chargeable Income</th><th>Exemption</th><th>Taxable Amount</th><th>Tax at 17%</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>First S$10,000</td><td>75% exempt</td><td>S$2,500</td><td>S$425</td></tr>
+            <tr><td>Next S$190,000</td><td>50% exempt</td><td>S$95,000</td><td>S$16,150</td></tr>
+            <tr><td>Above S$200,000</td><td>No exemption</td><td>Full amount</td><td>17%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Under PTE, tax on S$200,000 profit is S$16,575 — an effective rate of 8.29%. This is still competitive globally, just less generous than SUTE.</p>
+
+      <h3>SUTE vs PTE: Side-by-Side Comparison</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Profit Level</th><th>Tax Under SUTE</th><th>Tax Under PTE</th><th>Saving from SUTE</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>S$100,000</td><td>S$4,250</td><td>S$12,750</td><td>S$8,500</td></tr>
+            <tr><td>S$200,000</td><td>S$12,750</td><td>S$16,575</td><td>S$3,825</td></tr>
+            <tr><td>S$300,000</td><td>S$29,750</td><td>S$33,575</td><td>S$3,825</td></tr>
+            <tr><td>S$500,000</td><td>S$63,750</td><td>S$67,575</td><td>S$3,825</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The tax saving from SUTE versus PTE is most dramatic at low profit levels (below S$200,000), where the 75% tier on the first S$100,000 drives a large absolute saving relative to income. Above S$200,000, the saving is a fixed S$3,825 per year since both schemes converge to 17% on income above that threshold.</p>
+
+      <h2>How to Claim SUTE</h2>
+
+      <p>SUTE is claimed automatically when you file your corporate tax return (Form C-S or Form C) with IRAS via myTax Portal. There is no separate application form or pre-approval required. IRAS applies the exemption when processing your return, provided your declared facts meet the qualifying conditions.</p>
+
+      <p>You will need to confirm in the tax return that:</p>
+      <ul>
+        <li>The company has 20 or fewer shareholders throughout the basis period</li>
+        <li>At least one individual shareholder holds ≥ 10% of ordinary shares</li>
+        <li>The company is not an investment holding company or property developer</li>
+      </ul>
+
+      <h2>Other Tax Incentives Available to Singapore Startups</h2>
+
+      <p>SUTE is the most universally applicable incentive, but there are others worth knowing about:</p>
+
+      <ul>
+        <li><strong>Double Tax Deduction for Internationalisation (DTDi):</strong> 200% tax deduction on qualifying overseas business development expenses</li>
+        <li><strong>Enhanced Deductions for Research and Development:</strong> 150–250% deduction on qualifying R&amp;D expenditure conducted in Singapore</li>
+        <li><strong>Capital Allowances:</strong> Accelerated write-off on qualifying plant, machinery, and renovation/renovation costs under Section 19 or 19A of the Income Tax Act</li>
+        <li><strong>Investment Allowance (IA):</strong> For significant capital expenditure on productive equipment, subject to Economic Development Board approval</li>
+        <li><strong>Global Trader Programme:</strong> Concessionary 5% or 10% tax on qualifying trading income for approved commodity and energy traders</li>
+      </ul>
+
+      <h2>Frequently Misunderstood Points</h2>
+
+      <h3>"I can defer income to use my SUTE years more efficiently"</h3>
+      <p>Structurally, yes — but with limits. The three SUTE years run from Year 1 of assessment regardless of whether you had income. You cannot extend SUTE by not filing or deliberately recognising no income. The years are consumed sequentially once the company exists and is in the Singapore tax net.</p>
+
+      <h3>"SUTE applies to all three types of income"</h3>
+      <p>SUTE applies to <em>chargeable income</em> — broadly, trading and business income after allowable deductions. Passive income like interest, royalties, and dividends received may have different treatment and are generally not the main focus of SUTE for operating businesses.</p>
+
+      <h3>"My company qualifies even though a VC fund holds 50%"</h3>
+      <p>Only if at least one <em>individual</em> (human being, not corporate entity) holds ≥ 10% of ordinary shares. If a VC fund holds 50% and the founders together hold 50% split evenly between three people (16.67% each), SUTE qualifies since each founder individually holds ≥ 10%. If the founders each hold less than 10%, SUTE is lost.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Singapore's StartUp Tax Exemption is one of the most valuable early-stage tax incentives available anywhere. The saving is most meaningful in the first two years when profits are relatively modest — exactly when cashflow matters most. There is no application or approval process; simply ensure your company qualifies at the shareholder level and file your tax returns on time.</p>
+
+      <p>If you're incorporated in Singapore and aren't sure whether your shareholder structure qualifies, or if you want help with ECI filing and annual tax returns, Karman's <a href="/services/accounting">accounting and tax team</a> handles all of it from S$200/month.</p>
+
+      <section class="article-sources-section" style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-200);">
+        <h3 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-500);margin-bottom:12px;">Official Sources</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://www.iras.gov.sg/schemes/disbursement-schemes/start-up-tax-exemption-scheme" target="_blank" rel="noopener noreferrer">IRAS – Start-Up Tax Exemption (SUTE) ↗</a></li>
+          <li><a href="https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/corporate-income-tax-rate-rebates-and-tax-exemption-schemes" target="_blank" rel="noopener noreferrer">IRAS – Corporate Tax Rate, Rebates &amp; Exemptions ↗</a></li>
+          <li><a href="https://www.iras.gov.sg/taxes/corporate-income-tax/basics-of-corporate-income-tax/tax-residency-of-a-company" target="_blank" rel="noopener noreferrer">IRAS – Tax Residency of a Company ↗</a></li>
+        </ul>
+      </section>
+
+      <section class="article-faq-section" style="margin-top:56px;padding-top:0;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__grid" style="max-width:100%;margin-top:24px;">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is Singapore's StartUp Tax Exemption (SUTE)?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>The StartUp Tax Exemption (SUTE) is a tax incentive for newly incorporated Singapore-resident companies. For the first three Years of Assessment, qualifying companies get 75% exemption on the first S$100,000 of chargeable income and 50% exemption on the next S$100,000. This brings the effective tax rate to about 6.375% on the first S$200,000 of profit — compared to the headline 17% corporate tax rate.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can investment holding companies claim SUTE?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>No. Investment holding companies and property development companies are excluded from the StartUp Tax Exemption. A company whose principal activity is holding investments (shares, bonds, property) does not qualify, even if it is newly incorporated. Operating companies with mixed activities should ensure their main activity is trading or service-based.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How many Years of Assessment does SUTE cover?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>SUTE covers the first three consecutive Years of Assessment (YA) from the year of incorporation. For a company incorporated in 2024 with a December financial year end, the first YA would be YA 2025, and SUTE would apply to YA 2025, YA 2026, and YA 2027.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do I need to apply for SUTE?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>No application is required. SUTE is claimed automatically when you file your corporate tax return (Form C-S or Form C) via myTax Portal. You simply confirm in your tax return that the qualifying conditions are met. IRAS will apply the exemption when processing your filing.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What happens after the three SUTE years expire?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>After SUTE expires, the company automatically transitions to the Partial Tax Exemption (PTE), which is available to all Singapore-resident companies indefinitely. Under PTE, the first S$10,000 of chargeable income is 75% exempt and the next S$190,000 is 50% exempt — still meaningful, but less generous than SUTE's tiers on the first S$100,000.</p></div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__eyebrow">Ready to incorporate?</div>
+        <h3>Get started from S$699</h3>
+        <p>Karman handles name check, ACRA filing, nominee director, and company secretary. Most applications approved within 1 business day.</p>
+        <a href="/onboarding" class="btn btn--primary">Start your application →</a>
+        <a href="/tools" class="sidebar-cta__secondary">Try our free tools first</a>
+      </div>
+      <div class="sidebar-tools">
+        <h4>Useful free tools</h4>
+        <a href="/tools/singapore-tax-calculator">
+          <span>💰</span><span>Tax Calculator</span>
+        </a>
+        <a href="/tools/compliance-health-check">
+          <span>📊</span><span>Compliance Health Check</span>
+        </a>
+        <a href="/tools/cost-calculator">
+          <span>🧮</span><span>Cost Calculator</span>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="article-related">
+    <div class="container">
+      <h2 class="article-related__heading">Related articles</h2>
+      <div class="article-related__grid">
+        <a href="/blog/singapore-corporate-tax-guide-small-business" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--tax">Tax</span>
+          <h3 class="blog-card__title">Singapore Corporate Tax Guide for Small Businesses (2026)</h3>
+          <p class="blog-card__excerpt">The full 17% rate, exemptions, ECI filing, Form C-S deadlines, and worked examples.</p>
+          <div class="blog-card__meta"><span>9 min read</span></div>
+        </a>
+        <a href="/blog/singapore-startup-grants-guide" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Grants</span>
+          <h3 class="blog-card__title">Grants Available for Singapore Startup Companies</h3>
+          <p class="blog-card__excerpt">Startup SG Founder, EDG, PSG, MRA, and all the grants available to Singapore-incorporated startups.</p>
+          <div class="blog-card__meta"><span>10 min read</span></div>
+        </a>
+        <a href="/blog/when-to-register-gst-singapore" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--gst">GST</span>
+          <h3 class="blog-card__title">When Does Your Singapore Company Need to Register for GST?</h3>
+          <p class="blog-card__excerpt">Compulsory threshold, voluntary registration, filing frequency, and penalties explained.</p>
+          <div class="blog-card__meta"><span>7 min read</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="/#incorporation">Company Incorporation</a></li>
+            <li><a href="/services/vcc-fund-administration">VCC &amp; Fund Administration</a></li>
+            <li><a href="/#secretary">Corporate Secretarial</a></li>
+            <li><a href="/#accounting">Accounting &amp; Bookkeeping</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Resources</h4><ul>
+            <li><a href="/tools">Free Tools</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="/#about">About Karman</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script>
+</body>
+</html>
