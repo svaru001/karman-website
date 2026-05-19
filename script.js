@@ -422,12 +422,13 @@ if (heroStats) counterObserver.observe(heroStats);
   const hamburger = document.getElementById('hamburger');
   if (!hamburger) return;
 
-  // Inject icon button
+  // Inject button after logo (left side of nav)
   const msgBtn = document.createElement('button');
   msgBtn.className = 'nav__msg-btn';
   msgBtn.setAttribute('aria-label', 'Contact us');
-  msgBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
-  hamburger.parentNode.insertBefore(msgBtn, hamburger);
+  msgBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk to us</span>';
+  const navMenu = hamburger.parentNode.querySelector('.nav__menu');
+  hamburger.parentNode.insertBefore(msgBtn, navMenu || hamburger);
 
   // Inject bottom-sheet modal
   const overlay = document.createElement('div');

@@ -820,17 +820,20 @@
   .nav__msg-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 36px;
+    gap: 6px;
+    padding: 0 14px;
     height: 36px;
-    margin-left: auto;
-    margin-right: 4px;
-    color: var(--navy);
-    border-radius: 8px;
-    transition: background .2s, color .2s;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    white-space: nowrap;
     flex-shrink: 0;
+    transition: background .2s;
   }
-  .nav__msg-btn:hover { background: var(--blue-light); color: var(--blue); }
+  .nav__msg-btn:active { background: var(--accent-hover); }
 }
 
 /* === BLOG CONTACT MODAL (bottom sheet) === */
