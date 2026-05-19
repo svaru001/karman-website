@@ -413,6 +413,42 @@ if (heroStats) counterObserver.observe(heroStats);
 })();
 
 
+// === WHATSAPP FLOATING BUTTON ===
+(function () {
+  var wa = document.createElement('a');
+  wa.href = 'https://wa.me/6591382994?text=Hi%2C+I+have+a+question+about+Singapore+incorporation.';
+  wa.className = 'whatsapp-fab';
+  wa.target = '_blank';
+  wa.rel = 'noopener noreferrer';
+  wa.setAttribute('aria-label', 'Chat on WhatsApp');
+  wa.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.853L.057 23.527a.5.5 0 0 0 .609.601l5.805-1.522A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.032-1.389l-.36-.214-3.733.979.996-3.648-.235-.374A9.789 9.789 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>';
+  wa.addEventListener('click', function () {
+    if (typeof gtag === 'function') gtag('event', 'whatsapp_click', { page_path: location.pathname });
+  });
+  document.body.appendChild(wa);
+})();
+
+// === BLOG INLINE ARTICLE CTA ===
+// Injects a "have a question?" block mid-article after the 3rd h2.
+(function () {
+  if (!document.querySelector('.article-body')) return;
+  var h2s = document.querySelectorAll('.article-body h2');
+  if (h2s.length < 2) return;
+  var target = h2s[Math.min(2, h2s.length - 1)];
+  var cta = document.createElement('div');
+  cta.className = 'article-inline-cta';
+  cta.innerHTML =
+    '<div class="article-inline-cta__text">' +
+      '<strong>Have a question about your specific situation?</strong>' +
+      '<p>Our team answers in plain English — no jargon, no obligation.</p>' +
+    '</div>' +
+    '<div class="article-inline-cta__actions">' +
+      '<a href="https://wa.me/6591382994?text=Hi%2C+I+read+your+article+and+have+a+question." target="_blank" rel="noopener" class="btn btn--primary">WhatsApp us →</a>' +
+      '<a href="/#contact" class="btn btn--outline">Send a message</a>' +
+    '</div>';
+  target.parentNode.insertBefore(cta, target);
+})();
+
 // === BLOG MOBILE CONTACT CTA ===
 // Injects a message icon next to the hamburger on blog post pages.
 // Tapping it opens a bottom-sheet contact form.
