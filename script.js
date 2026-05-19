@@ -419,7 +419,7 @@ if (heroStats) counterObserver.observe(heroStats);
   if (document.getElementById('wa-fab')) return;
   var wa = document.createElement('a');
   wa.id = 'wa-fab';
-  wa.href = 'https://wa.me/6591382994?text=Hi!%20I%27d%20like%20to%20incorporate%20a%20company%20in%20Singapore.%20Can%20we%20have%20a%20quick%20chat%3F';
+  wa.href = 'https://wa.me/6580743630?text=Hi!%20I%27d%20like%20to%20incorporate%20a%20company%20in%20Singapore.%20Can%20we%20have%20a%20quick%20chat%3F';
   wa.target = '_blank';
   wa.rel = 'noopener noreferrer';
   wa.setAttribute('aria-label', 'Chat on WhatsApp');
