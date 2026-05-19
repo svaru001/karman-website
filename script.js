@@ -411,3 +411,90 @@ if (heroStats) counterObserver.observe(heroStats);
 
   h2s.forEach(h2 => observer.observe(h2));
 })();
+
+
+// === BLOG MOBILE CONTACT CTA ===
+// Injects a message icon next to the hamburger on blog post pages.
+// Tapping it opens a bottom-sheet contact form.
+(function () {
+  if (!document.querySelector('.article-body')) return;
+
+  const hamburger = document.getElementById('hamburger');
+  if (!hamburger) return;
+
+  // Inject icon button
+  const msgBtn = document.createElement('button');
+  msgBtn.className = 'nav__msg-btn';
+  msgBtn.setAttribute('aria-label', 'Contact us');
+  msgBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+  hamburger.parentNode.insertBefore(msgBtn, hamburger);
+
+  // Inject bottom-sheet modal
+  const overlay = document.createElement('div');
+  overlay.id = 'blogContactOverlay';
+  overlay.className = 'contact-modal-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'bcfTitle');
+  overlay.innerHTML =
+    '<div class="contact-modal">' +
+      '<div class="contact-modal__header">' +
+        '<span class="contact-modal__title" id="bcfTitle">Get in touch</span>' +
+        '<button class="contact-modal__close" id="blogContactClose" aria-label="Close">✕</button>' +
+      '</div>' +
+      '<p class="contact-modal__sub">We typically respond within 1 business day.</p>' +
+      '<form class="contact-modal__form" id="blogContactForm" novalidate>' +
+        '<div class="form-group"><label for="bcfName">Your name</label><input type="text" id="bcfName" name="name" placeholder="Jane Smith" autocomplete="name" /></div>' +
+        '<div class="form-group"><label for="bcfEmail">Email address</label><input type="email" id="bcfEmail" name="email" placeholder="jane@company.com" autocomplete="email" /></div>' +
+        '<div class="form-group"><label for="bcfMsg">How can we help?</label><textarea id="bcfMsg" name="message" rows="3" placeholder="Tell us about your needs…"></textarea></div>' +
+        '<button type="submit" class="btn btn--primary btn--full">Send message</button>' +
+      '</form>' +
+    '</div>';
+  document.body.appendChild(overlay);
+
+  function openModal() {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => { var el = overlay.querySelector('#bcfName'); if (el) el.focus(); }, 300);
+  }
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  msgBtn.addEventListener('click', openModal);
+  document.getElementById('blogContactClose').addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+
+  document.getElementById('blogContactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    var name = form.querySelector('#bcfName').value.trim();
+    var email = form.querySelector('#bcfEmail').value.trim();
+    var message = form.querySelector('#bcfMsg').value.trim();
+
+    if (!name) { alert('Please enter your name.'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, message: message, form_name: 'blog_cta', page: window.location.pathname })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function () {
+      form.innerHTML = '<p class="contact-modal__success">✓ Thanks! We’ll be in touch shortly.</p>';
+      setTimeout(closeModal, 2500);
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+      alert('Something went wrong. Please email us at team@karman.com.sg');
+    });
+  });
+})();
