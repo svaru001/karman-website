@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>How Indian Textile Exporters Legally Save Tax Using a Singapore Company (2026) | Karman</title>
+  <meta name="description" content="Indian textile exporters paying 30% corporate tax can legally reduce their effective rate using a Singapore subsidiary. The rupee math, the structure, and the compliance requirements explained." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karman.com.sg/blog/singapore-tax-savings-indian-textile-exporters" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://karman.com.sg/blog/singapore-tax-savings-indian-textile-exporters" />
+  <meta property="og:title" content="How Indian Textile Exporters Legally Save Tax Using a Singapore Company (2026) | Karman" />
+  <meta property="og:description" content="Indian textile exporters paying 30% corporate tax can legally reduce their effective rate using a Singapore subsidiary. The rupee math, the structure, and the compliance requirements explained." />
+  <meta property="og:image" content="https://karman.com.sg/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__scroll-indicator span {
+  display: block;
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__content .section-heading {
+  text-align: left;
+}
+.why__content .section-subtext {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Compliance Card Stack */
+.why__visual {
+  position: relative;
+}
+.why__card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.compliance-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s;
+}
+.compliance-card:hover { transform: translateX(4px); }
+.compliance-card--upcoming {
+  border-color: var(--amber);
+  background: #FFFBF0;
+}
+.compliance-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.compliance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.compliance-dot.green { background: var(--teal); }
+.compliance-dot.amber { background: var(--amber); }
+.compliance-dot.blue { background: var(--blue); }
+.compliance-status {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(0,201,167,.1);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.compliance-status.upcoming {
+  color: #92740A;
+  background: rgba(245,166,35,.15);
+}
+.compliance-status.processing {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.compliance-card__date {
+  font-size: 12px;
+  color: var(--gray-600);
+  padding-left: 16px;
+}
+.why__card-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 16px;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-tab:hover:not(.active) { color: var(--blue); }
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.plan-features li.text-muted { color: var(--gray-400); }
+.plan-features li.text-muted::before { color: var(--gray-200); }
+
+.pricing__note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-top: 32px;
+}
+.pricing__note a { color: var(--blue); font-weight: 500; }
+.pricing__note a:hover { text-decoration: underline; }
+
+/* === TESTIMONIALS === */
+.testimonials { background: #fff; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.testimonial-card--accent p { color: rgba(255,255,255,.9); }
+
+.testimonial-card__stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-card__author strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+}
+.testimonial-card--accent .testimonial-card__author strong { color: #fff; }
+.testimonial-card__author span {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+.testimonial-card--accent .testimonial-card__author span { color: rgba(255,255,255,.6); }
+
+/* === BLOG PREVIEW === */
+.blog-preview { background: #fff; }
+
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.blog-preview__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.blog-preview__card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 20px rgba(37,99,235,.1);
+  transform: translateY(-2px);
+}
+
+.blog-preview__tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(37,99,235,.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.blog-preview__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+  margin: 0;
+}
+
+.blog-preview__card p {
+  font-size: .88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.blog-preview__cta {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 4px;
+}
+
+.blog-preview__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .blog-preview__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-preview__grid { grid-template-columns: 1fr; }
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
+.contact-detail a { color: var(--blue); }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Form */
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray-400); }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-optional { font-size: 11px; color: var(--gray-400); font-weight: 400; }
+.form-disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--featured { grid-column: span 1; }
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .why__content .section-heading,
+  .why__content .section-subtext { text-align: center; }
+  .why__points { max-width: 500px; margin: 0 auto; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__stats {
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .stat strong { font-size: 22px; }
+  .stat-divider { margin: 0 16px; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .testimonials__grid { grid-template-columns: 1fr; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero__heading { font-size: 38px; }
+  .hero__stats { flex-direction: column; gap: 20px; }
+  .stat-divider { width: 100%; height: 1px; margin: 0; }
+  .pricing__tabs { flex-direction: column; max-width: 100%; }
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../blog.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How Indian Textile Exporters Legally Save Tax Using a Singapore Company (2026)",
+        "url": "https://karman.com.sg/blog/singapore-tax-savings-indian-textile-exporters",
+        "image": "https://karman.com.sg/og-image.png",
+        "datePublished": "2026-05-17T00:00:00+08:00",
+        "dateModified": "2026-05-17T00:00:00+08:00",
+        "author": { "@type": "Organization", "name": "Karman Editorial Team", "url": "https://karman.com.sg" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Karman Corporate Services",
+          "url": "https://karman.com.sg",
+          "logo": { "@type": "ImageObject", "url": "https://karman.com.sg/og-image.png" }
+        },
+        "description": "Indian textile exporters paying 30% corporate tax can legally reduce their effective rate using a Singapore subsidiary. The rupee math, the structure, and the compliance requirements explained."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://karman.com.sg/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Singapore Tax Savings for Indian Textile Exporters", "item": "https://karman.com.sg/blog/singapore-tax-savings-indian-textile-exporters" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much tax can I actually save using a Singapore company?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The saving depends on your profit level and the transfer pricing margin defensible in Singapore. For a textile exporter with ₹5 crore in annual export profits, routing 60-70% of profit through Singapore at 17% versus India at 30% saves approximately ₹60-75 lakh per year. For ₹2 crore export profit the saving is roughly ₹25-30 lakh. These are illustrative figures — your CA should model your specific situation." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I pay Indian tax on Singapore profits?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not until you receive a dividend from Singapore to India. Profits retained and reinvested in the Singapore business do not trigger Indian tax. When you eventually declare a dividend, the India-Singapore DTAA reduces withholding tax to 10-15% rather than the standard 20%. Consult a CA for your specific situation." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a Singapore company structure survive an Indian income tax audit?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, if properly structured and documented. Transfer pricing is the primary area of scrutiny — arm's-length pricing documented by a CA and filed with Form 3CEB is the standard protection. Thousands of Indian exporters operate this structure and pass IT assessments regularly. The key is contemporaneous documentation, not retroactive justification." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".article-body > p:first-child", ".article-faq-section .faq-answer p"]
+    }
+  }
+  </script>
+</head>
+<body class="article-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div><strong>Incorporation</strong><p>Register your Singapore company</p></div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div><strong>VCC &amp; Fund Administration</strong><p>Singapore fund structures &amp; compliance</p></div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div><strong>Corporate Secretary</strong><p>Stay compliant year-round</p></div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div><strong>Accounting &amp; Tax</strong><p>Books, filings, and more</p></div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div><strong>GST Registration</strong><p>Registration &amp; quarterly filing</p></div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div><strong>Nominee Director</strong><p>Incorporate from anywhere</p></div>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link nav__link--active">Blog</a></li>
+        <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/#contact" class="btn btn--secondary">Contact us</a>
+        <a href="/onboarding" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span>Singapore Tax Savings for Indian Textile Exporters</span>
+      </nav>
+      <span class="article-hero__tag">Tax</span>
+      <h1>How Indian Textile Exporters Legally Save Tax Using a Singapore Company (2026)</h1>
+      <div class="article-hero__meta">
+        <span class="article-hero__meta-item">📅 May 2026</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">⏱ 11 min read</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">✍️ Karman Editorial Team</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-layout">
+
+    <article class="article-body">
+
+      <div class="callout callout--blue"><strong>More guides for Indian exporters:</strong> <a href="/blog/singapore-company-indian-textile-trading-exporters">Singapore Company for Textile &amp; Trading Exporters</a> | <a href="/blog/route-export-invoices-singapore-indian-traders">Route Invoices Through Singapore — Is It Legal?</a> | <a href="/blog/gst-blocked-working-capital-singapore-solution">GST Working Capital Solution</a> | <a href="/blog/india-singapore-dtaa-business-guide">India-Singapore DTAA Guide</a></div>
+
+      <p>If you're running a textile or garment export business in India, you're probably paying between 25–30% corporate tax on your profits. Add the effective cost of taking money out personally, and the real rate climbs further. Meanwhile, Singapore's corporate tax rate is 17% flat — with a startup exemption that takes the effective rate on the first S$200,000 of annual profit down to around 8.5%. A Singapore company used correctly is not a loophole. It is a legal, internationally recognised tax planning tool that thousands of Indian exporters — from garment makers in Tiruppur to yarn traders in Surat — already use.</p>
+
+      <div class="callout callout--amber">
+        <div class="callout__title">Tax and legal disclaimer</div>
+        <p>The calculations in this article are illustrative. Tax laws are complex and fact-specific. Always consult a qualified CA with cross-border India-Singapore experience before making any structural decisions.</p>
+      </div>
+
+      <h2>India vs Singapore: The Tax Rate Gap</h2>
+
+      <p>The headline difference is 30% (India) versus 17% (Singapore). But the real gap is wider once you account for surcharges, cess, and how you extract profits as the promoter.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>India (Pvt Ltd)</th>
+              <th>Singapore (Pte Ltd)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Corporate tax rate</td>
+              <td>22% base + 10% surcharge + 4% cess = ~25.17% effective</td>
+              <td>17% flat</td>
+            </tr>
+            <tr>
+              <td>New company tax rate (first 3 years)</td>
+              <td>25.17% (no startup exemption at this level)</td>
+              <td>~4.25% on first S$100,000 / ~8.5% on next S$100,000</td>
+            </tr>
+            <tr>
+              <td>Capital gains on share sale</td>
+              <td>10–20% (LTCG/STCG)</td>
+              <td>0%</td>
+            </tr>
+            <tr>
+              <td>Dividend withholding to non-resident promoter</td>
+              <td>20% (or 10% under DTAA if routed via Singapore)</td>
+              <td>0% (Singapore does not withhold tax on dividends)</td>
+            </tr>
+            <tr>
+              <td>GST on exports</td>
+              <td>0% (zero-rated, but ITC often blocked)</td>
+              <td>0% (GST/GST exempt for international sales)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--teal">
+        <div class="callout__title">Singapore startup tax exemption</div>
+        <p>New Singapore companies enjoy 75% exemption on the first S$100,000 of chargeable income and 50% exemption on the next S$100,000, for each of the first three years of incorporation. At 17%, with the exemption, the effective rate on the first S$100,000 is <strong>4.25%</strong> — versus India's 25%+.</p>
+      </div>
+
+      <h2>The Rupee Math: What You Actually Save</h2>
+
+      <p>Let's put concrete numbers on it. Assume your textile or garment export business earns ₹5 crore in annual profits from international sales. Under the current India-only structure, all of that profit is taxed in India at ~25% effective rate. Under a Singapore structure where a portion of the margin sits in Singapore, the tax position changes materially.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>₹2 crore export profit</th>
+              <th>₹5 crore export profit</th>
+              <th>₹10 crore export profit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>India only (25% tax)</td>
+              <td>₹50L tax</td>
+              <td>₹1.25 crore tax</td>
+              <td>₹2.5 crore tax</td>
+            </tr>
+            <tr>
+              <td>Singapore structure (60% of margin in SG at 17%)</td>
+              <td>₹30.6L tax (saving: ₹19.4L)</td>
+              <td>₹76.5L tax (saving: ₹48.5L)</td>
+              <td>₹1.53 crore tax (saving: ₹97L)</td>
+            </tr>
+            <tr>
+              <td>5-year cumulative saving</td>
+              <td>~₹97L</td>
+              <td>~₹2.4 crore</td>
+              <td>~₹4.85 crore</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>These figures assume 60% of the export margin is defensible in Singapore under arm's-length transfer pricing — a realistic figure if the Singapore entity performs genuine commercial functions (holds buyer relationships, manages trade finance, takes title risk). The India-based entity continues to earn a cost-plus margin on manufacturing or trading, taxed in India.</p>
+
+      <h2>The Structure That Makes It Work</h2>
+
+      <p>There are two entities. The Indian entity you already have. And a new Singapore Pte Ltd that you incorporate.</p>
+
+      <h3>Entity 1: Indian Manufacturing or Trading Company (existing)</h3>
+      <p>This entity continues to handle Indian operations: production, sourcing, domestic sales, employee payroll, factory rent, and all India-side compliance. For exports, it sells finished goods to the Singapore entity at an arm's-length transfer price — typically cost plus a reasonable margin (8–15% depending on the functions performed). This margin is taxed in India. The Indian entity remains on the ICEGATE system, files its shipping bills, uses the LUT route for zero-rated GST exports, and remits proceeds from Singapore under normal banking channels.</p>
+
+      <h3>Entity 2: Singapore Pte Ltd (new)</h3>
+      <p>This entity holds your international buyer relationships — the purchase orders, the long-term supply agreements, the buyer-side contacts in Germany, the US, the UAE. It invoices your foreign buyers in USD or EUR. Payment from buyers lands in a DBS or OCBC multi-currency account in Singapore. The Singapore entity pays the Indian entity under the transfer-price invoice. The difference between what the Singapore entity charges the buyer and what it pays India is the Singapore margin — taxed at 17%.</p>
+
+      <div class="callout callout--teal">
+        <div class="callout__title">The invoice chain</div>
+        <p><strong>Indian Factory</strong> → sells at transfer price (e.g. ₹800/piece) → <strong>Singapore Pte Ltd</strong> → sells at market price (e.g. ₹1,100/piece) → <strong>EU / US / Middle East Buyer</strong><br><br>
+        Margin in India: ₹62/piece (taxed at ~25%). Margin in Singapore: ₹300/piece (taxed at 17%). The goods move directly from India to the buyer — the Singapore entity never physically handles the goods.</p>
+      </div>
+
+      <h2>Getting Money Back to India: The Dividend Journey</h2>
+
+      <p>The most common question from Indian promoters: "The profit is sitting in Singapore — how do I use it?" You have four options, each with different tax implications.</p>
+
+      <h3>Option 1: Reinvest in the Singapore Business</h3>
+      <p>The most tax-efficient. Use Singapore profits to fund working capital, buy equipment, expand into new markets, or build a Singapore team. No Indian tax event is triggered until you declare a dividend. This is the preferred approach for exporters who are scaling — profits compound in Singapore at 17% tax rather than 25%+.</p>
+
+      <h3>Option 2: Dividend to Indian Promoter (via DTAA)</h3>
+      <p>Under the India-Singapore DTAA, withholding tax on dividends paid from a Singapore company to an Indian resident is capped at 10% (for holdings above 25%) or 15% (for smaller holdings). Singapore itself does NOT levy any withholding tax on dividends — the only tax is the Indian side. So the combined effective tax rate is: 17% Singapore corporate tax + 10% Indian withholding on the remaining 83% = approximately 25.3% total. Compare this to India alone at 25%+, and the savings may seem modest on dividends — but the compounding benefit of reinvesting at 17% for years before taking a dividend is significant.</p>
+
+      <h3>Option 3: Director's Fee or Salary from Singapore</h3>
+      <p>If you spend time in Singapore managing the business, you can draw a salary or director's fee from the Singapore entity. Singapore's personal income tax is progressive — 0% on the first S$20,000, rising to a maximum of 24% at higher bands. For moderate amounts (S$100,000–200,000/year), the effective personal rate in Singapore is below 10%. This is an efficient extraction route for promoters who travel to Singapore regularly or relocate partially.</p>
+
+      <h3>Option 4: Singapore Investments</h3>
+      <p>Singapore has zero estate duty and zero capital gains tax on the sale of investments. Singapore profits deployed into Singapore real estate, equities, or other businesses accumulate free of capital gains. This is a wealth-building option for promoters thinking beyond the annual tax saving.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Extraction method</th>
+              <th>Combined effective rate</th>
+              <th>Best for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reinvest in Singapore</td>
+              <td>17% (no India tax yet)</td>
+              <td>Growing businesses, long-term compounding</td>
+            </tr>
+            <tr>
+              <td>Dividend at DTAA 10%</td>
+              <td>~25.3% total</td>
+              <td>Mature businesses, regular distributions</td>
+            </tr>
+            <tr>
+              <td>Singapore director salary</td>
+              <td>17% + personal income tax (can be &lt;10% for moderate amounts)</td>
+              <td>Promoters spending time in Singapore</td>
+            </tr>
+            <tr>
+              <td>India-only (no Singapore)</td>
+              <td>~25–30%</td>
+              <td>Baseline comparison</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Industry-Specific Benefits for Textile Exporters</h2>
+
+      <h3>Buyer Payment Terms</h3>
+      <p>European and US fashion buyers — fast-fashion retailers, department store vendors, e-commerce brands — often impose net 60–90 day payment terms. Many of these buyers have internal procurement compliance rules that create friction when paying Indian entities directly. They prefer Singapore counterparties because Singapore's legal system (based on English common law) allows faster enforcement of commercial contracts, Singapore banks process USD payments seamlessly, and there is no perceived country risk premium. A Singapore entity on the invoice often translates to faster payment, fewer payment holds, and access to better buyer credit terms.</p>
+
+      <h3>Trade Finance Access</h3>
+      <p>DBS and OCBC offer invoice financing, trade finance lines, and letters of credit at rates significantly lower than Indian banks for foreign currency transactions. If you hold a confirmed purchase order from a Tier-1 buyer, a Singapore bank may finance 70–80% of the invoice value at SOFR + 1.5–2% — compared to 8–10% for Indian export credit lines (even post-interest subvention). For a garment exporter running ₹20 crore of export revenue, this trade finance cost differential can save ₹15–25 lakh per year in interest alone.</p>
+
+      <h3>USD Holding Without RBI Constraints</h3>
+      <p>Indian entities must repatriate export proceeds to India within 9 months (FEMA requirement) and can only hold foreign currency in an EEFC account with restrictions on usage. A Singapore entity holds USD, EUR, and GBP indefinitely in a multi-currency account — freely usable for international raw material purchases (cotton from the US, polyester chips from Korea), global freight payments, machinery imports, or reinvestment. Eliminating the rupee conversion round-trip saves on forex bid-ask spread and hedging costs.</p>
+
+      <h3>Sourcing from Competing Textile Hubs</h3>
+      <p>Singapore's geographic position in Southeast Asia is genuinely useful for textile supply chains. Your Singapore entity can source grey fabric from Bangladesh, yarn from Vietnam, or embellishments from Indonesia — paying in USD, without RBI's overseas payment documentation requirements — and have these inputs processed at your Indian facility before re-export as finished garments. This is a real commercial function that justifies Singapore-side margin and strengthens your GAAR/transfer pricing position.</p>
+
+      <h2>The Transfer Pricing Requirement: Where Most People Go Wrong</h2>
+
+      <p>The single biggest mistake Indian exporters make when setting up Singapore structures is under-pricing the India-to-Singapore sale. If you sell to your Singapore entity at ₹100 and Singapore invoices the buyer at ₹1,000, the ₹900 margin in Singapore will attract a transfer pricing adjustment from the Indian Tax Officer. You cannot arbitrarily move margin to Singapore — the price must reflect what an unrelated party would charge.</p>
+
+      <div class="callout callout--amber">
+        <div class="callout__title">Transfer pricing is non-negotiable</div>
+        <p>The Indian Transfer Pricing Officer (TPO) has the power to adjust the taxable income of the Indian entity upward to reflect arm's-length pricing. Adjustments carry interest and penalties of 100–300% on the additional tax. Document your transfer pricing policy before the first transaction — not after an audit notice arrives. File Form 3CEB with your Indian tax return every year.</p>
+      </div>
+
+      <p>Defensible Singapore margins depend on the functions your Singapore entity actually performs:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Singapore entity function</th>
+              <th>Defensible gross margin in Singapore</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pure re-invoicing (minimal function)</td>
+              <td>3–7% of invoice value</td>
+            </tr>
+            <tr>
+              <td>Holds buyer relationships, manages orders</td>
+              <td>8–15%</td>
+            </tr>
+            <tr>
+              <td>Provides trade finance, takes currency risk</td>
+              <td>12–20%</td>
+            </tr>
+            <tr>
+              <td>Genuine sourcing/distribution hub with staff</td>
+              <td>15–25%+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Risks and How to Manage Them</h2>
+
+      <h3>POEM Risk (Place of Effective Management)</h3>
+      <p>Under Section 6 of the Indian Income Tax Act, a foreign company managed from India is treated as an Indian tax resident and taxed in India on worldwide income. If your Singapore company is run entirely from your Surat or Tiruppur office — with the Singapore director just signing documents — the Indian tax department can assert that the POEM is India. The solution: your Singapore-based nominee director must actively manage the company. Board meetings must be held or conducted from Singapore. Decisions about buyer contracts must be made in Singapore. Your own role as non-resident director is fine, but you cannot be the only decision-maker.</p>
+
+      <h3>GAAR (General Anti-Avoidance Rules)</h3>
+      <p>GAAR (Sections 95–102 of the Income Tax Act) allows Indian authorities to ignore any arrangement whose dominant purpose is tax avoidance and which lacks commercial substance. A Singapore entity with genuine buyer relationships, a real bank account, active trade finance, and a functioning director is highly defensible. A Singapore entity that exists only on paper to receive a re-invoice is not. Build substance first, then book the transactions.</p>
+
+      <h3>Transfer Pricing Audit</h3>
+      <p>The most common risk for well-structured entities. Managed with: contemporaneous TP documentation prepared by your CA before the financial year ends, CUP or TNMM analysis, consistent pricing across all related-party transactions, and Form 3CEB filed annually with your income tax return.</p>
+
+      <h2>What This Costs to Set Up</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Singapore incorporation (ACRA)</td>
+              <td>S$699 (with Karman)</td>
+            </tr>
+            <tr>
+              <td>Nominee director (Year 1)</td>
+              <td>S$1,800/year</td>
+            </tr>
+            <tr>
+              <td>Corporate secretary + registered address (Year 1)</td>
+              <td>Included</td>
+            </tr>
+            <tr>
+              <td>Annual compliance (Year 2+)</td>
+              <td>From S$1,200/year</td>
+            </tr>
+            <tr>
+              <td>Singapore accounting</td>
+              <td>From S$150/month</td>
+            </tr>
+            <tr>
+              <td>India-side ODI filing (CA)</td>
+              <td>₹15,000–40,000</td>
+            </tr>
+            <tr>
+              <td>Transfer pricing documentation (annual)</td>
+              <td>₹50,000–2,00,000/year</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Total first-year cost: approximately S$5,000–S$8,000 plus India-side CA fees.</strong> At current rates that is roughly ₹5–7 lakh. For a textile exporter saving ₹48 lakh per year on ₹5 crore of profits, the payback period is under 2 months. For ₹2 crore in profits, the saving is still ₹19 lakh per year — the structure pays for itself in under 4 months.</p>
+
+      <h2>Who Should NOT Do This</h2>
+
+      <p>This structure is not appropriate for everyone. Avoid it if:</p>
+      <ul>
+        <li><strong>Your annual export profit is below ₹1 crore.</strong> The fixed compliance costs are ₹5–7 lakh in Year 1. Below ₹1 crore in export profits, the saving is unlikely to exceed the cost.</li>
+        <li><strong>You cannot commit to proper compliance.</strong> ODI filing, annual APR, transfer pricing docs, Form 3CEB — this is annual paperwork. If you skip it, the risk exposure far exceeds the tax saving.</li>
+        <li><strong>You plan to run Singapore as a pure paper entity.</strong> POEM and GAAR risks are too high without real commercial substance in Singapore.</li>
+        <li><strong>You intend to fund Singapore via Wise, Payoneer, or informal channels.</strong> This is a FEMA violation. Penalties can be up to 3x the amount remitted. All capital must go via AD Bank under the ODI route.</li>
+      </ul>
+
+      <section class="article-faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__grid">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How much tax can I actually save?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The saving depends on your profit level and the transfer pricing margin defensible in Singapore. For ₹5 crore in export profits with 60% in Singapore at 17% vs India at 25%: roughly ₹48 lakh per year. For ₹2 crore: roughly ₹19 lakh per year. Over five years at ₹5 crore profits: over ₹2.4 crore in cumulative additional retained earnings. Your CA should model your specific situation — these are illustrative.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I pay Indian tax on profits sitting in Singapore?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Not until you receive a dividend from Singapore to India. Profits retained and reinvested in the Singapore business are not taxed in India. When you eventually declare a dividend, the India-Singapore DTAA reduces the withholding to 10–15% rather than the standard 20%. Reinvesting in Singapore is the most tax-efficient strategy — profits compound at 17% for years before any India-side tax is triggered.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can this structure survive an Indian income tax audit?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, if properly structured. Transfer pricing is the primary area of scrutiny. Arm's-length pricing documented by a CA and filed with Form 3CEB is the protection. Thousands of Indian exporters use this structure and pass IT assessments regularly. The key is contemporaneous documentation — prepared before the transaction, not retroactively after an audit notice. POEM and GAAR are additional risks that are managed by having genuine Singapore substance and a real business function in Singapore.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Does this work for businesses beyond textiles?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes — the same structure applies to any export business: garments, made-ups, home textiles, yarn, chemicals, pharmaceuticals, leather goods, engineering goods, agri-products, and more. The tax and FEMA framework is the same regardless of commodity. What changes is the specific transfer pricing analysis (CUP benchmarks vary by product category) and the appropriate arm's-length margin for your industry.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How do I start?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Step 1: Engage a CA experienced in India-Singapore structures — model the tax savings, design the transfer pricing policy, and assess the POEM/GAAR risk for your specific situation. Step 2: Incorporate the Singapore Pte Ltd (ACRA registration, 1–3 business days with Karman). Step 3: Open Singapore corporate bank account (DBS or OCBC, 4–8 weeks). Step 4: File ODI with your AD bank in India within 30 days of first capital remittance. Step 5: Begin routing new international orders through the Singapore entity.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="callout callout--teal" style="margin-top:48px;">
+        <div class="callout__title">Ready to set up your Singapore entity?</div>
+        <p>Karman handles Singapore incorporation, nominee director, and corporate secretary — from S$699. Most ACRA approvals within 1 business day. <a href="/onboarding"><strong>Start your application →</strong></a></p>
+      </div>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__eyebrow">Ready to incorporate?</div>
+        <h3>Get started from S$699</h3>
+        <p>Karman handles name check, ACRA filing, nominee director, and company secretary. Most applications approved within 1 business day.</p>
+        <a href="/onboarding" class="btn btn--primary">Start your application →</a>
+        <a href="/tools" class="sidebar-cta__secondary">Try our free tools first</a>
+      </div>
+      <div class="sidebar-tools">
+        <h4>Useful free tools</h4>
+        <a href="/tools/cost-calculator">
+          <span>🧮</span><span>Cost Calculator</span>
+        </a>
+        <a href="/tools/eligibility-checker">
+          <span>✅</span><span>Eligibility Checker</span>
+        </a>
+        <a href="/tools/company-name-checker">
+          <span>🏷️</span><span>Name Checker</span>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="article-related">
+    <div class="container">
+      <h2 class="article-related__heading">Related articles</h2>
+      <div class="article-related__grid">
+        <a href="/blog/singapore-company-indian-textile-trading-exporters" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Singapore Company for Indian Textile and Trading Exporters</h3>
+          <p class="blog-card__excerpt">Full guide to structure, FEMA compliance, banking, and costs for Indian textile and trading exporters setting up a Singapore Pte Ltd.</p>
+          <div class="blog-card__meta"><span>13 min read</span></div>
+        </a>
+        <a href="/blog/route-export-invoices-singapore-indian-traders" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Can I Route My Export Invoices Through Singapore?</h3>
+          <p class="blog-card__excerpt">The legal guide to back-to-back trading, transfer pricing, POEM risk, and GAAR for Indian traders routing invoices through a Singapore entity.</p>
+          <div class="blog-card__meta"><span>11 min read</span></div>
+        </a>
+        <a href="/blog/india-vs-singapore-tax-founders" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--tax">Tax</span>
+          <h3 class="blog-card__title">India vs Singapore Tax Comparison for Founders</h3>
+          <p class="blog-card__excerpt">Side-by-side comparison of corporate tax, capital gains, dividends, and personal income tax in India and Singapore for 2026.</p>
+          <div class="blog-card__meta"><span>10 min read</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="/#incorporation">Company Incorporation</a></li>
+            <li><a href="/services/vcc-fund-administration">VCC &amp; Fund Administration</a></li>
+            <li><a href="/#secretary">Corporate Secretarial</a></li>
+            <li><a href="/#accounting">Accounting &amp; Bookkeeping</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Resources</h4><ul>
+            <li><a href="/tools">Free Tools</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="/#about">About Karman</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script></body>
+</html>
