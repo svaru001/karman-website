@@ -103,22 +103,7 @@
       "WebFetch(domain:incorp.asia)",
       "WebFetch(domain:www.lanturn.com)",
       "Bash(kill %1)",
-      "Bash(pkill -f \"http.server 8765\")",
-      "Bash(awk -F'/' '{if\\(NF>=4\\) print $4; else print \"ROOT\"}')",
-      "Bash(awk '/<script src=\"\\\\.\\\\.\\\\/\\\\.\\\\.\\\\/script\\\\.js\"><\\\\/script>/{found=1} found{print NR\": \"$0; if \\(/<\\\\/script>$/ && /createIcons/\\) exit}' /Users/sanketvaru/Documents/karman/tools/singapore-tax-calculator/index.html)",
-      "Bash(awk *)",
-      "Bash(sed -i '' '1811,2029d' /Users/sanketvaru/Documents/karman/tools/ep-compass-calculator/index.html)",
-      "Bash(sed -n '1808,1815p' /Users/sanketvaru/Documents/karman/tools/ep-compass-calculator/index.html)",
-      "Bash(sed -i '' '1765,1983d' /Users/sanketvaru/Documents/karman/tools/compliance-health-check/index.html)",
-      "Bash(sed -n '1762,1768p' /Users/sanketvaru/Documents/karman/tools/compliance-health-check/index.html)",
-      "Bash(bash *)",
-      "Bash(mkdir -p /Users/sanketvaru/Documents/karman/blog/singapore-startup-grants-guide)",
-      "Bash(mkdir -p /Users/sanketvaru/Documents/karman/blog/singapore-payroll-guide-employers)",
-      "Bash(mkdir -p /Users/sanketvaru/Documents/karman/blog/singapore-startup-tax-exemption)",
-      "Skill(vercel:deploy)",
-      "Bash(vercel *)",
-      "Bash(sed *)",
-      "WebFetch(domain:www.3ecpa.com.sg)"
+      "Bash(pkill -f \"http.server 8765\")"
     ]
   }
 }
