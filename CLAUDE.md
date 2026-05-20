@@ -249,7 +249,7 @@ Understanding the existing CTAs prevents duplicating or conflicting with them:
 | Contact form | Homepage `#contact` | `/api/contact` | Full form: name, email, phone, service, message |
 | Onboarding form | `/onboarding` | `/api/contact` (source: onboarding) | Multi-step wizard |
 
-**Phone number:** `+65 9138 2994` (used in `tel:` links and schema markup)  
+**Phone number:** `+65 8074 3630` (used in `tel:` links and schema markup — same as WhatsApp Business number)  
 **Admin email:** `team@karman.com.sg`
 
 ---
