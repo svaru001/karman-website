@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Singapore vs Home Country Tax Comparison Calculator | Karman</title>
+  <meta name="description" content="Compare your total corporate and personal tax burden in Singapore vs India, US, UK, UAE, and more. See how much you could save by incorporating in Singapore." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Singapore tax comparison, Singapore vs India tax, Singapore corporate tax calculator, incorporate in Singapore tax savings, Singapore vs US tax, Singapore vs UK tax, Singapore effective tax rate" />
+  <link rel="canonical" href="https://karman.com.sg/tools/singapore-vs-home-tax" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karman.com.sg/tools/singapore-vs-home-tax" />
+  <meta property="og:title" content="Singapore vs Home Country Tax Comparison Calculator | Karman" />
+  <meta property="og:description" content="Compare your total corporate and personal tax burden in Singapore vs India, US, UK, UAE, and more. See how much you could save by incorporating in Singapore." />
+  <meta property="og:image" content="https://karman.com.sg/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Singapore vs Home Country Tax Comparison Calculator | Karman" />
+  <meta name="twitter:description" content="Compare your total corporate and personal tax burden in Singapore vs India, US, UK, UAE, and more. See how much you could save by incorporating in Singapore." />
+  <meta name="twitter:image" content="https://karman.com.sg/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === FORM ELEMENTS === */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .footer__links { grid-template-columns: 1fr; }
+}
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Singapore vs Home Country Tax Comparison Calculator",
+        "url": "https://karman.com.sg/tools/singapore-vs-home-tax",
+        "description": "Compare your total corporate and personal tax burden in Singapore vs India, US, UK, UAE, Australia, Canada, Germany, Hong Kong, Japan and more. See how much you could save by incorporating in Singapore.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SGD" },
+        "provider": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://karman.com.sg/tools/" },
+          { "@type": "ListItem", "position": 3, "name": "Singapore vs Home Country Tax Comparison", "item": "https://karman.com.sg/tools/singapore-vs-home-tax" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="tool-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC &amp; Fund Administration</strong>
+                <p>Singapore fund structures &amp; compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting &amp; Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration &amp; quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="../../tools/" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link">Blogs</a></li>
+        <li class="nav__item"><a href="../../#faq" class="nav__link">FAQs</a></li>
+        <div class="nav__actions">
+          <a href="../../#contact" class="btn btn--secondary">Contact us</a>
+          <a href="../../#get-started" class="btn btn--primary">Get started</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="tool-page-hero">
+    <div class="container">
+      <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../tools/">Free Tools</a><span>›</span>
+        <span>Singapore vs Home Country Tax</span>
+      </nav>
+      <h1>How much tax could you save by incorporating in Singapore?</h1>
+      <p>Enter your business revenue, profit margin, and salary to get a side-by-side breakdown of your total corporate and personal tax burden — Singapore vs your home country.</p>
+      <div class="tool-page-hero__meta">
+        <span>⚡ Instant results</span>
+        <span>🌏 10 countries compared</span>
+        <span>📊 Full tax breakdown</span>
+        <span>🔒 No sign-up required</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-widget-section">
+    <div class="container">
+      <div class="tax-tool-wrap">
+
+        <!-- ── INPUTS ── -->
+        <div class="tax-card" id="taxInputsCard">
+          <div class="tax-card__header">
+            <span class="tax-tag">Tax Comparison Tool</span>
+            <h2 class="tax-card__title">Enter your business details</h2>
+            <p class="tax-card__subtitle">All figures are in SGD equivalent. Results update live as you adjust the inputs.</p>
+          </div>
+
+          <div class="tax-inputs-grid">
+
+            <!-- Home Country -->
+            <div class="tax-input-group">
+              <label for="homeCountry">Your home country</label>
+              <select id="homeCountry">
+                <option value="india">India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="uae">UAE</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="germany">Germany</option>
+                <option value="hongkong">Hong Kong</option>
+                <option value="japan">Japan</option>
+                <option value="other">Other (generic 25%)</option>
+              </select>
+            </div>
+
+            <!-- Annual Revenue -->
+            <div class="tax-input-group">
+              <label for="annualRevenue">Annual business revenue (S$)</label>
+              <input type="number" id="annualRevenue" min="100000" max="10000000" step="50000" value="1000000" placeholder="e.g. 1000000" />
+              <span class="tax-input-hint">Range: S$100K – S$10M</span>
+            </div>
+
+            <!-- Profit Margin -->
+            <div class="tax-input-group tax-input-group--full">
+              <label for="profitMargin">Net profit margin — <span id="marginDisplay" class="tax-slider-value">20%</span></label>
+              <div class="tax-slider-wrap">
+                <span class="tax-slider-label">5%</span>
+                <input type="range" id="profitMargin" min="5" max="50" step="1" value="20" class="tax-slider" />
+                <span class="tax-slider-label">50%</span>
+              </div>
+              <span class="tax-input-hint">Taxable profit = revenue × margin. Adjust to match your business.</span>
+            </div>
+
+            <!-- Founder Salary -->
+            <div class="tax-input-group">
+              <label for="founderSalary">Founder annual salary drawn (S$)</label>
+              <input type="number" id="founderSalary" min="50000" max="500000" step="10000" value="150000" placeholder="e.g. 150000" />
+              <span class="tax-input-hint">Range: S$50K – S$500K</span>
+            </div>
+
+            <!-- New Company -->
+            <div class="tax-input-group">
+              <label>Is this a new company (first 3 years)?</label>
+              <div class="tax-toggle-group">
+                <button class="tax-toggle selected" id="newCoYes" data-val="yes">Yes — apply SUTE</button>
+                <button class="tax-toggle" id="newCoNo" data-val="no">No — apply PTE</button>
+              </div>
+              <span class="tax-input-hint">Affects Singapore's tax exemption scheme applied.</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── RESULTS ── -->
+        <div class="tax-card" id="taxResultsCard">
+          <div class="tax-card__header tax-card__header--results">
+            <span class="tax-tag tax-tag--teal">Live Results</span>
+            <h2 class="tax-card__title">Your tax comparison</h2>
+            <p class="tax-card__subtitle" id="resultSubtitle">Comparing Singapore vs India · All figures in SGD equivalent</p>
+          </div>
+
+          <div class="tax-results-body">
+
+            <!-- Comparison Table -->
+            <div class="tax-table-wrap">
+              <table class="tax-table" id="taxTable">
+                <thead>
+                  <tr>
+                    <th>Tax component</th>
+                    <th class="tax-col-sg">Singapore</th>
+                    <th class="tax-col-home" id="homeColHeader">Home country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="tax-row-label">Corporate tax rate</span>
+                      <span class="tax-row-sub" id="sgRateNote">17% (with exemptions)</span>
+                    </td>
+                    <td class="tax-col-sg" id="sgCorpRate">—</td>
+                    <td class="tax-col-home" id="homeCorpRate">—</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="tax-row-label">Taxable profit</span>
+                      <span class="tax-row-sub" id="taxableProfitNote">Revenue × margin</span>
+                    </td>
+                    <td class="tax-col-sg" id="sgTaxableProfit">—</td>
+                    <td class="tax-col-home" id="homeTaxableProfit">—</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="tax-row-label">Corporate tax payable</span>
+                      <span class="tax-row-sub">After applicable exemptions</span>
+                    </td>
+                    <td class="tax-col-sg" id="sgCorpTax">—</td>
+                    <td class="tax-col-home" id="homeCorpTax">—</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="tax-row-label">Dividend tax on distributed profit</span>
+                      <span class="tax-row-sub" id="sgDividendNote">One-tier exempt in Singapore</span>
+                    </td>
+                    <td class="tax-col-sg" id="sgDividendTax">S$0</td>
+                    <td class="tax-col-home" id="homeDividendTax">—</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="tax-row-label">Personal income tax on salary</span>
+                      <span class="tax-row-sub" id="salaryNote">Based on salary drawn</span>
+                    </td>
+                    <td class="tax-col-sg" id="sgPersonalTax">—</td>
+                    <td class="tax-col-home" id="homePersonalTax">—</td>
+                  </tr>
+                  <tr class="tax-row--total">
+                    <td><strong>Total annual tax burden</strong></td>
+                    <td class="tax-col-sg tax-total-sg" id="sgTotal">—</td>
+                    <td class="tax-col-home tax-total-home" id="homeTotal">—</td>
+                  </tr>
+                  <tr class="tax-row--rate">
+                    <td><strong>Effective total rate</strong></td>
+                    <td class="tax-col-sg" id="sgEffectiveRate">—</td>
+                    <td class="tax-col-home" id="homeEffectiveRate">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Savings callout -->
+            <div class="tax-savings-callout" id="savingsCallout">
+              <div class="tax-savings-icon" id="savingsIcon">💰</div>
+              <div class="tax-savings-content">
+                <p class="tax-savings-label" id="savingsLabel">Potential annual savings with Singapore</p>
+                <p class="tax-savings-amount" id="savingsAmount">—</p>
+                <p class="tax-savings-sub" id="savingsSub">That's money you keep in your business, not taxes.</p>
+              </div>
+            </div>
+
+            <!-- Breakdown notes -->
+            <div class="tax-breakdown-notes" id="breakdownNotes">
+              <h4>How these numbers are calculated</h4>
+              <ul id="breakdownList">
+                <li>Awaiting input...</li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="tax-cta-block">
+              <a href="/onboarding" class="btn btn--primary btn--lg tax-cta-btn">
+                <i data-lucide="arrow-right"></i>
+                Incorporate in Singapore from S$699 — Get started
+              </a>
+              <p class="tax-cta-sub">Speak to a specialist within 1 business day. No commitment required.</p>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="tax-disclaimer">
+              <i data-lucide="info"></i>
+              <p><strong>Disclaimer:</strong> These are simplified estimates for illustration purposes only. Actual tax liability depends on entity type, applicable tax treaties, residency status, deductions, and individual circumstances. All figures are in SGD equivalent — home country amounts are converted at approximate rates. Consult a qualified tax advisor before making incorporation decisions.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="tool-info-section">
+    <div class="container">
+      <span class="section-tag">Singapore tax essentials</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Why Singapore is tax-efficient for founders</h2>
+      <div class="tool-info-grid">
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="percent"></i></div>
+          <h3>17% headline corporate rate</h3>
+          <p>Singapore's flat 17% corporate tax rate is among the lowest in Asia. New companies get significant startup exemptions (SUTE) for their first three years, bringing the effective rate on smaller profits well below 10%.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="ban"></i></div>
+          <h3>Zero tax on dividends</h3>
+          <p>Singapore operates a one-tier tax system — once corporate tax is paid, dividends distributed to shareholders are completely tax-exempt. No withholding tax, no double taxation on profits you take out.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="trending-up"></i></div>
+          <h3>No capital gains tax</h3>
+          <p>Singapore does not levy capital gains tax. Proceeds from selling shares, property (in most cases), or other assets are not taxed — a significant advantage for founders planning an exit or holding investments.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="globe"></i></div>
+          <h3>Extensive treaty network</h3>
+          <p>Singapore has over 90 double tax agreements. This often reduces withholding taxes on cross-border payments and can eliminate double taxation on the same income across jurisdictions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="faq section" style="background:#fff;">
+    <div class="container">
+      <span class="section-tag">Common questions</span>
+      <h2 class="section-heading" style="text-align:center;margin-top:12px;">FAQ: Singapore tax for foreign founders</h2>
+      <div class="faq__grid" style="margin-top:40px;">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I still pay tax in my home country if I incorporate in Singapore?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>It depends on your residency and the nature of the income. If you remain tax-resident in your home country, you may still owe personal income tax there on your salary or dividends. However, Singapore's 90+ double tax treaties often eliminate or reduce this significantly. A key advantage is Singapore's one-tier dividend system — profits distributed to shareholders are not taxed again in Singapore, regardless of where the shareholder lives.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is SUTE and how much does it save?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>SUTE (Start-Up Tax Exemption) applies to qualifying new companies for their first three Years of Assessment. Under SUTE, 75% of the first S$100,000 of chargeable income is exempt, and 50% of the next S$100,000 is exempt. This means the effective corporate tax rate on the first S$200,000 of profit is just 4.25%, versus the headline rate of 17%. From year 4 onwards, the Partial Tax Exemption (PTE) applies, which is less generous but still provides meaningful relief.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can a foreign founder get an Employment Pass (EP) to move to Singapore?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Once you incorporate a Singapore company, you can apply for an Employment Pass as a director of your own company. MOM requires a minimum fixed salary (currently S$5,000/month for most sectors, higher for financial services), and your application is assessed on your qualifications, the viability of the business, and your proposed salary. Karman can assist with both the incorporation and the EP application process.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is there GST in Singapore and does it apply to my business?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Singapore's GST (Goods and Services Tax) rate is 9% (as of 2024). However, registration is only mandatory once your taxable turnover exceeds S$1 million per year. B2B software, consulting, or services exported outside Singapore are generally zero-rated (0% GST) rather than standard-rated. Many early-stage companies can operate for years without needing to register for GST at all.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How accurate is this tax comparison tool?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>This tool uses widely-cited headline tax rates and simplified calculations intended to give you a directional sense of the tax efficiency difference. It does not account for individual deductions, tax treaty benefits, controlled foreign corporation (CFC) rules, transfer pricing, or personal residency nuances. The comparison is most accurate for founders who plan to be operationally based in Singapore. Always consult a qualified tax advisor for a decision of this magnitude.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED TOOLS ── -->
+  <section class="tool-related-section">
+    <div class="container">
+      <span class="section-tag">Continue exploring</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Other free tools</h2>
+      <div class="tool-related-grid">
+        <a href="/tools/singapore-tax-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="calculator"></i></div>
+          <h4>Singapore Tax Calculator</h4>
+          <p>Estimate your Singapore corporate income tax in detail.</p>
+        </a>
+        <a href="/tools/cost-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="coins"></i></div>
+          <h4>Cost Calculator</h4>
+          <p>Estimate your annual corporate services fees in Singapore.</p>
+        </a>
+        <a href="/tools/eligibility-checker" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="check-circle"></i></div>
+          <h4>Eligibility Checker</h4>
+          <p>Check if you qualify to register a Singapore company.</p>
+        </a>
+        <a href="/tools/business-structure-recommender" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="layers"></i></div>
+          <h4>Structure Recommender</h4>
+          <p>Find the right entity type for your business goals.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul><li><a href="../../#incorporation">Company Incorporation</a></li><li><a href="../../#secretary">Corporate Secretarial</a></li><li><a href="../../#accounting">Accounting</a></li></ul></div>
+          <div class="footer-col"><h4>Free Tools</h4><ul><li><a href="/tools/business-structure-recommender">Structure Recommender</a></li><li><a href="/tools/cost-calculator">Cost Calculator</a></li><li><a href="/tools/eligibility-checker">Eligibility Checker</a></li><li><a href="/tools/singapore-tax-calculator">Tax Calculator</a></li><li><a href="/tools/singapore-vs-home-tax">Tax Comparison</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="../../#about">About</a></li><li><a href="../../#contact">Contact</a></li></ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.</p></div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script src="/tools.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <style>
+  /* ── CUSTOM TOOL STYLES ── */
+
+  .tool-widget-section .container {
+    max-width: 860px;
+  }
+
+  .tax-tool-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Card */
+  .tax-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  .tax-card__header {
+    padding: 28px 32px 20px;
+    border-bottom: 1px solid var(--gray-200);
+    background: linear-gradient(160deg, #F8FAFE 0%, #F0F6FF 100%);
+  }
+
+  .tax-card__header--results {
+    background: linear-gradient(160deg, #F0FFF9 0%, #EBFDF6 100%);
+  }
+
+  .tax-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--blue);
+    background: var(--blue-light);
+    border-radius: 100px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+  }
+  .tax-tag--teal {
+    color: #047857;
+    background: rgba(0,201,167,.12);
+  }
+
+  .tax-card__title {
+    font-size: clamp(18px, 2.5vw, 22px);
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .tax-card__subtitle {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Inputs grid */
+  .tax-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+    padding: 28px 32px 32px;
+  }
+
+  .tax-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tax-input-group--full {
+    grid-column: 1 / -1;
+  }
+
+  .tax-input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .tax-input-group input[type="number"],
+  .tax-input-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--navy);
+    background: #fff;
+    outline: none;
+    appearance: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .tax-input-group input[type="number"]:focus,
+  .tax-input-group select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+  }
+  .tax-input-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+
+  .tax-input-hint {
+    font-size: 12px;
+    color: var(--gray-400);
+    line-height: 1.4;
+  }
+
+  /* Slider */
+  .tax-slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tax-slider-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-400);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 28px;
+  }
+
+  .tax-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--teal) 100%);
+    border-radius: 100px;
+    outline: none;
+    cursor: pointer;
+    background-size: calc((var(--val, 20) - 5) / 45 * 100%) 100%;
+    background-repeat: no-repeat;
+    background-color: var(--gray-200);
+  }
+  .tax-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: 3px solid #fff;
+    box-shadow: 0 1px 6px rgba(26,107,204,.4);
+    cursor: pointer;
+    transition: box-shadow .15s;
+  }
+  .tax-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 2px 10px rgba(26,107,204,.55);
+  }
+  .tax-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: 3px solid #fff;
+    box-shadow: 0 1px 6px rgba(26,107,204,.4);
+    cursor: pointer;
+  }
+
+  .tax-slider-value {
+    font-weight: 700;
+    color: var(--blue);
+    font-size: 15px;
+  }
+
+  /* Toggle (Yes/No) */
+  .tax-toggle-group {
+    display: flex;
+    gap: 8px;
+  }
+
+  .tax-toggle {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-600);
+    background: #fff;
+    cursor: pointer;
+    transition: border-color .15s, background .15s, color .15s;
+    text-align: center;
+  }
+  .tax-toggle:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-light);
+  }
+  .tax-toggle.selected {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: #fff;
+  }
+
+  /* Results body */
+  .tax-results-body {
+    padding: 28px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Table */
+  .tax-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+  }
+
+  .tax-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .tax-table thead tr {
+    background: var(--navy);
+  }
+
+  .tax-table thead th {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+    white-space: nowrap;
+  }
+
+  .tax-table thead th:first-child {
+    border-radius: 0;
+  }
+
+  .tax-col-sg {
+    background: rgba(0,201,167,.06);
+    color: #047857;
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .tax-col-home {
+    background: rgba(26,107,204,.04);
+    color: var(--navy);
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  thead .tax-col-sg {
+    background: rgba(0,201,167,.25);
+    color: #fff;
+  }
+
+  thead .tax-col-home {
+    background: rgba(255,255,255,.12);
+    color: rgba(255,255,255,.85);
+  }
+
+  .tax-table tbody tr {
+    border-bottom: 1px solid var(--gray-100);
+    transition: background .12s;
+  }
+
+  .tax-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .tax-table tbody tr:hover {
+    background: var(--gray-50);
+  }
+
+  .tax-table tbody td {
+    padding: 13px 18px;
+    vertical-align: middle;
+  }
+
+  .tax-row-label {
+    display: block;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 14px;
+  }
+
+  .tax-row-sub {
+    display: block;
+    font-size: 12px;
+    color: var(--gray-400);
+    margin-top: 2px;
+    font-weight: 400;
+  }
+
+  /* Total rows */
+  .tax-row--total {
+    background: var(--gray-50) !important;
+    border-top: 2px solid var(--gray-200) !important;
+  }
+
+  .tax-row--total td {
+    padding: 16px 18px !important;
+    font-size: 15px;
+  }
+
+  .tax-total-sg {
+    font-size: 18px !important;
+    color: #047857 !important;
+  }
+
+  .tax-total-home {
+    font-size: 18px !important;
+    color: var(--navy) !important;
+  }
+
+  .tax-row--rate td {
+    font-size: 14px;
+    padding: 12px 18px !important;
+    background: var(--gray-50);
+  }
+
+  /* Savings callout */
+  .tax-savings-callout {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 28px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #0A2540 0%, #163758 100%);
+    color: #fff;
+  }
+
+  .tax-savings-callout--neutral {
+    background: linear-gradient(135deg, #374151 0%, #4B5563 100%);
+  }
+
+  .tax-savings-callout--close {
+    background: linear-gradient(135deg, var(--blue) 0%, #1557aa 100%);
+  }
+
+  .tax-savings-icon {
+    font-size: 36px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .tax-savings-content {
+    flex: 1;
+  }
+
+  .tax-savings-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,.7);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 4px;
+  }
+
+  .tax-savings-amount {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    margin-bottom: 6px;
+  }
+
+  .tax-savings-callout--neutral .tax-savings-amount,
+  .tax-savings-callout--close .tax-savings-amount {
+    color: #fff;
+  }
+
+  .tax-savings-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.5;
+  }
+
+  /* Breakdown notes */
+  .tax-breakdown-notes {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+  }
+
+  .tax-breakdown-notes h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 12px;
+  }
+
+  .tax-breakdown-notes ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+  }
+
+  .tax-breakdown-notes ul li {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.55;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .tax-breakdown-notes ul li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  /* CTA block */
+  .tax-cta-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0 4px;
+  }
+
+  .tax-cta-btn {
+    padding: 18px 36px;
+    font-size: 16px;
+    border-radius: var(--radius);
+  }
+
+  .tax-cta-sub {
+    font-size: 13px;
+    color: var(--gray-400);
+    text-align: center;
+  }
+
+  /* Disclaimer */
+  .tax-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(245,166,35,.08);
+    border: 1px solid rgba(245,166,35,.25);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  .tax-disclaimer i {
+    color: var(--amber);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .tax-disclaimer p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .tax-inputs-grid {
+      grid-template-columns: 1fr;
+      padding: 20px 20px 24px;
+    }
+    .tax-input-group--full {
+      grid-column: 1;
+    }
+    .tax-card__header {
+      padding: 20px 20px 16px;
+    }
+    .tax-results-body {
+      padding: 20px 16px 24px;
+    }
+    .tax-table thead th,
+    .tax-table tbody td {
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    .tax-total-sg,
+    .tax-total-home {
+      font-size: 15px !important;
+    }
+    .tax-savings-callout {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      gap: 12px;
+    }
+    .tax-savings-amount {
+      font-size: 28px;
+    }
+    .tax-cta-btn {
+      width: 100%;
+      font-size: 14px;
+      padding: 16px 20px;
+    }
+    .tax-toggle-group {
+      flex-direction: column;
+    }
+  }
+  </style>
+
+  <script>
+  // ── SINGAPORE VS HOME TAX COMPARISON TOOL ──
+
+  // ── Country tax data ──
+  // All rates are expressed as decimals. Notes are for display.
+  var TAX_DATA = {
+    india: {
+      label: 'India',
+      corpRate: 0.25,         // 25% for turnover < ₹400Cr
+      corpRateNote: '25% (domestic cos, turnover < ₹400Cr)',
+      dividendRate: 0.10,     // DDT/withholding ~10% on dividends distributed
+      dividendNote: '~10% withholding on dividends',
+      personalEffective: function(salary) {
+        // Simplified India personal tax slabs (new regime approx)
+        // 0–3L: 0%, 3–7L: 5%, 7–10L: 10%, 10–12L: 15%, 12–15L: 20%, 15L+: 30%
+        // Convert salary (SGD) to INR approx ×62; but we display in SGD so use raw SGD
+        // We'll apply slabs against SGD-equivalent salary
+        if (salary <= 25000) return 0;          // ~INR 15.5L
+        if (salary <= 80000) return salary * 0.10;
+        if (salary <= 150000) return salary * 0.15;
+        if (salary <= 250000) return salary * 0.22;
+        return salary * 0.30;
+      },
+      personalNote: 'India progressive rate (approx, new regime)',
+      breakdown: [
+        'India corporate tax: 25% flat on taxable profit (companies with turnover below ₹400Cr)',
+        'Dividend withholding: ~10% on distributed profits (post corporate tax)',
+        'Personal income tax: progressive slabs up to 30% under the new regime'
+      ]
+    },
+    us: {
+      label: 'United States',
+      corpRate: 0.26,         // 21% federal + ~5% state average
+      corpRateNote: '~26% (21% federal + ~5% avg state)',
+      dividendRate: 0.175,    // Qualified dividend rate ~15–20%, mid-point 17.5%
+      dividendNote: '~17.5% qualified dividend rate',
+      personalEffective: function(salary) {
+        // US federal + state approx: mid-range effective rates
+        if (salary <= 50000) return salary * 0.12;
+        if (salary <= 120000) return salary * 0.18;
+        if (salary <= 250000) return salary * 0.24;
+        return salary * 0.32;
+      },
+      personalNote: 'US federal + state income tax (approx)',
+      breakdown: [
+        'US corporate tax: 21% federal + approx 5% average state = ~26% effective rate',
+        'Dividend tax: qualified dividends taxed at 15–20% at individual level',
+        'Personal income tax: federal + state, can reach 37%+ federal on high incomes'
+      ]
+    },
+    uk: {
+      label: 'United Kingdom',
+      corpRate: 0.25,         // 25% for profits > £250K (19% for < £50K — we use 25% for simplicity at scale)
+      corpRateNote: '25% (profits above £250K threshold)',
+      dividendRate: 0.0875,   // 8.75% basic rate; higher earners pay 33.75–39.35%
+      dividendNote: '8.75% basic / up to 39.35% for higher earners',
+      personalEffective: function(salary) {
+        if (salary <= 50000) return salary * 0.12;
+        if (salary <= 120000) return salary * 0.20;
+        if (salary <= 200000) return salary * 0.28;
+        return salary * 0.35;
+      },
+      personalNote: 'UK income tax + NI (approx effective)',
+      breakdown: [
+        'UK corporate tax: 25% on profits above £250K; 19% on profits below £50K (main rate used here)',
+        'Dividend tax: 8.75% (basic rate), 33.75% (higher rate), 39.35% (additional rate)',
+        'Personal income tax: 20/40/45% bands plus National Insurance contributions'
+      ]
+    },
+    uae: {
+      label: 'UAE',
+      corpRate: 0.09,         // 9% on profits > AED 375K; 0% below
+      corpRateNote: '9% (profits above AED 375K / ~S$135K)',
+      dividendRate: 0.00,     // No dividend withholding in UAE
+      dividendNote: 'No dividend withholding tax',
+      personalEffective: function(salary) {
+        // UAE has no personal income tax
+        return 0;
+      },
+      personalNote: 'No personal income tax in UAE',
+      breakdown: [
+        'UAE corporate tax: 9% on taxable income above AED 375,000 (~S$135K); 0% below',
+        'Free zone companies may qualify for 0% rate on qualifying income',
+        'No personal income tax in the UAE — salary is fully take-home',
+        'Dividend withholding: none'
+      ]
+    },
+    australia: {
+      label: 'Australia',
+      corpRate: 0.25,         // 25% small business base rate (turnover < AUD 50M); 30% standard
+      corpRateNote: '25% (small business base rate)',
+      dividendRate: 0.15,     // Franking credits offset some; net effective ~15%
+      dividendNote: '~15% net after franking credits',
+      personalEffective: function(salary) {
+        if (salary <= 50000) return salary * 0.19;
+        if (salary <= 120000) return salary * 0.28;
+        if (salary <= 200000) return salary * 0.37;
+        return salary * 0.45;
+      },
+      personalNote: 'Australia income tax + Medicare levy (approx)',
+      breakdown: [
+        'Australia corporate tax: 25% base rate for small businesses (turnover < AUD 50M); 30% otherwise',
+        'Dividend tax: franking credits offset corporate tax paid; net dividend tax ~15% effective',
+        'Personal income tax: progressive 19–45% bands plus 2% Medicare levy'
+      ]
+    },
+    canada: {
+      label: 'Canada',
+      corpRate: 0.265,        // ~26.5% combined federal + provincial
+      corpRateNote: '~26.5% (federal + avg provincial)',
+      dividendRate: 0.15,     // Eligible dividends effective ~15% for individuals
+      dividendNote: '~15% effective on eligible dividends',
+      personalEffective: function(salary) {
+        if (salary <= 50000) return salary * 0.20;
+        if (salary <= 120000) return salary * 0.28;
+        if (salary <= 220000) return salary * 0.35;
+        return salary * 0.40;
+      },
+      personalNote: 'Canada federal + provincial income tax (approx)',
+      breakdown: [
+        'Canada corporate tax: ~15% federal + ~11.5% average provincial = ~26.5% combined',
+        'Small Business Deduction may reduce federal rate to 9% on first CAD 500K active income',
+        'Dividend tax: eligible dividends ~15% effective; non-eligible ~20%+ effective',
+        'Personal income tax: 20.5–33% federal bands plus provincial rates'
+      ]
+    },
+    germany: {
+      label: 'Germany',
+      corpRate: 0.30,         // ~30% (corporate tax ~15% + solidarity 0.825% + trade tax ~14%)
+      corpRateNote: '~30% (CIT + solidarity + Gewerbesteuer)',
+      dividendRate: 0.25,     // 25% withholding (Abgeltungsteuer) + 5.5% solidarity = ~26.4%
+      dividendNote: '25% withholding + solidarity surcharge',
+      personalEffective: function(salary) {
+        if (salary <= 60000) return salary * 0.25;
+        if (salary <= 150000) return salary * 0.35;
+        if (salary <= 260000) return salary * 0.42;
+        return salary * 0.45;
+      },
+      personalNote: 'Germany income tax (approx effective)',
+      breakdown: [
+        'Germany corporate tax: ~15% CIT + 0.825% solidarity surcharge + ~14% trade tax (Gewerbesteuer) = ~30% total',
+        'Dividend withholding: 25% Abgeltungsteuer + 5.5% solidarity = ~26.4%',
+        'Personal income tax: progressive up to 45% for high earners, plus solidarity surcharge'
+      ]
+    },
+    hongkong: {
+      label: 'Hong Kong',
+      corpRate: 0.165,        // 16.5% for profits > HKD 2M; 8.25% for first HKD 2M (two-tier)
+      corpRateNote: '16.5% (>HKD 2M) / 8.25% (first HKD 2M)',
+      dividendRate: 0.00,     // No dividend tax in HK
+      dividendNote: 'No dividend withholding tax',
+      personalEffective: function(salary) {
+        // HK salaries tax: progressive 2–17%, capped at 15% standard rate
+        if (salary <= 50000) return salary * 0.06;
+        if (salary <= 120000) return salary * 0.10;
+        if (salary <= 250000) return salary * 0.14;
+        return salary * 0.15;   // standard rate cap
+      },
+      personalNote: 'HK salaries tax (progressive, capped at 15%)',
+      breakdown: [
+        'Hong Kong corporate tax: two-tier — 8.25% on first HKD 2M profit, 16.5% on remainder',
+        'No dividend withholding tax — distributions to shareholders are tax-free',
+        'Personal income tax (salaries tax): capped at 15% standard rate; progressive rates 2–17%'
+      ]
+    },
+    japan: {
+      label: 'Japan',
+      corpRate: 0.306,        // ~30.6% effective (corporate + local enterprise + inhabitant taxes)
+      corpRateNote: '~30.6% effective (incl. local taxes)',
+      dividendRate: 0.20,     // 20% withholding (15% + 5% local)
+      dividendNote: '20% dividend withholding',
+      personalEffective: function(salary) {
+        if (salary <= 60000) return salary * 0.20;
+        if (salary <= 150000) return salary * 0.30;
+        if (salary <= 300000) return salary * 0.40;
+        return salary * 0.50;
+      },
+      personalNote: 'Japan income tax + resident tax (approx)',
+      breakdown: [
+        'Japan corporate tax: national 23.2% + local enterprise + inhabitant taxes = ~30.6% effective',
+        'Dividend withholding: 20% (15% national + 5% local inhabitant tax)',
+        'Personal income tax: progressive 5–45% national + ~10% resident tax; can exceed 55% at top'
+      ]
+    },
+    other: {
+      label: 'Other',
+      corpRate: 0.25,
+      corpRateNote: '25% (generic rate)',
+      dividendRate: 0.15,
+      dividendNote: '15% dividend withholding (generic)',
+      personalEffective: function(salary) {
+        if (salary <= 80000) return salary * 0.15;
+        if (salary <= 200000) return salary * 0.22;
+        return salary * 0.30;
+      },
+      personalNote: 'Generic personal tax estimate',
+      breakdown: [
+        'Corporate tax: 25% flat rate (generic benchmark)',
+        'Dividend withholding: 15% (generic)',
+        'Personal income tax: approximate progressive rate applied'
+      ]
+    }
+  };
+
+  // ── Singapore tax calculation ──
+  function calcSingaporeTax(taxableProfit, salary, isNew) {
+    var corpTax = 0;
+
+    if (isNew) {
+      // SUTE: 75% exempt on first S$100K, 50% on next S$100K
+      var exempt1 = Math.min(taxableProfit, 100000) * 0.75;
+      var secondBand = Math.max(0, Math.min(taxableProfit - 100000, 100000));
+      var exempt2 = secondBand * 0.50;
+      var taxableAfterExempt = taxableProfit - exempt1 - exempt2;
+      corpTax = taxableAfterExempt * 0.17;
+    } else {
+      // PTE: 75% on first S$10K, 50% on next S$190K
+      var exempt1 = Math.min(taxableProfit, 10000) * 0.75;
+      var secondBand = Math.max(0, Math.min(taxableProfit - 10000, 190000));
+      var exempt2 = secondBand * 0.50;
+      var taxableAfterExempt = taxableProfit - exempt1 - exempt2;
+      corpTax = taxableAfterExempt * 0.17;
+    }
+
+    // Dividend tax: S$0 (one-tier system)
+    var dividendTax = 0;
+
+    // Personal income tax on salary (progressive, simplified)
+    var personalTax = calcSGPersonalTax(salary);
+
+    return {
+      corpTax: Math.max(0, corpTax),
+      dividendTax: 0,
+      personalTax: personalTax,
+      total: Math.max(0, corpTax) + personalTax
+    };
+  }
+
+  function calcSGPersonalTax(salary) {
+    // Simplified effective rate bands for Singapore personal income tax
+    // Based on IRAS tax table: 0–20K 0%, 20–30K 2%, 30–40K 3.5%, 40–80K 7%, 80–120K ~11.5%, 120–160K ~15%, 160–200K ~18%, 200–320K ~19%, 320K+ ~22%
+    if (salary <= 20000) return 0;
+    if (salary <= 30000) return (salary - 20000) * 0.02;
+    if (salary <= 40000) return 200 + (salary - 30000) * 0.035;
+    if (salary <= 80000) return 550 + (salary - 40000) * 0.07;
+    if (salary <= 120000) return 3350 + (salary - 80000) * 0.115;
+    if (salary <= 160000) return 7950 + (salary - 120000) * 0.15;
+    if (salary <= 200000) return 13950 + (salary - 160000) * 0.18;
+    if (salary <= 240000) return 21150 + (salary - 200000) * 0.19;
+    if (salary <= 280000) return 28750 + (salary - 240000) * 0.195;
+    if (salary <= 320000) return 36550 + (salary - 280000) * 0.20;
+    return 44550 + (salary - 320000) * 0.22;
+  }
+
+  function calcHomeTax(country, taxableProfit, salary) {
+    var data = TAX_DATA[country];
+    var corpTax = taxableProfit * data.corpRate;
+    var afterCorpProfit = taxableProfit - corpTax;
+    var dividendTax = afterCorpProfit * data.dividendRate;
+    var personalTax = data.personalEffective(salary);
+    return {
+      corpTax: corpTax,
+      dividendTax: dividendTax,
+      personalTax: personalTax,
+      total: corpTax + dividendTax + personalTax
+    };
+  }
+
+  // ── Helpers ──
+  function fmt(n) {
+    if (isNaN(n) || n === null) return '—';
+    return 'S$' + Math.round(n).toLocaleString('en-SG');
+  }
+
+  function fmtRate(n) {
+    return (n * 100).toFixed(1) + '%';
+  }
+
+  function clamp(val, min, max) {
+    return Math.min(Math.max(val, min), max);
+  }
+
+  // ── Render results ──
+  function renderResults() {
+    var country = document.getElementById('homeCountry').value;
+    var revenue = parseFloat(document.getElementById('annualRevenue').value) || 1000000;
+    var margin = parseFloat(document.getElementById('profitMargin').value) / 100;
+    var salary = parseFloat(document.getElementById('founderSalary').value) || 150000;
+    var isNew = document.getElementById('newCoYes').classList.contains('selected');
+
+    revenue = clamp(revenue, 100000, 10000000);
+    margin = clamp(margin, 0.05, 0.50);
+    salary = clamp(salary, 50000, 500000);
+
+    var taxableProfit = revenue * margin;
+    var data = TAX_DATA[country];
+
+    var sg = calcSingaporeTax(taxableProfit, salary, isNew);
+    var home = calcHomeTax(country, taxableProfit, salary);
+
+    // Effective rates (as % of revenue)
+    var sgEffRate = (sg.total / revenue);
+    var homeEffRate = (home.total / revenue);
+
+    // Singapore corp rate note
+    var sgExemptScheme = isNew ? 'SUTE (startup exemption, 75%/50%)' : 'PTE (partial exemption, 75%/50%)';
+    var sgEffCorpRate = taxableProfit > 0 ? sg.corpTax / taxableProfit : 0;
+
+    // Update header
+    document.getElementById('resultSubtitle').textContent =
+      'Comparing Singapore vs ' + data.label + ' · All figures in SGD equivalent';
+    document.getElementById('homeColHeader').textContent = data.label;
+
+    // Corp rates
+    document.getElementById('sgCorpRate').textContent = '17% (effective ' + fmtRate(sgEffCorpRate) + ' after ' + (isNew ? 'SUTE' : 'PTE') + ')';
+    document.getElementById('homeCorpRate').textContent = data.corpRateNote;
+    document.getElementById('sgRateNote').textContent = isNew ? 'SUTE applies (years 1–3)' : 'PTE applies (year 4+)';
+
+    // Taxable profit
+    document.getElementById('taxableProfitNote').textContent = 'Revenue ' + fmt(revenue) + ' × ' + (margin * 100).toFixed(0) + '% margin';
+    document.getElementById('sgTaxableProfit').textContent = fmt(taxableProfit);
+    document.getElementById('homeTaxableProfit').textContent = fmt(taxableProfit);
+
+    // Corp tax
+    document.getElementById('sgCorpTax').textContent = fmt(sg.corpTax);
+    document.getElementById('homeCorpTax').textContent = fmt(home.corpTax);
+
+    // Dividend tax
+    document.getElementById('sgDividendNote').textContent = 'One-tier system — tax-free in Singapore';
+    document.getElementById('sgDividendTax').textContent = 'S$0';
+    document.getElementById('homeDividendTax').textContent = home.dividendTax > 0 ? fmt(home.dividendTax) + ' (' + data.dividendNote + ')' : 'S$0 (' + data.dividendNote + ')';
+
+    // Personal tax
+    document.getElementById('salaryNote').textContent = 'Salary: ' + fmt(salary);
+    document.getElementById('sgPersonalTax').textContent = fmt(sg.personalTax);
+    document.getElementById('homePersonalTax').textContent = fmt(home.personalTax);
+
+    // Totals
+    document.getElementById('sgTotal').textContent = fmt(sg.total);
+    document.getElementById('homeTotal').textContent = fmt(home.total);
+
+    // Effective rates
+    document.getElementById('sgEffectiveRate').textContent = fmtRate(sgEffRate) + ' of revenue';
+    document.getElementById('homeEffectiveRate').textContent = fmtRate(homeEffRate) + ' of revenue';
+
+    // Savings callout
+    var savings = home.total - sg.total;
+    var savingsCallout = document.getElementById('savingsCallout');
+    savingsCallout.className = 'tax-savings-callout';
+
+    if (savings > revenue * 0.03) {
+      // Meaningful saving in Singapore
+      savingsCallout.classList.add('tax-savings-callout--save');
+      document.getElementById('savingsIcon').textContent = '💰';
+      document.getElementById('savingsLabel').textContent = 'Potential annual savings incorporating in Singapore';
+      document.getElementById('savingsAmount').textContent = fmt(savings) + ' / year';
+      document.getElementById('savingsSub').textContent =
+        'That\'s ' + fmtRate(savings / revenue) + ' of your revenue staying in your business, not going to taxes.';
+    } else if (savings < -(revenue * 0.03)) {
+      // Home country is cheaper (UAE case typically)
+      savingsCallout.classList.add('tax-savings-callout--neutral');
+      document.getElementById('savingsIcon').textContent = '⚖️';
+      document.getElementById('savingsLabel').textContent = data.label + ' has a lower tax burden in this scenario';
+      document.getElementById('savingsAmount').textContent = fmt(Math.abs(savings)) + ' lower in ' + data.label;
+      document.getElementById('savingsSub').textContent =
+        'Singapore offers other advantages: political stability, treaty network, dividend exemption, and no capital gains tax.';
+    } else {
+      // Close (within 3%)
+      savingsCallout.classList.add('tax-savings-callout--close');
+      document.getElementById('savingsIcon').textContent = '⚖️';
+      document.getElementById('savingsLabel').textContent = 'Singapore and ' + data.label + ' have similar tax rates';
+      document.getElementById('savingsAmount').textContent = 'Difference: ' + fmt(Math.abs(savings));
+      document.getElementById('savingsSub').textContent =
+        'Beyond taxes, Singapore offers zero dividend tax, no capital gains tax, and a world-class treaty network.';
+    }
+
+    // Breakdown notes
+    var breakdownList = document.getElementById('breakdownList');
+    var notes = [].concat(data.breakdown);
+    notes.unshift('Singapore: 17% corporate tax; ' + sgExemptScheme + ' applied on taxable profit of ' + fmt(taxableProfit));
+    notes.push('Personal income tax calculated on founder salary of ' + fmt(salary) + ' (' + (isNew ? 'SUTE' : 'PTE') + ' scheme selected for Singapore)');
+    notes.push('Dividend tax in Singapore: S$0 — dividends are tax-exempt under the one-tier system');
+    notes.push('Figures are in SGD equivalent. Home country amounts are illustrative and not currency-converted at live rates.');
+
+    breakdownList.innerHTML = notes.map(function(n) { return '<li>' + n + '</li>'; }).join('');
+
+    // Update slider fill visual
+    var slider = document.getElementById('profitMargin');
+    var pct = ((margin * 100 - 5) / 45) * 100;
+    slider.style.backgroundSize = pct + '% 100%';
+  }
+
+  // ── Event listeners ──
+  document.getElementById('homeCountry').addEventListener('change', renderResults);
+  document.getElementById('annualRevenue').addEventListener('input', renderResults);
+  document.getElementById('founderSalary').addEventListener('input', renderResults);
+
+  document.getElementById('profitMargin').addEventListener('input', function() {
+    document.getElementById('marginDisplay').textContent = this.value + '%';
+    renderResults();
+  });
+
+  document.getElementById('newCoYes').addEventListener('click', function() {
+    document.getElementById('newCoYes').classList.add('selected');
+    document.getElementById('newCoNo').classList.remove('selected');
+    renderResults();
+  });
+
+  document.getElementById('newCoNo').addEventListener('click', function() {
+    document.getElementById('newCoNo').classList.add('selected');
+    document.getElementById('newCoYes').classList.remove('selected');
+    renderResults();
+  });
+
+  // Initial render
+  renderResults();
+  </script>
+
+</body>
+</html>

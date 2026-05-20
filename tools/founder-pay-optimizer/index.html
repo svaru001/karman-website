@@ -1,0 +1,2726 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Founder Pay Optimizer — Salary vs Dividend Calculator Singapore | Karman</title>
+  <meta name="description" content="Find the optimal salary vs dividend split to minimize your total Singapore tax burden as a company founder. Calculates corporate tax, personal income tax, and CPF together." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="founder salary dividend Singapore, salary vs dividend calculator Singapore, Singapore tax optimization founder, CPF salary planning, corporate tax Singapore 2025, SUTE exemption calculator, founder pay Singapore" />
+  <link rel="canonical" href="https://karman.com.sg/tools/founder-pay-optimizer" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karman.com.sg/tools/founder-pay-optimizer" />
+  <meta property="og:title" content="Founder Pay Optimizer — Salary vs Dividend Calculator Singapore | Karman" />
+  <meta property="og:description" content="Find the optimal salary vs dividend split to minimize your total Singapore tax burden as a company founder. Calculates corporate tax, personal income tax, and CPF together." />
+  <meta property="og:image" content="https://karman.com.sg/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Founder Pay Optimizer — Salary vs Dividend Calculator Singapore | Karman" />
+  <meta name="twitter:description" content="Find the optimal salary vs dividend split to minimize your total Singapore tax burden as a company founder. Calculates corporate tax, personal income tax, and CPF together." />
+  <meta name="twitter:image" content="https://karman.com.sg/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__scroll-indicator span {
+  display: block;
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__content .section-heading {
+  text-align: left;
+}
+.why__content .section-subtext {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-tab:hover:not(.active) { color: var(--blue); }
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.plan-features li.text-muted { color: var(--gray-400); }
+.plan-features li.text-muted::before { color: var(--gray-200); }
+
+.pricing__note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-top: 32px;
+}
+.pricing__note a { color: var(--blue); font-weight: 500; }
+.pricing__note a:hover { text-decoration: underline; }
+
+/* === TESTIMONIALS === */
+.testimonials { background: #fff; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.testimonial-card--accent p { color: rgba(255,255,255,.9); }
+
+.testimonial-card__stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-card__author strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+}
+.testimonial-card--accent .testimonial-card__author strong { color: #fff; }
+.testimonial-card__author span {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+.testimonial-card--accent .testimonial-card__author span { color: rgba(255,255,255,.6); }
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
+.contact-detail a { color: var(--blue); }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Form */
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray-400); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-optional { font-size: 11px; color: var(--gray-400); font-weight: 400; }
+.form-disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--featured { grid-column: span 1; }
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .why__content .section-heading,
+  .why__content .section-subtext { text-align: center; }
+  .why__points { max-width: 500px; margin: 0 auto; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__stats {
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .stat strong { font-size: 22px; }
+  .stat-divider { margin: 0 16px; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .testimonials__grid { grid-template-columns: 1fr; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero__heading { font-size: 38px; }
+  .hero__stats { flex-direction: column; gap: 20px; }
+  .stat-divider { width: 100%; height: 1px; margin: 0; }
+  .pricing__tabs { flex-direction: column; max-width: 100%; }
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Founder Pay Optimizer — Salary vs Dividend Calculator Singapore",
+        "url": "https://karman.com.sg/tools/founder-pay-optimizer",
+        "description": "Find the optimal salary vs dividend split to minimize your total Singapore tax burden as a company founder. Calculates corporate tax, personal income tax, and CPF together.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SGD" },
+        "provider": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://karman.com.sg/tools/" },
+          { "@type": "ListItem", "position": 3, "name": "Founder Pay Optimizer", "item": "https://karman.com.sg/tools/founder-pay-optimizer" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="tool-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC & Fund Administration</strong>
+                <p>Singapore fund structures & compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting & Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration & quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="../../tools/" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link">Blogs</a></li>
+        <li class="nav__item"><a href="../../#faq" class="nav__link">FAQs</a></li>
+      <div class="nav__actions">
+        <a href="../../#contact" class="btn btn--secondary">Contact us</a>
+        <a href="../../#get-started" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="tool-page-hero">
+    <div class="container">
+      <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../tools/">Free Tools</a><span>›</span>
+        <span>Founder Pay Optimizer</span>
+      </nav>
+      <h1>Find your optimal salary vs dividend split</h1>
+      <p>Minimize your total tax burden as a Singapore company founder. This calculator works out the combined impact of corporate tax, personal income tax, and CPF for any salary/dividend combination — then suggests the optimal split.</p>
+      <div class="tool-page-hero__meta">
+        <span>⚡ Live calculations</span>
+        <span>📊 YA 2025 tax rates</span>
+        <span>🔒 No sign-up required</span>
+        <span>🎯 Finds optimal split</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-widget-section">
+    <div class="container">
+      <div class="fpo-wrap">
+
+        <!-- ── INPUTS CARD ── -->
+        <div class="fpo-card" id="fpoInputsCard">
+          <div class="fpo-card__header">
+            <span class="fpo-tag">Inputs</span>
+            <h2 class="fpo-card__title">Your company &amp; founder details</h2>
+            <p class="fpo-card__subtitle">Adjust the sliders or type directly. Results update in real time.</p>
+          </div>
+
+          <div class="fpo-inputs">
+
+            <!-- Company profit -->
+            <div class="fpo-field">
+              <div class="fpo-field__label-row">
+                <label for="inputProfit">Company annual taxable profit <em>(before founder salary)</em></label>
+                <span class="fpo-field__value" id="profitDisplay">S$500,000</span>
+              </div>
+              <input type="range" id="inputProfit" class="fpo-slider" min="50000" max="2000000" step="10000" value="500000" />
+              <div class="fpo-slider-bounds"><span>S$50K</span><span>S$2M</span></div>
+            </div>
+
+            <!-- Founder salary -->
+            <div class="fpo-field">
+              <div class="fpo-field__label-row">
+                <label for="inputSalary">Your annual salary from this company</label>
+                <span class="fpo-field__value" id="salaryDisplay">S$120,000</span>
+              </div>
+              <input type="range" id="inputSalary" class="fpo-slider" min="0" max="500000" step="5000" value="120000" />
+              <div class="fpo-slider-bounds"><span>S$0</span><span>S$500K</span></div>
+            </div>
+
+            <!-- Other income + toggles row -->
+            <div class="fpo-two-col">
+              <div class="fpo-field">
+                <label for="inputOtherIncome">Other personal income (annual)</label>
+                <div class="fpo-input-prefix-wrap">
+                  <span class="fpo-input-prefix">S$</span>
+                  <input type="number" id="inputOtherIncome" class="fpo-text-input" min="0" max="5000000" step="1000" value="0" placeholder="0" />
+                </div>
+                <p class="fpo-field__hint">e.g. salary from another job, freelance, rental</p>
+              </div>
+
+              <div class="fpo-toggles">
+                <div class="fpo-toggle-field">
+                  <div class="fpo-toggle-label">
+                    <span>Singapore tax resident?</span>
+                    <span class="fpo-toggle-hint">Residents pay progressive rates</span>
+                  </div>
+                  <div class="fpo-toggle-group" role="group" aria-label="Tax residency">
+                    <button class="fpo-toggle-btn fpo-toggle-btn--active" id="btnResidentYes" onclick="setResident(true)">Yes</button>
+                    <button class="fpo-toggle-btn" id="btnResidentNo" onclick="setResident(false)">No</button>
+                  </div>
+                </div>
+
+                <div class="fpo-toggle-field">
+                  <div class="fpo-toggle-label">
+                    <span>Company's first 3 years? <em>(SUTE eligible)</em></span>
+                    <span class="fpo-toggle-hint">75% exempt on first S$100K chargeable income</span>
+                  </div>
+                  <div class="fpo-toggle-group" role="group" aria-label="SUTE eligibility">
+                    <button class="fpo-toggle-btn fpo-toggle-btn--active" id="btnSuteYes" onclick="setSute(true)">Yes</button>
+                    <button class="fpo-toggle-btn" id="btnSuteNo" onclick="setSute(false)">No</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="fpo-calc-btn" onclick="calculate()">
+              <i data-lucide="calculator"></i>
+              Calculate optimal split
+            </button>
+          </div>
+        </div>
+
+        <!-- ── RESULTS CARD ── -->
+        <div class="fpo-card fpo-card--results" id="fpoResultsCard">
+          <div class="fpo-card__header fpo-card__header--results">
+            <span class="fpo-tag fpo-tag--green">Results</span>
+            <h2 class="fpo-card__title">Your tax breakdown</h2>
+            <p class="fpo-card__subtitle" id="fpoResultSummary">Adjust the inputs above to see your optimised breakdown.</p>
+          </div>
+
+          <div class="fpo-results-body">
+
+            <!-- Key metrics row -->
+            <div class="fpo-metrics">
+              <div class="fpo-metric">
+                <span class="fpo-metric__label">Total tax paid</span>
+                <strong class="fpo-metric__value" id="metricTotalTax">—</strong>
+                <span class="fpo-metric__sub" id="metricEffRate">effective rate</span>
+              </div>
+              <div class="fpo-metric fpo-metric--highlight">
+                <span class="fpo-metric__label">Net take-home</span>
+                <strong class="fpo-metric__value fpo-metric__value--green" id="metricTakeHome">—</strong>
+                <span class="fpo-metric__sub">salary + dividends after tax</span>
+              </div>
+              <div class="fpo-metric">
+                <span class="fpo-metric__label">CPF (retirement savings)</span>
+                <strong class="fpo-metric__value fpo-metric__value--blue" id="metricCpf">—</strong>
+                <span class="fpo-metric__sub">employee CPF contribution</span>
+              </div>
+            </div>
+
+            <!-- Breakdown table -->
+            <div class="fpo-breakdown">
+              <h3 class="fpo-breakdown__title">Full breakdown — your chosen split</h3>
+              <div class="fpo-breakdown-grid">
+                <div class="fpo-breakdown-row fpo-breakdown-row--header">
+                  <span>Item</span>
+                  <span>Amount</span>
+                </div>
+                <div class="fpo-breakdown-row">
+                  <span>Annual salary</span>
+                  <strong id="brkSalary">—</strong>
+                </div>
+                <div class="fpo-breakdown-row">
+                  <span>Employer CPF (company cost)</span>
+                  <strong id="brkEmployerCpf">—</strong>
+                </div>
+                <div class="fpo-breakdown-row">
+                  <span>Company chargeable income</span>
+                  <strong id="brkChargeableIncome">—</strong>
+                </div>
+                <div class="fpo-breakdown-row fpo-breakdown-row--tax">
+                  <span>Corporate tax</span>
+                  <strong id="brkCorpTax">—</strong>
+                </div>
+                <div class="fpo-breakdown-row">
+                  <span>Dividends available (tax-free to you)</span>
+                  <strong id="brkDividends">—</strong>
+                </div>
+                <div class="fpo-breakdown-row fpo-breakdown-row--tax">
+                  <span>Personal income tax</span>
+                  <strong id="brkPersonalTax">—</strong>
+                </div>
+                <div class="fpo-breakdown-row fpo-breakdown-row--tax">
+                  <span>Employee CPF (from salary)</span>
+                  <strong id="brkEmployeeCpf">—</strong>
+                </div>
+                <div class="fpo-breakdown-row fpo-breakdown-row--total">
+                  <span>Total tax burden (corporate + personal)</span>
+                  <strong id="brkTotalTax">—</strong>
+                </div>
+                <div class="fpo-breakdown-row fpo-breakdown-row--takehome">
+                  <span>Net take-home (salary net of CPF + dividends)</span>
+                  <strong id="brkTakeHome">—</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optimal split suggestion -->
+            <div class="fpo-optimal" id="fpoOptimal" style="display:none">
+              <div class="fpo-optimal__icon">
+                <i data-lucide="lightbulb"></i>
+              </div>
+              <div class="fpo-optimal__content">
+                <strong class="fpo-optimal__title" id="optimalTitle">Optimal split found</strong>
+                <p class="fpo-optimal__desc" id="optimalDesc"></p>
+              </div>
+            </div>
+
+            <!-- Horizontal stacked bar chart -->
+            <div class="fpo-chart-wrap">
+              <h3 class="fpo-breakdown__title">How your income is allocated</h3>
+              <div class="fpo-chart" id="fpoChart">
+                <div class="fpo-chart__bar-wrap">
+                  <span class="fpo-chart__label">Corporate tax</span>
+                  <div class="fpo-chart__track">
+                    <div class="fpo-chart__seg fpo-chart__seg--corp" id="segCorpTax" style="width:0%"></div>
+                  </div>
+                  <span class="fpo-chart__pct" id="pctCorpTax">0%</span>
+                </div>
+                <div class="fpo-chart__bar-wrap">
+                  <span class="fpo-chart__label">Personal tax + CPF</span>
+                  <div class="fpo-chart__track">
+                    <div class="fpo-chart__seg fpo-chart__seg--personal" id="segPersonalTax" style="width:0%"></div>
+                  </div>
+                  <span class="fpo-chart__pct" id="pctPersonalTax">0%</span>
+                </div>
+                <div class="fpo-chart__bar-wrap">
+                  <span class="fpo-chart__label">Employee CPF (yours)</span>
+                  <div class="fpo-chart__track">
+                    <div class="fpo-chart__seg fpo-chart__seg--cpf" id="segCpf" style="width:0%"></div>
+                  </div>
+                  <span class="fpo-chart__pct" id="pctCpf">0%</span>
+                </div>
+                <div class="fpo-chart__bar-wrap">
+                  <span class="fpo-chart__label">Net take-home</span>
+                  <div class="fpo-chart__track">
+                    <div class="fpo-chart__seg fpo-chart__seg--takehome" id="segTakeHome" style="width:0%"></div>
+                  </div>
+                  <span class="fpo-chart__pct" id="pctTakeHome">0%</span>
+                </div>
+                <div class="fpo-chart__legend">
+                  <span class="fpo-chart__legend-item fpo-chart__legend-item--corp">Corporate tax</span>
+                  <span class="fpo-chart__legend-item fpo-chart__legend-item--personal">Personal tax</span>
+                  <span class="fpo-chart__legend-item fpo-chart__legend-item--cpf">CPF (retirement)</span>
+                  <span class="fpo-chart__legend-item fpo-chart__legend-item--takehome">Take-home</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="fpo-cta-wrap">
+              <p>Want a personalised tax structure review? Our accountants can model your exact scenario.</p>
+              <a href="/services/accounting" class="fpo-cta-btn">Talk to a tax expert →</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /fpo-wrap -->
+    </div>
+  </section>
+
+  <!-- ── INFO SECTION ── -->
+  <section class="tool-info-section">
+    <div class="container">
+      <span class="section-tag">Singapore tax essentials for founders</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">How salary vs dividend taxation works</h2>
+      <div class="tool-info-grid">
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="building-2"></i></div>
+          <h3>Corporate tax: 17% flat</h3>
+          <p>Singapore companies pay a flat 17% corporate tax on chargeable income. New companies (first 3 years, SUTE) get 75% exempt on the first S$100K and 50% on the next S$100K. All companies get PTE: 75% exempt on first S$10K and 50% on next S$190K.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="trending-up"></i></div>
+          <h3>Personal income tax: progressive</h3>
+          <p>Singapore residents pay 0% on the first S$20,000, scaling to 22% above S$320,000 (YA 2025). Non-residents pay a flat 15% or resident rates — whichever is higher. Dividends from Singapore companies are fully tax-exempt in the hands of the recipient.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="shield"></i></div>
+          <h3>CPF: salary only, capped</h3>
+          <p>CPF applies only to salary — not to dividends. Employee CPF is 20% and employer CPF is 17%, both capped at the ordinary wage ceiling (S$7,400/month = S$88,800/year). Employer CPF is a company cost that reduces chargeable income. Employee CPF goes to your retirement account.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="sliders"></i></div>
+          <h3>The optimal balance</h3>
+          <p>Higher salary increases CPF contributions (which reduce company tax slightly) but attracts personal income tax. Dividends are tax-free personally but first taxed at the company level at 17%. The sweet spot depends on your total income and tax residency status.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED TOOLS ── -->
+  <section class="tool-related-section">
+    <div class="container">
+      <span class="section-tag">Continue exploring</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Other free tools</h2>
+      <div class="tool-related-grid">
+        <a href="/tools/singapore-tax-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="percent"></i></div>
+          <h4>Corporate Tax Calculator</h4>
+          <p>Estimate your Singapore corporate income tax.</p>
+        </a>
+        <a href="/tools/ep-compass-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="compass"></i></div>
+          <h4>EP Compass Calculator</h4>
+          <p>Check if you meet Employment Pass salary criteria.</p>
+        </a>
+        <a href="/tools/cost-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="calculator"></i></div>
+          <h4>Cost Calculator</h4>
+          <p>Estimate your annual corporate services fees.</p>
+        </a>
+        <a href="/tools/business-structure-recommender" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="git-branch"></i></div>
+          <h4>Structure Recommender</h4>
+          <p>Find the right business structure for your situation.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul><li><a href="../../#incorporation">Company Incorporation</a></li><li><a href="../../#secretary">Corporate Secretarial</a></li><li><a href="../../#accounting">Accounting</a></li></ul></div>
+          <div class="footer-col"><h4>Free Tools</h4><ul><li><a href="/tools/founder-pay-optimizer">Founder Pay Optimizer</a></li><li><a href="/tools/singapore-tax-calculator">Tax Calculator</a></li><li><a href="/tools/cost-calculator">Cost Calculator</a></li><li><a href="/tools/eligibility-checker">Eligibility Checker</a></li><li><a href="/tools/gst-registration-checker">GST Checker</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="../../#about">About</a></li><li><a href="../../#contact">Contact</a></li></ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.</p></div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script src="../../tools.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+  <style>
+  /* ── FOUNDER PAY OPTIMIZER CUSTOM STYLES ── */
+
+  .fpo-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* ── Card ── */
+  .fpo-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  .fpo-card__header {
+    padding: 28px 32px 20px;
+    border-bottom: 1px solid var(--gray-200);
+    background: linear-gradient(160deg, #F8FAFE 0%, #F0F6FF 100%);
+  }
+
+  .fpo-card__header--results {
+    background: linear-gradient(160deg, #F0FFF9 0%, #E8F8F4 100%);
+  }
+
+  .fpo-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--blue);
+    background: var(--blue-light);
+    border-radius: 100px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+  }
+
+  .fpo-tag--green {
+    color: #047857;
+    background: rgba(0,201,167,.12);
+  }
+
+  .fpo-card__title {
+    font-size: clamp(18px, 2.5vw, 22px);
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .fpo-card__subtitle {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── Inputs ── */
+  .fpo-inputs {
+    padding: 28px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .fpo-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .fpo-field__label-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .fpo-field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .fpo-field label em {
+    font-weight: 400;
+    font-style: normal;
+    color: var(--gray-600);
+    font-size: 13px;
+  }
+
+  .fpo-field__value {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--blue);
+    white-space: nowrap;
+  }
+
+  .fpo-field__hint {
+    font-size: 12px;
+    color: var(--gray-400);
+    margin-top: 2px;
+  }
+
+  /* Slider */
+  .fpo-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 100px;
+    background: var(--gray-200);
+    outline: none;
+    cursor: pointer;
+    transition: background .2s;
+  }
+
+  .fpo-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(26,107,204,.35);
+    transition: transform .15s, box-shadow .15s;
+    border: 3px solid #fff;
+  }
+
+  .fpo-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(26,107,204,.35);
+    border: 3px solid #fff;
+  }
+
+  .fpo-slider:hover::-webkit-slider-thumb,
+  .fpo-slider:focus::-webkit-slider-thumb {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(26,107,204,.45);
+  }
+
+  .fpo-slider-bounds {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--gray-400);
+    font-weight: 500;
+  }
+
+  /* Text input with prefix */
+  .fpo-input-prefix-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .fpo-input-prefix {
+    position: absolute;
+    left: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-600);
+    pointer-events: none;
+  }
+
+  .fpo-text-input {
+    width: 100%;
+    padding: 10px 12px 10px 32px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--navy);
+    background: #fff;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+    -moz-appearance: textfield;
+  }
+
+  .fpo-text-input::-webkit-outer-spin-button,
+  .fpo-text-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+  .fpo-text-input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+  }
+
+  /* Two-column input row */
+  .fpo-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* Toggle group */
+  .fpo-toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .fpo-toggle-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .fpo-toggle-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fpo-toggle-label span:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .fpo-toggle-label span:first-child em {
+    font-weight: 400;
+    font-style: normal;
+    color: var(--gray-600);
+    font-size: 13px;
+  }
+
+  .fpo-toggle-hint {
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+
+  .fpo-toggle-group {
+    display: inline-flex;
+    background: var(--gray-100);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .fpo-toggle-btn {
+    padding: 7px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-600);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+  }
+
+  .fpo-toggle-btn--active {
+    background: #fff;
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .fpo-toggle-btn:hover:not(.fpo-toggle-btn--active) {
+    color: var(--blue);
+  }
+
+  /* Calculate button */
+  .fpo-calc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .15s, box-shadow .2s;
+    align-self: flex-start;
+  }
+
+  .fpo-calc-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255,92,53,.3);
+  }
+
+  .fpo-calc-btn i, .fpo-calc-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ── Results ── */
+  .fpo-results-body {
+    padding: 28px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Metrics row */
+  .fpo-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .fpo-metric {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .fpo-metric--highlight {
+    background: linear-gradient(135deg, #F0FFF9 0%, #E8F8F4 100%);
+    border-color: rgba(0,201,167,.3);
+  }
+
+  .fpo-metric__label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  .fpo-metric__value {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+
+  .fpo-metric__value--green { color: #047857; }
+  .fpo-metric__value--blue { color: var(--blue); }
+
+  .fpo-metric__sub {
+    font-size: 12px;
+    color: var(--gray-400);
+    line-height: 1.4;
+  }
+
+  /* Breakdown table */
+  .fpo-breakdown {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .fpo-breakdown__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--gray-200);
+    background: #fff;
+    letter-spacing: 0;
+  }
+
+  .fpo-breakdown-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fpo-breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--gray-100);
+    gap: 16px;
+  }
+
+  .fpo-breakdown-row:last-child { border-bottom: none; }
+
+  .fpo-breakdown-row span { color: var(--gray-600); }
+  .fpo-breakdown-row strong { font-weight: 600; color: var(--navy); white-space: nowrap; }
+
+  .fpo-breakdown-row--header {
+    background: var(--gray-100);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--gray-600);
+    padding: 8px 20px;
+  }
+  .fpo-breakdown-row--header span { color: var(--gray-600); font-weight: 700; }
+
+  .fpo-breakdown-row--tax strong { color: #dc2626; }
+
+  .fpo-breakdown-row--total {
+    background: rgba(239,68,68,.05);
+    border-top: 2px solid rgba(239,68,68,.15);
+    font-weight: 700;
+  }
+  .fpo-breakdown-row--total span { color: var(--navy); font-weight: 700; }
+  .fpo-breakdown-row--total strong { color: #dc2626; font-size: 16px; }
+
+  .fpo-breakdown-row--takehome {
+    background: linear-gradient(135deg, rgba(0,201,167,.06) 0%, rgba(0,201,167,.04) 100%);
+    border-top: 2px solid rgba(0,201,167,.2);
+    font-weight: 700;
+  }
+  .fpo-breakdown-row--takehome span { color: var(--navy); font-weight: 700; }
+  .fpo-breakdown-row--takehome strong { color: #047857; font-size: 16px; }
+
+  /* Optimal suggestion */
+  .fpo-optimal {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E6 100%);
+    border: 1.5px solid rgba(245,166,35,.4);
+    border-radius: var(--radius-lg);
+  }
+
+  .fpo-optimal__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(245,166,35,.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #d97706;
+  }
+
+  .fpo-optimal__icon svg { width: 20px; height: 20px; }
+
+  .fpo-optimal__title {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .fpo-optimal__desc {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Bar chart */
+  .fpo-chart-wrap {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .fpo-chart-wrap .fpo-breakdown__title {
+    background: #fff;
+  }
+
+  .fpo-chart {
+    padding: 20px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .fpo-chart__bar-wrap {
+    display: grid;
+    grid-template-columns: 150px 1fr 48px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .fpo-chart__label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-600);
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .fpo-chart__track {
+    height: 20px;
+    background: var(--gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .fpo-chart__seg {
+    height: 100%;
+    border-radius: 4px;
+    transition: width .5s cubic-bezier(.4,0,.2,1);
+  }
+
+  .fpo-chart__seg--corp     { background: linear-gradient(90deg, #dc2626, #ef4444); }
+  .fpo-chart__seg--personal { background: linear-gradient(90deg, #f97316, #fb923c); }
+  .fpo-chart__seg--cpf      { background: linear-gradient(90deg, var(--blue), #60a5fa); }
+  .fpo-chart__seg--takehome { background: linear-gradient(90deg, #059669, var(--teal)); }
+
+  .fpo-chart__pct {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: right;
+  }
+
+  .fpo-chart__legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .fpo-chart__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--gray-600);
+    font-weight: 500;
+  }
+
+  .fpo-chart__legend-item::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .fpo-chart__legend-item--corp::before     { background: #ef4444; }
+  .fpo-chart__legend-item--personal::before { background: #fb923c; }
+  .fpo-chart__legend-item--cpf::before      { background: var(--blue); }
+  .fpo-chart__legend-item--takehome::before { background: #059669; }
+
+  /* CTA strip */
+  .fpo-cta-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+  }
+
+  .fpo-cta-wrap p {
+    font-size: 14px;
+    color: rgba(255,255,255,.85);
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .fpo-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    background: #fff;
+    border-radius: var(--radius-sm);
+    padding: 11px 22px;
+    transition: background .2s, transform .15s;
+    white-space: nowrap;
+  }
+
+  .fpo-cta-btn:hover {
+    background: var(--gray-100);
+    transform: translateY(-1px);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 700px) {
+    .fpo-card__header { padding: 20px 20px 16px; }
+    .fpo-inputs { padding: 20px 20px 24px; gap: 22px; }
+    .fpo-results-body { padding: 20px 20px 24px; gap: 20px; }
+    .fpo-two-col { grid-template-columns: 1fr; gap: 22px; }
+    .fpo-metrics { grid-template-columns: 1fr; }
+    .fpo-chart__bar-wrap { grid-template-columns: 110px 1fr 40px; gap: 8px; }
+    .fpo-chart__label { font-size: 12px; }
+    .fpo-breakdown-row { font-size: 13px; padding: 9px 14px; }
+    .fpo-cta-wrap { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 480px) {
+    .fpo-chart__bar-wrap { grid-template-columns: 80px 1fr 36px; }
+    .fpo-chart__label { font-size: 11px; }
+  }
+  </style>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ═══════════════════════════════════════════════
+       STATE
+    ═══════════════════════════════════════════════ */
+    var isResident = true;
+    var isSute     = true;
+
+    /* ═══════════════════════════════════════════════
+       HELPERS
+    ═══════════════════════════════════════════════ */
+    function fmt(n) {
+      if (n === null || n === undefined || isNaN(n)) return '—';
+      return 'S$' + Math.round(n).toLocaleString('en-SG');
+    }
+
+    function pct(n, total) {
+      if (!total) return '0%';
+      return Math.round((n / total) * 100) + '%';
+    }
+
+    function clamp(val, min, max) {
+      return Math.max(min, Math.min(max, val));
+    }
+
+    /* ═══════════════════════════════════════════════
+       TOGGLE HANDLERS
+    ═══════════════════════════════════════════════ */
+    window.setResident = function(val) {
+      isResident = val;
+      document.getElementById('btnResidentYes').classList.toggle('fpo-toggle-btn--active', val);
+      document.getElementById('btnResidentNo').classList.toggle('fpo-toggle-btn--active', !val);
+      calculate();
+    };
+
+    window.setSute = function(val) {
+      isSute = val;
+      document.getElementById('btnSuteYes').classList.toggle('fpo-toggle-btn--active', val);
+      document.getElementById('btnSuteNo').classList.toggle('fpo-toggle-btn--active', !val);
+      calculate();
+    };
+
+    /* ═══════════════════════════════════════════════
+       SLIDER / INPUT DISPLAY
+    ═══════════════════════════════════════════════ */
+    var profitSlider = document.getElementById('inputProfit');
+    var salarySlider = document.getElementById('inputSalary');
+    var otherInput   = document.getElementById('inputOtherIncome');
+
+    profitSlider.addEventListener('input', function() {
+      document.getElementById('profitDisplay').textContent = fmt(+this.value);
+      calculate();
+    });
+
+    salarySlider.addEventListener('input', function() {
+      document.getElementById('salaryDisplay').textContent = fmt(+this.value);
+      calculate();
+    });
+
+    otherInput.addEventListener('input', function() {
+      calculate();
+    });
+
+    /* ═══════════════════════════════════════════════
+       SINGAPORE PERSONAL INCOME TAX (YA 2025, residents)
+       Returns tax on total chargeable income.
+    ═══════════════════════════════════════════════ */
+    var TAX_BRACKETS = [
+      { limit: 20000,  rate: 0.00 },
+      { limit: 10000,  rate: 0.02 },
+      { limit: 10000,  rate: 0.035 },
+      { limit: 40000,  rate: 0.07 },
+      { limit: 40000,  rate: 0.115 },
+      { limit: 40000,  rate: 0.15 },
+      { limit: 40000,  rate: 0.18 },
+      { limit: 40000,  rate: 0.19 },
+      { limit: 40000,  rate: 0.195 },
+      { limit: 40000,  rate: 0.20 },
+      // Above S$320,000: 22%
+    ];
+
+    function calcPersonalTax(income) {
+      if (income <= 0) return 0;
+      if (!isResident) {
+        // Non-resident: flat 15% OR resident rates, whichever is higher
+        var residentTax = calcResidentTax(income);
+        var flatTax = income * 0.15;
+        return Math.max(residentTax, flatTax);
+      }
+      return calcResidentTax(income);
+    }
+
+    function calcResidentTax(income) {
+      if (income <= 0) return 0;
+      var tax = 0;
+      var remaining = income;
+      for (var i = 0; i < TAX_BRACKETS.length; i++) {
+        var bracket = TAX_BRACKETS[i];
+        var taxable = Math.min(remaining, bracket.limit);
+        tax += taxable * bracket.rate;
+        remaining -= taxable;
+        if (remaining <= 0) break;
+      }
+      // Remainder above S$320,000 at 22%
+      if (remaining > 0) {
+        tax += remaining * 0.22;
+      }
+      return tax;
+    }
+
+    /* ═══════════════════════════════════════════════
+       CPF CALCULATIONS
+       Ordinary wage ceiling: S$7,400/month = S$88,800/year
+       Employee CPF: 20% of capped salary
+       Employer CPF: 17% of capped salary
+    ═══════════════════════════════════════════════ */
+    var CPF_OW_CEILING_ANNUAL = 88800; // S$7,400 × 12
+    var CPF_EMPLOYEE_RATE = 0.20;
+    var CPF_EMPLOYER_RATE = 0.17;
+
+    function calcCpf(salary) {
+      var cappedSalary = Math.min(salary, CPF_OW_CEILING_ANNUAL);
+      var employeeCpf  = cappedSalary * CPF_EMPLOYEE_RATE;
+      var employerCpf  = cappedSalary * CPF_EMPLOYER_RATE;
+      return { employeeCpf: employeeCpf, employerCpf: employerCpf };
+    }
+
+    /* ═══════════════════════════════════════════════
+       SINGAPORE CORPORATE TAX
+       Flat 17%. Exemptions applied to chargeable income.
+       SUTE (first 3 years):
+         75% exempt on first S$100K → effective tax: 25% × 17% = 4.25% on first 100K
+         50% exempt on next S$100K  → effective tax: 50% × 17% = 8.5%  on next 100K
+         Full 17% on remainder
+       PTE (ongoing):
+         75% exempt on first S$10K  → effective tax: 4.25% on first 10K
+         50% exempt on next S$190K  → effective tax: 8.5%  on next 190K
+         Full 17% on remainder
+    ═══════════════════════════════════════════════ */
+    var CORP_TAX_RATE = 0.17;
+
+    function calcCorpTax(chargeableIncome) {
+      if (chargeableIncome <= 0) return 0;
+
+      var tax = 0;
+      var remaining = chargeableIncome;
+
+      if (isSute) {
+        // SUTE: 75% exempt on first S$100K
+        var tier1 = Math.min(remaining, 100000);
+        tax += tier1 * (1 - 0.75) * CORP_TAX_RATE;
+        remaining -= tier1;
+
+        if (remaining > 0) {
+          // SUTE: 50% exempt on next S$100K
+          var tier2 = Math.min(remaining, 100000);
+          tax += tier2 * (1 - 0.50) * CORP_TAX_RATE;
+          remaining -= tier2;
+        }
+      } else {
+        // PTE: 75% exempt on first S$10K
+        var pte1 = Math.min(remaining, 10000);
+        tax += pte1 * (1 - 0.75) * CORP_TAX_RATE;
+        remaining -= pte1;
+
+        if (remaining > 0) {
+          // PTE: 50% exempt on next S$190K
+          var pte2 = Math.min(remaining, 190000);
+          tax += pte2 * (1 - 0.50) * CORP_TAX_RATE;
+          remaining -= pte2;
+        }
+      }
+
+      // Full rate on remainder
+      if (remaining > 0) {
+        tax += remaining * CORP_TAX_RATE;
+      }
+
+      return tax;
+    }
+
+    /* ═══════════════════════════════════════════════
+       CORE CALCULATION
+       Given: companyProfit (before salary), salary, otherIncome
+       Returns all tax figures.
+    ═══════════════════════════════════════════════ */
+    function computeTaxes(companyProfit, salary, otherIncome) {
+      // CPF (only if resident — non-residents working in SG still pay CPF,
+      // but for simplicity we calculate it regardless of residency flag since
+      // CPF applies to all employees in Singapore)
+      var cpf = calcCpf(salary);
+      var employerCpf = cpf.employerCpf;
+      var employeeCpf = cpf.employeeCpf;
+
+      // Company chargeable income = profit - salary - employer CPF
+      // Employer CPF is a deductible business expense
+      var chargeableIncome = companyProfit - salary - employerCpf;
+      chargeableIncome = Math.max(0, chargeableIncome);
+
+      // Corporate tax
+      var corpTax = calcCorpTax(chargeableIncome);
+
+      // Dividends available = company's after-tax profit
+      // = chargeable income - corporate tax
+      var dividends = chargeableIncome - corpTax;
+      dividends = Math.max(0, dividends);
+
+      // Personal income tax on: salary + other income
+      // (Dividends from Singapore companies are exempt — one-tier system)
+      var totalPersonalIncome = salary + otherIncome;
+      var personalTax = calcPersonalTax(totalPersonalIncome);
+
+      // Personal tax attributable to other income alone
+      var taxOnOtherOnly = calcPersonalTax(otherIncome);
+      // Marginal personal tax on salary (total - tax on other income alone)
+      var personalTaxOnSalary = personalTax - taxOnOtherOnly;
+
+      // Total tax burden (from a combined perspective):
+      // corporate tax + personal income tax (full, including other income)
+      // Employer CPF is also a real cost to the company so include for total burden
+      var totalTax = corpTax + personalTax + employerCpf;
+
+      // Net take-home: salary received minus employee CPF + dividends received
+      // Dividends are tax-free in recipient's hands
+      var salaryTakeHome = salary - employeeCpf;
+      var netTakeHome = salaryTakeHome + dividends;
+
+      // Total economic value = companyProfit + otherIncome
+      var totalEconomicValue = companyProfit + otherIncome;
+
+      // Effective tax rate = total tax / (company profit + other income)
+      var effectiveRate = totalEconomicValue > 0 ? (totalTax / totalEconomicValue) : 0;
+
+      return {
+        salary:           salary,
+        employerCpf:      employerCpf,
+        employeeCpf:      employeeCpf,
+        chargeableIncome: chargeableIncome,
+        corpTax:          corpTax,
+        dividends:        dividends,
+        personalTax:      personalTax,
+        totalTax:         totalTax,
+        netTakeHome:      netTakeHome,
+        effectiveRate:    effectiveRate,
+        totalEconomicValue: totalEconomicValue,
+      };
+    }
+
+    /* ═══════════════════════════════════════════════
+       FIND OPTIMAL SALARY
+       Iterate in S$10K steps from 0 to min(profit, 500K)
+       to find salary that minimises total tax.
+    ═══════════════════════════════════════════════ */
+    function findOptimalSalary(companyProfit, otherIncome) {
+      var maxSalary = Math.min(companyProfit, 500000);
+      var bestSalary = 0;
+      var bestTax = Infinity;
+
+      for (var s = 0; s <= maxSalary; s += 10000) {
+        var result = computeTaxes(companyProfit, s, otherIncome);
+        if (result.totalTax < bestTax) {
+          bestTax = result.totalTax;
+          bestSalary = s;
+        }
+      }
+
+      return { optimalSalary: bestSalary, optimalTax: bestTax };
+    }
+
+    /* ═══════════════════════════════════════════════
+       UPDATE UI
+    ═══════════════════════════════════════════════ */
+    function updateUI(r, companyProfit, salary) {
+      // Key metrics
+      document.getElementById('metricTotalTax').textContent  = fmt(r.corpTax + r.personalTax);
+      document.getElementById('metricEffRate').textContent   = Math.round(r.effectiveRate * 100) + '% effective rate (incl. employer CPF)';
+      document.getElementById('metricTakeHome').textContent  = fmt(r.netTakeHome);
+      document.getElementById('metricCpf').textContent       = fmt(r.employeeCpf);
+
+      // Summary text
+      var divPct = r.totalEconomicValue > 0 ? Math.round((r.dividends / r.totalEconomicValue) * 100) : 0;
+      document.getElementById('fpoResultSummary').textContent =
+        'Paying yourself ' + fmt(salary) + ' salary and ' + fmt(r.dividends) + ' in dividends. Total tax: ' + fmt(r.corpTax + r.personalTax) + ' (' + Math.round(r.effectiveRate * 100) + '% effective rate).';
+
+      // Breakdown table
+      document.getElementById('brkSalary').textContent         = fmt(salary);
+      document.getElementById('brkEmployerCpf').textContent    = fmt(r.employerCpf);
+      document.getElementById('brkChargeableIncome').textContent = fmt(r.chargeableIncome);
+      document.getElementById('brkCorpTax').textContent        = fmt(r.corpTax);
+      document.getElementById('brkDividends').textContent      = fmt(r.dividends);
+      document.getElementById('brkPersonalTax').textContent    = fmt(r.personalTax);
+      document.getElementById('brkEmployeeCpf').textContent    = fmt(r.employeeCpf);
+      document.getElementById('brkTotalTax').textContent       = fmt(r.corpTax + r.personalTax);
+      document.getElementById('brkTakeHome').textContent       = fmt(r.netTakeHome);
+
+      // Bar chart — base is total economic value
+      var base = r.totalEconomicValue || 1;
+      var corpPct     = clamp(Math.round((r.corpTax / base) * 100), 0, 100);
+      var personalPct = clamp(Math.round((r.personalTax / base) * 100), 0, 100);
+      var cpfPct      = clamp(Math.round((r.employeeCpf / base) * 100), 0, 100);
+      var takePct     = clamp(Math.round((r.netTakeHome / base) * 100), 0, 100);
+
+      document.getElementById('segCorpTax').style.width    = corpPct + '%';
+      document.getElementById('segPersonalTax').style.width = personalPct + '%';
+      document.getElementById('segCpf').style.width        = cpfPct + '%';
+      document.getElementById('segTakeHome').style.width   = takePct + '%';
+
+      document.getElementById('pctCorpTax').textContent    = corpPct + '%';
+      document.getElementById('pctPersonalTax').textContent = personalPct + '%';
+      document.getElementById('pctCpf').textContent        = cpfPct + '%';
+      document.getElementById('pctTakeHome').textContent   = takePct + '%';
+
+      // Re-render lucide icons (for calc button icon inside results)
+      if (window.lucide) { lucide.createIcons(); }
+    }
+
+    function updateOptimal(companyProfit, chosenSalary, otherIncome) {
+      var opt = findOptimalSalary(companyProfit, otherIncome);
+      var optEl = document.getElementById('fpoOptimal');
+
+      if (Math.abs(opt.optimalSalary - chosenSalary) < 5000) {
+        // Already at (or very close to) optimal
+        optEl.style.display = 'flex';
+        document.getElementById('optimalTitle').textContent = 'You are near the optimal split';
+        var optResult = computeTaxes(companyProfit, opt.optimalSalary, otherIncome);
+        document.getElementById('optimalDesc').textContent =
+          'Your chosen salary of ' + fmt(chosenSalary) + ' is already at or near the tax-minimising split. ' +
+          'Optimal salary: ' + fmt(opt.optimalSalary) + ', minimising combined tax to ' + fmt(opt.optimalTax) + '.';
+      } else {
+        optEl.style.display = 'flex';
+        var optResult = computeTaxes(companyProfit, opt.optimalSalary, otherIncome);
+        var saving = computeTaxes(companyProfit, chosenSalary, otherIncome).totalTax - opt.optimalTax;
+        document.getElementById('optimalTitle').textContent = 'Suggested optimal salary: ' + fmt(opt.optimalSalary);
+        document.getElementById('optimalDesc').textContent =
+          'Paying yourself ' + fmt(opt.optimalSalary) + ' in salary and the rest as dividends minimises your combined tax to ' +
+          fmt(opt.optimalTax) + '. That is a potential saving of ' + fmt(Math.abs(saving)) +
+          ' compared to your current split. Dividends at that salary: ' + fmt(optResult.dividends) + '.';
+      }
+    }
+
+    /* ═══════════════════════════════════════════════
+       MAIN CALCULATE FUNCTION
+    ═══════════════════════════════════════════════ */
+    window.calculate = function() {
+      var companyProfit = parseInt(profitSlider.value, 10) || 0;
+      var salary        = parseInt(salarySlider.value, 10) || 0;
+      var otherIncome   = parseInt(otherInput.value, 10) || 0;
+
+      // Cap salary at company profit (can't pay more than you make)
+      if (salary > companyProfit) {
+        salary = companyProfit;
+        salarySlider.value = salary;
+        document.getElementById('salaryDisplay').textContent = fmt(salary);
+      }
+
+      var r = computeTaxes(companyProfit, salary, otherIncome);
+      updateUI(r, companyProfit, salary);
+      updateOptimal(companyProfit, salary, otherIncome);
+    };
+
+    /* ═══════════════════════════════════════════════
+       INIT — run calculation on page load
+    ═══════════════════════════════════════════════ */
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('profitDisplay').textContent = fmt(+profitSlider.value);
+      document.getElementById('salaryDisplay').textContent = fmt(+salarySlider.value);
+      calculate();
+    });
+
+    // Also run immediately in case DOMContentLoaded already fired
+    if (document.readyState !== 'loading') {
+      document.getElementById('profitDisplay').textContent = fmt(+profitSlider.value);
+      document.getElementById('salaryDisplay').textContent = fmt(+salarySlider.value);
+      calculate();
+    }
+
+  })();
+  </script>
+
+</body>
+</html>

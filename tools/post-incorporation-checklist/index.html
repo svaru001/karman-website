@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>90-Day Post-Incorporation Checklist for Singapore Companies | Karman</title>
+  <meta name="description" content="Interactive checklist covering everything to do in the first 90 days after incorporating in Singapore — banking, compliance, tax, grants, and growth setup." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="post-incorporation checklist Singapore, Singapore company setup checklist, after incorporation Singapore, 90 day checklist Singapore, new company Singapore steps, ACRA post-incorporation, Singapore company compliance checklist" />
+  <link rel="canonical" href="https://karman.com.sg/tools/post-incorporation-checklist" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karman.com.sg/tools/post-incorporation-checklist" />
+  <meta property="og:title" content="90-Day Post-Incorporation Checklist for Singapore Companies | Karman" />
+  <meta property="og:description" content="Interactive checklist covering everything to do in the first 90 days after incorporating in Singapore — banking, compliance, tax, grants, and growth setup." />
+  <meta property="og:image" content="https://karman.com.sg/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="90-Day Post-Incorporation Checklist for Singapore Companies | Karman" />
+  <meta name="twitter:description" content="Interactive checklist covering everything to do in the first 90 days after incorporating in Singapore — banking, compliance, tax, grants, and growth setup." />
+  <meta name="twitter:image" content="https://karman.com.sg/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+/* === PRINT === */
+@media print {
+  .header,
+  .tool-page-hero,
+  .cl-actions,
+  .cl-sidebar,
+  .tool-info-section,
+  .tool-related-section,
+  .footer { display: none !important; }
+
+  body { background: #fff; padding: 0; }
+
+  .tool-widget-section { padding: 0; }
+  .tool-widget-section .container { max-width: 100%; padding: 0; }
+
+  .cl-layout { grid-template-columns: 1fr; }
+
+  .cl-card {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .cl-phase { break-inside: avoid; margin-bottom: 24px; }
+
+  .cl-item {
+    break-inside: avoid;
+    border-color: #ccc !important;
+  }
+
+  .cl-checkbox-box {
+    border: 2px solid #aaa !important;
+    background: #fff !important;
+  }
+  .cl-item.is-done .cl-checkbox-box {
+    background: #0A2540 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cl-progress-bar-fill {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "90-Day Post-Incorporation Checklist for Singapore Companies",
+        "url": "https://karman.com.sg/tools/post-incorporation-checklist",
+        "description": "Interactive checklist covering everything a founder needs to do in the first 90 days after incorporating in Singapore — banking, compliance, tax, grants, and growth setup.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SGD" },
+        "provider": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://karman.com.sg/tools/" },
+          { "@type": "ListItem", "position": 3, "name": "Post-Incorporation Checklist", "item": "https://karman.com.sg/tools/post-incorporation-checklist" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="tool-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC &amp; Fund Administration</strong>
+                <p>Singapore fund structures &amp; compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting &amp; Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration &amp; quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="../../tools/" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link">Blogs</a></li>
+        <li class="nav__item"><a href="../../#faq" class="nav__link">FAQs</a></li>
+      <div class="nav__actions">
+        <a href="../../#contact" class="btn btn--secondary">Contact us</a>
+        <a href="../../#get-started" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="tool-page-hero">
+    <div class="container">
+      <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../tools/">Free Tools</a><span>›</span>
+        <span>Post-Incorporation Checklist</span>
+      </nav>
+      <h1>90-Day Post-Incorporation Checklist</h1>
+      <p>Everything you need to do in the first 90 days after incorporating your Singapore company — from opening a bank account to filing your first tax returns. Check off each task as you go.</p>
+      <div class="tool-page-hero__meta">
+        <span>✅ 30 tasks across 4 phases</span>
+        <span>💾 Progress saved automatically</span>
+        <span>🖨️ Print-ready</span>
+        <span>🔒 No sign-up required</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-widget-section" style="padding: 48px 0;">
+    <div class="container" style="max-width: 960px;">
+
+      <div class="cl-layout">
+
+        <!-- ── MAIN CHECKLIST COLUMN ── -->
+        <div class="cl-main">
+
+          <!-- Overall progress card -->
+          <div class="cl-card cl-progress-card">
+            <div class="cl-progress-header">
+              <div>
+                <span class="cl-overall-label">Overall progress</span>
+                <span class="cl-overall-count" id="clOverallCount">0 of 30 tasks done</span>
+              </div>
+              <div class="cl-action-btns">
+                <button class="cl-btn-print" id="clPrint" title="Print checklist">
+                  <i data-lucide="printer"></i> Print
+                </button>
+                <button class="cl-btn-reset" id="clReset" title="Reset all checkboxes">
+                  <i data-lucide="rotate-ccw"></i> Reset
+                </button>
+              </div>
+            </div>
+            <div class="cl-progress-bar-track" role="progressbar" aria-label="Overall completion" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="clProgressBar">
+              <div class="cl-progress-bar-fill" id="clProgressFill" style="width:0%"></div>
+            </div>
+            <div class="cl-progress-pct" id="clProgressPct">0% complete</div>
+          </div>
+
+          <!-- ── PHASE 1: WEEK 1 ── -->
+          <div class="cl-phase" id="phase-0">
+            <div class="cl-phase-header">
+              <div class="cl-phase-icon cl-phase-icon--blue">
+                <i data-lucide="landmark"></i>
+              </div>
+              <div class="cl-phase-meta">
+                <span class="cl-phase-tag">Phase 1</span>
+                <h2 class="cl-phase-title">Week 1 — Banking &amp; Basics</h2>
+              </div>
+              <span class="cl-phase-count" id="phase-count-0">0 / 5</span>
+            </div>
+
+            <ul class="cl-items" role="list">
+              <li class="cl-item" data-id="0">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Open a corporate bank account (DBS, OCBC, UOB, Aspire, or Airwallex)</span>
+                  <span class="cl-item-note">Most banks require your Certificate of Incorporation, NRIC/passport, and company resolution. Online neobanks like Aspire and Airwallex can open in days.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="1">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Obtain your Certificate of Incorporation from ACRA</span>
+                  <span class="cl-item-note">Download from BizFile+ portal. This document is required by banks, landlords, and government agencies.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="2">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Order a company rubber stamp (optional but common)</span>
+                  <span class="cl-item-note">Useful for official documents and contracts. Many vendors and banks in Singapore still expect a company chop.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="3">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Set up your registered office address if not already done</span>
+                  <span class="cl-item-note">Every Singapore company must have a local registered office address — this is where ACRA and IRAS will send official correspondence.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="4">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Share the UEN number with vendors and clients</span>
+                  <span class="cl-item-note">Your Unique Entity Number (UEN) is on all ACRA documents. Use it on invoices, contracts, and business cards from day one.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ── PHASE 2: MONTH 1 ── -->
+          <div class="cl-phase" id="phase-1">
+            <div class="cl-phase-header">
+              <div class="cl-phase-icon cl-phase-icon--teal">
+                <i data-lucide="clipboard-list"></i>
+              </div>
+              <div class="cl-phase-meta">
+                <span class="cl-phase-tag">Phase 2</span>
+                <h2 class="cl-phase-title">Month 1 — Compliance Setup</h2>
+              </div>
+              <span class="cl-phase-count" id="phase-count-1">0 / 9</span>
+            </div>
+
+            <ul class="cl-items" role="list">
+              <li class="cl-item" data-id="5">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Appoint a corporate secretary (mandatory, within 6 months)</span>
+                  <span class="cl-item-note">ACRA requires every company to appoint a qualified company secretary within 6 months of incorporation. This person maintains statutory registers and files annual returns.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="6">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Issue share certificates to all shareholders</span>
+                  <span class="cl-item-note">Singapore Pte Ltd companies must issue share certificates. Your corporate secretary can prepare these using the standard format.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="7">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Hold the first board meeting (adopt constitution, appoint directors, etc.)</span>
+                  <span class="cl-item-note">Minutes must be kept. Agenda typically covers: ratifying incorporation, adopting the company constitution, appointing the first directors, authorising bank account opening, and issuing shares.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="8">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Set up your financial year-end (FYE) — common choices: 31 Dec or 31 Mar</span>
+                  <span class="cl-item-note">Your FYE determines when you file your annual financial statements and tax returns. The first financial year can be up to 18 months long.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="9">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Open accounting software (Xero, QuickBooks, or Zoho Books)</span>
+                  <span class="cl-item-note">Start tracking every transaction from day one — it saves significant cleanup work later. Xero is the most widely used in Singapore for its IRAS integration.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="10">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Register for PayNow Corporate</span>
+                  <span class="cl-item-note">Link your corporate bank account to PayNow using your UEN. Makes it easy for Singapore clients to pay you instantly.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="11">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Apply for relevant business licences (if required for your industry)</span>
+                  <span class="cl-item-note">Certain industries require licences before you can operate: food &amp; beverage (SFA), financial services (MAS), education (MOE), employment agency (MOM), etc.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="12">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Set up payroll (if hiring employees)</span>
+                  <span class="cl-item-note">Use payroll software (Talenox, Payboy, or Xero Payroll) to handle salary calculations, CPF contributions, and IR8A filing at year-end.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="13">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Register for CPF (if hiring Singapore citizens or PRs)</span>
+                  <span class="cl-item-note">If you hire Singapore citizens or permanent residents, you must register as a CPF employer and make mandatory CPF contributions every month.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ── PHASE 3: MONTH 2 ── -->
+          <div class="cl-phase" id="phase-2">
+            <div class="cl-phase-header">
+              <div class="cl-phase-icon cl-phase-icon--amber">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <div class="cl-phase-meta">
+                <span class="cl-phase-tag">Phase 3</span>
+                <h2 class="cl-phase-title">Month 2 — Tax &amp; Grants</h2>
+              </div>
+              <span class="cl-phase-count" id="phase-count-2">0 / 6</span>
+            </div>
+
+            <ul class="cl-items" role="list">
+              <li class="cl-item" data-id="14">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Check GST registration obligation (mandatory if projected revenue &gt; S$1M/year)</span>
+                  <span class="cl-item-note">If your projected taxable turnover exceeds S$1M in any 12-month period, you must register for GST within 30 days. Use our GST Checker tool to confirm.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="15">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Apply for SUTE (Start-Up Tax Exemption) — auto-applied if criteria met, but verify</span>
+                  <span class="cl-item-note">SUTE gives qualifying new companies a 75% tax exemption on the first S$100K of chargeable income and 50% on the next S$100K, for the first 3 years. It is automatically applied if criteria are met — verify with IRAS or your accountant.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="16">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Explore government grants: Enterprise Development Grant (EDG), Startup SG Founder, MRA</span>
+                  <span class="cl-item-note">EDG co-funds business upgrades (up to 50%); Startup SG Founder offers S$50K for first-time founders; MRA supports overseas market expansion. Apply via Business Grants Portal (BGP).</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="17">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Apply for EntrePass or Employment Pass if required for founders/key hires</span>
+                  <span class="cl-item-note">Foreign founders who need to work in Singapore require an Employment Pass (EP) or EntrePass. EP applications take 3–8 weeks — apply early to avoid disruption.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="18">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Set up an expense tracking system</span>
+                  <span class="cl-item-note">Keep receipts for all business expenses — these reduce your taxable income. Automate with tools like Dext (formerly Receipt Bank) or Expensify, linked to your accounting software.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="19">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Confirm your SSIC code is correct with ACRA</span>
+                  <span class="cl-item-note">Your Singapore Standard Industrial Classification (SSIC) code affects grant eligibility, government incentive access, and insurance premiums. Update via BizFile+ if it does not accurately reflect your business activity.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ── PHASE 4: MONTH 3 ── -->
+          <div class="cl-phase" id="phase-3">
+            <div class="cl-phase-header">
+              <div class="cl-phase-icon cl-phase-icon--navy">
+                <i data-lucide="trending-up"></i>
+              </div>
+              <div class="cl-phase-meta">
+                <span class="cl-phase-tag">Phase 4</span>
+                <h2 class="cl-phase-title">Month 3 — Growth Infrastructure</h2>
+              </div>
+              <span class="cl-phase-count" id="phase-count-3">0 / 10</span>
+            </div>
+
+            <ul class="cl-items" role="list">
+              <li class="cl-item" data-id="20">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">File first estimated chargeable income (ECI) if required (within 3 months of FYE)</span>
+                  <span class="cl-item-note">Most companies with revenue under S$5M and chargeable income under S$500K are exempt from ECI filing. Verify with your accountant — late filing attracts penalties.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="21">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Review IP ownership — assign any IP to the company</span>
+                  <span class="cl-item-note">If founders developed IP (code, designs, trademarks) before incorporation, formally assign it to the company via an IP Assignment Agreement. This protects investors and avoids disputes later.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="22">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Put in place shareholder / founders' agreements</span>
+                  <span class="cl-item-note">A Shareholders' Agreement governs voting rights, share transfers, founder vesting, and dispute resolution. Essential for multi-founder companies and any company expecting to raise investment.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="23">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Set up a business email domain (not Gmail)</span>
+                  <span class="cl-item-note">A professional email (you@yourcompany.com) builds credibility with clients, banks, and government agencies. Use Google Workspace, Microsoft 365, or Zoho Mail.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="24">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Get business insurance (professional indemnity, public liability)</span>
+                  <span class="cl-item-note">Professional indemnity insurance protects against claims arising from professional advice or services. Public liability covers third-party injury or property damage. Check if your industry mandates specific cover.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="25">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Review transfer pricing if transacting with related overseas entities</span>
+                  <span class="cl-item-note">If you have related-party transactions with overseas entities (e.g. a parent company or subsidiary), Singapore's transfer pricing rules require those transactions to be at arm's length. Document the pricing methodology.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="26">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Schedule annual compliance calendar reminders</span>
+                  <span class="cl-item-note">Key annual deadlines: Annual General Meeting (AGM) within 6 months of FYE, Annual Return filing with ACRA within 7 months of FYE, corporate income tax return (Form C-S) by 30 November each year.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="27">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Register under PDPA if collecting personal data</span>
+                  <span class="cl-item-note">If you collect, use, or disclose personal data of individuals in Singapore, you must comply with the Personal Data Protection Act (PDPA). Appoint a Data Protection Officer and publish a privacy policy.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="28">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Open a separate director's fees or salary structure</span>
+                  <span class="cl-item-note">Determine how founders will extract money from the company — salary (subject to CPF if Singapore citizen/PR), director's fees, dividends, or a combination. Each has different tax implications.</span>
+                </div>
+              </li>
+              <li class="cl-item" data-id="29">
+                <button class="cl-checkbox" aria-label="Mark as done" role="checkbox" aria-checked="false">
+                  <span class="cl-checkbox-box"><i data-lucide="check"></i></span>
+                </button>
+                <div class="cl-item-body">
+                  <span class="cl-item-text">Apply for CorpPass for your corporate digital services</span>
+                  <span class="cl-item-note">CorpPass is the corporate digital identity system used to transact with Singapore government agencies online — including ACRA's BizFile+, IRAS myTax Portal, and MOM for work pass applications.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div><!-- /cl-main -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="cl-sidebar">
+          <div class="cl-sidebar-cta">
+            <div class="cl-sidebar-cta__icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3>Need help staying compliant?</h3>
+            <p>We handle the corporate secretary, accounting, and tax filings — you focus on growth. Trusted by 200+ Singapore companies.</p>
+            <a href="/onboarding" class="btn btn--primary btn--full">Get started from S$699</a>
+            <a href="/#contact" class="cl-sidebar-cta__link">Talk to us first →</a>
+          </div>
+
+          <div class="cl-sidebar-links">
+            <h4>Related tools</h4>
+            <ul>
+              <li>
+                <a href="/tools/document-checklist" class="cl-sidebar-tool-link">
+                  <span class="cl-sidebar-tool-icon"><i data-lucide="file-text"></i></span>
+                  <span>Document Checklist</span>
+                </a>
+              </li>
+              <li>
+                <a href="/tools/gst-registration-checker" class="cl-sidebar-tool-link">
+                  <span class="cl-sidebar-tool-icon"><i data-lucide="percent"></i></span>
+                  <span>GST Registration Checker</span>
+                </a>
+              </li>
+              <li>
+                <a href="/tools/cost-calculator" class="cl-sidebar-tool-link">
+                  <span class="cl-sidebar-tool-icon"><i data-lucide="calculator"></i></span>
+                  <span>Cost Calculator</span>
+                </a>
+              </li>
+              <li>
+                <a href="/tools/ssic-code-search" class="cl-sidebar-tool-link">
+                  <span class="cl-sidebar-tool-icon"><i data-lucide="search"></i></span>
+                  <span>SSIC Code Search</span>
+                </a>
+              </li>
+              <li>
+                <a href="/tools/singapore-tax-calculator" class="cl-sidebar-tool-link">
+                  <span class="cl-sidebar-tool-icon"><i data-lucide="trending-up"></i></span>
+                  <span>Tax Calculator</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cl-sidebar-tip">
+            <div class="cl-sidebar-tip__head">
+              <i data-lucide="lightbulb"></i>
+              <strong>Pro tip</strong>
+            </div>
+            <p>The corporate secretary must be appointed within 6 months of incorporation — this is one of the most commonly missed deadlines by new founders.</p>
+          </div>
+        </aside>
+
+      </div><!-- /cl-layout -->
+
+    </div>
+  </section>
+
+  <!-- ── INFO SECTION ── -->
+  <section class="tool-info-section">
+    <div class="container">
+      <span class="section-tag">Why this checklist matters</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Common post-incorporation mistakes</h2>
+      <div class="tool-info-grid">
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="clock"></i></div>
+          <h3>Missing the 6-month secretary deadline</h3>
+          <p>ACRA requires every Singapore company to appoint a qualified corporate secretary within 6 months of incorporation. Failure to do so is a statutory offence with fines up to S$1,000.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="alert-triangle"></i></div>
+          <h3>Not keeping proper accounts from day one</h3>
+          <p>Singapore law requires companies to maintain proper accounting records from the date of incorporation. Reconstructing months of transactions is expensive and error-prone.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="file-x"></i></div>
+          <h3>Missing GST registration at the threshold</h3>
+          <p>If your revenue exceeds S$1M in any 12-month period, you must register for GST within 30 days. Late registration results in penalties and backdated GST liability.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="user-x"></i></div>
+          <h3>Working without the right work pass</h3>
+          <p>Foreign founders who plan to work in Singapore must hold a valid Employment Pass or EntrePass before commencing work — not just after incorporating the company.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED TOOLS ── -->
+  <section class="tool-related-section">
+    <div class="container">
+      <span class="section-tag">Continue exploring</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Other free tools</h2>
+      <div class="tool-related-grid">
+        <a href="/tools/document-checklist" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="clipboard-list"></i></div>
+          <h4>Document Checklist</h4>
+          <p>Know exactly which documents you need before incorporation.</p>
+        </a>
+        <a href="/tools/gst-registration-checker" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="percent"></i></div>
+          <h4>GST Checker</h4>
+          <p>Check if your business needs to register for GST.</p>
+        </a>
+        <a href="/tools/cost-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="calculator"></i></div>
+          <h4>Cost Calculator</h4>
+          <p>Estimate your annual corporate services fees.</p>
+        </a>
+        <a href="/tools/eligibility-checker" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="check-circle"></i></div>
+          <h4>Eligibility Checker</h4>
+          <p>Check if you qualify to register a Singapore company.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul><li><a href="../../#incorporation">Company Incorporation</a></li><li><a href="../../#secretary">Corporate Secretarial</a></li><li><a href="../../#accounting">Accounting</a></li></ul></div>
+          <div class="footer-col"><h4>Free Tools</h4><ul><li><a href="/tools/business-structure-recommender">Structure Recommender</a></li><li><a href="/tools/cost-calculator">Cost Calculator</a></li><li><a href="/tools/eligibility-checker">Eligibility Checker</a></li><li><a href="/tools/gst-registration-checker">GST Checker</a></li><li><a href="/tools/post-incorporation-checklist">Post-Incorporation Checklist</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="../../#about">About</a></li><li><a href="../../#contact">Contact</a></li></ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="/script.js"></script>
+  <script src="/tools.js"></script>
+
+  <style>
+  /* ── CHECKLIST TOOL CUSTOM STYLES ── */
+
+  /* Layout: 2-col on desktop, 1-col on mobile */
+  .cl-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  /* ── PROGRESS CARD ── */
+  .cl-progress-card {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cl-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cl-overall-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: rgba(255,255,255,.55);
+    margin-bottom: 4px;
+  }
+
+  .cl-overall-count {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .cl-action-btns {
+    display: flex;
+    gap: 8px;
+  }
+
+  .cl-btn-print,
+  .cl-btn-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    transition: background .15s, color .15s;
+  }
+  .cl-btn-print svg,
+  .cl-btn-reset svg { width: 14px; height: 14px; }
+
+  .cl-btn-print {
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.2);
+  }
+  .cl-btn-print:hover {
+    background: rgba(255,255,255,.25);
+  }
+
+  .cl-btn-reset {
+    background: rgba(255,92,53,.15);
+    color: rgba(255,92,53,.9);
+    border: 1px solid rgba(255,92,53,.25);
+  }
+  .cl-btn-reset:hover {
+    background: rgba(255,92,53,.25);
+    color: #fff;
+  }
+
+  .cl-progress-bar-track {
+    height: 8px;
+    background: rgba(255,255,255,.15);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  .cl-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), #00e5c2);
+    border-radius: 100px;
+    transition: width .5s cubic-bezier(.4,0,.2,1);
+  }
+
+  .cl-progress-pct {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,.5);
+    text-align: right;
+  }
+
+  /* ── PHASE BLOCK ── */
+  .cl-phase {
+    margin-bottom: 20px;
+  }
+
+  .cl-card {
+    /* utility class used only for progress card */
+  }
+
+  .cl-phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 18px 22px;
+    border-bottom: none;
+  }
+
+  .cl-phase-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .cl-phase-icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+
+  .cl-phase-icon--blue   { background: var(--blue-light); color: var(--blue); }
+  .cl-phase-icon--teal   { background: rgba(0,201,167,.12); color: #047857; }
+  .cl-phase-icon--amber  { background: rgba(245,166,35,.12); color: #92740A; }
+  .cl-phase-icon--navy   { background: rgba(10,37,64,.08); color: var(--navy); }
+
+  .cl-phase-meta {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cl-phase-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--gray-400);
+    margin-bottom: 2px;
+  }
+
+  .cl-phase-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .cl-phase-count {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-400);
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: var(--gray-100);
+    padding: 4px 10px;
+    border-radius: 100px;
+    transition: color .2s, background .2s;
+  }
+  .cl-phase-count.is-complete {
+    color: #047857;
+    background: rgba(0,201,167,.12);
+  }
+
+  /* ── CHECKLIST ITEMS ── */
+  .cl-items {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .cl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--gray-100);
+    transition: background .15s;
+    cursor: default;
+  }
+  .cl-item:last-child { border-bottom: none; }
+  .cl-item:hover { background: var(--gray-50); }
+
+  .cl-item.is-done {
+    background: rgba(0,201,167,.04);
+  }
+  .cl-item.is-done .cl-item-text {
+    color: var(--gray-400);
+    text-decoration: line-through;
+    text-decoration-color: var(--gray-200);
+  }
+
+  /* Checkbox button */
+  .cl-checkbox {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 1px;
+    cursor: pointer;
+  }
+  .cl-checkbox:focus-visible .cl-checkbox-box {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+
+  .cl-checkbox-box {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid var(--gray-200);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .15s, background .15s;
+  }
+  .cl-checkbox-box svg {
+    width: 13px;
+    height: 13px;
+    stroke: #fff;
+    stroke-width: 2.5;
+    opacity: 0;
+    transition: opacity .15s;
+  }
+  .cl-checkbox:hover .cl-checkbox-box {
+    border-color: var(--blue);
+  }
+  .cl-item.is-done .cl-checkbox-box {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .cl-item.is-done .cl-checkbox-box svg {
+    opacity: 1;
+  }
+
+  /* Item body */
+  .cl-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cl-item-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.45;
+    transition: color .2s;
+  }
+
+  .cl-item-note {
+    font-size: 12px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* ── SIDEBAR ── */
+  .cl-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 88px;
+  }
+
+  .cl-sidebar-cta {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cl-sidebar-cta__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background: rgba(255,255,255,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+  .cl-sidebar-cta__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+
+  .cl-sidebar-cta h3 {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    line-height: 1.35;
+  }
+
+  .cl-sidebar-cta p {
+    font-size: 13px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .cl-sidebar-cta__link {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    transition: color .15s;
+  }
+  .cl-sidebar-cta__link:hover { color: #fff; }
+
+  /* Related tools panel */
+  .cl-sidebar-links {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+  }
+
+  .cl-sidebar-links h4 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: var(--gray-400);
+    margin-bottom: 14px;
+  }
+
+  .cl-sidebar-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cl-sidebar-tool-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-800);
+    transition: background .15s, color .15s;
+  }
+  .cl-sidebar-tool-link:hover {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .cl-sidebar-tool-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    flex-shrink: 0;
+    transition: background .15s;
+  }
+  .cl-sidebar-tool-icon svg { width: 14px; height: 14px; stroke-width: 1.75; }
+  .cl-sidebar-tool-link:hover .cl-sidebar-tool-icon { background: var(--blue-light); }
+
+  /* Tip box */
+  .cl-sidebar-tip {
+    background: rgba(245,166,35,.08);
+    border: 1px solid rgba(245,166,35,.3);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+
+  .cl-sidebar-tip__head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #92740A;
+  }
+  .cl-sidebar-tip__head svg { width: 16px; height: 16px; }
+  .cl-sidebar-tip__head strong { font-size: 13px; font-weight: 700; }
+
+  .cl-sidebar-tip p {
+    font-size: 12px;
+    color: #92740A;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .cl-layout {
+      grid-template-columns: 1fr;
+    }
+    .cl-sidebar {
+      position: static;
+      order: 2;
+    }
+    .cl-main {
+      order: 1;
+    }
+    .cl-progress-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+
+  @media (max-width: 480px) {
+    .cl-phase-header { flex-wrap: wrap; gap: 10px; }
+    .cl-item { padding: 14px 16px; }
+    .cl-progress-card { padding: 20px; }
+  }
+  </style>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ───────────────────────────────────────────
+       POST-INCORPORATION CHECKLIST
+       Storage key: karman_checklist_state
+       State shape: { checked: { "0": true, "3": true, ... } }
+    ─────────────────────────────────────────── */
+
+    var STORAGE_KEY = 'karman_checklist_state';
+
+    // Phase config: [phaseIndex] = { start, count }
+    // Phase 0: items 0-4  (5 items)
+    // Phase 1: items 5-13 (9 items)
+    // Phase 2: items 14-19 (6 items)
+    // Phase 3: items 20-29 (10 items)
+    var PHASES = [
+      { start: 0,  count: 5  },
+      { start: 5,  count: 9  },
+      { start: 14, count: 6  },
+      { start: 20, count: 10 }
+    ];
+    var TOTAL = 30;
+
+    // Load state from localStorage
+    function loadState() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && typeof parsed.checked === 'object') {
+            return parsed;
+          }
+        }
+      } catch (e) { /* ignore */ }
+      return { checked: {} };
+    }
+
+    // Save state to localStorage
+    function saveState(state) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) { /* ignore */ }
+    }
+
+    var state = loadState();
+
+    // Get all checklist item elements
+    var items = document.querySelectorAll('.cl-item');
+
+    // Apply initial state to DOM
+    items.forEach(function (item) {
+      var id = item.getAttribute('data-id');
+      if (state.checked[id]) {
+        setItemDone(item, true, false);
+      }
+    });
+
+    // Wire up checkbox clicks
+    items.forEach(function (item) {
+      var checkbox = item.querySelector('.cl-checkbox');
+      if (!checkbox) return;
+      checkbox.addEventListener('click', function () {
+        var id = item.getAttribute('data-id');
+        var isDone = item.classList.contains('is-done');
+        setItemDone(item, !isDone, true);
+      });
+    });
+
+    function setItemDone(item, done, save) {
+      var id = item.getAttribute('data-id');
+      var checkbox = item.querySelector('.cl-checkbox');
+
+      if (done) {
+        item.classList.add('is-done');
+        if (checkbox) checkbox.setAttribute('aria-checked', 'true');
+        state.checked[id] = true;
+      } else {
+        item.classList.remove('is-done');
+        if (checkbox) checkbox.setAttribute('aria-checked', 'false');
+        delete state.checked[id];
+      }
+
+      if (save) saveState(state);
+      updateProgress();
+    }
+
+    function updateProgress() {
+      // Count total done
+      var totalDone = Object.keys(state.checked).length;
+
+      // Update overall count display
+      var countEl = document.getElementById('clOverallCount');
+      if (countEl) countEl.textContent = totalDone + ' of ' + TOTAL + ' tasks done';
+
+      // Update progress bar
+      var pct = Math.round((totalDone / TOTAL) * 100);
+      var fillEl = document.getElementById('clProgressFill');
+      if (fillEl) fillEl.style.width = pct + '%';
+
+      var barEl = document.getElementById('clProgressBar');
+      if (barEl) barEl.setAttribute('aria-valuenow', pct);
+
+      var pctEl = document.getElementById('clProgressPct');
+      if (pctEl) pctEl.textContent = pct + '% complete';
+
+      // Update per-phase counts
+      PHASES.forEach(function (phase, idx) {
+        var phaseDone = 0;
+        for (var i = phase.start; i < phase.start + phase.count; i++) {
+          if (state.checked[String(i)]) phaseDone++;
+        }
+        var countEl = document.getElementById('phase-count-' + idx);
+        if (countEl) {
+          countEl.textContent = phaseDone + ' / ' + phase.count;
+          if (phaseDone === phase.count) {
+            countEl.classList.add('is-complete');
+          } else {
+            countEl.classList.remove('is-complete');
+          }
+        }
+      });
+    }
+
+    // Reset button
+    var resetBtn = document.getElementById('clReset');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        if (!confirm('Reset all checklist items? Your progress will be cleared.')) return;
+        state = { checked: {} };
+        saveState(state);
+        items.forEach(function (item) {
+          setItemDone(item, false, false);
+        });
+        updateProgress();
+      });
+    }
+
+    // Print button
+    var printBtn = document.getElementById('clPrint');
+    if (printBtn) {
+      printBtn.addEventListener('click', function () {
+        window.print();
+      });
+    }
+
+    // Initial progress render
+    updateProgress();
+
+  })();
+  </script>
+
+</body>
+</html>
