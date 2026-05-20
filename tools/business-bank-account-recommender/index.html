@@ -1,0 +1,2699 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Singapore Business Bank Account Recommender | Karman</title>
+  <meta name="description" content="Free tool: Answer 6 questions and get a personalised recommendation for the best Singapore business bank account — DBS, OCBC, Aspire, Airwallex, Wise, and more." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Singapore business bank account, best bank for Singapore company, DBS OCBC Aspire Airwallex Wise business account, open business account Singapore, remote business banking Singapore" />
+  <link rel="canonical" href="https://karman.com.sg/tools/business-bank-account-recommender" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karman.com.sg/tools/business-bank-account-recommender" />
+  <meta property="og:title" content="Singapore Business Bank Account Recommender | Karman" />
+  <meta property="og:description" content="Free tool: Answer 6 questions and get a personalised recommendation for the best Singapore business bank account — DBS, OCBC, Aspire, Airwallex, Wise, and more." />
+  <meta property="og:image" content="https://karman.com.sg/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Singapore Business Bank Account Recommender | Karman" />
+  <meta name="twitter:description" content="Free tool: Answer 6 questions and get a personalised recommendation for the best Singapore business bank account — DBS, OCBC, Aspire, Airwallex, Wise, and more." />
+  <meta name="twitter:image" content="https://karman.com.sg/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__scroll-indicator span {
+  display: block;
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__content .section-heading {
+  text-align: left;
+}
+.why__content .section-subtext {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Compliance Card Stack */
+.why__visual {
+  position: relative;
+}
+.why__card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.compliance-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s;
+}
+.compliance-card:hover { transform: translateX(4px); }
+.compliance-card--upcoming {
+  border-color: var(--amber);
+  background: #FFFBF0;
+}
+.compliance-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.compliance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.compliance-dot.green { background: var(--teal); }
+.compliance-dot.amber { background: var(--amber); }
+.compliance-dot.blue { background: var(--blue); }
+.compliance-status {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(0,201,167,.1);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.compliance-status.upcoming {
+  color: #92740A;
+  background: rgba(245,166,35,.15);
+}
+.compliance-status.processing {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.compliance-card__date {
+  font-size: 12px;
+  color: var(--gray-600);
+  padding-left: 16px;
+}
+.why__card-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 16px;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-tab:hover:not(.active) { color: var(--blue); }
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.plan-features li.text-muted { color: var(--gray-400); }
+.plan-features li.text-muted::before { color: var(--gray-200); }
+
+.pricing__note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-top: 32px;
+}
+.pricing__note a { color: var(--blue); font-weight: 500; }
+.pricing__note a:hover { text-decoration: underline; }
+
+/* === TESTIMONIALS === */
+.testimonials { background: #fff; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.testimonial-card--accent p { color: rgba(255,255,255,.9); }
+
+.testimonial-card__stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-card__author strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+}
+.testimonial-card--accent .testimonial-card__author strong { color: #fff; }
+.testimonial-card__author span {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+.testimonial-card--accent .testimonial-card__author span { color: rgba(255,255,255,.6); }
+
+/* === BLOG PREVIEW === */
+.blog-preview { background: #fff; }
+
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.blog-preview__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.blog-preview__card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 20px rgba(37,99,235,.1);
+  transform: translateY(-2px);
+}
+
+.blog-preview__tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(37,99,235,.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.blog-preview__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+  margin: 0;
+}
+
+.blog-preview__card p {
+  font-size: .88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.blog-preview__cta {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 4px;
+}
+
+.blog-preview__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .blog-preview__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-preview__grid { grid-template-columns: 1fr; }
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
+.contact-detail a { color: var(--blue); }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Form */
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray-400); }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-optional { font-size: 11px; color: var(--gray-400); font-weight: 400; }
+.form-disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+/* Alias for new standalone pages that use footer__grid / footer__col */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--featured { grid-column: span 1; }
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .why__content .section-heading,
+  .why__content .section-subtext { text-align: center; }
+  .why__points { max-width: 500px; margin: 0 auto; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__stats {
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .stat strong { font-size: 22px; }
+  .stat-divider { margin: 0 16px; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .testimonials__grid { grid-template-columns: 1fr; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero__heading { font-size: 38px; }
+  .hero__stats { flex-direction: column; gap: 20px; }
+  .stat-divider { width: 100%; height: 1px; margin: 0; }
+  .pricing__tabs { flex-direction: column; max-width: 100%; }
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+
+  <!-- Bank Recommender inline styles -->
+  <style>
+    /* === BANK QUIZ WIDGET === */
+    #bankQuizRoot {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .bq-header {
+      padding: 20px 28px 0;
+    }
+    .bq-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-light);
+      border-radius: 100px;
+      padding: 4px 12px;
+    }
+    .bq-title {
+      font-size: 20px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      padding: 10px 28px 0;
+    }
+    .bq-progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px 6px;
+    }
+    .bq-progress-track {
+      flex: 1;
+      height: 5px;
+      background: var(--gray-200);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    .bq-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), var(--teal));
+      border-radius: 100px;
+      transition: width .4s cubic-bezier(.4,0,.2,1);
+      width: 0%;
+    }
+    .bq-step-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-400);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .bq-body {
+      padding: 20px 28px 12px;
+    }
+    .bq-footer {
+      padding: 16px 28px 20px;
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Question slide */
+    .bq-slide {
+      display: none;
+    }
+    .bq-slide.active {
+      display: block;
+    }
+    .bq-question-text {
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Sora', sans-serif;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+    .bq-question-sub {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .bq-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .bq-options--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .bq-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color .15s, background .15s, transform .15s;
+      text-align: left;
+      background: #fff;
+      width: 100%;
+      font-family: inherit;
+    }
+    .bq-option:hover {
+      border-color: var(--blue);
+      background: var(--blue-light);
+      transform: translateX(3px);
+    }
+    .bq-option.selected {
+      border-color: var(--blue);
+      background: var(--blue-light);
+    }
+    .bq-option__emoji {
+      font-size: 22px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .bq-option__label {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .bq-option__sub {
+      font-size: 13px;
+      color: var(--gray-600);
+      display: block;
+      line-height: 1.5;
+    }
+
+    /* Back button */
+    .bq-back {
+      visibility: hidden;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .bq-back.visible {
+      visibility: visible;
+    }
+    .bq-back:hover { color: var(--blue); }
+
+    /* Results */
+    .bq-results {
+      display: none;
+    }
+    .bq-results.active {
+      display: block;
+    }
+    .bq-results-heading {
+      font-size: 20px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .bq-results-sub {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .bq-result-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .bq-result-card {
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      background: #fff;
+      transition: border-color .2s, box-shadow .2s;
+      position: relative;
+    }
+    .bq-result-card:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow-md);
+    }
+    .bq-result-card--top {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 1px var(--blue), var(--shadow-sm);
+    }
+    .bq-result-badge {
+      position: absolute;
+      top: -11px;
+      left: 18px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .bq-result-top-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+    .bq-result-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      font-weight: 800;
+      color: #fff;
+    }
+    .bq-result-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      font-family: 'Sora', sans-serif;
+    }
+    .bq-result-tagline {
+      font-size: 13px;
+      color: var(--gray-600);
+      margin-top: 1px;
+      line-height: 1.5;
+    }
+    .bq-result-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }
+    .bq-fact {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-800);
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+    .bq-fact strong {
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .bq-result-note {
+      font-size: 12.5px;
+      color: #92740A;
+      background: rgba(245,166,35,.12);
+      border: 1px solid rgba(245,166,35,.3);
+      border-radius: 7px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .bq-result-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      transition: color .15s;
+    }
+    .bq-result-link:hover { color: var(--accent); }
+
+    /* CTA block */
+    .bq-cta-block {
+      background: var(--blue-light);
+      border: 1px solid rgba(26,107,204,.18);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    .bq-cta-block a {
+      color: var(--blue);
+      font-weight: 600;
+    }
+    .bq-cta-block a:hover { text-decoration: underline; }
+    .bq-cta-secondary {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .bq-cta-secondary a {
+      color: var(--blue);
+      font-weight: 600;
+    }
+    .bq-cta-secondary a:hover { text-decoration: underline; }
+    .bq-restart-btn {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-600);
+      padding: 10px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color .15s;
+    }
+    .bq-restart-btn:hover { color: var(--navy); }
+
+    @media (max-width: 640px) {
+      .bq-header,
+      .bq-title,
+      .bq-progress-wrap,
+      .bq-body,
+      .bq-footer { padding-left: 18px; padding-right: 18px; }
+      .bq-options--grid { grid-template-columns: 1fr; }
+      .bq-result-facts { flex-direction: column; gap: 6px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Singapore Business Bank Account Recommender",
+        "url": "https://karman.com.sg/tools/business-bank-account-recommender",
+        "description": "Free tool: Answer 6 questions and get a personalised recommendation for the best Singapore business bank account — DBS, OCBC, Aspire, Airwallex, Wise, and more.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SGD" },
+        "provider": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://karman.com.sg/tools/" },
+          { "@type": "ListItem", "position": 3, "name": "Bank Account Recommender", "item": "https://karman.com.sg/tools/business-bank-account-recommender" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="tool-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC &amp; Fund Administration</strong>
+                <p>Singapore fund structures &amp; compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting &amp; Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration &amp; quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="../../tools/" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link">Blogs</a></li>
+        <li class="nav__item"><a href="../../#faq" class="nav__link">FAQs</a></li>
+        <div class="nav__actions">
+          <a href="../../#contact" class="btn btn--secondary">Contact us</a>
+          <a href="../../#get-started" class="btn btn--primary">Get started</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="tool-page-hero">
+    <div class="container">
+      <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../tools/">Free Tools</a><span>›</span>
+        <span>Bank Account Recommender</span>
+      </nav>
+      <h1>Which Singapore business bank account is right for you?</h1>
+      <p>Foreign founders are often surprised by how many options exist — from traditional banks (DBS, OCBC) to digital accounts (Aspire, Airwallex, Wise). Answer 6 quick questions to get a personalised recommendation.</p>
+      <div class="tool-page-hero__meta">
+        <span>🕐 Takes 2 minutes</span>
+        <span>🏦 7 options compared</span>
+        <span>⚡ Instant recommendation</span>
+        <span>🔒 No sign-up required</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ WIDGET -->
+  <section class="tool-widget-section">
+    <div class="container">
+      <div id="bankQuizRoot">
+
+        <!-- Header (tag + progress) -->
+        <div class="bq-header">
+          <span class="bq-tag">Bank Account Recommender</span>
+        </div>
+        <div class="bq-title" id="bqTitle">Find the right business bank account</div>
+        <div class="bq-progress-wrap">
+          <div class="bq-progress-track"><div class="bq-progress-bar" id="bqBar"></div></div>
+          <span class="bq-step-label" id="bqLabel">Step 1 of 6</span>
+        </div>
+
+        <!-- BODY: Questions + Results -->
+        <div class="bq-body" id="bqBody">
+
+          <!-- Q1: Location -->
+          <div class="bq-slide active" id="bq-q1">
+            <p class="bq-question-text">Are you based in Singapore or overseas?</p>
+            <p class="bq-question-sub">Your location affects which banks you can open an account with.</p>
+            <div class="bq-options">
+              <button class="bq-option" data-q="1" data-val="sg">
+                <span class="bq-option__emoji">🇸🇬</span>
+                <span>
+                  <span class="bq-option__label">In Singapore</span>
+                  <span class="bq-option__sub">I am currently based in Singapore</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="1" data-val="overseas">
+                <span class="bq-option__emoji">✈️</span>
+                <span>
+                  <span class="bq-option__label">Overseas (remote)</span>
+                  <span class="bq-option__sub">I am based outside Singapore</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q2: In-person visit -->
+          <div class="bq-slide" id="bq-q2">
+            <p class="bq-question-text">Can you visit Singapore to open the account in person?</p>
+            <p class="bq-question-sub">Traditional banks (DBS, OCBC, UOB) require at least one director to visit a branch in person.</p>
+            <div class="bq-options">
+              <button class="bq-option" data-q="2" data-val="yes">
+                <span class="bq-option__emoji">🤝</span>
+                <span>
+                  <span class="bq-option__label">Yes, I can visit</span>
+                  <span class="bq-option__sub">I'm willing to travel to a Singapore branch</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="2" data-val="no">
+                <span class="bq-option__emoji">💻</span>
+                <span>
+                  <span class="bq-option__label">No, I need remote opening</span>
+                  <span class="bq-option__sub">I cannot visit Singapore for account opening</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q3: Currencies -->
+          <div class="bq-slide" id="bq-q3">
+            <p class="bq-question-text">What currencies do you mainly deal in?</p>
+            <p class="bq-question-sub">This determines how much FX capability you'll need from your business account.</p>
+            <div class="bq-options">
+              <button class="bq-option" data-q="3" data-val="sgd">
+                <span class="bq-option__emoji">💵</span>
+                <span>
+                  <span class="bq-option__label">SGD only</span>
+                  <span class="bq-option__sub">All transactions in Singapore dollars</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="3" data-val="two">
+                <span class="bq-option__emoji">💱</span>
+                <span>
+                  <span class="bq-option__label">USD/EUR + SGD</span>
+                  <span class="bq-option__sub">Two or three currencies regularly</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="3" data-val="multi">
+                <span class="bq-option__emoji">🌏</span>
+                <span>
+                  <span class="bq-option__label">Multi-currency (3+ currencies)</span>
+                  <span class="bq-option__sub">I deal in many different currencies</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q4: Transaction volume -->
+          <div class="bq-slide" id="bq-q4">
+            <p class="bq-question-text">What is your estimated monthly transaction volume?</p>
+            <p class="bq-question-sub">Higher volumes may make traditional bank fees more cost-effective relative to digital account pricing.</p>
+            <div class="bq-options">
+              <button class="bq-option" data-q="4" data-val="low">
+                <span class="bq-option__emoji">🌱</span>
+                <span>
+                  <span class="bq-option__label">Under S$50K</span>
+                  <span class="bq-option__sub">Early-stage or low-volume business</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="4" data-val="mid">
+                <span class="bq-option__emoji">📈</span>
+                <span>
+                  <span class="bq-option__label">S$50K – S$500K</span>
+                  <span class="bq-option__sub">Growing SME with moderate turnover</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="4" data-val="high">
+                <span class="bq-option__emoji">🏢</span>
+                <span>
+                  <span class="bq-option__label">Over S$500K</span>
+                  <span class="bq-option__sub">High-volume or established business</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q5: Industry -->
+          <div class="bq-slide" id="bq-q5">
+            <p class="bq-question-text">What industry is your business in?</p>
+            <p class="bq-question-sub">Some industries face tighter scrutiny from traditional banks during account opening.</p>
+            <div class="bq-options bq-options--grid">
+              <button class="bq-option" data-q="5" data-val="general">
+                <span class="bq-option__emoji">🏪</span>
+                <span>
+                  <span class="bq-option__label">General / Consulting</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="5" data-val="fintech">
+                <span class="bq-option__emoji">🏦</span>
+                <span>
+                  <span class="bq-option__label">Financial Services</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="5" data-val="crypto">
+                <span class="bq-option__emoji">₿</span>
+                <span>
+                  <span class="bq-option__label">Crypto / Web3</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="5" data-val="ecommerce">
+                <span class="bq-option__emoji">🛒</span>
+                <span>
+                  <span class="bq-option__label">E-commerce</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="5" data-val="professional">
+                <span class="bq-option__emoji">⚖️</span>
+                <span>
+                  <span class="bq-option__label">Professional Services</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="5" data-val="saas">
+                <span class="bq-option__emoji">💻</span>
+                <span>
+                  <span class="bq-option__label">SaaS / Tech</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q6: Priority -->
+          <div class="bq-slide" id="bq-q6">
+            <p class="bq-question-text">What matters most to you?</p>
+            <p class="bq-question-sub">Your top priority helps us rank the best options for your situation.</p>
+            <div class="bq-options">
+              <button class="bq-option" data-q="6" data-val="fastest">
+                <span class="bq-option__emoji">⚡</span>
+                <span>
+                  <span class="bq-option__label">Fastest to open</span>
+                  <span class="bq-option__sub">I need an account up and running ASAP</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="6" data-val="fees">
+                <span class="bq-option__emoji">💰</span>
+                <span>
+                  <span class="bq-option__label">Lowest fees</span>
+                  <span class="bq-option__sub">Minimising monthly costs and transaction charges</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="6" data-val="brand">
+                <span class="bq-option__emoji">🏅</span>
+                <span>
+                  <span class="bq-option__label">Trusted brand</span>
+                  <span class="bq-option__sub">A well-known, established bank name</span>
+                </span>
+              </button>
+              <button class="bq-option" data-q="6" data-val="fx">
+                <span class="bq-option__emoji">💱</span>
+                <span>
+                  <span class="bq-option__label">Best FX rates</span>
+                  <span class="bq-option__sub">Low conversion costs on international transfers</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- RESULTS SCREEN -->
+          <div class="bq-slide" id="bq-results">
+            <p class="bq-results-heading">Your personalised recommendations</p>
+            <p class="bq-results-sub" id="bqResultsSub">Based on your answers, here are the best-fit options for your business.</p>
+            <div class="bq-result-cards" id="bqResultCards"></div>
+            <div class="bq-cta-block">
+              Before opening a bank account, you'll need your ACRA-registered company with a local director and registered address. <a href="/services/nominee-director">We handle both →</a>
+            </div>
+            <p class="bq-cta-secondary">Not sure which structure to set up first? <a href="/tools/business-structure-recommender">Try our structure recommender →</a></p>
+          </div>
+
+        </div><!-- /.bq-body -->
+
+        <!-- FOOTER: Back / Next -->
+        <div class="bq-footer" id="bqFooter">
+          <button class="btn btn--ghost bq-back" id="bqBack">← Back</button>
+          <button class="btn btn--primary" id="bqNext">Continue →</button>
+        </div>
+
+      </div><!-- /#bankQuizRoot -->
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="tool-info-section">
+    <div class="container">
+      <span class="section-tag">Singapore business banking</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">What to know before you open</h2>
+      <div class="tool-info-grid">
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="file-check"></i></div>
+          <h3>Incorporate first</h3>
+          <p>Banks require your company to be registered with ACRA before opening a business account. You'll need your BizFile certificate and company constitution. Karman can incorporate your company in 1–3 days.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="user-check"></i></div>
+          <h3>Director requirements vary</h3>
+          <p>Traditional banks (DBS, OCBC, UOB) require at least one director to attend in person. Digital accounts like Aspire, Airwallex, and Wise can be fully opened remotely — ideal for overseas founders.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="clock"></i></div>
+          <h3>Opening timelines differ widely</h3>
+          <p>Digital accounts typically open in 1–5 business days. Traditional bank accounts can take 2–6 weeks, and may require multiple branch visits. Plan ahead especially if you need an account for vendor payments at launch.</p>
+        </div>
+        <div class="tool-info-card">
+          <div class="tool-info-card__icon"><i data-lucide="alert-triangle"></i></div>
+          <h3>Crypto/Web3 businesses face extra hurdles</h3>
+          <p>Traditional banks in Singapore are highly cautious about crypto-related businesses. Digital accounts like Aspire and Airwallex are generally more open, but you may still need to demonstrate a clear business model and compliance posture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TOOLS -->
+  <section class="tool-related-section">
+    <div class="container">
+      <span class="section-tag">Continue exploring</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Other free tools</h2>
+      <div class="tool-related-grid">
+        <a href="/tools/eligibility-checker" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="check-circle"></i></div>
+          <h4>Eligibility Checker</h4>
+          <p>Check if you qualify to register a Singapore company.</p>
+        </a>
+        <a href="/tools/business-structure-recommender" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="hard-hat"></i></div>
+          <h4>Structure Recommender</h4>
+          <p>Find the right business structure for your situation.</p>
+        </a>
+        <a href="/tools/cost-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="calculator"></i></div>
+          <h4>Cost Calculator</h4>
+          <p>Estimate your annual corporate services fees.</p>
+        </a>
+        <a href="/tools/document-checklist" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="clipboard-list"></i></div>
+          <h4>Document Checklist</h4>
+          <p>Know which documents you need before you start.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul><li><a href="../../#incorporation">Company Incorporation</a></li><li><a href="../../#secretary">Corporate Secretarial</a></li><li><a href="../../#accounting">Accounting</a></li></ul></div>
+          <div class="footer-col"><h4>Free Tools</h4><ul><li><a href="/tools/business-structure-recommender">Structure Recommender</a></li><li><a href="/tools/cost-calculator">Cost Calculator</a></li><li><a href="/tools/eligibility-checker">Eligibility Checker</a></li><li><a href="/tools/incorporation-timeline">Timeline</a></li><li><a href="/tools/document-checklist">Document Checklist</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="../../#about">About</a></li><li><a href="../../#contact">Contact</a></li></ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.</p></div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script src="../../tools.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- ============================================================
+       BANK ACCOUNT RECOMMENDER — Inline Quiz Logic
+  ============================================================ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── Bank data ───────────────────────────────────────────── */
+    var BANKS = {
+      dbs: {
+        name: 'DBS Business Account',
+        tagline: 'Best for Singapore-based companies with high volume who value a trusted, full-service bank.',
+        icon: '🏦',
+        color: '#ED1C24',
+        opening: '2–6 weeks',
+        minDeposit: 'S$1,000',
+        remote: 'No',
+        fx: 'Standard (1–2%)',
+        url: 'https://www.dbs.com.sg/sme/default.page',
+        urlLabel: 'dbs.com.sg',
+        note: null
+      },
+      ocbc: {
+        name: 'OCBC Business Account',
+        tagline: 'Great for Singapore-based SMEs — easier to open than DBS with solid digital banking tools.',
+        icon: '🏛️',
+        color: '#D4393B',
+        opening: '2–4 weeks',
+        minDeposit: 'S$1,000',
+        remote: 'No',
+        fx: 'Standard (1–2%)',
+        url: 'https://www.ocbc.com/business-banking/accounts/business-account.page',
+        urlLabel: 'ocbc.com',
+        note: null
+      },
+      uob: {
+        name: 'UOB Business Account',
+        tagline: 'Ideal for Singapore-based businesses with regional expansion plans or manufacturing/trading activity.',
+        icon: '🏢',
+        color: '#005BAB',
+        opening: '2–4 weeks',
+        minDeposit: 'S$1,000',
+        remote: 'No',
+        fx: 'Standard (1–2%)',
+        url: 'https://www.uob.com.sg/business/index.page',
+        urlLabel: 'uob.com.sg',
+        note: null
+      },
+      aspire: {
+        name: 'Aspire',
+        tagline: 'Best for remote founders who need a fast, low-fee multi-currency account — especially e-commerce and startups.',
+        icon: '⚡',
+        color: '#1B88F4',
+        opening: '1–3 days',
+        minDeposit: 'None',
+        remote: 'Yes',
+        fx: 'Low (~0.5–1%)',
+        url: 'https://aspireapp.com',
+        urlLabel: 'aspireapp.com',
+        note: null
+      },
+      airwallex: {
+        name: 'Airwallex',
+        tagline: 'Best FX rates and multi-currency capability for high-volume cross-border businesses and SaaS companies.',
+        icon: '🌐',
+        color: '#0C3EAB',
+        opening: '2–5 days',
+        minDeposit: 'None',
+        remote: 'Yes',
+        fx: 'Excellent (~0.5%)',
+        url: 'https://www.airwallex.com',
+        urlLabel: 'airwallex.com',
+        note: null
+      },
+      wise: {
+        name: 'Wise Business',
+        tagline: 'Transparent, low-fee FX with multi-currency accounts — ideal for freelancers and low-to-medium volume businesses.',
+        icon: '💚',
+        color: '#00B9A0',
+        opening: '1–3 days',
+        minDeposit: 'None',
+        remote: 'Yes',
+        fx: 'Excellent (~0.4%)',
+        url: 'https://wise.com/sg/business/',
+        urlLabel: 'wise.com/business',
+        note: null
+      },
+      statrys: {
+        name: 'Statrys',
+        tagline: 'Asia-focused multi-currency account suited for Hong Kong-connected businesses and regional traders.',
+        icon: '🔷',
+        color: '#2B4EAA',
+        opening: '3–7 days',
+        minDeposit: 'None',
+        remote: 'Yes',
+        fx: 'Competitive (~0.8%)',
+        url: 'https://statrys.com',
+        urlLabel: 'statrys.com',
+        note: null
+      }
+    };
+
+    var CRYPTO_NOTE = 'Most traditional banks are very cautious about Crypto/Web3 companies and may decline your application. Digital accounts (Aspire, Airwallex) are more open but still require a clear business model and AML compliance documentation.';
+
+    /* ── Quiz state ──────────────────────────────────────────── */
+    var answers = {}; // { 1: 'sg', 2: 'yes', ... }
+    var currentStep = 1;
+    var totalSteps = 6;
+
+    /* ── DOM refs ────────────────────────────────────────────── */
+    var bar       = document.getElementById('bqBar');
+    var label     = document.getElementById('bqLabel');
+    var backBtn   = document.getElementById('bqBack');
+    var nextBtn   = document.getElementById('bqNext');
+    var footer    = document.getElementById('bqFooter');
+    var body      = document.getElementById('bqBody');
+    var cardsEl   = document.getElementById('bqResultCards');
+    var subEl     = document.getElementById('bqResultsSub');
+
+    /* ── Helpers ─────────────────────────────────────────────── */
+    function showSlide(id) {
+      body.querySelectorAll('.bq-slide').forEach(function (el) {
+        el.classList.remove('active');
+      });
+      var target = document.getElementById(id);
+      if (target) target.classList.add('active');
+    }
+
+    function updateProgress() {
+      var pct = ((currentStep - 1) / totalSteps) * 100;
+      bar.style.width = pct + '%';
+      label.textContent = 'Step ' + currentStep + ' of ' + totalSteps;
+    }
+
+    function updateNav() {
+      if (currentStep === 1) {
+        backBtn.classList.remove('visible');
+      } else {
+        backBtn.classList.add('visible');
+      }
+      // Show/hide continue button on results
+      var onResults = (currentStep > totalSteps);
+      footer.style.display = onResults ? 'none' : '';
+    }
+
+    function getSelectedOption(q) {
+      var selected = body.querySelector('.bq-option.selected[data-q="' + q + '"]');
+      return selected ? selected.getAttribute('data-val') : null;
+    }
+
+    function markSelected(q, val) {
+      body.querySelectorAll('.bq-option[data-q="' + q + '"]').forEach(function (btn) {
+        btn.classList.toggle('selected', btn.getAttribute('data-val') === val);
+      });
+    }
+
+    /* ── Scoring ─────────────────────────────────────────────── */
+    function computeScores() {
+      var a = answers;
+      var location    = a[1]; // 'sg' | 'overseas'
+      var inPerson    = a[2]; // 'yes' | 'no'
+      var currency    = a[3]; // 'sgd' | 'two' | 'multi'
+      var volume      = a[4]; // 'low' | 'mid' | 'high'
+      var industry    = a[5]; // 'general' | 'fintech' | 'crypto' | 'ecommerce' | 'professional' | 'saas'
+      var priority    = a[6]; // 'fastest' | 'fees' | 'brand' | 'fx'
+
+      // Start with base scores
+      var scores = {
+        dbs: 0, ocbc: 0, uob: 0,
+        aspire: 0, airwallex: 0, wise: 0, statrys: 0
+      };
+
+      // ── Rule 1: Remote-only → eliminate traditional banks ──
+      var remoteOnly = (location === 'overseas' && inPerson === 'no') || inPerson === 'no';
+      if (remoteOnly) {
+        scores.dbs     = -999;
+        scores.ocbc    = -999;
+        scores.uob     = -999;
+        scores.aspire    += 20;
+        scores.airwallex += 15;
+        scores.wise      += 15;
+        scores.statrys   += 10;
+      } else {
+        // Can visit in person — traditional banks are viable
+        scores.dbs  += 10;
+        scores.ocbc += 10;
+        scores.uob  += 8;
+      }
+
+      // ── Rule 2: Currency needs ──
+      if (currency === 'sgd') {
+        scores.dbs  += 10;
+        scores.ocbc += 10;
+        scores.uob  += 8;
+        scores.aspire   += 5;
+        scores.wise     += 5;
+      } else if (currency === 'two') {
+        scores.aspire    += 10;
+        scores.airwallex += 12;
+        scores.wise      += 12;
+        scores.statrys   += 8;
+      } else if (currency === 'multi') {
+        scores.airwallex += 18;
+        scores.wise      += 14;
+        scores.aspire    += 12;
+        scores.statrys   += 10;
+      }
+
+      // ── Rule 3: Volume ──
+      if (volume === 'high') {
+        scores.dbs  += 12;
+        scores.ocbc += 8;
+        scores.uob  += 8;
+        scores.airwallex += 10;
+      } else if (volume === 'mid') {
+        scores.ocbc += 8;
+        scores.aspire   += 8;
+        scores.airwallex += 8;
+        scores.wise     += 5;
+      } else {
+        // low
+        scores.aspire += 10;
+        scores.wise   += 12;
+        scores.statrys += 8;
+      }
+
+      // ── Rule 4: Industry ──
+      if (industry === 'ecommerce') {
+        scores.aspire    += 12;
+        scores.airwallex += 10;
+        scores.wise      += 6;
+      } else if (industry === 'crypto') {
+        scores.aspire    += 15;
+        scores.airwallex += 12;
+        // Flag crypto warning on those two
+        BANKS.aspire.note    = CRYPTO_NOTE;
+        BANKS.airwallex.note = CRYPTO_NOTE;
+        BANKS.wise.note      = null;
+        BANKS.statrys.note   = null;
+        BANKS.dbs.note       = null;
+        BANKS.ocbc.note      = null;
+        BANKS.uob.note       = null;
+        // Traditional banks are hard for crypto
+        scores.dbs  -= 15;
+        scores.ocbc -= 15;
+        scores.uob  -= 15;
+      } else if (industry === 'saas') {
+        scores.airwallex += 10;
+        scores.aspire    += 8;
+        scores.wise      += 8;
+      } else if (industry === 'fintech') {
+        scores.dbs  += 5;
+        scores.ocbc += 5;
+        scores.airwallex += 8;
+      } else if (industry === 'professional') {
+        scores.dbs  += 8;
+        scores.ocbc += 8;
+        scores.uob  += 6;
+        scores.aspire += 5;
+      } else {
+        // general
+        scores.dbs  += 5;
+        scores.ocbc += 6;
+        scores.aspire += 5;
+      }
+
+      // ── Rule 5: Priority ──
+      if (priority === 'fastest') {
+        scores.aspire    += 20;
+        scores.wise      += 15;
+        scores.airwallex += 12;
+      } else if (priority === 'fees') {
+        if (volume === 'low' || volume === 'mid') {
+          scores.wise      += 18;
+          scores.aspire    += 12;
+          scores.airwallex += 10;
+        } else {
+          scores.dbs  += 10;
+          scores.wise += 10;
+        }
+      } else if (priority === 'brand') {
+        scores.dbs  += 20;
+        scores.ocbc += 14;
+        scores.uob  += 12;
+      } else if (priority === 'fx') {
+        scores.airwallex += 22;
+        scores.wise      += 18;
+        scores.aspire    += 10;
+      }
+
+      // ── Rule 6: Statrys bonus for Asia-trading ──
+      if (currency === 'multi' && (industry === 'general' || industry === 'professional')) {
+        scores.statrys += 8;
+      }
+
+      return scores;
+    }
+
+    function getTopRecommendations(scores, n) {
+      var eligible = Object.keys(scores).filter(function (k) {
+        return scores[k] > -900;
+      });
+      eligible.sort(function (a, b) { return scores[b] - scores[a]; });
+      return eligible.slice(0, n);
+    }
+
+    /* ── Render results ──────────────────────────────────────── */
+    function buildResultCard(key, isTop) {
+      var b = BANKS[key];
+      var html = '';
+      html += '<div class="bq-result-card' + (isTop ? ' bq-result-card--top' : '') + '">';
+      if (isTop) html += '<span class="bq-result-badge">Top pick</span>';
+
+      html += '<div class="bq-result-top-row">';
+      html += '<div class="bq-result-icon" style="background:' + b.color + '">' + b.icon + '</div>';
+      html += '<div>';
+      html += '<div class="bq-result-name">' + b.name + '</div>';
+      html += '<div class="bq-result-tagline">' + b.tagline + '</div>';
+      html += '</div>';
+      html += '</div>';
+
+      html += '<div class="bq-result-facts">';
+      html += '<span class="bq-fact"><strong>Opening time:</strong> ' + b.opening + '</span>';
+      html += '<span class="bq-fact"><strong>Min. deposit:</strong> ' + b.minDeposit + '</span>';
+      html += '<span class="bq-fact"><strong>Remote opening:</strong> ' + b.remote + '</span>';
+      html += '<span class="bq-fact"><strong>FX fees:</strong> ' + b.fx + '</span>';
+      html += '</div>';
+
+      if (b.note) {
+        html += '<div class="bq-result-note">⚠️ ' + b.note + '</div>';
+      }
+
+      html += '<a href="' + b.url + '" target="_blank" rel="noopener" class="bq-result-link">Learn more at ' + b.urlLabel + ' ↗</a>';
+      html += '</div>';
+      return html;
+    }
+
+    function renderResults() {
+      var scores = computeScores();
+      var top    = getTopRecommendations(scores, 3);
+
+      // Build subtitle
+      var remoteOnly = answers[2] === 'no';
+      if (remoteOnly) {
+        subEl.textContent = 'Since you need remote account opening, we\'ve focused on digital-first accounts that can be set up without visiting Singapore.';
+      } else if (answers[6] === 'brand') {
+        subEl.textContent = 'You prioritised a trusted brand — traditional banks rank highly for you, though opening takes a few weeks.';
+      } else {
+        subEl.textContent = 'Based on your answers, here are the best-fit options for your business.';
+      }
+
+      cardsEl.innerHTML = top.map(function (key, i) {
+        return buildResultCard(key, i === 0);
+      }).join('');
+    }
+
+    /* ── Navigation ──────────────────────────────────────────── */
+    function goNext() {
+      var selected = getSelectedOption(currentStep);
+      if (!selected) {
+        // Shake the options to signal required selection
+        var opts = body.querySelector('#bq-q' + currentStep + ' .bq-options');
+        if (opts) {
+          opts.style.animation = 'none';
+          opts.offsetHeight; // reflow
+          opts.style.animation = 'shakeX .4s ease';
+        }
+        return;
+      }
+      answers[currentStep] = selected;
+
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showSlide('bq-q' + currentStep);
+        // Restore saved answer if going forward to already-answered step
+        if (answers[currentStep]) {
+          markSelected(currentStep, answers[currentStep]);
+        }
+        updateProgress();
+        updateNav();
+        if (currentStep === totalSteps) {
+          nextBtn.textContent = 'See my results →';
+        } else {
+          nextBtn.textContent = 'Continue →';
+        }
+      } else {
+        // Show results
+        currentStep = totalSteps + 1;
+        showSlide('bq-results');
+        bar.style.width = '100%';
+        label.textContent = 'Done!';
+        updateNav();
+        renderResults();
+      }
+    }
+
+    function goBack() {
+      if (currentStep <= 1) return;
+      if (currentStep > totalSteps) {
+        // Coming back from results
+        currentStep = totalSteps;
+        showSlide('bq-q' + currentStep);
+        if (answers[currentStep]) markSelected(currentStep, answers[currentStep]);
+        updateProgress();
+        updateNav();
+        nextBtn.textContent = 'See my results →';
+        footer.style.display = '';
+      } else {
+        currentStep--;
+        showSlide('bq-q' + currentStep);
+        if (answers[currentStep]) markSelected(currentStep, answers[currentStep]);
+        updateProgress();
+        updateNav();
+        nextBtn.textContent = currentStep === totalSteps ? 'See my results →' : 'Continue →';
+      }
+    }
+
+    function restart() {
+      answers = {};
+      currentStep = 1;
+      body.querySelectorAll('.bq-option').forEach(function (btn) {
+        btn.classList.remove('selected');
+      });
+      // Reset crypto notes
+      Object.keys(BANKS).forEach(function (k) { BANKS[k].note = null; });
+      showSlide('bq-q1');
+      updateProgress();
+      updateNav();
+      nextBtn.textContent = 'Continue →';
+      bar.style.width = '0%';
+      label.textContent = 'Step 1 of 6';
+      footer.style.display = '';
+    }
+
+    /* ── Event listeners ─────────────────────────────────────── */
+    nextBtn.addEventListener('click', goNext);
+    backBtn.addEventListener('click', goBack);
+
+    // Option card clicks — select & auto-advance after brief pause
+    body.addEventListener('click', function (e) {
+      var btn = e.target.closest('.bq-option');
+      if (!btn) return;
+      var q = parseInt(btn.getAttribute('data-q'), 10);
+      var val = btn.getAttribute('data-val');
+      if (!q || !val) return;
+      markSelected(q, val);
+      answers[q] = val;
+      // Auto-advance after 300ms for a smooth feel
+      setTimeout(goNext, 300);
+    });
+
+    // Restart button (injected into results after render)
+    body.addEventListener('click', function (e) {
+      if (e.target.classList.contains('bq-restart-btn')) {
+        restart();
+      }
+    });
+
+    // Append restart button into results section
+    var resultsSection = document.getElementById('bq-results');
+    var restartBtn = document.createElement('button');
+    restartBtn.className = 'bq-restart-btn';
+    restartBtn.textContent = '← Start over';
+    resultsSection.appendChild(restartBtn);
+
+    /* ── Keyframe for shake animation ────────────────────────── */
+    var styleEl = document.createElement('style');
+    styleEl.textContent = '@keyframes shakeX { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)} }';
+    document.head.appendChild(styleEl);
+
+    /* ── Init ─────────────────────────────────────────────────── */
+    updateProgress();
+    updateNav();
+
+  })();
+  </script>
+
+</body>
+</html>

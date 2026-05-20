@@ -112,6 +112,27 @@
   </url>
 
   <url>
+    <loc>https://karman.com.sg/tools/business-bank-account-recommender</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/tools/compliance-deadline-calculator</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/tools/gst-registration-checker</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
     <loc>https://karman.com.sg/tools/incorporation-timeline</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>

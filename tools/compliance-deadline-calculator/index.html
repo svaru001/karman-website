@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Singapore Company Compliance Deadline Calculator | Karman</title>
+  <meta name="description" content="Free tool: Enter your Singapore company's incorporation date and financial year end to get your full compliance calendar — AGM, Annual Return, ECI, Form C-S, and GST deadlines." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Singapore compliance calendar, ACRA annual return deadline, ECI filing deadline Singapore, Form C-S deadline, AGM deadline Singapore company, GST filing deadline Singapore, Singapore corporate compliance dates" />
+  <link rel="canonical" href="https://karman.com.sg/tools/compliance-deadline-calculator" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karman.com.sg/tools/compliance-deadline-calculator" />
+  <meta property="og:title" content="Singapore Company Compliance Deadline Calculator | Karman" />
+  <meta property="og:description" content="Free tool: Enter your Singapore company's incorporation date and financial year end to get your full compliance calendar — AGM, Annual Return, ECI, Form C-S, and GST deadlines." />
+  <meta property="og:image" content="https://karman.com.sg/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Singapore Company Compliance Deadline Calculator | Karman" />
+  <meta name="twitter:description" content="Free tool: Enter your Singapore company's incorporation date and financial year end to get your full compliance calendar — AGM, Annual Return, ECI, Form C-S, and GST deadlines." />
+  <meta name="twitter:image" content="https://karman.com.sg/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+
+  <style>
+/* ─────────────────────────────────────────────
+   COMPLIANCE DEADLINE CALCULATOR — custom styles
+───────────────────────────────────────────── */
+
+/* === INPUT FORM === */
+.cdc-form {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.cdc-form__header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: 28px 32px 24px;
+}
+
+.cdc-form__header-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.12);
+  border-radius: 100px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.cdc-form__header h2 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.cdc-form__header p {
+  color: rgba(255,255,255,.65);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cdc-form__body {
+  padding: 32px;
+}
+
+.cdc-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.cdc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cdc-field--full {
+  grid-column: 1 / -1;
+}
+
+.cdc-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.cdc-field label .cdc-hint {
+  font-weight: 400;
+  color: var(--gray-400);
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.cdc-field input[type="date"],
+.cdc-field select {
+  width: 100%;
+  padding: 11px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cdc-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.cdc-field input[type="date"]:focus,
+.cdc-field select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+
+/* Toggle buttons */
+.cdc-toggle-group {
+  display: flex;
+  gap: 8px;
+}
+
+.cdc-toggle {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  cursor: pointer;
+  transition: all .18s ease;
+  text-align: center;
+}
+
+.cdc-toggle:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-light);
+}
+
+.cdc-toggle.active {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(26,107,204,.25);
+}
+
+.cdc-toggle.active-green {
+  border-color: #00A886;
+  background: #00C9A7;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,201,167,.25);
+}
+
+/* Submit */
+.cdc-form__footer {
+  padding: 0 32px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cdc-submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cdc-submit:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.cdc-submit svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cdc-reset {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-400);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color .2s;
+  padding: 4px 0;
+}
+
+.cdc-reset:hover {
+  color: var(--gray-800);
+}
+
+/* === RESULTS PANEL === */
+.cdc-results {
+  display: none;
+  margin-top: 28px;
+}
+
+.cdc-results.visible {
+  display: block;
+}
+
+.cdc-results__header {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 24px 28px 20px;
+  border-bottom: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cdc-results__title {
+  font-size: 18px;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cdc-results__subtitle {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.cdc-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.cdc-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.cdc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cdc-dot--red    { background: #EF4444; }
+.cdc-dot--amber  { background: #F59E0B; }
+.cdc-dot--green  { background: #10B981; }
+.cdc-dot--blue   { background: var(--blue); }
+
+/* Deadline list */
+.cdc-list {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+}
+
+.cdc-deadline-item {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  align-items: start;
+  gap: 16px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background .15s;
+  position: relative;
+}
+
+.cdc-deadline-item:last-child {
+  border-bottom: none;
+}
+
+.cdc-deadline-item:hover {
+  background: var(--gray-50);
+}
+
+.cdc-deadline-item__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.cdc-deadline-item__body {
+  min-width: 0;
+}
+
+.cdc-deadline-item__name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cdc-deadline-item__badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.cdc-deadline-item__badge--overdue {
+  background: #FEE2E2;
+  color: #B91C1C;
+}
+
+.cdc-deadline-item__badge--urgent {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.cdc-deadline-item__badge--soon {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.cdc-deadline-item__badge--ok {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.cdc-deadline-item__badge--note {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.cdc-deadline-item__desc {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.55;
+  margin-top: 2px;
+}
+
+.cdc-deadline-item__date {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.cdc-deadline-item__date-main {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.cdc-deadline-item__date-days {
+  font-size: 12px;
+  color: var(--gray-400);
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.cdc-deadline-item__date-days.overdue {
+  color: #EF4444;
+  font-weight: 600;
+}
+
+.cdc-deadline-item__date-days.urgent {
+  color: #F59E0B;
+  font-weight: 600;
+}
+
+/* Category separator */
+.cdc-category-row {
+  padding: 10px 24px 8px;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+/* Download + CTA */
+.cdc-results__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.cdc-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.cdc-download-btn:hover {
+  background: var(--navy-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(10,37,64,.25);
+}
+
+.cdc-download-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cdc-recalc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 18px;
+  background: #fff;
+  color: var(--gray-800);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.cdc-recalc-btn:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+/* CTA banner */
+.cdc-cta-banner {
+  background: linear-gradient(135deg, #0A2540 0%, #163758 100%);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cdc-cta-banner__content h3 {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.cdc-cta-banner__content p {
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cdc-cta-banner a.btn {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all .2s ease;
+}
+
+.cdc-cta-banner a.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255,92,53,.35);
+}
+
+/* Note item (auditor, one-time) */
+.cdc-note-item {
+  background: var(--blue-light);
+  border: 1px solid rgba(26,107,204,.15);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 8px 0;
+  font-size: 13px;
+  color: var(--navy);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.cdc-note-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--blue);
+}
+
+/* Empty state */
+.cdc-empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 15px;
+}
+
+/* Summary stats */
+.cdc-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gray-200);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.cdc-summary__stat {
+  background: #fff;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.cdc-summary__stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.cdc-summary__stat span {
+  font-size: 12px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.cdc-summary__stat--red strong { color: #EF4444; }
+.cdc-summary__stat--amber strong { color: #F59E0B; }
+.cdc-summary__stat--green strong { color: #10B981; }
+.cdc-summary__stat--total strong { color: var(--navy); }
+
+/* === TOOL INFO SECTION CUSTOM === */
+.cdc-info-section {
+  padding: 56px 0;
+  background: #fff;
+}
+
+.cdc-info-section .container {
+  max-width: 760px;
+}
+
+.cdc-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cdc-info-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.cdc-info-card__icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+
+.cdc-info-card__icon svg { width: 28px; height: 28px; stroke-width: 1.75; }
+.cdc-info-card h3 { font-size: 16px; margin-bottom: 6px; }
+.cdc-info-card p { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+
+/* === RESPONSIVE === */
+@media (max-width: 640px) {
+  .cdc-fields {
+    grid-template-columns: 1fr;
+  }
+  .cdc-field--full {
+    grid-column: 1;
+  }
+  .cdc-form__body,
+  .cdc-form__footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .cdc-form__header {
+    padding: 22px 20px 18px;
+  }
+  .cdc-results__header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cdc-deadline-item {
+    grid-template-columns: 12px 1fr;
+    padding: 14px 16px;
+  }
+  .cdc-deadline-item__date {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 4px;
+  }
+  .cdc-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cdc-cta-banner {
+    flex-direction: column;
+    padding: 22px 20px;
+  }
+  .cdc-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .cdc-legend {
+    gap: 10px;
+  }
+}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Singapore Company Compliance Deadline Calculator",
+        "url": "https://karman.com.sg/tools/compliance-deadline-calculator",
+        "description": "Free tool to calculate Singapore company compliance deadlines including AGM, Annual Return, ECI, Form C-S, and GST filing dates based on incorporation date and financial year end.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SGD" },
+        "provider": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://karman.com.sg/tools/" },
+          { "@type": "ListItem", "position": 3, "name": "Compliance Deadline Calculator", "item": "https://karman.com.sg/tools/compliance-deadline-calculator" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="tool-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC &amp; Fund Administration</strong>
+                <p>Singapore fund structures &amp; compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting &amp; Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration &amp; quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="../../tools/" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link">Blogs</a></li>
+        <li class="nav__item"><a href="../../#faq" class="nav__link">FAQs</a></li>
+        <div class="nav__actions">
+          <a href="../../#contact" class="btn btn--secondary">Contact us</a>
+          <a href="../../#get-started" class="btn btn--primary">Get started</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="tool-page-hero">
+    <div class="container">
+      <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../">Home</a><span>›</span>
+        <a href="../../tools/">Free Tools</a><span>›</span>
+        <span>Compliance Deadline Calculator</span>
+      </nav>
+      <h1>What are your company's compliance deadlines?</h1>
+      <p>Enter your incorporation date and financial year end to get a personalised compliance calendar for the next 12 months — covering ACRA, IRAS, and GST deadlines. Download as a calendar file.</p>
+      <div class="tool-page-hero__meta">
+        <span>🕐 Takes 1 minute</span>
+        <span>📅 Full 12-month calendar</span>
+        <span>📥 Download as .ics</span>
+        <span>🔒 No sign-up required</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-widget-section">
+    <div class="container">
+      <div class="tool-inline-custom">
+
+        <!-- INPUT FORM -->
+        <div class="cdc-form" id="cdcForm">
+          <div class="cdc-form__header">
+            <div class="cdc-form__header-tag">Compliance Calendar</div>
+            <h2>Enter your company details</h2>
+            <p>We use Singapore Companies Act rules and IRAS guidelines to calculate your exact deadlines.</p>
+          </div>
+          <div class="cdc-form__body">
+            <div class="cdc-fields">
+              <!-- Incorporation date -->
+              <div class="cdc-field">
+                <label for="incorpDate">
+                  Incorporation date
+                  <span class="cdc-hint">From your ACRA BizFile</span>
+                </label>
+                <input type="date" id="incorpDate" name="incorpDate" />
+              </div>
+
+              <!-- FYE month -->
+              <div class="cdc-field">
+                <label for="fyeMonth">
+                  Financial Year End (FYE) month
+                  <span class="cdc-hint">Last month of your financial year</span>
+                </label>
+                <select id="fyeMonth" name="fyeMonth">
+                  <option value="" disabled selected>Select month…</option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </div>
+
+              <!-- GST registered -->
+              <div class="cdc-field">
+                <label>GST-registered?</label>
+                <div class="cdc-toggle-group">
+                  <button type="button" class="cdc-toggle" id="gstYes" data-val="yes">Yes</button>
+                  <button type="button" class="cdc-toggle active" id="gstNo" data-val="no">No</button>
+                </div>
+              </div>
+
+              <!-- First year -->
+              <div class="cdc-field">
+                <label>
+                  First year of incorporation?
+                  <span class="cdc-hint">Auto-detected; override if needed</span>
+                </label>
+                <div class="cdc-toggle-group">
+                  <button type="button" class="cdc-toggle" id="firstYearYes" data-val="yes">Yes</button>
+                  <button type="button" class="cdc-toggle" id="firstYearNo" data-val="no">No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cdc-form__footer">
+            <button class="cdc-submit" id="cdcSubmit" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+              Generate my compliance calendar
+            </button>
+            <button class="cdc-reset" id="cdcReset" type="button" style="display:none;">Reset</button>
+          </div>
+          <div id="cdcError" style="display:none;padding:0 32px 20px;"><p style="color:#EF4444;font-size:14px;font-weight:500;" id="cdcErrorMsg"></p></div>
+        </div>
+
+        <!-- RESULTS PANEL -->
+        <div class="cdc-results" id="cdcResults">
+          <div class="cdc-results__header">
+            <div>
+              <div class="cdc-results__title" id="cdcResultsTitle">Your compliance calendar</div>
+              <div class="cdc-results__subtitle" id="cdcResultsSubtitle"></div>
+            </div>
+            <div class="cdc-legend">
+              <div class="cdc-legend__item"><span class="cdc-dot cdc-dot--red"></span>Overdue / &lt;30 days</div>
+              <div class="cdc-legend__item"><span class="cdc-dot cdc-dot--amber"></span>Within 60 days</div>
+              <div class="cdc-legend__item"><span class="cdc-dot cdc-dot--green"></span>60+ days away</div>
+            </div>
+          </div>
+
+          <!-- Summary stats -->
+          <div class="cdc-summary" id="cdcSummary">
+            <div class="cdc-summary__stat cdc-summary__stat--red">
+              <strong id="statOverdue">0</strong>
+              <span>Overdue / urgent</span>
+            </div>
+            <div class="cdc-summary__stat cdc-summary__stat--amber">
+              <strong id="statSoon">0</strong>
+              <span>Due within 60 days</span>
+            </div>
+            <div class="cdc-summary__stat cdc-summary__stat--green">
+              <strong id="statOk">0</strong>
+              <span>On track</span>
+            </div>
+            <div class="cdc-summary__stat cdc-summary__stat--total">
+              <strong id="statTotal">0</strong>
+              <span>Total deadlines</span>
+            </div>
+          </div>
+
+          <!-- Deadline list -->
+          <div class="cdc-list" id="cdcList"></div>
+
+          <!-- Notes -->
+          <div id="cdcNotes"></div>
+
+          <!-- Actions -->
+          <div class="cdc-results__actions">
+            <button class="cdc-download-btn" id="cdcDownload" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+              Download calendar (.ics)
+            </button>
+            <button class="cdc-recalc-btn" id="cdcRecalc" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:15px;height:15px;"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+              Recalculate
+            </button>
+          </div>
+
+          <!-- CTA banner -->
+          <div class="cdc-cta-banner">
+            <div class="cdc-cta-banner__content">
+              <h3>Don't miss a deadline</h3>
+              <p>Let us handle all your ACRA and IRAS filings as your corporate secretary — we track every deadline so you don't have to.</p>
+            </div>
+            <a href="/#contact" class="btn">Get a quote &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="cdc-info-section">
+    <div class="container">
+      <span class="section-tag">Singapore compliance rules</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">What deadlines does this cover?</h2>
+      <div class="cdc-info-grid">
+        <div class="cdc-info-card">
+          <div class="cdc-info-card__icon"><i data-lucide="file-text"></i></div>
+          <h3>Annual Return (ACRA)</h3>
+          <p>Private companies must file their Annual Return with ACRA within <strong>7 months</strong> of their Financial Year End. Late filing attracts penalties up to S$600 per officer.</p>
+        </div>
+        <div class="cdc-info-card">
+          <div class="cdc-info-card__icon"><i data-lucide="calculator"></i></div>
+          <h3>ECI — Estimated Chargeable Income</h3>
+          <p>Companies must file an ECI with IRAS within <strong>3 months</strong> after the end of each financial year. Companies with annual revenue of S$5M or less and no chargeable income may be exempt.</p>
+        </div>
+        <div class="cdc-info-card">
+          <div class="cdc-info-card__icon"><i data-lucide="receipt"></i></div>
+          <h3>Corporate Tax — Form C-S / Form C</h3>
+          <p>The corporate income tax return (Form C-S for qualifying companies, Form C for others) is due by <strong>30 November</strong> of the Year of Assessment (the year after your FYE year).</p>
+        </div>
+        <div class="cdc-info-card">
+          <div class="cdc-info-card__icon"><i data-lucide="users"></i></div>
+          <h3>AGM (Annual General Meeting)</h3>
+          <p>Private companies that send audited or unaudited financials to shareholders within <strong>5 months</strong> of FYE are exempt from holding an AGM. Otherwise, the AGM must be held within <strong>9 months</strong> of FYE.</p>
+        </div>
+        <div class="cdc-info-card">
+          <div class="cdc-info-card__icon"><i data-lucide="percent"></i></div>
+          <h3>GST Filing (Quarterly)</h3>
+          <p>GST-registered companies must file GST F5 returns quarterly — within <strong>1 month</strong> after each quarter end. Penalties for late filing start at S$200 per month.</p>
+        </div>
+        <div class="cdc-info-card">
+          <div class="cdc-info-card__icon"><i data-lucide="shield-check"></i></div>
+          <h3>Corporate Secretary Appointment</h3>
+          <p>Every Singapore company must appoint a qualified corporate secretary within <strong>6 months</strong> of incorporation. Karman can act as your corporate secretary from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TOOLS -->
+  <section class="tool-related-section">
+    <div class="container">
+      <span class="section-tag">Continue exploring</span>
+      <h2 class="section-heading" style="text-align:left;margin-top:12px;">Other free tools</h2>
+      <div class="tool-related-grid">
+        <a href="/tools/eligibility-checker" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="check-circle"></i></div>
+          <h4>Eligibility Checker</h4>
+          <p>Check if you qualify to incorporate a Singapore company.</p>
+        </a>
+        <a href="/tools/cost-calculator" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="calculator"></i></div>
+          <h4>Cost Calculator</h4>
+          <p>Estimate your annual corporate services fees.</p>
+        </a>
+        <a href="/tools/document-checklist" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="clipboard-list"></i></div>
+          <h4>Document Checklist</h4>
+          <p>Know exactly which documents you need to incorporate.</p>
+        </a>
+        <a href="/tools/incorporation-timeline" class="tool-related-card">
+          <div class="tool-related-card__icon"><i data-lucide="calendar"></i></div>
+          <h4>Incorporation Timeline</h4>
+          <p>See the full incorporation journey step by step.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges">
+            <span class="badge">ACRA Registered</span>
+            <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="../../#incorporation">Company Incorporation</a></li>
+              <li><a href="../../#secretary">Corporate Secretarial</a></li>
+              <li><a href="../../#accounting">Accounting</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Free Tools</h4>
+            <ul>
+              <li><a href="/tools/business-structure-recommender">Structure Recommender</a></li>
+              <li><a href="/tools/cost-calculator">Cost Calculator</a></li>
+              <li><a href="/tools/eligibility-checker">Eligibility Checker</a></li>
+              <li><a href="/tools/compliance-deadline-calculator">Compliance Calendar</a></li>
+              <li><a href="/tools/incorporation-timeline">Timeline</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../../#about">About</a></li>
+              <li><a href="../../#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script src="../../tools.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+  <script>
+  /* ─────────────────────────────────────────────
+     COMPLIANCE DEADLINE CALCULATOR — inline logic
+     No frameworks. Vanilla JS only.
+  ───────────────────────────────────────────── */
+  (function () {
+    'use strict';
+
+    /* ── Helpers ── */
+    var MONTHS = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+    var MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun',
+                        'Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    function today() {
+      var d = new Date();
+      d.setHours(0,0,0,0);
+      return d;
+    }
+
+    function addMonths(date, n) {
+      var d = new Date(date);
+      d.setMonth(d.getMonth() + n);
+      return d;
+    }
+
+    function addDays(date, n) {
+      var d = new Date(date);
+      d.setDate(d.getDate() + n);
+      return d;
+    }
+
+    function lastDayOfMonth(year, month) {
+      // month is 0-indexed
+      return new Date(year, month + 1, 0);
+    }
+
+    function formatDate(d) {
+      return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function formatDateShort(d) {
+      return d.getDate() + ' ' + MONTHS_SHORT[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function daysFromNow(d) {
+      var t = today();
+      var diff = Math.round((d - t) / 86400000);
+      return diff;
+    }
+
+    function statusFor(d) {
+      var days = daysFromNow(d);
+      if (days < 0)  return 'overdue';
+      if (days <= 30) return 'urgent';
+      if (days <= 60) return 'soon';
+      return 'ok';
+    }
+
+    function dotColor(status) {
+      if (status === 'overdue' || status === 'urgent') return 'cdc-dot--red';
+      if (status === 'soon') return 'cdc-dot--amber';
+      return 'cdc-dot--green';
+    }
+
+    function badgeHTML(status) {
+      if (status === 'overdue') return '<span class="cdc-deadline-item__badge cdc-deadline-item__badge--overdue">Overdue</span>';
+      if (status === 'urgent')  return '<span class="cdc-deadline-item__badge cdc-deadline-item__badge--urgent">Due &lt;30 days</span>';
+      if (status === 'soon')    return '<span class="cdc-deadline-item__badge cdc-deadline-item__badge--soon">Due &lt;60 days</span>';
+      return '';
+    }
+
+    function daysLabel(days) {
+      if (days < 0) return Math.abs(days) + ' days overdue';
+      if (days === 0) return 'Due today';
+      return 'In ' + days + ' days';
+    }
+
+    function daysClass(status) {
+      if (status === 'overdue' || status === 'urgent') return 'overdue';
+      if (status === 'soon') return 'urgent';
+      return '';
+    }
+
+    /* ── FYE helpers ── */
+    // Returns the last calendar day of a given FYE in a given year.
+    // fyeMonthIndex is 0-based (0 = Jan, 11 = Dec)
+    function fyeDate(year, fyeMonthIndex) {
+      return lastDayOfMonth(year, fyeMonthIndex);
+    }
+
+    // Returns the most recently completed FYE relative to a reference date.
+    function latestCompletedFYE(fyeMonthIndex, refDate) {
+      var yr = refDate.getFullYear();
+      var candidate = fyeDate(yr, fyeMonthIndex);
+      if (candidate > refDate) {
+        candidate = fyeDate(yr - 1, fyeMonthIndex);
+      }
+      return candidate;
+    }
+
+    // Returns the next upcoming FYE (strictly after refDate)
+    function nextFYE(fyeMonthIndex, refDate) {
+      var yr = refDate.getFullYear();
+      var candidate = fyeDate(yr, fyeMonthIndex);
+      if (candidate <= refDate) {
+        candidate = fyeDate(yr + 1, fyeMonthIndex);
+      }
+      return candidate;
+    }
+
+    /* ── ICS helpers ── */
+    function icsDate(d) {
+      // All-day event format: YYYYMMDD
+      var y = d.getFullYear();
+      var m = String(d.getMonth() + 1).padStart(2, '0');
+      var day = String(d.getDate()).padStart(2, '0');
+      return y + '' + m + '' + day;
+    }
+
+    function icsStamp() {
+      var now = new Date();
+      return now.getFullYear() +
+        String(now.getMonth() + 1).padStart(2,'0') +
+        String(now.getDate()).padStart(2,'0') + 'T' +
+        String(now.getHours()).padStart(2,'0') +
+        String(now.getMinutes()).padStart(2,'0') +
+        String(now.getSeconds()).padStart(2,'0') + 'Z';
+    }
+
+    function makeUID(title, date) {
+      return title.replace(/\s+/g,'-').toLowerCase() + '-' + icsDate(date) + '@karman.com.sg';
+    }
+
+    function buildICS(events) {
+      var lines = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Karman Corporate Services//Compliance Calendar//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'X-WR-CALNAME:Karman Compliance Calendar',
+        'X-WR-CALDESC:Singapore company compliance deadlines generated by Karman'
+      ];
+      var stamp = icsStamp();
+      events.forEach(function (ev) {
+        // End date for all-day = day after
+        var endDate = new Date(ev.date);
+        endDate.setDate(endDate.getDate() + 1);
+        lines.push('BEGIN:VEVENT');
+        lines.push('UID:' + makeUID(ev.title, ev.date));
+        lines.push('DTSTAMP:' + stamp);
+        lines.push('DTSTART;VALUE=DATE:' + icsDate(ev.date));
+        lines.push('DTEND;VALUE=DATE:' + icsDate(endDate));
+        lines.push('SUMMARY:' + ev.title);
+        lines.push('DESCRIPTION:' + ev.description.replace(/,/g, '\\,'));
+        lines.push('CATEGORIES:Compliance,Singapore,ACRA,IRAS');
+        lines.push('BEGIN:VALARM');
+        lines.push('TRIGGER:-P7D');
+        lines.push('ACTION:DISPLAY');
+        lines.push('DESCRIPTION:Reminder: ' + ev.title + ' due in 7 days');
+        lines.push('END:VALARM');
+        lines.push('BEGIN:VALARM');
+        lines.push('TRIGGER:-P1D');
+        lines.push('ACTION:DISPLAY');
+        lines.push('DESCRIPTION:Reminder: ' + ev.title + ' due tomorrow');
+        lines.push('END:VALARM');
+        lines.push('END:VEVENT');
+      });
+      lines.push('END:VCALENDAR');
+      return lines.join('\r\n');
+    }
+
+    /* ── DEADLINE CALCULATION ── */
+    function buildDeadlines(params) {
+      var incorpDate  = params.incorpDate;   // Date object
+      var fyeMonthIdx = params.fyeMonth - 1; // 0-based
+      var isGST       = params.isGST;
+      var isFirstYear = params.isFirstYear;
+
+      var t = today();
+      var deadlines = [];
+
+      /* Helper: push a deadline if it is within next 12 months or overdue */
+      function push(item) {
+        // Include overdue items and items up to 12 months from today
+        var cutoff = addMonths(t, 12);
+        if (item.date <= cutoff || daysFromNow(item.date) < 0) {
+          deadlines.push(item);
+        }
+      }
+
+      /* ── 1. Corporate Secretary appointment (one-time, within 6 months of incorp) ── */
+      var corpsecDeadline = addMonths(incorpDate, 6);
+      push({
+        title:    'Corporate Secretary Appointment',
+        date:     corpsecDeadline,
+        desc:     'Appoint a qualified corporate secretary within 6 months of incorporation (Companies Act s.171).',
+        category: 'One-time obligations',
+        isNote:   false
+      });
+
+      /* ── 2. Determine the FYE cycle ── */
+      // First FYE: the first occurrence of the FYE month that is at least 1 month after incorp
+      // (but no more than 12 months after incorp — ACRA convention)
+      function firstFYE() {
+        // Try the FYE in the same year as incorp
+        var yr = incorpDate.getFullYear();
+        var candidate = fyeDate(yr, fyeMonthIdx);
+        // If candidate is before incorp date, try next year
+        if (candidate <= incorpDate) {
+          candidate = fyeDate(yr + 1, fyeMonthIdx);
+        }
+        return candidate;
+      }
+
+      var fye1 = firstFYE();
+      var fye2 = fyeDate(fye1.getFullYear() + 1, fyeMonthIdx);
+
+      /* ── 3. Annual Return (within 7 months of FYE) ── */
+      function arDeadline(fyeD) {
+        return addMonths(fyeD, 7);
+      }
+
+      // AR for fye1
+      var ar1 = arDeadline(fye1);
+      push({
+        title:    'Annual Return — ACRA (FY' + fye1.getFullYear() + ')',
+        date:     ar1,
+        desc:     'File your Annual Return with ACRA within 7 months of financial year end (' + formatDateShort(fye1) + '). Lodgement fee: S$60 (exempt if revenue <S$500K).',
+        category: 'ACRA filings',
+        isNote:   false
+      });
+
+      // AR for fye2 (if within window)
+      var ar2 = arDeadline(fye2);
+      push({
+        title:    'Annual Return — ACRA (FY' + fye2.getFullYear() + ')',
+        date:     ar2,
+        desc:     'File your Annual Return with ACRA within 7 months of financial year end (' + formatDateShort(fye2) + ').',
+        category: 'ACRA filings',
+        isNote:   false
+      });
+
+      /* ── 4. AGM ── */
+      // First year special rule: within 18 months of incorporation
+      if (isFirstYear) {
+        var agmFirst = addMonths(incorpDate, 18);
+        push({
+          title:    'AGM Deadline (First Year)',
+          date:     agmFirst,
+          desc:     'First-year companies must hold an AGM (or send financials to exempt) within 18 months of incorporation. Private companies sending audited financials to shareholders within 5 months of FYE are exempt from holding an AGM.',
+          category: 'ACRA filings',
+          isNote:   false
+        });
+      } else {
+        // Ongoing: within 9 months of FYE for private company (if not AGM-exempt)
+        var agm1 = addMonths(fye1, 9);
+        push({
+          title:    'AGM Deadline (FY' + fye1.getFullYear() + ')',
+          date:     agm1,
+          desc:     'Private company AGM must be held within 9 months of FYE (' + formatDateShort(fye1) + '), unless exempt (financials sent to shareholders within 5 months of FYE).',
+          category: 'ACRA filings',
+          isNote:   false
+        });
+        var agm2 = addMonths(fye2, 9);
+        push({
+          title:    'AGM Deadline (FY' + fye2.getFullYear() + ')',
+          date:     agm2,
+          desc:     'Private company AGM must be held within 9 months of FYE (' + formatDateShort(fye2) + ').',
+          category: 'ACRA filings',
+          isNote:   false
+        });
+      }
+
+      /* ── 5. ECI — within 3 months after FYE ── */
+      function eciDeadline(fyeD) {
+        return addMonths(fyeD, 3);
+      }
+
+      var eci1 = eciDeadline(fye1);
+      push({
+        title:    'ECI Filing — IRAS (FY' + fye1.getFullYear() + ')',
+        date:     eci1,
+        desc:     'File Estimated Chargeable Income with IRAS within 3 months after FYE (' + formatDateShort(fye1) + '). Companies with revenue ≤S$5M and nil chargeable income may be waiver-exempt.',
+        category: 'IRAS tax filings',
+        isNote:   false
+      });
+
+      var eci2 = eciDeadline(fye2);
+      push({
+        title:    'ECI Filing — IRAS (FY' + fye2.getFullYear() + ')',
+        date:     eci2,
+        desc:     'File Estimated Chargeable Income with IRAS within 3 months after FYE (' + formatDateShort(fye2) + ').',
+        category: 'IRAS tax filings',
+        isNote:   false
+      });
+
+      /* ── 6. Form C-S / Form C ── */
+      // Due 30 November of the Year of Assessment (YA = year after FYE calendar year)
+      function formCDeadline(fyeD) {
+        var ya = fyeD.getFullYear() + 1;
+        return new Date(ya, 10, 30); // November 30 of YA year
+      }
+
+      var fc1 = formCDeadline(fye1);
+      var ya1 = fye1.getFullYear() + 1;
+      push({
+        title:    'Form C-S / Form C — IRAS (YA ' + ya1 + ')',
+        date:     fc1,
+        desc:     'Corporate income tax return due 30 November ' + ya1 + ' (Year of Assessment for FY ending ' + formatDateShort(fye1) + '). Form C-S for companies with revenue ≤S$5M; Form C for others.',
+        category: 'IRAS tax filings',
+        isNote:   false
+      });
+
+      var fc2 = formCDeadline(fye2);
+      var ya2 = fye2.getFullYear() + 1;
+      push({
+        title:    'Form C-S / Form C — IRAS (YA ' + ya2 + ')',
+        date:     fc2,
+        desc:     'Corporate income tax return due 30 November ' + ya2 + ' (Year of Assessment for FY ending ' + formatDateShort(fye2) + ').',
+        category: 'IRAS tax filings',
+        isNote:   false
+      });
+
+      /* ── 7. GST Quarterly filings ── */
+      if (isGST) {
+        // Fixed quarters: Q1 Jan-Mar → due Apr 30; Q2 Apr-Jun → due Jul 31;
+        //                 Q3 Jul-Sep → due Oct 31; Q4 Oct-Dec → due Jan 31 (next yr)
+        var gstQuarters = [
+          { qLabel: 'Q1 (Jan–Mar)', dueMonth: 3, dueDay: 30 },  // April 30
+          { qLabel: 'Q2 (Apr–Jun)', dueMonth: 6, dueDay: 31 },  // July 31
+          { qLabel: 'Q3 (Jul–Sep)', dueMonth: 9, dueDay: 31 },  // October 31
+          { qLabel: 'Q4 (Oct–Dec)', dueMonth: 0, dueDay: 31, nextYear: true } // January 31
+        ];
+        var cutoff = addMonths(t, 12);
+        // Generate for this year and next year to cover the full window
+        for (var yr = t.getFullYear() - 1; yr <= t.getFullYear() + 1; yr++) {
+          gstQuarters.forEach(function (q) {
+            var y = q.nextYear ? yr + 1 : yr;
+            var dueDate = new Date(y, q.dueMonth, q.dueDay);
+            if ((dueDate >= addDays(t, -180)) && dueDate <= cutoff) {
+              push({
+                title:    'GST F5 Return — ' + q.qLabel + ' ' + yr,
+                date:     dueDate,
+                desc:     'File GST F5 return for ' + q.qLabel + ' ' + yr + ' with IRAS. Due by ' + formatDateShort(dueDate) + '. Late filing penalty: S$200/month (max S$10,000).',
+                category: 'GST filings',
+                isNote:   false
+              });
+            }
+          });
+        }
+      }
+
+      /* Sort by date */
+      deadlines.sort(function (a, b) { return a.date - b.date; });
+
+      return deadlines;
+    }
+
+    /* ── Notes (auditor etc.) ── */
+    function buildNotes(params) {
+      var notes = [];
+      // Auditor appointment note
+      notes.push({
+        text: '<strong>Auditor appointment (conditional):</strong> If your company\'s annual revenue exceeds S$10 million, you must appoint an auditor within 3 months of incorporation (within ' + formatDate(addMonths(params.incorpDate, 3)) + '). Small exempt private companies (revenue &lt; S$10M, ≤20 shareholders, all individuals) do not need an audit.'
+      });
+      return notes;
+    }
+
+    /* ── DOM manipulation ── */
+    var form       = document.getElementById('cdcForm');
+    var results    = document.getElementById('cdcResults');
+    var listEl     = document.getElementById('cdcList');
+    var notesEl    = document.getElementById('cdcNotes');
+    var submitBtn  = document.getElementById('cdcSubmit');
+    var resetBtn   = document.getElementById('cdcReset');
+    var recalcBtn  = document.getElementById('cdcRecalc');
+    var downloadBtn = document.getElementById('cdcDownload');
+    var errorDiv   = document.getElementById('cdcError');
+    var errorMsg   = document.getElementById('cdcErrorMsg');
+
+    var gstYes      = document.getElementById('gstYes');
+    var gstNo       = document.getElementById('gstNo');
+    var firstYearYes = document.getElementById('firstYearYes');
+    var firstYearNo  = document.getElementById('firstYearNo');
+    var incorpInput = document.getElementById('incorpDate');
+    var fyeSelect   = document.getElementById('fyeMonth');
+
+    var gstState       = false;  // false = No
+    var firstYearState = null;   // null = auto-detect
+
+    // Stored for ICS download
+    var lastDeadlines = [];
+
+    /* Toggle handlers */
+    function setToggle(yesBtn, noBtn, val) {
+      if (val) {
+        yesBtn.classList.add('active');
+        noBtn.classList.remove('active');
+      } else {
+        noBtn.classList.add('active');
+        yesBtn.classList.remove('active');
+      }
+    }
+
+    gstYes.addEventListener('click', function () {
+      gstState = true;
+      setToggle(gstYes, gstNo, true);
+    });
+    gstNo.addEventListener('click', function () {
+      gstState = false;
+      setToggle(gstYes, gstNo, false);
+    });
+
+    firstYearYes.addEventListener('click', function () {
+      firstYearState = true;
+      setToggle(firstYearYes, firstYearNo, true);
+    });
+    firstYearNo.addEventListener('click', function () {
+      firstYearState = false;
+      setToggle(firstYearYes, firstYearNo, false);
+    });
+
+    /* Auto-detect first year when incorp date changes */
+    incorpInput.addEventListener('change', function () {
+      if (this.value) {
+        var incorp = new Date(this.value);
+        var monthsSince = (today() - incorp) / (1000 * 60 * 60 * 24 * 30.44);
+        var autoFirst = monthsSince <= 12;
+        // Only set if user hasn't manually overridden
+        if (firstYearState === null) {
+          setToggle(firstYearYes, firstYearNo, autoFirst);
+        }
+      }
+    });
+
+    /* Validate */
+    function validate() {
+      var val = incorpInput.value;
+      if (!val) { showError('Please enter your company incorporation date.'); return null; }
+      var incorp = new Date(val);
+      if (isNaN(incorp.getTime())) { showError('Invalid incorporation date.'); return null; }
+      if (incorp > today()) { showError('Incorporation date cannot be in the future.'); return null; }
+
+      var fyeVal = parseInt(fyeSelect.value, 10);
+      if (!fyeVal) { showError('Please select your Financial Year End month.'); return null; }
+
+      hideError();
+
+      // Determine first year
+      var monthsSince = (today() - incorp) / (1000 * 60 * 60 * 24 * 30.44);
+      var isFirst;
+      if (firstYearState !== null) {
+        isFirst = firstYearState;
+      } else {
+        isFirst = monthsSince <= 12;
+      }
+
+      return {
+        incorpDate:  incorp,
+        fyeMonth:    fyeVal,
+        isGST:       gstState,
+        isFirstYear: isFirst
+      };
+    }
+
+    function showError(msg) {
+      errorMsg.textContent = msg;
+      errorDiv.style.display = 'block';
+    }
+    function hideError() {
+      errorDiv.style.display = 'none';
+    }
+
+    /* Render deadlines */
+    function renderDeadlines(deadlines, params) {
+      listEl.innerHTML = '';
+      notesEl.innerHTML = '';
+
+      if (deadlines.length === 0) {
+        listEl.innerHTML = '<div class="cdc-empty">No compliance deadlines found in the next 12 months.</div>';
+        return;
+      }
+
+      // Group by category
+      var categories = {};
+      var catOrder = [];
+      deadlines.forEach(function (d) {
+        if (!categories[d.category]) {
+          categories[d.category] = [];
+          catOrder.push(d.category);
+        }
+        categories[d.category].push(d);
+      });
+
+      // Stats
+      var nOverdue = 0, nSoon = 0, nOk = 0;
+
+      catOrder.forEach(function (cat) {
+        // Category separator
+        var sep = document.createElement('div');
+        sep.className = 'cdc-category-row';
+        sep.textContent = cat;
+        listEl.appendChild(sep);
+
+        categories[cat].forEach(function (dl) {
+          var status = statusFor(dl.date);
+          var days   = daysFromNow(dl.date);
+
+          if (status === 'overdue' || status === 'urgent') nOverdue++;
+          else if (status === 'soon') nSoon++;
+          else nOk++;
+
+          var item = document.createElement('div');
+          item.className = 'cdc-deadline-item';
+          item.innerHTML =
+            '<span class="cdc-deadline-item__dot ' + dotColor(status) + '"></span>' +
+            '<div class="cdc-deadline-item__body">' +
+              '<div class="cdc-deadline-item__name">' +
+                escapeHTML(dl.title) +
+                badgeHTML(status) +
+              '</div>' +
+              '<div class="cdc-deadline-item__desc">' + dl.desc + '</div>' +
+            '</div>' +
+            '<div class="cdc-deadline-item__date">' +
+              '<div class="cdc-deadline-item__date-main">' + formatDateShort(dl.date) + '</div>' +
+              '<div class="cdc-deadline-item__date-days ' + daysClass(status) + '">' + daysLabel(days) + '</div>' +
+            '</div>';
+          listEl.appendChild(item);
+        });
+      });
+
+      // Update summary stats
+      document.getElementById('statOverdue').textContent = nOverdue;
+      document.getElementById('statSoon').textContent = nSoon;
+      document.getElementById('statOk').textContent = nOk;
+      document.getElementById('statTotal').textContent = deadlines.length;
+
+      // Notes
+      var notes = buildNotes(params);
+      notes.forEach(function (note) {
+        var noteEl = document.createElement('div');
+        noteEl.className = 'cdc-note-item';
+        noteEl.innerHTML =
+          '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>' +
+          '<span>' + note.text + '</span>';
+        notesEl.appendChild(noteEl);
+      });
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    /* Submit handler */
+    function runCalculation() {
+      var params = validate();
+      if (!params) return;
+
+      var deadlines = buildDeadlines(params);
+      lastDeadlines = deadlines;
+
+      // Update subtitle
+      var fyeName = MONTHS[params.fyeMonth - 1];
+      document.getElementById('cdcResultsSubtitle').textContent =
+        'FYE: ' + fyeName + ' | GST: ' + (params.isGST ? 'Registered' : 'Not registered') +
+        ' | Incorporated: ' + formatDateShort(params.incorpDate);
+
+      renderDeadlines(deadlines, params);
+
+      // Show results
+      results.classList.add('visible');
+      resetBtn.style.display = 'inline';
+
+      // Scroll results into view
+      setTimeout(function () {
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+
+    submitBtn.addEventListener('click', runCalculation);
+
+    recalcBtn.addEventListener('click', function () {
+      results.classList.remove('visible');
+      setTimeout(function () {
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    });
+
+    resetBtn.addEventListener('click', function () {
+      incorpInput.value = '';
+      fyeSelect.value = '';
+      gstState = false;
+      firstYearState = null;
+      setToggle(gstYes, gstNo, false);
+      firstYearYes.classList.remove('active');
+      firstYearNo.classList.remove('active');
+      results.classList.remove('visible');
+      hideError();
+      resetBtn.style.display = 'none';
+      lastDeadlines = [];
+    });
+
+    /* Download ICS */
+    downloadBtn.addEventListener('click', function () {
+      if (lastDeadlines.length === 0) return;
+      var icsEvents = lastDeadlines.map(function (dl) {
+        return {
+          title: 'Karman: ' + dl.title,
+          date:  dl.date,
+          description: dl.desc
+        };
+      });
+      var icsContent = buildICS(icsEvents);
+      var blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'karman-compliance-calendar.ics';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    /* Keyboard: Enter on inputs triggers calculation */
+    [incorpInput, fyeSelect].forEach(function (el) {
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') runCalculation();
+      });
+    });
+
+  })();
+  </script>
+
+</body>
+</html>
