@@ -433,6 +433,11 @@ if (heroStats) counterObserver.observe(heroStats);
     wa.style.transform = 'scale(1)';
     wa.style.boxShadow = '0 4px 20px rgba(37,211,102,.45)';
   });
+  wa.addEventListener('click', function () {
+    if (typeof gtag === 'function') {
+      gtag('event', 'whatsapp_click', { page_path: location.pathname });
+    }
+  });
   document.body.appendChild(wa);
 })();
 
