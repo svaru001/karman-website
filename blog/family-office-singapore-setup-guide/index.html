@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Setting Up a Family Office in Singapore: MAS Requirements, 13O/13U &amp; 2026 Guide | Karman</title>
+  <meta name="description" content="How to set up a family office in Singapore in 2026 - MAS requirements, 13O/13U tax incentives, minimum AUM, corporate structure, staff requirements, and why Singapore leads Asia for family offices." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karman.com.sg/blog/family-office-singapore-setup-guide" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://karman.com.sg/blog/family-office-singapore-setup-guide" />
+  <meta property="og:title" content="Setting Up a Family Office in Singapore: MAS Requirements, 13O/13U Tax Incentives, and Why Singapore Leads Asia" />
+  <meta property="og:description" content="How to set up a family office in Singapore in 2026 - MAS requirements, 13O/13U tax incentives, minimum AUM, corporate structure, staff requirements, and why Singapore leads Asia for family offices." />
+  <meta property="og:image" content="https://karman.com.sg/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>/* ─────────────────────────────────────────────
+   KARMAN - Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-500:   #6B7280;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 100px;
+  padding: 2px 7px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 64px 0 32px;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 64px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 32px;
+}
+
+.footer__brand p {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.footer__badges {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer__badges .badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 100px;
+  padding: 4px 12px;
+  color: rgba(255,255,255,.7);
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  color: rgba(255,255,255,.5);
+  transition: color .2s;
+}
+.footer__social-link:hover { color: #fff; }
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .footer__links { grid-template-columns: 1fr; }
+}
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Setting Up a Family Office in Singapore: MAS Requirements, 13O/13U Tax Incentives, and Why Singapore Leads Asia",
+      "url": "https://karman.com.sg/blog/family-office-singapore-setup-guide",
+      "image": "https://karman.com.sg/og-image.png",
+      "datePublished": "2026-05-21T00:00:00+08:00",
+      "dateModified": "2026-05-21T00:00:00+08:00",
+      "author": { "@type": "Organization", "name": "Karman Editorial Team", "url": "https://karman.com.sg" },
+      "publisher": { "@type": "Organization", "name": "Karman Corporate Services", "url": "https://karman.com.sg", "logo": { "@type": "ImageObject", "url": "https://karman.com.sg/og-image.png" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://karman.com.sg/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://karman.com.sg/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Family Office Singapore Setup Guide", "item": "https://karman.com.sg/blog/family-office-singapore-setup-guide" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much do I need to set up a family office in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "There is no government-mandated minimum AUM to incorporate a family office in Singapore. However, the 13O tax incentive requires S$20M AUM and the 13U requires S$50M. Practically, running a Single Family Office with dedicated investment professionals becomes cost-efficient at S$50M+ AUM. Below that, a Multi-Family Office arrangement is usually more economical. Incorporation costs start at S$700 (Pte Ltd) or S$3,000 (VCC); annual operating costs including staff and compliance typically run S$400,000-900,000 for a lean SFO." } },
+        { "@type": "Question", "name": "Do I need a MAS licence to set up a family office in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "For a Single Family Office managing only your family's own assets, no MAS Capital Markets Services licence is required - you are exempt under SFA Section 99(1)(h). However, to access the 13O or 13U tax incentives, you must obtain MAS endorsement and IRAS approval for the relevant scheme. Multi-Family Offices managing assets for unrelated families require a full CMS Fund Management licence." } },
+        { "@type": "Question", "name": "What is the minimum AUM for 13O and 13U in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "Following the January 2025 rule changes: 13O requires a minimum AUM of S$20 million, S$200,000/year in Singapore business spending, and 2 Singapore-based investment professionals. 13U requires S$50 million AUM, S$500,000/year in Singapore spending, and 3 investment professionals. Both schemes exempt qualifying investment income from Singapore corporate tax." } },
+        { "@type": "Question", "name": "How long does it take to set up a family office in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "Incorporating the legal entity (Pte Ltd or VCC) takes 1-3 business days. Hiring investment professionals and obtaining Employment Passes takes 4-8 weeks. Applying for 13O/13U tax incentives takes 2-4 months from application submission to IRAS/MAS approval. Total timeline from decision to fully operational family office: typically 3-6 months." } },
+        { "@type": "Question", "name": "Can I set up a family office in Singapore if I am not a Singapore citizen?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Singapore imposes no citizenship or residency requirement on ownership of a family office entity. A foreigner can 100% own a Singapore Pte Ltd or VCC. The family members themselves do not need to live in Singapore. However, the investment professionals employed by the family office must work in Singapore and will require Employment Passes (minimum salary S$5,600/month for most roles, S$6,200/month for financial services)." } },
+        { "@type": "Question", "name": "Is Singapore better than Hong Kong for family offices?", "acceptedAnswer": { "@type": "Answer", "text": "Singapore has overtaken Hong Kong for new family office establishments since 2019. Key advantages: zero capital gains tax, zero dividend withholding tax, 13O/13U income exemption (0% effective rate on qualifying income), 100+ double taxation agreements, strong rule of law, and political stability. Hong Kong offers similar tax treatment but elevated political risk and restrictions on capital movement have driven many families to Singapore. Switzerland remains the global benchmark for privacy and governance but has significantly higher tax rates and FATF/EU reporting obligations." } }
+      ]
+    },
+    { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".article-body > p:first-child"] } }
+  ]
+}
+  </script>
+</head>
+<body class="article-page-layout">
+
+<header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div><strong>Incorporation</strong><p>Register your Singapore company</p></div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div><strong>VCC &amp; Fund Administration</strong><p>Singapore fund structures &amp; compliance</p></div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div><strong>Corporate Secretary</strong><p>Stay compliant year-round</p></div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div><strong>Accounting &amp; Tax</strong><p>Books, filings, and more</p></div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div><strong>GST Registration</strong><p>Registration &amp; quarterly filing</p></div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div><strong>Nominee Director</strong><p>Incorporate from anywhere</p></div>
+            </a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link nav__link--active">Blog</a></li>
+        <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/#contact" class="btn btn--secondary">Contact us</a>
+        <a href="/onboarding" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span>Setting Up a Family Office in Singapore</span>
+      </nav>
+      <span class="article-hero__tag">Family Office</span>
+      <h1>Setting Up a Family Office in Singapore: MAS Requirements, 13O/13U Tax Incentives, and Why Singapore Leads Asia</h1>
+      <div class="article-hero__meta">
+        <span class="article-hero__meta-item">📅 May 2026</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">⏱ 14 min read</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">✍️ Karman Editorial Team</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-layout">
+
+    <article class="article-body">
+
+      <p><strong>Singapore has become Asia's undisputed family office capital.</strong> MAS data shows 1,400+ single family offices established in Singapore as of 2025 - up from fewer than 400 in 2020, a 250% increase in five years. The city-state has displaced both Switzerland and Hong Kong as the preferred domicile for ultra-high-net-worth Asian families, and a growing number of European and American families are following. This guide covers everything a family needs to establish a family office in Singapore in 2026: structure options, MAS requirements, 13O/13U tax incentives, staffing, costs, and a step-by-step setup process.</p>
+
+      <div class="callout callout--blue">
+        <strong>Who this guide is for:</strong> Ultra-high-net-worth families (AUM S$20M+), family principals, and their legal and financial advisors evaluating Singapore as a family office location. It covers the universal setup guide - not region-specific (see our separate guides for Gulf and Indian family offices).
+      </div>
+
+      <h2>Why Singapore? The Family Office Data</h2>
+
+      <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+        <tr><td>Single family offices in Singapore</td><td>1,400+</td><td>MAS, 2025</td></tr>
+        <tr><td>Growth rate (2020-2025)</td><td>~250%</td><td>MAS</td></tr>
+        <tr><td>Total AUM under MAS oversight</td><td>S$5.4 trillion</td><td>MAS Annual Report 2023</td></tr>
+        <tr><td>Corporate tax rate</td><td>17% (0% on qualifying income with 13O/13U)</td><td>IRAS</td></tr>
+        <tr><td>Capital gains tax</td><td>0%</td><td>IRAS</td></tr>
+        <tr><td>Dividend withholding tax</td><td>0%</td><td>IRAS</td></tr>
+        <tr><td>Double taxation agreements (DTAs)</td><td>100+</td><td>IRAS DTA Directory</td></tr>
+        <tr><td>FATF AML compliance</td><td>Top-tier</td><td>FATF 2022 Review</td></tr>
+        <tr><td>World Justice Project Rule of Law Index</td><td>Top 5</td><td>WJP 2024</td></tr>
+        <tr><td>IMD World Competitiveness Ranking</td><td>#1</td><td>IMD 2024</td></tr>
+      </tbody></table></div>
+
+      <h2>Singapore vs Other Family Office Jurisdictions</h2>
+
+      <div class="table-wrap"><table><thead><tr><th>Factor</th><th>Singapore</th><th>Hong Kong</th><th>Dubai (DIFC)</th><th>Switzerland</th></tr></thead><tbody>
+        <tr><td>Corporate tax (with incentive)</td><td>0% (13O/13U)</td><td>0% (offshore fund)</td><td>0%</td><td>8.5-11.9%</td></tr>
+        <tr><td>Capital gains tax</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+        <tr><td>Dividend WHT (received)</td><td>0%</td><td>0%</td><td>0%</td><td>35% (recoverable)</td></tr>
+        <tr><td>DTA network</td><td>100+</td><td>45+</td><td>80+</td><td>100+</td></tr>
+        <tr><td>Political risk</td><td>Very low</td><td>Elevated post-2019</td><td>Low-moderate</td><td>Very low</td></tr>
+        <tr><td>Rule of law (WJP)</td><td>Top 5</td><td>Top 20</td><td>Top 30</td><td>Top 10</td></tr>
+        <tr><td>English language</td><td>Excellent</td><td>Excellent</td><td>Good</td><td>Good</td></tr>
+        <tr><td>SFO regulatory burden</td><td>Exempt + 13O/13U</td><td>SFC licensing</td><td>DFSA-lite</td><td>FINMA registration</td></tr>
+        <tr><td>AML/FATF standing</td><td>Top-tier</td><td>Top-tier</td><td>Top-tier (2022)</td><td>Top-tier</td></tr>
+        <tr><td>Capital movement restrictions</td><td>None</td><td>Some (post-2019)</td><td>Moderate</td><td>None</td></tr>
+      </tbody></table></div>
+
+      <h2>Family Office Structure Options in Singapore</h2>
+
+      <p>Singapore offers three main structural approaches for a family office. The right choice depends on portfolio complexity, family composition, and whether you plan to admit external investors or co-investors.</p>
+
+      <p><strong>Option A: Singapore Pte Ltd (most common)</strong><br>
+      A standard private limited company incorporated with ACRA. The Pte Ltd receives dividends and investment income, manages the portfolio, and employs the investment team. Simple to set up (1-3 days, S$300 ACRA fee), well-understood structure, easy to administer. Apply for 13O/13U tax incentives separately via IRAS. Annual ACRA filing and corporate secretary required.</p>
+
+      <p><strong>Option B: Variable Capital Company (VCC)</strong><br>
+      Singapore's purpose-built fund vehicle. A VCC provides statutory sub-fund segregation - each sub-fund has legally ring-fenced assets, so a loss or claim in one sub-fund cannot affect another. Ideal when the family wants separate portfolios for different mandates (liquid equities, private equity, philanthropy, next-generation portfolios) within one legal entity. Directly eligible for 13O/13U. ACRA registration fee: S$3,000 plus S$300 per sub-fund. Requires a MAS-regulated fund manager to be appointed even for SFO use.</p>
+
+      <p><strong>Option C: Singapore HoldCo + SFO Operating Entity</strong><br>
+      A Singapore holding company (Pte Ltd) owns the investment assets and subsidiaries. A separate SFO operating entity employs the investment professionals and provides management services to the HoldCo. Useful for very large, complex families with real assets, operating businesses, and philanthropic vehicles. More complex to set up and administer but provides cleaner liability segregation and potential for different tax treatment on different asset classes.</p>
+
+      <div class="table-wrap"><table><thead><tr><th>Feature</th><th>Pte Ltd</th><th>VCC</th><th>HoldCo + SFO</th></tr></thead><tbody>
+        <tr><td>Setup cost</td><td>S$700-2,000</td><td>S$3,000-5,000</td><td>S$2,000-5,000</td></tr>
+        <tr><td>Sub-fund segregation</td><td>No</td><td>Yes (statutory)</td><td>Partial (via subsidiaries)</td></tr>
+        <tr><td>MAS-regulated manager needed</td><td>No (for SFO)</td><td>Yes</td><td>No (for SFO)</td></tr>
+        <tr><td>13O/13U eligible</td><td>Yes</td><td>Yes</td><td>Yes (HoldCo level)</td></tr>
+        <tr><td>Complexity</td><td>Low</td><td>Medium</td><td>High</td></tr>
+        <tr><td>Best for</td><td>Most SFOs</td><td>Multi-mandate or co-investor plans</td><td>Very large, complex families</td></tr>
+      </tbody></table></div>
+
+      <h2>MAS Licensing Requirements for Singapore Family Offices</h2>
+
+      <p>Whether you need a MAS licence depends on who the family office manages money for:</p>
+
+      <p><strong>Single Family Office (managing own family assets):</strong> Exempt from CMS licensing under Section 99(1)(h) of the Securities and Futures Act. No MAS licence required. The MAS definition of "family" includes the principal, spouse, children, grandchildren, parents, and siblings, plus entities wholly owned by these persons.</p>
+
+      <p><strong>Multi-Family Office (managing assets for unrelated families):</strong> Requires a Capital Markets Services (Fund Management) licence from MAS. Requirements: S$1M base capital, at least 2 licensed portfolio managers, compliance officer, annual MAS audit.</p>
+
+      <p><strong>For 13O/13U access:</strong> Even an SFO exempt from CMS licensing must apply to IRAS and receive MAS endorsement to access the tax incentive schemes. This is separate from the licensing question - it is a tax incentive approval, not a regulatory licence.</p>
+
+      <div class="callout callout--amber">
+        <div class="callout__title">Family definition edge cases</div>
+        <p>Cousins, in-laws, and extended family members may fall outside MAS's definition of "family" for the SFO exemption. Including them in the SFO's managed assets could trigger CMS licensing requirements. If the family office will serve extended family beyond parents, siblings, children, and spouses - seek legal advice from a Singapore financial regulation specialist before proceeding.</p>
+      </div>
+
+      <h2>13O Tax Incentive: Enhanced Tier Fund Exemption</h2>
+
+      <p>Section 13O exempts "specified income" of qualifying Singapore-constituted funds from Singapore corporate income tax. Following the January 2025 rule changes:</p>
+
+      <ul>
+        <li><strong>Minimum AUM:</strong> S$20 million at the time of application</li>
+        <li><strong>Minimum local business spending:</strong> S$200,000 per year (salaries, professional fees, rent, technology - all paid to Singapore entities)</li>
+        <li><strong>Minimum Singapore-based investment professionals:</strong> 2 (holding CFA, CPA, or MAS-recognised equivalent qualification)</li>
+        <li><strong>Fund constitution:</strong> Must be a Singapore Pte Ltd or VCC</li>
+        <li><strong>Investor type:</strong> Must be accredited or institutional investors</li>
+      </ul>
+
+      <p><strong>What income is exempt under 13O:</strong> Gains and income from equities (listed and unlisted), bonds, derivatives, real estate investment trusts, commodities, private equity and venture capital investments. Direct gains from Singapore residential property are excluded (from 2023 amendment).</p>
+
+      <h2>13U Tax Incentive: Ultra-Enhanced Tier Fund Exemption</h2>
+
+      <p>13U provides a broader income exemption scope and is designed for larger family offices with significant local presence:</p>
+
+      <ul>
+        <li><strong>Minimum AUM:</strong> S$50 million</li>
+        <li><strong>Minimum local business spending:</strong> S$500,000 per year</li>
+        <li><strong>Minimum Singapore-based investment professionals:</strong> 3</li>
+        <li><strong>Additional benefit:</strong> Ability to invest in Singapore-incorporated companies without the restrictions that apply under 13O</li>
+      </ul>
+
+      <div class="table-wrap"><table><thead><tr><th>Condition</th><th>13O</th><th>13U</th></tr></thead><tbody>
+        <tr><td>Minimum AUM</td><td>S$20 million</td><td>S$50 million</td></tr>
+        <tr><td>Local business spending</td><td>S$200,000/yr</td><td>S$500,000/yr</td></tr>
+        <tr><td>Investment professionals (Singapore)</td><td>2</td><td>3</td></tr>
+        <tr><td>Singapore company investments</td><td>Restricted</td><td>More flexible</td></tr>
+        <tr><td>Application process</td><td>IRAS + MAS endorsement</td><td>IRAS + MAS endorsement</td></tr>
+        <tr><td>Processing time</td><td>2-4 months</td><td>2-4 months</td></tr>
+        <tr><td>Typical user</td><td>Mid-size SFO</td><td>Large SFO or MFO</td></tr>
+      </tbody></table></div>
+
+      <p><strong>Application process:</strong> Submit Form IR37 to IRAS, accompanied by a MAS endorsement letter confirming the family office meets the investment professional and local spending conditions. IRAS processes the application in 2-4 months and issues a letter of approval. Annual certification to IRAS required to confirm conditions are still met.</p>
+
+      <h2>Family Office Staffing and Employment Pass Requirements</h2>
+
+      <p>Investment professionals managing the family office portfolio will typically need Employment Passes (EP) from MOM:</p>
+
+      <ul>
+        <li><strong>EP minimum salary:</strong> S$5,600/month (most sectors), S$6,200/month (financial services, from January 2026)</li>
+        <li><strong>COMPASS points:</strong> EP applicants must score at least 40/100 on MOM's COMPASS framework (salary, qualifications, diversity, local employment support)</li>
+        <li><strong>Processing time:</strong> 3-8 weeks per application</li>
+        <li><strong>Investment professionals for 13O/13U:</strong> Must hold CFA, CPA, or MAS-recognised equivalent. Founders who are qualified can count towards this requirement.</li>
+      </ul>
+
+      <p>Most family offices opt for 2-3 dedicated investment professionals (CIO and 1-2 portfolio managers) with outsourced back-office functions (accounting, compliance, corporate secretary). This keeps the EP headcount manageable while meeting 13O conditions.</p>
+
+      <h2>Annual Operating Cost for a Singapore Family Office</h2>
+
+      <div class="table-wrap"><table><thead><tr><th>Cost Item</th><th>Annual Cost (SFO, Pte Ltd, S$50M AUM)</th></tr></thead><tbody>
+        <tr><td>CIO salary (Singapore-based)</td><td>S$200,000-500,000</td></tr>
+        <tr><td>Portfolio manager salary (1)</td><td>S$100,000-250,000</td></tr>
+        <tr><td>Corporate secretary</td><td>S$3,000-6,000</td></tr>
+        <tr><td>Annual audit</td><td>S$15,000-30,000</td></tr>
+        <tr><td>Accounting and bookkeeping</td><td>S$8,000-20,000</td></tr>
+        <tr><td>Tax advisory and IRAS filing</td><td>S$5,000-15,000</td></tr>
+        <tr><td>Compliance and AML review</td><td>S$10,000-20,000</td></tr>
+        <tr><td>Singapore office rent (CBD, 500 sqft)</td><td>S$36,000-60,000</td></tr>
+        <tr><td>Portfolio management technology</td><td>S$20,000-50,000</td></tr>
+        <tr><td><strong>Total annual operating cost</strong></td><td><strong>S$400,000-1,000,000+</strong></td></tr>
+      </tbody></table></div>
+
+      <p>At 1% of S$50M AUM = S$500,000 implied management fee - the SFO breaks even vs using an external manager at 1%. Above S$100M AUM, the SFO becomes clearly more cost-efficient while providing greater control and investment flexibility.</p>
+
+      <h2>Step-by-Step: How to Set Up a Singapore Family Office</h2>
+
+      <ol>
+        <li><strong>Choose your legal structure</strong> (Pte Ltd vs VCC based on complexity and sub-fund needs)</li>
+        <li><strong>Incorporate with ACRA</strong> - 1-3 business days, S$300 (Pte Ltd) or S$3,000 (VCC)</li>
+        <li><strong>Appoint corporate secretary</strong> - mandatory within 6 months, typically done on Day 1</li>
+        <li><strong>Hire investment professionals</strong> - CIO and portfolio manager(s); apply for Employment Passes (4-8 weeks)</li>
+        <li><strong>Apply for 13O or 13U</strong> - compile business plan, investment mandate, staff CVs, local spending projections; submit to IRAS with MAS endorsement (2-4 months)</li>
+        <li><strong>Open bank accounts</strong> - DBS Private Banking, OCBC Premier, or international private banks (HSBC, Julius Baer); 4-8 weeks onboarding for private banking</li>
+        <li><strong>Set up investment infrastructure</strong> - portfolio management system, AML/KYC framework, compliance policies</li>
+        <li><strong>Transfer assets to Singapore entity</strong> - consider home-country exit tax implications; engage a cross-border tax advisor</li>
+      </ol>
+
+      <p><strong>Total timeline:</strong> 3-6 months from decision to fully operational family office, assuming Employment Passes are approved without delay and 13O/13U application is filed early.</p>
+
+      <h2>Updated May 2026</h2>
+
+      <div class="callout callout--blue">
+        MAS implemented enhanced beneficial ownership disclosure requirements for Singapore family offices in early 2026. All SFOs must maintain an up-to-date register of natural person ultimate beneficial owners (UBOs) and report changes to ACRA within 2 business days. Family offices using VCC structures must comply with updated AML/CFT guidelines for institutional investors issued in Q1 2026. Singapore's National Single Window for family office applications - linking ACRA incorporation, MOM EP applications, and IRAS 13O/13U submissions into a coordinated process - is expected to launch in Q3 2026.
+      </div>
+
+      <section style="margin-top:48px;">
+        <h2>Official Sources</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://www.mas.gov.sg/publications/annual-reports" target="_blank" rel="noopener noreferrer">MAS Annual Report - AUM and Family Office Data</a></li>
+          <li><a href="https://www.mas.gov.sg/regulation/acts/securities-and-futures-act" target="_blank" rel="noopener noreferrer">MAS - Securities and Futures Act (SFA Section 99(1)(h) Exemption)</a></li>
+          <li><a href="https://www.iras.gov.sg/taxes/corporate-income-tax/income-exemptions-and-reliefs/tax-exemption-schemes-for-funds" target="_blank" rel="noopener noreferrer">IRAS - Tax Exemption Schemes for Funds (13O and 13U)</a></li>
+          <li><a href="https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility" target="_blank" rel="noopener noreferrer">MOM - Employment Pass Eligibility and COMPASS</a></li>
+          <li><a href="https://www.acra.gov.sg/business-registration/variable-capital-companies" target="_blank" rel="noopener noreferrer">ACRA - Variable Capital Company Registration</a></li>
+        </ul>
+      </section>
+
+      <section class="article-faq-section" style="margin-top:56px;padding-top:0;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__grid" style="max-width:100%;margin-top:24px;">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How much do I need to set up a family office in Singapore?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>There is no government-mandated minimum AUM to incorporate a family office in Singapore. However, the 13O tax incentive requires S$20M AUM and the 13U requires S$50M. Practically, a Single Family Office with dedicated investment professionals becomes cost-efficient at S$50M+ AUM. Incorporation costs start at S$700 (Pte Ltd) or S$3,000 (VCC); annual operating costs including staff and compliance typically run S$400,000-900,000 for a lean SFO.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do I need a MAS licence to set up a family office in Singapore?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>For a Single Family Office managing only your family's own assets, no MAS Capital Markets Services licence is required - you are exempt under SFA Section 99(1)(h). However, to access the 13O or 13U tax incentives, you must obtain MAS endorsement and IRAS approval. Multi-Family Offices managing assets for unrelated families require a full CMS Fund Management licence.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is the minimum AUM for 13O and 13U in Singapore?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Following the January 2025 rule changes: 13O requires a minimum AUM of S$20 million, S$200,000/year in Singapore business spending, and 2 Singapore-based investment professionals. 13U requires S$50 million AUM, S$500,000/year in Singapore spending, and 3 investment professionals. Both schemes exempt qualifying investment income from Singapore corporate tax.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How long does it take to set up a family office in Singapore?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Incorporating the legal entity (Pte Ltd or VCC) takes 1-3 business days. Hiring investment professionals and obtaining Employment Passes takes 4-8 weeks. Applying for 13O/13U tax incentives takes 2-4 months from application submission to IRAS/MAS approval. Total timeline from decision to fully operational family office: typically 3-6 months.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I set up a family office in Singapore if I am not a Singapore citizen?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Yes. Singapore imposes no citizenship or residency requirement on ownership of a family office entity. A foreigner can 100% own a Singapore Pte Ltd or VCC. The family members themselves do not need to live in Singapore. However, investment professionals managing the assets must be Singapore-based and will require Employment Passes (minimum salary S$5,600/month, financial services S$6,200/month).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Is Singapore better than Hong Kong for family offices?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Singapore has overtaken Hong Kong for new family office establishments since 2019. Key advantages: zero capital gains tax, zero dividend withholding tax, 13O/13U income exemption (0% effective rate on qualifying income), 100+ double taxation agreements, strong rule of law, and political stability. Hong Kong offers similar tax treatment but elevated political risk and restrictions on capital movement have driven many families to Singapore.</p></div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__eyebrow">Setting up a family office?</div>
+        <h3>Get started from S$699</h3>
+        <p>Karman handles incorporation, corporate secretary, VCC administration, and 13O/13U preparation for Singapore family offices. Talk to us about your structure.</p>
+        <a href="/onboarding" class="btn btn--primary">Start your application</a>
+        <a href="/tools" class="sidebar-cta__secondary">Try our free tools first</a>
+      </div>
+      <div class="sidebar-tools">
+        <h4>Useful free tools</h4>
+        <a href="/tools/business-structure-recommender"><span>🏗️</span><span>Structure Recommender</span></a>
+        <a href="/tools/cost-calculator"><span>🧮</span><span>Cost Calculator</span></a>
+        <a href="/tools/singapore-tax-calculator"><span>📊</span><span>Singapore Tax Calculator</span></a>
+        <a href="/tools/eligibility-checker"><span>✅</span><span>Eligibility Checker</span></a>
+        <a href="/tools/ep-compass-calculator"><span>🧭</span><span>EP Compass Calculator</span></a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="article-related">
+    <div class="container">
+      <h2 class="article-related__heading">Related articles</h2>
+      <div class="article-related__grid">
+        <a href="/blog/single-vs-multi-family-office-singapore" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Family Office</span>
+          <h3 class="blog-card__title">Single vs Multi-Family Office Singapore: Which to Choose?</h3>
+          <p class="blog-card__excerpt">Full comparison of SFO and MFO structures in Singapore - cost, privacy, MAS licensing, minimum AUM, and the economic crossover point.</p>
+          <div class="blog-card__meta"><span>12 min read</span></div>
+        </a>
+        <a href="/blog/vcc-13o-13u-tax-incentives-singapore" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--tax">Tax</span>
+          <h3 class="blog-card__title">Singapore VCC 13O and 13U Tax Incentives Guide</h3>
+          <p class="blog-card__excerpt">How the Section 13O and 13U fund tax exemption schemes work, qualification requirements, local spending thresholds, and how to apply.</p>
+          <div class="blog-card__meta"><span>9 min read</span></div>
+        </a>
+        <a href="/blog/vcc-family-office-singapore-2025" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Family Office</span>
+          <h3 class="blog-card__title">VCC Family Office Singapore: Complete Guide</h3>
+          <p class="blog-card__excerpt">How to use a Singapore VCC as a family office vehicle - structure, MAS requirements, 13O/13U eligibility, and cost breakdown for 2025-2026.</p>
+          <div class="blog-card__meta"><span>10 min read</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  </div>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="/#incorporation">Company Incorporation</a></li>
+            <li><a href="/services/vcc-fund-administration">VCC &amp; Fund Administration</a></li>
+            <li><a href="/#secretary">Corporate Secretarial</a></li>
+            <li><a href="/#accounting">Accounting &amp; Bookkeeping</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Resources</h4><ul>
+            <li><a href="/tools">Free Tools</a></li>
+            <li><a href="/templates/">Templates</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/for">Industry Guides</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="/#about">About Karman</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</p>
+      </div>
+    </div>
+  </footer>
+
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../blog.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="/script.js"></script>
+</body>
+</html>
