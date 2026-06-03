@@ -147,6 +147,27 @@
   </url>
 
   <url>
+    <loc>https://karman.com.sg/tools/cpf-employment-cost-calculator</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/tools/singapore-grant-finder</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://karman.com.sg/tools/s-pass-quota-calculator</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
     <loc>https://karman.com.sg/tools/compliance-deadline-calculator</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
