@@ -1135,10 +1135,19 @@
   </url>
   <url>
     <loc>https://karman.com.sg/for/india</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
+  <!-- India state landing pages (June 2026) -->
+  <url><loc>https://karman.com.sg/for/india/gujarat</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/maharashtra</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/karnataka</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/tamil-nadu</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/delhi-ncr</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/telangana</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/rajasthan</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/for/india/punjab</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url>
     <loc>https://karman.com.sg/for/uae</loc>
     <lastmod>2026-05-16</lastmod>
