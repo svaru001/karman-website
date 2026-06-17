@@ -166,6 +166,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+  <url><loc>https://karman.com.sg/tools/transfer-pricing-margin-simulator</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/tools/fema-lrs-tracker</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/tools/reverse-flip-cost-calculator</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <url>
     <loc>https://karman.com.sg/tools/compliance-deadline-calculator</loc>
