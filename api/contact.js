@@ -39,20 +39,23 @@ async function saveLead(lead) {
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { name, email, phone, service, message, source, entityType, stage, country, company, vcc } = req.body;
+  const { name, email, phone, service, message, source, entityType, stage, country, company, vcc, form_name, page } = req.body;
   const key = process.env.RESEND_API_KEY;
 
   if (!key) return res.status(500).json({ error: 'Email service not configured' });
   if (!name) return res.status(400).json({ error: 'Name required' });
 
   const isOnboarding = (source === 'onboarding');
+  const isBlog = typeof form_name === 'string' && form_name.indexOf('blog') === 0;
   const subject = isOnboarding
     ? `[Onboarding] ${name} — ${entityType === 'vcc' ? 'VCC / Fund' : 'Private Company'}`
-    : `[Enquiry] ${name}${service ? ' — ' + service : ''}`;
+    : isBlog
+      ? `[Blog Enquiry] ${name}${page ? ' — ' + page : ''}`
+      : `[Enquiry] ${name}${service ? ' — ' + service : ''}`;
 
   const html = isOnboarding
     ? buildOnboardingEmail({ name, email, phone, service, entityType, stage, country, company, vcc })
-    : buildGenericEmail({ name, email, phone, service, message });
+    : buildGenericEmail({ name, email, phone, service, message, page });
 
   const notifyRes = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -81,8 +84,8 @@ module.exports = async function handler(req, res) {
     status: 'Active',
     comments: isOnboarding
       ? `${entityType === 'vcc' ? 'VCC' : 'Pte Ltd'} enquiry${service ? ' — ' + service : ''}`
-      : (message || service || '').slice(0, 200),
-    source: isOnboarding ? 'onboarding' : 'contact',
+      : ((message || service || '') + (isBlog && page ? ` [from ${page}]` : '')).slice(0, 240),
+    source: isOnboarding ? 'onboarding' : (isBlog ? (form_name || 'blog') : 'contact'),
     createdAt: Date.now(),
   });
 
@@ -167,7 +170,7 @@ function buildOnboardingEmail({ name, email, phone, service, entityType, stage, 
 </html>`;
 }
 
-function buildGenericEmail({ name, email, phone, service, message }) {
+function buildGenericEmail({ name, email, phone, service, message, page }) {
   return `<!DOCTYPE html>
 <html>
 <body style="font-family:Arial,sans-serif;max-width:640px;margin:0 auto;padding:24px;color:#1a1a2e;">
@@ -180,6 +183,7 @@ function buildGenericEmail({ name, email, phone, service, message }) {
       ${row('Email', email ? `<a href="mailto:${email}" style="color:#0066CC;">${email}</a>` : null)}
       ${row('Phone', phone)}
       ${row('Service', service)}
+      ${row('Source page', page)}
       <tr><td ${th}>Message</td><td style="padding:10px 14px;border:1px solid #e1e4ea;white-space:pre-wrap;">${message || '—'}</td></tr>
     </table>
     ${email ? `<a href="mailto:${email}?subject=Re: Your Karman enquiry" style="background:#0A2540;color:white;padding:11px 24px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;">Reply to ${name} →</a>` : ''}

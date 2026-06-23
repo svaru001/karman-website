@@ -557,3 +557,122 @@ if (heroStats) counterObserver.observe(heroStats);
     });
   });
 })();
+
+// === BLOG CONVERSION LAYER ===
+// Injects a contextual in-content CTA + an end-of-article inline lead form
+// into every blog post (anything with .article-body). One change, all posts.
+(function () {
+  const article = document.querySelector('.article-body');
+  if (!article) return;
+  if (article.dataset.convInjected) return;
+  article.dataset.convInjected = '1';
+
+  // Contextual copy based on the post's topic
+  function ctx() {
+    const s = (location.pathname + ' ' + (document.querySelector('h1') ? document.querySelector('h1').textContent : '')).toLowerCase();
+    if (/exporter|textile|chemical|pharma|engineering|agri|commodity|trading|trader|manufactur/.test(s))
+      return { tag: 'For Indian exporters', h: 'Exporting from India? Set up your Singapore trading entity the right way.',
+        sub: 'We handle the Singapore incorporation, nominee director, and banking - and coordinate with your India-side CA on FEMA and transfer pricing.',
+        short: 'Talk to us about a Singapore trading structure for your export business.', svc: 'Company Incorporation' };
+    if (/vcc|fund|gbc|13o|13u|family-office|mauritius/.test(s))
+      return { tag: 'For fund managers', h: 'Setting up a Singapore fund or VCC?',
+        sub: 'Talk to our VCC and fund administration team about structuring, 13O/13U incentives, and ongoing compliance.',
+        short: 'Talk to our VCC & fund administration team.', svc: 'VCC / Fund Administration' };
+    if (/india|indian|fema|dtaa|nri|flip|poem/.test(s))
+      return { tag: 'For Indian founders', h: 'Setting up your Singapore company from India?',
+        sub: 'We handle the full Singapore side - incorporation, nominee director, and banking - and coordinate with your India-side CA on FEMA compliance.',
+        short: 'We handle the full Singapore side, FEMA-coordinated with your CA.', svc: 'Company Incorporation' };
+    return { tag: 'Talk to an expert', h: 'Need help setting up your Singapore company?',
+      sub: 'Talk to a Singapore-based incorporation specialist - free, no obligation, reply within 1 business day.',
+      short: 'Talk to a Singapore-based incorporation specialist.', svc: 'Company Incorporation' };
+  }
+  const c = ctx();
+
+  // 1) In-content contextual CTA, placed after the reader's first section
+  const h2s = article.querySelectorAll('h2');
+  const anchor = h2s[1] || h2s[0] || null;
+  if (anchor) {
+    const banner = document.createElement('div');
+    banner.className = 'blog-inline-cta';
+    banner.innerHTML =
+      '<div class="blog-inline-cta__body"><strong>' + c.h + '</strong><span>' + c.short + '</span></div>' +
+      '<div class="blog-inline-cta__actions">' +
+        '<a href="/onboarding" class="btn btn--primary" data-conv="inline_get_started">Get started</a>' +
+        '<a href="#blogLead" class="blog-inline-cta__link" data-conv="inline_ask">Ask a question →</a>' +
+      '</div>';
+    article.insertBefore(banner, anchor);
+    banner.querySelector('[data-conv="inline_ask"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      const lead = document.getElementById('blogLead');
+      if (lead) { lead.scrollIntoView({ behavior: 'smooth', block: 'center' }); const n = lead.querySelector('#blName'); if (n) setTimeout(function(){ n.focus(); }, 500); }
+    });
+  }
+
+  // 2) End-of-article inline lead form (in-page conversion, no navigation)
+  const lead = document.createElement('div');
+  lead.className = 'blog-lead';
+  lead.id = 'blogLead';
+  lead.innerHTML =
+    '<span class="blog-lead__tag">' + c.tag + '</span>' +
+    '<div class="blog-lead__title">' + c.h + '</div>' +
+    '<p class="blog-lead__sub">' + c.sub + '</p>' +
+    '<form class="blog-lead__form" id="blogLeadForm" novalidate>' +
+      '<div class="blog-lead__row">' +
+        '<input type="text" id="blName" name="name" placeholder="Your name" autocomplete="name" />' +
+        '<input type="email" id="blEmail" name="email" placeholder="Email" autocomplete="email" />' +
+        '<input type="tel" id="blPhone" name="phone" placeholder="Phone / WhatsApp" autocomplete="tel" />' +
+      '</div>' +
+      '<textarea id="blMsg" name="message" rows="2" placeholder="Briefly, what do you need help with?"></textarea>' +
+      '<button type="submit" class="btn btn--primary btn--full">Get a free, no-obligation reply →</button>' +
+      '<p class="blog-lead__trust"><span>🔒 Free &amp; no obligation</span><span>⏱ Reply within 1 business day</span><span>🛡 Your details stay private</span></p>' +
+    '</form>';
+  article.appendChild(lead);
+
+  // Impression event (once, when the lead form scrolls into view)
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          if (typeof gtag === 'function') gtag('event', 'blog_cta_view', { page_path: location.pathname });
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(lead);
+  }
+
+  // Submit handler
+  document.getElementById('blogLeadForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    const name = form.querySelector('#blName').value.trim();
+    const email = form.querySelector('#blEmail').value.trim();
+    const phone = form.querySelector('#blPhone').value.trim();
+    const message = form.querySelector('#blMsg').value.trim();
+
+    if (!name) { form.querySelector('#blName').focus(); return; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { form.querySelector('#blEmail').focus(); return; }
+    if (!email && !phone) { form.querySelector('#blEmail').focus(); return; }
+
+    btn.disabled = true;
+    const orig = btn.textContent;
+    btn.textContent = 'Sending…';
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, phone: phone, message: message, service: c.svc, form_name: 'blog_inline', page: location.pathname })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function () {
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'blog_inline', service: c.svc, page_path: location.pathname });
+        lead.innerHTML = '<div class="blog-lead__success"><strong>✓ Thanks, ' + (name.split(' ')[0] || 'there') + '!</strong><span>A Singapore-based advisor will be in touch within 1 business day.</span></div>';
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = orig;
+        alert('Something went wrong. Please email us at team@karman.com.sg');
+      });
+  });
+})();
