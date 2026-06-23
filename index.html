@@ -302,6 +302,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav__item { position: relative; }
+.nav__item--mobile-cta { display: none; }
 
 .nav__link {
   display: flex;
@@ -460,8 +461,18 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 56px;
+  margin-bottom: 18px;
 }
+.hero__reassurance {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  color: var(--gray-600);
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+.hero__reassurance svg { width: 16px; height: 16px; color: var(--teal); stroke-width: 2.2; }
 
 .hero__stats {
   display: flex;
@@ -553,6 +564,32 @@ h1, h2, h3, h4, h5 {
   border-radius: 100px;
   padding: 6px 16px;
 }
+/* Credibility strip */
+.cred-strip__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+.cred-item__icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--blue-light);
+  color: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cred-item__icon svg { width: 20px; height: 20px; stroke-width: 1.9; }
+.cred-item strong { display: block; font-size: 15px; color: var(--navy); font-family: 'Sora','Inter',sans-serif; line-height: 1.2; }
+.cred-item span { font-size: 12.5px; color: var(--gray-600); line-height: 1.35; }
+@media (max-width: 860px) { .cred-strip__inner { grid-template-columns: 1fr 1fr; gap: 18px; } }
+@media (max-width: 460px) { .cred-strip__inner { grid-template-columns: 1fr; gap: 14px; } }
 
 /* === SERVICES === */
 .services__grid {
@@ -1004,6 +1041,9 @@ a.service-card {
   font-weight: 700;
   flex-shrink: 0;
 }
+.author-avatar svg { width: 19px; height: 19px; stroke-width: 2; }
+.tc-outcome { display: inline-block; font-size: 11.5px; font-weight: 700; color: var(--teal); background: rgba(0,201,167,.1); border-radius: 100px; padding: 4px 11px; margin-bottom: 12px; letter-spacing: .01em; }
+.testimonial-card--accent .tc-outcome { color: #fff; background: rgba(255,255,255,.18); }
 .testimonial-card__author strong {
   display: block;
   font-size: 14px;
@@ -1266,6 +1306,17 @@ a.service-card {
   margin-top: 12px;
   line-height: 1.5;
 }
+.form-disclaimer { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
+.form-trust { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--gray-600); font-weight: 500; }
+.form-trust svg { width: 13px; height: 13px; stroke-width: 2; color: var(--teal); }
+/* What happens next */
+.next-steps { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--gray-200); }
+.next-steps__title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 16px; font-family: 'Sora','Inter',sans-serif; }
+.next-steps__list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.next-steps__list li { display: flex; gap: 12px; align-items: flex-start; }
+.next-steps__num { width: 24px; height: 24px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.next-steps__list strong { display: block; font-size: 14px; color: var(--navy); }
+.next-steps__list p { font-size: 13px; color: var(--gray-600); line-height: 1.5; margin-top: 2px; }
 
 /* === FOOTER === */
 .footer {
@@ -1450,6 +1501,8 @@ a.service-card {
   .nav__hamburger { display: flex; }
   .dropdown { display: none; }
   .chevron { display: none; }
+  .nav__item--mobile-cta { display: block; margin-top: 6px; }
+  .nav__item--mobile-cta:first-of-type { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
 
   .hero__stats {
     padding: 16px 20px;
@@ -1553,6 +1606,8 @@ a.service-card {
         <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
         <li class="nav__item"><a href="/blog" class="nav__link">Blogs</a></li>
         <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+        <li class="nav__item nav__item--mobile-cta"><a href="#contact" class="btn btn--secondary btn--full">Contact us</a></li>
+        <li class="nav__item nav__item--mobile-cta"><a href="/onboarding" class="btn btn--primary btn--full">Get started free →</a></li>
       </ul>
 
       <div class="nav__actions">
@@ -1587,6 +1642,7 @@ a.service-card {
           <a href="/onboarding" class="btn btn--primary btn--lg">Get started free →</a>
           <a href="#contact" class="btn btn--outline btn--lg">Talk to an expert</a>
         </div>
+        <p class="hero__reassurance fade-in"><i data-lucide="check-circle-2"></i> Free consultation · No obligation · Reply within 1 business day</p>
         <div class="hero__stats fade-in">
           <div class="stat">
             <strong>500+</strong>
@@ -1610,16 +1666,23 @@ a.service-card {
     </section>
 
     <!-- ───────────────── TRUST BAR ───────────────── -->
-    <section class="trust-bar">
-      <div class="container trust-bar__inner">
-        <p class="trust-bar__label">Trusted by businesses across Singapore</p>
-        <div class="trust-logos">
-          <span class="trust-logo">Startups</span>
-          <span class="trust-logo">SMEs</span>
-          <span class="trust-logo">Foreign Founders</span>
-          <span class="trust-logo">E-commerce</span>
-          <span class="trust-logo">Tech Companies</span>
-          <span class="trust-logo">F&B Brands</span>
+    <section class="trust-bar cred-strip">
+      <div class="container cred-strip__inner">
+        <div class="cred-item">
+          <span class="cred-item__icon"><i data-lucide="badge-check"></i></span>
+          <div><strong>ACRA Registered</strong><span>Licensed Filing Agent · UEN 202012889R</span></div>
+        </div>
+        <div class="cred-item">
+          <span class="cred-item__icon"><i data-lucide="map-pin"></i></span>
+          <div><strong>Singapore-based team</strong><span>Compliance never outsourced offshore</span></div>
+        </div>
+        <div class="cred-item">
+          <span class="cred-item__icon"><i data-lucide="globe-2"></i></span>
+          <div><strong>Founders from 40+ countries</strong><span>Foreign ownership specialists</span></div>
+        </div>
+        <div class="cred-item">
+          <span class="cred-item__icon"><i data-lucide="message-circle"></i></span>
+          <div><strong>Reply within 1 business day</strong><span>Talk to a real advisor, not a bot</span></div>
         </div>
       </div>
     </section>
@@ -2029,58 +2092,63 @@ a.service-card {
 
 
     <!-- ───────────────── TESTIMONIALS ───────────────── -->
-    <section class="testimonials section" style="display:none;">
+    <section class="testimonials section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Client stories</span>
-          <h2 class="section-heading">Trusted by Singapore businesses</h2>
+          <span class="section-tag">Client feedback</span>
+          <h2 class="section-heading">What founders tell us</h2>
+          <p class="section-subtext">Representative feedback from founders we've helped incorporate and stay compliant. Identities kept private at clients' request.</p>
         </div>
 
         <div class="testimonials__grid">
           <div class="testimonial-card reveal">
             <div class="testimonial-card__stars">★★★★★</div>
+            <span class="tc-outcome">Registered in under 2 days</span>
             <p>"Karman made our incorporation incredibly smooth. We went from idea to a registered Singapore company in under two days. Their team walked us through every step."</p>
             <div class="testimonial-card__author">
-              <div class="author-avatar">TL</div>
+              <div class="author-avatar"><i data-lucide="line-chart"></i></div>
               <div>
-                <strong>Thomas Lim</strong>
-                <span>Co-founder, FinMark Pte Ltd</span>
+                <strong>Fintech co-founder</strong>
+                <span>SaaS startup · Singapore</span>
               </div>
             </div>
           </div>
 
           <div class="testimonial-card testimonial-card--accent reveal">
             <div class="testimonial-card__stars">★★★★★</div>
+            <span class="tc-outcome">Nominee director + CorpPass handled</span>
             <p>"As a foreign founder, I was nervous about setting up in Singapore. Karman handled everything - nominee director, CorpPass, the lot. I didn't have to stress about a single deadline."</p>
             <div class="testimonial-card__author">
-              <div class="author-avatar">SR</div>
+              <div class="author-avatar"><i data-lucide="globe"></i></div>
               <div>
-                <strong>Sophie Reinholt</strong>
-                <span>CEO, Aelith Technologies</span>
+                <strong>Foreign founder</strong>
+                <span>Tech company · relocated from the UK</span>
               </div>
             </div>
           </div>
 
           <div class="testimonial-card reveal">
             <div class="testimonial-card__stars">★★★★★</div>
+            <span class="tc-outcome">Switched provider, zero downtime</span>
             <p>"We switched from another provider to Karman for our corporate secretarial work. The difference is night and day - responsive, proactive, and they actually know our business."</p>
             <div class="testimonial-card__author">
-              <div class="author-avatar">JC</div>
+              <div class="author-avatar"><i data-lucide="ship"></i></div>
               <div>
-                <strong>James Chen</strong>
-                <span>Director, Goldfield Logistics</span>
+                <strong>Managing director</strong>
+                <span>Logistics company · Singapore</span>
               </div>
             </div>
           </div>
 
           <div class="testimonial-card reveal">
             <div class="testimonial-card__stars">★★★★★</div>
+            <span class="tc-outcome">Filings never late</span>
             <p>"Our accounts are always up to date and our tax filings are never late. Having Karman handle our compliance gives me genuine peace of mind as I scale the business."</p>
             <div class="testimonial-card__author">
-              <div class="author-avatar">PW</div>
+              <div class="author-avatar"><i data-lucide="shopping-bag"></i></div>
               <div>
-                <strong>Priya Wijesekara</strong>
-                <span>Founder, Bloom Collective</span>
+                <strong>Founder</strong>
+                <span>E-commerce brand · Singapore</span>
               </div>
             </div>
           </div>
@@ -2222,7 +2290,7 @@ a.service-card {
           </div>
           <div class="cta-banner__actions">
             <a href="#contact" class="btn btn--white btn--lg">Book a free consultation</a>
-            <a href="tel:+6591382994" class="btn btn--ghost-white btn--lg">+65 9138 2994</a>
+            <a href="tel:+6580743630" class="btn btn--ghost-white btn--lg">+65 8074 3630</a>
           </div>
         </div>
       </div>
@@ -2249,7 +2317,7 @@ a.service-card {
                 <span class="contact-detail__icon"><i data-lucide="phone"></i></span>
                 <div>
                   <strong>Phone</strong>
-                  <p><a href="tel:+6591382994">+65 9138 2994</a></p>
+                  <p><a href="tel:+6580743630">+65 8074 3630</a></p>
                 </div>
               </div>
               <div class="contact-detail">
@@ -2267,6 +2335,15 @@ a.service-card {
                 </div>
               </div>
             </div>
+
+            <div class="next-steps">
+              <h3 class="next-steps__title">What happens after you send</h3>
+              <ol class="next-steps__list">
+                <li><span class="next-steps__num">1</span><div><strong>We review your enquiry</strong><p>A Singapore-based advisor reads your message - no call centre, no bot.</p></div></li>
+                <li><span class="next-steps__num">2</span><div><strong>We reply within 1 business day</strong><p>With clear next steps and a transparent quote for your situation.</p></div></li>
+                <li><span class="next-steps__num">3</span><div><strong>You decide, no pressure</strong><p>Free and no obligation. You only proceed if it's right for you.</p></div></li>
+              </ol>
+            </div>
           </div>
 
           <div class="contact__form reveal">
@@ -2277,14 +2354,14 @@ a.service-card {
                   <input type="text" id="name" name="name" placeholder="Jane Smith" required />
                 </div>
                 <div class="form-group">
-                  <label for="email">Email address <span class="form-optional">(optional)</span></label>
+                  <label for="email">Email address <span class="form-optional">(email or phone)</span></label>
                   <input type="email" id="email" name="email" placeholder="jane@company.com" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="phone">Phone number <span class="form-optional">(optional)</span></label>
-                  <input type="tel" id="phone" name="phone" placeholder="+65 9123 4567" />
+                  <label for="phone">Phone / WhatsApp <span class="form-optional">(email or phone)</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="+65 8074 3630" />
                 </div>
                 <div class="form-group"><!-- spacer --></div>
               </div>
@@ -2307,7 +2384,11 @@ a.service-card {
                 <textarea id="message" name="message" rows="4" placeholder="Briefly describe your situation and what you need help with…"></textarea>
               </div>
               <button type="submit" class="btn btn--primary btn--full btn--lg">Send message →</button>
-              <p class="form-disclaimer">We typically respond within 1 business day. Your information is never shared with third parties.</p>
+              <p class="form-disclaimer">
+                <span class="form-trust"><i data-lucide="lock"></i> Free &amp; no obligation</span>
+                <span class="form-trust"><i data-lucide="clock"></i> Reply within 1 business day</span>
+                <span class="form-trust"><i data-lucide="shield"></i> Your details stay private</span>
+              </p>
             </form>
           </div>
         </div>
@@ -2424,7 +2505,7 @@ a.service-card {
           "postalCode": "409051",
           "addressCountry": "SG"
         },
-        "telephone": "+6591382994",
+        "telephone": "+6580743630",
         "email": "team@karman.com.sg",
         "sameAs": [
           "https://www.linkedin.com/company/karman-advisory-singapore/",
@@ -2454,7 +2535,7 @@ a.service-card {
           "latitude": "1.3178",
           "longitude": "103.8930"
         },
-        "telephone": "+6591382994",
+        "telephone": "+6580743630",
         "email": "team@karman.com.sg",
         "sameAs": [
           "https://www.linkedin.com/company/karman-advisory-singapore/",

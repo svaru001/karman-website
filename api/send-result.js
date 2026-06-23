@@ -85,7 +85,7 @@ function buildUserHtml(name, toolId) {
     <p style="color:#9AA5B4;font-size:11px;line-height:1.7;margin:0;">
       Karman Corporate Services Pte Ltd · 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051<br/>
       <a href="mailto:team@karman.com.sg" style="color:#0066CC;text-decoration:none;">team@karman.com.sg</a> ·
-      <a href="tel:+6591382994" style="color:#0066CC;text-decoration:none;">+65 9138 2994</a>
+      <a href="tel:+6580743630" style="color:#0066CC;text-decoration:none;">+65 8074 3630</a>
     </p>
   </div>
 </body>

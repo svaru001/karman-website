@@ -196,6 +196,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // === CONTACT FORM ===
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+  // Tier 3: fire form_start once on first interaction
+  let contactStarted = false;
+  contactForm.addEventListener('input', () => {
+    if (!contactStarted) {
+      contactStarted = true;
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_start', { form_name: 'contact', page_path: location.pathname });
+      }
+    }
+  }, { once: false });
+
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -214,6 +225,12 @@ if (contactForm) {
 
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showFormMessage(contactForm, 'Please enter a valid email address.', 'error');
+      return;
+    }
+
+    // Require at least one way to reach you
+    if (!email && !phone) {
+      showFormMessage(contactForm, 'Please add an email or phone number so we can reply.', 'error');
       return;
     }
 
@@ -239,7 +256,7 @@ if (contactForm) {
         }
         btn.textContent = '✓ Message sent!';
         btn.style.background = 'var(--teal)';
-        showFormMessage(contactForm, "Thanks! We'll be in touch within 1 business day. Check your inbox for a confirmation.", 'success');
+        showFormMessage(contactForm, "Thanks! A Singapore-based advisor will be in touch within 1 business day.", 'success');
         setTimeout(() => {
           btn.textContent = originalText;
           btn.disabled = false;

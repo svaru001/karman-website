@@ -171,6 +171,11 @@ function goToStep(next, dir = 'forward') {
   state.step = next;
   updateProgress();
   updateSidebar();
+
+  // Tier 3: funnel step tracking (forward only, steps 1-3)
+  if (dir === 'forward' && next >= 1 && next <= 3 && typeof gtag === 'function') {
+    gtag('event', 'form_step', { form_name: 'onboarding', step: next, page_path: location.pathname });
+  }
   setTimeout(() => {
     const isMobile = window.innerWidth <= 900;
     if (isMobile) {
@@ -617,6 +622,21 @@ function launchConfetti() {
 
   updateProgress();
   updateSidebar();
+
+  // Tier 3: fire form_start once on first interaction with step 1
+  let obStarted = false;
+  const obPanel1 = document.getElementById('panel-1');
+  if (obPanel1) {
+    obPanel1.addEventListener('input', () => {
+      if (!obStarted) {
+        obStarted = true;
+        if (typeof gtag === 'function') {
+          gtag('event', 'form_start', { form_name: 'onboarding', page_path: location.pathname });
+        }
+      }
+    });
+  }
+
   if (window.lucide) lucide.createIcons();
   if (window.gsap) {
     const els = '#panel-1 .ob-field, #panel-1 .ob-radio-group, #panel-1 .ob-panel__header, #panel-1 .ob-form__footer';
