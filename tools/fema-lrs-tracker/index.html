@@ -270,12 +270,17 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
                 <p class="lrs-note">Illustrative only. The LRS limit is USD 250,000 per individual per Indian financial year (April-March) for permissible capital and current account transactions. TCS on foreign remittances under LRS is generally 20% on the amount exceeding ₹10 lakh in a financial year (rate and threshold per current Finance Act - verify the latest). TCS is creditable against your income tax liability. This tool does not account for all remittance purposes or exemptions. Not tax or legal advice - confirm with a FEMA-qualified CA.</p>
               </div>
 
-              <div class="lrs-cta">
-                <div>
-                  <strong>Funding a Singapore company from India?</strong>
-                  <p>Karman sets up your Singapore entity and works with India-side CAs on correct LRS/ODI documentation.</p>
-                </div>
-                <a href="/onboarding" class="btn btn--primary">Talk to us →</a>
+              <div class="tool-lead">
+                <strong>Funding a Singapore company from India?</strong>
+                <p>Get a personalised remittance plan (LRS vs ODI) and an exact incorporation quote for your case - we coordinate with India-side CAs on FEMA documentation. Response within 1 business day.</p>
+                <form class="tool-lead__form" id="toolLeadForm" data-service="FEMA LRS Tracker" novalidate>
+                  <input type="text" id="tlName" placeholder="Your name" autocomplete="name" required />
+                  <input type="tel" id="tlPhone" placeholder="Phone / WhatsApp (+91...)" autocomplete="tel" />
+                  <input type="email" id="tlEmail" placeholder="Email address" autocomplete="email" class="tool-lead__full" required />
+                  <button type="submit" class="btn btn--primary">Get my remittance plan →</button>
+                  <p class="tool-lead__error"></p>
+                </form>
+                <p class="tool-lead__privacy">Your tracker numbers above are included automatically. Prefer to dive straight in? <a href="/onboarding">Start onboarding →</a></p>
               </div>
             </div>
           </div>
@@ -425,6 +430,11 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
       else{a.innerHTML='<div class="lrs-alert ok"><span>✅</span><div><strong>'+fmtUSD(left)+' of headroom remaining.</strong> You are within your LRS limit for this financial year. A co-founder can remit a separate USD 250,000.</div></div>';}
     }
     bind(); calc();
+    window.toolLeadSummary=function(){
+      return '[FEMA LRS Tracker] Used this FY: '+document.getElementById('lrsUsed').textContent
+        +' | Headroom: '+document.getElementById('lrsLeft').textContent
+        +' | Est. TCS: '+document.getElementById('lrsTcs').textContent;
+    };
   })();
   </script>
 </body>

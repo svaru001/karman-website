@@ -978,3 +978,20 @@ input[type="range"].calc-slider::-moz-range-thumb {
   .calc-services { grid-template-columns: 1fr; }
   .wizard-result__cta { flex-direction: column; }
 }
+
+/* ── TOOL LEAD FORM (inline lead capture card on standalone tool pages) ── */
+.tool-lead{background:linear-gradient(135deg,#0A2540 0%,#0f3460 100%);border-radius:12px;padding:24px;margin-top:20px;}
+.tool-lead strong{color:#fff;display:block;font-size:16px;margin-bottom:4px;font-family:'Sora','Inter',sans-serif;}
+.tool-lead>p{color:rgba(255,255,255,.85);font-size:13px;line-height:1.5;margin-bottom:16px;}
+.tool-lead__form{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.tool-lead__form input{padding:11px 14px;border:1.5px solid rgba(255,255,255,.25);border-radius:6px;font-size:14px;font-family:inherit;color:#fff;background:rgba(255,255,255,.08);outline:none;transition:border-color .2s;}
+.tool-lead__form input::placeholder{color:rgba(255,255,255,.5);}
+.tool-lead__form input:focus{border-color:#00C9A7;}
+.tool-lead__form .tool-lead__full{grid-column:1/-1;}
+.tool-lead__form button{grid-column:1/-1;}
+.tool-lead__privacy{color:rgba(255,255,255,.45);font-size:11px;margin-top:10px;}
+.tool-lead__privacy a{color:rgba(255,255,255,.75);text-decoration:underline;}
+.tool-lead__error{color:#FFB4A2;font-size:12px;margin-top:4px;display:none;grid-column:1/-1;}
+.tool-lead__success{background:#F0FFF9;border:1px solid #00C9A7;border-radius:6px;padding:16px;color:#065f46;font-size:14px;line-height:1.6;display:flex;flex-direction:column;gap:4px;}
+.tool-lead__success strong{color:#065f46;font-size:15px;}
+@media(max-width:640px){.tool-lead__form{grid-template-columns:1fr;}}

@@ -676,3 +676,53 @@ if (heroStats) counterObserver.observe(heroStats);
       });
   });
 })();
+
+// === TOOL LEAD FORM (standalone tool pages) ===
+// Any tool page can add a <form id="toolLeadForm" data-service="..."> inside a
+// .tool-lead card; this handler posts it to /api/contact. If the page defines
+// window.toolLeadSummary(), its return value is sent as the lead message so
+// the enquiry email includes the visitor's calculator inputs/results.
+(function () {
+  const form = document.getElementById('toolLeadForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const nameEl = form.querySelector('#tlName');
+    const emailEl = form.querySelector('#tlEmail');
+    const phoneEl = form.querySelector('#tlPhone');
+    const err = form.querySelector('.tool-lead__error');
+    if (err) err.style.display = 'none';
+
+    const name = nameEl ? nameEl.value.trim() : '';
+    const email = emailEl ? emailEl.value.trim() : '';
+    const phone = phoneEl ? phoneEl.value.trim() : '';
+    if (!name) { nameEl.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailEl.focus(); return; }
+
+    btn.disabled = true;
+    const orig = btn.textContent;
+    btn.textContent = 'Sending…';
+
+    const svc = form.getAttribute('data-service') || 'Tool enquiry';
+    const summary = (typeof window.toolLeadSummary === 'function') ? window.toolLeadSummary() : '';
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, phone: phone, service: svc, message: summary, page: location.pathname })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function () {
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'tool_lead', service: svc, page_path: location.pathname });
+        const card = form.closest('.tool-lead');
+        if (card) card.innerHTML = '<div class="tool-lead__success"><strong>✓ Thanks, ' + (name.split(' ')[0] || 'there') + '!</strong><span>Your personalised plan is on its way to ' + email + '. A Singapore-based advisor will follow up within 1 business day.</span></div>';
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = orig;
+        if (err) { err.textContent = 'Something went wrong. Please email team@karman.com.sg'; err.style.display = 'block'; }
+      });
+  });
+})();

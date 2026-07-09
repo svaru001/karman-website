@@ -273,12 +273,17 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
                 <p class="rf-note">Educational estimate only - not tax, legal, or financial advice. A reverse flip (re-domiciling your holding company to India) is a complex cross-border transaction. Actual cost and tax depend on the offshore jurisdiction, the indirect-transfer analysis under Indian law, capital gains at the offshore and investor level, the scheme of arrangement / NCLT process, and investor consents. Always obtain tax opinions in every relevant jurisdiction before proceeding.</p>
               </div>
 
-              <div class="rf-cta">
-                <div>
-                  <strong>Planning a reverse flip or staying offshore?</strong>
-                  <p>Karman advises on the Singapore side of cross-border structures and coordinates with India-side counsel.</p>
-                </div>
-                <a href="/onboarding" class="btn btn--primary">Talk to us →</a>
+              <div class="tool-lead">
+                <strong>Planning a reverse flip or staying offshore?</strong>
+                <p>Get a personalised assessment for your structure - we advise on the Singapore side of cross-border structures and coordinate with India-side counsel. Response within 1 business day.</p>
+                <form class="tool-lead__form" id="toolLeadForm" data-service="Reverse Flip Calculator" novalidate>
+                  <input type="text" id="tlName" placeholder="Your name" autocomplete="name" required />
+                  <input type="tel" id="tlPhone" placeholder="Phone / WhatsApp (+91...)" autocomplete="tel" />
+                  <input type="email" id="tlEmail" placeholder="Email address" autocomplete="email" class="tool-lead__full" required />
+                  <button type="submit" class="btn btn--primary">Get my flip assessment →</button>
+                  <p class="tool-lead__error"></p>
+                </form>
+                <p class="tool-lead__privacy">Your calculator numbers above are included automatically. Prefer to dive straight in? <a href="/onboarding">Start onboarding →</a></p>
               </div>
             </div>
           </div>
@@ -430,6 +435,10 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
       document.getElementById('rfFlags').innerHTML=html;
     }
     calc();
+    window.toolLeadSummary=function(){
+      return '[Reverse Flip Calculator] Est. cost: '+document.getElementById('rfCost').textContent
+        +' | Timeline: '+document.getElementById('rfTime').textContent;
+    };
   })();
   </script>
 </body>

@@ -902,13 +902,18 @@ h1, h2, h3, h4, h5 {
             </div>
 
             <!-- CTA -->
-            <div class="tax-cta-block">
-              <a href="/onboarding" class="btn btn--primary btn--lg tax-cta-btn">
-                <i data-lucide="arrow-right"></i>
-                Incorporate in Singapore from S$699 — Get started
-              </a>
-              <p class="tax-cta-sub">Speak to a specialist within 1 business day. No commitment required.</p>
-            </div>
+            <div class="tool-lead">
+                <strong>Keep more of what you earn - incorporate in Singapore from S$699</strong>
+                <p>Get a personalised tax comparison and an exact incorporation quote for your case, including nominee director and remote setup. Response within 1 business day.</p>
+                <form class="tool-lead__form" id="toolLeadForm" data-service="Singapore vs Home Tax Calculator" novalidate>
+                  <input type="text" id="tlName" placeholder="Your name" autocomplete="name" required />
+                  <input type="tel" id="tlPhone" placeholder="Phone / WhatsApp" autocomplete="tel" />
+                  <input type="email" id="tlEmail" placeholder="Email address" autocomplete="email" class="tool-lead__full" required />
+                  <button type="submit" class="btn btn--primary">Get my personalised comparison →</button>
+                  <p class="tool-lead__error"></p>
+                </form>
+                <p class="tool-lead__privacy">Your comparison numbers above are included automatically. Prefer to dive straight in? <a href="/onboarding">Start onboarding →</a></p>
+              </div>
 
             <!-- Disclaimer -->
             <div class="tax-disclaimer">
@@ -2027,6 +2032,13 @@ h1, h2, h3, h4, h5 {
 
   // Initial render
   renderResults();
+  window.toolLeadSummary=function(){
+    var g=function(id){var el=document.getElementById(id);return el?el.textContent.trim():'-';};
+    return '[Singapore vs Home Tax] '+g('resultSubtitle')
+      +' | SG total: '+g('sgTotal')+' ('+g('sgEffectiveRate')+')'
+      +' | Home total: '+g('homeTotal')+' ('+g('homeEffectiveRate')+')'
+      +' | Saving: '+g('savingsAmount');
+  };
   </script>
 
 </body>

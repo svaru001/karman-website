@@ -304,12 +304,17 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
                 <p class="tp-note">Illustrative estimate only. Actual tax depends on your specific facts, the defensibility of your transfer pricing, surcharge/cess, FSIE eligibility, and dividend repatriation. SUTE applies to the first 3 YAs. The margin split must reflect genuine arm's-length functional analysis - a typical Indian manufacturing/delivery entity retains cost-plus 8-15%. Always engage a qualified CA and confirm with a transfer pricing study. Not tax advice.</p>
               </div>
 
-              <div class="tp-cta">
-                <div>
-                  <strong>Need a defensible transfer pricing structure?</strong>
-                  <p>Karman sets up the Singapore side and coordinates with India-side CAs on transfer pricing documentation.</p>
-                </div>
-                <a href="/onboarding" class="btn btn--primary">Talk to us →</a>
+              <div class="tool-lead">
+                <strong>Need a defensible transfer pricing structure?</strong>
+                <p>Get a personalised India-Singapore structure review for your numbers - we set up the Singapore side and coordinate with India-side CAs on transfer pricing documentation. Response within 1 business day.</p>
+                <form class="tool-lead__form" id="toolLeadForm" data-service="Transfer Pricing Simulator" novalidate>
+                  <input type="text" id="tlName" placeholder="Your name" autocomplete="name" required />
+                  <input type="tel" id="tlPhone" placeholder="Phone / WhatsApp (+91...)" autocomplete="tel" />
+                  <input type="email" id="tlEmail" placeholder="Email address" autocomplete="email" class="tool-lead__full" required />
+                  <button type="submit" class="btn btn--primary">Get my structure review →</button>
+                  <p class="tool-lead__error"></p>
+                </form>
+                <p class="tool-lead__privacy">Your simulator numbers above are included automatically. Prefer to dive straight in? <a href="/onboarding">Start onboarding →</a></p>
               </div>
             </div>
           </div>
@@ -471,6 +476,13 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
       document.getElementById('tpBarSg').textContent= sgPct>12 ? 'Singapore '+Math.round(sgPct)+'%':'';
     }
     calc();
+    window.toolLeadSummary=function(){
+      return '[Transfer Pricing Simulator] Total profit: '+document.getElementById('tpTotalProfit').textContent
+        +' | India tax: '+document.getElementById('tpInTax').textContent
+        +' | SG tax: '+document.getElementById('tpSgTax').textContent
+        +' | Annual saving: '+document.getElementById('tpSaving').textContent
+        +' | 5-yr saving: '+document.getElementById('tpFiveYr').textContent;
+    };
   })();
   </script>
 </body>
