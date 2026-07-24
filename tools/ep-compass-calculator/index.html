@@ -1500,11 +1500,11 @@ a.service-card {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "What is the EP COMPASS framework?", "acceptedAnswer": { "@type": "Answer", "text": "COMPASS (Complementarity Assessment Framework) is Singapore's points-based system for assessing Employment Pass (EP) applications, in force since September 2023. Applicants need at least 40 points across four foundational criteria (C1 Salary, C2 Qualifications, C3 Diversity, C4 Support for Local Employment) plus optional bonus points (C5 Skills, C6 Strategic Economic Priorities). Each foundational criterion awards 0, 10, or 20 points." } },
-          { "@type": "Question", "name": "What is the minimum salary for EP COMPASS?", "acceptedAnswer": { "@type": "Answer", "text": "The EP qualifying salary is S$5,600/month minimum (S$6,200 for financial services), or higher depending on age. To score 20 points on C1, your salary must be at or above the 90th percentile of local PMETs in your sector. To score 10 points, you need to hit the 65th percentile. Below the 65th percentile, you get 0 points on C1 - which makes the 40-point threshold very hard to hit." } },
+          { "@type": "Question", "name": "What is the minimum salary for EP COMPASS?", "acceptedAnswer": { "@type": "Answer", "text": "The EP qualifying salary is minimum (for financial services), or higher depending on age. To score 20 points on C1, your salary must be at or above the 90th percentile of local PMETs in your sector. To score 10 points, you need to hit the 65th percentile. Below the 65th percentile, you get 0 points on C1 - which makes the 40-point threshold very hard to hit." } },
           { "@type": "Question", "name": "Do I need a degree to get 20 points on C2 (Qualifications)?", "acceptedAnswer": { "@type": "Answer", "text": "To score 20 points on C2 Qualifications, you need a degree from a top 100 institution globally (per MOM's reference list using QS, Times, and US News rankings) OR equivalent professional certification. A degree from any other accredited institution scores 10 points. No degree (or unaccredited) scores 0 points." } },
           { "@type": "Question", "name": "What counts as a 'shortage occupation' for the C5 bonus?", "acceptedAnswer": { "@type": "Answer", "text": "C5 awards 20 bonus points if your job is on MOM's Shortage Occupation List (SOL). Current SOL roles include software developers, cybersecurity specialists, AI/ML engineers, financial analysts, and certain healthcare and engineering specialisations. The list is updated periodically. Check the latest version on mom.gov.sg before assuming you qualify." } },
           { "@type": "Question", "name": "Does the COMPASS apply to renewals?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but with a transition. For first-time EP applications, COMPASS applied from Sept 2023. For EP renewals, COMPASS applied from Sept 2024 onwards. If your current EP was granted before these dates, it doesn't apply retroactively until renewal. Some specialised roles (e.g., overseas intra-company transferees, certain short-term assignments) may be exempt." } },
-          { "@type": "Question", "name": "Are there exemptions to the EP COMPASS?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Exemptions exist for: (a) overseas intra-corporate transferees from companies with established Singapore operations; (b) applicants earning fixed monthly salary of S$22,500+; (c) those filling short-term assignments (≤1 month); (d) certain professionals already covered by free trade agreements. Even with exemption, applicants still need to meet the qualifying salary." } }
+          { "@type": "Question", "name": "Are there exemptions to the EP COMPASS?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Exemptions exist for: (a) overseas intra-corporate transferees from companies with established Singapore operations; (b) applicants earning fixed monthly salary +; (c) those filling short-term assignments (≤1 month); (d) certain professionals already covered by free trade agreements. Even with exemption, applicants still need to meet the qualifying salary." } }
         ]
       }
     ]
@@ -1740,7 +1740,7 @@ a.service-card {
         <div id="compassResults" class="compass-results"></div>
 
         <div class="compass-tool__hint">
-          <strong>Heads up:</strong> COMPASS is one of two gates - applicants also need to meet the EP qualifying salary (S$5,600/month minimum, higher for older applicants and financial services). Exemptions exist for overseas ICTs, high earners (S$22,500+/month), and short assignments. <a href="../../#contact">Talk to Karman</a> if you're sponsoring a candidate and need help building the application package.
+          <strong>Heads up:</strong> COMPASS is one of two gates - applicants also need to meet the EP qualifying salary (minimum, higher for older applicants and financial services). Exemptions exist for overseas ICTs, high earners (+/month), and short assignments. <a href="../../#contact">Talk to Karman</a> if you're sponsoring a candidate and need help building the application package.
         </div>
       </div>
             </div>
@@ -1778,7 +1778,7 @@ a.service-card {
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="dollar-sign"></i></div>
           <h3>Salary tied to local PMETs</h3>
-          <p>C1 Salary uses MOM's reference benchmarks for local PMET earnings by sector. The 90th percentile for software (C1=20) is around S$11,000-13,000/month. The 65th percentile (C1=10) is around S$6,500-8,000/month. Lower for arts and admin sectors.</p>
+          <p>C1 Salary uses MOM's reference benchmarks for local PMET earnings by sector. The 90th percentile for software (C1=20) is. The 65th percentile (C1=10) is. Lower for arts and admin sectors.</p>
         </div>
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="users"></i></div>
@@ -1816,7 +1816,7 @@ a.service-card {
       <p style="font-size:14.5px;color:#6B7280;margin:0 0 16px">Free to use. Add the EP COMPASS Calculator to your website, HR portal, or immigration guide with one line of code.</p>
       <div style="background:#1e293b;border-radius:10px;padding:16px 20px;position:relative">
         <code id="ep-embed-code" style="font-family:'SF Mono','Monaco',monospace;font-size:13px;color:#a5f3fc;word-break:break-all;display:block">&lt;iframe src="https://karman.com.sg/tools/ep-compass-calculator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #e1e4ea" title="EP COMPASS Calculator - Karman"&gt;&lt;/iframe&gt;</code>
-        <button onclick="navigator.clipboard.writeText(document.getElementById('ep-embed-code').textContent);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy code',2000)" style="position:absolute;top:12px;right:12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer">Copy code</button>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('ep-embed-code').textContent);this.textContent='Copied!';setTimeout(=>this.textContent='Copy code',2000)" style="position:absolute;top:12px;right:12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer">Copy code</button>
       </div>
       <p style="font-size:12.5px;color:#9AA5B4;margin-top:10px">No attribution required. Always reflects the latest COMPASS point thresholds.</p>
     </div>
@@ -1828,7 +1828,7 @@ a.service-card {
         <div class="footer__brand">
           <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
-          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span> <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
           </div>
         </div>
         <div class="footer__links">

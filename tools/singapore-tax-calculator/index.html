@@ -1499,11 +1499,11 @@ a.service-card {
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is the corporate tax rate in Singapore for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Singapore's corporate tax rate is 17% on chargeable income for the 2026 year of assessment. The effective rate is much lower for SMEs due to the Start-Up Tax Exemption (SUTE) and Partial Tax Exemption (PTE) schemes, plus the 40% Corporate Income Tax (CIT) rebate announced in Budget 2026 (capped at S$40,000 per company)." } },
-          { "@type": "Question", "name": "How does SUTE work?", "acceptedAnswer": { "@type": "Answer", "text": "SUTE (Start-Up Tax Exemption) applies to qualifying new companies for their first 3 years of assessment. The first S$100,000 of chargeable income is 75% exempt (only S$25,000 taxable), the next S$100,000 is 50% exempt (S$50,000 taxable), and the remainder is fully taxable at 17%. To qualify, the company must be incorporated in Singapore, be a tax resident, and have no more than 20 individual shareholders (or one corporate shareholder holding 10%+)." } },
-          { "@type": "Question", "name": "What are the CPF contribution rates in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "For Singapore citizens and PRs aged 55 and below earning above S$750/month: employer contributes 17% and employee contributes 20% of ordinary wages (capped at the Ordinary Wage ceiling of S$8,000/month from Jan 2026). Rates decrease for older age bands. Only Singapore citizens and PRs are subject to CPF - foreign workers on EP, S Pass, etc. are not." } },
-          { "@type": "Question", "name": "What is the GST rate in Singapore in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Singapore's GST rate is 9% as of January 1, 2024. To calculate GST on a price-exclusive amount: GST = price × 0.09. To extract GST from a GST-inclusive amount: GST = inclusive_price × 9/109. GST registration is compulsory if your annual taxable turnover exceeds S$1 million, but voluntary registration is also available." } },
-          { "@type": "Question", "name": "How is director salary taxed in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "Director's fees and salary are taxed as employment income at progressive personal income tax rates ranging from 0% (first S$20,000) to 24% (income above S$1 million) for tax residents. Non-resident directors are taxed at a flat 22% on directors' fees with no exemptions. Tax residency is generally established by being in Singapore for at least 183 days in the year." } },
+          { "@type": "Question", "name": "What is the corporate tax rate in Singapore for 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Singapore's corporate tax rate is 17% on chargeable income for the 2026 year of assessment. The effective rate is much lower for SMEs due to the Start-Up Tax Exemption (SUTE) and Partial Tax Exemption (PTE) schemes, plus the 40% Corporate Income Tax (CIT) rebate announced in Budget 2026 (capped per company)." } },
+          { "@type": "Question", "name": "How does SUTE work?", "acceptedAnswer": { "@type": "Answer", "text": "SUTE (Start-Up Tax Exemption) applies to qualifying new companies for their first 3 years of assessment. The first of chargeable income is 75% exempt (taxable), the next is 50% exempt (taxable), and the remainder is fully taxable at 17%. To qualify, the company must be incorporated in Singapore, be a tax resident, and have no more than 20 individual shareholders (or one corporate shareholder holding 10%+)." } },
+          { "@type": "Question", "name": "What are the CPF contribution rates in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "For Singapore citizens and PRs aged 55 and below earning above: employer contributes 17% and employee contributes 20% of ordinary wages (capped at the Ordinary Wage ceiling from Jan 2026). Rates decrease for older age bands. Only Singapore citizens and PRs are subject to CPF - foreign workers on EP, S Pass, etc. are not." } },
+          { "@type": "Question", "name": "What is the GST rate in Singapore in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Singapore's GST rate is 9% as of January 1, 2024. To calculate GST on a price-exclusive amount: GST = price × 0.09. To extract GST from a GST-inclusive amount: GST = inclusive_price × 9/109. GST registration is compulsory if your annual taxable turnover exceeds illion, but voluntary registration is also available." } },
+          { "@type": "Question", "name": "How is director salary taxed in Singapore?", "acceptedAnswer": { "@type": "Answer", "text": "Director's fees and salary are taxed as employment income at progressive personal income tax rates ranging from 0% (first) to 24% (income above illion) for tax residents. Non-resident directors are taxed at a flat 22% on directors' fees with no exemptions. Tax residency is generally established by being in Singapore for at least 183 days in the year." } },
           { "@type": "Question", "name": "Does CPF apply to foreign directors?", "acceptedAnswer": { "@type": "Answer", "text": "No. CPF only applies to Singapore citizens and Permanent Residents. Foreign directors and employees on Employment Pass (EP), S Pass, or other work passes are not subject to CPF contributions. However, employers should consider the Skills Development Levy (SDL) which applies to all employees regardless of nationality at 0.25% of monthly remuneration." } }
         ]
       }
@@ -1645,7 +1645,7 @@ a.service-card {
         <!-- Corporate tax panel -->
         <div class="tax-calc__panel is-active" data-panel="corporate">
           <h3 class="tax-calc__panel-title">Corporate income tax (Year of Assessment 2026)</h3>
-          <p class="tax-calc__panel-desc">17% headline rate with Start-Up Tax Exemption (SUTE) or Partial Tax Exemption (PTE), plus the Budget 2026 CIT rebate of 40% (capped at S$40K).</p>
+          <p class="tax-calc__panel-desc">17% headline rate with Start-Up Tax Exemption (SUTE) or Partial Tax Exemption (PTE), plus the Budget 2026 CIT rebate of 40% (capped).</p>
           <div class="tax-calc__grid">
             <label class="tax-calc__field">
               <span>Chargeable income (S$)</span>
@@ -1666,7 +1666,7 @@ a.service-card {
         <!-- CPF panel -->
         <div class="tax-calc__panel" data-panel="cpf">
           <h3 class="tax-calc__panel-title">CPF contributions (2026 rates)</h3>
-          <p class="tax-calc__panel-desc">Applies to Singapore citizens and PRs only. Ordinary Wage ceiling raised to S$8,000/month from Jan 2026. Foreign workers (EP, S Pass) are not subject to CPF.</p>
+          <p class="tax-calc__panel-desc">Applies to Singapore citizens and PRs only. Ordinary Wage ceiling raised to from Jan 2026. Foreign workers (EP, S Pass) are not subject to CPF.</p>
           <div class="tax-calc__grid">
             <label class="tax-calc__field">
               <span>Monthly ordinary wage (S$)</span>
@@ -1769,22 +1769,22 @@ a.service-card {
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="trending-down"></i></div>
           <h3>40% CIT rebate (Budget 2026)</h3>
-          <p>All tax-paying companies get a 40% Corporate Income Tax rebate for YA 2026, capped at S$40,000 per company. Combined with SUTE/PTE, the effective rate for the first S$200K of profit can fall to 3-6%.</p>
+          <p>All tax-paying companies get a 40% Corporate Income Tax rebate for YA 2026, capped per company. Combined with SUTE/PTE, the effective rate for the first of profit can fall to 3-6%.</p>
         </div>
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="rocket"></i></div>
           <h3>SUTE: first 3 YAs</h3>
-          <p>Start-Up Tax Exemption applies for the first 3 Years of Assessment. First S$100K of chargeable income is 75% exempt, next S$100K is 50% exempt. Must be Singapore-incorporated, tax resident, with ≤20 individual shareholders or one 10%+ corporate shareholder.</p>
+          <p>Start-Up Tax Exemption applies for the first 3 Years of Assessment. First of chargeable income is 75% exempt, next is 50% exempt. Must be Singapore-incorporated, tax resident, with ≤20 individual shareholders or one 10%+ corporate shareholder.</p>
         </div>
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="trending-up"></i></div>
-          <h3>CPF wage ceiling: S$8,000</h3>
-          <p>From Jan 2026 the Ordinary Wage ceiling for CPF is S$8,000/month (up from S$7,400 in 2025). Additional Wage ceiling is S$102,000 minus YTD Ordinary Wages capped. Higher ceiling means higher employer cost for senior staff.</p>
+          <h3>CPF wage ceiling: </h3>
+          <p>From Jan 2026 the Ordinary Wage ceiling for CPF is (up in 2025). Additional Wage ceiling is inus YTD Ordinary Wages capped. Higher ceiling means higher employer cost for senior staff.</p>
         </div>
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="receipt"></i></div>
           <h3>GST stays at 9%</h3>
-          <p>GST has been 9% since Jan 1, 2024 (no further increases announced for 2026). Registration is compulsory at S$1M annual taxable turnover, but voluntary registration is available. InvoiceNow e-invoicing became mandatory for newly-registered GST entities from Nov 2025.</p>
+          <p>GST has been 9% since Jan 1, 2024 (no further increases announced for 2026). Registration is compulsory annual taxable turnover, but voluntary registration is available. InvoiceNow e-invoicing became mandatory for newly-registered GST entities from Nov 2025.</p>
         </div>
       </div>
     </div>
@@ -1811,7 +1811,7 @@ a.service-card {
         <div class="footer__brand">
           <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
           <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
-          <div class="footer__badges"><span class="badge">ACRA Registered</span>  <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span> <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
           </div>
         </div>
         <div class="footer__links">

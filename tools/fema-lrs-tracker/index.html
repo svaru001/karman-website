@@ -181,7 +181,7 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
       {"@type":"ListItem","position":2,"name":"Free Tools","item":"https://karman.com.sg/tools/"},
       {"@type":"ListItem","position":3,"name":"FEMA LRS Tracker","item":"https://karman.com.sg/tools/fema-lrs-tracker"}
     ]},
-    {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the LRS limit for investing in a Singapore company?","acceptedAnswer":{"@type":"Answer","text":"Under the Liberalised Remittance Scheme, an Indian resident individual can remit up to USD 250,000 per financial year (April to March) for permissible capital account transactions, including subscribing to shares in a Singapore company. This is a per-person limit, so two co-founders can collectively invest USD 500,000 per year. For larger amounts, companies can use the Overseas Direct Investment (ODI) route, which allows up to 400% of net worth."}},{"@type":"Question","name":"How is TCS calculated on my LRS remittances?","acceptedAnswer":{"@type":"Answer","text":"Tax Collected at Source under LRS is generally 20% on the aggregate amount remitted in excess of ₹10 lakh in a financial year (confirm the current rate and threshold under the latest Finance Act, as these have changed). TCS is collected by your bank at the time of remittance. Importantly, TCS is creditable - you can claim it against your income tax liability when filing your return, so it is a cash-flow cost, not an additional permanent tax."}},{"@type":"Question","name":"What happens if I exceed the LRS limit?","acceptedAnswer":{"@type":"Answer","text":"You cannot remit more than USD 250,000 under LRS in a single financial year. To invest more, you would use a different route - a co-founder's separate LRS limit, or the ODI route if investing through an Indian company. Exceeding the LRS limit without using a proper alternative route is a FEMA contravention. If you need to invest more than your LRS headroom allows, speak to a FEMA-qualified CA about the ODI route before remitting."}}]}
+    {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the LRS limit for investing in a Singapore company?","acceptedAnswer":{"@type":"Answer","text":"Under the Liberalised Remittance Scheme, an Indian resident individual can remit up to USD 250,000 per financial year (April to March) for permissible capital account transactions, including subscribing to shares in a Singapore company. This is a per-person limit, so two co-founders can collectively invest USD 500,000 per year. For larger amounts, companies can use the Overseas Direct Investment (ODI) route, which allows up to 400% of net worth."}},{"@type":"Question","name":"How is TCS calculated on my LRS remittances?","acceptedAnswer":{"@type":"Answer","text":"Tax Collected at Source under LRS is generally 20% on the aggregate amount remitted in excess of lakh in a financial year (confirm the current rate and threshold under the latest Finance Act, as these have changed). TCS is collected by your bank at the time of remittance. Importantly, TCS is creditable - you can claim it against your income tax liability when filing your return, so it is a cash-flow cost, not an additional permanent tax."}},{"@type":"Question","name":"What happens if I exceed the LRS limit?","acceptedAnswer":{"@type":"Answer","text":"You cannot remit more than USD 250,000 under LRS in a single financial year. To invest more, you would use a different route - a co-founder's separate LRS limit, or the ODI route if investing through an Indian company. Exceeding the LRS limit without using a proper alternative route is a FEMA contravention. If you need to invest more than your LRS headroom allows, speak to a FEMA-qualified CA about the ODI route before remitting."}}]}
   ]}
   </script>
 </head>
@@ -249,7 +249,7 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
               <hr class="lrs-divider" />
               <p class="lrs-section-title">TCS estimate (optional)</p>
               <div class="lrs-field">
-                <label for="lrsRate">USD → INR rate <span class="lrs-hint">(for the ₹10 lakh TCS threshold)</span></label>
+                <label for="lrsRate">USD → INR rate <span class="lrs-hint">(for the lakh TCS threshold)</span></label>
                 <div class="lrs-input-wrap"><span class="lrs-prefix">₹</span><input type="number" id="lrsRate" min="1" step="0.5" value="86" /></div>
               </div>
 
@@ -264,10 +264,10 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
                 </div>
                 <div class="lrs-stat-grid">
                   <div class="lrs-stat"><div class="lrs-stat__label">Annual LRS limit</div><div class="lrs-stat__value" style="font-size:18px">$250,000</div></div>
-                  <div class="lrs-stat"><div class="lrs-stat__label">Est. TCS payable</div><div class="lrs-stat__value" style="font-size:18px" id="lrsTcs">₹0</div></div>
+                  <div class="lrs-stat"><div class="lrs-stat__label">Est. TCS payable</div><div class="lrs-stat__value" style="font-size:18px" id="lrsTcs"></div></div>
                 </div>
                 <div id="lrsAlert"></div>
-                <p class="lrs-note">Illustrative only. The LRS limit is USD 250,000 per individual per Indian financial year (April-March) for permissible capital and current account transactions. TCS on foreign remittances under LRS is generally 20% on the amount exceeding ₹10 lakh in a financial year (rate and threshold per current Finance Act - verify the latest). TCS is creditable against your income tax liability. This tool does not account for all remittance purposes or exemptions. Not tax or legal advice - confirm with a FEMA-qualified CA.</p>
+                <p class="lrs-note">Illustrative only. The LRS limit is USD 250,000 per individual per Indian financial year (April-March) for permissible capital and current account transactions. TCS on foreign remittances under LRS is generally 20% on the amount exceeding lakh in a financial year (rate and threshold per current Finance Act - verify the latest). TCS is creditable against your income tax liability. This tool does not account for all remittance purposes or exemptions. Not tax or legal advice - confirm with a FEMA-qualified CA.</p>
               </div>
 
               <div class="tool-lead">
@@ -320,7 +320,7 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="receipt"></i></div>
           <h3>TCS on foreign remittances</h3>
-          <p>Tax Collected at Source applies to LRS remittances - generally 20% on the amount exceeding ₹10 lakh in a financial year (verify the current rate and threshold). TCS is not an extra tax; it is creditable against your income tax liability when you file your return.</p>
+          <p>Tax Collected at Source applies to LRS remittances - generally 20% on the amount exceeding lakh in a financial year (verify the current rate and threshold). TCS is not an extra tax; it is creditable against your income tax liability when you file your return.</p>
         </div>
         <div class="tool-info-card">
           <div class="tool-info-card__icon"><i data-lucide="users"></i></div>
@@ -347,7 +347,7 @@ h1,h2,h3,h4,h5{font-family:'Sora','Inter',sans-serif;line-height:1.2;font-weight
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">How is TCS calculated on my LRS remittances?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Tax Collected at Source under LRS is generally 20% on the aggregate amount remitted in excess of ₹10 lakh in a financial year (confirm the current rate and threshold under the latest Finance Act, as these have changed). TCS is collected by your bank at the time of remittance. Importantly, TCS is creditable - you can claim it against your income tax liability when filing your return, so it is a cash-flow cost, not an additional permanent tax.</p></div>
+          <div class="faq-answer"><p>Tax Collected at Source under LRS is generally 20% on the aggregate amount remitted in excess of lakh in a financial year (confirm the current rate and threshold under the latest Finance Act, as these have changed). TCS is collected by your bank at the time of remittance. Importantly, TCS is creditable - you can claim it against your income tax liability when filing your return, so it is a cash-flow cost, not an additional permanent tax.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">What happens if I exceed the LRS limit?<span class="faq-icon">+</span></button>
