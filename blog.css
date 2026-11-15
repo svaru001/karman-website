@@ -991,3 +991,50 @@
   .blog-lead { padding: 24px 18px; }
   .blog-lead__row { grid-template-columns: 1fr; }
 }
+
+/* ─── AEO: Quick answer / Key takeaways box (top of every article) ─── */
+.key-takeaways {
+  background: var(--gray-50, #F8F9FB);
+  border: 1px solid var(--gray-200, #E1E4EA);
+  border-top: 4px solid var(--blue, #1A6BCC);
+  border-radius: var(--radius, 12px);
+  padding: 22px 26px;
+  margin: 0 0 32px;
+}
+.key-takeaways__label {
+  font-family: 'Sora', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--blue, #1A6BCC);
+  margin: 0 0 8px;
+}
+.key-takeaways__label--sub { margin-top: 18px; color: var(--navy, #0A2540); }
+.article-body .key-takeaways__answer {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--navy, #0A2540);
+  font-weight: 500;
+  margin: 0;
+}
+.article-body .key-takeaways__list { margin: 0; padding-left: 20px; }
+.article-body .key-takeaways__list li {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 6px;
+}
+.article-body .key-takeaways__list li:last-child { margin-bottom: 0; }
+@media (max-width: 768px) {
+  .key-takeaways { padding: 18px 18px; margin-bottom: 24px; }
+  .article-body .key-takeaways__answer { font-size: 16px; }
+}
+
+/* Legacy hero markup (older template: .breadcrumb / .article-date / __subtitle) - keep text readable on the dark hero */
+.article-hero .breadcrumb,
+.article-hero .breadcrumb a,
+.article-hero .breadcrumb span,
+.article-hero .article-read-time,
+.article-hero .article-date,
+.article-hero__subtitle { color: rgba(255,255,255,.78); }
+.article-hero .breadcrumb a:hover { color: #fff; }
