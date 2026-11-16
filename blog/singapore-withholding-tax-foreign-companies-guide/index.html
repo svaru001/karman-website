@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Singapore Withholding Tax on Foreign Payments: 2026 Rates &amp; DTA Table | Karman</title>
+  <meta name="description" content="Singapore withholding tax rates for 2026: 15% interest, 10% royalties, 17% services. Treaty rates by country, why remote services are exempt, IR37 deadlines and a free calculator." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://karman.com.sg/blog/singapore-withholding-tax-foreign-companies-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-11-16T00:00:00+08:00" />
+  <meta property="article:modified_time" content="2026-11-16T00:00:00+08:00" />
+  <meta property="og:url" content="https://karman.com.sg/blog/singapore-withholding-tax-foreign-companies-guide" />
+  <meta property="og:title" content="Singapore Withholding Tax on Foreign Payments: 2026 Rates &amp; DTA Table" />
+  <meta property="og:description" content="Singapore withholding tax rates for 2026: 15% interest, 10% royalties, 17% services. Treaty rates by country, why remote services are exempt, IR37 deadlines and a free calculator." />
+  <meta property="og:image" content="https://karman.com.sg/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Singapore Withholding Tax on Foreign Payments: 2026 Rates &amp; DTA Table" />
+  <meta name="twitter:description" content="Singapore withholding tax rates for 2026: 15% interest, 10% royalties, 17% services. Treaty rates by country, why remote services are exempt, IR37 deadlines and a free calculator." />
+  <meta name="twitter:image" content="https://karman.com.sg/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__scroll-indicator span {
+  display: block;
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__content .section-heading {
+  text-align: left;
+}
+.why__content .section-subtext {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Compliance Card Stack */
+.why__visual {
+  position: relative;
+}
+.why__card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.compliance-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s;
+}
+.compliance-card:hover { transform: translateX(4px); }
+.compliance-card--upcoming {
+  border-color: var(--amber);
+  background: #FFFBF0;
+}
+.compliance-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.compliance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.compliance-dot.green { background: var(--teal); }
+.compliance-dot.amber { background: var(--amber); }
+.compliance-dot.blue { background: var(--blue); }
+.compliance-status {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(0,201,167,.1);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.compliance-status.upcoming {
+  color: #92740A;
+  background: rgba(245,166,35,.15);
+}
+.compliance-status.processing {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.compliance-card__date {
+  font-size: 12px;
+  color: var(--gray-600);
+  padding-left: 16px;
+}
+.why__card-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 16px;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-tab:hover:not(.active) { color: var(--blue); }
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.plan-features li.text-muted { color: var(--gray-400); }
+.plan-features li.text-muted::before { color: var(--gray-200); }
+
+.pricing__note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-top: 32px;
+}
+.pricing__note a { color: var(--blue); font-weight: 500; }
+.pricing__note a:hover { text-decoration: underline; }
+
+/* === TESTIMONIALS === */
+.testimonials { background: #fff; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.testimonial-card--accent p { color: rgba(255,255,255,.9); }
+
+.testimonial-card__stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-card__author strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+}
+.testimonial-card--accent .testimonial-card__author strong { color: #fff; }
+.testimonial-card__author span {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+.testimonial-card--accent .testimonial-card__author span { color: rgba(255,255,255,.6); }
+
+/* === BLOG PREVIEW === */
+.blog-preview { background: #fff; }
+
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.blog-preview__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.blog-preview__card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 20px rgba(37,99,235,.1);
+  transform: translateY(-2px);
+}
+
+.blog-preview__tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(37,99,235,.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.blog-preview__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+  margin: 0;
+}
+
+.blog-preview__card p {
+  font-size: .88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.blog-preview__cta {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 4px;
+}
+
+.blog-preview__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .blog-preview__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-preview__grid { grid-template-columns: 1fr; }
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
+.contact-detail a { color: var(--blue); }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Form */
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray-400); }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-optional { font-size: 11px; color: var(--gray-400); font-weight: 400; }
+.form-disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+/* Alias for new standalone pages that use footer__grid / footer__col */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--featured { grid-column: span 1; }
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .why__content .section-heading,
+  .why__content .section-subtext { text-align: center; }
+  .why__points { max-width: 500px; margin: 0 auto; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__stats {
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .stat strong { font-size: 22px; }
+  .stat-divider { margin: 0 16px; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .testimonials__grid { grid-template-columns: 1fr; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero__heading { font-size: 38px; }
+  .hero__stats { flex-direction: column; gap: 20px; }
+  .stat-divider { width: 100%; height: 1px; margin: 0; }
+  .pricing__tabs { flex-direction: column; max-width: 100%; }
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../blog.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Singapore Withholding Tax on Payments to Foreign Companies (2026): Rates, Treaty Table and Examples",
+      "url": "https://karman.com.sg/blog/singapore-withholding-tax-foreign-companies-guide",
+      "image": "https://karman.com.sg/og-image.png",
+      "datePublished": "2026-11-16T00:00:00+08:00",
+      "dateModified": "2026-11-16T00:00:00+08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Karman Editorial Team",
+        "url": "https://karman.com.sg/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Karman Corporate Services",
+        "url": "https://karman.com.sg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://karman.com.sg/og-image.png"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/karman-advisory-singapore/"
+        ]
+      },
+      "description": "Singapore withholding tax rates for 2026: 15% interest, 10% royalties, 17% services. Treaty rates by country, why remote services are exempt, IR37 deadlines and a free calculator.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://karman.com.sg/blog/singapore-withholding-tax-foreign-companies-guide"
+      },
+      "inLanguage": "en-SG",
+      "abstract": "Singapore withholding tax is deducted by a Singapore payer from certain payments to non-residents: 15% on interest, 10% on royalties, 15% on equipment rent and 17% on service fees for work done in Singapore. Services performed wholly outside Singapore are not subject to it, dividends are exempt, and tax treaties with around 100 countries can reduce the rates. Form IR37 is due by the 15th of the second month after payment.",
+      "keywords": "Singapore withholding tax, withholding tax on services Singapore, Singapore withholding tax on payments to foreign companies, Singapore withholding tax rate, Singapore DTA withholding tax rates, IR37 deadline, Singapore withholding tax calculator"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://karman.com.sg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://karman.com.sg/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Singapore Withholding Tax Guide",
+          "item": "https://karman.com.sg/blog/singapore-withholding-tax-foreign-companies-guide"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Singapore have withholding tax on services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only on services performed in Singapore. Fees for technical, management or other services done in Singapore by a non-resident company are subject to withholding at the prevailing corporate tax rate of 17%, unless a tax treaty exempts them. Services performed wholly outside Singapore are not subject to Singapore withholding tax."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Singapore have withholding tax on dividends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Singapore does not impose withholding tax on dividends paid to non-resident shareholders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Singapore withholding tax rate on interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The domestic rate is 15% of the gross interest. Tax treaties can reduce it, for example to 10% for Malaysia, 5% for the UK and 0% for the UAE, Germany and Mauritius."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a tax treaty between Singapore and the United States?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No comprehensive treaty. The Singapore-US agreement covers only shipping and air transport income, so domestic withholding rates apply to interest, royalties and services paid to US companies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the India-Singapore DTAA withholding tax rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the India-Singapore treaty, interest paid from Singapore to an Indian resident is taxed at up to 15% (10% where the recipient is a bank or financial institution), and royalties at 10%. Fees for services performed wholly in India are not subject to Singapore withholding tax."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is Singapore withholding tax due?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Singapore payer must file Form IR37 and pay the tax by the 15th of the second month after the date of payment. A payment due on 10 November 2026 must be filed and paid by 15 January 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who pays withholding tax if the contract is net of tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Singapore payer bears it, and the tax is grossed up: gross = net / (1 - rate). For S$20,000 net at 17%, the gross is S$24,096.39 and the tax S$4,096.39."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".key-takeaways__answer",
+      ".key-takeaways__list"
+    ]
+  },
+  "url": "https://karman.com.sg/blog/singapore-withholding-tax-foreign-companies-guide"
+}
+  </script>
+</head>
+<body class="article-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC & Fund Administration</strong>
+                <p>Singapore fund structures & compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting & Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration & quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link nav__link--active">Blog</a></li>
+        <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/#contact" class="btn btn--secondary">Contact us</a>
+        <a href="/onboarding" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span>Singapore Withholding Tax Guide</span>
+      </nav>
+      <span class="article-hero__tag">Tax</span>
+      <h1>Singapore Withholding Tax on Payments to Foreign Companies (2026): Rates, Treaty Table and Examples</h1>
+      <div class="article-hero__meta">
+        <span class="article-hero__meta-item">📅 Published <time datetime="2026-11-16">16 Nov 2026</time></span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">⏱ 10 min read</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">✍️ Karman Editorial Team</span>
+      </div>
+    </div>
+  </section>
+  <div class="article-layout">
+    <article class="article-body">
+      <div class="key-takeaways" id="key-takeaways">
+        <p class="key-takeaways__label">Quick answer</p>
+        <p class="key-takeaways__answer">Singapore withholding tax is deducted by a Singapore payer from certain payments to non-residents: 15% on interest, 10% on royalties, 15% on equipment rent and 17% on service fees for work done in Singapore. Services performed wholly outside Singapore are not subject to it, dividends are exempt, and tax treaties with around 100 countries can reduce the rates. Form IR37 is due by the 15th of the second month after payment.</p>
+        <p class="key-takeaways__label key-takeaways__label--sub">Key takeaways</p>
+        <ul class="key-takeaways__list">
+          <li>Services done wholly outside Singapore: no withholding tax.</li>
+          <li>No treaty: interest 15%, royalties 10%, onsite services 17%, non-resident directors 24%.</li>
+          <li>Treaty examples: UAE interest 0%, UK interest 5%, Malaysia royalties 8%, Netherlands royalties 0%. No US or Hong Kong treaty.</li>
+          <li>You need the payee's Certificate of Residence to apply a treaty rate, and must still file IR37.</li>
+          <li>Late payment: 5% penalty, plus 1% a month up to another 15%.</li>
+        </ul>
+      </div>
+<p>Search Google from Mumbai, Kuala Lumpur, Jakarta, London or Sydney for "Singapore withholding tax" and the suggestions are the same everywhere: <em>on services</em>, <em>on payments to foreign companies</em>, <em>rate</em>, <em>DTA</em>, <em>calculator</em>. Foreign suppliers want to know why their Singapore client paid them less than the invoice. Singapore companies want to know whether they owe IRAS money every time they pay an overseas freelancer, parent company or software vendor.</p>
+<p>The short version: many cross-border payments are <strong>not</strong> subject to Singapore withholding tax at all, a tax treaty often cuts the rate, and the payer is the one who gets penalised for getting it wrong. This guide covers the rates, the treaty table, the services rule most people miss, and three worked examples. To run your own numbers, use our free <a href="/tools/singapore-withholding-tax-calculator">Singapore withholding tax calculator</a>.</p>
+
+<h2>What is Singapore withholding tax?</h2>
+<p>When a Singapore business pays certain types of income to a non-resident, it must deduct a percentage of the payment and pay it to IRAS on the non-resident's behalf. The non-resident receives the balance. The Singapore payer, not the foreign recipient, is legally responsible for withholding, filing Form IR37 and paying the tax on time.</p>
+<p>It applies when three things are true: the payee is <strong>not tax resident in Singapore</strong>, the payment is of a <strong>type listed in the Income Tax Act</strong> (interest, royalties, certain service fees, equipment rent, director fees and a few others), and the income is <strong>sourced in Singapore</strong>. Dividends are not on the list. Singapore does not tax dividends paid to foreign shareholders.</p>
+
+<h2>Singapore withholding tax rates (2026)</h2>
+<div class="table-wrap"><table><thead><tr><th>Payment to a non-resident</th><th>Rate (no treaty)</th><th>Final tax?</th></tr></thead><tbody>
+<tr><td>Interest, loan fees and commissions on loans</td><td><strong>15%</strong> of gross</td><td>Yes, if no Singapore business or PE</td></tr>
+<tr><td>Royalties, use of IP, technical know-how</td><td><strong>10%</strong> of gross</td><td>Yes, if no Singapore business or PE</td></tr>
+<tr><td>Rent for equipment and other movable property</td><td><strong>15%</strong> of gross</td><td>Yes, if no Singapore business or PE</td></tr>
+<tr><td>Technical, service and management fees for work done in Singapore (company)</td><td><strong>17%</strong> (prevailing corporate rate)</td><td>No, payee can file on a net basis</td></tr>
+<tr><td>Non-resident professional (individual) working in Singapore</td><td><strong>15%</strong> of gross, or 24% of net</td><td>Yes</td></tr>
+<tr><td>Non-resident director fees</td><td><strong>24%</strong></td><td>Yes</td></tr>
+<tr><td>Non-resident public entertainers</td><td><strong>15%</strong> of gross</td><td>Yes</td></tr>
+<tr><td>Dividends</td><td><strong>0%</strong></td><td>No withholding tax</td></tr>
+</tbody></table></div>
+<p>Source: IRAS. Treaty rates can be lower; see the country table below.</p>
+
+<h2>The rule most foreign suppliers miss: work done outside Singapore</h2>
+<p>Service fees are only subject to Singapore withholding tax if the services are <strong>performed in Singapore</strong>. IRAS's own guidance says that where a non-resident provides services from overseas, for example electronically and without sending staff to Singapore, the services are rendered outside Singapore and withholding tax does not apply.</p>
+<ul>
+<li>An Indian software agency building an app for a Singapore startup from Bengaluru: <strong>no Singapore withholding tax</strong>.</li>
+<li>A Vietnamese design studio working remotely for a Singapore brand: <strong>no Singapore withholding tax</strong>.</li>
+<li>A UK consultant who flies in for a two-week workshop in Singapore: <strong>the Singapore part is in scope</strong>, though the UK treaty usually exempts it if the consultant's firm has no permanent establishment in Singapore. The payer must still file Form IR37 to claim the exemption.</li>
+</ul>
+<p>If a project mixes onsite and offshore work, split the fee in the contract and on the invoice. Without a split, IRAS can treat the whole fee as Singapore work.</p>
+
+<h2>Singapore treaty withholding tax rates by country</h2>
+<p>Singapore has tax treaties (DTAs) with around 100 jurisdictions. Where a treaty applies, the lower of the treaty rate and the domestic rate is used. These are the general treaty rates for the countries we see most often. Lower rates may apply to banks, government bodies and some types of royalty.</p>
+<div class="table-wrap"><table><thead><tr><th>Payee resident in</th><th>Interest</th><th>Royalties</th></tr></thead><tbody>
+<tr><td>No treaty (incl. <strong>United States</strong>, <strong>Hong Kong</strong>)</td><td>15%</td><td>10%</td></tr>
+<tr><td>India</td><td>15% (10% to banks)</td><td>10%</td></tr>
+<tr><td>Malaysia</td><td>10%</td><td>8%</td></tr>
+<tr><td>Indonesia</td><td>10%</td><td>10% (8% for equipment / know-how)</td></tr>
+<tr><td>Vietnam</td><td>10%</td><td>10% (5% for patents, designs, equipment)</td></tr>
+<tr><td>Thailand</td><td>15% (10% to financial institutions)</td><td>10% (5% to 8% for some types)</td></tr>
+<tr><td>Philippines</td><td>15%</td><td>10%</td></tr>
+<tr><td>China</td><td>10% (7% to financial institutions)</td><td>10% (6% for equipment)</td></tr>
+<tr><td>Japan</td><td>10%</td><td>10%</td></tr>
+<tr><td>South Korea</td><td>10%</td><td>5%</td></tr>
+<tr><td>Australia</td><td>10%</td><td>10%</td></tr>
+<tr><td>New Zealand</td><td>10%</td><td>5%</td></tr>
+<tr><td>United Kingdom</td><td>5%</td><td>8%</td></tr>
+<tr><td>Germany</td><td>0%</td><td>5%</td></tr>
+<tr><td>France</td><td>10%</td><td>0%</td></tr>
+<tr><td>Netherlands</td><td>10%</td><td>0%</td></tr>
+<tr><td>Switzerland</td><td>5%</td><td>5%</td></tr>
+<tr><td>Ireland</td><td>5%</td><td>5%</td></tr>
+<tr><td>Luxembourg</td><td>0%</td><td>7%</td></tr>
+<tr><td>United Arab Emirates</td><td>0%</td><td>5%</td></tr>
+<tr><td>Saudi Arabia</td><td>5%</td><td>8%</td></tr>
+<tr><td>Qatar</td><td>5%</td><td>10%</td></tr>
+<tr><td>Mauritius</td><td>0%</td><td>0%</td></tr>
+<tr><td>Sri Lanka</td><td>10%</td><td>10%</td></tr>
+<tr><td>Bangladesh</td><td>10%</td><td>10%</td></tr>
+<tr><td>Pakistan</td><td>12.5%</td><td>10%</td></tr>
+<tr><td>Canada</td><td>15%</td><td>10%</td></tr>
+<tr><td>Nigeria</td><td>7.5%</td><td>7.5%</td></tr>
+<tr><td>South Africa</td><td>7.5%</td><td>5%</td></tr>
+</tbody></table></div>
+<p>Source: PwC Worldwide Tax Summaries, last reviewed 2 July 2026. The <a href="/tools/singapore-withholding-tax-calculator">calculator</a> has the full table of 95+ countries, with notes on special rates.</p>
+<div class="callout"><p><strong>No US treaty.</strong> Singapore's agreements with the United States and Hong Kong cover only shipping and air transport income. A Singapore company paying a US company interest or royalties withholds at the full domestic rates. The US company can usually claim a foreign tax credit at home.</p></div>
+
+<h2>How to claim a treaty rate</h2>
+<ol>
+<li><strong>Get a Certificate of Residence (CoR)</strong> from the payee's home tax authority, covering the year of payment. Without one, use the domestic rate.</li>
+<li><strong>Check the payee has no permanent establishment</strong> in Singapore. A Singapore branch, office or staff present for long periods can switch off treaty relief for service fees.</li>
+<li><strong>Withhold at the treaty rate</strong> (or not at all, where the treaty exempts the income).</li>
+<li><strong>File Form IR37</strong> on myTax Portal, even when the treaty reduces the tax to zero, and keep the CoR on file in case IRAS asks.</li>
+</ol>
+
+<h2>Three worked examples</h2>
+<h3>1. Royalty to a Malaysian company</h3>
+<p>A Singapore company pays a Malaysian company S$50,000 for the right to use its brand. Domestic rate 10%, Malaysia treaty rate 8%. With a Malaysian CoR, the Singapore company withholds <strong>S$4,000</strong> and pays the Malaysian company S$46,000, saving S$1,000 compared with the domestic rate.</p>
+<h3>2. Onsite consulting from a US firm, net of tax</h3>
+<p>A US consulting firm sends a team to Singapore and the contract says it must receive S$20,000 "free of any taxes". There is no US treaty, so the 17% rate applies, and because the Singapore company bears the tax, it is grossed up:</p>
+<ul>
+<li>Gross fee = S$20,000 / (1 - 0.17) = <strong>S$24,096.39</strong></li>
+<li>Withholding tax = <strong>S$4,096.39</strong>, paid by the Singapore company on top of the S$20,000</li>
+</ul>
+<p>Net-of-tax clauses are common in contracts drafted by foreign suppliers. Read them before you sign: they can add 20% or more to the real cost.</p>
+<h3>3. Shareholder loan from a UAE parent</h3>
+<p>A Singapore subsidiary pays S$30,000 of interest on a loan from its UAE parent. The Singapore-UAE treaty rate on interest is <strong>0%</strong>, so with a UAE CoR nothing is withheld. The subsidiary still files Form IR37 to report the payment and claim the treaty rate. The interest rate itself should be at arm's length; model related-party pricing with our <a href="/tools/transfer-pricing-margin-simulator">transfer pricing simulator</a>.</p>
+
+<h2>Filing deadline and penalties</h2>
+<p>Withholding tax must be filed (Form IR37) and paid by the <strong>15th of the second month after the date of payment</strong>. The date of payment is the earliest of the date the payment is due under the contract, the date it is paid, or the date it is credited to the payee's account. A royalty due on 10 November 2026 must be filed and paid by 15 January 2027.</p>
+<ul>
+<li>Late payment: a <strong>5% penalty</strong> on the unpaid tax.</li>
+<li>Still unpaid: an additional <strong>1% for each completed month</strong>, up to a further 15%.</li>
+<li>If you forgot to withhold, the Singapore payer still owes the tax and may also face penalties for late filing.</li>
+</ul>
+
+<h2>If you are the foreign supplier</h2>
+<ul>
+<li><strong>Say where the work is done</strong> in the contract. If it is all offshore, say so; it is the cleanest way to avoid a deduction.</li>
+<li><strong>Send your Certificate of Residence</strong> before the first invoice so your client can apply the treaty rate.</li>
+<li><strong>Agree who bears the tax</strong>. "Fees are exclusive of withholding tax" (client grosses up) and "fees are subject to applicable withholding tax" (you absorb it) lead to very different outcomes.</li>
+<li><strong>Claim a foreign tax credit</strong> at home for Singapore tax withheld. Ask your client for the IRAS withholding tax payment records.</li>
+</ul>
+
+<h2>If you own a Singapore company paying overseas</h2>
+<p>Founders who set up in Singapore from India, Indonesia, Malaysia or the UK often pay management fees, royalties or interest back to a related company at home. Those payments are where withholding tax and transfer pricing meet. Keep a written agreement, price it at arm's length, check whether the work happens in Singapore, and diarise the IR37 deadline every time you pay. Our <a href="/services/accounting">accounting team</a> can handle IR37 filings as part of your monthly bookkeeping.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li>Withholding 17% on a remote service performed wholly overseas, where no withholding tax applies.</li>
+<li>Applying a treaty rate without a Certificate of Residence.</li>
+<li>Not filing IR37 because the treaty rate is 0%.</li>
+<li>Assuming a US or Hong Kong supplier gets treaty relief.</li>
+<li>Agreeing to a net-of-tax clause without budgeting for the gross-up.</li>
+<li>Treating dividends as subject to withholding tax; they are not.</li>
+</ul>
+      <section class="article-sources-section" style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-200);">
+        <h3 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-500);margin-bottom:12px;">Sources</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+      <li><a href="https://www.iras.gov.sg/taxes/withholding-tax/basics-of-withholding-tax/types-of-payment-and-withholding-tax-rates" target="_blank" rel="noopener noreferrer">IRAS - Types of payment and withholding tax rates ↗</a></li>
+      <li><a href="https://www.iras.gov.sg/taxes/withholding-tax/payments-to-non-resident-company/payments-that-are-subject-to-withholding-tax" target="_blank" rel="noopener noreferrer">IRAS - Payments to non-resident companies subject to withholding tax ↗</a></li>
+      <li><a href="https://www.iras.gov.sg/taxes/withholding-tax/withholding-tax-filing/withholding-tax-filing-and-payment-due-date" target="_blank" rel="noopener noreferrer">IRAS - Withholding tax filing and payment due date ↗</a></li>
+      <li><a href="https://www.iras.gov.sg/taxes/withholding-tax/withholding-tax-payments/late-payment-and-non-payment-of-taxes" target="_blank" rel="noopener noreferrer">IRAS - Late payment and non-payment of withholding tax ↗</a></li>
+      <li><a href="https://www.iras.gov.sg/taxes/international-tax/international-tax-agreements-concluded-by-singapore/list-of-dtas-limited-dtas-and-eoi-arrangements" target="_blank" rel="noopener noreferrer">IRAS - List of DTAs, limited DTAs and EOI arrangements ↗</a></li>
+      <li><a href="https://taxsummaries.pwc.com/singapore/corporate/withholding-taxes" target="_blank" rel="noopener noreferrer">PwC Worldwide Tax Summaries - Singapore withholding taxes ↗</a></li>
+        </ul>
+      </section>
+      <section class="article-faq-section" style="margin-top:56px;padding-top:0;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__grid" style="max-width:100%;margin-top:24px;">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Does Singapore have withholding tax on services?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Only on services performed in Singapore. Fees for technical, management or other services done in Singapore by a non-resident company are subject to withholding at the prevailing corporate tax rate of 17%, unless a tax treaty exempts them. Services performed wholly outside Singapore are not subject to Singapore withholding tax.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Does Singapore have withholding tax on dividends?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Singapore does not impose withholding tax on dividends paid to non-resident shareholders.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is the Singapore withholding tax rate on interest?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>The domestic rate is 15% of the gross interest. Tax treaties can reduce it, for example to 10% for Malaysia, 5% for the UK and 0% for the UAE, Germany and Mauritius.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Is there a tax treaty between Singapore and the United States?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No comprehensive treaty. The Singapore-US agreement covers only shipping and air transport income, so domestic withholding rates apply to interest, royalties and services paid to US companies.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is the India-Singapore DTAA withholding tax rate?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Under the India-Singapore treaty, interest paid from Singapore to an Indian resident is taxed at up to 15% (10% where the recipient is a bank or financial institution), and royalties at 10%. Fees for services performed wholly in India are not subject to Singapore withholding tax.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">When is Singapore withholding tax due?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>The Singapore payer must file Form IR37 and pay the tax by the 15th of the second month after the date of payment. A payment due on 10 November 2026 must be filed and paid by 15 January 2027.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Who pays withholding tax if the contract is net of tax?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>The Singapore payer bears it, and the tax is grossed up: gross = net / (1 - rate). For S$20,000 net at 17%, the gross is S$24,096.39 and the tax S$4,096.39.</p></div>
+      </div>
+        </div>
+      </section>
+      <p style="margin-top:32px;font-size:14px;color:var(--gray-500);">This guide is general information, not legal or tax advice. Rules are as stated by ACRA, IRAS and MOM on 16 November 2026.</p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__eyebrow">Ready to incorporate?</div>
+        <h3>Get started</h3>
+        <p>Karman handles name check, ACRA filing, nominee director, and company secretary. Most applications approved within 1 business day.</p>
+        <a href="/onboarding" class="btn btn--primary">Start your application →</a>
+        <a href="/tools" class="sidebar-cta__secondary">Try our free tools first</a>
+      </div>
+      <div class="sidebar-tools">
+        <h4>Useful free tools</h4>
+        <a href="/tools/singapore-withholding-tax-calculator">
+          <span>🌏</span><span>Withholding Tax Calculator</span>
+        </a>
+        <a href="/tools/singapore-tax-calculator">
+          <span>🧮</span><span>Singapore Tax Calculator</span>
+        </a>
+        <a href="/tools/transfer-pricing-margin-simulator">
+          <span>⚖️</span><span>Transfer Pricing Simulator</span>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="article-related">
+    <div class="container">
+      <h2 class="article-related__heading">Related articles</h2>
+      <div class="article-related__grid">
+        <a href="/blog/india-singapore-dtaa-business-guide" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">India-Singapore DTAA Business Guide</h3>
+          <p class="blog-card__excerpt">How the India-Singapore tax treaty affects founders and traders.</p>
+          <div class="blog-card__meta"><span>9 min read</span></div>
+        </a>
+        <a href="/blog/singapore-holding-company-tax-benefits-guide" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Singapore Holding Company Tax Benefits</h3>
+          <p class="blog-card__excerpt">Why groups hold IP and subsidiaries from Singapore.</p>
+          <div class="blog-card__meta"><span>9 min read</span></div>
+        </a>
+        <a href="/blog/singapore-corporate-tax-guide-small-business" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Singapore Corporate Tax Guide</h3>
+          <p class="blog-card__excerpt">Rates, exemptions and the 2026 rebate for small companies.</p>
+          <div class="blog-card__meta"><span>10 min read</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span> <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="/#incorporation">Company Incorporation</a></li>
+            <li><a href="/services/vcc-fund-administration">VCC &amp; Fund Administration</a></li>
+            <li><a href="/#secretary">Corporate Secretarial</a></li>
+            <li><a href="/#accounting">Accounting &amp; Bookkeeping</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Resources</h4><ul>
+            <li><a href="/tools">Free Tools</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="/#about">About Karman</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script></body>
+</html>
