@@ -237,7 +237,7 @@
   <!-- ── Blog Hub ── -->
   <url>
     <loc>https://karman.com.sg/blog</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -1298,6 +1298,30 @@
   <url>
     <loc>https://karman.com.sg/blog/nvidia-megaspeed-singapore-export-controls-trading-companies</loc>
     <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/form-c-s-deadline-30-november-2026-missed</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/edge-grant-singapore-2026</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/business-adaptation-grant-singapore-tariffs</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/singapore-single-family-office-mas-notification-2027</loc>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
