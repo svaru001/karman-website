@@ -237,7 +237,7 @@
   <!-- ── Blog Hub ── -->
   <url>
     <loc>https://karman.com.sg/blog</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -1322,6 +1322,36 @@
   <url>
     <loc>https://karman.com.sg/blog/singapore-single-family-office-mas-notification-2027</loc>
     <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/singapore-company-registration-requirements-documents</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/how-to-register-company-singapore-bizfile</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/singapore-company-formation-non-resident</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/singapore-uen-company-registration-number-search</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/blog/register-sole-proprietorship-singapore</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
