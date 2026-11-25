@@ -420,7 +420,7 @@
 
   <url>
     <loc>https://karman.com.sg/blog/best-company-incorporation-services-singapore</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -1191,8 +1191,8 @@
   <!-- New pages May 2026 -->
   <url><loc>https://karman.com.sg/for/malaysia</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://karman.com.sg/for/australia</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://karman.com.sg/compare/karman-vs-sleek</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://karman.com.sg/compare/karman-vs-osome</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/compare/karman-vs-sleek</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karman.com.sg/compare/karman-vs-osome</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://karman.com.sg/blog/singapore-marketplace-seller-company-setup</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://karman.com.sg/blog/dropshipping-business-registration-singapore</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://karman.com.sg/singapore-startups-2026</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
@@ -1372,5 +1372,11 @@
     <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://karman.com.sg/compare</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 </urlset>
