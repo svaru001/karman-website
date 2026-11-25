@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DVKN5K8KSD');
+    (function(){
+      var loaded = false;
+      function loadGTM(){
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DVKN5K8KSD';
+        document.head.appendChild(s);
+      }
+      var events = ['scroll','keydown','mousemove','touchstart','click'];
+      function trigger(){ events.forEach(function(e){ window.removeEventListener(e, trigger, {passive:true}); }); loadGTM(); }
+      events.forEach(function(e){ window.addEventListener(e, trigger, {passive:true, once:true}); });
+      setTimeout(loadGTM, 5000);
+    })();
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Korean Business Owners: Singapore Holding Company Guide | Karman</title>
+  <meta name="description" content="Korea&#x27;s 50-60% inheritance tax and expanding exit tax are pushing owners to Singapore. What a Singapore holding company can and cannot do for you." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://karman.com.sg/blog/korean-business-owners-singapore-holding-company" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-11-25T00:00:00+08:00" />
+  <meta property="article:modified_time" content="2026-11-25T00:00:00+08:00" />
+  <meta property="og:url" content="https://karman.com.sg/blog/korean-business-owners-singapore-holding-company" />
+  <meta property="og:title" content="Korean Business Owners and Singapore: Holding Companies, Succession and Tax (2026)" />
+  <meta property="og:description" content="Korea&#x27;s 50-60% inheritance tax and expanding exit tax are pushing owners to Singapore. What a Singapore holding company can and cannot do for you." />
+  <meta property="og:image" content="https://karman.com.sg/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Korean Business Owners and Singapore: Holding Companies, Succession and Tax (2026)" />
+  <meta name="twitter:description" content="Korea&#x27;s 50-60% inheritance tax and expanding exit tax are pushing owners to Singapore. What a Singapore holding company can and cannot do for you." />
+  <meta name="twitter:image" content="https://karman.com.sg/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
+  <style>
+/* ─────────────────────────────────────────────
+   KARMAN — Corporate Services Singapore
+   styles.css
+───────────────────────────────────────────── */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  --navy:       #0A2540;
+  --navy-mid:   #163758;
+  --blue:       #1A6BCC;
+  --blue-light: #EBF3FD;
+  --accent:     #FF5C35;
+  --accent-hover: #e04a25;
+  --teal:       #00C9A7;
+  --amber:      #F5A623;
+  --gray-50:    #F8F9FB;
+  --gray-100:   #F0F2F5;
+  --gray-200:   #E1E4EA;
+  --gray-400:   #9AA5B4;
+  --gray-600:   #6B7280;
+  --gray-800:   #374151;
+  --white:      #FFFFFF;
+  --shadow-sm:  0 1px 3px rgba(10,37,64,.06), 0 1px 2px rgba(10,37,64,.04);
+  --shadow-md:  0 4px 16px rgba(10,37,64,.10);
+  --shadow-lg:  0 12px 40px rgba(10,37,64,.14);
+  --radius-sm:  6px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --container:  1180px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', 'Inter', sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1A6BCC 0%, #00C9A7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--lg { padding: 15px 30px; font-size: 16px; }
+.btn--full { width: 100%; }
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,92,53,.3);
+}
+
+.btn--secondary {
+  background: #0d4567;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #0a3a59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,69,103,.4);
+}
+
+.btn--outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+.btn--ghost:hover { color: var(--blue); }
+
+.btn--white {
+  background: #fff;
+  color: var(--navy);
+}
+.btn--white:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.btn--ghost-white {
+  border: 2px solid rgba(255,255,255,.4);
+  color: #fff;
+}
+.btn--ghost-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* === NAVIGATION === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled {
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav__link:hover { color: var(--blue); background: var(--blue-light); }
+.chevron { font-size: 16px; transition: transform .2s; }
+.has-dropdown.is-open .chevron { transform: rotate(90deg); }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+.has-dropdown.is-open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.dropdown__link:hover { background: var(--gray-50); }
+.dropdown__icon {
+  font-size: 20px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.dropdown__icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+.dropdown__link strong { display: block; font-size: 14px; color: var(--navy); }
+.dropdown__link p { font-size: 13px; color: var(--gray-600); margin-top: 1px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0F6FF 0%, #EBF3FD 40%, #F0FFF9 100%);
+}
+
+.hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,204,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,204,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__inner {
+  position: relative;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,201,167,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(0,201,167,0); }
+}
+
+.hero__heading {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 24px;
+}
+
+.hero__subtext {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--gray-600);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+}
+.stat {
+  flex: 1;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+.stat span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-200);
+  margin: 0 24px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__scroll-indicator span {
+  display: block;
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  padding: 28px 0;
+}
+.trust-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.trust-bar__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+.trust-logos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+/* === SERVICES === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+a.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.service-card {
+  grid-column: span 2;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, var(--blue-light));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.service-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card--featured {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.service-card--featured h3,
+.service-card--featured p { color: #fff; }
+.service-card--featured .service-list li { color: rgba(255,255,255,.85); }
+.service-card--featured .service-link { color: var(--teal); }
+.service-card--featured::before { background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.05)); }
+
+.service-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.service-card__icon svg { width: 32px; height: 32px; stroke-width: 1.5; }
+.service-card--featured .service-card__icon { color: #fff; }
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.service-list {
+  margin-bottom: 24px;
+}
+.service-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+}
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color .2s, gap .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-link:hover { color: var(--accent); }
+
+/* === WHY KARMAN === */
+.why { background: var(--gray-50); }
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why__content .section-heading {
+  text-align: left;
+}
+.why__content .section-subtext {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.why__points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why-point__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.why-point h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.why-point p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Compliance Card Stack */
+.why__visual {
+  position: relative;
+}
+.why__card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.compliance-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s;
+}
+.compliance-card:hover { transform: translateX(4px); }
+.compliance-card--upcoming {
+  border-color: var(--amber);
+  background: #FFFBF0;
+}
+.compliance-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.compliance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.compliance-dot.green { background: var(--teal); }
+.compliance-dot.amber { background: var(--amber); }
+.compliance-dot.blue { background: var(--blue); }
+.compliance-status {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(0,201,167,.1);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.compliance-status.upcoming {
+  color: #92740A;
+  background: rgba(245,166,35,.15);
+}
+.compliance-status.processing {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.compliance-card__date {
+  font-size: 12px;
+  color: var(--gray-600);
+  padding-left: 16px;
+}
+.why__card-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 16px;
+}
+
+/* === PROCESS === */
+.process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+.process-step {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.process-step__number {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.process-step h3 { font-size: 18px; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.process-step__arrow {
+  font-size: 28px;
+  color: var(--gray-200);
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+/* === PRICING === */
+.pricing { background: var(--gray-50); }
+
+.pricing__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin: 0 auto 48px;
+  max-width: fit-content;
+}
+.pricing-tab {
+  padding: 10px 24px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all .2s;
+}
+.pricing-tab.active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-tab:hover:not(.active) { color: var(--blue); }
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pricing__plans.hidden { display: none; }
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card--popular {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow-md);
+}
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-card__header h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.plan-card__header p {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+.plan-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.price-period {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.plan-features {
+  margin-bottom: 28px;
+}
+.plan-features li {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.plan-features li.text-muted { color: var(--gray-400); }
+.plan-features li.text-muted::before { color: var(--gray-200); }
+
+.pricing__note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-top: 32px;
+}
+.pricing__note a { color: var(--blue); font-weight: 500; }
+.pricing__note a:hover { text-decoration: underline; }
+
+/* === TESTIMONIALS === */
+.testimonials { background: #fff; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.testimonial-card--accent {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.testimonial-card--accent p { color: rgba(255,255,255,.9); }
+
+.testimonial-card__stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.testimonial-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-card__author strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+}
+.testimonial-card--accent .testimonial-card__author strong { color: #fff; }
+.testimonial-card__author span {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+.testimonial-card--accent .testimonial-card__author span { color: rgba(255,255,255,.6); }
+
+/* === BLOG PREVIEW === */
+.blog-preview { background: #fff; }
+
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.blog-preview__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.blog-preview__card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 20px rgba(37,99,235,.1);
+  transform: translateY(-2px);
+}
+
+.blog-preview__tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(37,99,235,.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.blog-preview__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+  margin: 0;
+}
+
+.blog-preview__card p {
+  font-size: .88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.blog-preview__cta {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 4px;
+}
+
+.blog-preview__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .blog-preview__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-preview__grid { grid-template-columns: 1fr; }
+}
+
+/* === FAQ === */
+.faq { background: var(--gray-50); }
+
+.faq__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:has(.faq-question[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .15s;
+}
+.faq-question:hover { background: var(--gray-50); }
+.faq-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .3s;
+  flex-shrink: 0;
+}
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+.faq-answer.open { display: block; }
+.faq-answer p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* === CTA BANNER === */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f3460 50%, #163758 100%);
+  padding: 80px 0;
+}
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cta-banner__content h2 {
+  font-size: clamp(24px, 3.5vw, 36px);
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cta-banner__content p {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+}
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* === CONTACT === */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.contact__info .section-heading { text-align: left; }
+.contact__info > p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-detail__icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+.contact-detail__icon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.contact-detail strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.contact-detail p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
+.contact-detail a { color: var(--blue); }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Form */
+.form {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,107,204,.12);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--gray-400); }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-optional { font-size: 11px; color: var(--gray-400); font-weight: 400; }
+.form-disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 32px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__brand .nav__logo { margin-bottom: 16px; }
+.footer__logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
+.footer__brand .logo-text { color: #fff; }
+.footer__brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.8);
+  transition: all .2s ease;
+}
+.footer__social-link:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+.footer__social-link svg { width: 12px; height: 12px; display: block; }
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+/* Alias for new standalone pages that use footer__grid / footer__col */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer__col { }
+.footer__col h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer__col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer__col a:hover { color: #fff; }
+
+@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.6;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .7s ease forwards;
+}
+.fade-in:nth-child(2) { animation-delay: .1s; }
+.fade-in:nth-child(3) { animation-delay: .2s; }
+.fade-in:nth-child(4) { animation-delay: .3s; }
+.fade-in:nth-child(5) { animation-delay: .4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--featured { grid-column: span 1; }
+  .why__inner { grid-template-columns: 1fr; gap: 48px; }
+  .why__content .section-heading,
+  .why__content .section-subtext { text-align: center; }
+  .why__points { max-width: 500px; margin: 0 auto; }
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+
+  .nav__menu {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .3s, opacity .3s;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav__menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .dropdown { display: none; }
+  .chevron { display: none; }
+
+  .hero__stats {
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .stat strong { font-size: 22px; }
+  .stat-divider { margin: 0 16px; }
+
+  .hero__ctas { flex-direction: column; align-items: center; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--featured { grid-column: span 1; }
+  .pricing__plans { grid-template-columns: 1fr; max-width: 400px; }
+  .testimonials__grid { grid-template-columns: 1fr; }
+  .process__steps { flex-direction: column; align-items: center; }
+  .process-step__arrow { transform: rotate(90deg); margin: -8px 0; }
+  .process-step { max-width: 100%; }
+
+  .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .footer__top { grid-template-columns: 1fr; gap: 40px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form { padding: 28px 20px; }
+
+  .trust-bar__inner { flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero__heading { font-size: 38px; }
+  .hero__stats { flex-direction: column; gap: 20px; }
+  .stat-divider { width: 100%; height: 1px; margin: 0; }
+  .pricing__tabs { flex-direction: column; max-width: 100%; }
+  .footer__links { grid-template-columns: 1fr; }
+}
+
+  </style>
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../blog.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Korean Business Owners and Singapore: Holding Companies, Succession and the 2026-2027 Tax Changes",
+      "url": "https://karman.com.sg/blog/korean-business-owners-singapore-holding-company",
+      "image": "https://karman.com.sg/og-image.png",
+      "datePublished": "2026-11-25T00:00:00+08:00",
+      "dateModified": "2026-11-25T00:00:00+08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Karman Editorial Team",
+        "url": "https://karman.com.sg/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Karman Corporate Services",
+        "url": "https://karman.com.sg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://karman.com.sg/og-image.png"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/karman-advisory-singapore/"
+        ]
+      },
+      "description": "Korea's 50-60% inheritance tax and expanding exit tax are pushing owners to Singapore. What a Singapore holding company can and cannot do for you.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://karman.com.sg/blog/korean-business-owners-singapore-holding-company"
+      },
+      "inLanguage": "en-SG",
+      "abstract": "Korea has one of the highest inheritance taxes in the world (a top rate of 50%, and up to 60% on a largest shareholder's shares), and it is widening its exit tax on people who emigrate, to include foreign shares from 1 January 2027. Singapore has no inheritance tax, no capital gains tax in most cases and no tax on dividends paid to shareholders. A Singapore company can be a strong regional headquarters, holding company or family office for Korean owners, but it does not remove Korean tax while the owner is still a Korean tax resident. The real benefit comes from genuine operations in Singapore, or from an owner who properly relocates.",
+      "keywords": "korean company singapore, korean business owner singapore, korea inheritance tax singapore, korea exit tax 2027, singapore holding company korea, korean family office singapore, move to singapore from korea, korea singapore tax, k-beauty singapore company, korean startup singapore"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://karman.com.sg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://karman.com.sg/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Korean business owners",
+          "item": "https://karman.com.sg/blog/korean-business-owners-singapore-holding-company"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Singapore have inheritance tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Singapore abolished estate duty in 2008 and has no inheritance or gift tax."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Korean resident avoid inheritance tax with a Singapore company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Korean inheritance tax applies to the worldwide assets of a Korean resident, including shares in a Singapore company. Singapore only changes the picture for families who genuinely become non-resident in Korea, and Korean-situs assets remain taxable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Korean exit tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Major shareholders of Korean companies who were resident in Korea for more than five of the last ten years are taxed on a deemed sale of their Korean shares when they emigrate, at 20% on the first KRW 300 million of gains and 25% above. From 1 January 2027 it extends to foreign shares at 20%, with exclusions such as holdings of KRW 500 million or less."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the top inheritance tax rate in Korea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The top rate is 50%. A valuation premium on a largest shareholder's shares can raise the effective maximum to about 60%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Korean company set up a Singapore subsidiary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A Korean company can own 100% of a Singapore Pte Ltd. The Singapore company needs at least one locally resident director, a registered address and a company secretary, and Korean overseas investment reporting rules apply on the Korean side."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a tax treaty between Korea and Singapore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Korea-Singapore double tax agreement can reduce withholding tax on cross-border payments, but the Singapore company needs a Certificate of Residence from IRAS, which requires management and control in Singapore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Korean founders get a Singapore work visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Founders and managers typically apply for an Employment Pass, assessed under the COMPASS points framework, or an EntrePass for innovative start-ups."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".key-takeaways__answer",
+      ".key-takeaways__list"
+    ]
+  },
+  "url": "https://karman.com.sg/blog/korean-business-owners-singapore-holding-company"
+}
+  </script>
+</head>
+<body class="article-page-layout">
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" fetchpriority="high"></a>
+      <ul class="nav__menu" id="navMenu">
+        <li class="nav__item has-dropdown">
+          <a href="/#services" class="nav__link">Services <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="/services/company-incorporation" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="building-2"></i></span>
+              <div>
+                <strong>Incorporation</strong>
+                <p>Register your Singapore company</p>
+              </div>
+            </a>
+            <a href="/services/vcc-fund-administration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="landmark"></i></span>
+              <div>
+                <strong>VCC & Fund Administration</strong>
+                <p>Singapore fund structures & compliance</p>
+              </div>
+            </a>
+            <a href="/services/corporate-secretary" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="clipboard-list"></i></span>
+              <div>
+                <strong>Corporate Secretary</strong>
+                <p>Stay compliant year-round</p>
+              </div>
+            </a>
+            <a href="/services/accounting" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="bar-chart-3"></i></span>
+              <div>
+                <strong>Accounting & Tax</strong>
+                <p>Books, filings, and more</p>
+              </div>
+            </a>
+            <a href="/services/gst-registration" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="briefcase"></i></span>
+              <div>
+                <strong>GST Registration</strong>
+                <p>Registration & quarterly filing</p>
+              </div>
+            </a>
+            <a href="/services/nominee-director" class="dropdown__link">
+              <span class="dropdown__icon"><i data-lucide="globe"></i></span>
+              <div>
+                <strong>Nominee Director</strong>
+                <p>Incorporate from anywhere</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/tools" class="nav__link">Free Tools <span class="nav__badge">Free</span></a></li>
+        <li class="nav__item"><a href="/blog" class="nav__link nav__link--active">Blog</a></li>
+        <li class="nav__item"><a href="/faq" class="nav__link">FAQs</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/#contact" class="btn btn--secondary">Contact us</a>
+        <a href="/onboarding" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <section class="article-hero">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span>Korean business owners</span>
+      </nav>
+      <span class="article-hero__tag">Cross-Border</span>
+      <h1>Korean Business Owners and Singapore: Holding Companies, Succession and the 2026-2027 Tax Changes</h1>
+      <div class="article-hero__meta">
+        <span class="article-hero__meta-item">📅 Published <time datetime="2026-11-25">25 Nov 2026</time></span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">⏱ 10 min read</span>
+        <span class="article-hero__meta-dot"></span>
+        <span class="article-hero__meta-item">✍️ Karman Editorial Team</span>
+      </div>
+    </div>
+  </section>
+  <div class="article-layout">
+    <article class="article-body">
+      <div class="key-takeaways" id="key-takeaways">
+        <p class="key-takeaways__label">Quick answer</p>
+        <p class="key-takeaways__answer">Korea has one of the highest inheritance taxes in the world (a top rate of 50%, and up to 60% on a largest shareholder's shares), and it is widening its exit tax on people who emigrate, to include foreign shares from 1 January 2027. Singapore has no inheritance tax, no capital gains tax in most cases and no tax on dividends paid to shareholders. A Singapore company can be a strong regional headquarters, holding company or family office for Korean owners, but it does not remove Korean tax while the owner is still a Korean tax resident. The real benefit comes from genuine operations in Singapore, or from an owner who properly relocates.</p>
+        <ul class="key-takeaways__list">
+          <li>Korea's top inheritance tax rate is 50%, rising to an effective 60% on largest-shareholder stakes.</li>
+          <li>Korea's exit tax on emigrating major shareholders (20% / 25%) extends to foreign shares from 1 Jan 2027.</li>
+          <li>Henley forecast a net outflow of 2,400 Korean millionaires in 2025, the fourth largest in the world.</li>
+          <li>Singapore: no inheritance tax, generally no capital gains tax, no tax on dividends to shareholders.</li>
+          <li>Korean residents are still taxed on worldwide income, and Korea's CFC rules can reach low-taxed subsidiaries.</li>
+          <li>Best fits: regional HQ for ASEAN expansion, family office, and owners who are genuinely relocating.</li>
+        </ul>
+      </div>
+<p>Korean founders and family business owners have been looking at Singapore for years, mostly for one reason: succession. A business built over a lifetime can lose more than half its value to tax when it passes to the next generation. In 2026 that pressure grew, with new proposals targeting large shareholders and a wider exit tax from 2027. This guide sets out what is changing in Korea, what Singapore offers, and, honestly, where a Singapore company helps and where it does not.</p>
+
+<div class="callout callout--blue"><p class="callout__title">Not Korean tax advice</p><p>Korean rules summarised here come from published reports and professional firm updates. Always confirm your own position with a Korean tax adviser. Karman handles the Singapore company, substance and tax filings.</p></div>
+
+<h2>What is pushing Korean owners abroad</h2>
+<h3>Inheritance and gift tax</h3>
+<p>Korea's top inheritance tax rate is <strong>50%</strong>, the second highest in the OECD after Japan. When shares of a company's largest shareholder are valued for inheritance, a premium is added, which takes the effective maximum to about <strong>60%</strong>. Proposals to remove that premium have been discussed but should not be relied on.</p>
+<p>In 2026 the pressure moved in the other direction for listed companies. In August 2026, Korean media reported a government plan to raise inheritance and gift taxes on major shareholders of listed companies with persistently low valuations (price-to-book ratios at the bottom of their sector for years), with a valuation premium of at least 30%. The aim is to stop owners keeping share prices low ahead of succession. As of this writing it is a plan, not enacted law.</p>
+
+<h3>The exit tax is getting wider</h3>
+<p>Korea already taxes some emigrants on a deemed sale of their Korean shares when they leave. It applies to <strong>major shareholders</strong> of Korean companies who had a domicile or residence in Korea for more than five of the last ten years. Rates are <strong>20%</strong> on the first KRW 300 million of deemed gains and <strong>25%</strong> above that.</p>
+<p>For departures on or after <strong>1 January 2027</strong>, the exit tax extends to <strong>foreign shares</strong>, taxed at 20%, with no major shareholder test. There are exclusions, including where total foreign shares are worth KRW 500 million or less at departure. If you hold a Singapore company and plan to emigrate, the timing of your departure now matters.</p>
+
+<h3>The numbers</h3>
+<ul>
+<li>Henley &amp; Partners forecast a net outflow of <strong>2,400 millionaires</strong> from South Korea in 2025, double the 1,200 of 2024, ranking Korea fourth in the world after the UK, China and India.</li>
+<li>Korean Ministry of Justice data analysed by the Korea Economic Daily showed 204 Koreans gave up citizenship to become Singaporean in 2023, up from 106 in 2022.</li>
+</ul>
+
+<h2>What Singapore offers</h2>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Korea</th><th>Singapore</th></tr></thead><tbody>
+<tr><td>Inheritance tax</td><td>Up to 50% (about 60% with largest-shareholder premium)</td><td>None (abolished in 2008)</td></tr>
+<tr><td>Gift tax</td><td>Yes</td><td>None</td></tr>
+<tr><td>Corporate tax</td><td>Progressive national rates plus local income tax</td><td>17% headline, with <a href="/blog/singapore-startup-tax-exemption">start-up and partial exemptions</a></td></tr>
+<tr><td>Tax on dividends to shareholders</td><td>Yes</td><td>None (one-tier system)</td></tr>
+<tr><td>Capital gains tax</td><td>Yes, on many share disposals</td><td>Generally none. Foreign disposal gains can be taxed if the company lacks economic substance in Singapore.</td></tr>
+<tr><td>Top personal income tax</td><td>45% national plus local tax</td><td>24%</td></tr>
+</tbody></table></div>
+<p>Singapore and Korea also have a double tax agreement, which can reduce withholding tax on dividends, interest and royalties paid between the two countries where the Singapore company is genuinely tax resident in Singapore.</p>
+
+<h2>Where a Singapore company helps (and where it does not)</h2>
+<h3>It helps when...</h3>
+<ul>
+<li><strong>You are expanding into Southeast Asia.</strong> K-beauty, K-food, content, gaming, fintech and SaaS companies use Singapore as the regional headquarters for Indonesia, Vietnam, Thailand and Malaysia. Profits earned by a Singapore company with real operations are taxed at Singapore rates. See <a href="/blog/singapore-regional-headquarters-setup">setting up a regional HQ</a>.</li>
+<li><strong>You are building a regional holding layer.</strong> A <a href="/blog/singapore-holding-company-tax-benefits-guide">Singapore holding company</a> can own ASEAN subsidiaries, receive dividends with Singapore tax exemptions where conditions are met, and sell subsidiaries without capital gains tax if it has substance.</li>
+<li><strong>The family is genuinely relocating.</strong> If the owner and heirs become Singapore tax residents and stop being Korean residents, future growth in assets held through Singapore can sit outside Korean inheritance tax. Korea still taxes Korean-situs assets, and the exit tax applies on departure.</li>
+<li><strong>You want a family office.</strong> A Singapore single family office using the 13O or 13U fund incentives can manage family wealth from Singapore. Note the <a href="/blog/singapore-single-family-office-mas-notification-2027">new MAS notification requirement from 2027</a>.</li>
+</ul>
+<h3>It does not help when...</h3>
+<ul>
+<li><strong>You stay a Korean tax resident.</strong> Korean residents are taxed on worldwide income, and Korean inheritance tax applies to a Korean resident's worldwide assets. Putting shares in a Singapore company does not change that.</li>
+<li><strong>The Singapore company is passive.</strong> Korea's controlled foreign company rules can tax a Korean resident shareholder on undistributed profits of a low-taxed foreign company. A company with no staff or operations in Singapore is also unlikely to be treated as Singapore resident.</li>
+<li><strong>Management stays in Seoul.</strong> If key decisions are made in Korea, Korea may treat the company itself as Korean resident under its place of effective management rule.</li>
+<li><strong>You transfer the Korean company into Singapore.</strong> Moving shares of a Korean company to a Singapore holding company is itself a taxable disposal in Korea, and below-market transfers to family can trigger gift tax.</li>
+</ul>
+
+<h2>Three common structures</h2>
+<div class="table-wrap"><table><thead><tr><th>Structure</th><th>Who it suits</th><th>Key requirement</th></tr></thead><tbody>
+<tr><td><strong>Singapore regional HQ (Pte Ltd)</strong> owned by the Korean company</td><td>Korean companies expanding into ASEAN</td><td>Real team in Singapore, regional contracts signed here, transfer pricing with the Korean parent</td></tr>
+<tr><td><strong>Singapore holding company</strong> owned by the founder or family</td><td>Founders building new businesses outside Korea, families relocating</td><td>Board and decisions in Singapore, local director, substance for treaty and capital gains purposes</td></tr>
+<tr><td><strong>Single family office with a fund vehicle</strong> (Pte Ltd manager plus fund company or <a href="/blog/variable-capital-company-singapore-vcc">VCC</a>)</td><td>Families with significant investable wealth</td><td>Minimum assets and spending for 13O/13U, investment professionals in Singapore</td></tr>
+</tbody></table></div>
+
+<h2>Practical steps for a Korean owner</h2>
+<ol>
+<li><strong>Map your Korean exposure first:</strong> residence status, major shareholder status, Korean-situs assets and the 2027 exit tax change. Get Korean advice before moving any shares.</li>
+<li><strong>Decide the role of Singapore:</strong> operating HQ, holding company or family office. Each needs different substance.</li>
+<li><strong>Incorporate:</strong> a Pte Ltd needs at least one locally resident director, a registered address and a company secretary. Registration usually completes in a day. See <a href="/blog/singapore-company-formation-non-resident">company formation for non-residents</a>.</li>
+<li><strong>Build substance:</strong> hire locally, hold board meetings in Singapore and give Singapore managers real authority.</li>
+<li><strong>Move people:</strong> Employment Passes for Korean managers, or an EntrePass for founders. Check scores with our <a href="/tools/ep-compass-calculator">COMPASS calculator</a>.</li>
+<li><strong>Get a Certificate of Residence</strong> from IRAS once the company is managed from Singapore, to use the Korea-Singapore tax treaty.</li>
+</ol>
+
+<h2>Timing matters</h2>
+<p>If you are considering emigrating and already own foreign shares, including shares in a Singapore company, the extension of the exit tax to foreign shares from 1 January 2027 is worth discussing with your Korean adviser now. Inheritance and succession planning works best years ahead, not after a health event or a sale.</p>
+      <section class="article-sources-section" style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-200);">
+        <h3 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-500);margin-bottom:12px;">Sources</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+      <li><a href="https://www.henleyglobal.com/newsroom/press-releases/henley-private-wealth-migration-report-2025" target="_blank" rel="noopener noreferrer">Henley &amp; Partners - Private Wealth Migration Report 2025 ↗</a></li>
+      <li><a href="https://www.kedglobal.com/corporate-governance/newsView/ked202608030007" target="_blank" rel="noopener noreferrer">Korea Economic Daily - Korea to hike inheritance, gift taxes on persistent low-valuation firms (3 Aug 2026) ↗</a></li>
+      <li><a href="https://www.kedglobal.com/regulations/newsView/ked202410220007" target="_blank" rel="noopener noreferrer">Korea Economic Daily - Heavy inheritance, gift taxes spur rich Koreans to emigrate to Singapore ↗</a></li>
+      <li><a href="https://vialtopartners.com/regional-alerts/republic-of-korea-global-mobility-tax-finalized-income-tax-law-and-enforcement-decree-on-the-exit-tax" target="_blank" rel="noopener noreferrer">Vialto Partners - Korea finalized income tax law and enforcement decree on the exit tax ↗</a></li>
+      <li><a href="https://www.iras.gov.sg/taxes/corporate-income-tax/income-deductions-for-companies/companies-receiving-foreign-income/applying-for-a-certificate-of-residence-tax-reclaim-form" target="_blank" rel="noopener noreferrer">IRAS - Applying for a Certificate of Residence ↗</a></li>
+        </ul>
+      </section>
+      <section class="article-faq-section" style="margin-top:56px;padding-top:0;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq__grid" style="max-width:100%;margin-top:24px;">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Does Singapore have inheritance tax?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Singapore abolished estate duty in 2008 and has no inheritance or gift tax.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can a Korean resident avoid inheritance tax with a Singapore company?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Korean inheritance tax applies to the worldwide assets of a Korean resident, including shares in a Singapore company. Singapore only changes the picture for families who genuinely become non-resident in Korea, and Korean-situs assets remain taxable.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is the Korean exit tax?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Major shareholders of Korean companies who were resident in Korea for more than five of the last ten years are taxed on a deemed sale of their Korean shares when they emigrate, at 20% on the first KRW 300 million of gains and 25% above. From 1 January 2027 it extends to foreign shares at 20%, with exclusions such as holdings of KRW 500 million or less.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is the top inheritance tax rate in Korea?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>The top rate is 50%. A valuation premium on a largest shareholder's shares can raise the effective maximum to about 60%.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can a Korean company set up a Singapore subsidiary?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. A Korean company can own 100% of a Singapore Pte Ltd. The Singapore company needs at least one locally resident director, a registered address and a company secretary, and Korean overseas investment reporting rules apply on the Korean side.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Is there a tax treaty between Korea and Singapore?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. The Korea-Singapore double tax agreement can reduce withholding tax on cross-border payments, but the Singapore company needs a Certificate of Residence from IRAS, which requires management and control in Singapore.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can Korean founders get a Singapore work visa?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. Founders and managers typically apply for an Employment Pass, assessed under the COMPASS points framework, or an EntrePass for innovative start-ups.</p></div>
+      </div>
+        </div>
+      </section>
+      <p style="margin-top:32px;font-size:14px;color:var(--gray-500);">This guide is general information, not legal or tax advice. Information is as published by official sources on 25 November 2026.</p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-cta">
+        <div class="sidebar-cta__eyebrow">Ready to incorporate?</div>
+        <h3>Get started</h3>
+        <p>Karman handles name check, ACRA filing, nominee director, and company secretary. Most applications approved within 1 business day.</p>
+        <a href="/onboarding" class="btn btn--primary">Start your application →</a>
+        <a href="/tools" class="sidebar-cta__secondary">Try our free tools first</a>
+      </div>
+      <div class="sidebar-tools">
+        <h4>Useful free tools</h4>
+        <a href="/tools/singapore-vs-home-tax">
+          <span>🌏</span><span>Singapore vs Home Tax</span>
+        </a>
+        <a href="/tools/business-structure-recommender">
+          <span>🏗️</span><span>Business Structure Recommender</span>
+        </a>
+        <a href="/tools/ep-compass-calculator">
+          <span>🧭</span><span>EP COMPASS Calculator</span>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="article-related">
+    <div class="container">
+      <h2 class="article-related__heading">Related articles</h2>
+      <div class="article-related__grid">
+        <a href="/blog/family-office-singapore-setup-guide" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Family Office Setup Guide</h3>
+          <p class="blog-card__excerpt">How to set up a single family office in Singapore.</p>
+          <div class="blog-card__meta"><span>10 min read</span></div>
+        </a>
+        <a href="/blog/singapore-holding-company-tax-benefits-guide" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Holding Company Tax Benefits</h3>
+          <p class="blog-card__excerpt">Dividends, capital gains and treaty access explained.</p>
+          <div class="blog-card__meta"><span>9 min read</span></div>
+        </a>
+        <a href="/blog/singapore-regional-headquarters-setup" class="blog-card">
+          <span class="blog-card__tag blog-card__tag--guide">Guide</span>
+          <h3 class="blog-card__title">Regional Headquarters in Singapore</h3>
+          <p class="blog-card__excerpt">How to set up an Asia HQ with real substance.</p>
+          <div class="blog-card__meta"><span>9 min read</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><img src="/logo.svg" alt="Karman" class="nav__logo-img" width="124" height="40" loading="lazy"></a>
+          <p>Trusted corporate services for Singapore businesses. ACRA Registered Filing Agent.</p>
+          <div class="footer__badges"><span class="badge">ACRA Registered</span> <a class="footer__social-link" href="https://www.linkedin.com/company/karman-advisory-singapore/" target="_blank" rel="noopener" aria-label="Karman on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="/#incorporation">Company Incorporation</a></li>
+            <li><a href="/services/vcc-fund-administration">VCC &amp; Fund Administration</a></li>
+            <li><a href="/#secretary">Corporate Secretarial</a></li>
+            <li><a href="/#accounting">Accounting &amp; Bookkeeping</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Resources</h4><ul>
+            <li><a href="/tools">Free Tools</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul></div>
+          <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="/#about">About Karman</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Karman Corporate Services Pte Ltd. UEN: 202012889R. 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+
+<script src="https://unpkg.com/lucide@1.66.0/dist/umd/lucide.min.js"></script><script>lucide.createIcons();</script></body>
+</html>
